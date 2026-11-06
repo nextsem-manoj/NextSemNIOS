@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>कक्षा 9 हिंदी अभ्यास परीक्षा: दो बैलों की कथा (प्रेमचंद)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+      line-height: 1.36;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 5.5mm 9mm 4.5mm 9mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Running Header */
+    .page-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 4.5px;
+    }
+
+    .pt-title {
+      font-size: 9.8px;
+      color: #000000;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .pt-meta {
+      font-size: 8.5px;
+      font-weight: 700;
+    }
+
+    /* Master Assessment Header */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 4px;
+      padding: 5px 9px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 4px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    .title-area p {
+      font-size: 9px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.1px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2.5px 8px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #000000;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Student Info Grid */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr 1fr 1.1fr;
+      gap: 8px;
+      font-size: 8.8px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-weight: 800;
+      font-size: 8.2px;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    .info-line {
+      flex: 1;
+      border-bottom: 1.5px solid #000000;
+      min-height: 11px;
+    }
+
+    /* Instructions Strip */
+    .hint-strip {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 3.5px 8px;
+      font-size: 8.2px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+      line-height: 1.35;
+    }
+
+    .hint-title {
+      font-weight: 800;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 1.5px;
+      font-size: 8.5px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .hint-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 2px 10px;
+      font-weight: 600;
+    }
+
+    /* Section Card */
+    .sec-card {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      margin-bottom: 4.5px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .sec-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sec-title {
+      font-size: 9.6px;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .sec-weight {
+      font-size: 8.4px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .sec-body {
+      padding: 5px 8px;
+      font-size: 9.3px;
+      color: #000000;
+    }
+
+    /* Questions Styling */
+    .q-item {
+      margin-bottom: 4.5px;
+      padding-bottom: 3.5px;
+      border-bottom: 1px dashed #cccccc;
+    }
+
+    .q-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .q-head {
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5px;
+    }
+
+    .q-text {
+      font-size: 9.2px;
+      line-height: 1.42;
+    }
+
+    .mcq-opts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 8px;
+      margin-top: 2px;
+      font-size: 8.8px;
+    }
+
+    .write-lines {
+      margin-top: 3px;
+    }
+
+    .w-line {
+      border-bottom: 1.2px solid #b5b5b5;
+      min-height: 13px;
+      margin-bottom: 2px;
+    }
+
+    /* Solved Blocks */
+    .sol-block {
+      background: #f7f7f7;
+      border-left: 3px solid #000000;
+      padding: 3.5px 6px;
+      margin-top: 2.5px;
+      font-size: 8.8px;
+      line-height: 1.45;
+    }
+
+    .sol-block strong {
+      color: #000000;
+      font-weight: 800;
+    }
+
+    /* Table Styles */
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.6px;
+      text-align: left;
+    }
+
+    .vocab-table th {
+      background: #000000;
+      color: #ffffff;
+      padding: 3px 6px;
+      font-weight: 800;
+      border: 1.2px solid #000000;
+      font-size: 8.4px;
+    }
+
+    .vocab-table td {
+      border: 1.2px solid #000000;
+      padding: 3px 6px;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+    .vocab-table tr:nth-child(even) {
+      background: #fcfcfc;
+    }
+
+    /* Evaluation Matrix */
+    .eval-box {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 4px 8px;
+      background: #ffffff;
+      margin-top: 3.5px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .score-matrix-row {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-bottom: 3.5px;
+    }
+
+    .score-cell {
+      border: 1.3px solid #000000;
+      border-radius: 3px;
+      padding: 2px 4px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .score-cell span {
+      display: block;
+      font-size: 6.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .score-cell strong {
+      font-size: 10px;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .remarks-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 7.8px;
+      font-weight: 700;
+    }
+
+    .remarks-strip {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .remarks-line {
+      flex: 1;
+      border-bottom: 1.2px solid #000000;
+      min-height: 11px;
+    }
+
+    .rubric-pill-box {
+      border: 1.2px solid #000000;
+      border-radius: 3px;
+      padding: 3.5px 6px;
+      font-size: 7.4px;
+      line-height: 1.35;
+      background: #fafafa;
+    }
+
+    .rubric-pill-box strong {
+      font-weight: 800;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1.5px solid #000000;
+      padding-top: 3px;
+      font-size: 7.8px;
+      font-weight: 700;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page" id="page1">
+    <div>
+      <!-- Master Assessment Header -->
+      <div class="test-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon">हिंदी</div>
+            <div class="title-area">
+              <h1>कक्षा 9 हिंदी (गद्य खंड) मुख्य मूल्यांकन परीक्षा: 'दो बैलों की कथा'</h1>
+              <p>लेखक: मुंशी प्रेमचंद • NCERT पाठ्यपुस्तक 'क्षितिज' / 'गंगा' • प्रश्न-उत्तर प्रारूप (पूर्णांक: 50 अंक)</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill">
+              <span>समय सीमा</span>
+              <strong>90 मिनट</strong>
+            </div>
+            <div class="meta-pill">
+              <span>अधिकतम अंक</span>
+              <strong>50 अंक</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <span class="info-label">विद्यार्थी का नाम:</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">अनुक्रमांक (Roll No):</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">कक्षा व वर्ग:</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">दिनांक:</span>
+            <div class="info-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- General Instructions Strip -->
+      <div class="hint-strip">
+        <div class="hint-title">
+          <span>• सामान्य परीक्षा निर्देश (NCERT कक्षा 9 हिंदी मूल्यांकन प्रारूप) •</span>
+        </div>
+        <div class="hint-grid">
+          <div><strong>1. प्रश्न पत्र संरचना:</strong> खंड क (वस्तुनिष्ठ एवं अति लघु - 10 अंक), खंड ख (लघु उत्तरीय - 14 अंक), खंड ग (दीर्घ उत्तरीय - 14 अंक), खंड घ (व्याकरण - 12 अंक)।</div>
+          <div><strong>2. उत्तर निर्देश:</strong> सभी प्रश्नों के उत्तर स्पष्ट, व्याकरण सम्मत एवं पाठ्यपुस्तक के प्रामाणिक संदर्भों के आधार पर निर्धारित रिक्त पंक्तियों में लिखें।</div>
+        </div>
+      </div>
+
+      <!-- SECTION A: OBJECTIVE & VSA (10 MARKS) -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">खंड 'क' • वस्तुनिष्ठ (MCQ) एवं अति लघु उत्तरीय प्रश्न</span>
+          <span class="sec-weight">10 अंक</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 1. निम्नलिखित बहुविकल्पीय प्रश्नों के सटीक उत्तर चुनकर कोष्ठक में लिखिए:</span>
+              <span>[4 × 1 = 4 अंक]</span>
+            </div>
+            <div class="q-text">
+              (i) कहानी में हीरा और मोती का आपसी संबंध किस मानवीय गुण को मुख्य रूप से दर्शाता है?<br>
+              <div class="mcq-opts">
+                <div>(क) प्रतिस्पर्धा और प्रतिद्वंद्विता</div>
+                <div>(ख) एकता, आत्मीयता और सहयोग [ &nbsp; ]</div>
+                <div>(ग) गर्व और दंभ</div>
+                <div>(घ) विद्रोह और क्रोध</div>
+              </div>
+              (ii) लेखक के अनुसार 'गधा' अपने किन गुणों के कारण ऋषियों-मुनियों की श्रेणी में पहुँच गया है?<br>
+              <div class="mcq-opts">
+                <div>(क) अत्यधिक परिश्रम करने के कारण</div>
+                <div>(ख) सुख-दुख व लाभ-हानि में समभाव रहने के कारण [ &nbsp; ]</div>
+                <div>(ग) अपनी भारी शारीरिक बनावट के कारण</div>
+                <div>(घ) मूक भाषा में बातचीत करने के कारण</div>
+              </div>
+              (iii) काँजीहौस की कच्ची दीवार टूटने पर सर्वप्रथम कौन-से जानवर सरपट भाग निकले?<br>
+              <div class="mcq-opts">
+                <div>(क) दोनों गधे</div>
+                <div>(ख) तीनों घोड़ियाँ [ &nbsp; ]</div>
+                <div>(ग) बकरियाँ और भैंसें</div>
+                <div>(घ) केवल सांड</div>
+              </div>
+              (iv) 'दो बैलों की कथा' परोक्ष रूप से किस ऐतिहासिक आंदोलन की भावना से जुड़ी है?<br>
+              <div class="mcq-opts">
+                <div>(क) चिपको आंदोलन से</div>
+                <div>(ख) भारतीय स्वाधीनता आंदोलन से [ &nbsp; ]</div>
+                <div>(ग) औद्योगिक क्रांति से</div>
+                <div>(घ) धार्मिक सुधार आंदोलन से</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 2. निम्नलिखित अति लघु उत्तरीय प्रश्नों के उत्तर 1-2 वाक्यों में दीजिए:</span>
+              <span>[3 × 2 = 6 अंक]</span>
+            </div>
+            <div class="q-text">
+              (i) प्रेमचंद जी का मूल नाम क्या था तथा उनकी कहानियाँ किस मुख्य संग्रह में संकलित हैं?
+              <div class="write-lines"><div class="w-line"></div></div>
+              (ii) गया के घर में भैरव की नन्हीं अनाथ बच्ची दोनों बैलों को चुपके से रोटियाँ क्यों खिलाती थी?
+              <div class="write-lines"><div class="w-line"></div></div>
+              (iii) मटर के खेत में जब दोनों मित्रों का सामना विशाल साँड़ से हुआ, तो उन्होंने बचने हेतु क्या रणनीति अपनाई?
+              <div class="write-lines"><div class="w-line"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION B: SHORT ANSWER QUESTIONS (14 MARKS) -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">खंड 'ख' • पाठ-आधारित लघु उत्तरीय प्रश्न (30–40 शब्द)</span>
+          <span class="sec-weight">14 अंक</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 3. झूरी के घर लौटने पर दोनों बैलों को देखकर झूरी और उसकी पत्नी की प्रतिक्रिया में क्या अंतर था?</span>
+              <span>[3 अंक]</span>
+            </div>
+            <div class="q-text">
+              गाँव के बालकों ने दोनों बैलों का स्वागत किस प्रकार किया?
+              <div class="write-lines"><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div></div>
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 4. काँजीहौस में बंद जानवरों की दयनीय दशा का वर्णन कीजिए तथा बताइए कि हीरा और मोती ने उन्हें कैसे मुक्त किया।</span>
+              <span>[3 अंक]</span>
+            </div>
+            <div class="q-text">
+              अन्य जानवरों के भाग जाने के बाद भी दोनों गधे और मोती वहाँ से क्यों नहीं भागे?
+              <div class="write-lines"><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div></div>
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 5. 'गिरे हुए बैरी पर सींग न चलाना चाहिए' और 'औरत जात पर सींग चलाना मना है'—हीरा के ये कथन किन मूल्यों को दर्शाते हैं?</span>
+              <span>[3 अंक]</span>
+            </div>
+            <div class="q-text">
+              हीरा की इन बातों से उसकी चारित्रिक उदारता कैसे प्रकट होती है?
+              <div class="write-lines"><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div></div>
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 6. 'स्वतंत्रता सहज ही नहीं मिलती, उसके लिए बार-बार संघर्ष करना पड़ता है।' कथन को स्पष्ट कीजिए।</span>
+              <span>[5 अंक]</span>
+            </div>
+            <div class="q-text">
+              कहानी की घटनाओं के संदर्भ में सिद्ध कीजिए कि हीरा-मोती का संघर्ष भारतीय स्वाधीनता संग्राम का प्रतीक है।
+              <div class="write-lines"><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>कक्षा 9 हिंदी &bull; पाठ 1: दो बैलों की कथा (मुंशी प्रेमचंद)</span>
+      <span>खंड 'क' एवं खंड 'ख' &bull; पूर्णांक: 24 / 50 अंक</span>
+      <span>पृष्ठ 1 / 2</span>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page" id="page2">
+    <div>
+      <!-- Page 2 Running Top Bar -->
+      <div class="page-top-bar">
+        <div class="pt-title">कक्षा 9 हिंदी: दो बैलों की कथा • पृष्ठ 2 / 2 (दीर्घ उत्तरीय एवं भाषा-व्याकरण)</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 26 अंक</strong></div>
+      </div>
+
+      <!-- SECTION C: LONG ANSWER & VALUE BASED (14 MARKS) -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">खंड 'ग' • दीर्घ उत्तरीय एवं मूल्याधारित प्रश्न (60–80 शब्द)</span>
+          <span class="sec-weight">14 अंक</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 7. हीरा और मोती के स्वभाव की तुलना कीजिए। वे एक-दूसरे के पूरक कैसे सिद्ध हुए?</span>
+              <span>[5 अंक]</span>
+            </div>
+            <div class="q-text">
+              हीरा के धैर्य व सहनशीलता तथा मोती के उग्र व विद्रोही तेवर का उदाहरण देते हुए दोनों की मित्रता पर प्रकाश डालिए।
+              <div class="write-lines"><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div></div>
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 8. दढ़ियल कसाई के चंगुल से छूटकर दोनों बैल अपने घर कैसे पहुँचे? गाँव में उनके आगमन के दृश्य का सजीव चित्रण कीजिए।</span>
+              <span>[5 अंक]</span>
+            </div>
+            <div class="q-text">
+              रास्ते में परिचित कुआँ और खेत देखकर उनके भीतर क्या परिवर्तन आया? झूरी और मालकिन ने उनका स्वागत कैसे किया?
+              <div class="write-lines"><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div></div>
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 9. 'मनुष्यों की भाँति पशुओं में भी आत्मसम्मान, मूक-भाषा और संवेदनशीलता विद्यमान होती है।' प्रमाणित कीजिए।</span>
+              <span>[4 अंक]</span>
+            </div>
+            <div class="q-text">
+              कहानी में आए उन प्रसंगों का उल्लेख कीजिए जहाँ दोनों बैल बिना बोले एक-दूसरे के मनोभाव समझ लेते हैं।
+              <div class="write-lines"><div class="w-line"></div><div class="w-line"></div><div class="w-line"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION D: GRAMMAR & VOCABULARY (12 MARKS) -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">खंड 'घ' • भाषा-कौशल, मुहावरे एवं शब्द-संपदा</span>
+          <span class="sec-weight">12 अंक</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 10. निम्नलिखित मुहावरों के अर्थ लिखकर उनका अपने सार्थक वाक्यों में प्रयोग कीजिए:</span>
+              <span>[4 × 1.5 = 6 अंक]</span>
+            </div>
+            <div class="q-text">
+              (i) <strong>दाँतों पसीना आना:</strong> अर्थ: ____________________ | वाक्य: __________________________________________________
+              <br>(ii) <strong>दिल काँप उठना:</strong> अर्थ: ____________________ | वाक्य: __________________________________________________
+              <br>(iii) <strong>ईंट का जवाब पत्थर से देना:</strong> अर्थ: ____________________ | वाक्य: __________________________________________________
+              <br>(iv) <strong>नौ-दो ग्यारह होना:</strong> अर्थ: ____________________ | वाक्य: __________________________________________________
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>प्र. 11. पाठ में प्रयुक्त निम्नलिखित देशज एवं तत्सम शब्दों के मानक अर्थ लिखिए:</span>
+              <span>[6 × 1 = 6 अंक]</span>
+            </div>
+            <div class="q-text" style="padding-top: 2px;">
+              <table class="vocab-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">कठिन शब्द</th>
+                    <th style="width: 25%;">मानक हिंदी अर्थ</th>
+                    <th style="width: 25%;">कठिन शब्द</th>
+                    <th style="width: 25%;">मानक हिंदी अर्थ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>(i) निरापद</strong></td>
+                    <td>सुरक्षित / आपत्ति-रहित</td>
+                    <td><strong>(iv) विषाद</strong></td>
+                    <td>उदासी / गहरा शोक</td>
+                  </tr>
+                  <tr>
+                    <td><strong>(ii) पगहिया</strong></td>
+                    <td>पशु बाँधने की रस्सी</td>
+                    <td><strong>(v) काँजीहौस</strong></td>
+                    <td>आवारा मवेशियों को बंद रखने का बाड़ा</td>
+                  </tr>
+                  <tr>
+                    <td><strong>(iii) पराकाष्ठा</strong></td>
+                    <td>अंतिम चरम सीमा</td>
+                    <td><strong>(vi) मूक-भाषा</strong></td>
+                    <td>बिना बोले संकेतों व भावों की भाषा</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teacher's Diagnostic Scorecard & CBSE Rubric -->
+      <div class="eval-box">
+        <div class="eval-grid">
+          <div>
+            <div class="score-matrix-row">
+              <span style="font-size: 8px; font-weight: 800; min-width: 80px;">खंडवार प्राप्तांक:</span>
+              <div class="score-cell"><span>खंड 'क' (10M)</span><strong>/ 10</strong></div>
+              <div class="score-cell"><span>खंड 'ख' (14M)</span><strong>/ 14</strong></div>
+              <div class="score-cell"><span>खंड 'ग' (14M)</span><strong>/ 14</strong></div>
+              <div class="score-cell"><span>खंड 'घ' (12M)</span><strong>/ 12</strong></div>
+              <div class="score-cell" style="background:#000; color:#fff;"><span style="color:#fff;">कुल (50M)</span><strong>/ 50</strong></div>
+            </div>
+            <div class="remarks-block">
+              <div class="remarks-strip">
+                <span>सशक्त पक्ष (साहित्यिक एवं भाषाई समझ):</span>
+                <div class="remarks-line"></div>
+              </div>
+              <div class="remarks-strip">
+                <span>उपचारात्मक सुझाव (उत्तर लेखन व व्याकरण सुधार):</span>
+                <div class="remarks-line"></div>
+                <span style="white-space:nowrap; margin-left:8px;">परीक्षक हस्ताक्षर: ______________</span>
+              </div>
+            </div>
+          </div>
+          <div class="rubric-pill-box">
+            <strong>मानक ग्रेडिंग पैमाना:</strong>
+            <div>[ ] A+ (45-50) &bull; [ ] A (40-44)</div>
+            <div>[ ] B+ (35-39) &bull; [ ] B (30-34)</div>
+            <div>[ ] C (25-29) &bull; [ ] उपचारात्मक (&lt;25)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>कक्षा 9 हिंदी &bull; पाठ 1: दो बैलों की कथा (मुंशी प्रेमचंद)</span>
+      <span>खंड 'ग' एवं खंड 'घ' &bull; पूर्णांक: 26 / 50 अंक &bull; कुल पूर्णांक: 50 अंक</span>
+      <span>पृष्ठ 2 / 2</span>
+    </div>
+  </div>
+
+</body>
+</html>

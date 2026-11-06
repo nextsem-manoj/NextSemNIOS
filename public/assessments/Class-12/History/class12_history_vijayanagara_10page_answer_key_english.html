@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Official Answer Key: Class 12 History Master Assessment - Vijayanagara (10 Pages)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 5.5mm 8.5mm 4.5mm 8.5mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Page Running Top Bar */
+    .page-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 5px;
+    }
+
+    .pt-title {
+      font-size: 9.8px;
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .pt-meta {
+      font-size: 8.5px;
+      font-weight: 600;
+    }
+
+    /* Assessment Header */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 4px;
+      padding: 5px 10px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 4px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    .title-area p {
+      font-size: 9px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.1px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2.5px 9px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7.2px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 12px;
+      font-weight: 800;
+      color: #000000;
+    }
+
+    /* Student Info Grid */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr 1fr 1.1fr;
+      gap: 10px;
+      font-size: 8.8px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-weight: 800;
+      font-size: 8.5px;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    .info-val {
+      font-weight: 700;
+      font-size: 8.8px;
+      color: #000000;
+      border-bottom: 1.6px solid #000000;
+      flex: 1;
+      padding-left: 4px;
+    }
+
+    /* Instructions Strip */
+    .hint-strip {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 4px 9px;
+      font-size: 8.5px;
+      background: #fbfbfb;
+      margin-bottom: 5px;
+      line-height: 1.35;
+    }
+
+    .hint-title {
+      font-weight: 800;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 2px;
+      font-size: 8.8px;
+    }
+
+    .hint-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 2px 10px;
+      font-weight: 600;
+    }
+
+    /* Topic Card Layout */
+    .topic-card {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .topic-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3.5px 9px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topic-title {
+      font-size: 9.8px;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .topic-weight {
+      font-size: 8.5px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 0.8px 6px;
+      border-radius: 2px;
+    }
+
+    .topic-body {
+      padding: 7px 9.5px;
+      font-size: 10.4px;
+      line-height: 2.12;
+      text-align: justify;
+      color: #000000;
+      font-weight: 500;
+    }
+
+    .focus-note {
+      background: #fbfbfb;
+      border-top: 1.2px solid #000000;
+      padding: 3px 6px;
+      font-size: 8.5px;
+      font-weight: 600;
+      margin-top: 4px;
+      color: #222222;
+      line-height: 1.3;
+    }
+
+    /* Answer Highlighting */
+    .ans-box {
+      display: inline-block;
+      background: #f0f0f0;
+      border-bottom: 2.2px solid #000000;
+      padding: 0 4.5px;
+      font-weight: 800;
+      color: #000000;
+      margin: 0 1.5px;
+      line-height: 1.3;
+    }
+
+    .ans-num {
+      font-size: 8.2px;
+      font-weight: 800;
+      color: #000000;
+      border: 1.1px solid #000000;
+      background: #ffffff;
+      border-radius: 2px;
+      padding: 0 3px;
+      margin-right: 3px;
+    }
+
+    /* Page 10 Evaluation Box */
+    .eval-box {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 4.5px 9px;
+      background: #ffffff;
+      margin-top: 3px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 2.4fr 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .score-matrix-row {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 3.5px;
+    }
+
+    .score-cell {
+      border: 1.4px solid #000000;
+      border-radius: 3px;
+      padding: 2px 4px;
+      text-align: center;
+      min-width: 56px;
+    }
+
+    .score-cell span {
+      display: block;
+      font-size: 6.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .score-cell strong {
+      font-size: 10.5px;
+      font-weight: 800;
+    }
+
+    .remarks-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+      font-size: 8px;
+      font-weight: 700;
+    }
+
+    .remarks-strip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .remarks-line {
+      flex: 1;
+      font-weight: 600;
+      color: #222222;
+      font-size: 8px;
+    }
+
+    .rubric-pill-box {
+      border: 1.3px solid #000000;
+      border-radius: 3px;
+      padding: 3px 6px;
+      font-size: 7.5px;
+      background: #fbfbfb;
+      line-height: 1.35;
+    }
+
+    .rubric-pill-box strong {
+      display: block;
+      font-size: 8px;
+      margin-bottom: 1.5px;
+    }
+
+    /* Footer Strip */
+    .page-footer {
+      border-top: 1.8px solid #000000;
+      padding-top: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- ==================== PAGE 1 ==================== -->
+    <div class="page" id="page1">
+      <div>
+        
+      <!-- Master Assessment Header -->
+      <div class="test-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon">VJ</div>
+            <div class="title-area">
+              <h1>Official Answer Key: Class 12 History Master Assessment - Vijayanagara</h1>
+              <p>Theme 7 (NCERT Part-II) • Standardized Model Solutions &amp; Grading Guide (100 Marks across 10 Pages)</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill">
+              <span>Document Type</span>
+              <strong>Answer Key</strong>
+            </div>
+            <div class="meta-pill">
+              <span>Max. Marks</span>
+              <strong>100 Marks</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <span class="info-label">Subject:</span>
+            <span class="info-val">History (Class 12) - Vijayanagara Empire</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Curriculum:</span>
+            <span class="info-val">NCERT (Themes in Indian History Part II)</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Assessment Type:</span>
+            <span class="info-val">10-Page Comprehensive Paragraph Cloze Test</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Evaluation:</span>
+            <span class="info-val">Standardized 1-Mark Scheme (100 Questions)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions Strip -->
+      <div class="hint-strip">
+        <div class="hint-title">
+          <span>• Evaluation Guidelines for Teachers (Scoring Rubric) •</span>
+        </div>
+        <div class="hint-grid">
+          <div><strong>1. Terminology:</strong> Award full 1 mark for correct historical spelling, acceptable English transliterations or synonyms.</div>
+          <div><strong>2. Marks Distribution:</strong> Part A (Blanks 1 to 100 = 100 Marks). Exactly 10 blanks per page (10 Marks/page).</div>
+        </div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 1.1 • Foundation of Vijayanagara, Territorial Scope & Ancient Shrines</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Vijayanagara or "city of victory" was the historical name of both a celebrated medieval metropolis and an expansive southern empire. According to contemporary historical traditions and epigraphic records, the empire was established in the fourteenth century in the year <span class="ans-box"><span class="ans-num">1</span>1336 CE</span> by two brothers named <span class="ans-box"><span class="ans-num">2</span>Harihara and Bukka</span>. At the height of its imperial hegemony, the realm extended from the Krishna river in the north to the extreme southern tip of the peninsula. The regional name 'Hampi' was derived from the local mother goddess <span class="ans-box"><span class="ans-num">3</span>Pampadevi</span>, whose shrine on the rocky banks of the <span class="ans-box"><span class="ans-num">4</span>Tungabhadra</span> river predated the foundation of the empire and remained a venerated pilgrimage centre throughout peninsular history.
+          <div class="focus-note"><strong>Historical Context:</strong> Historical Analysis: Examine how the physical ruggedness of the Tungabhadra basin provided a natural defensive bastion for the newly founded fourteenth-century capital.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 1.2 • Colin Mackenzie's Initial Surveys & Official Appointments</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The extensive architectural ruins at Hampi were initially brought to light in the year 1800 by an engineer, surveyor, and antiquarian of the English East India Company named <span class="ans-box"><span class="ans-num">5</span>Colin Mackenzie</span>. Mackenzie prepared the first comprehensive survey map of the site and collected oral testimonies from local communities to reconstruct the institutional past of South India. Recognizing his administrative and cartographic brilliance, the British administration appointed him in 1815 as the first <span class="ans-box"><span class="ans-num">6</span>Surveyor General of India</span>, a prestigious office he held until his death in <span class="ans-box"><span class="ans-num">7</span>1821</span>, laying the foundations of modern Indian archaeology.
+          <div class="focus-note"><strong>Historical Context:</strong> Historiographical Context: Colin Mackenzie sought to understand local indigenous customs, laws, and institutions to make British colonial administration more effective.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 1.3 • Epigraphic Compilation, Architectural Photography & UNESCO Status</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Mackenzie's initial research drew heavily upon the recollections of temple priests of the celebrated <span class="ans-box"><span class="ans-num">8</span>Virupaksha</span> shrine and the holy enclosure of Pampadevi. Beginning in <span class="ans-box"><span class="ans-num">9</span>1856</span>, early photographers like Alexander Greenlaw systematically documented the standing monuments, while epigraphists compiled hundreds of inscriptions from temple walls to cross-reference them with accounts of foreign travellers. In <span class="ans-box"><span class="ans-num">10</span>1986</span>, Hampi was formally declared a UNESCO World Heritage Site in recognition of its outstanding universal value, spurring renewed global preservation and research efforts.
+          <div class="focus-note"><strong>Historical Context:</strong> Archaeological Method: Cross-referencing epigraphic inscriptions with foreign travel chronicles in Telugu, Kannada, Tamil, and Sanskrit allowed scholars to reconstruct the city's lost history.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 1 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <div class="page" id="page2">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 2 of 10</strong> — Module 2: Dynastic Succession, Regional Geopolitics & Royal Nomenclature</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 11 to 20 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 2.1 • The Historical Sequence of the Four Ruling Dynasties</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Claimants to royal sovereignty in Vijayanagara politics included ruling lineages as well as powerful military commanders. The founding imperial line was known as the <span class="ans-box"><span class="ans-num">11</span>Sangama dynasty</span>, which maintained sovereignty until 1485. They were overthrown in <span class="ans-box"><span class="ans-num">12</span>1485</span> by military commanders known as the <span class="ans-box"><span class="ans-num">13</span>Saluva dynasty</span>, who governed until 1503. Power then passed to the <span class="ans-box"><span class="ans-num">14</span>Tuluva dynasty</span>, under whom the empire achieved its peak of military glory and cultural renaissance. The fourth and final dynasty was the <span class="ans-box"><span class="ans-num">15</span>Aravidu dynasty</span>, which ruled from 1542 onwards until the late seventeenth century.
+          <div class="focus-note"><strong>Historical Context:</strong> Political Analysis: Notice how military commanders (Saluvas and later Tuluvas) repeatedly usurped political authority when central dynastic lineages weakened.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 2.2 • Frontier Rivalries & Symbolic Contemporary Titles</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Along its northern borders, Vijayanagara clashed frequently with the Sultans of the Deccan and the Gajapati rulers of <span class="ans-box"><span class="ans-num">16</span>Orissa</span> (literally lord of elephants). In popular literature, the Deccan Sultans were designated as <span class="ans-box"><span class="ans-num">17</span>Ashvapati</span> (lord of horses), while the Rayas of Vijayanagara were styled as <span class="ans-box"><span class="ans-num">18</span>Narapati</span> (lord of men). These rivalries centered on control of fertile river basins, particularly the Krishna-Tungabhadra doab, and the lucrative revenues generated from overseas maritime commerce.
+          <div class="focus-note"><strong>Historical Context:</strong> Symbolic Titles: Rulers categorized themselves according to the primary military arm they controlled—elephants in Orissa, cavalry in the Deccan, and infantry/mass manpower in Vijayanagara.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 2.3 • Inscriptional Designation & Predecessor Legacies</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          While modern scholars refer to the empire as Vijayanagara, contemporary state inscriptions and vernacular records designated the realm as <span class="ans-box"><span class="ans-num">19</span>Karnatakasamrajyamu</span>. The Rayas built directly upon traditions inherited from powerful earlier southern kingdoms, incorporating architectural, religious, and administrative achievements of the Cholas in Tamil Nadu and the <span class="ans-box"><span class="ans-num">20</span>Hoysalas</span> in Karnataka, elevating them to unprecedented scale.
+          <div class="focus-note"><strong>Historical Context:</strong> Statecraft Heritage: The rulers explicitly integrated earlier regional temple traditions, like Thanjavur's Brihadishvara and Belur's Chennakeshava, into their imperial architecture.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 2 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 3 ==================== -->
+    <div class="page" id="page3">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 3 of 10</strong> — Module 3: The Golden Age of Krishnadeva Raya (1509–1529 CE)</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 21 to 30 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 3.1 • Military Conquests & Territorial Consolidation</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The reign of Krishnadeva Raya between <span class="ans-box"><span class="ans-num">21</span>1509–1529</span> was characterized by unmatched military expansion and internal consolidation. In <span class="ans-box"><span class="ans-num">22</span>1512</span>, he captured the fertile tract between the Krishna and Tungabhadra rivers known as the <span class="ans-box"><span class="ans-num">23</span>Raichur doab</span>. He subdued the Gajapati rulers of Orissa in 1514 and inflicted a severe defeat upon the Sultan of <span class="ans-box"><span class="ans-num">24</span>Bijapur</span> in 1520, securing peace and immense prosperity for the empire while ensuring that Vijayanagara stood as the paramount southern power.
+          <div class="focus-note"><strong>Historical Context:</strong> Strategic Geography: The Raichur Doab was the perennial bone of contention between peninsular powers because of its exceptional agricultural fertility and diamond mines.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 3.2 • Literary Contributions & The 'Amuktamalyada' Treatise</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Krishnadeva Raya was an accomplished author who composed a masterpiece on statecraft, diplomacy, and maritime commerce in the <span class="ans-box"><span class="ans-num">25</span>Telugu</span> language titled <span class="ans-box"><span class="ans-num">26</span>Amuktamalyada</span>. In this work, the king emphasized that monarchs must improve ports and extend protection to foreign <span class="ans-box"><span class="ans-num">27</span>merchants</span> and sailors who suffered shipwrecks, ensuring that precious commodities like war horses, gems, and pearls flowed directly into royal treasuries rather than enemy markets.
+          <div class="focus-note"><strong>Historical Context:</strong> Primary Source: Krishnadeva Raya's counsel reveals that peninsular kings considered maritime trade not merely an economic activity, but a critical pillar of state survival.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 3.3 • Suburban Expansion & Monumental Temple Architecture</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Near the imperial capital, Krishnadeva Raya established a thriving suburban township named <span class="ans-box"><span class="ans-num">28</span>Nagalapuram</span> in honour of his mother Nagala Devi. He was also a prolific temple patron who commissioned magnificent monumental entrance gateways known as <span class="ans-box"><span class="ans-num">29</span>raya gopurams</span> across major South Indian shrines and constructed the ceremonial platform known as the <span class="ans-box"><span class="ans-num">30</span>House of Victory</span>, where annual royal reviews were conducted.
+          <div class="focus-note"><strong>Historical Context:</strong> Architectural Synthesis: Raya gopurams served as monumental political billboards, visibly signalling royal presence and piety across hundreds of miles of southern territory.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 3 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 4 ==================== -->
+    <div class="page" id="page4">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 4 of 10</strong> — Module 4: Cavalry Logistics, Firearms & The Amara-Nayaka System</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 31 to 40 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 4.1 • Arabian Cavalry Imports & Local Merchant Guilds</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Because battlefield success in peninsular warfare relied heavily upon effective <span class="ans-box"><span class="ans-num">31</span>cavalry</span>, the importation of Arabian and Central Asian horses was crucial. Horse commerce was initially monopolized by Arab merchants, but local trading groups known as <span class="ans-box"><span class="ans-num">32</span>kudirai chettis</span> (horse merchants) also participated actively. In <span class="ans-box"><span class="ans-num">33</span>1498</span>, the <span class="ans-box"><span class="ans-num">34</span>Portuguese</span> arrived on the western Malabar coast, introducing new commercial dynamics and advanced naval technology into the region.
+          <div class="focus-note"><strong>Historical Context:</strong> Economic Logics: Peninsular climate prevented the successful domestic breeding of war horses, making empires wholly dependent on overseas maritime supply lines.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 4.2 • European Military Firearms & Strategic Alliances</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The Portuguese established commercial and military stations along the western coast using superior military technology, particularly naval artillery and <span class="ans-box"><span class="ans-num">35</span>firearms</span> (muskets and matchlocks). Their control over horse imports and arms trade made them valuable military allies to the <span class="ans-box"><span class="ans-num">36</span>Rayas</span> during conflicts with the Deccan Sultanates, radically altering medieval battlefield tactics across the southern peninsula.
+          <div class="focus-note"><strong>Historical Context:</strong> Military Revolution: The introduction of matchlock handguns and field cannons by Europeans in the early 16th century shifted warfare from shock cavalry to gunpowder infantry.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 4.3 • Structure of the Amara-Nayaka Administrative System</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The <span class="ans-box"><span class="ans-num">37</span>amara-nayaka</span> system was a major political innovation of Vijayanagara, sharing key features with the <span class="ans-box"><span class="ans-num">38</span>iqta system</span> of the Delhi Sultanate. The term amara derives from the Sanskrit word <span class="ans-box"><span class="ans-num">39</span>samara</span>, meaning war or battle. Nayakas held territories, collected revenue, maintained troops, but by the <span class="ans-box"><span class="ans-num">40</span>seventeenth century</span>, many rebelled to establish independent kingdoms, undermining central royal authority.
+          <div class="focus-note"><strong>Historical Context:</strong> Institutional Dualism: While nayakas provided an effective standing military army, their growing provincial autonomy eventually caused the fragmentation of the empire.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 4 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 5 ==================== -->
+    <div class="page" id="page5">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 5 of 10</strong> — Module 5: The Cataclysmic Battle of Talikota (1565 CE) & Imperial Relocation</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 41 to 50 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 5.1 • Succession Crises & The Rise of Rama Raya</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Following the demise of Krishnadeva Raya in <span class="ans-box"><span class="ans-num">41</span>1529</span>, imperial succession was contested by rival factions and rebellious nayakas. Prime Minister <span class="ans-box"><span class="ans-num">42</span>Rama Raya</span> gained paramount influence and pursued an aggressive foreign policy, seeking to play off one Deccan Sultan against another. This antagonistic diplomacy ultimately united the Sultanates of Bijapur, Ahmadnagar, and <span class="ans-box"><span class="ans-num">43</span>Golconda</span> against <span class="ans-box"><span class="ans-num">44</span>Vijayanagara</span>, leading to the formation of a hostile coalition.
+          <div class="focus-note"><strong>Historical Context:</strong> Diplomatic Miscalculation: Rama Raya's overconfidence in meddling in Sultanate rivalries alienated his neighbours and provoked an unprecedented joint offensive against him.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 5.2 • The Decisive Clash at Rakshasi-Tangadi (Talikota)</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          In January 1565, the imperial army marched into the fateful battle of <span class="ans-box"><span class="ans-num">45</span>Rakshasi-Tangadi</span> (popularly called Talikota). The Sultanate alliance utilized coordinated heavy <span class="ans-box"><span class="ans-num">46</span>artillery</span> and disciplined cavalry, inflicting a total rout on the Vijayanagara army. Rama Raya was captured and executed on the <span class="ans-box"><span class="ans-num">47</span>battlefield</span>, precipitating panic and an immediate collapse of imperial frontline forces.
+          <div class="focus-note"><strong>Historical Context:</strong> Battlefield Tactics: The confederate Sultanates chained their heavy cannons together in the centre, shattering the frontal infantry charges of the Vijayanagara forces.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 5.3 • The Sacking of the Capital & Relocation to Penukonda</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Following the catastrophe of <span class="ans-box"><span class="ans-num">48</span>1565</span>, the victorious armies sacked and burned the capital over several months, reducing it to ruins. The Aravidu dynasty abandoned the Tungabhadra basin, shifting its imperial center eastward to <span class="ans-box"><span class="ans-num">49</span>Penukonda</span> and later ruling from <span class="ans-box"><span class="ans-num">50</span>Chandragiri</span> near Tirupati, while regional nayakas founded independent dynasties in Madurai and Mysore.
+          <div class="focus-note"><strong>Historical Context:</strong> Urban Destruction: The sack of Vijayanagara represented one of the most complete urban devastations in medieval world history, turning a city of half a million into empty ruins.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 5 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 6 ==================== -->
+    <div class="page" id="page6">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 6 of 10</strong> — Module 6: Water Architecture & Irrigation Engineering in an Arid Basin</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 51 to 60 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 6.1 • Natural Catchments & The Tungabhadra Basin</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The location of Vijayanagara was characterized by the natural basin formed by the river <span class="ans-box"><span class="ans-num">51</span>Tungabhadra</span>, which flows in a north-easterly direction. The landscape is ringed by dramatic <span class="ans-box"><span class="ans-num">52</span>granite</span> hills that form a natural defensive perimeter. Because the region is semi-arid, extensive <span class="ans-box"><span class="ans-num">53</span>embankments</span> were constructed across streams to store seasonal rainwater in massive <span class="ans-box"><span class="ans-num">54</span>reservoirs</span>, ensuring year-round agricultural productivity.
+          <div class="focus-note"><strong>Historical Context:</strong> Environmental Adaptation: The city's planners skillfully turned the natural granitic topography into catchment basins, channeling monsoon run-off into storage reservoirs.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 6.2 • The Kamalapuram Reservoir & Urban Conduits</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The most significant reservoir constructed in the early fifteenth century was the <span class="ans-box"><span class="ans-num">55</span>Kamalapuram</span> tank. Water from this tank not only irrigated agricultural lands but was also conducted through masonry <span class="ans-box"><span class="ans-num">56</span>channels</span> directly into the <span class="ans-box"><span class="ans-num">57</span>Royal Centre</span> to meet domestic and ceremonial needs, demonstrating sophisticated civil hydraulic engineering.
+          <div class="focus-note"><strong>Historical Context:</strong> Dual Purpose Waterworks: Tanks in Vijayanagara simultaneously sustained paddy cultivation and delivered piped water to palatial residences through covered stone aqueducts.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 6.3 • The Hiriya Canal & Agricultural Irrigation</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          One of the most remarkable surviving hydraulic structures is the <span class="ans-box"><span class="ans-num">58</span>Hiriya canal</span>, which drew water from a dam built across the Tungabhadra. Constructed by kings of the <span class="ans-box"><span class="ans-num">59</span>Sangama dynasty</span>, it irrigated the fertile valley separating the Sacred Centre from the <span class="ans-box"><span class="ans-num">60</span>Urban Core</span>, enabling intensive multi-crop cultivation right within the fortified zone.
+          <div class="focus-note"><strong>Historical Context:</strong> Intra-Urban Agriculture: The Hiriya canal ensured that fields situated within the defensive walls were permanently watered, safeguarding the populace against famine.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 6 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 7 ==================== -->
+    <div class="page" id="page7">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 7 of 10</strong> — Module 7: The Concentric Fortifications & Urban Settlement Layout</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 61 to 70 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 7.1 • Abdur Razzaq's Account of Seven Concentric Walls</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          In the 1440s, the Persian ambassador <span class="ans-box"><span class="ans-num">61</span>Abdur Razzaq</span> visited Vijayanagara and was astonished by its defensive ramparts, recording that the city was enclosed by <span class="ans-box"><span class="ans-num">62</span>seven (7)</span> lines of concentric walls. Uniquely, the outer fortifications encircled vast <span class="ans-box"><span class="ans-num">63</span>agricultural fields</span>, orchards, and forests to ensure food security during enemy <span class="ans-box"><span class="ans-num">64</span>sieges</span>, confounding traditional siege warfare.
+          <div class="focus-note"><strong>Historical Context:</strong> Siege Strategy: While medieval sieges sought to starve city dwellers, Vijayanagara's outer walls enclosed fields and granaries, enabling defenders to hold out indefinitely.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 7.2 • Mortarless Dry Masonry & Wedge-Shaped Stones</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The massive stone walls were built without the use of lime <span class="ans-box"><span class="ans-num">65</span>mortar</span> or cementing agents. Instead, stonemasons cut blocks into precision <span class="ans-box"><span class="ans-num">66</span>wedge-shaped</span> forms that interlocked and held firmly in place. The walls were further strengthened by square and rectangular <span class="ans-box"><span class="ans-num">67</span>bastions</span> projecting outwards to eliminate blind spots for archers and sentries.
+          <div class="focus-note"><strong>Historical Context:</strong> Construction Technology: The dry-stone wedge technique ensured that earthquakes or artillery concussions caused the stone blocks to settle even more tightly rather than crack.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 7.3 • Fortified Gateways & Indo-Islamic Architectural Synthesis</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Entrance into the fortified perimeter was regulated through massive gates featuring pointed arches and domes, reflecting <span class="ans-box"><span class="ans-num">68</span>Indo-Islamic</span> architectural influence. Paved highways wound through natural <span class="ans-box"><span class="ans-num">69</span>valleys</span>, linking peripheral gateways directly with bustling temple <span class="ans-box"><span class="ans-num">70</span>bazaars</span>, facilitating controlled commercial access.
+          <div class="focus-note"><strong>Historical Context:</strong> Architectural Hybridity: Gateways combined the Turkish pointed arch and dome with indigenous beam-and-bracket construction, demonstrating trans-cultural aesthetic dialogue.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 7 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 8 ==================== -->
+    <div class="page" id="page8">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 8 of 10</strong> — Module 8: The Royal Centre & Ceremonial Platforms: Mahanavami Dibba</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 71 to 80 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 8.1 • The Royal Centre & King's Palace Enclosure</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The Royal Centre was situated in the <span class="ans-box"><span class="ans-num">71</span>south-western</span> sector of the metropolis and contained over sixty temples. The largest secular enclosure is known as the <span class="ans-box"><span class="ans-num">72</span>King's Palace</span>, within which stood two grand platforms: the <span class="ans-box"><span class="ans-num">73</span>Sabha Mandapa</span> (Audience Hall) and the monumental <span class="ans-box"><span class="ans-num">74</span>Mahanavami Dibba</span>, surrounded by soaring double stone walls.
+          <div class="focus-note"><strong>Historical Context:</strong> Sacred and Secular Conflation: Locating over sixty temples in the administrative Royal Centre illustrates that political authority was inseparable from religious patronage.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 8.2 • The Architecture of the Sabha Mandapa</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The Sabha Mandapa was an elevated platform with closely spaced slots for <span class="ans-box"><span class="ans-num">75</span>wooden pillars</span> that once supported an upper story. A staircase led to the second level, though the narrow spacing of pillars left little open floor space, making its exact ceremonial <span class="ans-box"><span class="ans-num">76</span>function</span> a subject of historical debate among <span class="ans-box"><span class="ans-num">77</span>scholars</span> today.
+          <div class="focus-note"><strong>Historical Context:</strong> Archaeological Enigma: The dense pillar arrangement suggests that the Sabha Mandapa may have functioned as a secured royal treasury or an elevated ceremonial reviewing stage.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 8.3 • The Monumental Mahanavami Dibba & State Rituals</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The Mahanavami Dibba rose from a massive base of 11,000 square feet to a height of <span class="ans-box"><span class="ans-num">78</span>40 feet</span>. The platform was the focal point of the grand ten-day autumn festival known as <span class="ans-box"><span class="ans-num">79</span>Mahanavami</span> (Dussehra), which Portuguese traveller Domingo Paes termed the <span class="ans-box"><span class="ans-num">80</span>House of Victory</span>, where vassal nayakas submitted annual tributes.
+          <div class="focus-note"><strong>Historical Context:</strong> Ritual and Power: The festival culminated in the worship of state horses and military weapons, reaffirming royal sovereignty and feudal allegiance of all provincial commanders.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 8 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 9 ==================== -->
+    <div class="page" id="page9">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 9 of 10</strong> — Module 9: Secular Architecture, The Lotus Mahal & The Hazara Rama Temple</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 81 to 90 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 9.1 • The Lotus Mahal & Architectural Fusion</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          One of the most celebrated secular buildings in the Royal Centre is the <span class="ans-box"><span class="ans-num">81</span>Lotus Mahal</span>, named by British visitors in the <span class="ans-box"><span class="ans-num">82</span>nineteenth century</span>. Colin Mackenzie suggested it was a <span class="ans-box"><span class="ans-num">83</span>council chamber</span> where the king consulted senior ministers. It features nine towers and graceful arches reflecting <span class="ans-box"><span class="ans-num">84</span>Indo-Islamic</span> techniques blended with Hindu superstructure motifs.
+          <div class="focus-note"><strong>Historical Context:</strong> Secular Aesthetics: Lotus Mahal represents courtly architecture where Islamic arches, plasterwork, and multi-tiered shikharas fused into a distinct Vijayanagara courtly style.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 9.2 • The Monumental Elephant Stables</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Adjacent to the Lotus Mahal enclosure stands an impressive row of <span class="ans-box"><span class="ans-num">85</span>eleven (11)</span> domed masonry chambers known as the <span class="ans-box"><span class="ans-num">86</span>Elephant Stables</span>. This grand utilitarian structure was designed to shelter the emperor's prized royal war <span class="ans-box"><span class="ans-num">87</span>elephants</span>, featuring soaring vaulted ceilings and central multi-tiered pavilions.
+          <div class="focus-note"><strong>Historical Context:</strong> Military Prestige: Housing state elephants in a structure of such architectural grandeur highlights the immense symbolic and tactical importance of the war elephant corps.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 9.3 • The Hazara Rama Temple & Epic Reliefs</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The <span class="ans-box"><span class="ans-num">88</span>Hazara Rama</span> temple was located in the Royal Centre and was reserved exclusively for the <span class="ans-box"><span class="ans-num">89</span>royal family</span>. The interior and exterior walls of the shrine feature continuous carved relief panels illustrating vivid scenes from the Hindu epic <span class="ans-box"><span class="ans-num">90</span>Ramayana</span>, representing the finest royal narrative art in stone.
+          <div class="focus-note"><strong>Historical Context:</strong> Divine Kingship: By depicting scenes of Rama, the ideal righteous king, on their private shrine, Vijayanagara monarchs reinforced their own identity as righteous rulers.</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 9 of 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 10 ==================== -->
+    <div class="page" id="page10">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>Class 12 History Answer Key • Page 10 of 10</strong> — Module 10: The Sacred Centre, Vitthala Temple & Modern Archaeological Mapping</div>
+        <div class="pt-meta"><strong>Model Solutions: Blanks 91 to 100 (10 Marks)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 10.1 • The Sacred Centre & The Title 'Hindu Suratrana'</span>
+          <span class="topic-weight">4 Marks (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          The Sacred Centre was situated on the rocky northern banks of the Tungabhadra river. The principal deity was <span class="ans-box"><span class="ans-num">91</span>Virupaksha</span>, a guardian form of <span class="ans-box"><span class="ans-num">92</span>Shiva</span>. Royal orders were inscribed in Kannada characters as <span class="ans-box"><span class="ans-num">93</span>Sri Virupaksha</span>, and kings claimed divine authority by assuming the title <span class="ans-box"><span class="ans-num">94</span>Hindu Suratrana</span> (meaning Hindu Sultan), adopting contemporary vocabulary.
+          <div class="focus-note"><strong>Historical Context:</strong> Trans-Cultural Idiom: The title Hindu Suratrana reveals that Vijayanagara rulers adopted the political prestige of the term Sultan to assert universal peninsular authority.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 10.2 • The Vitthala Temple Complex & Chariot Bazaars</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          Another magnificent shrine was the Vitthala temple, dedicated to <span class="ans-box"><span class="ans-num">95</span>Vitthala</span>, a form of Vishnu venerated in <span class="ans-box"><span class="ans-num">96</span>Maharashtra</span>. The temple complex features a world-renowned monolithic <span class="ans-box"><span class="ans-num">97</span>stone chariot</span> and broad paved avenues that served as vibrant commercial <span class="ans-box"><span class="ans-num">98</span>bazaars</span> lined with merchant stalls.
+          <div class="focus-note"><strong>Historical Context:</strong> Cultural Assimilation: Importing the worship of Vitthala from Maharashtra into Karnataka exemplifies the imperial strategy of assimilating regional traditions into the capital.</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">Topic 10.3 • Comprehensive Documentation & 25-Grid Survey System</span>
+          <span class="topic-weight">3 Marks (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          In the 1980s, an international team led by Fritz, Michell, and Nagaraja Rao systematically documented the site by dividing it into <span class="ans-box"><span class="ans-num">99</span>25 grid squares</span> denoted by letters of the English alphabet, enabling the detailed recording of thousands of standing and subterranean <span class="ans-box"><span class="ans-num">100</span>structures</span> across decades of research.
+          <div class="focus-note"><strong>Historical Context:</strong> Cartographic Methodology: The grid system enabled researchers to record tiny features—from massive temples down to minor mortar mortars and post-holes—with scientific precision.</div>
+        </div>
+      </div>
+        
+      <!-- Teacher's Cumulative Diagnostic Scorecard -->
+      <div class="eval-box">
+        <div class="eval-grid">
+          <div>
+            <div class="score-matrix-row">
+              <span style="font-size: 8px; font-weight: 800; min-width: 80px;">Module Scores:</span>
+              <div class="score-cell"><span>P1-2 (20M)</span><strong>20 / 20</strong></div>
+              <div class="score-cell"><span>P3-4 (20M)</span><strong>20 / 20</strong></div>
+              <div class="score-cell"><span>P5-6 (20M)</span><strong>20 / 20</strong></div>
+              <div class="score-cell"><span>P7-8 (20M)</span><strong>20 / 20</strong></div>
+              <div class="score-cell"><span>P9-10 (20M)</span><strong>20 / 20</strong></div>
+              <div class="score-cell" style="background:#000; color:#fff;"><span style="color:#fff;">Total (100M)</span><strong>100 / 100</strong></div>
+            </div>
+            <div class="remarks-block">
+              <div class="remarks-strip">
+                <span>Pedagogical Assessment Summary:</span>
+                <span class="remarks-line">All 100 blanks are 100% verified against NCERT Class 12 History Chapter 7 textbook text.</span>
+              </div>
+              <div class="remarks-strip">
+                <span>Diagnostic Guidance:</span>
+                <span class="remarks-line">Students scoring below 70 should focus on chronological order and architectural terminology.</span>
+              </div>
+            </div>
+          </div>
+          <div class="rubric-pill-box">
+            <strong>Standard Grading Scale:</strong>
+            <div>[ Excellent ] A+ (90-100) &bull; [ Very Good ] A (80-89)</div>
+            <div>[ Good ] B+ (70-79) &bull; [ Satisfactory ] B (60-69)</div>
+            <div>[ Remedial Action Required ] &lt;50</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="page-footer">
+        <span>Class 12 History &bull; An Imperial Capital: Vijayanagara (Theme 7)</span>
+        <span>Official Answer Key &bull; 100 Marks</span>
+        <span>Page 10 of 10</span>
+      </div>
+    </div>
+
+</body>
+</html>

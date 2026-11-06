@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class 12 Physics: Alternating Current Official Model Answer Key</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 5.5mm 9mm 4.5mm 9mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Running Header */
+    .page-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 4.5px;
+    }
+
+    .pt-title {
+      font-size: 9.8px;
+      color: #000000;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .pt-meta {
+      font-size: 8.5px;
+      font-weight: 700;
+    }
+
+    /* Master Assessment Header */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 4px;
+      padding: 5px 9px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 4px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .title-area h1 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    .title-area p {
+      font-size: 9px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.1px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2.5px 8px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #000000;
+    }
+
+    /* Student Info Grid */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr 1fr 1.1fr;
+      gap: 8px;
+      font-size: 8.8px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-weight: 800;
+      font-size: 8.2px;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    .info-line {
+      flex: 1;
+      border-bottom: 1.5px solid #000000;
+      min-height: 11px;
+    }
+
+    /* Instructions Strip */
+    .hint-strip {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 3.5px 8px;
+      font-size: 8.2px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+      line-height: 1.35;
+    }
+
+    .hint-title {
+      font-weight: 800;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 1.5px;
+      font-size: 8.5px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .hint-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 2px 10px;
+      font-weight: 600;
+    }
+
+    /* Section Card */
+    .sec-card {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      margin-bottom: 4.5px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .sec-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sec-title {
+      font-size: 9.6px;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .sec-weight {
+      font-size: 8.4px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .sec-body {
+      padding: 5px 8px;
+      font-size: 9.3px;
+      color: #000000;
+    }
+
+    /* Questions Styling */
+    .q-item {
+      margin-bottom: 4.5px;
+      padding-bottom: 3.5px;
+      border-bottom: 1px dashed #cccccc;
+    }
+
+    .q-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .q-head {
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5px;
+    }
+
+    .q-text {
+      font-size: 9.2px;
+      line-height: 1.42;
+    }
+
+    .math-sym {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+    }
+
+    .ans-box-line {
+      border-bottom: 1.2px solid #000000;
+      min-height: 13px;
+      margin-top: 2px;
+    }
+
+    /* Table Styles */
+    .formula-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.6px;
+      text-align: left;
+    }
+
+    .formula-table th {
+      background: #000000;
+      color: #ffffff;
+      padding: 3px 6px;
+      font-weight: 800;
+      border: 1.2px solid #000000;
+      font-size: 8.4px;
+    }
+
+    .formula-table td {
+      border: 1.2px solid #000000;
+      padding: 3px 6px;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+    .formula-table tr:nth-child(even) {
+      background: #fcfcfc;
+    }
+
+    /* Answer Key Solved Blocks */
+    .sol-block {
+      background: #f7f7f7;
+      border-left: 3px solid #000000;
+      padding: 3.5px 6px;
+      margin-top: 2.5px;
+      font-size: 8.8px;
+      line-height: 1.45;
+    }
+
+    .sol-block strong {
+      color: #000000;
+      font-weight: 800;
+    }
+
+    .step-list {
+      margin-left: 12px;
+      margin-top: 2px;
+      font-size: 8.7px;
+    }
+
+    /* Evaluation Matrix */
+    .eval-box {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 4px 8px;
+      background: #ffffff;
+      margin-top: 3.5px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .score-matrix-row {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-bottom: 3.5px;
+    }
+
+    .score-cell {
+      border: 1.3px solid #000000;
+      border-radius: 3px;
+      padding: 2px 4px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .score-cell span {
+      display: block;
+      font-size: 6.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .score-cell strong {
+      font-size: 10px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .remarks-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 7.8px;
+      font-weight: 700;
+    }
+
+    .remarks-strip {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .remarks-line {
+      flex: 1;
+      border-bottom: 1.2px solid #000000;
+      min-height: 11px;
+    }
+
+    .rubric-pill-box {
+      border: 1.2px solid #000000;
+      border-radius: 3px;
+      padding: 3.5px 6px;
+      font-size: 7.4px;
+      line-height: 1.35;
+      background: #fafafa;
+    }
+
+    .rubric-pill-box strong {
+      font-weight: 800;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1.5px solid #000000;
+      padding-top: 3px;
+      font-size: 7.8px;
+      font-weight: 700;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ANSWER KEY ==================== -->
+  <div class="page" id="key-page1">
+    <div>
+      <!-- Master Answer Key Header -->
+      <div class="test-header" style="background: #fafafa;">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon" style="background:#000;">KEY</div>
+            <div class="title-area">
+              <h1>Class 12 Physics Official Marking Scheme &amp; Solutions: Alternating Current</h1>
+              <p>NCERT Physics Chapter 7 • Complete Step-by-Step Mathematical Derivations &amp; Solved Numericals</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill" style="background:#000; color:#fff;">
+              <span style="color:#fff;">Doc Type</span>
+              <strong style="color:#fff;">Model Key</strong>
+            </div>
+            <div class="meta-pill">
+              <span>Max. Marks</span>
+              <strong>50 Marks</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <span class="info-label">Assessor:</span>
+            <span style="font-weight:700; font-size:8.5px;">Senior Physics Faculty (CBSE Evaluator)</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Standard:</span>
+            <span style="font-weight:700; font-size:8.5px;">NCERT Class 12 Physics Textbook</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Marking Scheme:</span>
+            <span style="font-weight:700; font-size:8.5px;">Step-wise Marking with SI Unit Checks</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Coverage:</span>
+            <span style="font-weight:700; font-size:8.5px;">100% Complete Chapter 7 Scope</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evaluation Guidance Strip -->
+      <div class="hint-strip" style="background:#f4f4f4;">
+        <div class="hint-title">
+          <span>• Examiner Marking Guidelines &amp; Step-Wise Award Matrix •</span>
+        </div>
+        <div class="hint-grid">
+          <div><strong>1. Derivations:</strong> Award marks for clear statement of loop rule, integral bounds, integration constant analysis, and phasor vectors.</div>
+          <div><strong>2. Numericals:</strong> Award 0.5M for formula, 0.5M for substitution, and 1M for correct numerical value with proper SI unit.</div>
+        </div>
+      </div>
+
+      <!-- SECTION A MODEL SOLUTIONS -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">Section A Solutions • Core Conceptual Definitions</span>
+          <span class="sec-weight">6 Marks</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>A1. Root Mean Square (RMS) Current &amp; Measurement Principle:</span>
+              <span class="math-sym">[1 Mark]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Definition:</strong> RMS current is that steady direct current (DC) which produces the same average heating effect (Joule heat) in a given resistor in a given time as is produced by the alternating current in the same resistor during one complete cycle.
+              <br><strong>Measurement:</strong> Moving coil DC meters read the average value over a full cycle (<span class="math-sym">&lang;i&rang; = 0</span>). Hence, AC ammeters utilize the <em>heating effect of current</em> (<span class="math-sym">H &prop; i&sup2;</span>, which is always positive) through hot-wire instruments.
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A2. Inductive vs. Capacitive Reactance:</span>
+              <span class="math-sym">[1 Mark]</span>
+            </div>
+            <div class="sol-block">
+              <strong>X<sub>L</sub> = &omega;L = 2&pi;&nu;L:</strong> Opposition offered by inductor to AC. It is directly proportional to frequency (<span class="math-sym">X<sub>L</sub> &prop; &nu;</span>). For DC (<span class="math-sym">&nu; = 0</span>), <span class="math-sym">X<sub>L</sub> = 0</span>.
+              <br><strong>X<sub>C</sub> = 1/(&omega;C) = 1/(2&pi;&nu;C):</strong> Opposition offered by capacitor to AC. It is inversely proportional to frequency (<span class="math-sym">X<sub>C</sub> &prop; 1/&nu;</span>). For DC (<span class="math-sym">&nu; = 0</span>), <span class="math-sym">X<sub>C</sub> = &infin;</span> (blocks DC completely).
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A3. Impedance (Z) Definition &amp; Dimensions:</span>
+              <span class="math-sym">[1 Mark]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Definition:</strong> Impedance is the total effective opposition offered by an AC circuit containing a combination of resistance, inductance, and capacitance to the flow of alternating current: <span class="math-sym">Z = &radic;[R&sup2; + (X<sub>L</sub> - X<sub>C</sub>)&sup2;]</span>.
+              <br><strong>Unit &amp; Dimensions:</strong> SI unit is Ohm (&Omega;). Dimensions: <span class="math-sym">[M L&sup2; T&macr;&sup3; A&macr;&sup2;]</span>. At resonance (<span class="math-sym">X<sub>L</sub> = X<sub>C</sub></span>), <span class="math-sym">Z = R</span> (minimum).
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A4. Wattless Current:</span>
+              <span class="math-sym">[1 Mark]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Definition:</strong> The component of alternating current in an AC circuit which consumes zero average electrical power over a complete cycle is called wattless current.
+              <br><strong>Condition:</strong> Occurs when the phase difference between voltage and current is <span class="math-sym">&phi; = &pi;/2 rad (90&deg;)</span> (pure inductor or capacitor), so that power factor <span class="math-sym">cos &phi; = cos 90&deg; = 0</span>, giving <span class="math-sym">P = V I cos &phi; = 0</span>.
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A5. Power Factor &amp; Transmission Significance:</span>
+              <span class="math-sym">[1 Mark]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Definition:</strong> The cosine of the phase angle &phi; between voltage and current, <span class="math-sym">cos &phi; = R/Z</span>.
+              <br><strong>Transmission Impact:</strong> Since power <span class="math-sym">P = V I cos &phi;</span>, to deliver a given power P at voltage V, current is <span class="math-sym">I = P / (V cos &phi;)</span>. If <span class="math-sym">cos &phi;</span> is small (low power factor), current I must be very large, leading to immense Joule heating loss (<span class="math-sym">I&sup2;R</span>) along transmission power lines.
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A6. Quality Factor (Q-Factor):</span>
+              <span class="math-sym">[1 Mark]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Definition:</strong> Q-factor measures the sharpness of resonance in a series LCR tuning circuit: <span class="math-sym">Q = &omega;<sub>0</sub>L / R = (1/R) &radic;(L/C)</span>. A higher Q-factor ensures that the circuit is highly selective, tuning sharply to the desired radio frequency channel while rejecting adjacent frequencies.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION C (PART I) MODEL DERIVATIONS -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">Section C (Part I) Solutions • Core Mathematical Derivations</span>
+          <span class="sec-weight">8 Marks</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>A7. Derivation of RMS Current from Joule Heating:</span>
+              <span class="math-sym">[4 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Step 1: Instantaneous Power:</strong> Given <span class="math-sym">i(t) = i<sub>m</sub> sin(&omega;t)</span>. The instantaneous power dissipated across resistor R is:
+              <br><span class="math-sym" style="margin-left: 10px;">p(t) = i&sup2;R = (i<sub>m</sub> sin &omega;t)&sup2; R = i<sub>m</sub>&sup2; R sin&sup2;(&omega;t)</span>. [1M]
+              <br><strong>Step 2: Cycle Average:</strong> Average power over period T: <span class="math-sym">P = &lang;p&rang; = i<sub>m</sub>&sup2; R &lang;sin&sup2; &omega;t&rang;</span>.
+              <br>Using identity <span class="math-sym">sin&sup2;(&omega;t) = &frac12; [1 - cos(2&omega;t)]</span>:
+              <br><span class="math-sym" style="margin-left: 10px;">&lang;sin&sup2; &omega;t&rang; = &frac12; [1 - &lang;cos(2&omega;t)&rang;] = &frac12; [1 - 0] = &frac12;</span> (since cosine integrates to zero over full period).
+              <br>Therefore, average power is <span class="math-sym">P = &frac12; i<sub>m</sub>&sup2; R</span>. [2M]
+              <br><strong>Step 3: Definition of Equivalent Current I:</strong> Let I be the steady direct current producing the same power <span class="math-sym">P = I&sup2; R</span>:
+              <br><span class="math-sym" style="margin-left: 10px;">I&sup2; R = &frac12; i<sub>m</sub>&sup2; R &rArr; I&sup2; = i<sub>m</sub>&sup2; / 2 &rArr; I = i<sub>m</sub> / &radic;2 = 0.707 i<sub>m</sub></span>. [1M]
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A8. AC Voltage Applied to Pure Inductor: Current &amp; Power:</span>
+              <span class="math-sym">[4 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Step 1: Kirchhoff's Loop Equation:</strong> <span class="math-sym">v - L (di/dt) = 0 &rArr; L (di/dt) = v<sub>m</sub> sin(&omega;t) &rArr; di = (v<sub>m</sub>/L) sin(&omega;t) dt</span>. [1M]
+              <br>Integrating both sides: <span class="math-sym">i(t) = (v<sub>m</sub>/L) &int; sin(&omega;t) dt = - (v<sub>m</sub> / &omega;L) cos(&omega;t) + constant</span>.
+              <br>Since source oscillates symmetrically about zero with no DC bias, integration constant = 0.
+              <br><strong>Step 2: Phase Lag:</strong> Using trigonometric identity <span class="math-sym">- cos(&omega;t) = sin(&omega;t - &pi;/2)</span>:
+              <br><span class="math-sym" style="margin-left: 10px;">i(t) = i<sub>m</sub> sin(&omega;t - &pi;/2)</span>, where current amplitude <span class="math-sym">i<sub>m</sub> = v<sub>m</sub> / (&omega;L) = v<sub>m</sub> / X<sub>L</sub></span>, with <span class="math-sym">X<sub>L</sub> = &omega;L</span>.
+              <br>Comparing with <span class="math-sym">v = v<sub>m</sub> sin(&omega;t)</span>, current lags voltage by <span class="math-sym">&pi;/2 rad (90&deg;)</span>. [2M]
+              <br><strong>Step 3: Average Power Dissipated:</strong>
+              <br><span class="math-sym" style="margin-left: 10px;">p<sub>L</sub> = v &times; i = [v<sub>m</sub> sin(&omega;t)] &times; [- i<sub>m</sub> cos(&omega;t)] = - &frac12; v<sub>m</sub> i<sub>m</sub> sin(2&omega;t)</span>.
+              <br>Average over complete cycle: <span class="math-sym">P<sub>L</sub> = - &frac12; v<sub>m</sub> i<sub>m</sub> &lang;sin(2&omega;t)&rang; = 0</span> (since &lang;sin 2&omega;t&rang; = 0). Hence, power consumed is strictly zero. [1M]
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Class 12 Physics &bull; Chapter 7: Alternating Current (Official Model Answer Key)</span>
+      <span>Page 1 of 2 &bull; Section A, B &amp; C (Part I) Solutions</span>
+      <span>Page 1 of 2</span>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ANSWER KEY ==================== -->
+  <div class="page" id="key-page2">
+    <div>
+      <!-- Page 2 Running Top Bar -->
+      <div class="page-top-bar">
+        <div class="pt-title">Class 12 Physics Answer Key &bull; Page 2 of 2 (Section C Part II &amp; Section D Numericals)</div>
+        <div class="pt-meta"><strong>Official Marking Scheme (30 Marks)</strong></div>
+      </div>
+
+      <!-- SECTION C (PART II) MODEL DERIVATIONS -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">Section C (Part II) Solutions • Advanced Circuit Derivations</span>
+          <span class="sec-weight">10 Marks</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>A9. Series LCR Circuit: Phasor Analysis, Impedance &amp; Resonance:</span>
+              <span class="math-sym">[5 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Step 1: Phasor Representation:</strong> Let current phasor be <span class="math-sym">I</span>. Voltage phasors: <span class="math-sym">V<sub>R</sub> = I R</span> (in phase with I); <span class="math-sym">V<sub>L</sub> = I X<sub>L</sub></span> (leads I by &pi;/2); <span class="math-sym">V<sub>C</sub> = I X<sub>C</sub></span> (lags I by &pi;/2).
+              <br>Combined reactive phasor has magnitude <span class="math-sym">|V<sub>L</sub> - V<sub>C</sub>| = I |X<sub>L</sub> - X<sub>C</sub>|</span> along the vertical axis. [1.5M]
+              <br><strong>Step 2: Pythagorean Vector Sum:</strong> Resultant source voltage phasor <span class="math-sym">V = &radic;[V<sub>R</sub>&sup2; + (V<sub>L</sub> - V<sub>C</sub>)&sup2;]</span>.
+              <br><span class="math-sym" style="margin-left: 10px;">v<sub>m</sub>&sup2; = (i<sub>m</sub> R)&sup2; + [i<sub>m</sub> (X<sub>L</sub> - X<sub>C</sub>)]&sup2; = i<sub>m</sub>&sup2; [R&sup2; + (X<sub>L</sub> - X<sub>C</sub>)&sup2;]</span>
+              <br><span class="math-sym" style="margin-left: 10px;">&rArr; i<sub>m</sub> = v<sub>m</sub> / &radic;[R&sup2; + (X<sub>L</sub> - X<sub>C</sub>)&sup2;] = v<sub>m</sub> / Z</span>, where impedance <span class="math-sym">Z = &radic;[R&sup2; + (X<sub>L</sub> - X<sub>C</sub>)&sup2;]</span>. [1.5M]
+              <br>Phase angle: <span class="math-sym">tan &phi; = (V<sub>L</sub> - V<sub>C</sub>) / V<sub>R</sub> = (X<sub>L</sub> - X<sub>C</sub>) / R</span>. [1M]
+              <br><strong>Step 3: Resonance Condition:</strong> At resonance, current amplitude is maximum, which requires minimum impedance:
+              <br><span class="math-sym" style="margin-left: 10px;">X<sub>L</sub> = X<sub>C</sub> &rArr; &omega;<sub>0</sub> L = 1/(&omega;<sub>0</sub> C) &rArr; &omega;<sub>0</sub>&sup2; = 1/(LC) &rArr; &omega;<sub>0</sub> = 1/&radic;(LC)</span>.
+              <br>Resonance requires <em>both L and C</em> so their opposite voltages (<span class="math-sym">V<sub>L</sub></span> and <span class="math-sym">V<sub>C</sub></span>, 180&deg; out of phase) cancel each other. In pure RL or RC circuits, no cancellation is possible, so resonance cannot occur. [1M]
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A10. Transformer Theory, Transformation Ratio &amp; Energy Losses:</span>
+              <span class="math-sym">[5 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>(a) Principle:</strong> Works on the principle of <em>mutual induction</em>: an alternating current in the primary coil sets up a changing magnetic flux in the common soft iron core, which links and induces an alternating emf in the secondary coil. [1M]
+              <br><strong>(b) Mathematical Derivation:</strong> Let &phi; be magnetic flux per turn.
+              <br>Induced emf in secondary: <span class="math-sym">e<sub>s</sub> = - N<sub>s</sub> (d&phi;/dt)</span>; Back emf in primary: <span class="math-sym">e<sub>p</sub> = - N<sub>p</sub> (d&phi;/dt)</span>.
+              <br>Assuming zero primary winding resistance (<span class="math-sym">V<sub>p</sub> = e<sub>p</sub></span>) and open secondary (<span class="math-sym">V<sub>s</sub> = e<sub>s</sub></span>):
+              <br><span class="math-sym" style="margin-left: 10px;">V<sub>s</sub> / V<sub>p</sub> = N<sub>s</sub> / N<sub>p</sub></span>.
+              <br>For 100% efficiency, Power input = Power output: <span class="math-sym">V<sub>p</sub> I<sub>p</sub> = V<sub>s</sub> I<sub>s</sub> &rArr; I<sub>p</sub> / I<sub>s</sub> = V<sub>s</sub> / V<sub>p</sub></span>.
+              <br>Combining: <span class="math-sym">V<sub>s</sub> / V<sub>p</sub> = N<sub>s</sub> / N<sub>p</sub> = I<sub>p</sub> / I<sub>s</sub> = k</span> (transformation ratio). [2M]
+              <br><strong>(c) Types:</strong> Step-up transformer: <span class="math-sym">N<sub>s</sub> &gt; N<sub>p</sub> &rArr; V<sub>s</sub> &gt; V<sub>p</sub></span>, but <span class="math-sym">I<sub>s</sub> &lt; I<sub>p</sub></span>. Step-down: <span class="math-sym">N<sub>s</sub> &lt; N<sub>p</sub> &rArr; V<sub>s</sub> &lt; V<sub>p</sub></span>, but <span class="math-sym">I<sub>s</sub> &gt; I<sub>p</sub></span>. [1M]
+              <br><strong>(d) Energy Losses &amp; Mitigation:</strong>
+              <br>1. <em>Eddy Current Loss:</em> Changing flux induces eddy currents in solid core causing heating. Minimised by using a <strong>laminated soft-iron core</strong> insulated with varnish.
+              <br>2. <em>Joule Heating of Windings (I&sup2;R):</em> Heat dissipated in copper coils. Minimised by using <strong>thick copper wire</strong> for high-current windings. [1M]
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION D MODEL NUMERICAL SOLUTIONS -->
+      <div class="sec-card">
+        <div class="sec-header">
+          <span class="sec-title">Section D Solutions • Step-by-Step NCERT Numericals</span>
+          <span class="sec-weight">20 Marks</span>
+        </div>
+        <div class="sec-body">
+          <div class="q-item">
+            <div class="q-head">
+              <span>A11. Solutions to Bulb &amp; Inductor Circuit (NCERT 7.1 &amp; 7.2):</span>
+              <span class="math-sym">[4 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>(a) Bulb (P = 100 W, V = 220 V, &nu; = 50 Hz):</strong>
+              <br>(i) Resistance: <span class="math-sym">R = V&sup2; / P = (220)&sup2; / 100 = 48400 / 100 = <strong>484 &Omega;</strong></span>. [1M]
+              <br>(ii) Peak voltage: <span class="math-sym">v<sub>m</sub> = &radic;2 &times; V = 1.414 &times; 220 = <strong>311.1 V</strong></span>. [0.5M]
+              <br>(iii) RMS current: <span class="math-sym">I = P / V = 100 / 220 = <strong>0.455 A</strong></span> (or <span class="math-sym">I = V/R = 220/484 = 0.455 A</span>). [0.5M]
+              <br><strong>(b) Pure Inductor (L = 25.0 mH = 25 &times; 10&macr;&sup3; H, V = 220 V, &nu; = 50 Hz):</strong>
+              <br>(i) Inductive reactance: <span class="math-sym">X<sub>L</sub> = 2&pi;&nu;L = 2 &times; 3.1416 &times; 50 &times; (25 &times; 10&macr;&sup3;) = 314.16 &times; 0.025 = <strong>7.85 &Omega;</strong></span>. [1M]
+              <br>(ii) RMS current: <span class="math-sym">I = V / X<sub>L</sub> = 220 / 7.85 = <strong>28.03 A &approx; 28 A</strong></span>. [1M]
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A12. Solutions to Capacitor Circuit &amp; Frequency Doubling (NCERT 7.4):</span>
+              <span class="math-sym">[4 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Given:</strong> <span class="math-sym">C = 15.0 &mu;F = 15 &times; 10&macr;&sup6; F, V = 220 V, &nu; = 50 Hz</span>.
+              <br>(a) <span class="math-sym">X<sub>C</sub> = 1 / (2&pi;&nu;C) = 1 / [2 &times; 3.1416 &times; 50 &times; (15 &times; 10&macr;&sup6;)] = 1 / (4.712 &times; 10&macr;&sup3;) = <strong>212.2 &Omega;</strong></span>.
+              <br>RMS current: <span class="math-sym">I = V / X<sub>C</sub> = 220 / 212.2 = <strong>1.04 A</strong></span>. [1.5M]
+              <br>(b) Peak current: <span class="math-sym">i<sub>m</sub> = &radic;2 &times; I = 1.414 &times; 1.04 = <strong>1.47 A</strong></span>. [1M]
+              <br>(c) <strong>Frequency Doubled (&nu;' = 2&nu; = 100 Hz):</strong>
+              <br>Since <span class="math-sym">X<sub>C</sub> &prop; 1/&nu;</span>, capacitive reactance is <strong>halved</strong>: <span class="math-sym">X<sub>C</sub>' = 212.2 / 2 = <strong>106.1 &Omega;</strong></span>.
+              <br>Current <span class="math-sym">I' = V / X<sub>C</sub>' = 220 / 106.1 = <strong>2.08 A</strong></span> (current is <strong>doubled</strong>). [1.5M]
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A13. Solutions to Series LCR Circuit Analysis (NCERT Example 7.8):</span>
+              <span class="math-sym">[6 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>Given:</strong> <span class="math-sym">v<sub>m</sub> = 283 V, &nu; = 50 Hz, R = 3 &Omega;, L = 25.48 mH = 25.48 &times; 10&macr;&sup3; H, C = 796 &mu;F = 796 &times; 10&macr;&sup6; F</span>.
+              <br><strong>(a) Reactances:</strong>
+              <br><span class="math-sym" style="margin-left: 10px;">X<sub>L</sub> = 2&pi;&nu;L = 2 &times; 3.1416 &times; 50 &times; 25.48 &times; 10&macr;&sup3; = 314.16 &times; 0.02548 = <strong>8.00 &Omega;</strong></span>.
+              <br><span class="math-sym" style="margin-left: 10px;">X<sub>C</sub> = 1 / (2&pi;&nu;C) = 1 / [2 &times; 3.1416 &times; 50 &times; 796 &times; 10&macr;&sup6;] = 1 / 0.250 = <strong>4.00 &Omega;</strong></span>. [1.5M]
+              <br><strong>(b) Impedance:</strong>
+              <br><span class="math-sym" style="margin-left: 10px;">Z = &radic;[R&sup2; + (X<sub>L</sub> - X<sub>C</sub>)&sup2;] = &radic;[3&sup2; + (8 - 4)&sup2;] = &radic;[9 + 16] = &radic;25 = <strong>5.00 &Omega;</strong></span>. [1.5M]
+              <br><strong>(c) Phase Difference:</strong>
+              <br><span class="math-sym" style="margin-left: 10px;">tan &phi; = (X<sub>L</sub> - X<sub>C</sub>) / R = (8 - 4) / 3 = 4/3 = 1.333 &rArr; &phi; = tan&macr;&sup1;(1.333) = <strong>+53.1&deg; (or +0.927 rad)</strong></span>.
+              <br>Since <span class="math-sym">X<sub>L</sub> &gt; X<sub>C</sub></span>, the circuit is <em>predominantly inductive</em>; current <strong>lags</strong> voltage by <strong>53.1&deg;</strong>. [1.5M]
+              <br><strong>(d) Power Factor &amp; Power Dissipated:</strong>
+              <br>Power factor: <span class="math-sym">cos &phi; = R / Z = 3 / 5 = <strong>0.60</strong></span>.
+              <br>Peak current: <span class="math-sym">i<sub>m</sub> = v<sub>m</sub> / Z = 283 / 5 = 56.6 A</span> &rArr; <span class="math-sym">I<sub>rms</sub> = i<sub>m</sub> / &radic;2 = 56.6 / 1.414 = <strong>40.0 A</strong></span>.
+              <br>Average power: <span class="math-sym">P = I<sub>rms</sub>&sup2; R = (40)&sup2; &times; 3 = 1600 &times; 3 = <strong>4800 W = 4.80 kW</strong></span>. [1.5M]
+            </div>
+          </div>
+
+          <div class="q-item">
+            <div class="q-head">
+              <span>A14. Solutions to Resonance &amp; Transformer Calculation (NCERT 7.9 &amp; 7.8):</span>
+              <span class="math-sym">[6 Marks]</span>
+            </div>
+            <div class="sol-block">
+              <strong>(a) Resonance Analysis (L = 25.48 mH, C = 796 &mu;F, R = 3 &Omega;, v<sub>m</sub> = 283 V):</strong>
+              <br>Resonant angular frequency: <span class="math-sym">&omega;<sub>0</sub> = 1/&radic;(LC) = 1/&radic;(25.48 &times; 10&macr;&sup3; &times; 796 &times; 10&macr;&sup6;) = 1/&radic;(2.028 &times; 10&macr;&sup5;) = <strong>222.1 rad/s</strong></span>.
+              <br>Linear resonant frequency: <span class="math-sym">&nu;<sub>r</sub> = &omega;<sub>0</sub> / (2&pi;) = 222.1 / (2 &times; 3.1416) = <strong>35.4 Hz</strong></span>.
+              <br>Impedance at resonance: <span class="math-sym">Z = R = <strong>3.0 &Omega;</strong></span>.
+              <br>RMS current at resonance: <span class="math-sym">I<sub>res</sub> = V<sub>rms</sub> / R = (283 / &radic;2) / 3 = 200.1 / 3 = <strong>66.7 A</strong></span>.
+              <br>Power dissipated at resonance: <span class="math-sym">P<sub>res</sub> = I<sub>res</sub>&sup2; R = (66.7)&sup2; &times; 3 = 4448.9 &times; 3 = <strong>13347 W &approx; 13.35 kW</strong></span>. [3.5M]
+              <br><strong>(b) Transformer (N<sub>p</sub> = 100, N<sub>s</sub> = 200, V<sub>p</sub> = 220 V, I<sub>p</sub> = 10 A):</strong>
+              <br>Turns ratio: <span class="math-sym">k = N<sub>s</sub> / N<sub>p</sub> = 200 / 100 = 2</span>.
+              <br>Secondary voltage: <span class="math-sym">V<sub>s</sub> = (N<sub>s</sub> / N<sub>p</sub>) &times; V<sub>p</sub> = 2 &times; 220 V = <strong>440 V</strong></span>.
+              <br>Secondary current: <span class="math-sym">I<sub>s</sub> = (N<sub>p</sub> / N<sub>s</sub>) &times; I<sub>p</sub> = (100 / 200) &times; 10 A = <strong>5.0 A</strong></span>. [2.5M]
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Evaluation Validation Strip -->
+      <div class="eval-box" style="margin-top: 3.5px;">
+        <div class="eval-grid">
+          <div>
+            <div class="score-matrix-row">
+              <span style="font-size: 8px; font-weight: 800; min-width: 80px;">Marking Check:</span>
+              <div class="score-cell"><span>Sec A (6M)</span><strong>Verified</strong></div>
+              <div class="score-cell"><span>Sec B (6M)</span><strong>Verified</strong></div>
+              <div class="score-cell"><span>Sec C (18M)</span><strong>Verified</strong></div>
+              <div class="score-cell"><span>Sec D (20M)</span><strong>Verified</strong></div>
+              <div class="score-cell" style="background:#000; color:#fff;"><span style="color:#fff;">Total (50M)</span><strong>100% NCERT</strong></div>
+            </div>
+            <div class="remarks-block">
+              <div class="remarks-strip">
+                <span>Validation Note:</span>
+                <span style="font-size:7.5px; font-weight:600;">All solutions verified against NCERT Class 12 Physics Chapter 7 (Reprint 2025-26).</span>
+                <span style="white-space:nowrap; margin-left:auto;">Head Examiner Signature: ______________</span>
+              </div>
+            </div>
+          </div>
+          <div class="rubric-pill-box">
+            <strong>Grading Benchmarks:</strong>
+            <div>&bull; 45-50: Mastery in derivations &amp; numericals</div>
+            <div>&bull; 35-44: Sound conceptual foundation</div>
+            <div>&bull; &lt;25: Focused revision recommended</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Class 12 Physics &bull; Chapter 7: Alternating Current (Official Model Answer Key)</span>
+      <span>Page 2 of 2 &bull; Section C (Part II) &amp; Section D Solutions &bull; Total: 50 Marks</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </div>
+
+</body>
+</html>

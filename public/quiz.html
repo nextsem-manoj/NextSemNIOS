@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Through the Eyes of Travellers | NCERT Class 12 History MCQ Quiz (Bilingual)</title>
+  <meta name="description" content="Master-level bilingual (Hindi & English) MCQ quiz based on NCERT Class 12 History Chapter 5: Through the Eyes of Travellers (Al-Biruni, Ibn Battuta, François Bernier).">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="app-container" id="appRoot">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="chapter-selector-wrap" style="margin-bottom: 16px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <div class="segment-group" id="chapterSelector" role="group" aria-label="Select Chapter">
+          <button type="button" class="segment-btn active" data-chapter="bio8">🧫 Bio Ch 8: Microbes</button>
+          <button type="button" class="segment-btn" data-chapter="math4">📐 Math Ch 4: Complex Numbers</button>
+          <button type="button" class="segment-btn" data-chapter="hist4">🏰 History Ch 4: Three Orders</button>
+        </div>
+        <a href="history-fill-in-the-blanks.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(168, 85, 247, 0.4); color: #d8b4fe;" title="Class 11 History Theme 4 Paragraph Fill-in-the-Blanks Practice">📜 Cl 11 Hist Fill-ups</a>
+        <a href="history-ch5-travellers-fill-in-the-blanks.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(139, 92, 246, 0.4); color: #c4b5fd;" title="Class 12 History Theme 5 Through the Eyes of Travellers Practice">📜 Cl 12 Travellers Fill-ups</a>
+        <a href="os-unit2-fill-in-the-blanks.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(6, 182, 212, 0.4); color: #38bdf8;" title="Unit 2 Operating System Page-Wise Fill-in-the-Blanks">💻 OS Unit 2 Fill-ups</a>
+        <a href="physics-ch7-alternating-current-fill-in-the-blanks.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;" title="NCERT Class 12 Physics Chapter 7 Alternating Current Page-Wise Practice">⚡ Physics Ch 7 Fill-ups</a>
+        <a href="physics-ch7-numericals-easy-to-difficult.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(239, 68, 68, 0.4); color: #f87171;" title="Class 12 Physics Alternating Current Numericals Easy to Difficult">⚡ Physics Numericals</a>
+        <a href="nios-math-ch1-number-systems-fill-in-the-blanks.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(59, 130, 246, 0.4); color: #60a5fa;" title="NIOS Class 10 Mathematics Chapter 1 Number Systems Fill-in-the-Blanks">📐 NIOS Math Ch 1</a>
+        <a href="nios-math-ch1-numericals-only-fill-in-the-blanks.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(16, 185, 129, 0.4); color: #34d399;" title="NIOS Class 10 Mathematics Chapter 1 Only Numericals Practice">🔢 Math Numericals Only</a>
+        <a href="bio-notes.html" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(229, 184, 66, 0.4); color: var(--accent-gold);" title="Read complete chapter explanation and notes">📖 Bio Notes</a>
+        <a href="/accountancy/" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; border-color: rgba(99, 102, 241, 0.4); color: #a5b4fc;" title="T.S. Grewal Class 11 Accountancy Masterclass">📊 Accountancy</a>
+      </div>
+      <div class="header-badge" id="headerBadge">
+        <span>NCERT Biology Class 12 • Chapter 8</span>
+      </div>
+      <h1 class="app-title" id="appTitle">Microbes in Human Welfare</h1>
+      <div class="app-subtitle-hi" id="appSubtitleHi">मानव कल्याण में सूक्ष्मजीव (NEET / Board Exam Focus)</div>
+      <div class="app-subtitle-en" id="appSubtitleEn">Bilingual Multiple Choice Questions (English & हिन्दी) with In-depth Explanations</div>
+    </header>
+
+    <!-- Top Control Bar -->
+    <section class="control-panel" aria-label="Quiz Controls">
+      <div class="controls-left">
+        <!-- Language Selector -->
+        <div class="segment-group" id="langSelector" role="group" aria-label="Language Mode">
+          <button type="button" class="segment-btn active" data-lang="bilingual">🌐 Bilingual</button>
+          <button type="button" class="segment-btn" data-lang="en">English</button>
+          <button type="button" class="segment-btn" data-lang="hi">हिन्दी</button>
+        </div>
+
+        <!-- Mode Selector -->
+        <div class="segment-group" id="modeSelector" role="group" aria-label="Quiz Mode">
+          <button type="button" class="segment-btn active" data-mode="practice" title="Instant answers and detailed explanations">Practice Mode</button>
+          <button type="button" class="segment-btn" data-mode="exam" title="Timed examination with final scorecard">Exam Mode</button>
+        </div>
+      </div>
+
+      <div class="controls-right">
+        <!-- Topic Filter -->
+        <select class="custom-select" id="categoryFilter" aria-label="Filter by Topic">
+          <option value="all">All Topics (सभी विषय)</option>
+          <option value="al-biruni">Al-Biruni (अल-बिरूनी)</option>
+          <option value="ibn-battuta">Ibn Battuta (इब्न बतूता)</option>
+          <option value="bernier">François Bernier (फ़्रांस्वा बर्नियर)</option>
+          <option value="society">Society & Travellers (समाज एवं यात्री)</option>
+        </select>
+
+        <!-- Stats & Timer -->
+        <div class="stat-pill" id="scoreWidget">
+          Score: <strong id="currentScoreText">0 / 0</strong>
+        </div>
+        <div class="stat-pill timer-pill" id="timerWidget">
+          ⏱️ <strong id="timerDisplay">00:00</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Bar -->
+    <div class="quiz-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+      <div class="quiz-progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Question Navigator Strip -->
+    <nav class="question-nav-strip" id="questionNavStrip" aria-label="Question Navigation"></nav>
+
+    <!-- Main Question Card -->
+    <main class="quiz-card" id="quizCard">
+      <!-- Question Meta -->
+      <div class="q-meta-row">
+        <div class="q-badge" id="qBadge">Question 1 of 15</div>
+        <div class="q-category-tag" id="qCategory">Al-Biruni</div>
+      </div>
+
+      <!-- Question Text Container -->
+      <article class="question-block">
+        <h2 class="q-text-en lang-en-item" id="qTextEn">Question text in English...</h2>
+        <div class="q-text-hi lang-hi-item" id="qTextHi">प्रश्न हिन्दी में...</div>
+
+        <!-- Optional Statements Box -->
+        <div class="statements-box" id="statementsBox" style="display: none;">
+          <div id="statementsList"></div>
+          <div class="prompt-en lang-en-item" id="promptEn"></div>
+          <div class="prompt-hi lang-hi-item" id="promptHi"></div>
+        </div>
+      </article>
+
+      <!-- Options Grid -->
+      <div class="options-grid" id="optionsGrid"></div>
+
+      <!-- Explanation Card (Visible in Practice Mode or Review) -->
+      <section class="explanation-card" id="explanationCard">
+        <div class="explanation-title">
+          <span class="exp-badge">💡 Detailed Solution & Analysis</span>
+          <span class="exp-ref" id="expSourceRef">Source: NCERT</span>
+        </div>
+        <div class="exp-en lang-en-item" id="expEn"></div>
+        <div class="exp-hi lang-hi-item" id="expHi"></div>
+      </section>
+
+      <!-- Navigation Actions Footer -->
+      <footer class="card-actions">
+        <button type="button" class="btn btn-secondary" id="prevBtn" disabled>← Previous</button>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="btn btn-secondary" id="clearBtn">Clear</button>
+          <button type="button" class="btn btn-primary" id="nextBtn">Next →</button>
+          <button type="button" class="btn btn-submit" id="submitExamBtn" style="display: none;">Submit Test ✓</button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scorecard Result Modal -->
+  <div class="modal-backdrop" id="resultModal">
+    <div class="modal-content">
+      <div class="score-circle">
+        <div class="score-num" id="modalPercentage">0%</div>
+        <div class="score-total" id="modalFraction">0 / 15</div>
+      </div>
+      <h3 class="modal-title" id="modalHeading">Test Completed!</h3>
+      <p class="modal-subtitle" id="modalFeedback">Here is your performance summary for this assessment.</p>
+
+      <div class="score-breakdown">
+        <div class="metric-item">
+          <span class="metric-val correct-c" id="metricCorrect">0</span>
+          <span class="metric-label">Correct</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val wrong-c" id="metricWrong">0</span>
+          <span class="metric-label">Incorrect</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val skipped-c" id="metricSkipped">0</span>
+          <span class="metric-label">Unattempted</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" id="reviewAnswersBtn">Review Explanations</button>
+        <button type="button" class="btn btn-primary" id="restartTestBtn">Restart Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Scripts -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

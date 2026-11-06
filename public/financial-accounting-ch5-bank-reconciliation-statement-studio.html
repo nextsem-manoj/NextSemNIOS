@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 11 Financial Accounting Ch 5: Bank Reconciliation Statement (BRS) Studio | NextSem</title>
+  <meta name="description" content="Master NCERT Class 11 Financial Accounting Chapter 5 Bank Reconciliation Statement (keac105.pdf) — Complete Guide, Timing Differences, Errors, 4-Balance Matrix, All 8 Solved Illustrations and 18 Numerical Questions.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js">
+    // Back to Top functionality
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+  </script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3a;
+      --border-card: rgba(16, 185, 129, 0.22);
+      --border-accent: #10b981;
+      
+      --brand-blue: #0284c7;
+      --brand-cyan: #06b6d4;
+      --brand-emerald: #10b981;
+      --brand-gold: #f59e0b;
+      --brand-purple: #8b5cf6;
+      
+      --color-plus: #10b981;
+      --color-plus-bg: rgba(16, 185, 129, 0.12);
+      --color-minus: #ef4444;
+      --color-minus-bg: rgba(239, 68, 68, 0.12);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --border-accent: #059669;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+    }
+    body.light-theme .top-breadcrumb-bar {
+      background: #ffffff !important;
+      border-bottom-color: #cbd5e1 !important;
+      color: #475569 !important;
+    }
+    body.light-theme .top-breadcrumb-bar a {
+      color: #059669 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .sep {
+      color: #94a3b8 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .current {
+      color: #0f172a !important;
+    }
+    body.light-theme .quiz-header {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-bottom-color: #cbd5e1 !important;
+    }
+    body.light-theme .hud-card {
+      background: #ffffff !important;
+      border-color: #cbd5e1 !important;
+    }
+    body.light-theme .brs-table {
+      background: #ffffff;
+      color: #0f172a;
+    }
+    body.light-theme .brs-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    body.light-theme .brs-table td {
+      border-bottom-color: #e2e8f0;
+    }
+    body.light-theme .card-concept {
+      background: #ffffff;
+      border-color: #cbd5e1;
+    }
+    body.light-theme .btn-tab {
+      background: #f1f5f9;
+      color: #475569;
+      border-color: #cbd5e1;
+    }
+    body.light-theme .btn-tab.active {
+      background: #059669;
+      color: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Breadcrumb Bar */
+    .top-breadcrumb-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #080f20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .top-breadcrumb-bar a {
+      color: var(--brand-emerald);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .top-breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-dim);
+    }
+    .top-breadcrumb-bar .current {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* Header */
+    .quiz-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 12, 24, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+    }
+    .brand-title-wrap h1 {
+      font-size: 1.12rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-ch {
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .brand-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .btn-theme {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+      flex: 1;
+    }
+
+    /* Quick Action Links */
+    .action-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .action-btn {
+      flex: 1;
+      min-width: 220px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .action-btn.primary {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+      border-color: #10b981;
+      color: #34d399;
+    }
+    .action-btn.primary:hover {
+      background: rgba(16, 185, 129, 0.35);
+    }
+    .action-btn.secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+    }
+    .action-btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Quick Jump Table of Contents (Single Page) */
+    .quick-nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      margin-bottom: 28px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+    }
+    .quick-nav-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--brand-emerald);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 4px;
+    }
+    .quick-nav-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .quick-nav-chip:hover {
+      background: var(--brand-emerald);
+      color: #ffffff;
+      border-color: var(--brand-emerald);
+      transform: translateY(-1px);
+    }
+    .section-block {
+      margin-bottom: 36px;
+      scroll-margin-top: 80px;
+    }
+    .section-block .card-concept {
+      margin-bottom: 0;
+    }
+    body.light-theme .quick-nav-bar {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+    body.light-theme .quick-nav-chip {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    body.light-theme .quick-nav-chip:hover {
+      background: #059669;
+      color: #ffffff;
+      border-color: #059669;
+    }
+
+
+    /* Concept Card */
+    .card-concept {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    .card-concept h2 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--brand-emerald);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-concept h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--brand-cyan);
+      margin: 18px 0 8px;
+    }
+    .card-concept p {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    /* Grid for timing differences */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .diff-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .diff-card h4 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 6px;
+    }
+    .diff-card .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .tag-plus { background: var(--color-plus-bg); color: #34d399; }
+    .tag-minus { background: var(--color-minus-bg); color: #f87171; }
+
+    /* BRS Format Table */
+    .brs-table-wrapper {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .brs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .brs-table th, .brs-table td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .brs-table th {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    .brs-table td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .brs-table .amount-col {
+      text-align: right;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      white-space: nowrap;
+      width: 130px;
+    }
+    .text-plus { color: #34d399; font-weight: 800; }
+    .text-minus { color: #f87171; font-weight: 800; }
+    .row-highlight {
+      background: rgba(16, 185, 129, 0.08);
+      font-weight: 800;
+    }
+
+    /* Numerical Question Accordion */
+    .nq-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .nq-header {
+      padding: 14px 18px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .nq-header:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .nq-title {
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nq-ans-pill {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+    }
+    .nq-body {
+      padding: 16px 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    
+    /* Floating Back to Top Button */
+    .back-to-top-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      background: rgba(12, 19, 40, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid var(--border-accent);
+      color: #34d399;
+      border-radius: 9999px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(16, 185, 129, 0.25);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: var(--font-main);
+      font-weight: 800;
+      font-size: 0.84rem;
+    }
+    .back-to-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top-btn:hover {
+      background: var(--brand-emerald);
+      color: #ffffff;
+      box-shadow: 0 10px 28px rgba(16, 185, 129, 0.45);
+      transform: translateY(-3px) scale(1.05);
+    }
+    .back-to-top-btn svg {
+      transition: transform 0.2s ease;
+    }
+    .back-to-top-btn:hover svg {
+      transform: translateY(-2px);
+    }
+    body.light-theme .back-to-top-btn {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #059669;
+      color: #059669;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 15px rgba(5, 150, 105, 0.15);
+    }
+    body.light-theme .back-to-top-btn:hover {
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 10px 28px rgba(5, 150, 105, 0.35);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Breadcrumbs -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="sep">›</span>
+    <a href="/?class=11">Class 11</a>
+    <span class="sep">›</span>
+    <a href="/?class=11&subject=Accountancy">Financial Accounting-I</a>
+    <span class="sep">›</span>
+    <a href="/?class=11&subject=Accountancy&chapter=5">Chapter 5</a>
+    <span class="sep">›</span>
+    <span class="current">Bank Reconciliation Statement Studio</span>
+  </nav>
+
+  <!-- Sticky Header -->
+  <header class="quiz-header">
+    <div class="brand-section">
+      <img src="/image-20.png" alt="NextSem Logo" class="brand-logo">
+      <div class="brand-title-wrap">
+        <h1>
+          <span>Bank Reconciliation Statement</span>
+          <span class="badge-ch">Chapter 5</span>
+        </h1>
+        <div class="brand-sub">Class 11 Financial Accounting-I • NCERT Complete Masterclass &amp; Numericals</div>
+      </div>
+    </div>
+
+    <button class="btn-theme" id="themeToggleBtn">
+      <span id="themeIcon">🌙</span>
+      <span id="themeLabel">Dark</span>
+    </button>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Action Links -->
+    <div class="action-links">
+      <a href="/pdf/Class 11/11th Financial Accounting-I/keac105.pdf" target="_blank" class="action-btn primary">
+        <span>📄 Open Official NCERT PDF (keac105.pdf)</span>
+      </a>
+      <a href="/?class=11&subject=Accountancy" class="action-btn secondary">
+        <span>📚 All Class 11 Accountancy Chapters</span>
+      </a>
+    </div>
+
+    <!-- Single Page Quick Navigation TOC -->
+    <nav class="quick-nav-bar" aria-label="Chapter Table of Contents">
+      <span class="quick-nav-title">⚡ Quick Jump:</span>
+      <a href="#section-concepts" class="quick-nav-chip">💡 1. Core Concepts</a>
+      <a href="#section-timing" class="quick-nav-chip">⏳ 2. Timing Differences (7 Causes)</a>
+      <a href="#section-errors" class="quick-nav-chip">⚠️ 3. Differences Caused by Errors</a>
+      <a href="#section-format" class="quick-nav-chip">📋 4. BRS Format & 5 Practice Qs</a>
+      <a href="#section-matrix" class="quick-nav-chip">📊 5. Four-Balance Matrix</a>
+      <a href="#section-illustrations" class="quick-nav-chip">📝 6. 8 Solved Illustrations</a>
+      <a href="#section-theory" class="quick-nav-chip">📖 7. NCERT Theory Q&A (Short & Long)</a>
+      <a href="#section-numericals" class="quick-nav-chip">🔢 8. 18 Practice Numericals</a>
+      <a href="#section-mcq" class="quick-nav-chip">🎯 9. 20 Practice MCQs</a>
+    </nav>
+
+    <!-- SECTION 1: CORE CONCEPTS & KEY TERMS -->
+    <section id="section-concepts" class="section-block">
+      <div class="card-concept">
+        <h2>🏦 1. What is a Bank Reconciliation Statement (BRS)?</h2>
+        <p>
+          A <strong>Bank Reconciliation Statement</strong> is a statement prepared periodically by an account holder to reconcile (tally) the bank balance shown in the business firm's <strong>Cash Book (Bank Column)</strong> with the balance shown by the bank in the <strong>Passbook (Bank Statement)</strong> as on a particular date, by setting out the reasons for discrepancies between the two.
+        </p>
+        
+        <h3>🎯 Need for Reconciliation</h3>
+        <p>
+          In theory, the bank balance shown in the Cash Book must agree with the balance shown in the Passbook. However, in practice, these two balances rarely match due to:
+        </p>
+        <ul style="padding-left: 20px; margin-bottom: 14px; font-size: 0.92rem;">
+          <li><strong>Time Lag:</strong> Delays between the issue/deposit of cheques and their presentation/clearing at the bank.</li>
+          <li><strong>Direct Transactions:</strong> Bank deductions, charges, interest, or direct deposits by customers unknown to the firm until the statement arrives.</li>
+          <li><strong>Clerical Errors:</strong> Mistakes committed either by the business clerk or by the bank.</li>
+        </ul>
+
+        <h3>🔑 Key Terms Explained</h3>
+        <div class="diff-grid">
+          <div class="diff-card">
+            <h4>Cash Book (Bank Column)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Maintained by the <strong>business firm</strong>. Deposits are recorded on the <strong>Debit side</strong> (Receipts), and withdrawals/payments are recorded on the <strong>Credit side</strong> (Payments).</p>
+          </div>
+          <div class="diff-card">
+            <h4>Bank Passbook / Statement</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">A copy of the customer's account in the <strong>bank's ledger</strong>. Bank credits our account when money is deposited, and debits our account when money is withdrawn.</p>
+          </div>
+          <div class="diff-card">
+            <h4>Favourable Balance</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Money is sitting in the bank (Deposits > Withdrawals).<br>• Cash Book: <strong>Debit Balance (Dr.)</strong><br>• Passbook: <strong>Credit Balance (Cr.)</strong></p>
+          </div>
+          <div class="diff-card">
+            <h4>Unfavourable / Bank Overdraft</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Business has withdrawn more than deposits (borrowed from bank).<br>• Cash Book: <strong>Credit Balance (Cr.)</strong><br>• Passbook: <strong>Debit Balance (Dr. / OD)</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: 5.1.1 TIMING DIFFERENCES -->
+    <section id="section-timing" class="section-block">
+      <div class="card-concept">
+        <h2>⏳ 5.1.1 Timing Differences (The 7 Time-Lag Causes)</h2>
+        <p>Timing differences arise because of the time gap between recording a transaction in the firm's Cash Book and its actual realization by the bank.</p>
+
+        <div class="diff-grid">
+          <div class="diff-card">
+            <span class="tag tag-plus">If Starting with Cash Book: ADD (+)</span>
+            <h4>(a) Cheques issued but not yet presented for payment</h4>
+            <p style="font-size: 0.84rem;">Firm issues cheque → immediately credited in Cash Book (reducing Cash Book balance). But the payee has not presented it at the bank yet. Passbook balance remains <strong>HIGHER</strong>.</p>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">If Starting with Cash Book: DEDUCT (–)</span>
+            <h4>(b) Cheques paid into bank but not yet collected</h4>
+            <p style="font-size: 0.84rem;">Cheques received from customers debited in Cash Book immediately (+). But the clearing house takes a few days. Passbook balance remains <strong>LOWER</strong> until clearing.</p>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">If Starting with Cash Book: DEDUCT (–)</span>
+            <h4>(c) Direct debits / Bank charges by the bank</h4>
+            <p style="font-size: 0.84rem;">Bank deducts service charges, collection charges, or interest on overdraft directly. Passbook is debited without firm's immediate knowledge → Passbook balance is <strong>LOWER</strong>.</p>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-plus">If Starting with Cash Book: ADD (+)</span>
+            <h4>(d) Amounts directly deposited by customers in bank</h4>
+            <p style="font-size: 0.84rem;">Debtor pays directly into firm's bank account. Bank credits the account immediately, but firm only learns when receiving bank statement → Passbook balance is <strong>HIGHER</strong>.</p>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-plus">If Starting with Cash Book: ADD (+)</span>
+            <h4>(e) Interest and dividends collected by the bank</h4>
+            <p style="font-size: 0.84rem;">Bank collects investment dividends or interest and credits the account directly. No entry exists in Cash Book until statement is reviewed → Passbook balance is <strong>HIGHER</strong>.</p>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">If Starting with Cash Book: DEDUCT (–)</span>
+            <h4>(f) Direct payments by bank on standing instructions</h4>
+            <p style="font-size: 0.84rem;">Bank automatically pays insurance premium, rent, or telephone bills as per standing instructions. Bank debits account → Passbook balance is <strong>LOWER</strong>.</p>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">If Starting with Cash Book: DEDUCT (–)</span>
+            <h4>(g) Cheques deposited / bills discounted dishonoured</h4>
+            <p style="font-size: 0.84rem;">When a deposited cheque or discounted bill bounces, bank debits customer's account immediately. Firm does not know until statement arrives → Passbook balance is <strong>LOWER</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: 5.1.2 ERRORS -->
+    <section id="section-errors" class="section-block">
+      <div class="card-concept">
+        <h2>⚠️ 5.1.2 Differences Caused by Errors</h2>
+        <p>Errors can occur either on the part of the business firm in the Cash Book or on the part of the bank in the Passbook.</p>
+
+        <div class="diff-grid">
+          <div class="diff-card">
+            <h4>(a) Errors Committed by the Firm in Cash Book</h4>
+            <ul style="font-size: 0.84rem; padding-left: 18px; color: var(--text-muted);">
+              <li><strong>Omission of Entry:</strong> Cheque deposited or issued completely omitted from Cash Book.</li>
+              <li><strong>Wrong Amount:</strong> Cheque of ₹5,000 recorded as ₹500 in Cash Book.</li>
+              <li><strong>Wrong Column:</strong> Cheque entered in cash column instead of bank column.</li>
+              <li><strong>Side Reversal:</strong> Cheque issued (payment) debited instead of credited.</li>
+              <li><strong>Casting / Carry-forward Errors:</strong> Overcasting or undercasting of debit/credit totals, or carrying forward debit balance as credit.</li>
+            </ul>
+          </div>
+
+          <div class="diff-card">
+            <h4>(b) Errors Committed by the Bank in Passbook</h4>
+            <ul style="font-size: 0.84rem; padding-left: 18px; color: var(--text-muted);">
+              <li><strong>Wrong Credit:</strong> Bank mistakenly credits our account with money deposited by another customer with a similar name.</li>
+              <li><strong>Wrong Debit:</strong> Bank mistakenly debits our account for a cheque drawn by another account holder.</li>
+              <li><strong>Duplication:</strong> A withdrawal or payment recorded twice in the passbook.</li>
+              <li><strong>Transposition of Figures:</strong> ₹1,589 entered as ₹1,598 by the bank operator.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: 5.2.1 FOUR-BALANCE MATRIX -->
+    
+    <!-- SECTION 4: 5.2 BRS STANDARD FORMAT & 5 FOUNDATION PRACTICE QUESTIONS -->
+    <section id="section-format" class="section-block">
+      <div class="card-concept">
+        <h2>📋 5.2 Standard Format of Bank Reconciliation Statement (BRS)</h2>
+        <p>A Bank Reconciliation Statement is prepared on a specific date in a standardized tabular layout. There are two accepted presentation formats:</p>
+
+        <!-- Format A: Plus / Minus Format -->
+        <h3 style="color: var(--brand-emerald); margin: 18px 0 8px;">Format A: Modern Plus (+) and Minus (–) Two-Column Format (NCERT & CBSE Standard)</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Recommended by NCERT because it works uniformly across both favourable balances and bank overdrafts without confusing inversions:</p>
+
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr>
+                <th colspan="3" style="text-align: center; font-size: 0.88rem; padding: 10px; background: rgba(16, 185, 129, 0.12); color: #34d399;">
+                  Bank Reconciliation Statement as on [e.g., March 31, 202X]
+                </th>
+              </tr>
+              <tr>
+                <th>Particulars</th>
+                <th class="amount-col">(+) Amount ₹</th>
+                <th class="amount-col">(–) Amount ₹</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-highlight">
+                <td><strong>1. Starting Balance:</strong> Balance as per Cash Book / Passbook</td>
+                <td class="amount-col">XXXX (if Dr./Fav)</td>
+                <td class="amount-col">XXXX (if Cr./OD)</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>2. Add Items:</strong><br>
+                  • Cheques issued but not yet presented for payment<br>
+                  • Direct deposits made by customers into the bank account<br>
+                  • Interest on investments and dividends collected directly by bank<br>
+                  • Any erroneous credit entered by bank in Passbook
+                </td>
+                <td class="amount-col text-plus">
+                  XXXX<br>XXXX<br>XXXX<br>XXXX
+                </td>
+                <td class="amount-col">-<br>-<br>-<br>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>3. Deduct Items:</strong><br>
+                  • Cheques paid/deposited into bank but not yet collected/cleared<br>
+                  • Direct bank charges, incidental charges, and interest on overdraft<br>
+                  • Direct payments made by bank on standing instructions (Insurance, Rent)<br>
+                  • Deposited cheques or discounted bills dishonoured<br>
+                  • Any erroneous debit entered by bank in Passbook
+                </td>
+                <td class="amount-col">-<br>-<br>-<br>-<br>-</td>
+                <td class="amount-col text-minus">
+                  XXXX<br>XXXX<br>XXXX<br>XXXX<br>XXXX
+                </td>
+              </tr>
+              <tr class="row-highlight">
+                <td><strong>Total of (+) and (–) Columns</strong></td>
+                <td class="amount-col"><strong>Total Plus</strong></td>
+                <td class="amount-col"><strong>Total Minus</strong></td>
+              </tr>
+              <tr class="row-highlight" style="background: rgba(6, 182, 212, 0.12);">
+                <td><strong>Final Result (Difference):</strong> Balance as per Passbook / Cash Book</td>
+                <td class="amount-col">-</td>
+                <td class="amount-col text-plus"><strong>[Balancing Figure]</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Format B: Traditional Add/Less -->
+        <h3 style="color: var(--brand-cyan); margin: 24px 0 8px;">Format B: Traditional "Add / Less" Vertical Format</h3>
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 16px; font-size: 0.88rem; line-height: 1.8;">
+          <p><strong>Balance as per Cash Book (Dr.) ..................................................................... ₹ [Starting Balance]</strong></p>
+          <p><strong style="color: #34d399;">ADD:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-muted);">
+            <li>Cheques issued but not presented .............................................................. + ₹ XXXX</li>
+            <li>Direct deposits by customers .................................................................... + ₹ XXXX</li>
+            <li>Interest / Dividends collected by bank ........................................................ + ₹ XXXX</li>
+          </ul>
+          <p style="margin-top: 8px;"><strong style="color: #f87171;">LESS:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-muted);">
+            <li>Cheques deposited but not cleared ............................................................. – ₹ XXXX</li>
+            <li>Bank charges & interest debited by bank ..................................................... – ₹ XXXX</li>
+            <li>Direct payments made by bank (Insurance, Rent) ........................................ – ₹ XXXX</li>
+          </ul>
+          <p style="margin-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 6px;">
+            <strong>= Balance as per Bank Passbook (Cr.) ....................................................... ₹ [Final Balance]</strong>
+          </p>
+        </div>
+
+        <!-- 5 Foundation Practice Questions -->
+        <h3 style="color: var(--brand-gold); margin: 32px 0 12px; font-size: 1.15rem; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 18px;">
+          🎯 5 Foundation Practice Questions for Instant Mastery
+        </h3>
+        <p>Test and reinforce your understanding of the BRS format with these 5 step-by-step foundational problems:</p>
+
+        <!-- FP 1 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('fp1')">
+            <span class="nq-title">Practice Q1: Favourable Cash Book ₹10,000 — Cheques Issued &amp; Deposited</span>
+            <span class="nq-ans-pill">Ans: Passbook ₹11,500</span>
+          </div>
+          <div class="nq-body" id="fp1" style="display: none;">
+            <p><strong>Problem:</strong> On June 30, 2024, the Cash Book of Aryan showed a debit balance of ₹10,000. Cheques of ₹4,000 were issued to creditors, but only ₹2,500 were presented for payment. Cheques amounting to ₹3,000 were paid into the bank, but cheques of ₹1,000 were not credited till June 30. Prepare BRS.</p>
+            <p><strong>Step-by-Step Logic:</strong></p>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li>Unpresented Cheques = ₹4,000 – ₹2,500 = ₹1,500. Bank hasn't paid $	o$ Passbook is <strong>HIGHER</strong> $	o$ <strong>ADD (+ ₹1,500)</strong></li>
+              <li>Uncredited Cheques = ₹1,000. Bank hasn't collected $	o$ Passbook is <strong>LOWER</strong> $	o$ <strong>LESS (– ₹1,000)</strong></li>
+            </ul>
+            <div class="brs-table-wrapper" style="margin-top: 10px;">
+              <table class="brs-table">
+                <thead><tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr></thead>
+                <tbody>
+                  <tr><td>Balance as per Cash Book</td><td class="amount-col">10,000</td><td class="amount-col">-</td></tr>
+                  <tr><td>Cheques issued but not presented</td><td class="amount-col text-plus">1,500</td><td class="amount-col">-</td></tr>
+                  <tr><td>Cheques deposited but not credited</td><td class="amount-col">-</td><td class="amount-col text-minus">1,000</td></tr>
+                  <tr class="row-highlight"><td><strong>Credit Balance as per Passbook (₹11,500 – ₹1,000)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>₹10,500</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: 0.85rem; color: #34d399; margin-top: 6px;"><strong>Answer:</strong> Passbook Credit Balance = <strong>₹10,500</strong>.</p>
+          </div>
+        </div>
+
+        <!-- FP 2 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('fp2')">
+            <span class="nq-title">Practice Q2: Cash Book ₹25,000 — Bank Charges, Direct Deposit &amp; Interest</span>
+            <span class="nq-ans-pill">Ans: Passbook ₹28,550</span>
+          </div>
+          <div class="nq-body" id="fp2" style="display: none;">
+            <p><strong>Problem:</strong> On March 31, 2024, Cash Book shows ₹25,000. Bank debited ₹150 for bank charges. A customer directly deposited ₹3,500 into the bank. The bank credited ₹200 as interest. None of these were entered in the Cash Book. Prepare BRS.</p>
+            <p><strong>Step-by-Step Logic:</strong></p>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li>Bank charges debited by bank $	o$ Passbook is <strong>LOWER</strong> $	o$ <strong>LESS (– ₹150)</strong></li>
+              <li>Direct customer deposit $	o$ Passbook is <strong>HIGHER</strong> $	o$ <strong>ADD (+ ₹3,500)</strong></li>
+              <li>Interest credited by bank $	o$ Passbook is <strong>HIGHER</strong> $	o$ <strong>ADD (+ ₹200)</strong></li>
+            </ul>
+            <div class="brs-table-wrapper" style="margin-top: 10px;">
+              <table class="brs-table">
+                <thead><tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr></thead>
+                <tbody>
+                  <tr><td>Debit Balance as per Cash Book</td><td class="amount-col">25,000</td><td class="amount-col">-</td></tr>
+                  <tr><td>Direct deposit by customer</td><td class="amount-col text-plus">3,500</td><td class="amount-col">-</td></tr>
+                  <tr><td>Interest credited by bank</td><td class="amount-col text-plus">200</td><td class="amount-col">-</td></tr>
+                  <tr><td>Bank charges debited by bank</td><td class="amount-col">-</td><td class="amount-col text-minus">150</td></tr>
+                  <tr class="row-highlight"><td><strong>Credit Balance as per Passbook (₹28,700 – ₹150)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>₹28,550</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: 0.85rem; color: #34d399; margin-top: 6px;"><strong>Answer:</strong> Passbook Credit Balance = <strong>₹28,550</strong>.</p>
+          </div>
+        </div>
+
+        <!-- FP 3 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('fp3')">
+            <span class="nq-title">Practice Q3: Cash Book Overdraft ₹15,000 — Unpresented &amp; Uncollected Cheques</span>
+            <span class="nq-ans-pill">Ans: Passbook OD ₹13,000</span>
+          </div>
+          <div class="nq-body" id="fp3" style="display: none;">
+            <p><strong>Problem:</strong> On Dec 31, 2024, Cash Book showed an overdraft of ₹15,000. Cheques issued but not presented = ₹5,000. Cheques deposited but not cleared = ₹3,000. Find the balance as per Passbook.</p>
+            <p><strong>Step-by-Step Logic:</strong></p>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li>Cash Book Overdraft starts in the <strong>MINUS (–) Column</strong>: <strong>₹15,000</strong></li>
+              <li>Unpresented Cheques $	o$ Passbook is <strong>HIGHER</strong> $	o$ <strong>PLUS (+) ₹5,000</strong></li>
+              <li>Uncredited Cheques $	o$ Passbook is <strong>LOWER</strong> $	o$ <strong>MINUS (–) ₹3,000</strong></li>
+            </ul>
+            <div class="brs-table-wrapper" style="margin-top: 10px;">
+              <table class="brs-table">
+                <thead><tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr></thead>
+                <tbody>
+                  <tr><td>Overdraft as per Cash Book</td><td class="amount-col">-</td><td class="amount-col">15,000</td></tr>
+                  <tr><td>Cheques issued but not presented</td><td class="amount-col text-plus">5,000</td><td class="amount-col">-</td></tr>
+                  <tr><td>Cheques deposited but not cleared</td><td class="amount-col">-</td><td class="amount-col text-minus">3,000</td></tr>
+                  <tr class="row-highlight"><td><strong>Total</strong></td><td class="amount-col">5,000</td><td class="amount-col">18,000</td></tr>
+                  <tr class="row-highlight"><td><strong>Overdraft (Debit) as per Passbook (₹18,000 – ₹5,000)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>₹13,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: 0.85rem; color: #34d399; margin-top: 6px;"><strong>Answer:</strong> Overdraft as per Passbook = <strong>₹13,000</strong>.</p>
+          </div>
+        </div>
+
+        <!-- FP 4 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('fp4')">
+            <span class="nq-title">Practice Q4: Passbook Favourable Balance ₹18,000 — Finding Cash Book Balance</span>
+            <span class="nq-ans-pill">Ans: Cash Book ₹16,000</span>
+          </div>
+          <div class="nq-body" id="fp4" style="display: none;">
+            <p><strong>Problem:</strong> On April 30, 2024, Bank Passbook showed a credit balance of ₹18,000. Cheques issued not presented = ₹6,000. Cheques deposited not cleared = ₹4,000. Ascertain balance as per Cash Book.</p>
+            <p><strong>Step-by-Step Logic (Destination is Cash Book):</strong></p>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li>Starting Point: Passbook Credit = <strong>PLUS (+) ₹18,000</strong></li>
+              <li>Unpresented cheques: Cash Book deducted them, bank hasn't $	o$ Cash Book is <strong>LOWER</strong> $	o$ <strong>LESS (– ₹6,000)</strong></li>
+              <li>Uncleared cheques: Cash Book added them, bank hasn't $	o$ Cash Book is <strong>HIGHER</strong> $	o$ <strong>ADD (+ ₹4,000)</strong></li>
+            </ul>
+            <div class="brs-table-wrapper" style="margin-top: 10px;">
+              <table class="brs-table">
+                <thead><tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr></thead>
+                <tbody>
+                  <tr><td>Credit Balance as per Passbook</td><td class="amount-col">18,000</td><td class="amount-col">-</td></tr>
+                  <tr><td>Cheques deposited but not cleared</td><td class="amount-col text-plus">4,000</td><td class="amount-col">-</td></tr>
+                  <tr><td>Cheques issued but not presented</td><td class="amount-col">-</td><td class="amount-col text-minus">6,000</td></tr>
+                  <tr class="row-highlight"><td><strong>Total</strong></td><td class="amount-col">22,000</td><td class="amount-col">6,000</td></tr>
+                  <tr class="row-highlight"><td><strong>Debit Balance as per Cash Book (₹22,000 – ₹6,000)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>₹16,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: 0.85rem; color: #34d399; margin-top: 6px;"><strong>Answer:</strong> Cash Book Balance = <strong>₹16,000</strong>.</p>
+          </div>
+        </div>
+
+        <!-- FP 5 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('fp5')">
+            <span class="nq-title">Practice Q5: Passbook Overdraft ₹12,000 — Bank Charges, Insurance &amp; Cheques</span>
+            <span class="nq-ans-pill">Ans: Cash Book OD ₹10,900</span>
+          </div>
+          <div class="nq-body" id="fp5" style="display: none;">
+            <p><strong>Problem:</strong> On Jan 31, 2024, Passbook showed an overdraft of ₹12,000. Bank charges = ₹300. Insurance premium paid by bank = ₹1,200. Cheques deposited not cleared = ₹2,000. Cheques issued not presented = ₹1,600. Find Cash Book balance.</p>
+            <p><strong>Step-by-Step Logic (Destination is Cash Book):</strong></p>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li>Start: Passbook Overdraft in <strong>MINUS (–) Column</strong>: <strong>₹12,000</strong></li>
+              <li>Bank charges (₹300): Bank deducted, Cash Book hasn't $	o$ Cash Book is <strong>HIGHER</strong> $	o$ <strong>PLUS (+) ₹300</strong></li>
+              <li>Insurance premium (₹1,200): Bank deducted, Cash Book hasn't $	o$ Cash Book is <strong>HIGHER</strong> $	o$ <strong>PLUS (+) ₹1,200</strong></li>
+              <li>Uncredited cheques (₹2,000): Cash Book added, Bank hasn't $	o$ Cash Book is <strong>HIGHER</strong> $	o$ <strong>PLUS (+) ₹2,000</strong></li>
+              <li>Unpresented cheques (₹1,600): Cash Book deducted, Bank hasn't $	o$ Cash Book is <strong>LOWER</strong> $	o$ <strong>MINUS (–) ₹1,600</strong></li>
+            </ul>
+            <div class="brs-table-wrapper" style="margin-top: 10px;">
+              <table class="brs-table">
+                <thead><tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr></thead>
+                <tbody>
+                  <tr><td>Overdraft as per Passbook</td><td class="amount-col">-</td><td class="amount-col">12,000</td></tr>
+                  <tr><td>Bank charges not entered in Cash Book</td><td class="amount-col text-plus">300</td><td class="amount-col">-</td></tr>
+                  <tr><td>Insurance premium paid by bank</td><td class="amount-col text-plus">1,200</td><td class="amount-col">-</td></tr>
+                  <tr><td>Cheques deposited but not cleared</td><td class="amount-col text-plus">2,000</td><td class="amount-col">-</td></tr>
+                  <tr><td>Cheques issued but not presented</td><td class="amount-col">-</td><td class="amount-col text-minus">1,600</td></tr>
+                  <tr class="row-highlight"><td><strong>Total</strong></td><td class="amount-col">3,500</td><td class="amount-col">13,600</td></tr>
+                  <tr class="row-highlight"><td><strong>Overdraft as per Cash Book (₹13,600 – ₹3,500)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>₹10,100</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: 0.85rem; color: #34d399; margin-top: 6px;"><strong>Answer:</strong> Overdraft as per Cash Book = <strong>₹10,100</strong>.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="section-matrix" class="section-block">
+      <div class="card-concept">
+        <h2>📊 5.2.1 Four-Balance Rule Matrix (Without Adjusting Cash Book)</h2>
+        <p>In the Plus (+) and Minus (–) column method, the golden rule is:</p>
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 10px; padding: 14px; margin: 12px 0;">
+          <strong style="color: #34d399;">🔑 The Target Book Principle:</strong><br>
+          If starting with <strong>Cash Book</strong>, ask: <em>"Did this transaction make the Passbook HIGHER or LOWER than Cash Book?"</em> If higher → <span class="text-plus">ADD (+)</span>; if lower → <span class="text-minus">DEDUCT (–)</span>.<br>
+          If starting with <strong>Passbook</strong>, the treatment is exactly the <strong>OPPOSITE</strong>!
+        </div>
+
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr>
+                <th>Discrepancy Item</th>
+                <th class="amount-col">Starting with Cash Book Dr. (Favourable)</th>
+                <th class="amount-col">Starting with Passbook Cr. (Favourable)</th>
+                <th class="amount-col">Starting with Cash Book Cr. (Overdraft)</th>
+                <th class="amount-col">Starting with Passbook Dr. (Overdraft)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cheques issued but not presented</strong></td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+              </tr>
+              <tr>
+                <td><strong>Cheques deposited but not cleared</strong></td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+              </tr>
+              <tr>
+                <td><strong>Direct deposits by customers</strong></td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+              </tr>
+              <tr>
+                <td><strong>Interest / Dividends collected by bank</strong></td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+              </tr>
+              <tr>
+                <td><strong>Bank charges / Incidental charges</strong></td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+              </tr>
+              <tr>
+                <td><strong>Direct payments (Insurance/Rent) by bank</strong></td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+              </tr>
+              <tr>
+                <td><strong>Dishonour of cheques / discounted bills</strong></td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+              </tr>
+              <tr>
+                <td><strong>Wrong credit given by bank</strong></td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+              </tr>
+              <tr>
+                <td><strong>Wrong debit given by bank</strong></td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+                <td class="amount-col text-minus">– Minus</td>
+                <td class="amount-col text-plus">+ Plus</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: ALL 8 SOLVED ILLUSTRATIONS -->
+    <section id="section-illustrations" class="section-block">
+      
+      <!-- Illustration 1 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 1: Mr. Vinod (Favourable Cash Book Balance)</h2>
+        <p><strong>Date:</strong> March 31, 2017 | <strong>Starting Point:</strong> Balance as per Cash Book = ₹50,000</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Balance as per cash book</td><td class="amount-col">50,000</td><td class="amount-col">-</td></tr>
+              <tr><td>2. Cheques issued but not presented for payment</td><td class="amount-col">6,000</td><td class="amount-col">-</td></tr>
+              <tr><td>3. Dividends collected by the bank directly</td><td class="amount-col">8,000</td><td class="amount-col">-</td></tr>
+              <tr><td>4. Cheque deposited but not credited by the bank</td><td class="amount-col">-</td><td class="amount-col">6,000</td></tr>
+              <tr><td>5. Bank charges debited by the bank</td><td class="amount-col">-</td><td class="amount-col">400</td></tr>
+              <tr class="row-highlight"><td><strong>Balance as per passbook (Credit)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>57,600</strong></td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>64,000</strong></td><td class="amount-col"><strong>64,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Arithmetic Verification:</strong> Total Plus = ₹64,000. Deducting Minus items (₹6,400) gives Credit Balance as per Passbook = <strong>₹57,600</strong>.</p>
+      </div>
+
+      <!-- Illustration 2 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 2: Anil &amp; Co. (Favourable Cash Book)</h2>
+        <p><strong>Date:</strong> August 31, 2017 | <strong>Starting Point:</strong> Balance as per Cash Book = ₹54,000</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Balance as per cash book</td><td class="amount-col">54,000</td><td class="amount-col">-</td></tr>
+              <tr><td>2. Cheques issued but not presented for payment</td><td class="amount-col">20,000</td><td class="amount-col">-</td></tr>
+              <tr><td>3. Cheques deposited but not credited by the bank</td><td class="amount-col">-</td><td class="amount-col">5,400</td></tr>
+              <tr><td>4. Bank incidental charges debited by the bank</td><td class="amount-col">-</td><td class="amount-col">100</td></tr>
+              <tr class="row-highlight"><td><strong>Balance as per passbook (Credit)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>68,500</strong></td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>74,000</strong></td><td class="amount-col"><strong>74,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Arithmetic Verification:</strong> ₹54,000 + ₹20,000 – ₹5,400 – ₹100 = <strong>₹68,500</strong>.</p>
+      </div>
+
+      <!-- Illustration 3 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 3: M/s. Boss &amp; Co. (Starting with Passbook Balance)</h2>
+        <p><strong>Date:</strong> May 31, 2017 | <strong>Starting Point:</strong> Balance as per Passbook = ₹45,000</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Balance as per passbook</td><td class="amount-col">45,000</td><td class="amount-col">-</td></tr>
+              <tr><td>2. Cheques deposited but not collected by bank (₹3,900 + ₹2,350)</td><td class="amount-col">6,250</td><td class="amount-col">-</td></tr>
+              <tr><td>3. Cheque dishonoured recorded only in passbook</td><td class="amount-col">2,500</td><td class="amount-col">-</td></tr>
+              <tr><td>4. Cheques issued but not presented for payment</td><td class="amount-col">-</td><td class="amount-col">25,940</td></tr>
+              <tr class="row-highlight"><td><strong>Balance as per cash book (Debit)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>27,810</strong></td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>53,750</strong></td><td class="amount-col"><strong>53,750</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Key Concept:</strong> Since we start from Passbook, unpresented cheques are deducted and uncleared cheques are added back to arrive at Cash Book balance = <strong>₹27,810</strong>.</p>
+      </div>
+
+      <!-- Illustration 4 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 4: Rakesh (Cash Book Overdraft)</h2>
+        <p><strong>Date:</strong> March 31, 2017 | <strong>Starting Point:</strong> Overdraft as per Cash Book = ₹8,000 (Minus)</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Overdraft as per cash book</td><td class="amount-col">-</td><td class="amount-col">8,000</td></tr>
+              <tr><td>2. Cheques deposited but not yet collected by bank</td><td class="amount-col">-</td><td class="amount-col">2,000</td></tr>
+              <tr><td>3. Interest on overdraft debited by bank</td><td class="amount-col">-</td><td class="amount-col">60</td></tr>
+              <tr><td>4. Bank charges debited by bank</td><td class="amount-col">-</td><td class="amount-col">100</td></tr>
+              <tr><td>5. Cheques issued but not presented for payment</td><td class="amount-col">800</td><td class="amount-col">-</td></tr>
+              <tr class="row-highlight"><td><strong>Overdraft as per passbook (Debit)</strong></td><td class="amount-col"><strong>9,360</strong></td><td class="amount-col">-</td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>10,160</strong></td><td class="amount-col"><strong>10,160</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Overdraft Rule:</strong> Overdraft as per Cash book is entered in the minus column (₹8,000). Total Minus = ₹10,160. Total Plus = ₹800. Net difference in Minus column = <strong>₹9,360 Overdraft as per Passbook</strong>.</p>
+      </div>
+
+      <!-- Illustration 5 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 5: Agarwal Traders (Overdraft turning into Favourable Balance!)</h2>
+        <p><strong>Date:</strong> March 31, 2017 | <strong>Starting Point:</strong> Cash Book Overdraft = ₹1,18,100</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Overdraft as per cash book</td><td class="amount-col">-</td><td class="amount-col">1,18,100</td></tr>
+              <tr><td>2. Cheques recorded in cash book but not sent to bank</td><td class="amount-col">-</td><td class="amount-col">12,400</td></tr>
+              <tr><td>3. Interest on overdraft debited by bank</td><td class="amount-col">-</td><td class="amount-col">8,800</td></tr>
+              <tr><td>4. Direct payment received from customer in bank</td><td class="amount-col">27,300</td><td class="amount-col">-</td></tr>
+              <tr><td>5. Cheques issued but not presented for payment</td><td class="amount-col">1,75,200</td><td class="amount-col">-</td></tr>
+              <tr class="row-highlight"><td><strong>Balance as per passbook (Favourable / Credit)</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>63,200</strong></td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>2,02,500</strong></td><td class="amount-col"><strong>2,02,500</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Fascinating Result:</strong> The Plus column (₹2,02,500) exceeds the Minus column (₹1,39,300), so the overdraft is wiped out and turns into a <strong>favourable credit balance of ₹63,200 in the Passbook</strong>!</p>
+      </div>
+
+      <!-- Illustration 6 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 6: Asha &amp; Co. (Passbook Overdraft)</h2>
+        <p><strong>Date:</strong> December 31, 2017 | <strong>Starting Point:</strong> Overdraft as per Passbook = ₹20,000</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Overdraft as per passbook</td><td class="amount-col">-</td><td class="amount-col">20,000</td></tr>
+              <tr><td>2. Interest on overdraft debited in passbook</td><td class="amount-col">2,000</td><td class="amount-col">-</td></tr>
+              <tr><td>3. Insurance premium paid by bank</td><td class="amount-col">200</td><td class="amount-col">-</td></tr>
+              <tr><td>4. Cheque issued but not presented for payment</td><td class="amount-col">-</td><td class="amount-col">6,500</td></tr>
+              <tr><td>5. Cheques deposited but not yet cleared</td><td class="amount-col">6,000</td><td class="amount-col">-</td></tr>
+              <tr><td>6. Wrongly debited by bank</td><td class="amount-col">500</td><td class="amount-col">-</td></tr>
+              <tr class="row-highlight"><td><strong>Overdraft as per cash book (Credit)</strong></td><td class="amount-col"><strong>17,800</strong></td><td class="amount-col">-</td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>26,500</strong></td><td class="amount-col"><strong>26,500</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Answer:</strong> Total Minus = ₹26,500; Total Plus = ₹8,700 → <strong>Overdraft as per Cash Book = ₹17,800</strong>.</p>
+      </div>
+
+      <!-- Illustration 7 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 7: Rectification of Cash Book Errors</h2>
+        <p><strong>Starting Point:</strong> Debit Balance as per Cash Book = ₹10,000</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars &amp; Error Analysis</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Debit balance as per cash book</td><td class="amount-col">10,000</td><td class="amount-col">-</td></tr>
+              <tr><td>2. Error in carry forward (Debit ₹1,500 brought as Credit ₹1,500 → ₹1,500×2)</td><td class="amount-col">3,000</td><td class="amount-col">-</td></tr>
+              <tr><td>3. Outgoing cheque of ₹300 recorded twice in cash book</td><td class="amount-col">300</td><td class="amount-col">-</td></tr>
+              <tr><td>4. Cash deposit of ₹200 not recorded in bank column</td><td class="amount-col">200</td><td class="amount-col">-</td></tr>
+              <tr><td>5. Cheque deposited of ₹1,000 omitted from cash book</td><td class="amount-col">1,000</td><td class="amount-col">-</td></tr>
+              <tr><td>6. Undercasting of payment side of cash book</td><td class="amount-col">-</td><td class="amount-col">100</td></tr>
+              <tr><td>7. Cheque issued ₹250 entered as ₹205 in cash column (unentered in bank)</td><td class="amount-col">-</td><td class="amount-col">250</td></tr>
+              <tr><td>8. Cash discount ₹112 wrongly recorded as ₹121 in bank column</td><td class="amount-col">-</td><td class="amount-col">121</td></tr>
+              <tr><td>9. Cheque received ₹500 entered in cash book but not deposited</td><td class="amount-col">-</td><td class="amount-col">500</td></tr>
+              <tr class="row-highlight"><td><strong>Credit balance as per passbook</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>13,529</strong></td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>14,500</strong></td><td class="amount-col"><strong>14,500</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Answer:</strong> Total Plus = ₹14,500; Total Minus = ₹971 → Credit Balance as per Passbook = <strong>₹13,529</strong>.</p>
+      </div>
+
+      <!-- Illustration 8 -->
+      <div class="card-concept">
+        <h2>📝 Illustration 8: Shri Krishan (Rectification of Passbook Errors)</h2>
+        <p><strong>Starting Point:</strong> Balance as per Passbook = ₹10,000 (Credit)</p>
+        <div class="brs-table-wrapper">
+          <table class="brs-table">
+            <thead>
+              <tr><th>Particulars &amp; Error Analysis</th><th class="amount-col">(+) Amount ₹</th><th class="amount-col">(–) Amount ₹</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1. Credit balance as per passbook</td><td class="amount-col">10,000</td><td class="amount-col">-</td></tr>
+              <tr><td>2. Cheque ₹500 wrongly credited by bank to another customer</td><td class="amount-col">500</td><td class="amount-col">-</td></tr>
+              <tr><td>3. Credit balance ₹1,500 recorded in debit balance (₹1,500×2)</td><td class="amount-col">3,000</td><td class="amount-col">-</td></tr>
+              <tr><td>4. Cheque payment of ₹350 recorded twice in passbook</td><td class="amount-col">350</td><td class="amount-col">-</td></tr>
+              <tr><td>5. Bank recorded cash deposit of ₹1,589 as ₹1,598 (excess credit ₹9)</td><td class="amount-col">-</td><td class="amount-col">9</td></tr>
+              <tr><td>6. Withdrawal column undercast by ₹100</td><td class="amount-col">-</td><td class="amount-col">100</td></tr>
+              <tr><td>7. Wrong credit for cheque of ₹1,000 deposited by another person</td><td class="amount-col">-</td><td class="amount-col">1,000</td></tr>
+              <tr class="row-highlight"><td><strong>Debit balance as per cash book</strong></td><td class="amount-col">-</td><td class="amount-col"><strong>12,741</strong></td></tr>
+              <tr><td><strong>Total</strong></td><td class="amount-col"><strong>13,850</strong></td><td class="amount-col"><strong>13,850</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted);"><strong>Answer:</strong> Total Plus = ₹13,850; Total Minus = ₹1,109 → Debit Balance as per Cash Book = <strong>₹12,741</strong>.</p>
+      </div>
+
+    </div>
+
+    <!-- SECTION 6: NUMERICAL QUESTIONS (PRACTICE 1 TO 18) -->
+    
+    <!-- SECTION 6: NCERT THEORY QUESTIONS FOR PRACTICE (SHORT & LONG ANSWERS) -->
+    <section id="section-theory" class="section-block">
+      <div class="card-concept">
+        <h2>📖 NCERT Questions for Practice: Short & Long Answers</h2>
+        <p>Comprehensive, exam-oriented solutions for all textbook theoretical questions from page 174:</p>
+
+        <!-- Short Answers Subheading -->
+        <h3 style="color: var(--brand-emerald); margin: 20px 0 12px; font-size: 1.1rem; border-bottom: 1px solid rgba(16, 185, 129, 0.2); padding-bottom: 6px;">
+          ✍️ Part 1: Short Answer Questions
+        </h3>
+
+        <!-- SA 1 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('sa1')">
+            <span class="nq-title">1. State the need for the preparation of bank reconciliation statement?</span>
+            <span class="nq-ans-pill">Short Answer</span>
+          </div>
+          <div class="nq-body" id="sa1" style="display: none;">
+            <p><strong>Need for BRS:</strong></p>
+            <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.9rem;">
+              <li><strong>Finds Missing Discrepancies:</strong> Explains why the Cash Book bank balance does not agree with the Passbook balance.</li>
+              <li><strong>Ascertains True Bank Balance:</strong> Informs the business of the exact available cash in bank to prevent cheque dishonour.</li>
+              <li><strong>Catches Errors & Frauds:</strong> Detects clerical mistakes committed by the cashier or bank and deters embezzlement.</li>
+              <li><strong>Updates Cash Book:</strong> Reveals direct bank debits (charges) and credits (customer deposits, interest) unknown to the firm.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SA 2 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('sa2')">
+            <span class="nq-title">2. What is a bank overdraft?</span>
+            <span class="nq-ans-pill">Short Answer</span>
+          </div>
+          <div class="nq-body" id="sa2" style="display: none;">
+            <p><strong>Definition:</strong> A credit arrangement in which a commercial bank allows a current account holder to withdraw money in excess of the available balance up to an agreed credit limit.</p>
+            <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.9rem;">
+              <li><strong>Nature:</strong> It is a <strong>current liability</strong> (the business owes money to the bank).</li>
+              <li><strong>In Cash Book:</strong> Shown as a <strong>Credit Balance (Cr.)</strong>.</li>
+              <li><strong>In Passbook:</strong> Shown as a <strong>Debit Balance (Dr.)</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SA 3 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('sa3')">
+            <span class="nq-title">3. Briefly explain the statement 'wrongly debited by the bank' with the help of an example.</span>
+            <span class="nq-ans-pill">Short Answer</span>
+          </div>
+          <div class="nq-body" id="sa3" style="display: none;">
+            <p><strong>Explanation:</strong> An error committed by the bank where it mistakenly deducts (debits) money from a customer's account without any valid cheque, standing order, or authority.</p>
+            <p><strong>Example:</strong> Firm A (Raman Traders) issues a cheque of ₹5,000. The bank clerk erroneously enters the debit into Firm B's account (Raman & Sons) due to similar names. Firm B's passbook is reduced by ₹5,000 wrongly.</p>
+            <p><strong>Treatment in BRS (Starting with Cash Book):</strong> Passbook is lower, so <strong>DEDUCT (–) ₹5,000</strong>.</p>
+          </div>
+        </div>
+
+        <!-- SA 4 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('sa4')">
+            <span class="nq-title">4. State the causes of difference occurred due to time lag.</span>
+            <span class="nq-ans-pill">Short Answer</span>
+          </div>
+          <div class="nq-body" id="sa4" style="display: none;">
+            <p><strong>Causes Due to Time Lag (Delay in Clearing/Recording):</strong></p>
+            <ol style="padding-left: 20px; line-height: 1.7; font-size: 0.9rem;">
+              <li>Cheques issued by the firm but not yet presented for payment by creditors.</li>
+              <li>Cheques deposited/paid into bank but not yet collected/cleared by the bank.</li>
+              <li>Bank charges, interest on overdraft, and commission debited directly by the bank.</li>
+              <li>Interest on investments and dividends collected directly by the bank.</li>
+              <li>Direct payments into the bank account made by customers (NEFT/RTGS/UPI).</li>
+              <li>Direct payments by the bank under standing instructions (Insurance, Rent).</li>
+              <li>Dishonour of a deposited cheque or discounted bill not yet notified to the firm.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- SA 5 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('sa5')">
+            <span class="nq-title">5. Briefly explain the term 'favourable balance as per cash book'.</span>
+            <span class="nq-ans-pill">Short Answer</span>
+          </div>
+          <div class="nq-body" id="sa5" style="display: none;">
+            <p><strong>Explanation:</strong> When total receipts (deposits) in the bank column of the Cash Book exceed total payments (withdrawals), the resulting balance is favourable.</p>
+            <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.9rem;">
+              <li><strong>Sign:</strong> Represented as a <strong>Debit Balance (Dr.)</strong> in the Cash Book.</li>
+              <li><strong>Asset:</strong> It represents the firm's own positive funds sitting in the bank (Current Asset).</li>
+              <li><strong>Passbook Counterpart:</strong> Corresponds to a <strong>Credit Balance (Cr.)</strong> in the Bank Passbook.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SA 6 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('sa6')">
+            <span class="nq-title">6. Enumerate the steps to ascertain the correct cash book balance.</span>
+            <span class="nq-ans-pill">Short Answer</span>
+          </div>
+          <div class="nq-body" id="sa6" style="display: none;">
+            <p><strong>Steps to Ascertain Correct (Amended) Cash Book Balance:</strong></p>
+            <ol style="padding-left: 20px; line-height: 1.7; font-size: 0.9rem;">
+              <li>Take the unadjusted closing balance of the Cash Book.</li>
+              <li><strong>Debit Side:</strong> Enter transactions credited in passbook only (direct customer deposits, interest, dividends collected, rectification of errors that understated cash).</li>
+              <li><strong>Credit Side:</strong> Enter transactions debited in passbook only (bank charges, standing order auto-debits, dishonoured cheques, rectification of errors that overstated cash).</li>
+              <li><strong>Exclude Timing Differences:</strong> Never enter unpresented or uncollected cheques in the amended cash book.</li>
+              <li>Balance the Cash Book to find the <strong>Adjusted Cash Book Balance</strong> for the Balance Sheet and BRS.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Long Answers Subheading -->
+        <h3 style="color: var(--brand-cyan); margin: 28px 0 12px; font-size: 1.1rem; border-bottom: 1px solid rgba(6, 182, 212, 0.2); padding-bottom: 6px;">
+          📝 Part 2: Long Answer Questions
+        </h3>
+
+        <!-- LA 1 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('la1')">
+            <span class="nq-title">1. What is a bank reconciliation statement? Why is it prepared?</span>
+            <span class="nq-ans-pill">Long Answer</span>
+          </div>
+          <div class="nq-body" id="la1" style="display: none;">
+            <p><strong>Definition:</strong> A Bank Reconciliation Statement (BRS) is a periodic explanatory statement prepared by an account holder to reconcile, explain, and tally the causes of differences between the bank balance shown in the Cash Book (bank column) and the Bank Passbook as on a specific date.</p>
+            <p><strong>Detailed Objectives of Preparation:</strong></p>
+            <ul style="padding-left: 18px; line-height: 1.8; font-size: 0.9rem;">
+              <li><strong>1. Identification of Discrepancies:</strong> Explains the exact rupee difference between the firm's ledger and the bank's records.</li>
+              <li><strong>2. Determination of Real Bank Balance:</strong> Prevents cheques from bouncing by ensuring the firm knows the exact cleared balance.</li>
+              <li><strong>3. Rectification of Clerical Errors:</strong> Discloses casting mistakes, transposition of digits, or omissions in both records.</li>
+              <li><strong>4. Fraud Prevention & Internal Check:</strong> Uncovers delays in depositing cash or cheques collected by sales staff.</li>
+              <li><strong>5. Ledger Updating:</strong> Facilitates recording of direct customer deposits, bank fees, and interest into the official accounts.</li>
+              <li><strong>6. Audit Verification:</strong> Serves as authoritative evidence for statutory auditors verifying cash and bank balances.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- LA 2 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('la2')">
+            <span class="nq-title">2. Explain the reasons where the balance shown by the bank passbook does not agree with the cash book.</span>
+            <span class="nq-ans-pill">Long Answer</span>
+          </div>
+          <div class="nq-body" id="la2" style="display: none;">
+            <p><strong>The causes fall into two primary categories:</strong></p>
+            <h4 style="color: var(--brand-emerald); margin: 10px 0 4px;">A. Differences Caused by Time Lag:</h4>
+            <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.88rem;">
+              <li><strong>Cheques issued but unpresented:</strong> Deducted in Cash Book; Passbook is <strong>Higher</strong>.</li>
+              <li><strong>Cheques deposited but uncollected:</strong> Added in Cash Book; Passbook is <strong>Lower</strong>.</li>
+              <li><strong>Direct bank charges & interest on overdraft:</strong> Debited by bank; Passbook is <strong>Lower</strong>.</li>
+              <li><strong>Direct deposits by customers:</strong> Credited by bank; Passbook is <strong>Higher</strong>.</li>
+              <li><strong>Dividends & interest collected by bank:</strong> Credited by bank; Passbook is <strong>Higher</strong>.</li>
+              <li><strong>Direct payments on standing instructions:</strong> Debited by bank; Passbook is <strong>Lower</strong>.</li>
+              <li><strong>Dishonour of cheques/bills:</strong> Debited by bank; Passbook is <strong>Lower</strong>.</li>
+            </ul>
+            <h4 style="color: var(--brand-gold); margin: 12px 0 4px;">B. Differences Caused by Errors:</h4>
+            <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.88rem;">
+              <li><strong>Errors by the firm:</strong> Undercasting or overcasting of totals, posting in wrong columns, or omissions.</li>
+              <li><strong>Errors by the bank:</strong> Wrong debit/credit to customer's account, transposition of digits, or duplicate entries.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- LA 3 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('la3')">
+            <span class="nq-title">3. Explain the process of preparing bank reconciliation statement with amended cash balance.</span>
+            <span class="nq-ans-pill">Long Answer</span>
+          </div>
+          <div class="nq-body" id="la3" style="display: none;">
+            <p><strong>Two-Stage Reconciliation Process:</strong></p>
+            <p><strong>Stage 1: Preparation of Amended Cash Book:</strong></p>
+            <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.88rem;">
+              <li>Open Cash Book with the existing unadjusted closing balance.</li>
+              <li><strong>Debit Side (+):</strong> Direct customer collections, interest/dividends collected, rectification of errors that understated cash.</li>
+              <li><strong>Credit Side (–):</strong> Bank charges, standing orders paid, dishonoured cheques, rectification of errors that overstated cash.</li>
+              <li><strong>Exclude Timing Differences:</strong> Never enter unpresented or uncollected cheques.</li>
+              <li>Balance the Cash Book to arrive at the <strong>Adjusted Cash Book Balance</strong>.</li>
+            </ul>
+            <p><strong>Stage 2: Preparation of BRS:</strong></p>
+            <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.88rem;">
+              <li>Start with the <strong>Adjusted Cash Book Balance</strong>.</li>
+              <li><strong>Add:</strong> Cheques issued but not yet presented for payment (+ bank erroneous credits).</li>
+              <li><strong>Less:</strong> Cheques deposited but not yet collected by bank (+ bank erroneous debits).</li>
+              <li>Result = <strong>Balance as per Bank Passbook!</strong></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="section-numericals" class="section-block">
+      <div class="card-concept">
+        <h2>🔢 Questions for Practice (Numericals 1 to 18)</h2>
+        <p>Complete NCERT Practice Problems with official verified answers and step-by-step calculation hints:</p>
+
+        <!-- Q1 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('nq1')">
+            <span class="nq-title">Q1: March 31, 2017 — Cash Book Favourable Balance ₹3,200</span>
+            <span class="nq-ans-pill">Ans: Passbook ₹2,850</span>
+          </div>
+          <div class="nq-body" id="nq1">
+            <p><strong>Given:</strong> Balance as per Cash Book = ₹3,200 | Cheques issued unpresented = +₹1,800 | Cheques deposited uncollected = –₹2,000 | Bank charges = –₹150.</p>
+            <p><strong>Calculation:</strong> ₹3,200 + ₹1,800 – ₹2,000 – ₹150 = <strong>₹2,850 (Credit Balance as per Passbook)</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('nq2')">
+            <span class="nq-title">Q2: March 31, 2017 — Cash Book Balance ₹3,700</span>
+            <span class="nq-ans-pill">Ans: Passbook ₹3,680</span>
+          </div>
+          <div class="nq-body" id="nq2" style="display: none;">
+            <p><strong>Given:</strong> Cash Book = ₹3,700 | Unpresented cheques (₹700 + ₹300 + ₹180) = +₹1,180 | Cheque uncredited = –₹1,200.</p>
+            <p><strong>Calculation:</strong> ₹3,700 + ₹1,180 – ₹1,200 = <strong>₹3,680 (Passbook Balance)</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('nq3')">
+            <span class="nq-title">Q3: Cash Book Balance ₹7,800</span>
+            <span class="nq-ans-pill">Ans: Passbook ₹8,600</span>
+          </div>
+          <div class="nq-body" id="nq3" style="display: none;">
+            <p><strong>Given:</strong> Cash Book = ₹7,800 | (a) Uncredited = –₹3,000 | (b) Unpresented = +₹1,500 | (c) Insurance = –₹2,000 | (d) Interest = +₹400 | (e) Bank charges = –₹100 | (f) Direct deposit = +₹4,000.</p>
+            <p><strong>Calculation:</strong> ₹7,800 + ₹1,500 + ₹400 + ₹4,000 – ₹3,000 – ₹2,000 – ₹100 = <strong>₹8,600</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('nq4')">
+            <span class="nq-title">Q4: Atul Cash Book Balance ₹40,000 (Dec 31, 2016)</span>
+            <span class="nq-ans-pill">Ans: Passbook ₹40,275</span>
+          </div>
+          <div class="nq-body" id="nq4" style="display: none;">
+            <p><strong>Given:</strong> Cash Book = ₹40,000 | Uncredited (₹2,000+₹5,000+₹8,000) = –₹15,000 | Unpresented (₹7,000+₹8,000) = +₹15,000 | Interest credited = +₹325 | Bank charges = –₹50.</p>
+            <p><strong>Calculation:</strong> ₹40,000 – ₹15,000 + ₹15,000 + ₹325 – ₹50 = <strong>₹40,275</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('nq5')">
+            <span class="nq-title">Q5: Naman Cash Book Balance ₹40,960 (March 31)</span>
+            <span class="nq-ans-pill">Ans: Passbook ₹50,870</span>
+          </div>
+          <div class="nq-body" id="nq5" style="display: none;">
+            <p><strong>Given:</strong> Cash Book = ₹40,960 | Bank charges = –₹100 | Direct payment = +₹2,000 | Unpresented = +₹12,980 | Discount unrecorded = –₹800 | Uncredited = –₹3,520 | Dishonoured cheque = –₹650.</p>
+            <p><strong>Calculation:</strong> ₹40,960 + ₹2,000 + ₹12,980 – ₹100 – ₹800 – ₹3,520 – ₹650 = <strong>₹50,870</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q6 to Q18 Overview -->
+        <div class="nq-item">
+          <div class="nq-header" onclick="toggleNq('nq_more')">
+            <span class="nq-title">Q6 to Q18: Practice Problems Summary &amp; Key Solutions</span>
+            <span class="nq-ans-pill">13 Problems</span>
+          </div>
+          <div class="nq-body" id="nq_more" style="display: none;">
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.8;">
+              <li><strong>Q6 (Himanshu):</strong> Passbook ₹7,000 → <strong>Cash Book = ₹3,300</strong></li>
+              <li><strong>Q7:</strong> Passbook ₹50,000 → <strong>Cash Book = ₹47,800</strong></li>
+              <li><strong>Q8 (Kumar):</strong> Passbook ₹3,000 → <strong>Cash Book = ₹2,200</strong></li>
+              <li><strong>Q9 (Mohit):</strong> Passbook ₹20,000 → <strong>Cash Book = ₹18,900</strong></li>
+              <li><strong>Q10 (Rakesh OD):</strong> Cash Book OD ₹8,000 → <strong>Passbook OD = ₹9,360</strong></li>
+              <li><strong>Q11 (Dec 31 OD):</strong> Cash Book OD ₹10,000 → <strong>Passbook OD = ₹8,830</strong></li>
+              <li><strong>Q12 (Kumar OD):</strong> Cash Book OD ₹90,600 → <strong>Passbook OD = ₹90,100</strong></li>
+              <li><strong>Q13 (Mittal Bros OD):</strong> Cash Book OD ₹6,920 → <strong>Passbook OD = ₹9,170</strong></li>
+              <li><strong>Q14 (Bhandari Passbook OD):</strong> Passbook OD ₹20,000 → <strong>Cash Book OD = ₹21,350</strong></li>
+              <li><strong>Q15 (Murli Passbook OD):</strong> Passbook OD ₹20,000 → <strong>Cash Book OD = ₹22,680</strong></li>
+              <li><strong>Q16 (Raghav &amp; Co. OD):</strong> Passbook OD ₹18,990 → <strong>Cash Book OD = ₹23,639</strong></li>
+              <li><strong>Q17 (March 31 OD):</strong> Passbook OD ₹20,000 → <strong>Cash Book OD = ₹17,800</strong></li>
+              <li><strong>Q18 (Randhir OD):</strong> Passbook OD ₹40,950 → <strong>Cash Book OD = ₹43,170</strong></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  
+    <!-- SECTION 7: INTERACTIVE NCERT MCQS -->
+    <section id="section-mcq" class="section-block">
+      <div class="card-concept" style="margin-bottom: 16px;">
+        <h2>🎯 NCERT Class 11 Accountancy Chapter 5: Bank Reconciliation Statement (BRS) — 20 High-Yield MCQs</h2>
+        <p>Test your conceptual understanding of timing differences, errors in Cash Book vs Passbook, overdraft rules, and preparation methods with instant feedback and step-by-step explanations:</p>
+      </div>
+
+      <div class="hud-card">
+        <div class="hud-stat">
+          <span>Score:</span>
+          <span class="hud-val" id="hudScore">0 / 20</span>
+        </div>
+        <div class="hud-stat">
+          <span>Answered:</span>
+          <span class="hud-val" id="hudAnswered">0 / 20</span>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn-shuffle" onclick="shuffleMcqOptions()">
+            <span>🔀 Shuffle Options</span>
+          </button>
+          <button class="btn-shuffle" style="border-color: rgba(255,255,255,0.2); color: var(--text-main);" onclick="resetMcqs()">
+            <span>🔄 Reset Quiz</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mcqsList"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    NextSem Academy • Class 11 Financial Accounting-I • Chapter 5: Bank Reconciliation Statement (keac105.pdf)
+  </footer>
+
+  <script>
+    function toggleNq(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+
+    // Theme Toggle
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem('nextsem_theme') || 'dark';
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+      } else {
+        document.body.classList.remove('light-theme');
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Dark';
+      }
+    }
+
+    themeBtn.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-theme');
+      if (isLight) {
+        localStorage.setItem('nextsem_theme', 'light');
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+      } else {
+        localStorage.setItem('nextsem_theme', 'dark');
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Dark';
+      }
+    });
+
+    initTheme();
+
+    // 20 High-Yield BRS MCQs Data
+    const BRS_MCQS = [
+      {
+        id: 1,
+        topic: "Core Concept",
+        qEn: "A Bank Reconciliation Statement (BRS) is prepared by:",
+        qHi: "बैंक समाधान विवरण (BRS) किसके द्वारा तैयार किया जाता है?",
+        options: [
+          "The account holder / business firm",
+          "The bank manager",
+          "The statutory auditor",
+          "The bank and firm jointly"
+        ],
+        answer: "The account holder / business firm",
+        exp: "BRS is prepared periodically by the account holder (firm/customer) to reconcile differences between the Cash Book and Passbook. It is never prepared by the bank."
+      },
+      {
+        id: 2,
+        topic: "Cash Book Balance",
+        qEn: "What does a 'Debit balance' in the Bank Column of the Cash Book signify?",
+        qHi: "रोकड़ बही के बैंक कॉलम में 'डेबिट शेष' क्या दर्शाता है?",
+        options: [
+          "Favourable balance (Cash deposited with bank)",
+          "Unfavourable balance (Bank Overdraft)",
+          "Bank charges payable",
+          "Loan liability to the bank"
+        ],
+        answer: "Favourable balance (Cash deposited with bank)",
+        exp: "In the Cash Book, all deposits/receipts are recorded on the Debit side. Hence, a debit balance indicates a favourable balance (asset of the firm)."
+      },
+      {
+        id: 3,
+        topic: "Passbook Balance",
+        qEn: "A 'Credit balance' in the Bank Passbook (Bank Statement) indicates:",
+        qHi: "बैंक पासबुक (बैंक विवरण) में 'क्रेडिट शेष' क्या दर्शाता है?",
+        options: [
+          "Favourable balance (Deposit available with bank)",
+          "Unfavourable balance (Bank Overdraft)",
+          "Bank service charges deducted",
+          "Dishonoured cheques"
+        ],
+        answer: "Favourable balance (Deposit available with bank)",
+        exp: "From the bank's perspective, the customer is a creditor for deposits held. Therefore, a credit balance in the Passbook represents a favourable balance for the firm."
+      },
+      {
+        id: 4,
+        topic: "Timing Difference",
+        qEn: "Cheques issued by the firm to creditors but not yet presented for payment at the bank are:",
+        qHi: "व्यापारी द्वारा जारी किए गए किंतु बैंक में भुगतान हेतु प्रस्तुत न किए गए चेक:",
+        options: [
+          "Added to Cash Book balance in BRS",
+          "Deducted from Cash Book balance in BRS",
+          "Ignored while preparing BRS",
+          "Debited again in Cash Book"
+        ],
+        answer: "Added to Cash Book balance in BRS",
+        exp: "When cheques are issued, the firm immediately credits (deducts) Cash Book. Since the bank has not yet paid/debited them, Passbook balance is higher. Starting from Cash Book, we ADD them."
+      },
+      {
+        id: 5,
+        topic: "Timing Difference",
+        qEn: "Cheques deposited into the bank but not yet collected (cleared) by the bank are:",
+        qHi: "बैंक में जमा किए गए किंतु बैंक द्वारा अभी तक संग्रहित (जमा) न किए गए चेक:",
+        options: [
+          "Deducted from Cash Book balance in BRS",
+          "Added to Cash Book balance in BRS",
+          "Recorded in Passbook directly",
+          "Credited in Cash Book again"
+        ],
+        answer: "Deducted from Cash Book balance in BRS",
+        exp: "The firm debited Cash Book (+), but the bank has not credited them yet. Passbook is lower than Cash Book. Starting from Cash Book, we DEDUCT them."
+      },
+      {
+        id: 6,
+        topic: "Direct Transactions",
+        qEn: "Interest allowed / credited by the bank in the Passbook, not yet entered in Cash Book, should be:",
+        qHi: "बैंक द्वारा पासबुक में दिया गया ब्याज, जो रोकड़ बही में दर्ज नहीं है:",
+        options: [
+          "Added in BRS when starting with Cash Book balance",
+          "Deducted in BRS when starting with Cash Book balance",
+          "Deducted in BRS when starting with Passbook balance",
+          "Ignored as it is not a cash transaction"
+        ],
+        answer: "Added in BRS when starting with Cash Book balance",
+        exp: "Interest credited by bank increases Passbook balance. To match Passbook from Cash Book, we ADD it to the Cash Book balance."
+      },
+      {
+        id: 7,
+        topic: "Direct Transactions",
+        qEn: "Bank charges and commission debited by the bank only will cause:",
+        qHi: "बैंक द्वारा सीधे काटे गए बैंक व्यय (Charges) का क्या प्रभाव पड़ता है?",
+        options: [
+          "Passbook balance to be lower than Cash Book balance",
+          "Cash Book balance to be lower than Passbook balance",
+          "Passbook credit balance to increase",
+          "No discrepancy between Cash Book and Passbook"
+        ],
+        answer: "Passbook balance to be lower than Cash Book balance",
+        exp: "Bank debited the customer's account without advance notice, reducing Passbook balance while Cash Book remains unadjusted until statement arrives."
+      },
+      {
+        id: 8,
+        topic: "Direct Deposit",
+        qEn: "A customer directly paid ₹5,000 into the firm's bank account. In BRS starting with Passbook balance, this item will be:",
+        qHi: "ग्राहक द्वारा सीधे बैंक में जमा किए गए ₹5,000; पासबुक शेष से शुरू करने पर इसे:",
+        options: [
+          "Deducted (Minus column)",
+          "Added (Plus column)",
+          "Added to Passbook overdraft",
+          "Omitted from BRS"
+        ],
+        answer: "Deducted (Minus column)",
+        exp: "Direct deposit increased Passbook balance. To arrive at Cash Book balance (which lacks this entry), we must DEDUCT it from the Passbook balance."
+      },
+      {
+        id: 9,
+        topic: "Overdraft Matrix",
+        qEn: "In the Plus / Minus column method, starting with Cash Book Overdraft (Credit balance), unpresented cheques go to:",
+        qHi: "रोकड़ बही के अधिविकर्ष (ओवरड्राफ्ट) से शुरू करते समय, अपस्तुत चेक किस कॉलम में लिखे जाते हैं?",
+        options: [
+          "Plus column (+)",
+          "Minus column (–)",
+          "Both columns equally",
+          "Omitted until presented"
+        ],
+        answer: "Plus column (+)",
+        exp: "In the universal Plus/Minus method, the nature of an item (+ or –) remains constant regardless of starting with favourable or overdraft balance. Unpresented cheques always go to the PLUS column."
+      },
+      {
+        id: 10,
+        topic: "Dishonoured Cheque",
+        qEn: "A customer's cheque of ₹2,500 deposited was dishonoured. In BRS starting with Cash Book debit balance:",
+        qHi: "जमा कराया गया ₹2,500 का चेक अनादरित (Dishonour) हो गया। रोकड़ बही शेष से शुरू करते समय:",
+        options: [
+          "Deduct ₹2,500 from Cash Book balance",
+          "Add ₹2,500 to Cash Book balance",
+          "Add ₹5,000 to Cash Book balance",
+          "No adjustment needed in BRS"
+        ],
+        answer: "Deduct ₹2,500 from Cash Book balance",
+        exp: "The firm added ₹2,500 upon deposit, but the bank did not credit it due to dishonour. Hence, Passbook is lower, so DEDUCT ₹2,500 from Cash Book balance."
+      },
+      {
+        id: 11,
+        topic: "Errors in Cash Book",
+        qEn: "Under-casting of the payments (credit) side of the Cash Book by ₹1,000 causes:",
+        qHi: "रोकड़ बही के भुगतान (क्रेडिट) पक्ष का योग ₹1,000 कम लगने से:",
+        options: [
+          "Cash Book balance to be overstated by ₹1,000 (Deduct in BRS)",
+          "Cash Book balance to be understated by ₹1,000 (Add in BRS)",
+          "Passbook balance to be understated by ₹1,000",
+          "No effect on any balance"
+        ],
+        answer: "Cash Book balance to be overstated by ₹1,000 (Deduct in BRS)",
+        exp: "If payments are understated, the closing cash book balance will appear higher by ₹1,000. To reconcile with Passbook, DEDUCT ₹1,000."
+      },
+      {
+        id: 12,
+        topic: "Errors in Cash Book",
+        qEn: "Over-casting of the receipts (debit) side of the Cash Book by ₹500 means:",
+        qHi: "रोकड़ बही के प्राप्ति (डेबिट) पक्ष का योग ₹500 अधिक लगने पर:",
+        options: [
+          "Cash Book balance is inflated by ₹500, so deduct ₹500 in BRS",
+          "Cash Book balance is deflated by ₹500, so add ₹500 in BRS",
+          "Passbook balance is higher by ₹500, so add ₹500",
+          "Bank made an error of ₹500 in Passbook"
+        ],
+        answer: "Cash Book balance is inflated by ₹500, so deduct ₹500 in BRS",
+        exp: "Over-casting receipts means Cash Book balance is shown ₹500 higher than it actually is. To match Passbook, DEDUCT ₹500."
+      },
+      {
+        id: 13,
+        topic: "Amended Cash Book",
+        qEn: "When an Amended (Adjusted) Cash Book is prepared before BRS, which item is NOT adjusted in the Cash Book?",
+        qHi: "संशोधित रोकड़ बही तैयार करते समय, किस मद को रोकड़ बही में दर्ज नहीं किया जाता है?",
+        options: [
+          "Cheques issued but not yet presented for payment",
+          "Bank charges debited by bank",
+          "Direct collection of dividend by bank",
+          "Error in casting of Cash Book"
+        ],
+        answer: "Cheques issued but not yet presented for payment",
+        exp: "Timing differences (unpresented cheques and uncollected cheques) are NEVER adjusted in the Cash Book because the firm's entries are already correct. Only unrecorded bank items and clerical errors are adjusted."
+      },
+      {
+        id: 14,
+        topic: "BRS Balances",
+        qEn: "Debit balance as per Passbook indicates:",
+        qHi: "पासबुक के अनुसार डेबिट शेष क्या दर्शाता है?",
+        options: [
+          "Bank Overdraft (Unfavourable balance)",
+          "Favourable bank balance",
+          "Total deposits with bank",
+          "Reserve funds of the firm"
+        ],
+        answer: "Bank Overdraft (Unfavourable balance)",
+        exp: "A debit in Passbook means the firm owes money to the bank (Overdraft / liability)."
+      },
+      {
+        id: 15,
+        topic: "Standing Instructions",
+        qEn: "Bank paid insurance premium of ₹2,000 as per standing order. In BRS starting with Cash Book balance:",
+        qHi: "बैंक ने स्थायी आदेश के अनुसार ₹2,000 बीमा प्रीमियम का भुगतान किया। रोकड़ बही शेष से शुरू करते समय:",
+        options: [
+          "Deduct ₹2,000 from Cash Book balance",
+          "Add ₹2,000 to Cash Book balance",
+          "Add ₹2,000 to Passbook balance",
+          "No entry needed until policy matures"
+        ],
+        answer: "Deduct ₹2,000 from Cash Book balance",
+        exp: "The bank debited ₹2,000, lowering the Passbook balance. Since the firm has not yet credited Cash Book, DEDUCT ₹2,000 to match Passbook."
+      },
+      {
+        id: 16,
+        topic: "Clerical Error",
+        qEn: "A cheque of ₹600 issued to Mohan was entered as ₹60 in the payments side of the Cash Book. In BRS starting with Cash Book:",
+        qHi: "मोहन को दिया गया ₹600 का चेक रोकड़ बही के भुगतान पक्ष में ₹60 लिखा गया। रोकड़ बही शेष से शुरू करते समय:",
+        options: [
+          "Deduct ₹540 from Cash Book balance",
+          "Add ₹540 to Cash Book balance",
+          "Add ₹600 to Cash Book balance",
+          "Deduct ₹60 from Cash Book balance"
+        ],
+        answer: "Deduct ₹540 from Cash Book balance",
+        exp: "Payment was recorded as ₹60 instead of ₹600 (under-recorded by ₹540). Consequently, Cash Book balance is ₹540 too high. Rectify by DEDUCTING ₹540."
+      },
+      {
+        id: 17,
+        topic: "Bank Error",
+        qEn: "A wrong debit of ₹800 was made by the bank in the Passbook. In BRS starting with Cash Book balance:",
+        qHi: "बैंक ने पासबुक में गलती से ₹800 डेबिट कर दिया। रोकड़ बही शेष से शुरू करने पर:",
+        options: [
+          "Deduct ₹800 from Cash Book balance",
+          "Add ₹800 to Cash Book balance",
+          "Ignore as it is bank's mistake",
+          "Credit ₹800 in Cash Book permanently"
+        ],
+        answer: "Deduct ₹800 from Cash Book balance",
+        exp: "The bank's erroneous debit lowered the Passbook balance by ₹800. To reconcile Cash Book with the actual Passbook balance, DEDUCT ₹800."
+      },
+      {
+        id: 18,
+        topic: "Omission",
+        qEn: "A cheque of ₹1,200 entered on the debit side of Cash Book was omitted to be banked. In BRS starting with Cash Book:",
+        qHi: "रोकड़ बही में दर्ज ₹1,200 का चेक बैंक में जमा करने से छूट गया। रोकड़ बही शेष से शुरू करने पर:",
+        options: [
+          "Deduct ₹1,200 from Cash Book balance",
+          "Add ₹1,200 to Cash Book balance",
+          "Add ₹2,400 to Cash Book balance",
+          "Deduct ₹2,400 from Cash Book balance"
+        ],
+        answer: "Deduct ₹1,200 from Cash Book balance",
+        exp: "Cash Book balance was increased by ₹1,200, but the cheque was never sent to the bank, so Passbook has no entry. DEDUCT ₹1,200 to reconcile."
+      },
+      {
+        id: 19,
+        topic: "Reconciliation Outcome",
+        qEn: "If the Plus column total exceeds the Minus column total when starting with Passbook Overdraft (Debit balance), the resulting balance is:",
+        qHi: "पासबुक अधिविकर्ष (डेबिट शेष) से शुरू करते समय, यदि प्लस कॉलम का योग माइनस कॉलम से अधिक है, तो परिणामी शेष होगा:",
+        options: [
+          "Debit balance as per Cash Book (Favourable)",
+          "Credit balance as per Cash Book (Overdraft)",
+          "Nil balance",
+          "Passbook credit balance"
+        ],
+        answer: "Debit balance as per Cash Book (Favourable)",
+        exp: "A net positive difference (Plus total > Minus total) always represents a favourable balance, which in the Cash Book is a Debit balance."
+      },
+      {
+        id: 20,
+        topic: "BRS Objective",
+        qEn: "What is the primary purpose of preparing a Bank Reconciliation Statement?",
+        qHi: "बैंक समाधान विवरण तैयार करने का मुख्य उद्देश्य क्या है?",
+        options: [
+          "To ascertain the correct bank balance and explain the causes of differences between Cash Book and Passbook",
+          "To compute the trading profit of the business",
+          "To detect fraud exclusively committed by bank managers",
+          "To replace the cash book with passbook records"
+        ],
+        answer: "To ascertain the correct bank balance and explain the causes of differences between Cash Book and Passbook",
+        exp: "The primary objective is to identify and explain differences between the bank column of Cash Book and the Bank Passbook, ensuring accounting integrity and true bank balances."
+      }
+    ];
+
+    let userAnswers = {};
+    let currentQuestions = JSON.parse(JSON.stringify(BRS_MCQS));
+
+    function fisherYates(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function renderMcqs() {
+      const container = document.getElementById('mcqsList');
+      if (!container) return;
+
+      const keys = ['A', 'B', 'C', 'D'];
+      let html = '';
+
+      currentQuestions.forEach((q, qIdx) => {
+        const isAnswered = userAnswers.hasOwnProperty(qIdx);
+        const selectedOpt = userAnswers[qIdx];
+
+        html += `
+          <div class="q-card" id="qcard-${qIdx}">
+            <div class="q-header">
+              <span class="q-num">Question ${qIdx + 1} of ${currentQuestions.length}</span>
+              <span class="q-topic">${q.topic}</span>
+            </div>
+            <div class="q-text">${q.qEn}</div>
+            <div class="q-text-hi">${q.qHi}</div>
+            <div class="opts-grid">
+        `;
+
+        q.options.forEach((opt, optIdx) => {
+          let btnClass = 'opt-btn';
+          if (isAnswered) {
+            btnClass += ' disabled';
+            if (opt === q.answer) {
+              btnClass += ' correct';
+            } else if (opt === selectedOpt) {
+              btnClass += ' wrong';
+            }
+          }
+
+          html += `
+            <button class="${btnClass}" onclick="selectMcqOption(${qIdx}, ${optIdx})">
+              <span class="opt-key">${keys[optIdx]}</span>
+              <span>${opt}</span>
+            </button>
+          `;
+        });
+
+        const expDisplay = isAnswered ? 'block' : 'none';
+        html += `
+            </div>
+            <div class="exp-box" id="exp-${qIdx}" style="display: ${expDisplay};">
+              <strong>💡 Explanation:</strong> ${q.exp}
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      updateHud();
+    }
+
+    function selectMcqOption(qIdx, optIdx) {
+      if (userAnswers.hasOwnProperty(qIdx)) return;
+
+      const q = currentQuestions[qIdx];
+      const chosen = q.options[optIdx];
+      userAnswers[qIdx] = chosen;
+
+      renderMcqs();
+
+      // Check for finish & confetti
+      if (Object.keys(userAnswers).length === currentQuestions.length) {
+        let score = 0;
+        currentQuestions.forEach((item, idx) => {
+          if (userAnswers[idx] === item.answer) score++;
+        });
+        if (score >= 15 && typeof confetti === 'function') {
+          confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+        }
+      }
+    }
+
+    function shuffleMcqOptions() {
+      currentQuestions.forEach(q => {
+        fisherYates(q.options);
+      });
+      userAnswers = {};
+      renderMcqs();
+    }
+
+    function resetMcqs() {
+      userAnswers = {};
+      renderMcqs();
+    }
+
+    function updateHud() {
+      const hudScore = document.getElementById('hudScore');
+      const hudAnswered = document.getElementById('hudAnswered');
+      if (!hudScore || !hudAnswered) return;
+
+      const total = currentQuestions.length;
+      const answeredCount = Object.keys(userAnswers).length;
+      let score = 0;
+
+      currentQuestions.forEach((q, idx) => {
+        if (userAnswers[idx] === q.answer) score++;
+      });
+
+      hudScore.textContent = `${score} / ${total}`;
+      hudAnswered.textContent = `${answeredCount} / ${total}`;
+    }
+
+    // Initialize MCQs on load
+    renderMcqs();
+
+  </script>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top" onclick="scrollToTop()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <span>Top</span>
+  </button>
+
+</body>
+</html>

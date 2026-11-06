@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 12 Physics Chapter 6: Electromagnetic Induction — Complete Topic-Wise Notes & 10 Master Numericals (leph106.pdf)</title>
+  <meta name="description" content="Master NCERT Class 12 Physics Part-I Chapter 6 (Electromagnetic Induction): Complete topic-wise conceptual notes, master formulas, and 10 detailed numerical problems with step-by-step solutions and interactive self-tests.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-inner: #081020;
+      --bg-hud: rgba(13, 21, 39, 0.9);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(6, 182, 212, 0.35);
+
+      --brand-cyan: #06b6d4;
+      --brand-blue: #3b82f6;
+      --brand-indigo: #6366f1;
+      --brand-emerald: #10b981;
+      --brand-gold: #f59e0b;
+      --brand-rose: #f43f5e;
+      --brand-purple: #a855f7;
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --color-correct: #10b981;
+      --color-wrong: #ef4444;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --bg-inner: #f1f5f9;
+      --bg-hud: rgba(255, 255, 255, 0.94);
+      --border-card: #e2e8f0;
+      --border-glow: rgba(6, 182, 212, 0.4);
+
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+    }
+
+    /* Top Navbar with Complete Breadcrumb Navigation */
+    .top-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--brand-cyan);
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .brand-badge span {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb-item {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb-item:hover {
+      color: var(--brand-cyan);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+    .breadcrumb-active {
+      color: var(--brand-gold);
+      font-weight: 700;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-icon {
+      background: var(--bg-inner);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-icon:hover {
+      border-color: var(--brand-cyan);
+      transform: translateY(-1px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.18));
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(6, 182, 212, 0.2);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: var(--brand-cyan);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(to right, #ffffff, #67e8f9, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.light-theme .hero-title {
+      background: linear-gradient(to right, #0f172a, #0284c7, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 820px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .stat-pill {
+      background: var(--bg-hud);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 0.55rem 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+    }
+
+    .stat-pill strong {
+      color: var(--brand-cyan);
+    }
+
+    /* Tab Switcher */
+    .tab-nav {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 0.75rem;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+    }
+
+    /* Notes Section */
+    .note-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .note-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--brand-cyan);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .formula-box {
+      background: var(--bg-inner);
+      border-left: 3px solid var(--brand-cyan);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1rem 0;
+      font-size: 1.05rem;
+    }
+
+    /* Question Cards */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .q-card:hover {
+      border-color: var(--border-glow);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .q-badge {
+      background: linear-gradient(135deg, #0284c7, #4f46e5);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .q-tag {
+      font-size: 0.8rem;
+      color: var(--brand-gold);
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .q-stem {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .interactive-box {
+      background: var(--bg-inner);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .input-ans {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-sm);
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
+      min-width: 150px;
+      outline: none;
+    }
+
+    .input-ans:focus {
+      border-color: var(--brand-cyan);
+    }
+
+    .btn-check {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-check:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .feedback-msg {
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+    }
+
+    .feedback-msg.correct {
+      color: var(--color-correct);
+    }
+
+    .feedback-msg.wrong {
+      color: var(--color-wrong);
+    }
+
+    .solution-toggle {
+      margin-top: 1.25rem;
+      border-top: 1px dashed var(--border-card);
+      padding-top: 1rem;
+    }
+
+    .btn-toggle-sol {
+      background: none;
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle-sol:hover {
+      color: var(--brand-cyan);
+      border-color: var(--brand-cyan);
+    }
+
+    .solution-content {
+      display: none;
+      margin-top: 1rem;
+      background: var(--bg-inner);
+      border-left: 3px solid var(--brand-indigo);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .solution-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Table */
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+
+    .custom-table th, .custom-table td {
+      border: 1px solid var(--border-card);
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    .custom-table th {
+      background: var(--bg-inner);
+      color: var(--brand-cyan);
+      font-weight: 700;
+    }
+
+    /* Footer */
+    .page-footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-card);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumbs -->
+  <header class="top-navbar">
+    <div class="nav-left">
+      <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation" id="desktop-breadcrumbs">
+        <a href="/" class="breadcrumb-item">Home</a>
+        <span class="breadcrumb-separator">❯</span>
+        <a href="/?class=12" class="breadcrumb-item">Class 12</a>
+        <span class="breadcrumb-separator">❯</span>
+        <a href="/?class=12&subject=physics" class="breadcrumb-item">Physics Part-I</a>
+        <span class="breadcrumb-separator">❯</span>
+        <a href="/?class=12&subject=physics&chapter=6" class="breadcrumb-item">Chapter 6 (leph106.pdf)</a>
+        <span class="breadcrumb-separator">❯</span>
+        <span class="breadcrumb-item breadcrumb-active">Electromagnetic Induction Mastery</span>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <button class="btn-icon" id="theme-toggle" title="Toggle Light/Dark Theme">
+        <span id="theme-icon">🌙</span> <span id="theme-text">Dark</span>
+      </button>
+      <a href="/?class=12&subject=physics" class="btn-icon">
+        <span>← All Physics Chapters</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Header -->
+    <section class="hero-banner">
+      <div class="hero-badge">⚡ NCERT Class 12 Physics Part-I • Chapter 6</div>
+      <h1 class="hero-title">Electromagnetic Induction (EMI)</h1>
+      <p class="hero-subtitle">
+        Comprehensive topic-wise study notes, essential mathematical formulas, and 10 master numerical problems with interactive self-testing and step-by-step solutions based on <code>leph106.pdf</code>.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <span>Book Part:</span> <strong>Physics Part-I (leph106.pdf)</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Topics Covered:</span> <strong>Flux, Faraday, Lenz, Motional EMF, Inductance, AC Generator</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Mastery Score:</span> <strong id="score-display">0 / 10 Mastered</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchView('notes-view', this)">📚 Topic-Wise Notes &amp; Formulas</button>
+      <button class="tab-btn" onclick="switchView('numericals-view', this)">🔢 10 Master Numericals &amp; Self-Test</button>
+    </div>
+
+    <!-- VIEW 1: TOPIC NOTES -->
+    <div id="notes-view">
+      
+      <!-- Topic 1 -->
+      <section class="note-block">
+        <h2 class="note-title">1. Magnetic Flux ($\Phi_B$)</h2>
+        <p>Magnetic flux through a plane surface of area $A$ in a uniform magnetic field $B$ measures the total number of magnetic lines of force passing through it:</p>
+        <div class="formula-box">
+          $$\Phi_B = \vec{B} \cdot \vec{A} = B A \cos\theta$$
+        </div>
+        <ul style="padding-left: 1.25rem;">
+          <li><strong>$\theta$:</strong> Angle between magnetic field vector $\vec{B}$ and the outward normal area vector $\vec{A}$.</li>
+          <li><strong>SI Unit:</strong> Weber ($\text{Wb}$) or $\text{T}\cdot\text{m}^2$. Dimensions: $[M L^2 T^{-2} A^{-1}]$.</li>
+          <li><strong>Scalar Quantity:</strong> It can be positive, negative, or zero depending on $\theta$.</li>
+        </ul>
+      </section>
+
+      <!-- Topic 2 -->
+      <section class="note-block">
+        <h2 class="note-title">2. Faraday’s Laws &amp; Induced Current / Charge</h2>
+        <p><strong>First Law:</strong> Emf is induced whenever the magnetic flux linked with a circuit changes with time.</p>
+        <p><strong>Second Law:</strong> The magnitude of induced emf is equal to the time rate of change of magnetic flux:</p>
+        <div class="formula-box">
+          $$\varepsilon = -N \frac{d\Phi_B}{dt}$$
+          $$I = \frac{|\varepsilon|}{R} = \frac{N}{R} \left|\frac{d\Phi_B}{dt}\right|, \quad \Delta q = \frac{N \Delta \Phi_B}{R}$$
+        </div>
+        <p><em>Crucial Insight:</em> Induced electric charge $\Delta q$ depends strictly on the net change in flux $\Delta \Phi_B$ and resistance $R$, and is independent of time duration!</p>
+      </section>
+
+      <!-- Topic 3 -->
+      <section class="note-block">
+        <h2 class="note-title">3. Lenz’s Law and Conservation of Energy</h2>
+        <p>The polarity of induced emf produces an induced current whose magnetic effect opposes the change in magnetic flux that causes it.</p>
+        <div class="formula-box">
+          $$\text{Work done against magnetic opposition} = \text{Electrical Energy} = \text{Joule Heat } (I^2 R t)$$
+        </div>
+      </section>
+
+      <!-- Topic 4 -->
+      <section class="note-block">
+        <h2 class="note-title">4. Motional Electromotive Force</h2>
+        <p><strong>(a) Linear Sliding Rod ($l$ moving with velocity $v$ in field $B$):</strong></p>
+        <div class="formula-box">
+          $$\varepsilon = B l v, \quad I = \frac{Blv}{R}, \quad F_{\text{ext}} = \frac{B^2 l^2 v}{R}, \quad P_{\text{mech}} = \frac{B^2 l^2 v^2}{R} = I^2 R$$
+        </div>
+        <p><strong>(b) Rotational Rod / Spoked Wheel (Radius $R$ rotating at $\omega$ rad/s):</strong></p>
+        <div class="formula-box">
+          $$\varepsilon = \frac{1}{2} B \omega R^2 = \pi \nu B R^2$$
+        </div>
+      </section>
+
+      <!-- Topic 5 -->
+      <section class="note-block">
+        <h2 class="note-title">5. Inductance (Mutual &amp; Self) &amp; Magnetic Energy</h2>
+        <div class="formula-box">
+          $$\text{Self-Inductance: } N\Phi_B = L I \implies \varepsilon = -L \frac{dI}{dt}$$
+          $$\text{Long Solenoid: } L = \mu_0 \mu_r n^2 A l = \frac{\mu_0 \mu_r N^2 A}{l}$$
+          $$\text{Mutual Inductance: } M = \mu_0 \mu_r n_1 n_2 \pi r_1^2 l = \frac{\mu_0 \mu_r N_1 N_2 A}{l}$$
+          $$\text{Stored Energy: } U_B = \frac{1}{2} L I^2, \quad \text{Energy Density: } u_B = \frac{B^2}{2\mu_0}$$
+        </div>
+      </section>
+
+      <!-- Topic 6 -->
+      <section class="note-block">
+        <h2 class="note-title">6. AC Generator</h2>
+        <p>Converts mechanical rotation into sinusoidal alternating emf:</p>
+        <div class="formula-box">
+          $$\varepsilon(t) = N B A \omega \sin(\omega t) = \varepsilon_0 \sin(2\pi \nu t)$$
+          $$\text{Peak Voltage: } \varepsilon_0 = N B A \omega, \quad V_{\text{rms}} = \frac{\varepsilon_0}{\sqrt{2}}$$
+        </div>
+      </section>
+
+      <!-- Formula Table -->
+      <section class="note-block">
+        <h2 class="note-title">📑 Master Formulas Cheatsheet</h2>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Physical Quantity</th>
+              <th>Formula</th>
+              <th>SI Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Magnetic Flux ($\Phi_B$)</td>
+              <td>$\Phi_B = BA\cos\theta$</td>
+              <td>$\text{Wb}$ (Weber)</td>
+            </tr>
+            <tr>
+              <td>Induced EMF ($\varepsilon$)</td>
+              <td>$\varepsilon = -N \frac{d\Phi_B}{dt}$</td>
+              <td>$\text{V}$ (Volt)</td>
+            </tr>
+            <tr>
+              <td>Linear Motional EMF</td>
+              <td>$\varepsilon = Blv$</td>
+              <td>$\text{V}$ (Volt)</td>
+            </tr>
+            <tr>
+              <td>Rotational Motional EMF</td>
+              <td>$\varepsilon = \frac{1}{2}B\omega R^2$</td>
+              <td>$\text{V}$ (Volt)</td>
+            </tr>
+            <tr>
+              <td>Self-Inductance (Solenoid)</td>
+              <td>$L = \mu_0 n^2 A l$</td>
+              <td>$\text{H}$ (Henry)</td>
+            </tr>
+            <tr>
+              <td>Mutual Inductance (Coaxial)</td>
+              <td>$M = \mu_0 n_1 n_2 \pi r_1^2 l$</td>
+              <td>$\text{H}$ (Henry)</td>
+            </tr>
+            <tr>
+              <td>Magnetic Stored Energy</td>
+              <td>$U_B = \frac{1}{2}LI^2$</td>
+              <td>$\text{J}$ (Joule)</td>
+            </tr>
+            <tr>
+              <td>Magnetic Energy Density</td>
+              <td>$u_B = \frac{B^2}{2\mu_0}$</td>
+              <td>$\text{J/m}^3$</td>
+            </tr>
+            <tr>
+              <td>AC Generator Peak EMF</td>
+              <td>$\varepsilon_0 = NBA\omega$</td>
+              <td>$\text{V}$ (Volt)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- VIEW 2: NUMERICALS & TEST -->
+    <div id="numericals-view" style="display: none;">
+
+      <!-- Q1 -->
+      <article class="q-card" id="num-1">
+        <div class="q-header">
+          <span class="q-badge">Numerical 1</span>
+          <span class="q-tag">Topic 1: Magnetic Flux in 3D</span>
+        </div>
+        <div class="q-stem">
+          A square coil of side $20\text{ cm}$ with $50\text{ turns}$ is in the $X\text{-}Y$ plane in a magnetic field $\vec{B} = (0.2\hat{i} + 0.3\hat{j} + 0.4\hat{k})\text{ T}$. Calculate the total magnetic flux linked with the coil in Webers.
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.01" class="input-ans" id="ans-num-1" placeholder="Enter flux in Wb...">
+          <button class="btn-check" onclick="checkNum(1, 0.80, '0.80 Wb (50 × 0.4 × 0.04 = 0.80 Wb)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-1"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-1')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-1">
+            Area vector $\vec{A} = (0.20\text{ m})^2\hat{k} = 0.04\hat{k}\text{ m}^2$.<br>
+            Flux per turn $\Phi_1 = \vec{B}\cdot\vec{A} = 0.4 \times 0.04 = 0.016\text{ Wb}$.<br>
+            Total flux $\Phi_{\text{total}} = N \Phi_1 = 50 \times 0.016 = \mathbf{0.80\text{ Wb}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q2 -->
+      <article class="q-card" id="num-2">
+        <div class="q-header">
+          <span class="q-badge">Numerical 2</span>
+          <span class="q-tag">Topic 2: Faraday's Law &amp; Total Charge</span>
+        </div>
+        <div class="q-stem">
+          A coil of $500\text{ turns}$ and resistance $4\,\Omega$ has area $0.01\pi\text{ m}^2$. It is in a normal field $B = 0.2\text{ T}$ and rotated $180^\circ$ in $0.1\text{ s}$. Find the total induced charge $\Delta q$ that flows in Coulombs (take $\pi = 3.1416$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.01" class="input-ans" id="ans-num-2" placeholder="Charge in Coulombs...">
+          <button class="btn-check" onclick="checkNum(2, 1.57, '1.57 C (0.5π Coulombs)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-2"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-2')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-2">
+            $\Delta \Phi = \Phi_2 - \Phi_1 = -BA - BA = -2BA = -2(0.2)(0.01\pi) = -0.004\pi\text{ Wb}$.<br>
+            $\Delta q = \frac{N |\Delta \Phi|}{R} = \frac{500 \times 0.004\pi}{4} = 0.5\pi \approx \mathbf{1.57\text{ C}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q3 -->
+      <article class="q-card" id="num-3">
+        <div class="q-header">
+          <span class="q-badge">Numerical 3</span>
+          <span class="q-tag">Topic 2: Solenoid Loop &amp; Rate of Change</span>
+        </div>
+        <div class="q-stem">
+          A solenoid with $1000\text{ turns/m}$ carries current $I(t) = 3t^2 + 2t + 1\text{ A}$. A loop of area $4 \times 10^{-4}\text{ m}^2$ is placed inside. Calculate the induced emf at $t = 2\text{ s}$ in microvolts ($\mu\text{V}$). (Use $\pi = 3.1416$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.1" class="input-ans" id="ans-num-3" placeholder="EMF in μV...">
+          <button class="btn-check" onclick="checkNum(3, 7.04, '7.04 μV (or 7.0 μV)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-3"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-3')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-3">
+            At $t = 2\text{ s}$, $\frac{dI}{dt} = 6(2)+2 = 14\text{ A/s}$.<br>
+            $\frac{dB}{dt} = \mu_0 n \frac{dI}{dt} = (4\pi \times 10^{-7}) \times 1000 \times 14 = 5.6\pi \times 10^{-3}\text{ T/s}$.<br>
+            $\varepsilon = A \frac{dB}{dt} = (4 \times 10^{-4}) \times (5.6\pi \times 10^{-3}) = 2.24\pi \times 10^{-6}\text{ V} \approx \mathbf{7.04\,\mu\text{V}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q4 -->
+      <article class="q-card" id="num-4">
+        <div class="q-header">
+          <span class="q-badge">Numerical 4</span>
+          <span class="q-tag">Topic 4: Rectangular Loop Exiting Field</span>
+        </div>
+        <div class="q-stem">
+          A rectangular loop $12\text{ cm} \times 4\text{ cm}$ moves at $2\text{ cm/s}$ out of a normal field $B = 0.5\text{ T}$ parallel to its shorter side (cutting length = $12\text{ cm}$). Find the induced emf in millivolts ($\text{mV}$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.1" class="input-ans" id="ans-num-4" placeholder="EMF in mV...">
+          <button class="btn-check" onclick="checkNum(4, 1.2, '1.2 mV (0.5 × 0.12 × 0.02 = 1.2 mV)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-4"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-4')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-4">
+            $\varepsilon = B l v = 0.5\text{ T} \times 0.12\text{ m} \times 0.02\text{ m/s} = 0.0012\text{ V} = \mathbf{1.2\text{ mV}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q5 -->
+      <article class="q-card" id="num-5">
+        <div class="q-header">
+          <span class="q-badge">Numerical 5</span>
+          <span class="q-tag">Topic 4: Motional EMF &amp; Mechanical Power</span>
+        </div>
+        <div class="q-stem">
+          A rod of length $l = 0.5\text{ m}$ slides on rails at $v = 4\text{ m/s}$ in $B = 1.2\text{ T}$ across a resistor $R = 2\,\Omega$. Calculate the mechanical power supplied in Watts.
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.01" class="input-ans" id="ans-num-5" placeholder="Power in Watts...">
+          <button class="btn-check" onclick="checkNum(5, 2.88, '2.88 W (P = B²l²v²/R = 2.88 W)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-5"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-5')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-5">
+            $\varepsilon = Blv = 1.2 \times 0.5 \times 4 = 2.4\text{ V}$.<br>
+            $I = \varepsilon / R = 2.4 / 2 = 1.2\text{ A}$.<br>
+            $P = I^2 R = (1.2)^2 \times 2 = \mathbf{2.88\text{ W}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q6 -->
+      <article class="q-card" id="num-6">
+        <div class="q-header">
+          <span class="q-badge">Numerical 6</span>
+          <span class="q-tag">Topic 4: Rotational Motional EMF</span>
+        </div>
+        <div class="q-stem">
+          A wheel with spokes of length $0.8\text{ m}$ rotates at $180\text{ rpm}$ in a normal field $B = 0.4 \times 10^{-4}\text{ T}$. Calculate the induced emf in millivolts ($\text{mV}$). (Use $\pi = 3.1416$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.001" class="input-ans" id="ans-num-6" placeholder="EMF in mV...">
+          <button class="btn-check" onclick="checkNum(6, 0.241, '0.241 mV (or 0.24 mV)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-6"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-6')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-6">
+            $\omega = 2\pi \times (180/60) = 6\pi\text{ rad/s}$.<br>
+            $\varepsilon = \frac{1}{2} B \omega R^2 = \frac{1}{2} \times (0.4 \times 10^{-4}) \times (6\pi) \times (0.64) = 0.768\pi \times 10^{-4}\text{ V} \approx \mathbf{0.241\text{ mV}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q7 -->
+      <article class="q-card" id="num-7">
+        <div class="q-header">
+          <span class="q-badge">Numerical 7</span>
+          <span class="q-tag">Topic 5: Solenoid Self-Inductance</span>
+        </div>
+        <div class="q-stem">
+          A solenoid of length $0.5\text{ m}$, area $25\text{ cm}^2$, and $800\text{ turns}$ has an air core. If the current drops from $4.0\text{ A}$ to $0$ in $2.0\text{ ms}$, calculate the back-emf induced in Volts. (Use $\pi = 3.1416$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.1" class="input-ans" id="ans-num-7" placeholder="Back EMF in Volts...">
+          <button class="btn-check" onclick="checkNum(7, 8.04, '8.04 V (L = 4.02 mH, e = L × 2000 = 8.04 V)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-7"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-7')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-7">
+            $L = \frac{\mu_0 N^2 A}{l} = \frac{(4\pi \times 10^{-7}) \times 640000 \times 2.5 \times 10^{-3}}{0.5} = 4.02\text{ mH}$.<br>
+            $\varepsilon = L \frac{\Delta I}{\Delta t} = (4.02 \times 10^{-3}) \times 2000 = \mathbf{8.04\text{ V}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q8 -->
+      <article class="q-card" id="num-8">
+        <div class="q-header">
+          <span class="q-badge">Numerical 8</span>
+          <span class="q-tag">Topic 5: Magnetic Stored Energy</span>
+        </div>
+        <div class="q-stem">
+          A superconducting solenoid of inductance $L = 5.0\text{ H}$ carries a current of $60\text{ A}$. Calculate the total magnetic energy stored in kilojoules ($\text{kJ}$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.1" class="input-ans" id="ans-num-8" placeholder="Energy in kJ...">
+          <button class="btn-check" onclick="checkNum(8, 9.0, '9.0 kJ (½ × 5 × 3600 = 9000 J = 9 kJ)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-8"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-8')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-8">
+            $U_B = \frac{1}{2} L I^2 = \frac{1}{2} \times 5.0 \times (60)^2 = 2.5 \times 3600 = 9000\text{ J} = \mathbf{9.0\text{ kJ}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q9 -->
+      <article class="q-card" id="num-9">
+        <div class="q-header">
+          <span class="q-badge">Numerical 9</span>
+          <span class="q-tag">Topic 5: Mutual Inductance</span>
+        </div>
+        <div class="q-stem">
+          Two coaxial solenoids of length $1.0\text{ m}$ have $N_1 = 600, N_2 = 1000$ turns and inner radius $r_1 = 2\text{ cm}$. Find their mutual inductance $M$ in millihenries ($\text{mH}$). (Use $\pi^2 \approx 9.87$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.01" class="input-ans" id="ans-num-9" placeholder="M in mH...">
+          <button class="btn-check" onclick="checkNum(9, 0.95, '0.95 mH (or 0.948 mH)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-9"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-9')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-9">
+            $M = \frac{\mu_0 N_1 N_2 \pi r_1^2}{l} = (4\pi \times 10^{-7}) \times (6 \times 10^5) \times (4\pi \times 10^{-4}) = 96\pi^2 \times 10^{-6}\text{ H} \approx \mathbf{0.95\text{ mH}}$.
+          </div>
+        </div>
+      </article>
+
+      <!-- Q10 -->
+      <article class="q-card" id="num-10">
+        <div class="q-header">
+          <span class="q-badge">Numerical 10</span>
+          <span class="q-tag">Topic 6: AC Generator Peak Voltage</span>
+        </div>
+        <div class="q-stem">
+          An AC generator armature of $200\text{ turns}$, area $0.06\text{ m}^2$ rotates at $3000\text{ rpm}$ in a uniform magnetic field $B = 0.08\text{ T}$. Calculate the peak generated emf $\varepsilon_0$ in Volts. (Use $\pi = 3.1416$).
+        </div>
+        <div class="interactive-box">
+          <input type="number" step="0.1" class="input-ans" id="ans-num-10" placeholder="Peak EMF in Volts...">
+          <button class="btn-check" onclick="checkNum(10, 301.6, '301.6 V (96π = 301.59 V)')">Check Answer</button>
+          <span class="feedback-msg" id="fb-num-10"></span>
+        </div>
+        <div class="solution-toggle">
+          <button class="btn-toggle-sol" onclick="toggleSolution('sol-num-10')">👁️ Show Detailed Solution</button>
+          <div class="solution-content" id="sol-num-10">
+            $\omega = 2\pi \times (3000/60) = 100\pi\text{ rad/s}$.<br>
+            $\varepsilon_0 = N B A \omega = 200 \times 0.08 \times 0.06 \times (100\pi) = 96\pi\text{ V} \approx \mathbf{301.6\text{ V}}$.
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>NCERT Class 12 Physics Part-I • Chapter 6 Electromagnetic Induction &copy; Nextsem Academy.</p>
+  </footer>
+
+  <script>
+    // Tab switching
+    function switchView(viewId, btn) {
+      document.getElementById('notes-view').style.display = (viewId === 'notes-view') ? 'block' : 'none';
+      document.getElementById('numericals-view').style.display = (viewId === 'numericals-view') ? 'block' : 'none';
+
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      themeIcon.textContent = isLight ? '☀️' : '🌙';
+      themeText.textContent = isLight ? 'Light' : 'Dark';
+    });
+
+    // Score tracking
+    let solvedSet = new Set();
+
+    function markSolved(id) {
+      if (!solvedSet.has(id)) {
+        solvedSet.add(id);
+        document.getElementById('score-display').textContent = `${solvedSet.size} / 10 Mastered`;
+        confetti({
+          particleCount: 50,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      }
+    }
+
+    // Toggle solution
+    function toggleSolution(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('active');
+    }
+
+    // Generic check function
+    function checkNum(qNum, target, hint) {
+      const val = parseFloat(document.getElementById(`ans-num-${qNum}`).value);
+      const fb = document.getElementById(`fb-num-${qNum}`);
+      if (isNaN(val)) {
+        fb.textContent = 'Please enter a number.';
+        fb.className = 'feedback-msg wrong';
+        return;
+      }
+      
+      const tolerance = Math.max(0.05, target * 0.05); // 5% tolerance
+      if (Math.abs(val - target) <= tolerance) {
+        fb.textContent = `✓ Correct! ${hint}`;
+        fb.className = 'feedback-msg correct';
+        markSolved(qNum);
+      } else {
+        fb.textContent = `✗ Incorrect. Expected ~${target}`;
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    // Auto-render math with KaTeX on load
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof renderMathInElement !== 'undefined') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError : false
+        });
+      }
+    });
+  </script>
+</body>
+</html>

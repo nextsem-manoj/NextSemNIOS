@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBSE Class 11 Electronics Technology (820) SQP 2024-25 Solved MCQs</title>
+<style>
+/* Low CSS - Lightweight, Minimal, Instant Loading (<5KB) */
+:root {
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #0284c7;
+  --primary-hover: #0369a1;
+  --success: #16a34a;
+  --success-bg: #f0fdf4;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --badge-bg: #e0f2fe;
+  --radius: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+body { background: var(--bg); color: var(--text); line-height: 1.5; padding: 16px; font-size: 15px; }
+.container { max-width: 860px; margin: 0 auto; }
+header { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.badge { display: inline-block; background: var(--badge-bg); color: var(--primary); font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 9999px; margin-bottom: 6px; }
+h1 { font-size: 1.35rem; color: #0f172a; margin-bottom: 6px; }
+.meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; position: sticky; top: 10px; z-index: 50; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--border); }
+.btn { background: var(--primary); color: #fff; border: none; padding: 7px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; }
+.btn:hover { background: var(--primary-hover); }
+.btn-outline { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { background: #f1f5f9; }
+.score-badge { margin-left: auto; align-self: center; font-size: 13px; font-weight: 600; background: #e0f2fe; color: #0369a1; padding: 6px 14px; border-radius: 9999px; }
+.section-title { font-size: 1.15rem; font-weight: 700; margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--border); color: #0f172a; }
+.q-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.q-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.q-num { font-weight: 700; color: var(--primary); font-size: 13px; }
+.q-text { font-size: 14.5px; font-weight: 500; color: #1e293b; margin-bottom: 12px; }
+.options { display: flex; flex-direction: column; gap: 7px; margin-bottom: 10px; }
+.opt-label { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: all 0.15s ease; font-size: 14px; background: #fafafa; }
+.opt-label:hover { background: #f1f5f9; border-color: #cbd5e1; }
+.opt-label input { accent-color: var(--primary); }
+.opt-label.correct { background: var(--success-bg) !important; border-color: var(--success) !important; color: #15803d; font-weight: 600; }
+.opt-label.wrong { background: var(--danger-bg) !important; border-color: var(--danger) !important; color: #b91c1c; }
+.reveal-btn { background: none; border: 1px dashed var(--border); color: var(--primary); padding: 5px 11px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.reveal-btn:hover { background: #f0f9ff; }
+.answer-box { display: none; margin-top: 10px; padding: 11px; border-radius: 6px; background: #f8fafc; border-left: 3px solid var(--primary); font-size: 13px; }
+.answer-box.active { display: block; }
+.formula-box { background: #0f172a; color: #38bdf8; padding: 8px 12px; border-radius: 6px; font-family: ui-monospace, monospace; font-size: 13px; margin: 6px 0; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">CBSE Official Sample Paper 2024-25</div>
+    <h1>Electronics Technology (Subject Code 820) - Class XI</h1>
+    <div class="meta">
+      <span>⏱️ Time: 3 Hours</span>
+      <span>🎯 Max Marks: 60</span>
+      <span>📑 Session: 2024-2025</span>
+      <span>⚡ Low CSS • Interactive Self-Scoring MCQs & Hidden Answers</span>
+    </div>
+  </header>
+
+  <div class="controls">
+    <button class="btn" onclick="toggleAll(true)">Show All Answers</button>
+    <button class="btn-outline btn" onclick="toggleAll(false)">Hide All Answers</button>
+    <button class="btn-outline btn" onclick="resetQuiz()">Reset Quiz</button>
+    <div class="score-badge" id="scoreBox">Score: 0 / 0</div>
+  </div>
+
+  <h2 class="section-title">SECTION A: Objective Type Questions (30 Marks)</h2>
+  <div id="section-a-list"></div>
+
+  <h2 class="section-title">SECTION B: Subjective Type Questions (30 Marks)</h2>
+  <div id="section-b-list"></div>
+</div>
+
+<script>
+const secA = [
+  // Q1 Employability Skills
+  {
+    id: 'q1_1',
+    group: 'Q1 (i) - Employability Skills',
+    question: 'What is the communication strategy where one tailors the message according to the audience’s knowledge level, culture, and interests?',
+    options: ['Feedback', 'Empathy', 'Audience analysis', 'Encoding'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Audience analysis</b><br>Explanation: Audience analysis involves assessing the characteristics, background knowledge, values, and cultural context of listeners to tailor the communication effectively.'
+  },
+  {
+    id: 'q1_2',
+    group: 'Q1 (ii) - Employability Skills',
+    question: 'What is the name of the concept that involves understanding and adjusting one\'s emotional state to maintain self-control in challenging situations?',
+    options: ['Self-awareness', 'Self-regulation', 'Motivation', 'Social skills'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Self-regulation</b><br>Explanation: Self-regulation is the cognitive ability to monitor, manage, and adapt emotions, behaviors, and reactions in response to stressful or challenging circumstances.'
+  },
+  {
+    id: 'q1_3',
+    group: 'Q1 (iii) - Employability Skills',
+    question: 'In a computer network, what is the role of a gateway?',
+    options: [
+      'It connects different network protocols.',
+      'It acts as a firewall.',
+      'It transfers emails between users.',
+      'It stores data temporarily.'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: (a) It connects different network protocols.</b><br>Explanation: A network gateway serves as a translator and bridge between two disparate networks running on different communication protocols.'
+  },
+  {
+    id: 'q1_4',
+    group: 'Q1 (iv) - Employability Skills',
+    question: 'In entrepreneurial finance, which of the following represents equity financing?',
+    options: [
+      'Borrowing from a bank',
+      'Issuing stocks to raise funds',
+      'Taking a personal loan',
+      'Securing a government grant'
+    ],
+    correct: 1,
+    ansText: '<b>Answer: (b) Issuing stocks to raise funds</b><br>Explanation: Equity financing involves raising capital through the sale of shares/ownership interest in the company, without incurring debt repayment obligations.'
+  },
+  {
+    id: 'q1_5',
+    group: 'Q1 (v) - Employability Skills',
+    question: 'The term carbon footprint refers to:',
+    options: [
+      'The total amount of carbon dioxide emissions directly and indirectly caused by an individual, organization, or product',
+      'The number of carbon atoms in a molecule',
+      'The pollution caused by heavy industries',
+      'The water consumed by a community'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: (a) The total amount of carbon dioxide emissions directly and indirectly caused by an individual, organization, or product</b><br>Explanation: Carbon footprint measures the cumulative greenhouse gases emitted across energy use, transport, manufacturing, and lifestyle.'
+  },
+  {
+    id: 'q1_6',
+    group: 'Q1 (vi) - Employability Skills',
+    question: 'Which of the following techniques is most useful for improving emotional intelligence?',
+    options: [
+      'Emotional suppression',
+      'Self-reflection and mindfulness',
+      'Avoiding stressful situations',
+      'Time management'
+    ],
+    correct: 1,
+    ansText: '<b>Answer: (b) Self-reflection and mindfulness</b><br>Explanation: Practicing mindfulness and regular self-reflection fosters self-awareness and empathy, which form the cornerstone of emotional intelligence.'
+  },
+
+  // Q2 Subject Specific
+  {
+    id: 'q2_1',
+    group: 'Q2 (i) - Voltage and Current',
+    question: 'A circuit has a resistance of 10 ohms and a current of 2 amperes flowing through it. What is the voltage across the circuit?',
+    options: ['5 volts', '10 volts', '15 volts', '20 volts'],
+    correct: 3,
+    ansText: '<b>Answer: (d) 20 volts</b><br>Explanation: By Ohm\'s Law: <div class="formula-box">V = I × R = 2 A × 10 Ω = 20 V</div>'
+  },
+  {
+    id: 'q2_2',
+    group: 'Q2 (ii) - Basics of Semiconductor',
+    question: 'What type of material is silicon in terms of electrical conductivity?',
+    options: ['Insulator', 'Conductor', 'Semiconductor', 'Superconductor'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Semiconductor</b><br>Explanation: Silicon is a tetravalent semiconductor with an energy bandgap of ~1.1 eV at room temperature, having conductivity intermediate between conductors and insulators.'
+  },
+  {
+    id: 'q2_3',
+    group: 'Q2 (iii) - Basics of Semiconductor',
+    question: 'What is the majority charge carrier in an N-type semiconductor?',
+    options: ['Holes', 'Electrons', 'Protons', 'Neutrons'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Electrons</b><br>Explanation: In N-type semiconductor, doping with pentavalent donors (e.g. Phosphorus, Arsenic) provides free conduction electrons as majority carriers.'
+  },
+  {
+    id: 'q2_4',
+    group: 'Q2 (iv) - Basics of Semiconductor',
+    question: 'What is the process by which doping is done to a semiconductor to alter its conductivity?',
+    options: ['Inversion', 'Fermentation', 'Diffusion', 'Fusion'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Diffusion</b><br>Explanation: Thermal diffusion (and ion implantation) is the standard method where dopant impurity atoms diffuse into the crystal lattice at high temperatures.'
+  },
+  {
+    id: 'q2_5',
+    group: 'Q2 (v) - Bipolar Junction Transistor',
+    question: 'Which terminals of a Bipolar Junction Transistor (BJT) are responsible for controlling the current flow between the other two terminals?',
+    options: ['Base and emitter', 'Base and collector', 'Emitter and collector', 'Collector and base'],
+    correct: 0,
+    ansText: '<b>Answer: (a) Base and emitter</b><br>Explanation: The base-emitter voltage and base current (I_B) control the large collector-emitter current (I_C = β × I_B).'
+  },
+  {
+    id: 'q2_6',
+    group: 'Q2 (vi) - Bipolar Junction Transistor',
+    question: 'What is the function of the base region in a BJT?',
+    options: ['To provide mechanical support', 'To control the current flow', 'To dissipate heat', 'To enhance voltage'],
+    correct: 1,
+    ansText: '<b>Answer: (b) To control the current flow</b><br>Explanation: The base is made extremely thin and lightly doped to control carrier transit from emitter to collector.'
+  },
+  {
+    id: 'q2_7',
+    group: 'Q2 (vii) - Overview of Atom',
+    question: 'What is the charge of an electron?',
+    options: ['Positive', 'Negative', 'Neutral', 'Variable'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Negative</b><br>Explanation: An electron carries a negative elementary electric charge of -1.602 × 10⁻¹⁹ Coulombs.'
+  },
+
+  // Q3 Subject Specific
+  {
+    id: 'q3_1',
+    group: 'Q3 (i) - Transistor Amplifier',
+    question: 'In a common emitter transistor amplifier configuration, the input signal is applied to which terminal?',
+    options: ['Collector', 'Base', 'Emitter', 'None of the above'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Base</b><br>Explanation: In the Common Emitter (CE) configuration, the input signal is fed to the Base and output is extracted from the Collector.'
+  },
+  {
+    id: 'q3_2',
+    group: 'Q3 (ii) - Transistor Amplifier',
+    question: 'What is the purpose of coupling capacitors in transistor amplifier circuits?',
+    options: [
+      'To provide DC isolation between stages',
+      'To increase the gain',
+      'To stabilize the bias point',
+      'To reduce distortion'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: (a) To provide DC isolation between stages</b><br>Explanation: Coupling capacitors block DC biasing voltages from interfering with adjacent stages while letting the AC signal pass freely.'
+  },
+  {
+    id: 'q3_3',
+    group: 'Q3 (iii) - Overview of Atom',
+    question: 'What is the atomic number of an element determined by?',
+    options: ['Protons', 'Neutrons', 'Electrons', 'Isotopes'],
+    correct: 0,
+    ansText: '<b>Answer: (a) Protons</b><br>Explanation: The atomic number (Z) of an atom is defined strictly by the number of protons in its nucleus.'
+  },
+  {
+    id: 'q3_4',
+    group: 'Q3 (iv) - Overview of Atom',
+    question: 'Which subatomic particle has a negative charge?',
+    options: ['Proton', 'Neutron', 'Electron', 'Positron'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Electron</b><br>Explanation: Protons are positive (+e), neutrons are neutral (0), and electrons carry negative (-e) charge.'
+  },
+  {
+    id: 'q3_5',
+    group: 'Q3 (v) - CRO',
+    question: 'In a Cathode Ray Oscilloscope (CRO), the horizontal axis represents:',
+    options: ['Voltage', 'Current', 'Time', 'Frequency'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Time</b><br>Explanation: The internal horizontal sweep generator applies a linear sawtooth time-base voltage, causing the X-axis to represent elapsed time.'
+  },
+  {
+    id: 'q3_6',
+    group: 'Q3 (vi) - CRO',
+    question: 'What is the function of the deflection plates in a CRO?',
+    options: ['To control brightness', 'To produce electrons', 'To deflect the electron beam', 'To amplify the signal'],
+    correct: 2,
+    ansText: '<b>Answer: (c) To deflect the electron beam</b><br>Explanation: Electrostatic deflection plates (vertical Y-plates and horizontal X-plates) steer the electron beam onto the phosphor screen.'
+  },
+  {
+    id: 'q3_7',
+    group: 'Q3 (vii) - Overview of Atom',
+    question: 'Which subatomic particle determines the atomic number of an element?',
+    options: ['Proton', 'Electron', 'Neutron', 'Isotope'],
+    correct: 0,
+    ansText: '<b>Answer: (a) Proton</b><br>Explanation: Atomic number Z = number of nuclear protons.'
+  },
+
+  // Q4 Voltage, Current & Semiconductors
+  {
+    id: 'q4_1',
+    group: 'Q4 (i) - Voltage and Current',
+    question: 'Which unit is used to measure electrical resistance?',
+    options: ['Volt', 'Ampere', 'Ohm', 'Watt'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Ohm (Ω)</b><br>Explanation: Resistance is measured in Ohms; Volt is for potential difference, Ampere for electric current, and Watt for electrical power.'
+  },
+  {
+    id: 'q4_2',
+    group: 'Q4 (ii) - Voltage and Current',
+    question: 'According to Ohm\'s Law, if the voltage across a resistor is doubled, what happens to the current?',
+    options: ['It doubles', 'It remains the same', 'It halves', 'It quadruples'],
+    correct: 0,
+    ansText: '<b>Answer: (a) It doubles</b><br>Explanation: Ohm\'s Law states I = V / R. When V is multiplied by 2, current I doubles proportionately.'
+  },
+  {
+    id: 'q4_3',
+    group: 'Q4 (iii) - Voltage and Current',
+    question: 'A circuit has a current of 2 amperes flowing through it with a resistance of 5 ohms. What is the voltage across the circuit?',
+    options: ['2.5 volts', '5 volts', '10 volts', '15 volts'],
+    correct: 2,
+    ansText: '<b>Answer: (c) 10 volts</b><br>Explanation: <div class="formula-box">V = I × R = 2 A × 5 Ω = 10 V</div>'
+  },
+  {
+    id: 'q4_4',
+    group: 'Q4 (iv) - Basics of Semiconductor',
+    question: 'What is the most commonly used semiconductor material in electronics?',
+    options: ['Copper', 'Aluminum', 'Silicon', 'Gold'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Silicon</b><br>Explanation: Silicon dominates commercial electronics due to thermal stability (up to 150°C), abundance, and ease of forming insulating silicon dioxide (SiO2).'
+  },
+  {
+    id: 'q4_5',
+    group: 'Q4 (v) - Basics of Semiconductor',
+    question: 'What is the majority charge carrier in a P-type semiconductor?',
+    options: ['Electrons', 'Holes', 'Protons', 'Neutrons'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Holes</b><br>Explanation: P-type semiconductor is doped with trivalent atoms (Boron, Indium), creating vacancies in valence bonds termed holes as majority carriers.'
+  },
+  {
+    id: 'q4_6',
+    group: 'Q4 (vi) - Basics of Semiconductor',
+    question: 'What is the process of adding impurities to a semiconductor called?',
+    options: ['Fabrication', 'Purification', 'Doping', 'Deposition'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Doping</b><br>Explanation: Doping is the intentional introduction of specific impurity atoms into an intrinsic semiconductor crystal to modulate electrical conductivity.'
+  },
+
+  // Q5 Transistor & Amplifiers
+  {
+    id: 'q5_1',
+    group: 'Q5 (i) - Bipolar Junction Transistor',
+    question: 'Which terminals of a Bipolar Junction Transistor (BJT) control the flow of current between the other two terminals?',
+    options: ['Base and emitter', 'Collector and base', 'Emitter and collector', 'None of the above'],
+    correct: 0,
+    ansText: '<b>Answer: (a) Base and emitter</b><br>Explanation: Base-emitter junction bias sets the base current, governing collector-to-emitter carrier flow.'
+  },
+  {
+    id: 'q5_2',
+    group: 'Q5 (ii) - Bipolar Junction Transistor',
+    question: 'What is the primary function of the base region in a BJT?',
+    options: ['To emit electrons', 'To amplify the signal', 'To dissipate heat', 'To control the flow of carriers'],
+    correct: 3,
+    ansText: '<b>Answer: (d) To control the flow of carriers</b><br>Explanation: The base controls the transmission of majority carriers emitted by the emitter towards the collector.'
+  },
+  {
+    id: 'q5_3',
+    group: 'Q5 (iii) - Transistor Amplifier',
+    question: 'In a common emitter transistor amplifier configuration, where is the input signal applied?',
+    options: ['Collector', 'Base', 'Emitter', 'None of the above'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Base</b><br>Explanation: The AC input voltage is coupled to the Base terminal with respect to the common Emitter.'
+  },
+  {
+    id: 'q5_4',
+    group: 'Q5 (iv) - Transistor Amplifier',
+    question: 'What is the primary purpose of coupling capacitors in transistor amplifier circuits?',
+    options: ['To block DC components', 'To increase gain', 'To stabilize the bias point', 'To reduce noise'],
+    correct: 0,
+    ansText: '<b>Answer: (a) To block DC components</b><br>Explanation: Coupling capacitors block DC quiescent voltages while transmitting dynamic AC audio/RF signals.'
+  },
+  {
+    id: 'q5_5',
+    group: 'Q5 (v) - Transistor Amplifier',
+    question: 'What is the gain of an amplifier?',
+    options: [
+      'The ratio of output to input signal (voltage, current, or power)',
+      'The total power dissipation',
+      'The amount of current flow',
+      'The number of stages in the amplifier'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: (a) The ratio of output to input signal (voltage, current, or power)</b><br>Explanation: Gain is defined as Output Signal divided by Input Signal (Av = Vout / Vin, Ai = Iout / Iin).'
+  },
+  {
+    id: 'q5_6',
+    group: 'Q5 (vi) - Basics of Semiconductor',
+    question: 'What is the primary material used in semiconductor devices?',
+    options: ['Copper', 'Silicon', 'Iron', 'Aluminum'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Silicon</b><br>Explanation: Silicon is the standard elemental semiconductor used across diodes, transistors, and integrated circuits.'
+  },
+
+  // Q6 Semiconductors & Amplifiers
+  {
+    id: 'q6_1',
+    group: 'Q6 (i) - Basics of Semiconductor',
+    question: 'In an intrinsic semiconductor, the number of electrons is equal to the number of:',
+    options: ['Protons', 'Neutrons', 'Holes', 'Photons'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Holes</b><br>Explanation: In pure (intrinsic) semiconductor, thermal excitation creates electron-hole pairs, so n_e = n_h = n_i.'
+  },
+  {
+    id: 'q6_2',
+    group: 'Q6 (ii) - Basics of Semiconductor',
+    question: 'Which of the following elements is commonly used as a p-type of dopant in silicon?',
+    options: ['Phosphorus', 'Arsenic', 'Antimony', 'Boron'],
+    correct: 3,
+    ansText: '<b>Answer: (d) Boron</b><br>Explanation: Boron is a trivalent acceptor impurity. Phosphorus, Arsenic, and Antimony are pentavalent donors (n-type).'
+  },
+  {
+    id: 'q6_3',
+    group: 'Q6 (iii) - Basics of Semiconductor',
+    question: 'Which process is used to increase the conductivity of a semiconductor?',
+    options: ['Filtration', 'Doping', 'Oxidation', 'Reduction'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Doping</b><br>Explanation: Adding tiny amounts of dopants increases charge carrier concentration by several orders of magnitude.'
+  },
+  {
+    id: 'q6_4',
+    group: 'Q6 (iv) - Bipolar Junction Transistor',
+    question: 'What type of charge carriers are the majority in an NPN transistor’s emitter?',
+    options: ['Holes', 'Electrons', 'Neutrons', 'Ions'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Electrons</b><br>Explanation: In an NPN transistor, the emitter is heavily doped N-type material where electrons are majority carriers.'
+  },
+  {
+    id: 'q6_5',
+    group: 'Q6 (v) - Transistor Amplifier',
+    question: 'What is the function of a transistor in an amplifier circuit?',
+    options: ['Rectification', 'Signal amplification', 'Signal attenuation', 'Signal generation'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Signal amplification</b><br>Explanation: A transistor uses small base-current variations to govern large collector currents, effectively boosting signal amplitude.'
+  },
+  {
+    id: 'q6_6',
+    group: 'Q6 (vi) - Transistor Amplifier',
+    question: 'In a common-emitter amplifier, the input signal is applied to:',
+    options: [
+      'Base-emitter junction',
+      'Collector-emitter junction',
+      'Base-collector junction',
+      'Collector-substrate junction'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: (a) Base-emitter junction</b><br>Explanation: The input AC signal is injected across the forward-biased Base-Emitter junction in CE configuration.'
+  }
+];
+
+const secB = [
+  {
+    qnum: 'Q7 [2 Marks]',
+    title: 'Formal vs Informal Communication Channels',
+    content: '<b>Formal Communication:</b> Official, structured communication following established organizational hierarchy. <i>Example:</i> Official memos, company emails, annual reports.<br><br><b>Informal Communication:</b> Spontaneous, unofficial interpersonal conversations outside formal protocol (grapevine). <i>Example:</i> Casual lunch break chats among colleagues.'
+  },
+  {
+    qnum: 'Q8 [2 Marks]',
+    title: 'Self-Regulation in Self-Management',
+    content: '<b>Definition:</b> Self-regulation is the conscious ability to monitor, manage, and adapt emotions, thoughts, and behaviors in response to stressful challenges.<br><br><b>Importance:</b> It prevents impulsive reactions, maintains professional discipline, boosts resilience, and ensures focus on long-term goals.'
+  },
+  {
+    qnum: 'Q9 [2 Marks]',
+    title: 'Encryption in ICT & Importance',
+    content: '<b>Definition:</b> Encryption is the cryptographic process of transforming readable plaintext into scrambled, unintelligible ciphertext using an encryption key.<br><br><b>Importance:</b> Guarantees data confidentiality, prevents unauthorized interception over public internet, and protects passwords and financial transactions.'
+  },
+  {
+    qnum: 'Q10 [2 Marks]',
+    title: 'Role of Market Research in Entrepreneurship',
+    content: '1. <b>Customer Validation:</b> Identifies consumer needs, preferences, and willingness to pay.<br>2. <b>Risk Reduction:</b> Reveals competitors\' strengths/weaknesses, preventing costly investment in non-viable products.'
+  },
+  {
+    qnum: 'Q11 [2 Marks]',
+    title: 'Sustainable Farming Practices & Methods',
+    content: '<b>Benefits:</b> Conserves topsoil, preserves biodiversity, reduces chemical toxicity, and sustains long-term soil fertility.<br><br><b>Two Methods:</b><br>1. <i>Crop Rotation:</i> Alternating legume and cereal crops to naturally restore nitrogen.<br>2. <i>Drip Irrigation / Organic Composting:</i> Maximizes water efficiency and replaces synthetic fertilizers with biological waste.'
+  },
+  {
+    qnum: 'Q12 [2 Marks]',
+    title: 'Role of Temperature in Semiconductor Conductivity',
+    content: 'Semiconductors have a <b>Negative Temperature Coefficient of Resistance</b>.<br>1. At absolute zero (0 K), pure semiconductors behave as perfect insulators.<br>2. As temperature rises, thermal energy breaks covalent bonds, generating additional free electron-hole pairs, which dramatically <b>increases electrical conductivity</b>.'
+  },
+  {
+    qnum: 'Q13 [2 Marks]',
+    title: 'Difference between AC and DC Current',
+    content: '<b>Alternating Current (AC):</b> Current that reverses direction periodically with sinusoidal frequency. <i>Example:</i> Domestic wall outlets (230 V, 50 Hz in India).<br><br><b>Direct Current (DC):</b> Unidirectional electric charge flow with constant polarity. <i>Example:</i> Chemical batteries, solar cells, mobile phone chargers.'
+  },
+  {
+    qnum: 'Q14 [2 Marks]',
+    title: 'Process of Doping in Semiconductors',
+    content: '<b>Doping:</b> The deliberate addition of trace impurity atoms (pentavalent or trivalent) to intrinsic semiconductors.<br><br><b>Effect:</b> Drastically increases charge carrier density (electrons or holes), reducing resistivity by factors of thousands and enabling the fabrication of PN junctions and transistors.'
+  },
+  {
+    qnum: 'Q15 [2 Marks]',
+    title: 'Majority & Minority Carriers in N-type and P-type Semiconductors',
+    content: '1. <b>N-type Semiconductor:</b><br>• Majority Carriers: <b>Electrons</b> (from donor atoms and thermal generation)<br>• Minority Carriers: <b>Holes</b> (thermal generation only)<br><br>2. <b>P-type Semiconductor:</b><br>• Majority Carriers: <b>Holes</b> (from acceptor atoms and thermal generation)<br>• Minority Carriers: <b>Electrons</b> (thermal generation only)'
+  },
+  {
+    qnum: 'Q16 [2 Marks]',
+    title: 'Operation of an NPN Transistor',
+    content: 'In an active NPN transistor:<br>1. Base-Emitter junction is <b>forward-biased</b>; heavily doped N-type emitter injects huge numbers of electrons into the thin, lightly doped P-type base.<br>2. Only ~1–5% recombine with holes in the base (producing small base current I_B).<br>3. Remaining 95–99% electrons are swept across the reverse-biased Base-Collector junction into the collector, constituting collector current I_C (I_E = I_B + I_C).'
+  },
+  {
+    qnum: 'Q17 [3 Marks]',
+    title: 'Semiconductor Characteristics vs Conductors and Insulators',
+    content: '<b>Definition:</b> Materials whose electrical conductivity lies between conductors and insulators.<br><br><b>Energy Bandgap Comparison:</b><br>• <i>Conductors:</i> Conduction and valence bands overlap (Eg ≈ 0 eV). Resistivity increases with temperature.<br>• <i>Insulators:</i> Very wide forbidden energy gap (Eg > 5 eV); electrons cannot cross.<br>• <i>Semiconductors:</i> Narrow bandgap (Eg ≈ 1.1 eV for Si, 0.72 eV for Ge). Thermal excitation promotes valence electrons across Eg into conduction band.<br><br><b>Examples:</b> Silicon (Si), Germanium (Ge), Gallium Arsenide (GaAs).'
+  },
+  {
+    qnum: 'Q18 [3 Marks]',
+    title: 'Semiconductor Diode vs Bipolar Junction Transistor (BJT)',
+    content: '1. <b>Construction:</b> Diode has 2 terminals (Anode, Cathode) and 1 PN junction. BJT has 3 terminals (Emitter, Base, Collector) and 2 PN junctions.<br>2. <b>Operation:</b> Diode acts as a one-way unidirectional switch. BJT acts as a current-controlled amplifier and bidirectional logic switch.<br>3. <b>Applications:</b> Diodes are used for rectification and voltage clamping; BJTs are used for linear audio/RF signal amplification and digital logic gates.'
+  },
+  {
+    qnum: 'Q19 [3 Marks]',
+    title: 'Basic Components and Function of a CRO',
+    content: '<b>Components:</b><br>1. <i>Electron Gun:</i> Emits, accelerates, and focuses a sharp electron beam.<br>2. <i>Deflection Plates:</i> Vertical (Y) plates deflect beam proportional to input signal voltage; Horizontal (X) plates deflect beam with linear sawtooth ramp (time base).<br>3. <i>Phosphor Screen:</i> Emits visible light spot when struck by electrons.<br><br><b>Function:</b> Synchronizes horizontal time sweep with vertical input voltage variation to trace continuous real-time waveforms.'
+  },
+  {
+    qnum: 'Q20 [4 Marks]',
+    title: 'Role of Feedback in Transistor Amplifiers',
+    content: '<b>Feedback:</b> Sampling a portion of output energy and feeding it back to the input circuit.<br><br>1. <b>Negative Feedback:</b> Output is fed 180° out of phase with input.<br>• <i>Gain:</i> Decreases (Af = A / (1 + Aβ))<br>• <i>Gain Stability:</i> Greatly improved against temperature and transistor variation<br>• <i>Distortion & Noise:</i> Significantly reduced<br>• <i>Bandwidth:</i> Broadens (increases upper cutoff frequency)<br><br>2. <b>Positive Feedback:</b> Output is fed in phase with input (Aβ = 1), generating sustained oscillations without external input (Barkhausen criterion).'
+  },
+  {
+    qnum: 'Q21 [4 Marks]',
+    title: 'Concept and Methods of Transistor Biasing',
+    content: '<b>Concept:</b> Biasing establishes proper DC operating voltages and currents (Operating Point or Q-point) so the transistor operates in the active region without clipping the AC input signal.<br><br><b>Biasing Methods:</b><br>1. <i>Fixed Bias (Base Bias):</i> Simplest, but highly temperature-unstable; Q-point shifts with β.<br>2. <i>Collector-to-Base Bias:</i> Provides negative DC feedback, improving stability.<br>3. <i>Voltage Divider Bias (Self Bias):</i> Most widely used; uses two resistors R1 and R2 across Vcc to fix base voltage, making Q-point virtually independent of β variations.<br><br><b>Significance:</b> Prevents thermal runaway, avoids signal distortion, and maximizes output dynamic range.'
+  },
+  {
+    qnum: 'Q22 [4 Marks]',
+    title: 'Compare and Contrast NPN and PNP Transistors',
+    content: '1. <b>Structure:</b> NPN has a P-type layer sandwiched between two N-type layers; PNP has an N-type layer between two P-type layers.<br>2. <b>Majority Charge Carriers:</b> NPN relies on <b>electrons</b> as majority carriers; PNP relies on <b>holes</b>.<br>3. <b>Speed & Performance:</b> NPN is faster and preferred in high-frequency applications because electron mobility is 2.5–3 times higher than hole mobility in silicon.<br>4. <b>Biasing Polarity:</b> NPN collector is biased positive relative to emitter; PNP collector is biased negative relative to emitter.<br>5. <b>Circuit Symbol:</b> In NPN, the emitter arrow points outward; in PNP, the arrow points inward towards the base.'
+  },
+  {
+    qnum: 'Q23 [4 Marks]',
+    title: 'BJT Construction and Modes of Operation',
+    content: '<b>Construction:</b> Three regions — <i>Emitter</i> (heavily doped, medium size), <i>Base</i> (very thin and lightly doped), and <i>Collector</i> (moderately doped, largest area for heat dissipation).<br><br><b>Operating Modes:</b><br>1. <b>Active Mode:</b> E-B junction forward biased, C-B junction reverse biased. Used for <b>linear signal amplification</b>.<br>2. <b>Cutoff Mode:</b> Both E-B and C-B junctions reverse biased. Negligible current flows; acts as an <b>OFF switch</b>.<br>3. <b>Saturation Mode:</b> Both E-B and C-B junctions forward biased. Maximum current flows with V_CE ≈ 0.2 V; acts as an <b>ON switch</b>.<br>4. <b>Inverted Mode:</b> E-B reverse biased, C-B forward biased; rarely used due to low gain.'
+  },
+  {
+    qnum: 'Q24 [4 Marks]',
+    title: 'Common-Emitter (CE) Transistor Amplifier Working Principle',
+    content: '<b>Working Principle:</b><br>1. The emitter terminal is common to both input and output loops. The input AC signal is superimposed on DC base bias across the forward-biased base-emitter junction.<br>2. A small change in input base current (ΔI_B) produces a magnified change in collector current: <div class="formula-box">ΔI_C = β × ΔI_B</div><br>3. This creates a large voltage drop across load resistor R_C: V_out = V_CC - I_C × R_C.<br>4. <b>Phase Reversal:</b> There is an inherent <b>180° phase shift</b> between input voltage and output voltage.<br><br><b>Parameters:</b><br>• <i>Current Gain:</i> β = ΔI_C / ΔI_B (typically 50 to 300)<br>• <i>Voltage Gain:</i> A_v = -β × (R_L / R_in)<br>• <i>Input Characteristics:</i> Base current I_B vs Base-Emitter voltage V_BE (resembles forward diode curve).<br>• <i>Output Characteristics:</i> Collector current I_C vs Collector-Emitter voltage V_CE at constant I_B (shows saturation, active, and breakdown regions).'
+  }
+];
+
+let userScore = 0;
+let answeredCount = 0;
+const answeredMap = {};
+
+function renderSecA() {
+  const container = document.getElementById('section-a-list');
+  let html = '';
+  secA.forEach((item, index) => {
+    html += `
+    <div class="q-card" id="card_${item.id}">
+      <div class="q-header">
+        <span class="q-num">${item.group}</span>
+        <span style="font-size:12px;color:var(--muted);">1 Mark</span>
+      </div>
+      <div class="q-text">${item.question}</div>
+      <div class="options">
+        ${item.options.map((opt, optIdx) => `
+          <label class="opt-label" id="label_${item.id}_${optIdx}">
+            <input type="radio" name="rad_${item.id}" onchange="checkOpt('${item.id}', ${optIdx}, ${item.correct})">
+            <span><b>${String.fromCharCode(65 + optIdx)}.</b> ${opt}</span>
+          </label>
+        `).join('')}
+      </div>
+      <button class="reveal-btn" onclick="toggleAns('${item.id}')">👁️ Toggle Answer & Explanation</button>
+      <div class="answer-box" id="ans_${item.id}">${item.ansText}</div>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+function renderSecB() {
+  const container = document.getElementById('section-b-list');
+  let html = '';
+  secB.forEach((item, idx) => {
+    const boxId = 'secb_' + idx;
+    html += `
+    <div class="q-card">
+      <div class="q-header">
+        <span class="q-num">${item.qnum}</span>
+      </div>
+      <div class="q-text"><b>${item.title}</b></div>
+      <button class="reveal-btn" onclick="toggleAns('${boxId}')">👁️ Reveal Model Answer</button>
+      <div class="answer-box" id="ans_${boxId}">${item.content}</div>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+function checkOpt(qid, chosenIdx, correctIdx) {
+  if (answeredMap[qid]) return;
+  answeredMap[qid] = true;
+  answeredCount++;
+  
+  const chosenLabel = document.getElementById('label_' + qid + '_' + chosenIdx);
+  const correctLabel = document.getElementById('label_' + qid + '_' + correctIdx);
+  
+  if (chosenIdx === correctIdx) {
+    userScore++;
+    chosenLabel.classList.add('correct');
+  } else {
+    chosenLabel.classList.add('wrong');
+    correctLabel.classList.add('correct');
+  }
+  
+  document.getElementById('ans_' + qid).classList.add('active');
+  updateScore();
+}
+
+function updateScore() {
+  document.getElementById('scoreBox').innerText = 'Score: ' + userScore + ' / ' + answeredCount + ' (Total ' + secA.length + ')';
+}
+
+function toggleAns(id) {
+  const el = document.getElementById('ans_' + id);
+  if (el) el.classList.toggle('active');
+}
+
+function toggleAll(show) {
+  document.querySelectorAll('.answer-box').forEach(el => {
+    if (show) el.classList.add('active');
+    else el.classList.remove('active');
+  });
+}
+
+function resetQuiz() {
+  userScore = 0;
+  answeredCount = 0;
+  for (let k in answeredMap) delete answeredMap[k];
+  updateScore();
+  renderSecA();
+}
+
+renderSecA();
+renderSecB();
+updateScore();
+</script>
+</body>
+</html>

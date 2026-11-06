@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Microbes: The Invisible Superheroes! | Class 12 Biology Ch 8 (Class 6 Kid's Fun Edition)</title>
+  <meta name="description" content="Page-by-page illustrated storybook of NCERT Class 12 Biology Chapter 8 (Microbes in Human Welfare) with cartoon mascots and interactive quiz.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060d1f;
+      --bg-card: #0f1b35;
+      --bg-card-hover: #162447;
+      --bg-card-alt: #0a1329;
+      --bg-hud: rgba(15, 27, 53, 0.9);
+      --border-card: rgba(245, 158, 11, 0.25);
+      
+      --brand-amber: #f59e0b;
+      --brand-amber-hover: #d97706;
+      --brand-emerald: #10b981;
+      --brand-cyan: #06b6d4;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --bg-card-alt: #f1f5f9;
+      --bg-hud: rgba(255, 255, 255, 0.95);
+      --border-card: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
+      background-attachment: fixed;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #f59e0b, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-amber);
+      background: rgba(245, 158, 11, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-amber);
+      font-weight: 700;
+      background: rgba(245, 158, 11, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-amber);
+      color: var(--brand-amber);
+      transform: translateY(-1px);
+    }
+
+    .hero-wrapper {
+      max-width: 1080px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 2px solid rgba(245, 158, 11, 0.35);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #f59e0b, #10b981, #06b6d4);
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-amber {
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: var(--brand-amber);
+    }
+
+    .hero-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      font-weight: 500;
+    }
+
+    .page-nav-ribbon {
+      max-width: 1080px;
+      margin: 0 auto 24px;
+      padding: 10px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .ribbon-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ribbon-btn:hover {
+      background: var(--brand-amber);
+      color: #000000;
+      border-color: var(--brand-amber);
+    }
+
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumb Navigation (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=12" class="breadcrumb-link">Class 12</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=12&subject=biology" class="breadcrumb-link">Biology</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=12&subject=biology&chapter=8" class="breadcrumb-link">Chapter 8: Microbes</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">Kids Storybook Edition</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <a href="/quiz.html?chapter=bio8" class="nav-btn" style="background: var(--brand-emerald); color: black; font-weight: 800;">
+          <span>🎯 MCQ Quiz</span>
+        </a>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div>
+        <div class="tag-badge tag-badge-amber" style="margin-bottom: 8px;">
+          <span>🦠 NCERT Class 12 Biology • Chapter 8 (Class 6 Fun Edition)</span>
+        </div>
+        <h1 class="hero-title">
+          Microbes: The Invisible Superheroes! 🦸‍♂️🧫
+        </h1>
+        <p class="hero-subtitle">
+          Page-by-Page Illustrated Storybook: How tiny invisible organisms make our curd, bread, medicine & clean energy!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Navigator Ribbon -->
+  <nav class="page-nav-ribbon">
+    <span style="font-size: 0.75rem; font-weight: 800; color: var(--brand-amber); text-transform: uppercase; white-space: nowrap; margin-right: 4px;">📖 Jump to:</span>
+    <button onclick="scrollToPage('page1')" class="ribbon-btn">Pg 1: Meet Microbes</button>
+    <button onclick="scrollToPage('page2')" class="ribbon-btn">Pg 2: Kitchen Chefs</button>
+    <button onclick="scrollToPage('page3')" class="ribbon-btn">Pg 3: Life-Saving Drugs</button>
+    <button onclick="scrollToPage('page4')" class="ribbon-btn">Pg 4: Body Mechanics</button>
+    <button onclick="scrollToPage('page5')" class="ribbon-btn">Pg 5: River Cleaners</button>
+    <button onclick="scrollToPage('page6')" class="ribbon-btn">Pg 6: Poop Power</button>
+    <button onclick="scrollToPage('page7')" class="ribbon-btn">Pg 7: Bodyguards</button>
+    <button onclick="scrollToPage('page8')" class="ribbon-btn">Pg 8: Root Buddies</button>
+    <button onclick="scrollToPage('quiz-section')" class="ribbon-btn" style="background: var(--brand-emerald); color: black; font-weight: 800;">⚡ Kid's Quiz</button>
+  </nav>
+
+  <!-- Main Pages Container -->
+  <main style="max-width: 1080px; margin: 0 auto; padding: 0 16px;">
+
+    <!-- PAGE 1: Meet the Microbes -->
+    <section id="page1" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 font-black text-base flex items-center justify-center">1</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 1: Who are Microbes? Meet the Invisible Friends!</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.0: Microbes in Human Welfare Intro</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-amber-500/10 text-amber-300 rounded-full text-xs font-bold border border-amber-500/30">Microbe Mascots</span>
+      </div>
+
+      <!-- Kid Explanation -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="space-y-3 text-sm text-slate-200 leading-relaxed">
+          <p class="text-base font-bold text-amber-300">
+            🔍 Imagine creatures so tiny that 1 million of them could dance on the tip of your pencil!
+          </p>
+          <p>
+            You cannot see them with your naked eyes — you need a powerful magnifying tool called a <strong>Microscope</strong>.
+          </p>
+          <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2 text-xs">
+            <strong class="text-emerald-400 text-sm">Where do they live?</strong><br>
+            • Everywhere! In the soil, air, water, inside our tummy, and even in extreme places like boiling hot thermal springs (over 100°C) and deep frozen Antarctic snow!
+          </div>
+          <p class="text-xs text-slate-300">
+            💡 <strong>Fun Secret:</strong> Many people think all germs make us sick. But actually, <strong>millions of friendly microbes are our best friends and superheroes</strong>!
+          </p>
+        </div>
+
+        <!-- Visual Mascot Card -->
+        <div class="p-5 bg-gradient-to-br from-slate-900 to-indigo-950/60 rounded-2xl border border-indigo-500/30 text-center space-y-3">
+          <div class="text-5xl animate-bounce">🧫 🔬 🦠</div>
+          <h3 class="text-base font-black text-indigo-300">The 4 Super Microbe Tribes</h3>
+          <div class="grid grid-cols-2 gap-2 text-xs text-slate-200">
+            <div class="p-2 bg-slate-800/80 rounded-xl">🟢 <strong>Bacteria</strong> (Little rods & spheres)</div>
+            <div class="p-2 bg-slate-800/80 rounded-xl">🍄 <strong>Fungi</strong> (Molds & Yeasts)</div>
+            <div class="p-2 bg-slate-800/80 rounded-xl">🌊 <strong>Protozoa</strong> (Amoeba & friends)</div>
+            <div class="p-2 bg-slate-800/80 rounded-xl">⚡ <strong>Viruses & Viroids</strong> (Tiny packages)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: Kitchen Superheroes -->
+    <section id="page2" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-black text-base flex items-center justify-center">2</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 2: Microbes in Our Kitchen! (Curd, Bread & Cheese)</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.1: Microbes in Household Products</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-300 rounded-full text-xs font-bold border border-emerald-500/30">Kitchen Chefs</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Curd Card -->
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
+          <div class="text-4xl">🥛 ➡️ 🥣</div>
+          <h3 class="text-base font-black text-emerald-400">1. Lacto the Curd Magician</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>Hero Name:</strong> <em>Lactobacillus (LAB)</em>.<br>
+            When your mom adds a tiny spoonful of curd (starter/inoculum) into warm milk, billions of LAB bacteria multiply! They convert milk sugar into lactic acid, making thick curd and adding super-healthy <strong>Vitamin B12</strong> to boost your health!
+          </p>
+        </div>
+
+        <!-- Bread Card -->
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
+          <div class="text-4xl">🍞 💨 🥐</div>
+          <h3 class="text-base font-black text-amber-400">2. Yeastie the Fluffy Baker</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>Hero Name:</strong> <em>Saccharomyces cerevisiae (Baker's Yeast)</em>.<br>
+            Ever wonder why bread, idli, and bhature are so soft and spongy? Yeast eats the flour sugar and burps out thousands of tiny <strong>Carbon Dioxide ($CO_2$) gas bubbles</strong> that get trapped and puff up the dough!
+          </p>
+        </div>
+
+        <!-- Cheese Card -->
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
+          <div class="text-4xl">🧀 🐭 🕳️</div>
+          <h3 class="text-base font-black text-cyan-400">3. Swiss Cheese with Big Holes!</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>Hero Name:</strong> <em>Propionibacterium shermanii</em>.<br>
+            Just like Tom & Jerry cheese! The big holes in Swiss Cheese are made because this bacterium produces giant puffs of $CO_2$ gas! Meanwhile, <strong>Roquefort cheese</strong> gets its awesome flavor from a blue-green fungus!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: Factory & Life-Saving Medicine -->
+    <section id="page3" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 font-black text-base flex items-center justify-center">3</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 3: Giant Factories & Life-Saving Antibiotics!</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.2: Microbes in Industrial Products & Antibiotics</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-cyan-500/10 text-cyan-300 rounded-full text-xs font-bold border border-cyan-500/30">Medicine Shields</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="space-y-3 text-sm text-slate-200">
+          <h3 class="text-base font-bold text-cyan-300">🏭 Fermenters: Giant Bathtubs for Microbes</h3>
+          <p>
+            In industries, billions of microbes are grown in giant steel tanks called <strong>Fermentors</strong> to produce medicines, fruit juices, and beverages.
+          </p>
+          <div class="p-4 bg-slate-900 rounded-2xl border border-cyan-500/30 space-y-2 text-xs">
+            <strong class="text-amber-400 text-sm">🧪 The Story of Penicillin (The First Miracle Drug!):</strong><br>
+            In 1928, scientist <strong>Alexander Fleming</strong> was growing bad bacteria in a dish. He noticed a green mold (<em>Penicillium notatum</em>) growing in a corner. Surprisingly, NO bacteria could grow near the mold! The mold was shooting out a secret weapon called <strong>Penicillin</strong> that saved millions of soldiers in World War II!
+          </div>
+        </div>
+
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 text-center space-y-3">
+          <div class="text-4xl">🧫 ➡️ 🛡️ ➡️ 🩺</div>
+          <h4 class="text-sm font-black text-white">What does "Antibiotic" mean?</h4>
+          <p class="text-xs text-slate-300">
+            <strong>Anti</strong> = Against, <strong>Bio</strong> = Life (of bad germs!).<br>
+            For humans, antibiotics mean "Pro-Life" because they cure dangerous diseases like Plague, Diphtheria (गलघोंटू), and Pneumonia!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: Body Mechanics & Clever Chemicals -->
+    <section id="page4" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-purple-500/20 border border-purple-500/40 text-purple-400 font-black text-base flex items-center justify-center">4</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 4: Super Enzymes & Heart Defenders!</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.2.2: Chemicals, Enzymes & Bioactive Molecules</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full text-xs font-bold border border-purple-500/30">Clever Molecules</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <span class="text-2xl">🍋</span>
+          <h4 class="font-bold text-amber-400 text-sm">Citric Acid</h4>
+          <p class="text-slate-300">Made by fungus <em>Aspergillus niger</em> for lemon flavor in candies and juices!</p>
+        </div>
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <span class="text-2xl">🧺</span>
+          <h4 class="font-bold text-blue-400 text-sm">Lipase (Stain Buster)</h4>
+          <p class="text-slate-300">Added to detergent powders to eat oily and butter stains from dirty shirts!</p>
+        </div>
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <span class="text-2xl">❤️</span>
+          <h4 class="font-bold text-rose-400 text-sm">Streptokinase (Clot Buster)</h4>
+          <p class="text-slate-300">Clears dangerous blood clots in heart blood vessels to save heart attack patients!</p>
+        </div>
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <span class="text-2xl">🩸</span>
+          <h4 class="font-bold text-emerald-400 text-sm">Statins (Cholesterol Lowerer)</h4>
+          <p class="text-slate-300">Made by yeast <em>Monascus purpureus</em> to keep blood vessels clean from excess fats!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: The Big Dirty Water Cleaner -->
+    <section id="page5" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-teal-500/20 border border-teal-500/40 text-teal-400 font-black text-base flex items-center justify-center">5</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 5: How Microbes Clean Giant Rivers of Dirty Water!</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.3: Microbes in Sewage Treatment (STP)</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-teal-500/10 text-teal-300 rounded-full text-xs font-bold border border-teal-500/30">Eco Cleaners</span>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm text-slate-200">
+        <p>Every city creates millions of liters of dirty wastewater (Sewage). If dumped directly into rivers, all fishes would die! Microbes come to the rescue in <strong>Sewage Treatment Plants (STP)</strong>:</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+            <h4 class="text-sm font-bold text-amber-400">Step 1: Primary Treatment (Physical Cleaning)</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Large floating plastics and paper are filtered with mesh screens, and heavy pebbles/soil settle down at the bottom like sand in a bucket.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-900 rounded-2xl border border-emerald-500/30 space-y-2">
+            <h4 class="text-sm font-bold text-emerald-400">Step 2: Secondary / Biological (The Microbe Feast!)</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Air is pumped into giant aeration tanks. Millions of good aerobic bacteria & fungal networks form <strong>"Flocs"</strong> and gobble up all the dirty organic waste! This lowers the water's <strong>BOD (Biochemical Oxygen Demand)</strong>, making it safe for rivers!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: Poop Power (Biogas) -->
+    <section id="page6" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-400 font-black text-base flex items-center justify-center">6</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 6: Poop Power! Turning Cow Dung into Clean Fire!</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.4: Microbes in Production of Biogas</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-amber-500/10 text-amber-300 rounded-full text-xs font-bold border border-amber-500/30">Gobar Gas</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="space-y-3 text-xs sm:text-sm text-slate-200">
+          <p>
+            Cows eat grass full of tough cellulose. Inside the cow's tummy (rumen), special anaerobic bacteria called <strong>Methanogens (<em>Methanobacterium</em>)</strong> digest the grass.
+          </p>
+          <div class="p-4 bg-slate-900 rounded-2xl border border-amber-500/40 space-y-2 text-xs">
+            <strong class="text-amber-300 text-sm">🔥 The Magic Gobar Gas Plant:</strong><br>
+            1. Village cow dung (gobar) mixed with water is poured into a 10–15 feet deep tank.<br>
+            2. Methanogen bacteria eat the dung and release <strong>Methane ($CH_4$) gas</strong>.<br>
+            3. The gas flows through pipes directly into village kitchens to light stoves and generate electricity!
+          </div>
+        </div>
+
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 text-center space-y-2">
+          <div class="text-5xl">🐄 ➡️ 💩 ➡️ 🛢️ ➡️ 🔥</div>
+          <h4 class="text-sm font-bold text-amber-400">100% Eco-Friendly Village Fuel!</h4>
+          <p class="text-xs text-slate-400">Developed in India by IARI (Indian Agricultural Research Institute) and KVIC!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 7: Nature's Tiny Bodyguards -->
+    <section id="page7" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-rose-500/20 border border-rose-500/40 text-rose-400 font-black text-base flex items-center justify-center">7</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 7: Nature's Tiny Ninjas (Biocontrol Agents)</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.5: Microbes as Biocontrol Agents</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-rose-500/10 text-rose-300 rounded-full text-xs font-bold border border-rose-500/30">Eco Ninjas</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <div class="text-3xl">🐞 🦟</div>
+          <h4 class="font-bold text-rose-400 text-sm">Ladybirds & Dragonflies</h4>
+          <p class="text-slate-300">Cute red Ladybird beetles eat harmful aphids, and Dragonflies hunt down pesky mosquitoes without any toxic chemicals!</p>
+        </div>
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <div class="text-3xl">🐛 ☠️</div>
+          <h4 class="font-bold text-amber-400 text-sm">Bt (Bacillus thuringiensis)</h4>
+          <p class="text-slate-300">Sold in small sachets of dried spores. When mixed with water and sprayed on crops, caterpillars eat it and their tummy bursts, saving the plant!</p>
+        </div>
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
+          <div class="text-3xl">🍄 🦠</div>
+          <h4 class="font-bold text-emerald-400 text-sm">Trichoderma & Baculoviruses</h4>
+          <p class="text-slate-300">Fungus <em>Trichoderma</em> protects plant roots, while Baculoviruses target only harmful insect pests without harming birds, fishes, or mammals!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 8: Underground Super Roots -->
+    <section id="page8" class="bg-[#0f1b35] border border-slate-800 rounded-3xl p-6 sm:p-8 fun-card space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4 flex-wrap gap-2">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-green-500/20 border border-green-500/40 text-green-400 font-black text-base flex items-center justify-center">8</span>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-white">Page 8: Underground Root Buddies (Biofertilisers)</h2>
+            <p class="text-xs text-slate-400">NCERT Section 8.6: Microbes as Biofertilisers</p>
+          </div>
+        </div>
+        <span class="px-3 py-1 bg-green-500/10 text-green-300 rounded-full text-xs font-bold border border-green-500/30">Root Buddies</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="space-y-3 text-xs sm:text-sm text-slate-200">
+          <p>
+            Chemical fertilizers pollute drinking water and soil. Instead, farmers use living biofertilizers that feed plants naturally:
+          </p>
+          <div class="p-4 bg-slate-900 rounded-2xl border border-green-500/30 space-y-2 text-xs">
+            <strong>🤝 The 3 Best Plant Friendships:</strong><br>
+            • <strong>Rhizobium:</strong> Lives in the root nodules of peas and beans, grabbing nitrogen from thin air to feed the plant!<br>
+            • <strong>Mycorrhiza (Glomus fungus):</strong> Acts like an underground internet cable, absorbing phosphorus and water from deep soil for the plant roots!<br>
+            • <strong>Cyanobacteria (Blue-green algae):</strong> <em>Anabaena, Nostoc, Oscillatoria</em> add natural organic fertilizer to wet rice paddy fields!
+          </div>
+        </div>
+
+        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 text-center space-y-2">
+          <div class="text-5xl">🌱 🤝 🧫 ➡️ 🌾</div>
+          <h4 class="text-sm font-bold text-emerald-400">Organic Farming Champion!</h4>
+          <p class="text-xs text-slate-400">Healthy soil, sweeter fruits, and clean water forever!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Kid's Mini-Quiz -->
+    <section id="quiz-section" class="bg-[#0f1b35] border-2 border-amber-500/40 rounded-3xl p-6 sm:p-8 gold-glow space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+            <span>⚡ Test Your Super-Kid Microbe Powers! (Quiz)</span>
+          </h2>
+          <p class="text-xs text-slate-400">Tap the correct option for instant confetti explosion!</p>
+        </div>
+        <div class="text-xs font-black text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/30">
+          Score: <span id="scoreText">0</span> / 4
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs" id="quizContainer">
+        <!-- Q1 -->
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
+          <p class="font-bold text-white text-sm">Q1. Which friendly bacterium turns milk into yummy curd and adds Vitamin B12?</p>
+          <div class="space-y-1.5" id="q1-opts">
+            <button onclick="checkAns(1, 0, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">A) Streptococcus</button>
+            <button onclick="checkAns(1, 1, true)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">B) Lactobacillus (LAB) ✓</button>
+            <button onclick="checkAns(1, 2, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">C) Amoeba</button>
+          </div>
+          <div id="q1-exp" class="hidden p-2 rounded-lg text-emerald-400 font-bold bg-emerald-950/40">✓ Correct! LAB bacteria curdles milk and boosts Vitamin B12.</div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
+          <p class="font-bold text-white text-sm">Q2. What causes the soft puffiness and big holes in bread and Swiss cheese?</p>
+          <div class="space-y-1.5" id="q2-opts">
+            <button onclick="checkAns(2, 0, true)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">A) Carbon dioxide ($CO_2$) gas bubbles ✓</button>
+            <button onclick="checkAns(2, 1, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">B) Cold water</button>
+            <button onclick="checkAns(2, 2, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">C) Sugar crystals</button>
+          </div>
+          <div id="q2-exp" class="hidden p-2 rounded-lg text-emerald-400 font-bold bg-emerald-950/40">✓ Correct! $CO_2$ gas released by fermenting microbes puffs up the dough!</div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
+          <p class="font-bold text-white text-sm">Q3. Who discovered the first life-saving antibiotic, Penicillin?</p>
+          <div class="space-y-1.5" id="q3-opts">
+            <button onclick="checkAns(3, 0, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">A) Albert Einstein</button>
+            <button onclick="checkAns(3, 1, true)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">B) Alexander Fleming ✓</button>
+            <button onclick="checkAns(3, 2, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">C) Isaac Newton</button>
+          </div>
+          <div id="q3-exp" class="hidden p-2 rounded-lg text-emerald-400 font-bold bg-emerald-950/40">✓ Correct! Alexander Fleming discovered penicillin from Penicillium mold in 1928.</div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-3">
+          <p class="font-bold text-white text-sm">Q4. Which gas produced in Gobar Gas plants is used for clean cooking?</p>
+          <div class="space-y-1.5" id="q4-opts">
+            <button onclick="checkAns(4, 0, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">A) Helium</button>
+            <button onclick="checkAns(4, 1, false)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">B) Oxygen</button>
+            <button onclick="checkAns(4, 2, true)" class="w-full text-left p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200">C) Methane ($CH_4$) gas ✓</button>
+          </div>
+          <div id="q4-exp" class="hidden p-2 rounded-lg text-emerald-400 font-bold bg-emerald-950/40">✓ Correct! Methanogen bacteria turn cow dung into clean methane fuel!</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function scrollToPage(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let score = 0;
+    const answered = {};
+
+    function checkAns(qNum, optIdx, isCorrect) {
+      if (answered[qNum]) return;
+      answered[qNum] = true;
+
+      const expEl = document.getElementById(`q${qNum}-exp`);
+      if (expEl) expEl.classList.remove('hidden');
+
+      if (isCorrect) {
+        score++;
+        document.getElementById('scoreText').innerText = score;
+        confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+      }
+    }
+  </script>
+</body>
+</html>

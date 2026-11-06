@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Kids Foundational Learning Hub • English, Maths & Hindi Interactive Worksheets</title>
+  <meta name="description" content="Fun interactive worksheets for kids (Nursery, LKG, UKG, KG & Class 1). Learn English alphabet identification, sight words, numbers 1-20, shapes, Hindi varnamala and word reading with speech audio." />
+
+  <!-- Google Fonts: Fredoka (Playful) & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            playful: ['Fredoka', 'cursive', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            kid: {
+              yellow: '#FBBF24',
+              coral: '#FB7185',
+              blue: '#38BDF8',
+              emerald: '#34D399',
+              purple: '#A78BFA',
+              darkBg: '#0F172A',
+              cardDark: '#1E293B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Confetti script -->
+  <script src="./js/confetti.browser.js"></script>
+  <script>
+    if (typeof confetti === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"><\/script>');
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Fredoka', cursive, sans-serif;
+      user-select: none;
+      -webkit-user-select: none;
+      transition: background-color 0.2s ease;
+    }
+    .card-bounce {
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .card-bounce:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+    .card-bounce:active {
+      transform: translateY(2px) scale(0.98);
+    }
+    @keyframes floatGentle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(1.5deg); }
+    }
+    .animate-float {
+      animation: floatGentle 3s ease-in-out infinite;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #FBBF24;
+      border-radius: 9999px;
+    }
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-amber-50/60 dark:bg-[#0b1329] text-slate-800 dark:text-slate-100 min-h-screen flex flex-col justify-between">
+
+  <!-- ================= 1. PLAYFUL KIDS NAVBAR & BREADCRUMBS ================= -->
+  <header class="no-print sticky top-0 z-40 bg-white/90 dark:bg-[#0e172e]/95 backdrop-blur-md border-b-4 border-amber-300 dark:border-amber-500/30 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between">
+      
+      <!-- Logo & Title -->
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2.5 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-400 via-pink-400 to-indigo-500 flex items-center justify-center text-white text-2xl shadow-lg shadow-amber-400/30 group-hover:rotate-6 transition-transform">
+            🌟
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 dark:from-pink-400 dark:via-purple-300 dark:to-indigo-300 bg-clip-text text-transparent">
+                Kids Kingdom
+              </span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-400 text-amber-950 shadow-sm">
+                KG • NURSERY
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium hidden sm:block">
+              English • Maths (संख्याएं) • Hindi Varnamala (वर्णमाला)
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Action Nav Items -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Audio Speech Toggle -->
+        <button id="soundToggleBtn" type="button" class="px-3 py-1.5 rounded-xl bg-amber-100 dark:bg-slate-800 text-amber-700 dark:text-amber-300 border-2 border-amber-300 dark:border-amber-500/40 text-xs font-bold flex items-center gap-1.5 shadow-sm hover:scale-105 transition-all">
+          <span id="soundIcon">🔊</span>
+          <span id="soundLabel" class="hidden sm:inline">Voice: ON</span>
+        </button>
+
+        <!-- Star Rewards Counter -->
+        <div class="px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 font-extrabold text-xs flex items-center gap-1.5 shadow-md shadow-amber-400/20">
+          <span class="text-base animate-bounce">⭐</span>
+          <span id="starCounter">0</span>
+          <span class="hidden sm:inline text-[11px]">Stars</span>
+        </div>
+
+        <!-- Print Worksheet Button -->
+        <button id="printBtn" type="button" class="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm hover:scale-105 transition-all">
+          <span>🖨️</span>
+          <span class="hidden sm:inline">Print Sheet</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button id="themeToggleBtn" type="button" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-amber-500 border border-slate-200 dark:border-slate-700 shadow-sm hover:scale-105 transition-all">
+          <span id="themeEmoji">🌙</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Top Navbar Breadcrumb Navigation (PERMANENT RULE) -->
+    <div class="bg-amber-100/70 dark:bg-[#0a1022] border-t border-amber-200 dark:border-slate-800 px-4 sm:px-6 py-1.5">
+      <div class="max-w-7xl mx-auto flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 overflow-x-auto whitespace-nowrap font-medium">
+        <a href="/" class="hover:text-amber-600 dark:hover:text-amber-400 flex items-center gap-1">
+          <span>🏠 Home</span>
+        </a>
+        <span>❯</span>
+        <a href="/?view=dashboard" class="hover:text-amber-600 dark:hover:text-amber-400">Classrooms &amp; Hubs</a>
+        <span>❯</span>
+        <span class="hover:text-amber-600 dark:hover:text-amber-400 font-bold text-amber-600 dark:text-amber-400">
+          👶 Kids Foundational Hub (English, Maths &amp; Hindi Worksheets)
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= 2. MAIN INTERACTIVE WORKSPACE ================= -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-5 sm:py-7 space-y-6">
+    
+    <!-- Hero Banner with Character Greetings -->
+    <div class="no-print relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-300 via-pink-300 to-indigo-300 dark:from-[#1e1b4b] dark:via-[#1e293b] dark:to-[#0f172a] p-5 sm:p-7 shadow-xl border-4 border-white dark:border-slate-700">
+      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+        <div class="space-y-1.5 max-w-xl">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 dark:bg-slate-800/80 text-pink-600 dark:text-pink-300 text-xs font-bold shadow-sm">
+            <span>🎉 Early Childhood Foundation • उम्र 3-7 वर्ष</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-slate-900 dark:text-white tracking-tight">
+            Learn, Read, Count &amp; Play! 🎈
+          </h1>
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+            Tap letters to hear sweet phonics sounds, count playful objects, read early sight words, trace with rainbow magic chalk, and master Hindi Swar &amp; Vyanjan!
+          </p>
+        </div>
+
+        <!-- Big Animal Mascot Buddy -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-white dark:bg-slate-800 shadow-xl flex items-center justify-center text-4xl sm:text-5xl animate-float border-4 border-amber-300 dark:border-amber-500/40 cursor-pointer" id="mascotBuddy" title="Tap me to speak!">
+            🦁
+          </div>
+          <div class="bg-white/90 dark:bg-slate-800/90 p-3 rounded-2xl shadow-md border border-amber-200 dark:border-slate-700 text-xs max-w-[170px] text-left">
+            <span class="font-bold text-amber-600 dark:text-amber-400 block">Sheru Buddy:</span>
+            <span id="mascotMessage">"Hi little champ! Pick a subject below to start playing!"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 3. FOUR PLAYFUL SUBJECT TABS ================= -->
+    <div class="no-print flex items-center justify-center gap-2 sm:gap-4 overflow-x-auto pb-2">
+      <button id="tabEnglishBtn" type="button" class="subject-tab flex items-center gap-2 px-4 sm:px-6 py-3 rounded-2xl font-extrabold text-sm sm:text-base border-3 transition-all shadow-md bg-cyan-500 text-white border-cyan-400 scale-105 shadow-cyan-500/25">
+        <span class="text-xl">🔤</span>
+        <span>English ABCD</span>
+      </button>
+
+      <button id="tabMathsBtn" type="button" class="subject-tab flex items-center gap-2 px-4 sm:px-6 py-3 rounded-2xl font-extrabold text-sm sm:text-base border-3 transition-all shadow-md bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 hover:border-amber-400">
+        <span class="text-xl">🔢</span>
+        <span>Maths 1 2 3</span>
+      </button>
+
+      <button id="tabHindiBtn" type="button" class="subject-tab flex items-center gap-2 px-4 sm:px-6 py-3 rounded-2xl font-extrabold text-sm sm:text-base border-3 transition-all shadow-md bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 hover:border-rose-400">
+        <span class="text-xl">🇮🇳</span>
+        <span>हिंदी वर्णमाला</span>
+      </button>
+
+      <button id="tabTracingBtn" type="button" class="subject-tab flex items-center gap-2 px-4 sm:px-6 py-3 rounded-2xl font-extrabold text-sm sm:text-base border-3 transition-all shadow-md bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 hover:border-purple-400">
+        <span class="text-xl">✏️</span>
+        <span>Magic Chalk Pad</span>
+      </button>
+    </div>
+
+    <!-- ================= SECTION 1: ENGLISH ALPHABETS & SIGHT WORDS ================= -->
+    <div id="sectionEnglish" class="space-y-6">
+      
+      <!-- Submenu Pill Selector for English -->
+      <div class="flex items-center justify-between flex-wrap gap-3 bg-white dark:bg-slate-800/80 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">English Activity:</span>
+          <button id="enSubAlpha" class="px-3 py-1.5 rounded-xl bg-cyan-500 text-white font-bold text-xs shadow-sm">
+            🔤 A-Z Alphabet Cards
+          </button>
+          <button id="enSubWords" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs hover:bg-cyan-100">
+            📖 3-Letter Sight Words
+          </button>
+          <button id="enSubQuiz" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs hover:bg-cyan-100">
+            🎯 Sound Quiz
+          </button>
+        </div>
+
+        <div class="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+          <span>Tip: Tap any card to hear voice!</span>
+        </div>
+      </div>
+
+      <!-- English Module A: Alphabet Cards Grid (A-Z) -->
+      <div id="enAlphaContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- English Module B: Sight Words Grid (3-Letter CVC) -->
+      <div id="enWordsContainer" class="hidden space-y-4">
+        <div class="bg-cyan-50 dark:bg-cyan-950/20 border-2 border-cyan-300 dark:border-cyan-800 p-4 rounded-2xl text-center">
+          <h3 class="text-base font-bold text-cyan-800 dark:text-cyan-300">📖 3-Letter Phonics Sight Words (CVC Words)</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Tap any word to listen and repeat!</p>
+        </div>
+        <div id="enWordsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- English Module C: Phonics Sound Quiz -->
+      <div id="enQuizContainer" class="hidden bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl border-4 border-cyan-300 dark:border-cyan-700 max-w-xl mx-auto text-center space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300 text-xs font-bold">
+          <span>🎯 Question 1 of 5</span>
+        </div>
+        <div>
+          <div id="enQuizEmoji" class="text-7xl sm:text-8xl my-3 animate-float">🍎</div>
+          <h3 id="enQuizPrompt" class="text-lg sm:text-xl font-extrabold text-slate-800 dark:text-white">
+            Which letter starts with Apple?
+          </h3>
+        </div>
+        <div id="enQuizOptions" class="grid grid-cols-2 gap-3 max-w-sm mx-auto">
+          <!-- Options injected via JS -->
+        </div>
+        <div id="enQuizFeedback" class="hidden text-sm font-bold p-3 rounded-xl"></div>
+      </div>
+
+    </div>
+
+    <!-- ================= SECTION 2: MATHS & COUNTING 1-20 ================= -->
+    <div id="sectionMaths" class="hidden space-y-6">
+      
+      <!-- Submenu Pill Selector for Maths -->
+      <div class="flex items-center justify-between flex-wrap gap-3 bg-white dark:bg-slate-800/80 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Maths Activity:</span>
+          <button id="mathSubNumbers" class="px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs shadow-sm">
+            🔢 Numbers 1 to 20
+          </button>
+          <button id="mathSubCountGame" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs hover:bg-amber-100">
+            🎲 "How Many?" Game
+          </button>
+          <button id="mathSubShapes" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs hover:bg-amber-100">
+            🔺 Shapes &amp; Colors
+          </button>
+        </div>
+      </div>
+
+      <!-- Maths Module A: Numbers Cards (1 to 20) -->
+      <div id="mathNumbersGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Maths Module B: "How Many?" Counting Game -->
+      <div id="mathCountGameContainer" class="hidden bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl border-4 border-amber-300 dark:border-amber-600 max-w-xl mx-auto text-center space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-bold">
+          <span>🎲 Count the Items!</span>
+        </div>
+        <div>
+          <div id="mathGameObjects" class="text-4xl sm:text-5xl my-4 flex flex-wrap items-center justify-center gap-3 min-h-[90px]">
+            <!-- Injected via JS -->
+          </div>
+          <h3 id="mathGamePrompt" class="text-lg sm:text-xl font-extrabold text-slate-800 dark:text-white">
+            How many balloons are there?
+          </h3>
+        </div>
+        <div id="mathGameOptions" class="grid grid-cols-4 gap-3 max-w-sm mx-auto">
+          <!-- Options injected via JS -->
+        </div>
+        <div id="mathGameFeedback" class="hidden text-sm font-bold p-3 rounded-xl"></div>
+      </div>
+
+      <!-- Maths Module C: Shapes & Colors Explorer -->
+      <div id="mathShapesContainer" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+
+    <!-- ================= SECTION 3: HINDI VARNAMALA & SHABD ================= -->
+    <div id="sectionHindi" class="hidden space-y-6">
+      
+      <!-- Submenu Pill Selector for Hindi -->
+      <div class="flex items-center justify-between flex-wrap gap-3 bg-white dark:bg-slate-800/80 p-3 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">हिंदी गतिविधि:</span>
+          <button id="hiSubSwar" class="px-3 py-1.5 rounded-xl bg-rose-500 text-white font-bold text-xs shadow-sm">
+            🍎 स्वर (अ से अः)
+          </button>
+          <button id="hiSubVyanjan" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs hover:bg-rose-100">
+            🕊️ व्यंजन (क से ज्ञ)
+          </button>
+          <button id="hiSubWords" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs hover:bg-rose-100">
+            🏠 2 व 3 अक्षर वाले शब्द
+          </button>
+          <button id="hiSubQuiz" class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs hover:bg-rose-100">
+            🎯 अक्षर पहचान खेल
+          </button>
+        </div>
+      </div>
+
+      <!-- Hindi Module A: Swar (Vowels) -->
+      <div id="hiSwarGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Hindi Module B: Vyanjan (Consonants) -->
+      <div id="hiVyanjanGrid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Hindi Module C: Words (2 & 3 Letter Words) -->
+      <div id="hiWordsGrid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Hindi Module D: Quiz -->
+      <div id="hiQuizContainer" class="hidden bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl border-4 border-rose-300 dark:border-rose-700 max-w-xl mx-auto text-center space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 text-xs font-bold">
+          <span>🎯 हिंदी वर्ण पहचान</span>
+        </div>
+        <div>
+          <div id="hiQuizEmoji" class="text-7xl sm:text-8xl my-3 animate-float">🥭</div>
+          <h3 id="hiQuizPrompt" class="text-lg sm:text-xl font-extrabold text-slate-800 dark:text-white">
+            "आम" किस वर्ण से शुरू होता है?
+          </h3>
+        </div>
+        <div id="hiQuizOptions" class="grid grid-cols-2 gap-3 max-w-sm mx-auto">
+          <!-- Options injected via JS -->
+        </div>
+        <div id="hiQuizFeedback" class="hidden text-sm font-bold p-3 rounded-xl"></div>
+      </div>
+
+    </div>
+
+    <!-- ================= SECTION 4: MAGIC CHALK TRACING PAD ================= -->
+    <div id="sectionTracing" class="hidden bg-white dark:bg-slate-800 p-5 sm:p-7 rounded-3xl shadow-xl border-4 border-purple-300 dark:border-purple-600 max-w-3xl mx-auto space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-700 pb-3">
+        <div>
+          <h2 class="text-lg sm:text-xl font-extrabold text-slate-800 dark:text-white flex items-center gap-2">
+            <span>✏️ Rainbow Magic Tracing Pad (अक्षर एवं अंक लिखो)</span>
+          </h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Trace over the letter outline with your finger or mouse!</p>
+        </div>
+
+        <!-- Template Picker Dropdown -->
+        <div class="flex items-center gap-2">
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300">Template:</label>
+          <select id="traceTemplateSelect" class="bg-purple-50 dark:bg-slate-700 border-2 border-purple-300 dark:border-purple-500 text-xs font-bold rounded-xl px-3 py-1.5 focus:outline-none">
+            <optgroup label="English Letters">
+              <option value="A">Letter A (Apple)</option>
+              <option value="B">Letter B (Ball)</option>
+              <option value="C">Letter C (Cat)</option>
+              <option value="D">Letter D (Dog)</option>
+              <option value="S">Letter S (Sun)</option>
+            </optgroup>
+            <optgroup label="Numbers">
+              <option value="1">Number 1</option>
+              <option value="2">Number 2</option>
+              <option value="3">Number 3</option>
+              <option value="4">Number 4</option>
+              <option value="5">Number 5</option>
+            </optgroup>
+            <optgroup label="हिंदी वर्ण">
+              <option value="अ">अ (अनार)</option>
+              <option value="आ">आ (आम)</option>
+              <option value="क">क (कबूतर)</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <!-- Color Palette Toolbar -->
+      <div class="flex items-center justify-between flex-wrap gap-3 bg-purple-50 dark:bg-slate-900/60 p-3 rounded-2xl border border-purple-200 dark:border-purple-800">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-slate-600 dark:text-slate-400">Chalk Color:</span>
+          <button class="color-btn w-7 h-7 rounded-full bg-rose-500 border-2 border-white shadow-sm ring-2 ring-rose-500" data-color="#F43F5E"></button>
+          <button class="color-btn w-7 h-7 rounded-full bg-sky-400 border-2 border-white shadow-sm" data-color="#38BDF8"></button>
+          <button class="color-btn w-7 h-7 rounded-full bg-emerald-400 border-2 border-white shadow-sm" data-color="#34D399"></button>
+          <button class="color-btn w-7 h-7 rounded-full bg-amber-400 border-2 border-white shadow-sm" data-color="#FBBF24"></button>
+          <button class="color-btn w-7 h-7 rounded-full bg-purple-500 border-2 border-white shadow-sm" data-color="#A855F7"></button>
+          <button id="rainbowChalkBtn" class="px-2.5 py-1 rounded-xl bg-gradient-to-r from-pink-500 via-amber-400 to-cyan-400 text-white font-extrabold text-[11px] shadow-sm">
+            🌈 Magic
+          </button>
+        </div>
+
+        <!-- Canvas Controls -->
+        <div class="flex items-center gap-2">
+          <button id="clearCanvasBtn" class="px-3 py-1 rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold hover:bg-rose-100 dark:hover:bg-rose-900/40 hover:text-rose-600 transition-colors">
+            🗑️ Clear
+          </button>
+          <button id="praiseTraceBtn" class="px-3 py-1 rounded-xl bg-emerald-500 text-white text-xs font-bold hover:bg-emerald-400 transition-colors shadow-sm">
+            ⭐ Done!
+          </button>
+        </div>
+      </div>
+
+      <!-- Tracing Canvas Area -->
+      <div class="relative w-full h-[360px] sm:h-[420px] rounded-2xl border-4 border-dashed border-purple-300 dark:border-purple-600 bg-slate-50 dark:bg-slate-900 overflow-hidden shadow-inner flex items-center justify-center">
+        <!-- Dotted Background Template Character -->
+        <div id="traceGuideWatermark" class="absolute inset-0 flex items-center justify-center font-extrabold text-[200px] sm:text-[240px] text-slate-300/60 dark:text-slate-700/60 select-none pointer-events-none font-sans">
+          A
+        </div>
+        <canvas id="tracingCanvas" class="relative z-10 w-full h-full cursor-crosshair"></canvas>
+      </div>
+
+    </div>
+
+    <!-- ================= 5. PRINT-READY COLORING SHEET (Hidden on screen, shown in print) ================= -->
+    <div class="hidden print-only p-8 text-black bg-white space-y-6">
+      <div class="border-b-2 border-black pb-4 text-center">
+        <h1 class="text-2xl font-bold uppercase">StudyGuide by Nextsem • Kids Foundational Worksheet</h1>
+        <p class="text-sm">English, Maths &amp; Hindi Practice Sheet • Author: Er. Manoj Kumar</p>
+        <div class="flex justify-between text-xs mt-3">
+          <span>Student Name: _______________________</span>
+          <span>Class / Section: _________</span>
+          <span>Date: ____________</span>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-lg font-bold">1. Trace the Alphabet &amp; Color the Picture:</h2>
+        <div class="grid grid-cols-4 gap-4 text-center">
+          <div class="border-2 border-dashed border-black p-4 rounded-xl">
+            <div class="text-5xl font-bold">Aa</div>
+            <div class="text-4xl my-2">🍎</div>
+            <div class="text-xs font-bold">APPLE</div>
+          </div>
+          <div class="border-2 border-dashed border-black p-4 rounded-xl">
+            <div class="text-5xl font-bold">Bb</div>
+            <div class="text-4xl my-2">⚽</div>
+            <div class="text-xs font-bold">BALL</div>
+          </div>
+          <div class="border-2 border-dashed border-black p-4 rounded-xl">
+            <div class="text-5xl font-bold">Cc</div>
+            <div class="text-4xl my-2">🐱</div>
+            <div class="text-xs font-bold">CAT</div>
+          </div>
+          <div class="border-2 border-dashed border-black p-4 rounded-xl">
+            <div class="text-5xl font-bold">Dd</div>
+            <div class="text-4xl my-2">🐶</div>
+            <div class="text-xs font-bold">DOG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4 pt-4">
+        <h2 class="text-lg font-bold">2. Count and Match the Numbers:</h2>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="border border-black p-3">
+            <div class="text-2xl">⭐⭐⭐</div>
+            <div class="text-sm mt-1">Count = _____</div>
+          </div>
+          <div class="border border-black p-3">
+            <div class="text-2xl">🎈🎈🎈🎈</div>
+            <div class="text-sm mt-1">Count = _____</div>
+          </div>
+          <div class="border border-black p-3">
+            <div class="text-2xl">🍎🍎</div>
+            <div class="text-sm mt-1">Count = _____</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4 pt-4">
+        <h2 class="text-lg font-bold">3. हिंदी वर्ण पहचान कर लिखो (स्वर व व्यंजन):</h2>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="border border-black p-3">
+            <div class="text-4xl font-bold">अ</div>
+            <div class="text-sm mt-1">अ से __________</div>
+          </div>
+          <div class="border border-black p-3">
+            <div class="text-4xl font-bold">आ</div>
+            <div class="text-sm mt-1">आ से __________</div>
+          </div>
+          <div class="border border-black p-3">
+            <div class="text-4xl font-bold">क</div>
+            <div class="text-sm mt-1">क से __________</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= 6. FOOTER ================= -->
+  <footer class="no-print mt-10 bg-white dark:bg-[#0c1328] border-t-2 border-amber-200 dark:border-slate-800 py-5 px-4 sm:px-6 text-slate-500 dark:text-slate-400 text-xs text-center">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <p class="font-bold text-slate-800 dark:text-slate-200">StudyGuide by Nextsem • Kids Foundational Stage Curriculum (NEP 2020)</p>
+        <p class="text-[11px] mt-0.5">Author: Er. Manoj Kumar • Interactive Phonics, Numeracy &amp; Hindi Learning</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="/" class="hover:text-amber-500 font-bold">Home</a>
+        <a href="/?view=dashboard" class="hover:text-amber-500 font-bold">NCERT Hub</a>
+        <a href="/merge" class="hover:text-amber-500 font-bold">Bilingual Merger</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= 7. CLIENT-SIDE INTERACTIVITY SCRIPT ================= -->
+  <script>
+    (function() {
+      // --- Sound Synthesizer via Web Audio API & Speech Synthesis ---
+      let soundEnabled = true;
+      let stars = 0;
+
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+      function playChime(freqs = [523.25, 659.25, 783.99, 1046.50]) {
+        if (!soundEnabled) return;
+        try {
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+          freqs.forEach((freq, i) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime + i * 0.08);
+            gain.gain.setValueAtTime(0.2, audioCtx.currentTime + i * 0.08);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + i * 0.08 + 0.35);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(audioCtx.currentTime + i * 0.08);
+            osc.stop(audioCtx.currentTime + i * 0.08 + 0.36);
+          });
+        } catch (_) {}
+      }
+
+      function playBoing() {
+        if (!soundEnabled) return;
+        try {
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.25);
+          gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.25);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.26);
+        } catch (_) {}
+      }
+
+      function speakWord(text, lang = 'en-US') {
+        if (!soundEnabled) return;
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const utter = new SpeechSynthesisUtterance(text);
+          utter.lang = lang;
+          utter.rate = 0.85; // gentle, friendly speed for kids
+          utter.pitch = 1.1; // cheerful friendly pitch
+          window.speechSynthesis.speak(utter);
+        }
+      }
+
+      function addStar(count = 1) {
+        stars += count;
+        document.getElementById('starCounter').textContent = stars;
+        playChime();
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 40,
+            spread: 50,
+            origin: { y: 0.7 }
+          });
+        }
+      }
+
+      // --- Mascot Quotes ---
+      const mascotBuddy = document.getElementById('mascotBuddy');
+      const mascotMessage = document.getElementById('mascotMessage');
+      const MASCOT_QUOTES = [
+        "You are so smart! Keep going! 🌟",
+        "A for Apple, B for Ball, learning is fun for all! 🍎",
+        "Can you count up to ten? Let's try! 🖐️",
+        "अ से अनार, आ से आम, मीठे-मीठे प्यारे नाम! 🥭",
+        "Great job! You earned a shiny golden star! ⭐",
+        "Let's trace beautiful letters with rainbow magic chalk! ✏️"
+      ];
+      mascotBuddy.addEventListener('click', () => {
+        const rand = MASCOT_QUOTES[Math.floor(Math.random() * MASCOT_QUOTES.length)];
+        mascotMessage.textContent = rand;
+        playChime([523, 659]);
+        speakWord(rand);
+      });
+
+      // --- Sound Toggle Button ---
+      const soundToggleBtn = document.getElementById('soundToggleBtn');
+      const soundIcon = document.getElementById('soundIcon');
+      const soundLabel = document.getElementById('soundLabel');
+      soundToggleBtn.addEventListener('click', () => {
+        soundEnabled = !soundEnabled;
+        soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
+        soundLabel.textContent = soundEnabled ? 'Voice: ON' : 'Voice: OFF';
+      });
+
+      // --- Theme Toggle ---
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const themeEmoji = document.getElementById('themeEmoji');
+      function initTheme() {
+        const isDark = localStorage.getItem('theme') === 'dark';
+        document.documentElement.classList.toggle('dark', isDark);
+        themeEmoji.textContent = isDark ? '☀️' : '🌙';
+      }
+      themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeEmoji.textContent = isDark ? '☀️' : '🌙';
+      });
+      initTheme();
+
+      // --- Print Button ---
+      document.getElementById('printBtn').addEventListener('click', () => {
+        window.print();
+      });
+
+      // --- Main Tabs Switching (English, Maths, Hindi, Tracing) ---
+      const tabs = [
+        { btn: document.getElementById('tabEnglishBtn'), sec: document.getElementById('sectionEnglish'), activeBg: 'bg-cyan-500', activeText: 'text-white', activeBorder: 'border-cyan-400' },
+        { btn: document.getElementById('tabMathsBtn'), sec: document.getElementById('sectionMaths'), activeBg: 'bg-amber-500', activeText: 'text-slate-950', activeBorder: 'border-amber-400' },
+        { btn: document.getElementById('tabHindiBtn'), sec: document.getElementById('sectionHindi'), activeBg: 'bg-rose-500', activeText: 'text-white', activeBorder: 'border-rose-400' },
+        { btn: document.getElementById('tabTracingBtn'), sec: document.getElementById('sectionTracing'), activeBg: 'bg-purple-500', activeText: 'text-white', activeBorder: 'border-purple-400' }
+      ];
+
+      function switchMainTab(index) {
+        tabs.forEach((t, i) => {
+          if (i === index) {
+            t.sec.classList.remove('hidden');
+            t.btn.className = `subject-tab flex items-center gap-2 px-4 sm:px-6 py-3 rounded-2xl font-extrabold text-sm sm:text-base border-3 transition-all shadow-md ${t.activeBg} ${t.activeText} ${t.activeBorder} scale-105`;
+          } else {
+            t.sec.classList.add('hidden');
+            t.btn.className = 'subject-tab flex items-center gap-2 px-4 sm:px-6 py-3 rounded-2xl font-extrabold text-sm sm:text-base border-3 transition-all shadow-md bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 hover:border-amber-400';
+          }
+        });
+      }
+
+      tabs.forEach((t, idx) => {
+        t.btn.addEventListener('click', () => {
+          switchMainTab(idx);
+          playChime([600]);
+        });
+      });
+
+      // ================= DATA 1: ENGLISH ALPHABETS (A to Z) =================
+      const ALPHABET_DATA = [
+        { letter: 'A', small: 'a', word: 'Apple', emoji: '🍎', phonics: '/æ/ apple', color: 'from-rose-400 to-pink-500' },
+        { letter: 'B', small: 'b', word: 'Ball', emoji: '⚽', phonics: '/b/ ball', color: 'from-sky-400 to-blue-500' },
+        { letter: 'C', small: 'c', word: 'Cat', emoji: '🐱', phonics: '/k/ cat', color: 'from-amber-400 to-orange-500' },
+        { letter: 'D', small: 'd', word: 'Dog', emoji: '🐶', phonics: '/d/ dog', color: 'from-emerald-400 to-teal-500' },
+        { letter: 'E', small: 'e', word: 'Elephant', emoji: '🐘', phonics: '/e/ elephant', color: 'from-indigo-400 to-purple-500' },
+        { letter: 'F', small: 'f', word: 'Fish', emoji: '🐟', phonics: '/f/ fish', color: 'from-cyan-400 to-blue-500' },
+        { letter: 'G', small: 'g', word: 'Grapes', emoji: '🍇', phonics: '/g/ grapes', color: 'from-purple-400 to-pink-500' },
+        { letter: 'H', small: 'h', word: 'House', emoji: '🏠', phonics: '/h/ house', color: 'from-amber-400 to-yellow-500' },
+        { letter: 'I', small: 'i', word: 'Ice Cream', emoji: '🍦', phonics: '/aɪ/ ice cream', color: 'from-pink-400 to-rose-500' },
+        { letter: 'J', small: 'j', word: 'Jellyfish', emoji: '🪼', phonics: '/dʒ/ jellyfish', color: 'from-teal-400 to-emerald-500' },
+        { letter: 'K', small: 'k', word: 'Kite', emoji: '🪁', phonics: '/k/ kite', color: 'from-orange-400 to-red-500' },
+        { letter: 'L', small: 'l', word: 'Lion', emoji: '🦁', phonics: '/l/ lion', color: 'from-yellow-400 to-amber-500' },
+        { letter: 'M', small: 'm', word: 'Monkey', emoji: '🐒', phonics: '/m/ monkey', color: 'from-emerald-400 to-teal-500' },
+        { letter: 'N', small: 'n', word: 'Nest', emoji: '🪺', phonics: '/n/ nest', color: 'from-sky-400 to-indigo-500' },
+        { letter: 'O', small: 'o', word: 'Owl', emoji: '🦉', phonics: '/ɒ/ owl', color: 'from-orange-400 to-amber-500' },
+        { letter: 'P', small: 'p', word: 'Penguin', emoji: '🐧', phonics: '/p/ penguin', color: 'from-blue-400 to-indigo-500' },
+        { letter: 'Q', small: 'q', word: 'Queen', emoji: '👑', phonics: '/kw/ queen', color: 'from-purple-400 to-pink-500' },
+        { letter: 'R', small: 'r', word: 'Rainbow', emoji: '🌈', phonics: '/r/ rainbow', color: 'from-red-400 to-yellow-400' },
+        { letter: 'S', small: 's', word: 'Sun', emoji: '☀️', phonics: '/s/ sun', color: 'from-amber-400 to-yellow-400' },
+        { letter: 'T', small: 't', word: 'Tiger', emoji: '🐯', phonics: '/t/ tiger', color: 'from-orange-500 to-red-500' },
+        { letter: 'U', small: 'u', word: 'Umbrella', emoji: '☂️', phonics: '/ʌ/ umbrella', color: 'from-indigo-400 to-purple-500' },
+        { letter: 'V', small: 'v', word: 'Violin', emoji: '🎻', phonics: '/v/ violin', color: 'from-pink-400 to-rose-500' },
+        { letter: 'W', small: 'w', word: 'Watermelon', emoji: '🍉', phonics: '/w/ watermelon', color: 'from-emerald-400 to-green-500' },
+        { letter: 'X', small: 'x', word: 'Xylophone', emoji: '🎸', phonics: '/ks/ xylophone', color: 'from-cyan-400 to-blue-500' },
+        { letter: 'Y', small: 'y', word: 'Yarn', emoji: '🧶', phonics: '/j/ yarn', color: 'from-amber-400 to-rose-400' },
+        { letter: 'Z', small: 'z', word: 'Zebra', emoji: '🦓', phonics: '/z/ zebra', color: 'from-slate-600 to-slate-800' }
+      ];
+
+      const enAlphaContainer = document.getElementById('enAlphaContainer');
+      ALPHABET_DATA.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card-bounce bg-white dark:bg-slate-800/90 rounded-3xl p-4 shadow-md border-3 border-slate-100 dark:border-slate-700 cursor-pointer flex flex-col items-center justify-between text-center group';
+        card.innerHTML = `
+          <div class="w-full flex items-center justify-between text-xs text-slate-400 font-bold px-1">
+            <span class="text-cyan-500 font-extrabold">${item.letter}${item.small}</span>
+            <span class="opacity-0 group-hover:opacity-100 transition-opacity">🔊</span>
+          </div>
+          <div class="my-1.5 text-4xl sm:text-5xl group-hover:scale-110 transition-transform">
+            ${item.emoji}
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-slate-800 dark:text-white font-heading leading-tight">
+              ${item.letter}<span class="text-slate-400 text-xl">${item.small}</span>
+            </div>
+            <div class="text-xs font-extrabold text-cyan-600 dark:text-cyan-400 uppercase tracking-wide mt-0.5">
+              ${item.word}
+            </div>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          playChime([523, 659]);
+          speakWord(`${item.letter}. ${item.letter} for ${item.word}`);
+          addStar(1);
+        });
+        enAlphaContainer.appendChild(card);
+      });
+
+      // ================= DATA 1B: SIGHT WORDS (3-Letter CVC) =================
+      const SIGHT_WORDS_DATA = [
+        { word: 'CAT', emoji: '🐱', family: '-at' },
+        { word: 'BAT', emoji: '🦇', family: '-at' },
+        { word: 'HAT', emoji: '🎩', family: '-at' },
+        { word: 'RAT', emoji: '🐀', family: '-at' },
+        { word: 'DOG', emoji: '🐶', family: '-og' },
+        { word: 'LOG', emoji: '🪵', family: '-og' },
+        { word: 'FOG', emoji: '🌫️', family: '-og' },
+        { word: 'SUN', emoji: '☀️', family: '-un' },
+        { word: 'RUN', emoji: '🏃', family: '-un' },
+        { word: 'BUN', emoji: '🍞', family: '-un' },
+        { word: 'CUP', emoji: '☕', family: '-up' },
+        { word: 'PUP', emoji: '🐕', family: '-up' },
+        { word: 'PEN', emoji: '🖊️', family: '-en' },
+        { word: 'HEN', emoji: '🐔', family: '-en' },
+        { word: 'TEN', emoji: '🔟', family: '-en' },
+        { word: 'BUS', emoji: '🚌', family: '-us' },
+        { word: 'CAR', emoji: '🚗', family: '-ar' },
+        { word: 'STAR', emoji: '⭐', family: '-ar' }
+      ];
+
+      const enWordsGrid = document.getElementById('enWordsGrid');
+      SIGHT_WORDS_DATA.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card-bounce bg-white dark:bg-slate-800/90 rounded-3xl p-4 shadow-md border-3 border-cyan-100 dark:border-cyan-900/60 cursor-pointer flex flex-col items-center justify-between text-center group';
+        card.innerHTML = `
+          <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300">
+            ${item.family}
+          </span>
+          <div class="text-4xl my-2 group-hover:scale-110 transition-transform">
+            ${item.emoji}
+          </div>
+          <div class="text-2xl font-extrabold tracking-wider text-slate-800 dark:text-white font-heading">
+            ${item.word}
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          playChime([659, 784]);
+          speakWord(item.word);
+          addStar(1);
+        });
+        enWordsGrid.appendChild(card);
+      });
+
+      // English Submenu Buttons
+      const enSubAlpha = document.getElementById('enSubAlpha');
+      const enSubWords = document.getElementById('enSubWords');
+      const enSubQuiz = document.getElementById('enSubQuiz');
+      const enWordsContainer = document.getElementById('enWordsContainer');
+      const enQuizContainer = document.getElementById('enQuizContainer');
+
+      function setEnSub(active) {
+        enAlphaContainer.classList.toggle('hidden', active !== 'alpha');
+        enWordsContainer.classList.toggle('hidden', active !== 'words');
+        enQuizContainer.classList.toggle('hidden', active !== 'quiz');
+
+        enSubAlpha.className = active === 'alpha' ? 'px-3 py-1.5 rounded-xl bg-cyan-500 text-white font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+        enSubWords.className = active === 'words' ? 'px-3 py-1.5 rounded-xl bg-cyan-500 text-white font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+        enSubQuiz.className = active === 'quiz' ? 'px-3 py-1.5 rounded-xl bg-cyan-500 text-white font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+      }
+      enSubAlpha.addEventListener('click', () => setEnSub('alpha'));
+      enSubWords.addEventListener('click', () => setEnSub('words'));
+      enSubQuiz.addEventListener('click', () => { setEnSub('quiz'); loadEnQuizQuestion(); });
+
+      // English Quiz Logic
+      const EN_QUIZ_QUESTIONS = [
+        { emoji: '🍎', word: 'Apple', correct: 'A', options: ['A', 'B', 'C', 'D'] },
+        { emoji: '🐱', word: 'Cat', correct: 'C', options: ['K', 'C', 'S', 'T'] },
+        { emoji: '🦁', word: 'Lion', correct: 'L', options: ['M', 'R', 'L', 'B'] },
+        { emoji: '☀️', word: 'Sun', correct: 'S', options: ['C', 'Z', 'S', 'P'] },
+        { emoji: '🐘', word: 'Elephant', correct: 'E', options: ['A', 'I', 'E', 'O'] }
+      ];
+      let currentEnQuizIndex = 0;
+
+      function loadEnQuizQuestion() {
+        const q = EN_QUIZ_QUESTIONS[currentEnQuizIndex % EN_QUIZ_QUESTIONS.length];
+        document.getElementById('enQuizEmoji').textContent = q.emoji;
+        document.getElementById('enQuizPrompt').textContent = `Which letter starts with ${q.word}?`;
+        const optsContainer = document.getElementById('enQuizOptions');
+        optsContainer.innerHTML = '';
+        const feedback = document.getElementById('enQuizFeedback');
+        feedback.classList.add('hidden');
+
+        q.options.forEach(opt => {
+          const btn = document.createElement('button');
+          btn.className = 'py-3.5 rounded-2xl bg-slate-100 dark:bg-slate-700 hover:bg-cyan-500 hover:text-white font-extrabold text-2xl text-slate-800 dark:text-white shadow-md border-2 border-slate-200 dark:border-slate-600 transition-all active:scale-95';
+          btn.textContent = opt;
+          btn.addEventListener('click', () => {
+            if (opt === q.correct) {
+              feedback.textContent = `🎉 Super! "${q.correct}" is for ${q.word}!`;
+              feedback.className = 'text-sm font-bold p-3 rounded-xl bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300';
+              feedback.classList.remove('hidden');
+              addStar(2);
+              speakWord(`Super! ${q.correct} is for ${q.word}`);
+              setTimeout(() => {
+                currentEnQuizIndex++;
+                loadEnQuizQuestion();
+              }, 1600);
+            } else {
+              feedback.textContent = `Oops! Try again!`;
+              feedback.className = 'text-sm font-bold p-3 rounded-xl bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300';
+              feedback.classList.remove('hidden');
+              playBoing();
+              speakWord('Try again!');
+            }
+          });
+          optsContainer.appendChild(btn);
+        });
+      }
+
+      // ================= DATA 2: MATHS & NUMBERS (1 to 20) =================
+      const MATH_NUMBERS = [
+        { num: 1, word: 'One', emoji: '🌞', hint: '1 Sun' },
+        { num: 2, word: 'Two', emoji: '👟👟', hint: '2 Shoes' },
+        { num: 3, word: 'Three', emoji: '🎈🎈🎈', hint: '3 Balloons' },
+        { num: 4, word: 'Four', emoji: '🚗🚗🚗🚗', hint: '4 Cars' },
+        { num: 5, word: 'Five', emoji: '⭐⭐⭐⭐⭐', hint: '5 Stars' },
+        { num: 6, word: 'Six', emoji: '🍎🍎🍎🍎🍎🍎', hint: '6 Apples' },
+        { num: 7, word: 'Seven', emoji: '🌈', hint: '7 Rainbow Colors' },
+        { num: 8, word: 'Eight', emoji: '🐙', hint: '8 Tentacles' },
+        { num: 9, word: 'Nine', emoji: '🌸🌸🌸🌸🌸🌸🌸🌸🌸', hint: '9 Flowers' },
+        { num: 10, word: 'Ten', emoji: '🖐️🖐️', hint: '10 Fingers' },
+        { num: 11, word: 'Eleven', emoji: '⚽⚽⚽⚽⚽⚽⚽⚽⚽⚽⚽', hint: '11 Balls' },
+        { num: 12, word: 'Twelve', emoji: '🧁🧁🧁🧁🧁🧁🧁🧁🧁🧁🧁🧁', hint: '12 Cupcakes' },
+        { num: 15, word: 'Fifteen', emoji: '🍬🍬🍬🍬🍬', hint: '15 Candies' },
+        { num: 20, word: 'Twenty', emoji: '🪙🪙🪙🪙🪙', hint: '20 Coins' }
+      ];
+
+      const mathNumbersGrid = document.getElementById('mathNumbersGrid');
+      MATH_NUMBERS.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card-bounce bg-white dark:bg-slate-800/90 rounded-3xl p-4 shadow-md border-3 border-amber-100 dark:border-amber-900/50 cursor-pointer flex flex-col items-center justify-between text-center group';
+        card.innerHTML = `
+          <span class="text-3xl sm:text-4xl font-extrabold text-amber-500 font-heading">
+            ${item.num}
+          </span>
+          <div class="my-2 text-2xl group-hover:scale-110 transition-transform">
+            ${item.emoji}
+          </div>
+          <div>
+            <div class="text-base font-extrabold text-slate-800 dark:text-white">${item.word}</div>
+            <div class="text-[11px] text-amber-600 dark:text-amber-400 font-medium">${item.hint}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          playChime([523, 659, 784]);
+          speakWord(`${item.num}. ${item.word}!`);
+          addStar(1);
+        });
+        mathNumbersGrid.appendChild(card);
+      });
+
+      // Maths Submenu
+      const mathSubNumbers = document.getElementById('mathSubNumbers');
+      const mathSubCountGame = document.getElementById('mathSubCountGame');
+      const mathSubShapes = document.getElementById('mathSubShapes');
+      const mathCountGameContainer = document.getElementById('mathCountGameContainer');
+      const mathShapesContainer = document.getElementById('mathShapesContainer');
+
+      function setMathSub(active) {
+        mathNumbersGrid.classList.toggle('hidden', active !== 'numbers');
+        mathCountGameContainer.classList.toggle('hidden', active !== 'game');
+        mathShapesContainer.classList.toggle('hidden', active !== 'shapes');
+
+        mathSubNumbers.className = active === 'numbers' ? 'px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+        mathSubCountGame.className = active === 'game' ? 'px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+        mathSubShapes.className = active === 'shapes' ? 'px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+      }
+      mathSubNumbers.addEventListener('click', () => setMathSub('numbers'));
+      mathSubCountGame.addEventListener('click', () => { setMathSub('game'); loadMathCountQuestion(); });
+      mathSubShapes.addEventListener('click', () => setMathSub('shapes'));
+
+      // Maths Counting Game Logic
+      const COUNT_ITEMS = ['🎈', '⭐', '🍎', '🐶', '🚗', '🍓', '🐸'];
+      function loadMathCountQuestion() {
+        const count = Math.floor(Math.random() * 6) + 1; // 1 to 6
+        const icon = COUNT_ITEMS[Math.floor(Math.random() * COUNT_ITEMS.length)];
+        const objectsDiv = document.getElementById('mathGameObjects');
+        objectsDiv.innerHTML = '';
+        for (let i = 0; i < count; i++) {
+          const s = document.createElement('span');
+          s.textContent = icon;
+          s.className = 'animate-bounce';
+          s.style.animationDelay = `${i * 0.1}s`;
+          objectsDiv.appendChild(s);
+        }
+        document.getElementById('mathGamePrompt').textContent = `How many ${icon} are there?`;
+
+        const optsContainer = document.getElementById('mathGameOptions');
+        optsContainer.innerHTML = '';
+        const feedback = document.getElementById('mathGameFeedback');
+        feedback.classList.add('hidden');
+
+        // Create 4 random options including count
+        const set = new Set([count]);
+        while (set.size < 4) {
+          set.add(Math.floor(Math.random() * 7) + 1);
+        }
+        const sortedOpts = Array.from(set).sort((a,b) => a - b);
+
+        sortedOpts.forEach(num => {
+          const btn = document.createElement('button');
+          btn.className = 'py-3.5 rounded-2xl bg-amber-100 dark:bg-slate-700 hover:bg-amber-400 font-extrabold text-2xl text-slate-800 dark:text-white shadow-md border-2 border-amber-300 dark:border-amber-600 transition-all active:scale-95';
+          btn.textContent = num;
+          btn.addEventListener('click', () => {
+            if (num === count) {
+              feedback.textContent = `🌟 Correct! There are ${count} items!`;
+              feedback.className = 'text-sm font-bold p-3 rounded-xl bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300';
+              feedback.classList.remove('hidden');
+              addStar(2);
+              speakWord(`Correct! That is ${count}!`);
+              setTimeout(() => loadMathCountQuestion(), 1600);
+            } else {
+              feedback.textContent = `Try counting again!`;
+              feedback.className = 'text-sm font-bold p-3 rounded-xl bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300';
+              feedback.classList.remove('hidden');
+              playBoing();
+              speakWord('Try counting again!');
+            }
+          });
+          optsContainer.appendChild(btn);
+        });
+      }
+
+      // Shapes Data
+      const SHAPES_DATA = [
+        { name: 'Circle', emoji: '🔴', hindi: 'गोला (वृत्त)', desc: 'Round like the Sun' },
+        { name: 'Square', emoji: '🟦', hindi: 'चौकोर (वर्ग)', desc: '4 Equal Sides' },
+        { name: 'Triangle', emoji: '🔺', hindi: 'त्रिकोण', desc: '3 Sharp Corners' },
+        { name: 'Star', emoji: '⭐', hindi: 'तारा', desc: 'Twinkle in the night' },
+        { name: 'Heart', emoji: '💖', hindi: 'दिल', desc: 'Full of love' },
+        { name: 'Diamond', emoji: '🔶', hindi: 'हीरा', desc: 'Like a kite' }
+      ];
+      SHAPES_DATA.forEach(s => {
+        const card = document.createElement('div');
+        card.className = 'card-bounce bg-white dark:bg-slate-800/90 rounded-3xl p-5 shadow-md border-3 border-amber-100 dark:border-amber-900/40 text-center cursor-pointer group';
+        card.innerHTML = `
+          <div class="text-5xl my-2 group-hover:scale-110 transition-transform">${s.emoji}</div>
+          <div class="text-lg font-extrabold text-slate-800 dark:text-white font-heading">${s.name}</div>
+          <div class="text-xs text-amber-600 dark:text-amber-400 font-bold">${s.hindi}</div>
+          <div class="text-[11px] text-slate-400 mt-1">${s.desc}</div>
+        `;
+        card.addEventListener('click', () => {
+          playChime([659, 784]);
+          speakWord(`${s.name}. ${s.hindi}`);
+          addStar(1);
+        });
+        mathShapesContainer.appendChild(card);
+      });
+
+      // ================= DATA 3: HINDI VARNAMALA (स्वर व व्यंजन) =================
+      const HINDI_SWAR = [
+        { char: 'अ', word: 'अनार', emoji: '🍎', rom: 'a' },
+        { char: 'आ', word: 'आम', emoji: '🥭', rom: 'aa' },
+        { char: 'इ', word: 'इमली', emoji: '🫘', rom: 'i' },
+        { char: 'ई', word: 'ईख', emoji: '🎋', rom: 'ee' },
+        { char: 'उ', word: 'उल्लू', emoji: '🦉', rom: 'u' },
+        { char: 'ऊ', word: 'ऊन', emoji: '🧶', rom: 'oo' },
+        { char: 'ऋ', word: 'ऋषि', emoji: '🧘', rom: 'ri' },
+        { char: 'ए', word: 'एड़ी', emoji: '🦶', rom: 'e' },
+        { char: 'ऐ', word: 'ऐनक', emoji: '👓', rom: 'ai' },
+        { char: 'ओ', word: 'ओखली', emoji: '🥣', rom: 'o' },
+        { char: 'औ', word: 'औरत', emoji: '👩', rom: 'au' },
+        { char: 'अं', word: 'अंगूर', emoji: '🍇', rom: 'ang' }
+      ];
+
+      const HINDI_VYANJAN = [
+        { char: 'क', word: 'कबूतर', emoji: '🕊️' },
+        { char: 'ख', word: 'खरगोश', emoji: '🐇' },
+        { char: 'ग', word: 'गमला', emoji: '🪴' },
+        { char: 'घ', word: 'घड़ी', emoji: '⏰' },
+        { char: 'च', word: 'चम्मच', emoji: '🥄' },
+        { char: 'छ', word: 'छाता', emoji: '☂️' },
+        { char: 'ज', word: 'जहाज', emoji: '🚢' },
+        { char: 'झ', word: 'झंडा', emoji: '🇮🇳' },
+        { char: 'ट', word: 'टमाटर', emoji: '🍅' },
+        { char: 'ठ', word: 'ठठेरा', emoji: '🔨' },
+        { char: 'ड', word: 'डमरू', emoji: '🪘' },
+        { char: 'ढ', word: 'ढक्कन', emoji: '🥘' },
+        { char: 'त', word: 'तरबूज', emoji: '🍉' },
+        { char: 'थ', word: 'थर्मस', emoji: '🧴' },
+        { char: 'द', word: 'दवात', emoji: '✒️' },
+        { char: 'ध', word: 'धनुष', emoji: '🏹' },
+        { char: 'न', word: 'नल', emoji: '🚰' },
+        { char: 'प', word: 'पतंग', emoji: '🪁' },
+        { char: 'फ', word: 'फल', emoji: '🍎' },
+        { char: 'ब', word: 'बकरी', emoji: '🐐' },
+        { char: 'भ', word: 'भालू', emoji: '🐻' },
+        { char: 'म', word: 'मछली', emoji: '🐟' },
+        { char: 'य', word: 'यज्ञ', emoji: '🔥' },
+        { char: 'र', word: 'रथ', emoji: '🛞' },
+        { char: 'ल', word: 'लट्टू', emoji: '🪀' },
+        { char: 'व', word: 'वक', emoji: '🦩' },
+        { char: 'श', word: 'शलजम', emoji: '🥗' },
+        { char: 'स', word: 'सेब', emoji: '🍎' },
+        { char: 'ह', word: 'हाथी', emoji: '🐘' }
+      ];
+
+      const HINDI_WORDS = [
+        { word: 'घर', break: 'घ + र', emoji: '🏠' },
+        { word: 'जल', break: 'ज + ल', emoji: '💧' },
+        { word: 'फल', break: 'फ + ल', emoji: '🍎' },
+        { word: 'बस', break: 'ब + स', emoji: '🚌' },
+        { word: 'नल', break: 'न + ल', emoji: '🚰' },
+        { word: 'कमल', break: 'क + म + ल', emoji: '🪷' },
+        { word: 'मटर', break: 'म + ट + र', emoji: '🟢' },
+        { word: 'सड़क', break: 'स + ड़ + क', emoji: '🛣️' }
+      ];
+
+      const hiSwarGrid = document.getElementById('hiSwarGrid');
+      HINDI_SWAR.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card-bounce bg-white dark:bg-slate-800/90 rounded-3xl p-4 shadow-md border-3 border-rose-100 dark:border-rose-900/50 cursor-pointer flex flex-col items-center justify-between text-center group';
+        card.innerHTML = `
+          <span class="text-3xl sm:text-4xl font-extrabold text-rose-500 font-heading">
+            ${item.char}
+          </span>
+          <div class="my-2 text-4xl group-hover:scale-110 transition-transform">
+            ${item.emoji}
+          </div>
+          <div>
+            <div class="text-sm font-extrabold text-slate-800 dark:text-white">${item.char} से ${item.word}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          playChime([523, 659]);
+          speakWord(`${item.char} से ${item.word}`, 'hi-IN');
+          addStar(1);
+        });
+        hiSwarGrid.appendChild(card);
+      });
+
+      const hiVyanjanGrid = document.getElementById('hiVyanjanGrid');
+      HINDI_VYANJAN.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card-bounce bg-white dark:bg-slate-800/90 rounded-3xl p-4 shadow-md border-3 border-rose-100 dark:border-rose-900/50 cursor-pointer flex flex-col items-center justify-between text-center group';
+        card.innerHTML = `
+          <span class="text-3xl sm:text-4xl font-extrabold text-rose-500 font-heading">
+            ${item.char}
+          </span>
+          <div class="my-2 text-4xl group-hover:scale-110 transition-transform">
+            ${item.emoji}
+          </div>
+          <div>
+            <div class="text-sm font-extrabold text-slate-800 dark:text-white">${item.char} से ${item.word}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          playChime([523, 659]);
+          speakWord(`${item.char} से ${item.word}`, 'hi-IN');
+          addStar(1);
+        });
+        hiVyanjanGrid.appendChild(card);
+      });
+
+      const hiWordsGrid = document.getElementById('hiWordsGrid');
+      HINDI_WORDS.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card-bounce bg-white dark:bg-slate-800/90 rounded-3xl p-4 shadow-md border-3 border-rose-100 dark:border-rose-900/50 cursor-pointer flex flex-col items-center justify-between text-center group';
+        card.innerHTML = `
+          <span class="text-xs font-bold text-rose-400">${item.break}</span>
+          <div class="my-2 text-4xl group-hover:scale-110 transition-transform">${item.emoji}</div>
+          <div class="text-2xl font-extrabold text-slate-800 dark:text-white">${item.word}</div>
+        `;
+        card.addEventListener('click', () => {
+          playChime([659, 784]);
+          speakWord(item.word, 'hi-IN');
+          addStar(1);
+        });
+        hiWordsGrid.appendChild(card);
+      });
+
+      // Hindi Submenu
+      const hiSubSwar = document.getElementById('hiSubSwar');
+      const hiSubVyanjan = document.getElementById('hiSubVyanjan');
+      const hiSubWords = document.getElementById('hiSubWords');
+      const hiSubQuiz = document.getElementById('hiSubQuiz');
+      const hiQuizContainer = document.getElementById('hiQuizContainer');
+
+      function setHiSub(active) {
+        hiSwarGrid.classList.toggle('hidden', active !== 'swar');
+        hiVyanjanGrid.classList.toggle('hidden', active !== 'vyanjan');
+        hiWordsGrid.classList.toggle('hidden', active !== 'words');
+        hiQuizContainer.classList.toggle('hidden', active !== 'quiz');
+
+        hiSubSwar.className = active === 'swar' ? 'px-3 py-1.5 rounded-xl bg-rose-500 text-white font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+        hiSubVyanjan.className = active === 'vyanjan' ? 'px-3 py-1.5 rounded-xl bg-rose-500 text-white font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+        hiSubWords.className = active === 'words' ? 'px-3 py-1.5 rounded-xl bg-rose-500 text-white font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+        hiSubQuiz.className = active === 'quiz' ? 'px-3 py-1.5 rounded-xl bg-rose-500 text-white font-bold text-xs shadow-sm' : 'px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs';
+      }
+      hiSubSwar.addEventListener('click', () => setHiSub('swar'));
+      hiSubVyanjan.addEventListener('click', () => setHiSub('vyanjan'));
+      hiSubWords.addEventListener('click', () => setHiSub('words'));
+      hiSubQuiz.addEventListener('click', () => { setHiSub('quiz'); loadHiQuizQuestion(); });
+
+      // Hindi Quiz Logic
+      const HI_QUIZ_QUESTIONS = [
+        { emoji: '🥭', word: 'आम', correct: 'आ', options: ['अ', 'आ', 'इ', 'ई'] },
+        { emoji: '🕊️', word: 'कबूतर', correct: 'क', options: ['क', 'ख', 'ग', 'च'] },
+        { emoji: '🍎', word: 'अनार', correct: 'अ', options: ['अ', 'आ', 'उ', 'ओ'] },
+        { emoji: '🦉', word: 'उल्लू', correct: 'उ', options: ['उ', 'ऊ', 'ऋ', 'अ'] },
+        { emoji: '🪁', word: 'पतंग', correct: 'प', options: ['ब', 'प', 'म', 'न'] }
+      ];
+      let currentHiQuizIndex = 0;
+      function loadHiQuizQuestion() {
+        const q = HI_QUIZ_QUESTIONS[currentHiQuizIndex % HI_QUIZ_QUESTIONS.length];
+        document.getElementById('hiQuizEmoji').textContent = q.emoji;
+        document.getElementById('hiQuizPrompt').textContent = `"${q.word}" किस वर्ण से शुरू होता है?`;
+
+        const optsContainer = document.getElementById('hiQuizOptions');
+        optsContainer.innerHTML = '';
+        const feedback = document.getElementById('hiQuizFeedback');
+        feedback.classList.add('hidden');
+
+        q.options.forEach(opt => {
+          const btn = document.createElement('button');
+          btn.className = 'py-3.5 rounded-2xl bg-rose-50 dark:bg-slate-700 hover:bg-rose-500 hover:text-white font-extrabold text-3xl text-slate-800 dark:text-white shadow-md border-2 border-rose-200 dark:border-rose-600 transition-all active:scale-95';
+          btn.textContent = opt;
+          btn.addEventListener('click', () => {
+            if (opt === q.correct) {
+              feedback.textContent = `शाबाश! ${q.correct} से ${q.word}!`;
+              feedback.className = 'text-sm font-bold p-3 rounded-xl bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300';
+              feedback.classList.remove('hidden');
+              addStar(2);
+              speakWord(`शाबाश! ${q.correct} से ${q.word}`, 'hi-IN');
+              setTimeout(() => {
+                currentHiQuizIndex++;
+                loadHiQuizQuestion();
+              }, 1600);
+            } else {
+              feedback.textContent = `फिर से कोशिश करो!`;
+              feedback.className = 'text-sm font-bold p-3 rounded-xl bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300';
+              feedback.classList.remove('hidden');
+              playBoing();
+              speakWord('फिर से कोशिश करो', 'hi-IN');
+            }
+          });
+          optsContainer.appendChild(btn);
+        });
+      }
+
+      // ================= SECTION 4: MAGIC TRACING CANVAS =================
+      const canvas = document.getElementById('tracingCanvas');
+      const ctx = canvas.getContext('2d');
+      const traceGuide = document.getElementById('traceGuideWatermark');
+      const traceSelect = document.getElementById('traceTemplateSelect');
+      const clearBtn = document.getElementById('clearCanvasBtn');
+      const praiseBtn = document.getElementById('praiseTraceBtn');
+      const rainbowBtn = document.getElementById('rainbowChalkBtn');
+
+      let isDrawing = false;
+      let currentColor = '#F43F5E';
+      let isRainbow = false;
+      let hue = 0;
+
+      function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      setTimeout(resizeCanvas, 100);
+
+      traceSelect.addEventListener('change', (e) => {
+        traceGuide.textContent = e.target.value;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        speakWord(e.target.value);
+      });
+
+      document.querySelectorAll('.color-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          isRainbow = false;
+          currentColor = btn.getAttribute('data-color');
+          document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('ring-2'));
+          btn.classList.add('ring-2', 'ring-slate-900');
+        });
+      });
+
+      rainbowBtn.addEventListener('click', () => {
+        isRainbow = true;
+        document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('ring-2'));
+        rainbowBtn.classList.add('ring-2', 'ring-purple-500');
+      });
+
+      function getPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return {
+          x: clientX - rect.left,
+          y: clientY - rect.top
+        };
+      }
+
+      function startDraw(e) {
+        isDrawing = true;
+        const pos = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+      }
+
+      function draw(e) {
+        if (!isDrawing) return;
+        const pos = getPos(e);
+        ctx.lineWidth = 14;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+
+        if (isRainbow) {
+          hue = (hue + 4) % 360;
+          ctx.strokeStyle = `hsl(${hue}, 90%, 55%)`;
+        } else {
+          ctx.strokeStyle = currentColor;
+        }
+
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+      }
+
+      function stopDraw() {
+        isDrawing = false;
+      }
+
+      canvas.addEventListener('mousedown', startDraw);
+      canvas.addEventListener('mousemove', draw);
+      canvas.addEventListener('mouseup', stopDraw);
+      canvas.addEventListener('mouseleave', stopDraw);
+
+      canvas.addEventListener('touchstart', (e) => { e.preventDefault(); startDraw(e); }, { passive: false });
+      canvas.addEventListener('touchmove', (e) => { e.preventDefault(); draw(e); }, { passive: false });
+      canvas.addEventListener('touchend', stopDraw);
+
+      clearBtn.addEventListener('click', () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      });
+
+      praiseBtn.addEventListener('click', () => {
+        addStar(3);
+        speakWord('Wow! Beautiful writing!');
+      });
+
+    })();
+  </script>
+
+</body>
+</html>

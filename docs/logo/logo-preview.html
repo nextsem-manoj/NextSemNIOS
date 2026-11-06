@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nextsem NCERT & NIOS Logo Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #17181c;
+      --card-bg: #0c1328;
+      --text: #ffffff;
+      --subtext: #94a3b8;
+      --border: rgba(4, 170, 109, 0.35);
+      --accent: #04AA6D;
+    }
+    body.light-theme {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --subtext: #64748b;
+      --border: rgba(4, 170, 109, 0.4);
+      --accent: #04AA6D;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(4, 170, 109, 0.15);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .toggle-btn {
+      background: var(--card-bg);
+      color: var(--text);
+      border: 1.5px solid var(--border);
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .toggle-btn:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.25s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(4, 170, 109, 0.18);
+    }
+    .preview-box {
+      width: 100%;
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: rgba(0,0,0,0.08);
+      border-radius: 1rem;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--subtext);
+      margin-bottom: 1.25rem;
+      line-height: 1.4;
+    }
+    .file-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: rgba(4, 170, 109, 0.1);
+      color: var(--accent);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .banner-card {
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Nextsem NCERT &amp; NIOS <span class="badge">Brand Kit</span></h1>
+        <p style="color: var(--subtext); font-size: 0.95rem; margin-top: 0.25rem;">
+          Clean, high-contrast SVG brand logos for web, Android, iOS, and PWA.
+        </p>
+      </div>
+      <button class="toggle-btn" id="themeToggle" onclick="toggleTheme()">
+        <span id="themeIcon">☀️</span> <span id="themeLabel">Light Mode</span>
+      </button>
+    </header>
+
+    <div class="grid">
+      <!-- 1. Stacked Standard (120x120) -->
+      <div class="card">
+        <div class="preview-box">
+          <img src="nextsem-logo-ncert-nios-stacked.svg" alt="Stacked Logo" style="width: 140px; height: 140px;">
+        </div>
+        <div class="card-title">Stacked Standard</div>
+        <div class="card-desc">1-to-1 match with the Nextsem stacked logo geometry, optimized for dark mode.</div>
+        <div class="file-badge">nextsem-logo-ncert-nios-stacked.svg</div>
+      </div>
+
+      <!-- 2. High-Resolution Vector Stacked (300x300) -->
+      <div class="card">
+        <div class="preview-box">
+          <img src="nextsem-logo-ncert-nios-stacked-hires.svg" alt="High-Res Stacked Logo" style="width: 160px; height: 160px;">
+        </div>
+        <div class="card-title">High-Res Stacked Vector</div>
+        <div class="card-desc">Expanded resolution with pill sub-badge for splash screens and hi-dpi displays.</div>
+        <div class="file-badge">nextsem-logo-ncert-nios-stacked-hires.svg</div>
+      </div>
+
+      <!-- 3. App Icon (512x512) -->
+      <div class="card">
+        <div class="preview-box">
+          <img src="nextsem-logo-ncert-nios-app-icon.svg" alt="App Icon" style="width: 150px; height: 150px;">
+        </div>
+        <div class="card-title">Android / iOS App Icon</div>
+        <div class="card-desc">512x512 squircle icon with luminous glow and bottom NCERT • NIOS badge.</div>
+        <div class="file-badge">nextsem-logo-ncert-nios-app-icon.svg</div>
+      </div>
+
+      <!-- 4. Light Mode Variant -->
+      <div class="card">
+        <div class="preview-box" style="background: #ffffff; border: 1px solid #e2e8f0;">
+          <img src="nextsem-logo-ncert-nios-light.svg" alt="Light Mode Logo" style="width: 140px; height: 140px;">
+        </div>
+        <div class="card-title">Light Mode Stacked</div>
+        <div class="card-desc">High-contrast charcoal S and pure white surface for light backgrounds.</div>
+        <div class="file-badge">nextsem-logo-ncert-nios-light.svg</div>
+      </div>
+
+      <!-- 5. Standalone Emblem Mark -->
+      <div class="card">
+        <div class="preview-box">
+          <img src="nextsem-logo-ncert-nios-mark.svg" alt="Emblem Mark" style="width: 120px; height: 120px;">
+        </div>
+        <div class="card-title">Emblem Mark</div>
+        <div class="card-desc">Minimalist NS squircle mark for headers, browser favicons, and avatars.</div>
+        <div class="file-badge">nextsem-logo-ncert-nios-mark.svg</div>
+      </div>
+
+      <!-- 6. Wide Horizontal Banner (560x120) -->
+      <div class="card banner-card">
+        <div class="preview-box">
+          <img src="nextsem-logo-ncert-nios-horizontal.svg" alt="Horizontal Banner Logo" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="card-title">Wide Horizontal Header Banner</div>
+        <div class="card-desc">Ideal for desktop navigation bars, top headers, and web portal banners.</div>
+        <div class="file-badge">nextsem-logo-ncert-nios-horizontal.svg</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      document.getElementById('themeIcon').textContent = isLight ? '🌙' : '☀️';
+      document.getElementById('themeLabel').textContent = isLight ? 'Dark Mode' : 'Light Mode';
+    }
+  </script>
+</body>
+</html>

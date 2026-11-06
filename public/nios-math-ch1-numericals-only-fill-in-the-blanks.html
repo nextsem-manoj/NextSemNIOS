@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIOS Class 10 Mathematics (211) Chapter 1: केवल संख्यात्मक अभ्यास (Only Numericals & Solutions)</title>
+  <meta name="description" content="NIOS Class 10th Secondary Mathematics (211) Chapter 1 संख्या निकाय (Number Systems): 100% Pure Numerical Fill-in-the-Blank Practice with initial anchors, step-by-step hints, and verified numerical solutions.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>">
+  <style>
+    :root {
+      --bg-dark: #070d19;
+      --bg-card: #0d1527;
+      --border-card: rgba(255, 255, 255, 0.09);
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-blue: #3b82f6;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    .nios-container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 28px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .badge-pill {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background: rgba(16, 185, 129, 0.14);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 2.15rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 820px;
+      margin: 0 auto 18px;
+    }
+
+    .nav-actions-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-card);
+      color: #e2e8f0;
+      cursor: pointer;
+    }
+    .btn-nav:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+    .btn-nav.primary {
+      background: rgba(59, 130, 246, 0.18);
+      border-color: rgba(59, 130, 246, 0.45);
+      color: #93c5fd;
+    }
+    .btn-nav.primary:hover {
+      background: rgba(59, 130, 246, 0.28);
+    }
+
+    /* Sticky Quick Controls */
+    .sticky-toolbar {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(13, 21, 39, 0.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 10px 18px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .page-jump-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+    .page-jump-select {
+      background: #172138;
+      border: 1px solid var(--border-card);
+      color: #f8fafc;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      outline: none;
+      max-width: 340px;
+    }
+    .btn-tool {
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #cbd5e1;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-tool:hover {
+      color: #ffffff;
+      border-color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+    }
+
+    /* Section Card */
+    .num-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 14px;
+      padding: 24px 26px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      transition: border-color 0.2s ease;
+    }
+    .num-card:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+    }
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .card-title-text {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .card-badge {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 9999px;
+      background: rgba(59, 130, 246, 0.14);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      white-space: nowrap;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    /* Problems Grid */
+    .problems-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .prob-box {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 16px 18px;
+      transition: all 0.2s ease;
+    }
+    .prob-box:hover {
+      background: rgba(15, 23, 42, 0.95);
+      border-color: rgba(56, 189, 248, 0.25);
+    }
+    .prob-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .prob-number {
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-gold);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .prob-text {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .prob-interactive-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Blank Chip */
+    .blank-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: rgba(8, 14, 26, 0.9);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 6px;
+      padding: 3px 10px;
+      vertical-align: middle;
+    }
+    .blank-anchor-label {
+      font-size: 0.76rem;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    .initial-letter {
+      font-weight: 900;
+      color: #38bdf8;
+      font-size: 1.15rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      text-decoration: underline;
+      text-decoration-color: #38bdf8;
+    }
+    .blank-dashes {
+      color: #64748b;
+      font-family: monospace;
+      font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    /* Dropdown Details */
+    details.drop-box {
+      display: inline-block;
+    }
+    details.drop-box > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      user-select: none;
+      transition: all 0.15s ease;
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.hint-box > summary {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+    }
+    details.hint-box > summary:hover {
+      background: rgba(16, 185, 129, 0.22);
+    }
+    details.hint-box[open] > summary {
+      background: rgba(16, 185, 129, 0.3);
+      border-color: #34d399;
+    }
+
+    details.ans-box > summary {
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #38bdf8;
+    }
+    details.ans-box > summary:hover {
+      background: rgba(6, 182, 212, 0.22);
+    }
+    details.ans-box[open] > summary {
+      background: rgba(6, 182, 212, 0.3);
+      border-color: #38bdf8;
+    }
+
+    .reveal-content {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 3px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      animation: popIn 0.2s ease;
+    }
+    .hint-content {
+      background: rgba(16, 185, 129, 0.16);
+      color: #a7f3d0;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-weight: 600;
+    }
+    .ans-content {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fde68a;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      font-weight: 800;
+      font-size: 1.02rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(-3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="nios-container">
+
+    <!-- Top Hero Header -->
+    <header class="hero-banner">
+      <div class="badge-pill">NIOS Class 10th Secondary • Mathematics (211) • 100% Pure Numericals</div>
+      <h1 class="hero-title">संख्या निकाय: केवल संख्यात्मक अभ्यास (Numericals Only)</h1>
+      <div class="hero-subtitle">
+        अध्याय 1 के सभी उदाहरण, अभ्यास 1.1 से 1.7 तथा टर्मिनल अभ्यास (प्र. 1 से 15) के <strong>केवल संख्यात्मक प्रश्न</strong> — प्रारंभिक संकेत (Initial Anchors), चरणबद्ध संकेत (Steps) एवं सत्यापित उत्तरों सहित।
+      </div>
+
+      <div class="nav-actions-row">
+        <a href="#num-sec-1" class="btn-nav primary">🔢 Start Set 1</a>
+        <a href="/nios-math-ch1-number-systems-fill-in-the-blanks.html" class="btn-nav">📖 Full Theory & Text Module</a>
+        <a href="/quiz.html" class="btn-nav">🏰 Quiz Portal</a>
+        <a href="/physics-ch7-alternating-current-fill-in-the-blanks.html" class="btn-nav">⚡ Physics Ch 7</a>
+        <a href="/" class="btn-nav">🏠 Home</a>
+      </div>
+    </header>
+
+    <!-- Sticky Toolbar -->
+    <div class="sticky-toolbar">
+      <div class="page-jump-wrap">
+        <span>📍 Jump to Numerical Set:</span>
+        <select class="page-jump-select" onchange="if(this.value) location.hash = this.value;">
+          <option value="">Select Numerical Set...</option>
+          <option value="#num-sec-1">सेट 1: सेट 1: पूर्णांक संक्रियाएँ, गुणनफल एवं निरपेक्ष मान (Integer Arithmetic & Absolute Value)</option>
+          <option value="#num-sec-2">सेट 2: सेट 2: परिमेय संख्याओं का न्यूनतम / मानक रूप (Simplifying to Lowest Terms p/q)</option>
+          <option value="#num-sec-3">सेट 3: सेट 3: परिमेय संख्याओं का योग एवं व्यवकलन (Addition & Subtraction of Rationals)</option>
+          <option value="#num-sec-4">सेट 4: सेट 4: परिमेय संख्याओं का गुणन एवं विभाजन (Multiplication & Division of Rationals)</option>
+          <option value="#num-sec-5">सेट 5: सेट 5: भिन्न को दशमलव (सांत एवं आवर्ती) में बदलना (Fractions to Terminating & Recurring Decimals)</option>
+          <option value="#num-sec-6">सेट 6: सेट 6: दशमलव एवं बार संख्याओं को p/q में बदलना (Converting Decimals & Recurring Bar to p/q)</option>
+          <option value="#num-sec-7">सेट 7: सेट 7: दो संख्याओं के मध्य परिमेय संख्याएँ (Finding Rationals Between Given Numbers)</option>
+          <option value="#num-sec-8">सेट 8: सेट 8: दशमलव सन्निकटन एवं यथार्थ मान (Decimal Approximations to 2 and 3 Places)</option>
+          <option value="#num-sec-9">सेट 9: सेट 9: करणी (Surds) संक्रियाएँ एवं सरलीकरण (Operations on Radicals & Surds)</option>
+          <option value="#num-sec-10">सेट 10: सेट 10: हर का परिमेयकरण संख्यात्मक मान (Rationalising Denominators with Conjugates)</option>
+        </select>
+      </div>
+
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button type="button" class="btn-tool" onclick="toggleHints(true)">💡 Reveal All Hints</button>
+        <button type="button" class="btn-tool" onclick="toggleAnswers(true)">👁️ Reveal All Answers</button>
+        <button type="button" class="btn-tool" onclick="resetAll()">🔒 Hide All (Self-Test)</button>
+      </div>
+    </div>
+
+    
+    <!-- ========================================================================= -->
+    <!-- सेट 1: पूर्णांक संक्रियाएँ, गुणनफल एवं निरपेक्ष मान (INTEGER ARITHMETIC & ABSOLUTE VALUE) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-1">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 1: पूर्णांक संक्रियाएँ, गुणनफल एवं निरपेक्ष मान (Integer Arithmetic & Absolute Value)</span>
+        </div>
+        <span class="card-badge">Page 5–10 • अभ्यास 1.1</span>
+      </div>
+      <p class="section-desc">पूर्णांकों की चार मूलभूत संक्रियाएँ, विपरीत चिह्न गुणन, तथा निरपेक्ष मान |x| के संख्यात्मक मान ज्ञात कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 1</span>
+              <span class="prob-text">पूर्णांक संक्रिया 13 × (–3) का मान ज्ञात कीजिए:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">धनात्मक गुणा ऋणात्मक सदैव ऋणात्मक होता है: 13 × 3 = 39, अतः –39</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-39</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 2</span>
+              <span class="prob-text">पूर्णांक गुणनफल (–4) × (–7) का संख्यात्मक मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">+</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">दो ऋणात्मक पूर्णांकों का गुणनफल धनात्मक होता है: (–) × (–) = +</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">+28</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 3</span>
+              <span class="prob-text">निरपेक्ष मान गणना: |–15| + |8| – |–4| का मान क्या होगा?</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">|–15| = 15, |8| = 8, |–4| = 4; अतः 15 + 8 – 4 = 23 – 4 = 19</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">19</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 4</span>
+              <span class="prob-text">यदि x = –12 हो, तो व्यंजक –|x| का मान ज्ञात कीजिए:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">|–12| = 12, अतः –|x| = –(12) = –12</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-12</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 2: परिमेय संख्याओं का न्यूनतम / मानक रूप (SIMPLIFYING TO LOWEST TERMS P/Q) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-2">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 2: परिमेय संख्याओं का न्यूनतम / मानक रूप (Simplifying to Lowest Terms p/q)</span>
+        </div>
+        <span class="card-badge">Page 10–12 • उदाहरण 1.6 & अभ्यास</span>
+      </div>
+      <p class="section-desc">दी गई परिमेय संख्याओं के अंश और हर के महत्तम समापवर्तक (HCF) से भाग देकर न्यूनतम मानक रूप ज्ञात कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 5</span>
+              <span class="prob-text">उदाहरण 1.6 (i): भिन्न –24 / 192 का न्यूनतम रूप ज्ञात कीजिए:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">24 और 192 दोनों 24 से विभाज्य हैं: –24 ÷ 24 = –1, 192 ÷ 24 = 8, अतः –1/8</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-1/8</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 6</span>
+              <span class="prob-text">उदाहरण 1.6 (ii): भिन्न 12 / 168 का सरलतम मानक रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">168 = 12 × 14; 12 से अंश व हर को भाग देने पर 1/14 प्राप्त होता है</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">1/14</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 7</span>
+              <span class="prob-text">उदाहरण 1.6 (iii): भिन्न –21 / 49 का न्यूनतम रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">21 और 49 दोनों 7 के गुणज हैं: –21 ÷ 7 = –3, 49 ÷ 7 = 7, अतः –3/7</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-3/7</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 8</span>
+              <span class="prob-text">टर्मिनल प्रश्न 3: भिन्न 17 / 153 का न्यूनतम रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">17 × 9 = 153; 17 से विभाजित करने पर 1/9 प्राप्त होता है</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">1/9</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 9</span>
+              <span class="prob-text">टर्मिनल प्रश्न 3: भिन्न –13 / 273 का सरलतम रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">273 ÷ 13 = 21; अतः –1/21</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-1/21</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 3: परिमेय संख्याओं का योग एवं व्यवकलन (ADDITION & SUBTRACTION OF RATIONALS) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-3">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 3: परिमेय संख्याओं का योग एवं व्यवकलन (Addition & Subtraction of Rationals)</span>
+        </div>
+        <span class="card-badge">Page 17–19 • उदाहरण 1.8, 1.10 & अभ्यास 1.2</span>
+      </div>
+      <p class="section-desc">उभयनिष्ठ हर अथवा ल.स.प. (LCM) विधि का उपयोग कर परिमेय संख्याओं को जोड़िए एवं घटाइए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 10</span>
+              <span class="prob-text">समान हर योग: (–2/7) + (6/7) का परिणाम क्या होगा?</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">4</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">उभयनिष्ठ हर 7 है: (–2 + 6) / 7 = 4/7</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">4/7</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 11</span>
+              <span class="prob-text">भिन्न हर योग: (–4/5) + (7/8) का संख्यात्मक मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">3</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">5 और 8 का LCM = 40; (–32 + 35) / 40 = 3/40</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">3/40</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 12</span>
+              <span class="prob-text">उदाहरण 1.10 (i): व्यवकलन कीजिए (7/4) – (1/4):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">3</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(7 – 1) / 4 = 6/4 = 3/2</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">3/2</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 13</span>
+              <span class="prob-text">उदाहरण 1.10 (ii): व्यवकलन कीजिए (3/5) – (2/12):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">LCM(5, 12) = 60; (36 – 10) / 60 = 26/60 = 13/30</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">13/30</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 14</span>
+              <span class="prob-text">अभ्यास 1.2 प्रश्न 9: (–16/7) तथा (–3/14) के योग को उनके अंतर से भाग देने पर प्राप्त मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">3</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">योग = (–32 – 3)/14 = –35/14; अंतर = (–32 + 3)/14 = –29/14; (–35/14) ÷ (–29/14) = 35/29</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">35/29</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 4: परिमेय संख्याओं का गुणन एवं विभाजन (MULTIPLICATION & DIVISION OF RATIONALS) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-4">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 4: परिमेय संख्याओं का गुणन एवं विभाजन (Multiplication & Division of Rationals)</span>
+        </div>
+        <span class="card-badge">Page 19–22 • उदाहरण 1.11, 1.12</span>
+      </div>
+      <p class="section-desc">अंशों के गुणनफल, हरों के गुणनफल तथा व्युत्क्रम (Reciprocal) द्वारा विभाजन के संख्यात्मक मान निकालिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 15</span>
+              <span class="prob-text">उदाहरण 1.11 (i): गुणनफल ज्ञात कीजिए (3/7) × (2/9):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">3 और 9 कटकर 1 और 3 देंगे: (1 × 2) / (7 × 3) = 2/21</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2/21</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 16</span>
+              <span class="prob-text">उदाहरण 1.11 (ii): गुणनफल ज्ञात कीजिए (5/6) × (–2/19):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">2 और 6 कटकर 1 और 3 देंगे: –(5 × 1) / (3 × 19) = –5/57</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-5/57</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 17</span>
+              <span class="prob-text">उदाहरण 1.12 (i): विभाजन कीजिए (3/4) ÷ (7/12):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">9</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(3/4) × (12/7) = (3 × 3) / 7 = 9/7</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">9/7</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 18</span>
+              <span class="prob-text">उदाहरण 1.12 (iii): विभाजन कीजिए (87/27) ÷ (29/18):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">87 ÷ 29 = 3; (87/27) × (18/29) = (3/27) × 18 = (1/9) × 18 = 2</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 19</span>
+              <span class="prob-text">टर्मिनल प्रश्न 10 (iii): गुणनफल ज्ञात कीजिए (15/7) × (–14/5):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">15/5 = 3 और –14/7 = –2; अतः 3 × (–2) = –6</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-6</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 5: भिन्न को दशमलव (सांत एवं आवर्ती) में बदलना (FRACTIONS TO TERMINATING & RECURRING DECIMALS) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-5">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 5: भिन्न को दशमलव (सांत एवं आवर्ती) में बदलना (Fractions to Terminating & Recurring Decimals)</span>
+        </div>
+        <span class="card-badge">Page 22–24 • उदाहरण 1.13, 1.14 & अभ्यास 1.3</span>
+      </div>
+      <p class="section-desc">दी गई भिन्न में दीर्घ विभाजन (Long Division) द्वारा यथार्थ दशमलव प्रसार ज्ञात कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 20</span>
+              <span class="prob-text">भिन्न 11 / 80 का सांत दशमलव मान ज्ञात कीजिए:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">11 ÷ 80: 80 = 2^4 × 5; 11 ÷ 80 = 0.1375</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0.1375</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 21</span>
+              <span class="prob-text">भिन्न 8 / 25 का दशमलव प्रसार:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">8 ÷ 25 = (8 × 4) / 100 = 32 / 100 = 0.32</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0.32</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 22</span>
+              <span class="prob-text">भिन्न 14 / 8 का दशमलव मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">14/8 = 7/4 = 1.75</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">1.75</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 23</span>
+              <span class="prob-text">भिन्न 98 / 35 का दशमलव प्रसार:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">98/35 = 14/5 = 2.8</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2.8</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 24</span>
+              <span class="prob-text">भिन्न 2 / 3 का असांत आवर्ती दशमलव प्रसार (बार रूप में):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">2 ÷ 3 = 0.6666... = 0.6̄</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0.6̄</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 6: दशमलव एवं बार संख्याओं को P/Q में बदलना (CONVERTING DECIMALS & RECURRING BAR TO P/Q) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-6">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 6: दशमलव एवं बार संख्याओं को p/q में बदलना (Converting Decimals & Recurring Bar to p/q)</span>
+        </div>
+        <span class="card-badge">Page 25–26 • उदाहरण 1.15, 1.16</span>
+      </div>
+      <p class="section-desc">सांत एवं आवर्ती दशमलव संख्याओं को बीजगणितीय समीकरण विधि द्वारा न्यूनतम भिन्न p/q में रूपांतरित कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 25</span>
+              <span class="prob-text">उदाहरण 1.15 (i): दशमलव संख्या 0.48 को p/q के न्यूनतम रूप में व्यक्त कीजिए:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">48 / 100; 4 से अंश और हर को भाग देने पर 12/25 प्राप्त होता है</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">12/25</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 26</span>
+              <span class="prob-text">उदाहरण 1.15 (ii): दशमलव संख्या 0.1375 को p/q रूप में व्यक्त कीजिए:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">1375 / 10000; 125 से भाग देने पर 11/80 प्राप्त होता है</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">11/80</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 27</span>
+              <span class="prob-text">उदाहरण 1.16 (i): आवर्ती दशमलव 0.666... (अर्थात 0.6̄) का p/q रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">10x – x = 6 => 9x = 6 => x = 6/9 = 2/3</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2/3</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 28</span>
+              <span class="prob-text">उदाहरण 1.16 (ii): आवर्ती दशमलव 0.374̄ (0.374374...) का p/q रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">3</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">1000x – x = 374 => 999x = 374 => x = 374/999</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">374/999</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 29</span>
+              <span class="prob-text">मिश्रित आवर्ती दशमलव 2.4̄ (2.444...) का p/q रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">x = 2.444... => 10x = 24.444... => 9x = 22 => x = 22/9</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">22/9</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 7: दो संख्याओं के मध्य परिमेय संख्याएँ (FINDING RATIONALS BETWEEN GIVEN NUMBERS) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-7">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 7: दो संख्याओं के मध्य परिमेय संख्याएँ (Finding Rationals Between Given Numbers)</span>
+        </div>
+        <span class="card-badge">Page 26–28 • उदाहरण 1.17, 1.18 & अभ्यास 1.4</span>
+      </div>
+      <p class="section-desc">औसत सूत्र (a + b)/2 अथवा समान हर तुल्य भिन्न विधि से मध्यवर्ती संख्या ज्ञात कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 30</span>
+              <span class="prob-text">परिमेय संख्याओं 3/4 और 7/8 का ठीक मध्यवर्ती समांतर माध्य (Mean):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(3/4 + 7/8) / 2 = (6/8 + 7/8) / 2 = (13/8) / 2 = 13/16</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">13/16</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 31</span>
+              <span class="prob-text">परिमेय संख्याओं –2 और –3 के बीच की एक परिमेय संख्या:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">-</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(–2 + (–3)) / 2 = –5/2 = –2.5</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">-5/2</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 32</span>
+              <span class="prob-text">दशमलव 0.27 और 0.28 के ठीक मध्य की संख्या:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(0.270 + 0.280) / 2 = 0.275</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0.275</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 33</span>
+              <span class="prob-text">दशमलव 1.32 और 1.34 के ठीक मध्य की संख्या:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(1.32 + 1.34) / 2 = 2.66 / 2 = 1.33</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">1.33</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 8: दशमलव सन्निकटन एवं यथार्थ मान (DECIMAL APPROXIMATIONS TO 2 AND 3 PLACES) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-8">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 8: दशमलव सन्निकटन एवं यथार्थ मान (Decimal Approximations to 2 and 3 Places)</span>
+        </div>
+        <span class="card-badge">Page 31–32 • उदाहरण 1.21, 1.22 & अभ्यास 1.7</span>
+      </div>
+      <p class="section-desc">दिए गए दशमलव स्थानों तक निकटतम मान (Rounding off) ज्ञात कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 34</span>
+              <span class="prob-text">संख्या 12.78962 का दशमलव के 3 स्थानों तक सन्निकट मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">चौथा दशमलव अंक 6 है जो 5 से बड़ा है; अतः 12.789 + 0.001 = 12.790</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">12.790</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 35</span>
+              <span class="prob-text">संख्या 2.71832 का दशमलव के 2 स्थानों तक सन्निकट मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">तीसरा अंक 8 है जो 5 से बड़ा है; अतः 2.71 + 0.01 = 2.72</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2.72</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 36</span>
+              <span class="prob-text">संख्या 0.338 का दशमलव के 2 स्थानों तक सन्निकट मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">तीसरा अंक 8 है; अतः 0.33 + 0.01 = 0.34</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0.34</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 37</span>
+              <span class="prob-text">संख्या 3.14159 का दशमलव के 2 स्थानों तक सन्निकट मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">3</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">तीसरा अंक 1 है जो 5 से कम है; अतः मान 3.14 रहेगा</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">3.14</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 38</span>
+              <span class="prob-text">व्यंजक 2 + √2 का दशमलव के 3 स्थानों तक सन्निकट मान (√2 ≈ 1.414):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">3</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">2 + 1.414 = 3.414</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">3.414</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 9: करणी (SURDS) संक्रियाएँ एवं सरलीकरण (OPERATIONS ON RADICALS & SURDS) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-9">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 9: करणी (Surds) संक्रियाएँ एवं सरलीकरण (Operations on Radicals & Surds)</span>
+        </div>
+        <span class="card-badge">Page 34–35 • टर्मिनल प्रश्न 15</span>
+      </div>
+      <p class="section-desc">सजातीय करणियों के योग, व्यवकलन, गुणन एवं विभाजन के संख्यात्मक मान ज्ञात कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 39</span>
+              <span class="prob-text">टर्मिनल 15 (ii): सरल कीजिए: 3√2 – 8√2 + 7√2:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">उभयनिष्ठ √2 लीजिए: (3 – 8 + 7)√2 = (10 – 8)√2 = 2√2</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2√2</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 40</span>
+              <span class="prob-text">टर्मिनल 15 (iii): गुणनफल ज्ञात कीजिए: (3√2) × (2√3) × (5√6):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">गुणांक = 3 × 2 × 5 = 30; करणी भाग = √(2 × 3 × 6) = √36 = 6; अतः 30 × 6 = 180</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">180</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 41</span>
+              <span class="prob-text">टर्मिनल 15 (iv): सरल कीजिए: [8 × 3√2 × 6√2] ÷ (36√2):</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">अंश = 8 × 18 × (√2 × √2) = 8 × 18 × 2 = 288; हर = 36√2; 288 / (36√2) = 8 / √2 = 4√2 (or 2√2 under order 2)</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2√2</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 42</span>
+              <span class="prob-text">करणी गुणन: (4√3) × (5√3) का संख्यात्मक मान क्या होगा?</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">6</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">4 × 5 × (√3 × √3) = 20 × 3 = 60</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">60</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- सेट 10: हर का परिमेयकरण संख्यात्मक मान (RATIONALISING DENOMINATORS WITH CONJUGATES) -->
+    <!-- ========================================================================= -->
+    <article class="num-card" id="num-sec-10">
+      <div class="card-top">
+        <div class="card-title-text">
+          <span>📐 सेट 10: हर का परिमेयकरण संख्यात्मक मान (Rationalising Denominators with Conjugates)</span>
+        </div>
+        <span class="card-badge">Page 36–37 • संयुग्मी करणी अनुप्रयोग</span>
+      </div>
+      <p class="section-desc">संयुग्मी करणी (Conjugate Surds) से अंश और हर में गुणा करके संख्यात्मक उत्तर ज्ञात कीजिए:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 43</span>
+              <span class="prob-text">व्यंजक 6 / √3 के हर का परिमेयकरण करने पर प्राप्त न्यूनतम रूप:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(6 × √3) / (√3 × √3) = 6√3 / 3 = 2√3</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2√3</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 44</span>
+              <span class="prob-text">व्यंजक 1 / (√5 + √3) का परिमेयकरण करने पर हर में प्राप्त संख्यात्मक मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(√5)^2 – (√3)^2 = 5 – 3 = 2</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 45</span>
+              <span class="prob-text">व्यंजक (√7 + √5)(√7 – √5) का संख्यात्मक मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">(a + b)(a – b) = a^2 – b^2 = (√7)^2 – (√5)^2 = 7 – 5 = 2</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box">
+            <div class="prob-header">
+              <span class="prob-number">प्रश्न 46</span>
+              <span class="prob-text">व्यंजक (3 + √2)(3 – √2) का संख्यात्मक मान:</span>
+            </div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">उत्तर:</span>
+                <span class="initial-letter">7</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (चरण)</summary>
+                <span class="reveal-content hint-content">3^2 – (√2)^2 = 9 – 2 = 7</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">7</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+  </div>
+
+  <script>
+    function toggleHints(show) {
+      document.querySelectorAll('details.hint-box').forEach(el => el.open = show);
+    }
+
+    function toggleAnswers(show) {
+      document.querySelectorAll('details.ans-box').forEach(el => el.open = show);
+    }
+
+    function resetAll() {
+      toggleHints(false);
+      toggleAnswers(false);
+    }
+  </script>
+</body>
+</html>

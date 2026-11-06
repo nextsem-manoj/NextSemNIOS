@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 12 Physics Chapter 7: Numericals (Easy to Difficult) | Alternating Current (leph107.pdf)</title>
+  <meta name="description" content="NCERT Class 12 Physics Part-I Chapter 7 (Alternating Current): Complete numerical problem-solving bank arranged systematically from Easy to Difficult (Tiers 1 to 6) with initial anchors, step-by-step formula hints, and verified solutions in English.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <style>
+    :root {
+      /* Default Theme: Clean Light */
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-prob: #f1f5f9;
+      --bg-formula: #e2e8f0;
+      --border-card: #e2d5ad;
+      --border-prob: #cbd5e1;
+      --accent-cyan: #0284c7;
+      --accent-emerald: #04AA6D;
+      --accent-gold: #c1a648;
+      --accent-gold-dark: #a8842c;
+      --accent-purple: #9333ea;
+      --accent-blue: #2563eb;
+      --accent-rose: #e11d48;
+      --text-main: #0a2240;
+      --text-secondary: #1e293b;
+      --text-muted: #475569;
+      --shadow-card: 0 4px 20px rgba(10, 34, 64, 0.08);
+    }
+
+    body.dark {
+      /* Night Theme: Obsidian Midnight Space */
+      --bg-page: #060c18;
+      --bg-card: #0c1830;
+      --bg-prob: #081226;
+      --bg-formula: #040812;
+      --border-card: rgba(229, 193, 88, 0.25);
+      --border-prob: rgba(255, 255, 255, 0.08);
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-gold: #e5c158;
+      --accent-gold-dark: #c1a648;
+      --accent-purple: #c084fc;
+      --accent-blue: #60a5fa;
+      --accent-rose: #f87171;
+      --text-main: #ffffff;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --shadow-card: 0 4px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .physics-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      text-align: center;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 20px;
+      padding: 32px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+    .badge-pill {
+      display: inline-block;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      background: rgba(193, 166, 72, 0.15);
+      color: var(--accent-gold-dark);
+      border: 1px solid var(--accent-gold);
+      margin-bottom: 14px;
+    }
+    body.dark .badge-pill {
+      color: var(--accent-gold);
+    }
+    .hero-title {
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    /* Tier Progress Pills */
+    .tier-badges-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+    .tier-chip {
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .tier-chip:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-actions-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      cursor: pointer;
+    }
+    .btn-nav:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-1px);
+    }
+    .btn-nav.primary {
+      background: linear-gradient(135deg, #d4af37 0%, #c1a648 50%, #b89635 100%);
+      border: none;
+      color: #061224;
+      font-weight: 900;
+      box-shadow: 0 3px 12px rgba(193, 166, 72, 0.35);
+    }
+    .btn-nav.primary:hover {
+      box-shadow: 0 6px 18px rgba(193, 166, 72, 0.5);
+    }
+
+    /* Sticky Quick Controls */
+    .sticky-toolbar {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 14px;
+      padding: 12px 20px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: var(--shadow-card);
+    }
+    .page-jump-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .page-jump-select {
+      background: var(--bg-prob);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      outline: none;
+      max-width: 360px;
+    }
+    .btn-tool {
+      background: var(--bg-prob);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-tool:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold-dark);
+    }
+    body.dark .btn-tool:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Theme Switcher Button */
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-prob);
+      border: 1.5px solid var(--border-card);
+      color: var(--text-main);
+      font-size: 0.84rem;
+      font-weight: 800;
+      padding: 7px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-1px);
+    }
+
+    /* Tier Card */
+    .tier-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 18px;
+      padding: 28px 30px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-card);
+      transition: all 0.25s ease;
+    }
+    .tier-card:hover {
+      border-color: var(--accent-gold);
+    }
+    .tier-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-card);
+      flex-wrap: wrap;
+    }
+    .tier-title-text {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+    .tier-badge {
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+    .tier-desc {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    /* Problems Grid */
+    .problems-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .prob-box {
+      background: var(--bg-prob);
+      border: 1px solid var(--border-prob);
+      border-radius: 14px;
+      padding: 20px 22px;
+      transition: all 0.2s ease;
+    }
+    .prob-box:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 4px 12px rgba(193, 166, 72, 0.12);
+    }
+    .prob-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .prob-ref {
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(2, 132, 199, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(2, 132, 199, 0.3);
+    }
+    .prob-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+    .prob-statement {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+    .prob-formula-tag {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: var(--bg-formula);
+      padding: 6px 12px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 14px;
+      border: 1px solid var(--border-card);
+    }
+    .prob-formula-tag code {
+      color: var(--accent-cyan);
+      font-weight: 700;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    body.dark .prob-formula-tag code {
+      color: #38bdf8;
+    }
+
+    .prob-interactive-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Blank Chip */
+    .blank-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--bg-card);
+      border: 1.5px solid var(--accent-gold);
+      border-radius: 8px;
+      padding: 5px 12px;
+      vertical-align: middle;
+    }
+    .blank-anchor-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-right: 4px;
+    }
+    .initial-letter {
+      font-weight: 900;
+      color: var(--accent-cyan);
+      font-size: 1.22rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      text-decoration: underline;
+    }
+    body.dark .initial-letter {
+      color: #38bdf8;
+    }
+    .blank-dashes {
+      color: var(--text-muted);
+      font-family: monospace;
+      font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    /* Dropdown Details */
+    details.drop-box {
+      display: inline-block;
+    }
+    details.drop-box > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 8px;
+      user-select: none;
+      transition: all 0.15s ease;
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.hint-box > summary {
+      background: rgba(4, 170, 109, 0.12);
+      border: 1px solid rgba(4, 170, 109, 0.4);
+      color: var(--accent-emerald);
+    }
+    details.hint-box > summary:hover {
+      background: rgba(4, 170, 109, 0.22);
+    }
+    details.hint-box[open] > summary {
+      background: rgba(4, 170, 109, 0.3);
+      border-color: var(--accent-emerald);
+    }
+
+    details.ans-box > summary {
+      background: rgba(193, 166, 72, 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold-dark);
+    }
+    body.dark details.ans-box > summary {
+      color: var(--accent-gold);
+    }
+    details.ans-box > summary:hover {
+      background: rgba(193, 166, 72, 0.25);
+    }
+    details.ans-box[open] > summary {
+      background: rgba(193, 166, 72, 0.35);
+    }
+
+    .reveal-content {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      animation: popIn 0.2s ease;
+    }
+    .hint-content {
+      background: rgba(4, 170, 109, 0.12);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(4, 170, 109, 0.35);
+      font-weight: 700;
+    }
+    .ans-content {
+      background: rgba(193, 166, 72, 0.2);
+      color: var(--text-main);
+      border: 1.5px solid var(--accent-gold);
+      font-weight: 900;
+      font-size: 1.05rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(-3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="physics-container">
+
+    <!-- Top Hero Banner -->
+    <header class="hero-banner">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 14px;">
+        <img src="/image-20.png" alt="Nextsem Logo" style="height: 38px; width: auto; object-fit: contain;">
+        <span class="badge-pill">Class 12 Physics Part-I • Chapter 7 • AC (leph107.pdf)</span>
+      </div>
+      <h1 class="hero-title">AC Numericals: Easy to Difficult</h1>
+      <div class="hero-subtitle">
+        Master every numerical from Class 12 Physics Chapter 7 (Examples 7.1 to 7.9 & Exercises 7.1 to 7.8) organized across 6 Progressive Difficulty Tiers with step-by-step formula hints and verified solutions in English.
+      </div>
+
+      <!-- Difficulty Tier Jump Badges -->
+      <div class="tier-badges-row">
+        <a href="#tier-1-easy" class="tier-chip" style="background: rgba(4, 170, 109, 0.15); color: #04AA6D; border: 1.5px solid #04AA6D;">🟢 Tier 1: Easy</a>
+        <a href="#tier-2-moderate" class="tier-chip" style="background: rgba(2, 132, 199, 0.15); color: #0284c7; border: 1.5px solid #0284c7;">🔵 Tier 2: Moderate</a>
+        <a href="#tier-3-intermediate" class="tier-chip" style="background: rgba(147, 51, 234, 0.15); color: #9333ea; border: 1.5px solid #9333ea;">🟣 Tier 3: Intermediate</a>
+        <a href="#tier-4-advanced" class="tier-chip" style="background: rgba(193, 166, 72, 0.18); color: #a8842c; border: 1.5px solid #c1a648;">🟠 Tier 4: Advanced</a>
+        <a href="#tier-5-challenging" class="tier-chip" style="background: rgba(225, 29, 72, 0.15); color: #e11d48; border: 1.5px solid #e11d48;">🔴 Tier 5: Challenging</a>
+        <a href="#tier-6-engineering" class="tier-chip" style="background: rgba(2, 132, 199, 0.15); color: #0284c7; border: 1.5px solid #0284c7;">⚡ Tier 6: Engineering</a>
+      </div>
+
+      <div class="nav-actions-row">
+        <a href="#tier-1-easy" class="btn-nav primary">⚡ Start Easy Numericals</a>
+        <a href="/physics-ch7-alternating-current-fill-in-the-blanks.html" class="btn-nav">📖 Full 24-Page Theory</a>
+        <a href="/nios-math-ch1-numericals-only-fill-in-the-blanks.html" class="btn-nav">🔢 Math Numericals</a>
+        <a href="/quiz.html" class="btn-nav">🏰 Quiz Portal</a>
+        <a href="/" class="btn-nav">🏠 Home</a>
+      </div>
+    </header>
+
+    <!-- Sticky Toolbar with Theme Toggle -->
+    <div class="sticky-toolbar">
+      <div class="page-jump-wrap">
+        <span>📍 Jump to Tier:</span>
+        <select class="page-jump-select" onchange="if(this.value) location.hash = this.value;">
+          <option value="">Select Difficulty Tier...</option>
+          <option value="#tier-1-easy">Tier 1: Easy (Foundational AC, Peak & RMS Relations)</option>
+          <option value="#tier-2-moderate">Tier 2: Moderate (Pure Reactances: Inductors & Capacitors)</option>
+          <option value="#tier-3-intermediate">Tier 3: Intermediate (Series RC & Series RL Circuits)</option>
+          <option value="#tier-4-advanced">Tier 4: Advanced (Series LCR Circuits, Impedance & Power Factor)</option>
+          <option value="#tier-5-challenging">Tier 5: Challenging (Resonance, Bandwidth, Q-Factor & Voltage Drops)</option>
+          <option value="#tier-6-engineering">Tier 6: Practical Engineering (Transformers & Power Transmission)</option>
+        </select>
+      </div>
+
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+        <button type="button" class="btn-tool" onclick="toggleHints(true)">💡 Reveal Hints</button>
+        <button type="button" class="btn-tool" onclick="toggleAnswers(true)">👁️ Reveal Answers</button>
+        <button type="button" class="btn-tool" onclick="resetAll()">🔒 Hide All (Self-Test)</button>
+        <button type="button" class="theme-toggle-btn" onclick="togglePageTheme()" id="themeBtn" title="Switch Theme">☀️ Light Mode</button>
+      </div>
+    </div>
+
+    
+    <!-- ========================================================================= -->
+    <!-- TIER 1: EASY (FOUNDATIONAL AC, PEAK & RMS RELATIONS) -->
+    <!-- ========================================================================= -->
+    <article class="tier-card" id="tier-1-easy">
+      <div class="tier-top">
+        <div class="tier-title-text">
+          <span>Tier 1: Easy (Foundational AC, Peak & RMS Relations)</span>
+        </div>
+        <span class="tier-badge" style="background: #10b98122; color: #10b981; border: 1px solid #10b98155;">
+          🟢 Level 1: Easy • Foundational Formulas
+        </span>
+      </div>
+      <p class="tier-desc">Fundamental alternating current relationships: Peak values, Root Mean Square (RMS) values, and pure resistive AC circuits:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box" id="p1">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.2 (a)</span>
+              <span class="prob-title">Calculating RMS Voltage from Peak Voltage</span>
+            </div>
+            <div class="prob-statement">The peak voltage of an AC supply is 300 V. What is the root mean square (rms) voltage?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>V_rms = V_m / √2 = 0.707 × V_m</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">V_rms = 300 / √2 = 300 / 1.414 = 212.1 V</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">212.1 V</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p2">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.2 (b)</span>
+              <span class="prob-title">Calculating Peak Current from RMS Current</span>
+            </div>
+            <div class="prob-statement">The rms value of current in an AC circuit is 10 A. What is the peak current amplitude in the circuit?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>i_m = √2 × I_rms = 1.414 × I_rms</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">i_m = 1.414 × 10 A = 14.14 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">14.14 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p3">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.1 (a)</span>
+              <span class="prob-title">RMS Current in a Pure Resistor Circuit</span>
+            </div>
+            <div class="prob-statement">A 100 Ω resistor is connected to a 220 V, 50 Hz AC supply. What is the rms value of current in the circuit?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>I_rms = V_rms / R</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">I = 220 V / 100 Ω = 2.2 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2.2 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p4">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.1 (b)</span>
+              <span class="prob-title">Net Power Consumed Over a Full Cycle in a Resistor</span>
+            </div>
+            <div class="prob-statement">For the 100 Ω resistor connected to the 220 V, 50 Hz supply, what is the net power consumed over a complete cycle?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>P = V_rms × I_rms = I_rms² × R = V²/R</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">4</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">P = 220 V × 2.2 A = 484 W (or 220² / 100 = 48400 / 100 = 484 W)</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">484 W</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p5">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.1 (a)</span>
+              <span class="prob-title">Determining Resistance of a Rated Light Bulb</span>
+            </div>
+            <div class="prob-statement">A light bulb is rated at 100 W for a 220 V supply. Find the operating electrical resistance of the bulb filament:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>R = V² / P</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">4</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">R = (220)² / 100 = 48400 / 100 = 484 Ω</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">484 Ω</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p6">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.1 (b, c)</span>
+              <span class="prob-title">Source Peak Voltage and Bulb Operating RMS Current</span>
+            </div>
+            <div class="prob-statement">For the 220 V, 100 W rated bulb: calculate the peak voltage of the AC source and the rms current flowing through the bulb filament:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>V_m = √2 × V; I_rms = P / V</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">3</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">V_m = 1.414 × 220 = 311 V; I_rms = 100 W / 220 V = 0.454 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">311 V and 0.45 A</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- TIER 2: MODERATE (PURE REACTANCES: INDUCTORS & CAPACITORS) -->
+    <!-- ========================================================================= -->
+    <article class="tier-card" id="tier-2-moderate">
+      <div class="tier-top">
+        <div class="tier-title-text">
+          <span>Tier 2: Moderate (Pure Reactances: Inductors & Capacitors)</span>
+        </div>
+        <span class="tier-badge" style="background: #3b82f622; color: #3b82f6; border: 1px solid #3b82f655;">
+          🔵 Level 2: Moderate • Reactances XL & XC
+        </span>
+      </div>
+      <p class="tier-desc">Inductive reactance (XL), capacitive reactance (XC), and angular frequency of free LC oscillations:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box" id="p7">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.2 (a)</span>
+              <span class="prob-title">Inductive Reactance of a Pure Inductor</span>
+            </div>
+            <div class="prob-statement">A pure inductor of 25.0 mH is connected to an AC source of 220 V, 50 Hz. Find the inductive reactance (XL) of the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>X_L = ωL = 2π × f × L</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">7</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">X_L = 2 × 3.1416 × 50 × (25 × 10⁻³) = 314.16 × 0.025 = 7.85 Ω</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">7.85 Ω</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p8">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.2 (b)</span>
+              <span class="prob-title">RMS Current in a Pure Inductor Circuit</span>
+            </div>
+            <div class="prob-statement">For the 25.0 mH inductor (220 V, 50 Hz, XL = 7.85 Ω), find the rms value of the current flowing in the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>I_rms = V / X_L</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">I = 220 V / 7.85 Ω = 28.02 A ≈ 28 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">28 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p9">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.3</span>
+              <span class="prob-title">RMS Current for a 44 mH Inductor</span>
+            </div>
+            <div class="prob-statement">A 44 mH inductor is connected to a 220 V, 50 Hz AC supply. Determine the rms value of the current in the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>X_L = 2π f L; I = V / X_L</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">X_L = 2 × 3.142 × 50 × (44 × 10⁻³) = 13.82 Ω; I = 220 / 13.82 = 15.92 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">15.9 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p10">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.4 (a)</span>
+              <span class="prob-title">Capacitive Reactance of a 15 μF Capacitor</span>
+            </div>
+            <div class="prob-statement">A 15.0 μF capacitor is connected to a 220 V, 50 Hz source. Find the capacitive reactance (XC) in the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>X_C = 1 / (ωC) = 1 / (2π × f × C)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">X_C = 1 / (2 × 3.1416 × 50 × 15 × 10⁻⁶) = 1 / (4.712 × 10⁻³) = 212.3 Ω</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">212.3 Ω</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p11">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.4 (b)</span>
+              <span class="prob-title">RMS and Peak Current in a Capacitor Circuit</span>
+            </div>
+            <div class="prob-statement">For the 15.0 μF capacitor circuit (XC = 212.3 Ω, 220 V), find the rms current and peak current amplitude:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>I_rms = V / X_C; i_m = √2 × I_rms</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">I = 220 / 212.3 = 1.036 A ≈ 1.04 A; i_m = 1.414 × 1.036 = 1.465 A ≈ 1.47 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">1.04 A (RMS) & 1.47 A (Peak)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p12">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.4</span>
+              <span class="prob-title">RMS Current in a 60 μF Capacitor at 60 Hz</span>
+            </div>
+            <div class="prob-statement">A 60 μF capacitor is connected to a 110 V, 60 Hz AC supply. Determine the rms value of the current in the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>X_C = 1 / (2π f C); I = V / X_C = V × (2π f C)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">X_C = 1 / (2 × 3.142 × 60 × 60 × 10⁻⁶) = 44.21 Ω; I = 110 / 44.21 = 2.488 A ≈ 2.49 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2.49 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p13">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.5</span>
+              <span class="prob-title">Net Power Absorbed by Pure L and Pure C over a Cycle</span>
+            </div>
+            <div class="prob-statement">In Exercises 7.3 (pure L) and 7.4 (pure C), calculate the net average power absorbed by each circuit over a complete cycle:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>P = V_rms × I_rms × cos(φ); For pure L and C, φ = ±90°, cos(90°) = 0</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">Because the voltage and current are 90° out of phase, cos(φ) = 0, so average power P = 0 W</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0 W (Zero Power)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p14">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.6</span>
+              <span class="prob-title">Angular Frequency of Free LC Oscillations</span>
+            </div>
+            <div class="prob-statement">A charged 30 μF capacitor is connected to a 27 mH inductor. What is the angular frequency (ω0) of free oscillations of the circuit?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>ω_0 = 1 / √(L C)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">L C = (27 × 10⁻³) × (30 × 10⁻⁶) = 810 × 10⁻⁹ = 8.1 × 10⁻⁷ s²; ω_0 = 1 / √(8.1 × 10⁻⁷) = 1.11 × 10³ rad/s</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">1.11 × 10³ rad/s (1111 rad/s)</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- TIER 3: INTERMEDIATE (SERIES RC & SERIES RL CIRCUITS) -->
+    <!-- ========================================================================= -->
+    <article class="tier-card" id="tier-3-intermediate">
+      <div class="tier-top">
+        <div class="tier-title-text">
+          <span>Tier 3: Intermediate (Series RC & Series RL Circuits)</span>
+        </div>
+        <span class="tier-badge" style="background: #a855f722; color: #a855f7; border: 1px solid #a855f755;">
+          🟣 Level 3: Intermediate • RC & RL Combinations
+        </span>
+      </div>
+      <p class="tier-desc">Impedance (Z), total current, phase difference (tan φ), and component voltage drops in two-element series AC circuits:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box" id="p15">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.6 (a)</span>
+              <span class="prob-title">Total Impedance (Z) of a Series RC Circuit</span>
+            </div>
+            <div class="prob-statement">A resistor of 200 Ω and a capacitor of 15.0 μF are connected in series to a 220 V, 50 Hz AC source (XC = 212.3 Ω). Calculate the total circuit impedance (Z):</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>Z = √(R² + X_C²)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">Z = √((200)² + (212.3)²) = √(40000 + 45071) = √85071 = 291.67 Ω ≈ 292 Ω</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">291.67 Ω</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p16">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.6 (b)</span>
+              <span class="prob-title">RMS Current in a Series RC Circuit</span>
+            </div>
+            <div class="prob-statement">For the series RC circuit above (V = 220 V, Z = 291.67 Ω), calculate the total rms current flowing through the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>I = V / Z</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">I = 220 V / 291.67 Ω = 0.754 A ≈ 0.75 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0.75 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p17">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.6 (c)</span>
+              <span class="prob-title">RMS Voltages Across the Resistor (VR) and Capacitor (VC)</span>
+            </div>
+            <div class="prob-statement">In the series RC circuit (I = 0.754 A, R = 200 Ω, XC = 212.3 Ω), calculate the rms voltage drop across the resistor (VR) and across the capacitor (VC):</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>V_R = I × R; V_C = I × X_C</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">V_R = 0.754 × 200 = 150.8 V; V_C = 0.754 × 212.3 = 160.1 V</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">VR = 150.8 V, VC = 160.1 V</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p18">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.6 (d)</span>
+              <span class="prob-title">Phasor Vector Sum vs Algebraic Voltage Sum</span>
+            </div>
+            <div class="prob-statement">The algebraic sum VR + VC = 310.9 V exceeds the source voltage of 220 V. Calculate the actual net phasor voltage across the combination:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>V = √(V_R² + V_C²)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">V = √((150.8)² + (160.1)²) = √(22740.6 + 25632) = √48372.6 = 219.94 V ≈ 220 V</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">220 V</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- TIER 4: ADVANCED (SERIES LCR CIRCUITS, IMPEDANCE & POWER FACTOR) -->
+    <!-- ========================================================================= -->
+    <article class="tier-card" id="tier-4-advanced">
+      <div class="tier-top">
+        <div class="tier-title-text">
+          <span>Tier 4: Advanced (Series LCR Circuits, Impedance & Power Factor)</span>
+        </div>
+        <span class="tier-badge" style="background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b55;">
+          🟠 Level 4: Advanced • Series LCR & Power Factor
+        </span>
+      </div>
+      <p class="tier-desc">Impedance triangle, reactance cancellation |XL - XC|, phase angle φ, power factor (cos φ), and true average power dissipated:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box" id="p19">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.8 (a)</span>
+              <span class="prob-title">Reactances and Total Impedance of a Series LCR Circuit</span>
+            </div>
+            <div class="prob-statement">A sinusoidal peak voltage vm = 283 V at 50 Hz is applied to a series LCR circuit with R = 3 Ω, L = 25.48 mH, and C = 796 μF. Find the impedance (Z) of the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>X_L = 2πfL = 8.0 Ω; X_C = 1/(2πfC) = 4.0 Ω; Z = √(R² + (X_L - X_C)²)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">5</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">X_L - X_C = 8.0 - 4.0 = 4.0 Ω; Z = √(3² + 4²) = √(9 + 16) = √25 = 5.0 Ω</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">5.0 Ω</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p20">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.8 (b)</span>
+              <span class="prob-title">Phase Angle Between Source Voltage and Current</span>
+            </div>
+            <div class="prob-statement">In the series LCR circuit (R = 3 Ω, XL - XC = 4 Ω), determine the phase difference (φ) between the source voltage and circuit current:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>tan(φ) = (X_L - X_C) / R</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">5</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">tan(φ) = 4 / 3 = 1.333; φ = tan⁻¹(1.333) = 53.1° (0.927 rad); Current lags voltage by 53.1°</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">53.1° (0.927 rad)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p21">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.8 (c)</span>
+              <span class="prob-title">Peak Current and Average Power Dissipated</span>
+            </div>
+            <div class="prob-statement">For the series LCR circuit (vm = 283 V, Z = 5 Ω, R = 3 Ω), calculate the peak current amplitude, rms current, and total power dissipated:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>i_m = v_m / Z; I = i_m / √2; P = I² × R</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">4</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">i_m = 283 / 5 = 56.6 A; I = 56.6 / 1.414 = 40.0 A; P = (40)² × 3 = 1600 × 3 = 4800 W</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">4800 W (4.8 kW)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p22">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.8 (d)</span>
+              <span class="prob-title">Power Factor of the Series LCR Circuit</span>
+            </div>
+            <div class="prob-statement">Calculate the power factor (cos φ) of the above series LCR circuit (R = 3 Ω, Z = 5 Ω):</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>cos(φ) = R / Z</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">0</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">cos(φ) = 3 Ω / 5 Ω = 0.6 (or cos(53.1°) = 0.60)</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">0.6</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- TIER 5: CHALLENGING (RESONANCE, BANDWIDTH, Q-FACTOR & VOLTAGE DROPS) -->
+    <!-- ========================================================================= -->
+    <article class="tier-card" id="tier-5-challenging">
+      <div class="tier-top">
+        <div class="tier-title-text">
+          <span>Tier 5: Challenging (Resonance, Bandwidth, Q-Factor & Voltage Drops)</span>
+        </div>
+        <span class="tier-badge" style="background: #ef444422; color: #ef4444; border: 1px solid #ef444455;">
+          🔴 Level 5: Challenging • Resonance & Quality Factor
+        </span>
+      </div>
+      <p class="tier-desc">Resonant frequency, minimum impedance condition (Z = R), current amplitude magnification, voltage drops, and quality factor (Q):</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box" id="p23">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.9 (a)</span>
+              <span class="prob-title">Resonant Frequency of Variable Frequency Source</span>
+            </div>
+            <div class="prob-statement">If the frequency of the source in the LCR circuit (L = 25.48 mH, C = 796 μF) can be varied, determine the angular and linear frequency at which resonance occurs:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>ω_0 = 1 / √(L C); f_0 = ω_0 / (2π)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">L C = (25.48 × 10⁻³) × (796 × 10⁻⁶) = 2.028 × 10⁻⁵; ω_0 = 1 / √(2.028 × 10⁻⁵) = 222.1 rad/s; f_0 = 222.1 / (2 × 3.1416) = 35.4 Hz</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">222.1 rad/s (35.4 Hz)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p24">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Example 7.9 (b)</span>
+              <span class="prob-title">Impedance, Peak Current, and Power at Resonant Condition</span>
+            </div>
+            <div class="prob-statement">At the resonant condition (vm = 283 V, R = 3 Ω): calculate the impedance Z, peak current amplitude im, and power dissipated in the circuit:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>Z_res = R; i_m = v_m / R; I = i_m / √2; P_res = I² × R</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">Z = 3 Ω; i_m = 283 / 3 = 94.33 A; I = 94.33 / 1.414 = 66.7 A; P = (66.7)² × 3 = 4451 × 3 = 13350 W = 13.35 kW</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">Z = 3 Ω, im = 94.3 A, P = 13.35 kW</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p25">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.7</span>
+              <span class="prob-title">Average Power Transferred at Natural Frequency</span>
+            </div>
+            <div class="prob-statement">A series LCR circuit with R = 20 Ω, L = 1.5 H, and C = 35 μF is connected to a 200 V AC supply. When frequency equals the natural frequency, what is the average power transferred per cycle?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>At resonance, Z = R = 20 Ω; I = V / R; P = V² / R</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">2</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">I = 200 V / 20 Ω = 10 A; P = (200)² / 20 = 40000 / 20 = 2000 W = 2 kW</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">2000 W (2 kW)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p26">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.8 (a)</span>
+              <span class="prob-title">Resonant Angular Frequency for L = 5.0 H, C = 80 μF</span>
+            </div>
+            <div class="prob-statement">A series LCR circuit connected to a 230 V source has L = 5.0 H, C = 80 μF, R = 40 Ω. Determine the source frequency (ω0) which drives the circuit into resonance:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>ω_0 = 1 / √(L C)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">5</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">L C = 5.0 × (80 × 10⁻⁶) = 400 × 10⁻⁶ = 4 × 10⁻⁴; ω_0 = 1 / √(4 × 10⁻⁴) = 1 / (2 × 10⁻²) = 50 rad/s</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">50 rad/s</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p27">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.8 (b)</span>
+              <span class="prob-title">Circuit Impedance and Current Amplitude at Resonance</span>
+            </div>
+            <div class="prob-statement">For the circuit (V = 230 V, R = 40 Ω), obtain the impedance of the circuit and the amplitude of current (peak value im) at the resonating frequency:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>Z = R; I_rms = V / R; i_m = √2 × I_rms</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">8</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">Z = 40 Ω; I_rms = 230 / 40 = 5.75 A; i_m = 1.414 × 5.75 A = 8.13 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">Z = 40 Ω, im = 8.13 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p28">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Exercise 7.8 (c)</span>
+              <span class="prob-title">RMS Potential Drops and Zero Potential Across LC Combination</span>
+            </div>
+            <div class="prob-statement">Determine the rms potential drops across R, L, and C (VR, VL, VC). What is the net potential drop across the LC series combination at resonance?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>V_R = I×R; V_L = I×(ω_0 L); V_C = I×(1/(ω_0 C)); V_LC = |V_L - V_C|</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">V_R = 5.75 × 40 = 230 V; V_L = 5.75 × (50 × 5) = 1437.5 V; V_C = 5.75 × 250 = 1437.5 V; V_LC = 1437.5 - 1437.5 = 0 V</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">VR = 230 V, VL = 1437.5 V, VC = 1437.5 V (Net VLC = 0 V)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p29">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Textbook Theory (Sec 7.6.2)</span>
+              <span class="prob-title">Calculating Quality Factor (Q-Factor) of the Resonant Circuit</span>
+            </div>
+            <div class="prob-statement">For the above series LCR circuit (ω0 = 50 rad/s, L = 5.0 H, R = 40 Ω), calculate the quality factor (Q-Factor) of resonance:</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>Q = (ω_0 × L) / R = (1 / R) × √(L / C)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">6</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">Q = (50 × 5.0) / 40 = 250 / 40 = 6.25 (Dimensionless)</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">6.25</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+    <!-- ========================================================================= -->
+    <!-- TIER 6: PRACTICAL ENGINEERING (TRANSFORMERS & POWER TRANSMISSION) -->
+    <!-- ========================================================================= -->
+    <article class="tier-card" id="tier-6-engineering">
+      <div class="tier-top">
+        <div class="tier-title-text">
+          <span>Tier 6: Practical Engineering (Transformers & Power Transmission)</span>
+        </div>
+        <span class="tier-badge" style="background: #06b6d422; color: #06b6d4; border: 1px solid #06b6d455;">
+          ⚡ Level 6: Real-World • Transformers & Efficiency
+        </span>
+      </div>
+      <p class="tier-desc">Transformer voltage ratio, current trade-off, conservation of energy, and transmission line joule heating reduction:</p>
+
+      <div class="problems-grid">
+        
+          <div class="prob-box" id="p30">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Textbook Section 7.9</span>
+              <span class="prob-title">Secondary Current in a Step-Down Transformer</span>
+            </div>
+            <div class="prob-statement">An ideal transformer steps down voltage from 2200 V to 220 V. If the primary winding carries a current of 5 A, what is the output secondary current?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>V_s / V_p = I_p / I_s  =>  I_s = I_p × (V_p / V_s)</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">5</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">V_p / V_s = 2200 / 220 = 10; I_s = 5 A × 10 = 50 A</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">50 A</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p31">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Textbook Section 7.9</span>
+              <span class="prob-title">Turns Ratio for a Step-Up Grid Transformer</span>
+            </div>
+            <div class="prob-statement">Electric power generated at 220 V is stepped up to 22,000 V for long-distance grid transmission. What turns ratio (Ns / Np) must the transformer possess?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>N_s / N_p = V_s / V_p</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">N_s / N_p = 22000 V / 220 V = 100</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">100 (Turns Ratio 100 : 1)</span>
+              </details>
+            </div>
+          </div>
+        
+
+          <div class="prob-box" id="p32">
+            <div class="prob-header">
+              <span class="prob-ref">NCERT Textbook Section 7.9 (Transmission)</span>
+              <span class="prob-title">Transmission Joule Heat Loss Reduction Factor</span>
+            </div>
+            <div class="prob-statement">If transmission voltage is stepped up by a factor of 100 (N = 100), by what factor is the Joule heating energy loss (I²R) in the transmission cables reduced?</div>
+            <div class="prob-formula-tag">📐 <strong>Formula:</strong> <code>P_loss ∝ (1 / V²); Increasing voltage by N reduces line losses by 1 / N²</code></div>
+
+            <div class="prob-interactive-row">
+              <span class="blank-chip">
+                <span class="blank-anchor-label">Answer:</span>
+                <span class="initial-letter">1</span>
+                <span class="blank-dashes">_______________</span>
+              </span>
+
+              <details class="drop-box hint-box">
+                <summary>💡 Hint (Formula & Steps)</summary>
+                <span class="reveal-content hint-content">Power loss reduction = (1 / 100)² = 1 / 10,000 (Loss is reduced by a factor of 10,000)</span>
+              </details>
+
+              <details class="drop-box ans-box">
+                <summary>👁️ Answer</summary>
+                <span class="reveal-content ans-content">10,000 times (Reduced by 10⁴)</span>
+              </details>
+            </div>
+          </div>
+        
+      </div>
+    </article>
+  
+
+  </div>
+
+  <script>
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem('nextsem_theme') || 'light';
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        document.getElementById('themeBtn').textContent = '🌙 Dark Mode';
+      } else {
+        document.body.classList.remove('dark');
+        document.getElementById('themeBtn').textContent = '☀️ Light Mode';
+      }
+    }
+
+    function togglePageTheme() {
+      const isDark = document.body.classList.toggle('dark');
+      localStorage.setItem('nextsem_theme', isDark ? 'dark' : 'light');
+      document.getElementById('themeBtn').textContent = isDark ? '🌙 Dark Mode' : '☀️ Light Mode';
+    }
+
+    function toggleHints(show) {
+      document.querySelectorAll('details.hint-box').forEach(el => el.open = show);
+    }
+
+    function toggleAnswers(show) {
+      document.querySelectorAll('details.ans-box').forEach(el => el.open = show);
+    }
+
+    function resetAll() {
+      toggleHints(false);
+      toggleAnswers(false);
+    }
+
+    applySavedTheme();
+  </script>
+</body>
+</html>

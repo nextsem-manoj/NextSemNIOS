@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.zip
+scratch/
+scratch_*.mjs
+*_dump.txt
+*_text*.txt
+pdf_text*.txt
+positions_dump.txt
+.firebase
+navyug_pages/
+navyug_paper_extracted.txt
+notes-from-pdf/
+desktop.ini
+ 
+public/pdf/Class 12/Pradeeep Physics-12th/
+*.pdf
+*.zip

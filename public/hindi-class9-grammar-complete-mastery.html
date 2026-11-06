@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>कक्षा 9 हिंदी व्याकरण (Hindi Grammar Mastery) | Nextsem Academy</title>
+  <meta name="description" content="CBSE / NCERT कक्षा 9 हिंदी व्याकरण: उपसर्ग, प्रत्यय, समास, अर्थ की दृष्टि से वाक्य भेद एवं अलंकार का संपूर्ण इंटरएक्टिव अध्ययन एवं 20 अभ्यास प्रश्नोत्तरी।">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.75;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .container {
+      position: relative; max-width: 1060px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(16, 185, 129, 0.12));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 36px 24px; text-align: center;
+      margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 32px; font-weight: 900; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; max-width: 760px; margin: 0 auto; }
+
+    /* Module Navigation Tabs */
+    .module-nav {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px;
+    }
+    .mod-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 10px 18px; border-radius: 12px; font-size: 14px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .mod-btn:hover, .mod-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    /* Studio Card */
+    .studio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px; margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      font-size: 21px; font-weight: 800; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px; color: var(--accent-sky);
+    }
+
+    /* Grid & Cards */
+    .feature-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 14px;
+    }
+
+    .concept-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px; padding: 18px; transition: all 0.2s;
+    }
+    .concept-card:hover {
+      background: rgba(255, 255, 255, 0.04); border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .badge-gold {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+
+    .badge-emerald {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+
+    .badge-purple {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+
+    /* Interactive Solver Widget */
+    .solver-box {
+      background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-card);
+      border-radius: 14px; padding: 20px; margin-top: 16px;
+    }
+
+    .pill-selector {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;
+    }
+    .pill-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main); font-size: 13px; font-weight: 700; padding: 6px 14px;
+      border-radius: 9999px; cursor: pointer; transition: all 0.2s;
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: var(--accent-sky); color: #000; border-color: var(--accent-sky);
+    }
+
+    .result-display {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(56, 189, 248, 0.15));
+      border: 1px solid var(--accent-emerald); border-radius: 12px; padding: 16px;
+    }
+
+    /* MCQ Test Styles */
+    .mcq-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 20px; margin-bottom: 16px;
+    }
+    .opt-btn {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px; padding: 10px 14px; text-align: left;
+      color: inherit; font-size: 13px; font-weight: 500; cursor: pointer;
+      display: flex; align-items: center; gap: 8px; margin-bottom: 8px; width: 100%; transition: all 0.2s;
+    }
+    .opt-btn:hover:not(.disabled) { background: rgba(56, 189, 248, 0.1); border-color: var(--accent-sky); }
+    .opt-btn.correct { background: rgba(16, 185, 129, 0.2) !important; border-color: #10b981 !important; color: #34d399 !important; font-weight: 700; }
+    .exp-box { display: none; margin-top: 10px; padding: 10px 14px; background: rgba(0,0,0,0.4); border-left: 3px solid var(--accent-sky); border-radius: 0 8px 8px 0; font-size: 13px; color: var(--text-muted); }
+
+    /* Fill in the Blanks Styling */
+    .blank-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 20px; margin-bottom: 16px;
+    }
+    .blank-sentence {
+      font-size: 15px; font-weight: 700; line-height: 1.8; margin-bottom: 14px;
+    }
+    .blank-slot {
+      display: inline-block; min-width: 90px; text-align: center;
+      padding: 2px 10px; margin: 0 4px; border-bottom: 2px dashed var(--accent-sky);
+      color: var(--accent-gold); font-weight: 800; border-radius: 4px;
+      background: rgba(56, 189, 248, 0.08); transition: all 0.3s;
+    }
+    .blank-slot.filled-correct {
+      border-bottom: 2px solid #10b981; background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+    .blank-slot.filled-wrong {
+      border-bottom: 2px solid #f43f5e; background: rgba(244, 63, 94, 0.2);
+      color: #fb7185;
+    }
+    .blank-pills-row {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+    }
+    .blank-pill-btn {
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main); font-size: 13px; font-weight: 600; padding: 6px 14px;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s;
+    }
+    .blank-pill-btn:hover:not(.disabled) {
+      background: rgba(56, 189, 248, 0.15); border-color: var(--accent-sky); color: var(--accent-sky);
+    }
+    .blank-pill-btn.correct {
+      background: rgba(16, 185, 129, 0.25) !important; border-color: #10b981 !important; color: #34d399 !important; font-weight: 800;
+    }
+    .blank-pill-btn.wrong {
+      background: rgba(244, 63, 94, 0.25) !important; border-color: #f43f5e !important; color: #fb7185 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">CBSE कक्षा 9</span>
+      <span style="font-weight: 700; font-size: 15px;">हिंदी व्याकरण संपूर्ण अध्ययन</span>
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/docs/class9_hindi_grammar_complete_mastery_notes_practice.md" class="nav-btn" target="_blank">📄 Full Notes MD</a>
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">📖 CBSE & NCERT Class 9th Hindi Grammar</div>
+      <h1 class="hero-title">कक्षा 9 हिंदी व्याकरण महा-अध्याय</h1>
+      <p class="hero-subtitle">उपसर्ग-प्रत्यय, 6 समास व विग्रह, अर्थ की दृष्टि से वाक्य के 8 भेद, शब्दालंकार व अर्थालंकार एवं 20 अभ्यास प्रश्न।</p>
+    </header>
+
+    <!-- Module Selector Tabs -->
+    <div class="module-nav">
+      <button class="mod-btn active" onclick="switchTab('prefix', this)">🌟 1. उपसर्ग व प्रत्यय</button>
+      <button class="mod-btn" onclick="switchTab('samas', this)">🏛️ 2. समास Studio</button>
+      <button class="mod-btn" onclick="switchTab('sentences', this)">📜 3. वाक्य भेद (8 प्रकार)</button>
+      <button class="mod-btn" onclick="switchTab('alankar', this)">✨ 4. अलंकार Studio</button>
+      <button class="mod-btn" onclick="switchTab('quiz', this)">🎯 5. 20 MCQs टेस्ट</button>
+      <button class="mod-btn" onclick="switchTab('blanks', this)">📝 6. रिक्त स्थान पूर्ति (20 Blanks)</button>
+    </div>
+
+    <!-- 1. उपसर्ग एवं प्रत्यय -->
+    <section id="tab_prefix" class="studio-card">
+      <div class="section-title">🌟 स्तंभ 1: शब्द निर्माण — उपसर्ग एवं प्रत्यय</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">
+        शब्दांश जो मूल शब्द के <strong>प्रारंभ</strong> में जुड़ते हैं उन्हें <strong>उपसर्ग</strong> तथा जो <strong>अंत</strong> में जुड़ते हैं उन्हें <strong>प्रत्यय</strong> कहते हैं:
+      </p>
+
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-gold">उपसर्ग (Prefix)</span>
+          <div style="font-weight:800; font-size:16px; margin-bottom:6px;">शब्द के आगे जुड़ना</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • <strong>अति</strong> + अंत = अत्यंत<br>
+            • <strong>प्रति</strong> + एक = प्रत्येक<br>
+            • <strong>दुर्</strong> + गुण = दुर्गुण<br>
+            • <strong>निर्</strong> + धन = निर्धन<br>
+            • <strong>बे</strong> + ईमान = बेईमान
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-emerald">कृत् प्रत्यय (Primary Suffix)</span>
+          <div style="font-weight:800; font-size:16px; margin-bottom:6px;">क्रिया / धातु के पीछे जुड़ना</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • <strong>पढ़्</strong> + आक = पढ़ाकू<br>
+            • <strong>लिख्</strong> + आवट = लिखावट<br>
+            • <strong>हँस्</strong> + ई = हँसी<br>
+            • <strong>घूम्</strong> + अक्कड़ = घुमक्कड़
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-purple">तद्धित प्रत्यय (Secondary Suffix)</span>
+          <div style="font-weight:800; font-size:16px; margin-bottom:6px;">संज्ञा / सर्वनाम / विशेषण के पीछे जुड़ना</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • <strong>समाज</strong> + इक = सामाजिक<br>
+            • <strong>मानव</strong> + ता = मानवता<br>
+            • <strong>अपना</strong> + पन = अपनापन<br>
+            • <strong>भारत</strong> + ईय = भारतीय
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. समास Studio -->
+    <section id="tab_samas" class="studio-card" style="display:none;">
+      <div class="section-title">🏛️ स्तंभ 2: समास विग्रह एवं भेद अन्वेषक (Interactive Samas Explorer)</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:14px;">
+        नीचे दिए गए किसी भी शब्द पर क्लिक करें और उसका तुरंत <strong>समास विग्रह, पूर्व/उत्तर पद एवं समास भेद</strong> देखें:
+      </p>
+
+      <div class="solver-box">
+        <div class="pill-selector">
+          <button class="pill-btn active" onclick="showSamas('नीलकंठ', this)">नीलकंठ</button>
+          <button class="pill-btn" onclick="showSamas('यथाशक्ति', this)">यथाशक्ति</button>
+          <button class="pill-btn" onclick="showSamas('राजपुत्र', this)">राजपुत्र</button>
+          <button class="pill-btn" onclick="showSamas('चौराहा', this)">चौराहा</button>
+          <button class="pill-btn" onclick="showSamas('माता-पिता', this)">माता-पिता</button>
+          <button class="pill-btn" onclick="showSamas('पीतांबर', this)">पीतांबर</button>
+          <button class="pill-btn" onclick="showSamas('रोगमुक्त', this)">रोगमुक्त</button>
+          <button class="pill-btn" onclick="showSamas('दशानन', this)">दशानन</button>
+        </div>
+
+        <div class="result-display" id="samasResultBox">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. वाक्य भेद -->
+    <section id="tab_sentences" class="studio-card" style="display:none;">
+      <div class="section-title">📜 स्तंभ 3: अर्थ की दृष्टि से वाक्य के 8 भेद एवं रूपांतरण</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">
+        कक्षा 9 के अनुसार अर्थ के आधार पर वाक्य के 8 भेद होते हैं। नीचे दिए गए उदाहरणों को देखें:
+      </p>
+
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-sky">1. विधानवाचक (Assertive)</span>
+          <p style="font-size:13px; color:var(--text-muted);">सूर्य पूर्व में उदय होता है।</p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-rose">2. निषेधवाचक (Negative)</span>
+          <p style="font-size:13px; color:var(--text-muted);">मैं आज बाजार नहीं जाऊँगा।</p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-gold">3. आज्ञावाचक (Imperative)</span>
+          <p style="font-size:13px; color:var(--text-muted);">तुम कमरे से बाहर जाओ और दरवाजा बंद करो।</p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-purple">4. प्रश्नवाचक (Interrogative)</span>
+          <p style="font-size:13px; color:var(--text-muted);">क्या आपने अपना गृहकार्य पूरा कर लिया?</p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-emerald">5. विस्मयादिवाचक (Exclamatory)</span>
+          <p style="font-size:13px; color:var(--text-muted);">वाह! कितना मनमोहक और सुंदर दृश्य है।</p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-gold">6. इच्छावाचक (Optative)</span>
+          <p style="font-size:13px; color:var(--text-muted);">आपकी यात्रा मंगलमय और सुखद हो!</p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-sky">7. संदेहवाचक (Doubt)</span>
+          <p style="font-size:13px; color:var(--text-muted);">शायद आज शाम को तेज वर्षा होगी।</p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-emerald">8. संकेतवाचक (Conditional)</span>
+          <p style="font-size:13px; color:var(--text-muted);">यदि कठिन परिश्रम करोगे, तो अवश्य सफल होगे।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. अलंकार Studio -->
+    <section id="tab_alankar" class="studio-card" style="display:none;">
+      <div class="section-title">✨ स्तंभ 4: अलंकार — काव्य सौंदर्य एवं पहचान की ट्रिक्स</div>
+      
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-gold">अनुप्रास अलंकार (शब्दालंकार)</span>
+          <div style="font-weight:700; font-size:14px; margin-bottom:4px;">एक ही वर्ण की बार-बार आवृत्ति</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            <em>"चारु चंद्र की चंचल किरणें, खेल रही हैं जल-थल में।"</em> ('च' वर्ण)
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-emerald">यमक अलंकार (शब्दालंकार)</span>
+          <div style="font-weight:700; font-size:14px; margin-bottom:4px;">एक शब्द अनेक बार, भिन्न अर्थ</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            <em>"काली घटा का घमंड घटा।"</em><br>(घटा = काले बादल, घटा = कम हुआ)
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-purple">उपमा अलंकार (अर्थालंकार)</span>
+          <div style="font-weight:700; font-size:14px; margin-bottom:4px;">तुलना (पहचान: सा, सी, से, सम, सरिस)</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            <em>"पीपर पात सरिस मन डोला।"</em> (वाचक शब्द = सरिस)
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-sky">उत्प्रेक्षा अलंकार (अर्थालंकार)</span>
+          <div style="font-weight:700; font-size:14px; margin-bottom:4px;">संभावना (पहचान: मानो, जानो, मनु, जनु)</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            <em>"सिर फट गया उसका वहीं, मानो अरुण रंग का घड़ा हो।"</em>
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-rose">मानवीकरण अलंकार (अर्थालंकार)</span>
+          <div style="font-weight:700; font-size:14px; margin-bottom:4px;">प्रकृति पर मानवीय क्रियाओं का आरोप</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            <em>"मेघ आए बड़े बन-ठन के सँवर के।"</em> (बादल दामाद की तरह सजे)
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-gold">अतिशयोक्ति अलंकार (अर्थालंकार)</span>
+          <div style="font-weight:700; font-size:14px; margin-bottom:4px;">लोक-सीमा से अधिक बढ़ा-चढ़ाकर वर्णन</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            <em>"हनुमान की पूँछ में लगन न पाई आग, लंका सिगरी जल गई..."</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 20 Live MCQs Quiz -->
+    <section id="tab_quiz" class="studio-card" style="display:none;">
+      <div class="section-title">🎯 20 Master MCQs Practice Test (Instant Verification)</div>
+      <div style="background:rgba(15,23,42,0.8); border:1px solid var(--border-card); border-radius:12px; padding:12px 18px; display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; font-weight:700;">
+        <div>📊 कुल प्रश्न: <span style="color:var(--accent-sky);">20</span></div>
+        <div>⭐ MCQs प्राप्तांक: <span id="quizScore" style="color:var(--accent-emerald);">0</span> / <span id="quizAnswered">0</span></div>
+      </div>
+
+      <div id="quizContainer"></div>
+    </section>
+
+    <!-- 6. 20 Fill-in-the-Blanks Section -->
+    <section id="tab_blanks" class="studio-card" style="display:none;">
+      <div class="section-title">📝 20 Master Fill-in-the-Blanks (रिक्त स्थान पूर्ति अभ्यास)</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:16px;">
+        नीचे दिए गए वाक्यों में सही विकल्प पर क्लिक करके रिक्त स्थान भरें। प्रत्येक सही उत्तर पर तुरंत विजुअल फीडबैक एवं व्याख्या मिलेगी:
+      </p>
+      <div style="background:rgba(15,23,42,0.8); border:1px solid var(--border-card); border-radius:12px; padding:12px 18px; display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; font-weight:700;">
+        <div>📊 कुल रिक्त स्थान: <span style="color:var(--accent-sky);">20</span></div>
+        <div>⭐ रिक्त स्थान स्कोर: <span id="blanksScore" style="color:var(--accent-emerald);">0</span> / <span id="blanksAnswered">0</span></div>
+      </div>
+
+      <div id="blanksContainer"></div>
+    </section>
+  </main>
+
+  <script>
+    const samasDatabase = {
+      'नीलकंठ': {
+        vigrah: 'नीला है कंठ जिसका अर्थात् भगवान शिव',
+        bhed: 'बहुव्रीहि समास (अन्य पद प्रधान)',
+        reason: 'दोनों पद मिलकर तीसरे विशेष अर्थ (भगवान शिव) का बोध कराते हैं।'
+      },
+      'यथाशक्ति': {
+        vigrah: 'शक्ति के अनुसार',
+        bhed: 'अव्ययीभाव समास (पूर्व पद प्रधान)',
+        reason: 'पहला पद \'यथा\' एक अव्यय / उपसर्ग है तथा पूर्व पद प्रधान है।'
+      },
+      'राजपुत्र': {
+        vigrah: 'राजा का पुत्र',
+        bhed: 'संबंध तत्पुरुष समास (उत्तर पद प्रधान)',
+        reason: 'विग्रह में संबंध कारक का चिह्न \'का\' आता है।'
+      },
+      'चौराहा': {
+        vigrah: 'चार राहों का समूह / समाहार',
+        bhed: 'द्विगु समास (पहला पद संख्यावाचक)',
+        reason: 'पहला पद \'चौ\' (चार) संख्यावाची विशेषण है और समूह का बोध कराता है।'
+      },
+      'माता-पिता': {
+        vigrah: 'माता और पिता',
+        bhed: 'द्वंद्व समास (दोनों पद प्रधान)',
+        reason: 'दोनों पद समान महत्त्व के हैं और विग्रह में \'और\' योजक शब्द लगता है।'
+      },
+      'पीतांबर': {
+        vigrah: 'पीला है जो अंबर (वस्त्र) / पीला है अंबर जिसका अर्थात् श्रीकृष्ण',
+        bhed: 'कर्मधारय समास / बहुव्रीहि समास',
+        reason: 'विशेषण-विशेष्य के रूप में कर्मधारय, तथा श्रीकृष्ण के अर्थ में बहुव्रीहि।'
+      },
+      'रोगमुक्त': {
+        vigrah: 'रोग से मुक्त',
+        bhed: 'अपादान तत्पुरुष समास',
+        reason: 'रोग से अलग होने (मुक्त होने) का भाव है, अतः अपादान तत्पुरुष है।'
+      },
+      'दशानन': {
+        vigrah: 'दस हैं आनन (मुख) जिसके अर्थात् रावण',
+        bhed: 'बहुव्रीहि समास',
+        reason: 'दस मुख वाला तीसरा विशिष्ट व्यक्ति (रावण) इंगित है।'
+      }
+    };
+
+    function showSamas(word, btnEl) {
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      const data = samasDatabase[word];
+      document.getElementById('samasResultBox').innerHTML = `
+        <div style="font-size:18px; font-weight:800; color:var(--accent-gold); margin-bottom:6px;">✨ समस्त पद: ${word}</div>
+        <div style="font-size:15px; font-weight:700; color:#34d399; margin-bottom:6px;">📑 समास विग्रह: ${data.vigrah}</div>
+        <div style="font-size:14px; font-weight:700; color:var(--accent-sky); margin-bottom:8px;">🏛️ समास का भेद: ${data.bhed}</div>
+        <div style="font-size:13px; color:var(--text-muted);">💡 <strong>पहचान का नियम:</strong> ${data.reason}</div>
+      `;
+    }
+
+    const quizData = [
+      { id: 1, q: '\'अत्यंत\' शब्द में कौन सा उपसर्ग जुड़ा है?', opts: ['अत', 'अति', 'अत्य', 'आ'], ans: 1, exp: 'अति + अंत = अत्यंत (यण् संधि व अति उपसर्ग)' },
+      { id: 2, q: '\'सामाजिक\' शब्द में मूल शब्द और प्रत्यय क्या है?', opts: ['समाज + इक', 'समाज + क', 'समा + जिक', 'समाजिक + ई'], ans: 0, exp: 'समाज मूल शब्द में \'इक\' तद्धित प्रत्यय जुड़ने से पहला स्वर \'सा\' बन जाता है।' },
+      { id: 3, q: '\'दशानन\' में कौन सा समास है?', opts: ['कर्मधारय', 'बहुव्रीहि', 'तत्पुरुष', 'द्विगु'], ans: 1, exp: 'दस हैं आनन जिसके अर्थात् रावण (अन्य पद प्रधान बहुव्रीहि)।' },
+      { id: 4, q: '\'यथाशक्ति\' शब्द का सही समास विग्रह क्या है?', opts: ['जैसी शक्ति', 'शक्ति के अनुसार', 'शक्ति और यथा', 'पूरी शक्ति'], ans: 1, exp: 'यथाशक्ति का विग्रह \'शक्ति के अनुसार\' (अव्ययीभाव समास) होता है।' },
+      { id: 5, q: '\'पीतांबर\' का विग्रह यदि \'पीला है जो अंबर\' किया जाए, तो यह कौन सा समास होगा?', opts: ['बहुव्रीहि', 'कर्मधारय', 'तत्पुरुष', 'द्वंद्व'], ans: 1, exp: 'विशेषण-विशेष्य संबंध के कारण \'है जो\' विग्रह में कर्मधारय समास होता है।' },
+      { id: 6, q: '"यदि तुम कठिन परिश्रम करोगे तो प्रथम आओगे।" यह किस प्रकार का वाक्य है?', opts: ['विधानवाचक', 'इच्छावाचक', 'संकेतवाचक', 'संदेहवाचक'], ans: 2, exp: 'एक क्रिया का होना दूसरी क्रिया पर शर्त/निर्भर है, अतः संकेतवाचक है।' },
+      { id: 7, q: '"शायद आज धूप निकले।" यह वाक्य किस श्रेणी में आता है?', opts: ['संदेहवाचक', 'आज्ञावाचक', 'संकेतवाचक', 'विधानवाचक'], ans: 0, exp: '\'शायद\' शब्द संदेह या संभावना का बोध कराता है।' },
+      { id: 8, q: '"भगवान आपका कल्याण करे।" यह वाक्य किस भेद का उदाहरण है?', opts: ['आज्ञावाचक', 'इच्छावाचक', 'विस्मयादिवाचक', 'विधानवाचक'], ans: 1, exp: 'शुभकामना, आशीर्वाद या इच्छा का प्रकटीकरण इच्छावाचक वाक्य होता है।' },
+      { id: 9, q: '"काली घटा का घमंड घटा" में कौन सा अलंकार है?', opts: ['अनुप्रास', 'यमक', 'श्लेष', 'उपमा'], ans: 1, exp: 'घटा शब्द दो बार आया (पहला = बादल, दूसरा = कम हुआ), अतः यमक अलंकार है।' },
+      { id: 10, q: '"पीपर पात सरिस मन डोला" में वाचक शब्द कौन सा है?', opts: ['पीपर', 'पात', 'सरिस', 'डोला'], ans: 2, exp: '\'सरिस\' समानता बताने वाला वाचक शब्द है (उपमा अलंकार)।' },
+      { id: 11, q: '"मैया मैं तो चंद्र-खिलौना लैहों" में कौन सा अलंकार है?', opts: ['उपमा', 'रूपक', 'उत्प्रेक्षा', 'मानवीकरण'], ans: 1, exp: 'चंद्रमा और खिलौने में अभेद आरोप होने के कारण रूपक अलंकार है।' },
+      { id: 12, q: '"मेघ आए बड़े बन-ठन के सँवर के" में कौन सा अलंकार है?', opts: ['मानवीकरण', 'अतिशयोक्ति', 'श्लेष', 'यमक'], ans: 0, exp: 'प्राकृतिक बादलों पर मानवीय सजने-संवरने की चेष्टा का आरोप है।' },
+      { id: 13, q: '"सिर फट गया उसका वहीं, मानो अरुण रंग का घड़ा हो" में कौन सा अलंकार है?', opts: ['उपमा', 'रूपक', 'उत्प्रेक्षा', 'अतिशयोक्ति'], ans: 2, exp: '\'मानो\' वाचक शब्द से संभावना व्यक्त की गई है, अतः उत्प्रेक्षा अलंकार है।' },
+      { id: 14, q: '\'त्रिफला\' में कौन सा समास है?', opts: ['द्विगु', 'द्वंद्व', 'कर्मधारय', 'तत्पुरुष'], ans: 0, exp: 'पहला पद \'त्रि\' (तीन) संख्यावाची है (तीन फलों का समाहार)।' },
+      { id: 15, q: '\'रोगमुक्त\' का समास विग्रह क्या होगा?', opts: ['रोग और मुक्त', 'रोग से मुक्त', 'रोग का मुक्त', 'रोग में मुक्त'], ans: 1, exp: 'रोग से मुक्त (अपादान तत्पुरुष - अलग होने का भाव)।' },
+      { id: 16, q: '\'अनादर\' शब्द में कौन सा उपसर्ग प्रयुक्त है?', opts: ['अन', 'अन्', 'अ', 'अना'], ans: 1, exp: 'अन् (हलंत) + आदर = अनादर।' },
+      { id: 17, q: '\'लिखावट\' में कौन सा प्रत्यय है?', opts: ['आवट', 'वट', 'ट', 'आठ'], ans: 0, exp: 'लिख् + आवट = लिखावट (कृत् प्रत्यय)।' },
+      { id: 18, q: '\'रात-दिन\' में कौन सा समास है?', opts: ['अव्ययीभाव', 'द्वंद्व', 'द्विगु', 'बहुव्रीहि'], ans: 1, exp: 'दोनों पद प्रधान होने से द्वंद्व समास है (रात और दिन)।' },
+      { id: 19, q: '"अरे! तुम इतनी जल्दी आ गए!" यह वाक्य है:', opts: ['प्रश्नवाचक', 'विस्मयादिवाचक', 'आज्ञावाचक', 'विधानवाचक'], ans: 1, exp: 'अरे! विस्मयादिबोधक अव्यय आश्चर्य व्यक्त कर रहा है।' },
+      { id: 20, q: '"तरनि तनूजा तट तमाल तरुवर बहु छाए" में कौन सा अलंकार है?', opts: ['यमक', 'अनुप्रास', 'श्लेष', 'रूपक'], ans: 1, exp: '\'त\' वर्ण की बार-बार आवृत्ति होने से अनुप्रास अलंकार है।' }
+    ];
+
+    const blanksData = [
+      {
+        id: 1, topic: 'उपसर्ग',
+        before: "'अत्यंत' शब्द में मूल शब्द 'अंत' है तथा उपसर्ग ",
+        after: " जुड़ा हुआ है।",
+        opts: ['अति', 'अत', 'अत्य', 'आ'],
+        ans: 0,
+        exp: "अति + अंत = अत्यंत (यण् संधि के नियमानुसार 'इ' का 'य्' बन जाता है)।"
+      },
+      {
+        id: 2, topic: 'उपसर्ग',
+        before: "'दुर्गुण' शब्द में मूल शब्द 'गुण' के आगे ",
+        after: " उपसर्ग लगा है।",
+        opts: ['दुः', 'दुर्', 'दुरा', 'दु'],
+        ans: 1,
+        exp: "दुर् (हलंत) + गुण = दुर्गुण।"
+      },
+      {
+        id: 3, topic: 'प्रत्यय',
+        before: "'धार्मिक' शब्द में 'धर्म' मूल शब्द के साथ ",
+        after: " प्रत्यय जुड़ा है।",
+        opts: ['इक', 'मिक', 'क', 'ईक'],
+        ans: 0,
+        exp: "धर्म + इक = धार्मिक (इक प्रत्यय से प्रथम स्वर में आदि-वृद्धि होती है)।"
+      },
+      {
+        id: 4, topic: 'कृत् प्रत्यय',
+        before: "जो प्रत्यय क्रिया या धातु के अंत में जुड़कर नए शब्द बनाते हैं, उन्हें ",
+        after: " प्रत्यय कहते हैं।",
+        opts: ['तद्धित', 'कृत्', 'स्त्री', 'अव्यय'],
+        ans: 1,
+        exp: "क्रिया/धातु के अंत में लगने वाले प्रत्यय 'कृत् प्रत्यय' कहलाते हैं (जैसे लिख् + आवट = लिखावट)।"
+      },
+      {
+        id: 5, topic: 'तद्धित प्रत्यय',
+        before: "'अपनापन' शब्द में 'अपना' सर्वनाम के साथ ",
+        after: " भाववाचक तद्धित प्रत्यय जुड़ा है।",
+        opts: ['पन', 'अन', 'नापन', 'पा'],
+        ans: 0,
+        exp: "अपना + पन = अपनापन (भाववाचक संज्ञा बनाने वाला तद्धित प्रत्यय)।"
+      },
+      {
+        id: 6, topic: 'समास',
+        before: "जिस समास में पहला पद प्रधान तथा अव्यय होता है, उसे ",
+        after: " समास कहते हैं।",
+        opts: ['तत्पुरुष', 'अव्ययीभाव', 'द्विगु', 'कर्मधारय'],
+        ans: 1,
+        exp: "जैसे: 'यथाशक्ति' (शक्ति के अनुसार), 'आजन्म' (जन्म से लेकर)।"
+      },
+      {
+        id: 7, topic: 'समास',
+        before: "'चौराहा' (चार राहों का समाहार) में पहला पद संख्यावाची होने के कारण ",
+        after: " समास है।",
+        opts: ['द्विगु', 'द्वंद्व', 'बहुव्रीहि', 'कर्मधारय'],
+        ans: 0,
+        exp: "पूर्वपद संख्यावाची विशेषण होने के कारण यह द्विगु समास है।"
+      },
+      {
+        id: 8, topic: 'समास',
+        before: "जिस समस्त पद में दोनों पद प्रधान होते हैं तथा विग्रह में 'और/या' लगता है, उसे ",
+        after: " समास कहते हैं।",
+        opts: ['द्विगु', 'तत्पुरुष', 'द्वंद्व', 'कर्मधारय'],
+        ans: 2,
+        exp: "जैसे: माता-पिता (माता और पिता), दाल-रोटी (दाल और रोटी)।"
+      },
+      {
+        id: 9, topic: 'समास',
+        before: "'नीलकंठ' का विग्रह 'नीला है कंठ जिसका अर्थात् शिव' करने पर यह ",
+        after: " समास बनता है।",
+        opts: ['कर्मधारय', 'बहुव्रीहि', 'तत्पुरुष', 'अव्ययीभाव'],
+        ans: 1,
+        exp: "दोनों पद मिलकर किसी तीसरे अन्य पद (भगवान शिव) की ओर संकेत करते हैं।"
+      },
+      {
+        id: 10, topic: 'समास',
+        before: "'राजपुत्र' (राजा का पुत्र) में संबंध कारक की विभक्ति का लोप होने के कारण ",
+        after: " समास है।",
+        opts: ['तत्पुरुष', 'अव्ययीभाव', 'द्वंद्व', 'द्विगु'],
+        ans: 0,
+        exp: "उत्तर पद प्रधान और कारक चिह्नों (का, की, के) का लोप होने से तत्पुरुष समास है।"
+      },
+      {
+        id: 11, topic: 'वाक्य भेद',
+        before: "जिस वाक्य से किसी कार्य के होने या सामान्य कथन की सीधी सूचना मिले, उसे ",
+        after: " वाक्य कहते हैं।",
+        opts: ['विधानवाचक', 'निषेधवाचक', 'आज्ञावाचक', 'इच्छावाचक'],
+        ans: 0,
+        exp: "जैसे: 'सूर्य पूर्व दिशा में उगता है।'"
+      },
+      {
+        id: 12, topic: 'वाक्य भेद',
+        before: "\"तुम अभी इसी समय बाहर चले जाओ।\" यह वाक्य ",
+        after: " भेद के अंतर्गत आता है।",
+        opts: ['निषेधवाचक', 'आज्ञावाचक', 'विधानवाचक', 'प्रश्नवाचक'],
+        ans: 1,
+        exp: "किसी को कार्य करने का आदेश या निर्देश देना आज्ञावाचक वाक्य कहलाता है।"
+      },
+      {
+        id: 13, topic: 'वाक्य भेद',
+        before: "\"शायद आज शाम को तेज आँधी आए।\" में 'शायद' शब्द ",
+        after: " का बोध कराता है।",
+        opts: ['संदेहवाचक', 'संकेतवाचक', 'इच्छावाचक', 'विस्मयादिवाचक'],
+        ans: 0,
+        exp: "संभावना, अनुमान या अनिश्चितता की स्थिति को संदेहवाचक वाक्य कहते हैं।"
+      },
+      {
+        id: 14, topic: 'वाक्य भेद',
+        before: "\"ईश्वर करे आप परीक्षा में सर्वोत्तम अंक प्राप्त करें!\" यह ",
+        after: " वाक्य है।",
+        opts: ['आज्ञावाचक', 'इच्छावाचक', 'विधानवाचक', 'संदेहवाचक'],
+        ans: 1,
+        exp: "आशीर्वाद, शुभकामना अथवा मन की मंगल कामना व्यक्त करने वाला वाक्य इच्छावाचक होता है।"
+      },
+      {
+        id: 15, topic: 'वाक्य भेद',
+        before: "\"यदि समय पर वर्षा होगी, तो फसल भी अच्छी होगी।\" यह ",
+        after: " वाक्य का उदाहरण है।",
+        opts: ['संकेतवाचक', 'संदेहवाचक', 'विधानवाचक', 'इच्छावाचक'],
+        ans: 0,
+        exp: "जब एक क्रिया का होना दूसरी क्रिया पर शर्त या कारण-कार्य संबंध पर निर्भर हो, तो संकेतवाचक होता है।"
+      },
+      {
+        id: 16, topic: 'अलंकार',
+        before: "\"चारु चंद्र की चंचल किरणें\" में 'च' वर्ण की बार-बार आवृत्ति होने से ",
+        after: " अलंकार है।",
+        opts: ['यमक', 'अनुप्रास', 'श्लेष', 'उपमा'],
+        ans: 1,
+        exp: "समान वर्णों की बार-बार आवृत्ति होने पर अनुप्रास अलंकार होता है।"
+      },
+      {
+        id: 17, topic: 'अलंकार',
+        before: "\"कनक कनक ते सौ गुनी\" में 'कनक' शब्द दो बार आया है और दोनों के अर्थ (सोना व धतूरा) अलग हैं, अतः यहाँ ",
+        after: " अलंकार है।",
+        opts: ['यमक', 'अनुप्रास', 'श्लेष', 'रूपक'],
+        ans: 0,
+        exp: "एक ही शब्द बार-बार आए और हर बार अर्थ भिन्न हो तो यमक अलंकार होता है।"
+      },
+      {
+        id: 18, topic: 'अलंकार',
+        before: "\"पीपर पात सरिस मन डोला\" में 'सरिस' शब्द उपमा अलंकार का ",
+        after: " कहलाता है।",
+        opts: ['वाचक शब्द', 'उपमेय', 'उपमान', 'साधारण धर्म'],
+        ans: 0,
+        exp: "सा, सी, से, सम, सरिस, जैसा आदि समानता दर्शाने वाले वाचक शब्द कहलाते हैं।"
+      },
+      {
+        id: 19, topic: 'अलंकार',
+        before: "जहाँ उपमेय में उपमान की संभावना व्यक्त हो तथा 'मानो, जानो, मनु, जनु' शब्द आएँ, वहाँ ",
+        after: " अलंकार होता है।",
+        opts: ['उपमा', 'उत्प्रेक्षा', 'रूपक', 'अतिशयोक्ति'],
+        ans: 1,
+        exp: "'मानो, जानो, मनु, जनु' उत्प्रेक्षा अलंकार के प्रमुख पहचान शब्द हैं।"
+      },
+      {
+        id: 20, topic: 'अलंकार',
+        before: "\"मेघ आए बड़े बन-ठन के सँवर के\" में प्राकृतिक बादलों पर मानव की भाँति सजने-संवरने का आरोप होने से ",
+        after: " अलंकार है।",
+        opts: ['अतिशयोक्ति', 'मानवीकरण', 'यमक', 'रूपक'],
+        ans: 1,
+        exp: "जब जड़ प्रकृति या निर्जीव पर मानवीय भावनाओं/चेष्टाओं का आरोप हो तो मानवीकरण अलंकार होता है।"
+      }
+    ];
+
+    let quizScore = 0;
+    let quizAnswered = 0;
+    const answeredMap = {};
+
+    let blanksScore = 0;
+    let blanksAnswered = 0;
+    const blanksAnsweredMap = {};
+
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = quizData.map((d, idx) => `
+        <div class="mcq-card" id="q_${d.id}">
+          <div style="font-size:11px; font-weight:800; color:var(--accent-gold); margin-bottom:4px;">प्रश्न संख्या ${idx + 1}</div>
+          <div style="font-weight:700; font-size:15px; margin-bottom:12px;">${d.q}</div>
+          <div class="opts-grid">
+            ${d.opts.map((opt, optIdx) => `
+              <button class="opt-btn" id="opt_${d.id}_${optIdx}" onclick="checkAnswer(${d.id}, ${optIdx}, ${d.ans})">
+                <span style="font-weight:700; color:var(--accent-sky);">(${String.fromCharCode(65 + optIdx)})</span> ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <div class="exp-box" id="exp_${d.id}">
+            💡 <strong>व्याख्या:</strong> ${d.exp}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function checkAnswer(qId, selectedIdx, correctIdx) {
+      if (answeredMap[qId] !== undefined) return;
+      answeredMap[qId] = selectedIdx;
+      quizAnswered++;
+
+      const isCorrect = (selectedIdx === correctIdx);
+      if (isCorrect) quizScore++;
+
+      document.getElementById(`opt_${qId}_${correctIdx}`).classList.add('correct');
+      if (!isCorrect) {
+        document.getElementById(`opt_${qId}_${selectedIdx}`).classList.add('wrong');
+      }
+
+      document.getElementById(`q_${qId}`).querySelectorAll('.opt-btn').forEach(b => b.classList.add('disabled'));
+      document.getElementById(`exp_${qId}`).style.display = 'block';
+
+      document.getElementById('quizScore').innerText = quizScore;
+      document.getElementById('quizAnswered').innerText = quizAnswered;
+
+      if (isCorrect) confetti({ particleCount: 25, spread: 50, origin: { y: 0.8 } });
+      if (quizAnswered === quizData.length && quizScore >= 16) {
+        setTimeout(() => confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } }), 300);
+      }
+    }
+
+    function renderBlanks() {
+      const container = document.getElementById('blanksContainer');
+      container.innerHTML = blanksData.map((d, idx) => `
+        <div class="blank-card" id="blank_card_${d.id}">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:11px; font-weight:800; color:var(--accent-gold);">रिक्त स्थान ${idx + 1}</span>
+            <span style="font-size:11px; font-weight:700; background:rgba(56,189,248,0.15); color:var(--accent-sky); padding:2px 8px; border-radius:6px;">${d.topic}</span>
+          </div>
+          <div class="blank-sentence">
+            ${d.before}<span class="blank-slot" id="slot_${d.id}">______</span>${d.after}
+          </div>
+          <div class="blank-pills-row">
+            ${d.opts.map((opt, optIdx) => `
+              <button class="blank-pill-btn" id="blank_pill_${d.id}_${optIdx}" onclick="checkBlank(${d.id}, ${optIdx}, ${d.ans})">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <div class="exp-box" id="blank_exp_${d.id}">
+            💡 <strong>नियम व व्याख्या:</strong> ${d.exp}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function checkBlank(bId, selectedIdx, correctIdx) {
+      if (blanksAnsweredMap[bId] !== undefined) return;
+      blanksAnsweredMap[bId] = selectedIdx;
+      blanksAnswered++;
+
+      const isCorrect = (selectedIdx === correctIdx);
+      if (isCorrect) blanksScore++;
+
+      const slot = document.getElementById(`slot_${bId}`);
+      const correctText = blanksData.find(b => b.id === bId).opts[correctIdx];
+      const selectedText = blanksData.find(b => b.id === bId).opts[selectedIdx];
+
+      slot.innerText = isCorrect ? correctText : selectedText;
+      slot.classList.add(isCorrect ? 'filled-correct' : 'filled-wrong');
+
+      document.getElementById(`blank_pill_${bId}_${correctIdx}`).classList.add('correct');
+      if (!isCorrect) {
+        document.getElementById(`blank_pill_${bId}_${selectedIdx}`).classList.add('wrong');
+      }
+
+      document.getElementById(`blank_card_${bId}`).querySelectorAll('.blank-pill-btn').forEach(b => b.classList.add('disabled'));
+      document.getElementById(`blank_exp_${bId}`).style.display = 'block';
+
+      document.getElementById('blanksScore').innerText = blanksScore;
+      document.getElementById('blanksAnswered').innerText = blanksAnswered;
+
+      if (isCorrect) confetti({ particleCount: 20, spread: 45, origin: { y: 0.85 } });
+      if (blanksAnswered === blanksData.length && blanksScore >= 16) {
+        setTimeout(() => confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 } }), 300);
+      }
+    }
+
+    function switchTab(tabName, btnEl) {
+      document.querySelectorAll('.mod-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      ['tab_prefix', 'tab_samas', 'tab_sentences', 'tab_alankar', 'tab_quiz', 'tab_blanks'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById('tab_' + tabName);
+      if (activeSection) activeSection.style.display = 'block';
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    // Init
+    showSamas('नीलकंठ', document.querySelector('.pill-btn'));
+    renderQuiz();
+    renderBlanks();
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "nextsem-nios",
+  "private": true,
+  "version": "1.0.0",
+  "description": "NextSemNIOS — Official NIOS Open Schooling Textbooks, Guided Modules & Practice Portal",
+  "type": "module",
+  "scripts": {
+    "server": "node server.js",
+    "start": "node server.js",
+    "dev": "node scripts/dev_runner.mjs",
+    "build": "tsc -b && node scripts/build_runner.mjs",
+    "deploy": "node scripts/deploy_all.mjs",
+    "deploy:all": "node scripts/deploy_all.mjs",
+    "deploy:quick": "npm run build && npx firebase-tools deploy --only hosting --project nextsem-ncert-2403 --non-interactive",
+    "sync:cap": "npx cap sync android",
+    "watch:deploy": "node scripts/watch_and_sync.cjs",
+    "watch:pdf": "node scripts/watch_and_update_marked_pdfs.cjs --watch",
+    "update:pdf": "node scripts/watch_and_update_marked_pdfs.cjs --sync",
+    "ecosystem:status": "node scripts/ecosystem_sync.cjs",
+    "ecosystem:push": "node scripts/ecosystem_sync.cjs --push",
+    "lint": "oxlint",
+    "save-chat": "node scripts/save_chat.cjs",
+    "status": "node scripts/project-status.cjs",
+    "task": "node scripts/project-status.cjs",
+    "sync:stitch": "node scripts/sync_stitch.mjs",
+    "merge:pdf": "node pdf_hindi_and_eng/merge_cli.cjs",
+    "preview": "vite preview --port 3002"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.1",
+    "@capacitor/cli": "8.5.1",
+    "@capacitor/core": "8.5.1",
+    "@types/canvas-confetti": "^1.9.0",
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.28.0",
+    "pdf-lib": "^1.17.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "firebase-tools": "^15.29.0",
+    "oxlint": "^1.75.0",
+    "pdf-parse": "^2.4.5",
+    "sharp": "^0.35.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  }
+}

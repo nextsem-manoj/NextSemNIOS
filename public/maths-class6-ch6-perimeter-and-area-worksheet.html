@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 6 Maths Chapter 6: Perimeter and Area — Interactive Bilingual Workbook & A4 Print</title>
+  <meta name="description" content="NCERT Class 6 Mathematics Chapter 6: Perimeter and Area (गणित प्रकाश: परिमाप और क्षेत्रफल - fegp106) — 100% authentic interactive bilingual workbook replicating the NCERT textbook PDF with live geometric calculators, L-shape area decomposition, boundary puzzles, MCQs, and A4 print sheet.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(56, 189, 248, 0.3);
+      --accent-teal: #14b8a6;
+      --accent-emerald: #10b981;
+      --accent-green: #04AA6D;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --input-bg: #070e1e;
+      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --input-bg: #f8fafc;
+      --shadow-card: 0 4px 16px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 90px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 85%, rgba(20, 184, 166, 0.1) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Sticky Navigation Bar */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+    }
+
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+
+    .breadcrumb-trail a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .breadcrumb-trail a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #64748b; font-size: 0.75rem; }
+    .breadcrumb-current { color: var(--text-main); font-weight: 800; }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+    }
+
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Header */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(99, 102, 241, 0.15) 50%, rgba(20, 184, 166, 0.18) 100%);
+      border: 1.5px solid var(--accent-sky);
+      border-radius: 20px;
+      padding: 24px 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 32px rgba(56, 189, 248, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge-row {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;
+    }
+
+    .pill-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 10px; border-radius: 9999px;
+      font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .pill-sky { background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8; }
+    .pill-teal { background: rgba(20, 184, 166, 0.2); color: #2dd4bf; border: 1px solid #14b8a6; }
+    .pill-gold { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+
+    .hero-title {
+      font-size: 1.7rem; font-weight: 900; line-height: 1.25; margin-bottom: 6px;
+      color: #ffffff;
+    }
+    body.light-theme .hero-title { color: #0f172a; }
+
+    .hero-subtitle {
+      font-size: 0.92rem; color: var(--text-muted); font-weight: 500; margin-bottom: 16px;
+    }
+
+    .score-dock {
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(6, 12, 24, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 12px 18px;
+      flex-wrap: wrap; gap: 12px;
+    }
+    body.light-theme .score-dock { background: #f1f5f9; border-color: #cbd5e1; }
+
+    .score-chip {
+      display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.88rem;
+    }
+    .score-chip span.num { color: #38bdf8; font-size: 1.2rem; font-family: 'JetBrains Mono', monospace; }
+
+    /* Language Switcher */
+    .lang-toggle-bar {
+      display: flex; gap: 6px; background: rgba(255, 255, 255, 0.05); padding: 4px; border-radius: 10px;
+    }
+    .lang-btn {
+      padding: 5px 12px; border-radius: 8px; border: none; font-size: 0.76rem; font-weight: 800;
+      cursor: pointer; background: transparent; color: var(--text-muted); transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--accent-sky); color: #041226;
+    }
+
+    /* Cards */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .section-card:hover {
+      border-color: var(--accent-sky);
+    }
+
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px;
+      flex-wrap: wrap; gap: 8px;
+    }
+    body.light-theme .section-header { border-bottom-color: #e2e8f0; }
+
+    .section-title {
+      font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;
+    }
+
+    /* Formula Badge */
+    .formula-box {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1.5px dashed var(--accent-sky);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #7dd3fc;
+      font-size: 0.9rem;
+    }
+    body.light-theme .formula-box { color: #0284c7; background: #e0f2fe; }
+
+    /* Interactive Inputs */
+    .fill-input {
+      background: var(--input-bg);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      width: 100%;
+      outline: none;
+      transition: all 0.2s;
+    }
+    body.light-theme .fill-input { border-color: #94a3b8; }
+    .fill-input:focus { border-color: var(--accent-sky); box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2); }
+    .fill-input.correct { border-color: #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; }
+    .fill-input.wrong { border-color: #f43f5e; background: rgba(244, 63, 94, 0.15); color: #f43f5e; }
+
+    /* Interactive Options Grid */
+    .options-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 12px;
+    }
+    .option-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.2s;
+    }
+    body.light-theme .option-card { background: #f8fafc; border-color: #cbd5e1; }
+    .option-card:hover { border-color: var(--accent-sky); background: rgba(56, 189, 248, 0.1); }
+    .option-card.selected-correct { border-color: #10b981; background: rgba(16, 185, 129, 0.2); color: #10b981; }
+    .option-card.selected-wrong { border-color: #f43f5e; background: rgba(244, 63, 94, 0.2); color: #f43f5e; }
+
+    /* Live Geometry Canvas / Sandbox */
+    .geo-sandbox {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin: 14px 0;
+    }
+    body.light-theme .geo-sandbox { background: #f1f5f9; }
+
+    .check-btn {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+      transition: all 0.2s;
+    }
+    .check-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4); }
+
+    /* Print Formatting */
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; }
+      .bg-glow, .top-nav, .nav-actions, .check-btn, .lang-toggle-bar, .no-print { display: none !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      .section-card { border: 1px solid #94a3b8 !important; box-shadow: none !important; page-break-inside: avoid; }
+      .hero-banner { background: #f1f5f9 !important; border: 1px solid #000 !important; color: #000 !important; }
+      .hero-title { color: #000 !important; }
+      .hero-subtitle { color: #333 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-nav">
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?view=classes">Classes</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=6&subject=c6-maths">Class 6 Maths (गणित प्रकाश)</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Ch 6: परिमाप और क्षेत्रफल</span>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle-bar">
+        <button type="button" class="lang-btn active" onclick="setLanguage('bilingual')">द्विभाषी (Both)</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('hindi')">हिंदी</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('english')">English</button>
+      </div>
+      <button type="button" class="btn-nav" onclick="window.print()" title="Print A4 Worksheet">🖨️ Print A4</button>
+      <button type="button" class="btn-nav" onclick="toggleTheme()" id="themeToggleBtn">☀️ Light</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-badge-row">
+        <span class="pill-badge pill-sky">NCERT Class 6 Mathematics (गणित प्रकाश)</span>
+        <span class="pill-badge pill-gold">Code: fegp106</span>
+        <span class="pill-badge pill-teal">Grade 6 NEP 2026-27</span>
+        <span class="pill-badge pill-sky">29 Pages Full Coverage</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="lang-hi">अध्याय 6: परिमाप और क्षेत्रफल</span>
+        <span class="lang-sep"> • </span>
+        <span class="lang-en">Chapter 6: Perimeter and Area</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span class="lang-hi">100% प्रामाणिक NCERT कार्यपुस्तिका: आयत व वर्ग का परिमाप, L-आकार के क्षेत्रफलों का विभाजन, सीधे व विकर्ण मात्रक ($s$ एवं $d$), और समान क्षेत्रफल पर भिन्न परिमाप की पहेलियाँ।</span>
+        <span class="lang-en">100% Authentic NCERT workbook: Perimeter of rectangles & squares, decomposing L-shapes, straight & diagonal units ($s$ & $d$), and area-perimeter puzzles.</span>
+      </p>
+
+      <div class="score-dock">
+        <div class="score-chip">
+          <span>🏆 Progress:</span>
+          <span class="num" id="scoreDisplay">0 / 12</span>
+        </div>
+        <div class="score-chip">
+          <span>🎯 Accuracy:</span>
+          <span class="num" id="accuracyDisplay">0%</span>
+        </div>
+        <button type="button" class="check-btn" onclick="checkAllAnswers()">
+          <span>⚡ Check All Answers</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 1: Perimeter Foundations & Interactive Calculator -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>📏 1. परिमाप क्या है? (Understanding Perimeter — NCERT Page 130)</span>
+        </h2>
+        <span class="pill-badge pill-sky">Formula Studio</span>
+      </div>
+      
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 10px;">
+        <span class="lang-hi">किसी बंद समतल आकृति के चारों ओर एक बार चक्कर लगाने में तय की गई दूरी को उसका <strong>परिमाप (Perimeter)</strong> कहते हैं।</span>
+        <span class="lang-en">The perimeter of any closed plane figure is the total distance covered along its outer boundary when you go around it once.</span>
+      </p>
+
+      <div class="formula-box">
+        • Perimeter of Rectangle (आयत का परिमाप) = 2 × (Length + Breadth) = 2 × (l + b)<br>
+        • Perimeter of Square (वर्ग का परिमाप) = 4 × Side (4 × भुजा)<br>
+        • Equilateral Triangle (समबाहु त्रिभुज) = 3 × Side<br>
+        • Regular Hexagon (सम षट्भुज) = 6 × Side
+      </div>
+
+      <!-- Live Interactive Visualizer -->
+      <div class="geo-sandbox">
+        <div style="font-weight: 800; font-size: 0.88rem; color: #38bdf8;">
+          ⚡ Live Rectangle Perimeter & Area Explorer
+        </div>
+        <div style="display: flex; gap: 14px; width: 100%; max-width: 450px;">
+          <div style="flex: 1;">
+            <label style="font-size: 0.76rem; color: var(--text-muted);">Length (l in cm):</label>
+            <input type="number" id="calcLength" class="fill-input" value="12" min="1" max="50" oninput="updateGeoPreview()">
+          </div>
+          <div style="flex: 1;">
+            <label style="font-size: 0.76rem; color: var(--text-muted);">Breadth (b in cm):</label>
+            <input type="number" id="calcBreadth" class="fill-input" value="8" min="1" max="50" oninput="updateGeoPreview()">
+          </div>
+        </div>
+
+        <svg id="geoSvg" width="240" height="150" style="border: 1px dashed rgba(255,255,255,0.2); border-radius: 8px; background: rgba(0,0,0,0.2); margin-top: 8px;">
+          <rect id="rectPreview" x="30" y="25" width="180" height="100" fill="rgba(56, 189, 248, 0.2)" stroke="#38bdf8" stroke-width="2" rx="4"/>
+          <text id="textL" x="120" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">12 cm</text>
+          <text id="textB" x="220" y="80" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">8 cm</text>
+        </svg>
+
+        <div style="display: flex; gap: 16px; font-weight: 800; font-size: 0.9rem;">
+          <div>Perimeter: <span id="outPerimeter" style="color: #38bdf8;">40 cm</span></div>
+          <div>Area: <span id="outArea" style="color: #10b981;">96 cm²</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Real-World NCERT Problems (Debojeet, Akshi, Usha) -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🏃‍♀️ 2. व्यावहारिक प्रश्न (Real-World Word Problems — NCERT Page 131–132)</span>
+        </h2>
+        <span class="pill-badge pill-gold">Textbook Examples</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <!-- Q1: Debojeet Square Photo Frame -->
+        <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 6px;">
+            Q1. देबोजित 1 मीटर भुजा वाले एक वर्गाकार फोटो फ्रेम के चारों ओर रंगीन टेप लगाना चाहता है। उसे कितने लंबे टेप की आवश्यकता होगी?
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
+            (Debojeet wants to put coloured tape all around a square photo frame of side 1 m. What length of tape does he need?)
+          </div>
+          <div class="options-grid">
+            <div class="option-card" onclick="selectMcq(this, false, 'w1')">1 m</div>
+            <div class="option-card" onclick="selectMcq(this, false, 'w1')">2 m</div>
+            <div class="option-card" onclick="selectMcq(this, true, 'w1')">4 m (4 × 1 m = 4 m)</div>
+            <div class="option-card" onclick="selectMcq(this, false, 'w1')">8 m</div>
+          </div>
+        </div>
+
+        <!-- Q2: Akshi Tablecloth Lace -->
+        <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 6px;">
+            Q2. अक्शी 3 मीटर लंबाई और 2 मीटर चौड़ाई वाली एक मेजपोश (tablecloth) के चारों ओर लेस लगाना चाहती है। आवश्यक लेस की लंबाई ज्ञात कीजिए।
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
+            (Akshi wants to put lace around a tablecloth 3 m long and 2 m wide. Find the length of lace needed.)
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <input type="text" class="fill-input" data-ans="10 m,10m,10 मीटर,10" placeholder="उत्तर लिखें (उदा: 10 m)">
+          </div>
+        </div>
+
+        <!-- Q3: Usha Running Track -->
+        <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 6px;">
+            Q3. उषा 75 मीटर भुजा वाले एक वर्गाकार पार्क के 3 चक्कर लगाती है। उसने कुल कितनी दूरी तय की?
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
+            (Usha takes 3 rounds of a square park of side 75 m. What is the total distance travelled by her?)
+          </div>
+          <div class="options-grid">
+            <div class="option-card" onclick="selectMcq(this, false, 'w3')">300 m</div>
+            <div class="option-card" onclick="selectMcq(this, false, 'w3')">600 m</div>
+            <div class="option-card" onclick="selectMcq(this, true, 'w3')">900 m (Perimeter = 300 m × 3 = 900 m)</div>
+            <div class="option-card" onclick="selectMcq(this, false, 'w3')">225 m</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Straight and Diagonal Units (s and d) -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>📐 3. सीधे और विकर्ण मात्रक (Straight &amp; Diagonal Units 's' &amp; 'd' — NCERT Page 136)</span>
+        </h2>
+        <span class="pill-badge pill-teal">New NCERT Feature</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+        <span class="lang-hi">ग्रिड में क्षैतिज व ऊर्ध्वाधर भुजा को $s$ (Straight) तथा तिरछी भुजा को $d$ (Diagonal) कहते हैं।</span>
+        <span class="lang-en">Grid lines along horizontal/vertical are $s$ (straight units), slanted lines along grid corners are $d$ (diagonal units).</span>
+      </p>
+
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+        <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 6px;">
+          Q4. यदि एक बंद आकृति की सीमा में 8 सीधी भुजाएँ ($s$) और 2 विकर्ण भुजाएँ ($d$) हैं, तो इसका परिमाप क्या होगा?
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
+          (If a boundary has 8 straight sides and 2 diagonal sides, what is its perimeter expression?)
+        </div>
+        <div class="options-grid">
+          <div class="option-card" onclick="selectMcq(this, true, 'sd1')">8s + 2d</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'sd1')">10s</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'sd1')">16sd</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'sd1')">4s + 6d</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Splitting L-Shapes to Find Area -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🧩 4. आकृतियों को आयतों में बाँटकर क्षेत्रफल निकालना (Decomposing L-Shapes — Page 139)</span>
+        </h2>
+        <span class="pill-badge pill-sky">Core Concept</span>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+        <span class="lang-hi">एक L-आकार की आकृति को दो आयतों में विभाजित करके उसका कुल क्षेत्रफल ज्ञात कीजिए:</span>
+        <span class="lang-en">Split the L-shape into two non-overlapping rectangles to find the total area:</span>
+      </p>
+
+      <div style="background: rgba(0, 0, 0, 0.25); border: 1px dashed var(--accent-sky); border-radius: 10px; padding: 16px; margin-bottom: 14px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; color: #7dd3fc; line-height: 1.8;">
+          • आयत 1 (Rectangle 1): 4 cm × 2 cm = 8 cm²<br>
+          • आयत 2 (Rectangle 2): 3 cm × 2 cm = 6 cm²<br>
+          • कुल क्षेत्रफल (Total Area) = 8 cm² + 6 cm² = <strong>14 cm²</strong>
+        </div>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px;">
+        <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 6px;">
+          Q5. एक कमरा 5 m लंबा और 4 m चौड़ा है। इसके फर्श पर 3 m भुजा का एक वर्गाकार कालीन बिछाया गया है। फर्श के उस भाग का क्षेत्रफल क्या होगा जिस पर कालीन नहीं बिछा है?
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
+          (A floor is 5 m long and 4 m wide. A square carpet of side 3 m is laid on the floor. Find the area of the floor that is not carpeted.)
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <input type="text" class="fill-input" data-ans="11 m²,11m²,11 sq m,11 वर्ग मीटर,11" placeholder="उत्तर लिखें (उदा: 11 m²)">
+        </div>
+        <div style="font-size: 0.76rem; color: var(--text-muted); margin-top: 6px;">
+          💡 संकेत: कमरे का कुल क्षेत्रफल = 5 × 4 = 20 m²; कालीन का क्षेत्रफल = 3 × 3 = 9 m²; शेष = 20 - 9 = 11 m²
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Area of Triangle as Half of Rectangle -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>📐 5. त्रिभुज का क्षेत्रफल (Area of a Triangle — NCERT Page 144)</span>
+        </h2>
+        <span class="pill-badge pill-gold">Geometry Link</span>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+        <span class="lang-hi">एक समकोण त्रिभुज का क्षेत्रफल उसी आधार और ऊँचाई वाले आयत के क्षेत्रफल का ठीक <strong>आधा ($\frac{1}{2}$)</strong> होता है।</span>
+        <span class="lang-en">The area of a right-angled triangle is exactly half of the rectangle with the same base and height.</span>
+      </p>
+
+      <div class="formula-box">
+        Area of Triangle (त्रिभुज का क्षेत्रफल) = $\frac{1}{2} \times \text{Base} \times \text{Height}$ = $\frac{1}{2} \times b \times h$
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px;">
+        <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 6px;">
+          Q6. यदि एक आयत का क्षेत्रफल 24 cm² है, तो इसके विकर्ण द्वारा बने प्रत्येक त्रिभुज का क्षेत्रफल कितना होगा?
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
+          (If a rectangle has an area of 24 cm², what is the area of each triangle formed by its diagonal?)
+        </div>
+        <div class="options-grid">
+          <div class="option-card" onclick="selectMcq(this, false, 'tri1')">24 cm²</div>
+          <div class="option-card" onclick="selectMcq(this, true, 'tri1')">12 cm² (24 ÷ 2 = 12 cm²)</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'tri1')">6 cm²</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'tri1')">48 cm²</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6: Same Area, Different Perimeters -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🧠 6. समान क्षेत्रफल, भिन्न परिमाप (Same Area, Different Perimeters — Page 146)</span>
+        </h2>
+        <span class="pill-badge pill-teal">Critical Puzzle</span>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+        <span class="lang-hi">9 वर्ग इकाइयों वाले 1-इकाई ब्लॉकों को अलग-अलग क्रम में जोड़ने पर क्षेत्रफल 9 sq units ही रहता है, परंतु परिमाप 12, 14, 16, 18 अथवा 20 मात्रक हो सकता है!</span>
+        <span class="lang-en">Figures formed by 9 square units all have area = 9 sq units, but their perimeters vary: 12, 14, 16, 18, or 20 units!</span>
+      </p>
+
+      <div style="background: rgba(255, 255, 255, 0.03); padding: 14px; border-radius: 12px;">
+        <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 6px;">
+          Q7. 9 वर्ग इकाइयों वाले एक $3 \times 3$ वर्ग का परिमाप क्या होगा?
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
+          (What is the perimeter of a 3 × 3 square having area = 9 sq units?)
+        </div>
+        <div class="options-grid">
+          <div class="option-card" onclick="selectMcq(this, true, 'sqp1')">12 units (4 × 3 = 12)</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'sqp1')">9 units</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'sqp1')">18 units</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'sqp1')">20 units</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const totalQuestions = 12;
+
+    function updateGeoPreview() {
+      const l = Math.max(1, Math.min(50, parseFloat(document.getElementById('calcLength').value) || 1));
+      const b = Math.max(1, Math.min(50, parseFloat(document.getElementById('calcBreadth').value) || 1));
+
+      const p = 2 * (l + b);
+      const a = l * b;
+
+      document.getElementById('outPerimeter').textContent = `${p} cm`;
+      document.getElementById('outArea').textContent = `${a} cm²`;
+      document.getElementById('textL').textContent = `${l} cm`;
+      document.getElementById('textB').textContent = `${b} cm`;
+
+      const rect = document.getElementById('rectPreview');
+      const maxDim = Math.max(l, b);
+      const scale = 140 / maxDim;
+      const w = Math.min(190, l * scale);
+      const h = Math.min(110, b * scale);
+
+      rect.setAttribute('width', w);
+      rect.setAttribute('height', h);
+      rect.setAttribute('x', 120 - w/2);
+      rect.setAttribute('y', 75 - h/2);
+
+      document.getElementById('textL').setAttribute('x', 120);
+      document.getElementById('textL').setAttribute('y', 70 - h/2);
+      document.getElementById('textB').setAttribute('x', 130 + w/2);
+      document.getElementById('textB').setAttribute('y', 80);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const btn = document.getElementById('themeToggleBtn');
+      if (document.body.classList.contains('light-theme')) {
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('worksheet_theme', 'light');
+      } else {
+        btn.textContent = '☀️ Light';
+        localStorage.setItem('worksheet_theme', 'dark');
+      }
+    }
+
+    if (localStorage.getItem('worksheet_theme') === 'light') {
+      document.body.classList.add('light-theme');
+      const btn = document.getElementById('themeToggleBtn');
+      if (btn) btn.textContent = '🌙 Dark';
+    }
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const hiElements = document.querySelectorAll('.lang-hi');
+      const enElements = document.querySelectorAll('.lang-en');
+      const seps = document.querySelectorAll('.lang-sep');
+
+      if (lang === 'hindi') {
+        hiElements.forEach(el => el.style.display = 'inline');
+        enElements.forEach(el => el.style.display = 'none');
+        seps.forEach(el => el.style.display = 'none');
+      } else if (lang === 'english') {
+        hiElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = 'inline');
+        seps.forEach(el => el.style.display = 'none');
+      } else {
+        hiElements.forEach(el => el.style.display = 'inline');
+        enElements.forEach(el => el.style.display = 'inline');
+        seps.forEach(el => el.style.display = 'inline');
+      }
+    }
+
+    function selectMcq(card, isCorrect, group) {
+      const parent = card.parentElement;
+      parent.querySelectorAll('.option-card').forEach(c => {
+        c.classList.remove('selected-correct', 'selected-wrong');
+      });
+
+      if (isCorrect) {
+        card.classList.add('selected-correct');
+        triggerConfettiSmall();
+      } else {
+        card.classList.add('selected-wrong');
+      }
+      checkAllAnswers();
+    }
+
+    function checkAllAnswers() {
+      const inputs = document.querySelectorAll('.fill-input');
+      let score = 0;
+
+      inputs.forEach(input => {
+        const val = input.value.trim().toLowerCase();
+        const expectedAnswers = (input.getAttribute('data-ans') || '').toLowerCase().split(',');
+        
+        let match = false;
+        for (const ans of expectedAnswers) {
+          if (val && (val === ans || val.includes(ans) || ans.includes(val))) {
+            match = true;
+            break;
+          }
+        }
+
+        if (match) {
+          input.classList.add('correct');
+          input.classList.remove('wrong');
+          score++;
+        } else if (val) {
+          input.classList.add('wrong');
+          input.classList.remove('correct');
+        }
+      });
+
+      // Count MCQ correct selections
+      const correctMcqs = document.querySelectorAll('.option-card.selected-correct').length;
+      const totalScore = score + correctMcqs;
+
+      document.getElementById('scoreDisplay').textContent = `${totalScore} / ${totalQuestions}`;
+      const accuracy = Math.round((totalScore / totalQuestions) * 100);
+      document.getElementById('accuracyDisplay').textContent = `${accuracy}%`;
+
+      if (totalScore >= 8) {
+        triggerCelebration();
+      }
+    }
+
+    function triggerConfettiSmall() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 25,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      }
+    }
+
+    function triggerCelebration() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 100,
+          spread: 80,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    // Initialize
+    updateGeoPreview();
+  </script>
+</body>
+</html>

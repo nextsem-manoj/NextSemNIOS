@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class 9 Science Assessment: Motion, Force & Laws of Motion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 10mm 13mm 9mm 13mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Top Assessment Banner */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 6px;
+      padding: 7px 12px;
+      background: #ffffff;
+      margin-bottom: 7px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+    }
+
+    .title-area p {
+      font-size: 10px;
+      font-weight: 700;
+      color: #111111;
+      letter-spacing: 0.3px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 5px;
+      padding: 2.5px 8px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 8px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #000000;
+    }
+
+    /* Student Info Box */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr 1fr 1.1fr;
+      gap: 8px;
+      font-size: 10.5px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .info-field label {
+      font-weight: 800;
+      color: #000000;
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    .info-line {
+      flex: 1;
+      border-bottom: 1.5px solid #000000;
+      min-height: 13px;
+    }
+
+    /* Instructions Note */
+    .instructions-bar {
+      background: #f4f4f4;
+      border: 1.8px solid #000000;
+      border-left: 5px solid #000000;
+      border-radius: 4px;
+      padding: 4px 9px;
+      font-size: 9.5px;
+      color: #000000;
+      margin-bottom: 7px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .instructions-bar strong {
+      color: #000000;
+      font-weight: 800;
+    }
+
+    /* Page 2 Mini Header */
+    .page2-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid #000000;
+      border-radius: 6px;
+      padding: 5px 12px;
+      background: #ffffff;
+      margin-bottom: 7px;
+    }
+
+    .page2-header .left-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .page2-header h2 {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .page2-header .sub {
+      font-size: 9.5px;
+      color: #111111;
+      font-weight: 700;
+    }
+
+    .student-crumb {
+      font-size: 9.5px;
+      color: #000000;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .student-crumb span {
+      border-bottom: 1.5px solid #000000;
+      display: inline-block;
+      width: 90px;
+      height: 12px;
+    }
+
+    /* Section Modules */
+    .section-box {
+      margin-bottom: 7px;
+    }
+
+    .section-title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000000;
+      color: #ffffff;
+      padding: 3.5px 9px;
+      border-radius: 5px 5px 0 0;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      border: 1.5px solid #000000;
+      border-bottom: none;
+    }
+
+    .section-title-bar .sec-name {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sec-badge {
+      background: #ffffff;
+      color: #000000;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 1px 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .sec-marks {
+      background: #222222;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .section-prompt {
+      background: #f4f4f4;
+      border: 1.5px solid #000000;
+      border-top: none;
+      padding: 3.5px 9px;
+      font-size: 9.5px;
+      font-style: italic;
+      color: #000000;
+      font-weight: 600;
+    }
+
+    .section-content {
+      border: 1.5px solid #000000;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      padding: 7px 9px;
+      background: #ffffff;
+    }
+
+    /* Two-Column Question Layout */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 14px;
+      row-gap: 6px;
+    }
+
+    .grid-item {
+      font-size: 9.5px;
+      line-height: 1.3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 3.5px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #000000;
+      font-weight: 600;
+    }
+
+    .solid-write-line {
+      display: inline-block;
+      border-bottom: 1.8px solid #000000;
+      margin: 0 2px;
+      vertical-align: bottom;
+      height: 12px;
+    }
+
+    /* Graph Section Styles */
+    .graphs-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .graph-card {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 6px 8px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .graph-card-title {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #000000;
+      border-bottom: 1.5px solid #000000;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .graph-svg-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+
+    .graph-questions {
+      font-size: 9px;
+      line-height: 1.35;
+      color: #000000;
+      font-weight: 600;
+    }
+
+    .graph-q-row {
+      margin-bottom: 4px;
+    }
+
+    .graph-ans-line {
+      display: inline-block;
+      border-bottom: 1.5px solid #000000;
+      height: 12px;
+      vertical-align: bottom;
+    }
+
+    /* Theory Writing Box */
+    .theory-item {
+      font-size: 9.5px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .theory-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .theory-prompt {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 3px;
+    }
+
+    .full-write-line {
+      width: 100%;
+      border-bottom: 1.8px solid #000000;
+      height: 13px;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* Numerical Cards on Page 2 */
+    .numerical-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .num-card {
+      border: 1.2px solid #000000;
+      border-radius: 4px;
+      padding: 5px 8px;
+      background: #fafafa;
+    }
+
+    .num-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.5px;
+      color: #000000;
+      margin-bottom: 4px;
+    }
+
+    .num-tag {
+      font-size: 8.5px;
+      font-weight: 800;
+      background: #000000;
+      color: #ffffff;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .workspace-box {
+      background: #ffffff;
+      border: 1px dashed #000000;
+      border-radius: 3px;
+      padding: 4px 6px;
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr 1fr;
+      gap: 8px;
+      font-size: 9px;
+      font-weight: 600;
+    }
+
+    .ws-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ws-title {
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #444;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 3px;
+      padding-bottom: 1px;
+    }
+
+    .calc-line {
+      border-bottom: 1.2px solid #000000;
+      height: 12px;
+      width: 100%;
+      display: block;
+    }
+
+    .ans-box {
+      border: 1.5px solid #000000;
+      border-radius: 3px;
+      padding: 2px 4px;
+      font-weight: 800;
+      font-size: 9px;
+      text-align: center;
+      background: #ffffff;
+      margin-top: auto;
+    }
+
+    /* Score Table */
+    .score-matrix-box {
+      border: 2px solid #000000;
+      border-radius: 5px;
+      padding: 5px 8px;
+      background: #ffffff;
+      margin-top: 4px;
+      margin-bottom: 3px;
+    }
+
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 9px;
+    }
+
+    .score-table th {
+      background: #000000;
+      color: #ffffff;
+      font-weight: 800;
+      padding: 3px;
+      border: 1.5px solid #000000;
+    }
+
+    .score-table td {
+      padding: 3.5px;
+      border: 1.5px solid #000000;
+      font-weight: 700;
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .score-eval-notes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      color: #000000;
+      font-weight: 700;
+      margin-top: 4px;
+      padding: 0 4px;
+    }
+
+    .sig-line {
+      border-bottom: 1.8px solid #000000;
+      display: inline-block;
+      width: 120px;
+    }
+
+    /* Footer */
+    .test-footer {
+      border-top: 1.8px solid #000000;
+      padding-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .footer-highlight {
+      color: #000000;
+      font-weight: 800;
+    }
+
+    @media print {
+      body {
+        color: #000000 !important;
+        background: #ffffff !important;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page">
+    <div class="page-body">
+      <!-- Test Header -->
+      <div class="test-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon">PHY</div>
+            <div class="title-area">
+              <h1>Class IX Science (Physics) &bull; Unit Assessment</h1>
+              <p>Chapters: Motion &bull; Force and Laws of Motion (New NCERT Curriculum)</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill">
+              <span>Time Allowed</span>
+              <strong>60 Minutes</strong>
+            </div>
+            <div class="meta-pill">
+              <span>Max. Marks</span>
+              <strong>50 Marks</strong>
+            </div>
+            <div class="meta-pill">
+              <span>Subject Code</span>
+              <strong>086 (Science)</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <label>Student's Name:</label>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <label>Roll No:</label>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <label>Class/Sec:</label>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <label>Date:</label>
+            <div class="info-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- General Instructions -->
+      <div class="instructions-bar">
+        <div><strong>General Instructions:</strong> 1. All questions are compulsory. 2. Write standard SI units with all numerical values. 3. Draw clear graphical projections where required.</div>
+        <div><strong>Part I: 25 Marks</strong></div>
+      </div>
+
+      <!-- SECTION A: Conceptual MCQs & Core Laws (10 Marks) -->
+      <div class="section-box">
+        <div class="section-title-bar">
+          <div class="sec-name">
+            <span class="sec-badge">Section A</span>
+            <span>Conceptual Objective & NCERT Knowledge</span>
+          </div>
+          <div class="sec-marks">10 Marks [10 &times; 1]</div>
+        </div>
+        <div class="section-prompt">
+          Answer each question by writing the exact term, formula, or option value on the space provided.
+        </div>
+        <div class="section-content" style="padding: 7px 10px;">
+          <div class="two-col-grid">
+            <!-- 1 -->
+            <div class="grid-item">
+              <div><strong>1.</strong> The slope of a distance-time (<em>s-t</em>) graph represents which physical quantity?</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Answer: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="grid-item">
+              <div><strong>2.</strong> The area enclosed under a velocity-time (<em>v-t</em>) graph and the time axis gives:</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Answer: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="grid-item">
+              <div><strong>3.</strong> Which has higher inertia: a stone of 5 kg or a football of same size? Give the property.</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Answer: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="grid-item">
+              <div><strong>4.</strong> State the standard SI unit of momentum (<em>p = mv</em>):</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Answer: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="grid-item">
+              <div><strong>5.</strong> Write Newton's Second Law equation relating net force, mass, and acceleration:</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Formula: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 6 -->
+            <div class="grid-item">
+              <div><strong>6.</strong> Define 1 Newton force in terms of base SI units (kg, m, s):</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                1 N = <span class="solid-write-line" style="width: 155px;"></span>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="grid-item">
+              <div><strong>7.</strong> If an object travels in a circle at constant speed, is its velocity uniform or accelerated?</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Answer: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="grid-item">
+              <div><strong>8.</strong> When a carpet is beaten with a stick, dust falls out due to which law / phenomenon?</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Answer: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="grid-item">
+              <div><strong>9.</strong> Write the kinematic equation connecting <em>v, u, a,</em> and <em>s</em> without time <em>t</em>:</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Equation: <span class="solid-write-line" style="width: 140px;"></span>
+              </div>
+            </div>
+            <!-- 10 -->
+            <div class="grid-item">
+              <div><strong>10.</strong> What is the acceleration of an object moving with a constant velocity of 25 m/s?</div>
+              <div style="display:flex; justify-content:flex-end; align-items:center; gap:4px; margin-top:2px;">
+                Acceleration = <span class="solid-write-line" style="width: 125px;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION B: Graphical Analysis (10 Marks) -->
+      <div class="section-box">
+        <div class="section-title-bar">
+          <div class="sec-name">
+            <span class="sec-badge">Section B</span>
+            <span>Graphical Analysis (Position-Time & Velocity-Time Graphs)</span>
+          </div>
+          <div class="sec-marks">10 Marks [2 &times; 5]</div>
+        </div>
+        <div class="section-prompt">
+          Analyze the two vector graphs below and answer the analytical questions using graphical principles.
+        </div>
+        <div class="section-content" style="padding: 7px 9px;">
+          <div class="graphs-wrapper">
+            <!-- Graph 1: s-t Graph -->
+            <div class="graph-card">
+              <div class="graph-card-title">
+                <span>GRAPH 1: Distance-Time Graph (s-t)</span>
+                <span>[5 Marks]</span>
+              </div>
+              <div class="graph-svg-container">
+                <svg width="225" height="110" viewBox="0 0 225 110" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Grid -->
+                  <defs>
+                    <pattern id="grid1" width="25" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 25 0 L 0 0 0 20" fill="none" stroke="#e0e0e0" stroke-width="0.8"/>
+                    </pattern>
+                  </defs>
+                  <rect x="35" y="10" width="175" height="80" fill="url(#grid1)" stroke="#000000" stroke-width="1.2"/>
+                  <!-- Axes -->
+                  <line x1="35" y1="90" x2="215" y2="90" stroke="#000000" stroke-width="1.8"/>
+                  <line x1="35" y1="90" x2="35" y2="5" stroke="#000000" stroke-width="1.8"/>
+                  <!-- Axis Labels -->
+                  <text x="215" y="104" font-size="8.5" font-family="Plus Jakarta Sans" font-weight="700" text-anchor="end">Time t (s)</text>
+                  <text x="12" y="12" font-size="8.5" font-family="Plus Jakarta Sans" font-weight="700">s (m)</text>
+                  <!-- Coordinates -->
+                  <text x="32" y="94" font-size="7.5" font-weight="700" text-anchor="end">0</text>
+                  <text x="85" y="100" font-size="7.5" font-weight="700" text-anchor="middle">2</text>
+                  <text x="135" y="100" font-size="7.5" font-weight="700" text-anchor="middle">4</text>
+                  <text x="185" y="100" font-size="7.5" font-weight="700" text-anchor="middle">6</text>
+                  
+                  <text x="32" y="73" font-size="7.5" font-weight="700" text-anchor="end">10</text>
+                  <text x="32" y="53" font-size="7.5" font-weight="700" text-anchor="end">20</text>
+                  <text x="32" y="33" font-size="7.5" font-weight="700" text-anchor="end">30</text>
+                  <text x="32" y="15" font-size="7.5" font-weight="700" text-anchor="end">40</text>
+                  <!-- Curves -->
+                  <!-- Line A: from (0,0) to (4, 40) -->
+                  <line x1="35" y1="90" x2="135" y2="10" stroke="#000000" stroke-width="2.2"/>
+                  <text x="120" y="18" font-size="9" font-weight="800">A</text>
+                  <!-- Line B: from (0,0) to (6, 30) -->
+                  <line x1="35" y1="90" x2="185" y2="30" stroke="#000000" stroke-width="2.2" stroke-dasharray="4,2"/>
+                  <text x="188" y="28" font-size="9" font-weight="800">B</text>
+                  <!-- Line C: horizontal from (2, 20) to (6, 20) -->
+                  <line x1="85" y1="50" x2="185" y2="50" stroke="#000000" stroke-width="2"/>
+                  <text x="188" y="53" font-size="9" font-weight="800">C</text>
+                </svg>
+              </div>
+              <div class="graph-questions">
+                <div class="graph-q-row"><strong>(a)</strong> Which object is moving fastest? Explain using slope: <br>
+                  <span class="graph-ans-line" style="width: 100%;"></span>
+                </div>
+                <div class="graph-q-row"><strong>(b)</strong> Calculate the speed of <strong>Object A</strong> from the graph: <br>
+                  Formula & Value: <span class="graph-ans-line" style="width: 140px;"></span>
+                </div>
+                <div class="graph-q-row"><strong>(c)</strong> Describe the state of motion of <strong>Object C</strong>: <br>
+                  State: <span class="graph-ans-line" style="width: 160px;"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Graph 2: v-t Graph -->
+            <div class="graph-card">
+              <div class="graph-card-title">
+                <span>GRAPH 2: Velocity-Time Graph (v-t)</span>
+                <span>[5 Marks]</span>
+              </div>
+              <div class="graph-svg-container">
+                <svg width="225" height="110" viewBox="0 0 225 110" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Grid -->
+                  <defs>
+                    <pattern id="grid2" width="25" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 25 0 L 0 0 0 20" fill="none" stroke="#e0e0e0" stroke-width="0.8"/>
+                    </pattern>
+                  </defs>
+                  <rect x="35" y="10" width="175" height="80" fill="url(#grid2)" stroke="#000000" stroke-width="1.2"/>
+                  <!-- Shaded Area Under v-t -->
+                  <polygon points="35,90 85,26 160,26 195,90" fill="#f0f0f0" stroke="none"/>
+                  <!-- Axes -->
+                  <line x1="35" y1="90" x2="215" y2="90" stroke="#000000" stroke-width="1.8"/>
+                  <line x1="35" y1="90" x2="35" y2="5" stroke="#000000" stroke-width="1.8"/>
+                  <!-- Axis Labels -->
+                  <text x="215" y="104" font-size="8.5" font-family="Plus Jakarta Sans" font-weight="700" text-anchor="end">Time t (s)</text>
+                  <text x="8" y="12" font-size="8.5" font-family="Plus Jakarta Sans" font-weight="700">v (m/s)</text>
+                  <!-- Coordinates -->
+                  <text x="32" y="94" font-size="7.5" font-weight="700" text-anchor="end">O(0)</text>
+                  <text x="85" y="100" font-size="7.5" font-weight="700" text-anchor="middle">4</text>
+                  <text x="160" y="100" font-size="7.5" font-weight="700" text-anchor="middle">10</text>
+                  <text x="195" y="100" font-size="7.5" font-weight="700" text-anchor="middle">12</text>
+                  
+                  <text x="32" y="58" font-size="7.5" font-weight="700" text-anchor="end">10</text>
+                  <text x="32" y="29" font-size="7.5" font-weight="700" text-anchor="end">20</text>
+                  <!-- Trapezoid Path -->
+                  <line x1="35" y1="90" x2="85" y2="26" stroke="#000000" stroke-width="2.4"/>
+                  <line x1="85" y1="26" x2="160" y2="26" stroke="#000000" stroke-width="2.4"/>
+                  <line x1="160" y1="26" x2="195" y2="90" stroke="#000000" stroke-width="2.4"/>
+                  <!-- Key Points -->
+                  <circle cx="85" cy="26" r="2.5" fill="#000000"/>
+                  <circle cx="160" cy="26" r="2.5" fill="#000000"/>
+                  <text x="80" y="20" font-size="8.5" font-weight="800">A</text>
+                  <text x="162" y="20" font-size="8.5" font-weight="800">B</text>
+                  <text x="198" y="88" font-size="8.5" font-weight="800">C</text>
+                </svg>
+              </div>
+              <div class="graph-questions">
+                <div class="graph-q-row"><strong>(a)</strong> Find the acceleration of the car in the first 4 seconds (OA):<br>
+                  <em>a</em> = &Delta;<em>v</em> / &Delta;<em>t</em> = <span class="graph-ans-line" style="width: 140px;"></span>
+                </div>
+                <div class="graph-q-row"><strong>(b)</strong> Find the total distance travelled by finding area of trapezium OABC: <br>
+                  Area = &frac12; &times; (sum of parallel sides) &times; <em>h</em> = <span class="graph-ans-line" style="width: 80px;"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION C: Theoretical Reasoning & Newton's First Law (5 Marks) -->
+      <div class="section-box" style="margin-bottom: 7px;">
+        <div class="section-title-bar">
+          <div class="sec-name">
+            <span class="sec-badge">Section C</span>
+            <span>Theoretical Reasoning & Newton's First Law (Law of Inertia)</span>
+          </div>
+          <div class="sec-marks">5 Marks [2 &times; 2.5]</div>
+        </div>
+        <div class="section-prompt">
+          Give clear, scientifically rigorous explanations based on Newton's First Law and the concept of inertia.
+        </div>
+        <div class="section-content" style="padding: 7px 9px;">
+          <!-- Q1 -->
+          <div class="theory-item">
+            <div class="theory-prompt">
+              <span><strong>1.</strong> Explain why passengers fall forward when a fast-moving bus suddenly applies brakes. (State the type of inertia involved).</span>
+              <span style="font-size: 8.5px; font-weight: 800; border: 1.2px solid #000; padding: 1px 5px; border-radius: 2px;">2.5 Marks</span>
+            </div>
+            <span class="full-write-line"></span>
+            <span class="full-write-line"></span>
+          </div>
+          <!-- Q2 -->
+          <div class="theory-item">
+            <div class="theory-prompt">
+              <span><strong>2.</strong> Why is mass called the quantitative measure of inertia? Explain using Newton's First Law with a suitable comparison.</span>
+              <span style="font-size: 8.5px; font-weight: 800; border: 1.2px solid #000; padding: 1px 5px; border-radius: 2px;">2.5 Marks</span>
+            </div>
+            <span class="full-write-line"></span>
+            <span class="full-write-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formula Reminder Box -->
+      <div style="border: 1.8px solid #000000; border-radius: 5px; padding: 5px 10px; background: #f8f8f8; display: flex; align-items: center; justify-content: space-between; font-size: 9px; color: #000000; font-weight: 700;">
+        <div style="display: flex; align-items: center; gap: 7px;">
+          <span style="background: #000000; color: #ffffff; font-weight: 800; font-size: 8.5px; padding: 1.5px 5px; border-radius: 3px; text-transform: uppercase;">Formulae</span>
+          <span><em>v = u + at</em> &bull; <em>s = ut + &frac12;at&sup2;</em> &bull; <em>v&sup2; - u&sup2; = 2as</em> &bull; Slope(s-t) = <em>v</em> &bull; Slope(v-t) = <em>a</em> &bull; Area(v-t) = Distance</span>
+        </div>
+        <div>Page 1 Total: 25/25</div>
+      </div>
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div class="test-footer">
+      <div>Class IX Science Assessment &bull; <strong>Motion & Force (NCERT Pattern)</strong></div>
+      <div class="footer-highlight">Page 1 of 2 &bull; Please Turn Over for Numerical Sections &rarr;</div>
+    </div>
+  </div>
+
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page">
+    <div class="page-body">
+      <!-- Page 2 Header Banner -->
+      <div class="page2-header">
+        <div class="left-title">
+          <div class="badge-icon" style="width: 26px; height: 26px; font-size: 13px;">II</div>
+          <div>
+            <h2>Part II: Kinematics & Dynamics Numerical Problems & Applied Physics</h2>
+            <div class="sub">Equations of Motion, Force Equation (F = ma) & Momentum Conservation</div>
+          </div>
+        </div>
+        <div class="student-crumb">
+          <div>Student Name: <span></span></div>
+          <div>Roll No: <span style="width: 45px;"></span></div>
+          <div class="sec-marks" style="background:#000000; color:#ffffff; padding: 2px 7px; border: 1.5px solid #000000;">Part II: 25 Marks</div>
+        </div>
+      </div>
+
+      <!-- SECTION D: Kinematics Numericals (10 Marks) -->
+      <div class="section-box">
+        <div class="section-title-bar">
+          <div class="sec-name">
+            <span class="sec-badge">Section D</span>
+            <span>Kinematics & Equations of Motion Numericals</span>
+          </div>
+          <div class="sec-marks">10 Marks [3 + 3 + 4]</div>
+        </div>
+        <div class="section-prompt">
+          Solve the numerical problems below. Write the formula used, step-by-step substitution, and final answer with proper SI units.
+        </div>
+        <div class="section-content" style="padding: 6px 8px;">
+          <div class="numerical-grid">
+            <!-- Problem 1: Average Speed -->
+            <div class="num-card">
+              <div class="num-header">
+                <div><strong>1.</strong> An electric train travels the first <strong>30 km</strong> at a uniform speed of <strong>30 km/h</strong> and the next <strong>90 km</strong> at a uniform speed of <strong>60 km/h</strong>. Calculate the total time taken and the <strong>average speed</strong> for the entire journey.</div>
+                <div class="num-tag">3 Marks</div>
+              </div>
+              <div class="workspace-box">
+                <div class="ws-col">
+                  <span class="ws-title">Given & Formula</span>
+                  <div><em>s<sub>1</sub> = 30 km, v<sub>1</sub> = 30 km/h</em></div>
+                  <div><em>s<sub>2</sub> = 90 km, v<sub>2</sub> = 60 km/h</em></div>
+                  <div><em>v<sub>avg</sub> = Total Distance / Total Time</em></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Step-by-Step Calculation</span>
+                  <div><em>t<sub>1</sub> = s<sub>1</sub> / v<sub>1</sub> = </em> <span class="solid-write-line" style="width: 80px;"></span></div>
+                  <div><em>t<sub>2</sub> = s<sub>2</sub> / v<sub>2</sub> = </em> <span class="solid-write-line" style="width: 80px;"></span></div>
+                  <div><em>t<sub>total</sub> = t<sub>1</sub> + t<sub>2</sub> = </em> <span class="solid-write-line" style="width: 60px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Final Result</span>
+                  <div class="ans-box">Average Speed = <br><span class="solid-write-line" style="width: 70px;"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Problem 2: Equations of Motion (Bus starting from rest) -->
+            <div class="num-card">
+              <div class="num-header">
+                <div><strong>2.</strong> A bus starting from rest moves with a uniform acceleration of <strong>0.1 m/s&sup2;</strong> for <strong>2 minutes</strong> (120 s). Find: (a) the speed acquired (<em>v</em>), (b) the distance travelled (<em>s</em>).</div>
+                <div class="num-tag">3 Marks</div>
+              </div>
+              <div class="workspace-box">
+                <div class="ws-col">
+                  <span class="ws-title">Given & Formulae</span>
+                  <div><em>u = 0, a = 0.1 m/s&sup2;, t = 120 s</em></div>
+                  <div>(a) <em>v = u + at</em></div>
+                  <div>(b) <em>s = ut + &frac12;at&sup2;</em></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Step-by-Step Calculation</span>
+                  <div>(a) <em>v = 0 + (0.1 &times; 120) = </em> <span class="solid-write-line" style="width: 65px;"></span></div>
+                  <div>(b) <em>s = 0 + &frac12; &times; 0.1 &times; (120)&sup2;</em></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;<em>s = 0.05 &times; 14400 = </em> <span class="solid-write-line" style="width: 65px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Final Result</span>
+                  <div class="ans-box">(a) <em>v</em> = <span class="solid-write-line" style="width: 50px;"></span><br>(b) <em>s</em> = <span class="solid-write-line" style="width: 50px;"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Problem 3: 3rd Equation (Car with acceleration and braking) -->
+            <div class="num-card">
+              <div class="num-header">
+                <div><strong>3.</strong> A racing car has a uniform acceleration of <strong>4 m/s&sup2;</strong>. What distance will it cover in <strong>10 s</strong> after starting from rest? If brakes are then applied producing a retardation of <strong>5 m/s&sup2;</strong>, what further distance does it travel before stopping?</div>
+                <div class="num-tag">4 Marks</div>
+              </div>
+              <div class="workspace-box">
+                <div class="ws-col">
+                  <span class="ws-title">Part I: Distance in 10 s</span>
+                  <div><em>u = 0, a = 4 m/s&sup2;, t = 10 s</em></div>
+                  <div><em>s<sub>1</sub> = ut + &frac12;at&sup2;</em></div>
+                  <div><em>s<sub>1</sub> = &frac12;(4)(100) = </em> <span class="solid-write-line" style="width: 45px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Part II: Stopping Distance (v² - u² = 2as)</span>
+                  <div><em>v<sub>1</sub> = u + at = 0 + 4(10) = 40 m/s</em></div>
+                  <div>Braking: <em>u = 40 m/s, v = 0, a = -5 m/s&sup2;</em></div>
+                  <div><em>s<sub>2</sub> = (v&sup2; - u&sup2;) / (2a) = (0 - 1600) / (-10) = </em> <span class="solid-write-line" style="width: 45px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Final Results</span>
+                  <div class="ans-box"><em>s<sub>1</sub></em> = <span class="solid-write-line" style="width: 50px;"></span><br><em>s<sub>2</sub></em> = <span class="solid-write-line" style="width: 50px;"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION E: Force & Newton's Second Law (F = ma) Numericals (10 Marks) -->
+      <div class="section-box">
+        <div class="section-title-bar">
+          <div class="sec-name">
+            <span class="sec-badge">Section E</span>
+            <span>Force, Momentum & F = ma Numericals</span>
+          </div>
+          <div class="sec-marks">10 Marks [3 + 3 + 4]</div>
+        </div>
+        <div class="section-prompt">
+          Apply Newton's Second Law of Motion (F = ma and F = (mv - mu)/t) to solve the following problems.
+        </div>
+        <div class="section-content" style="padding: 6px 8px;">
+          <div class="numerical-grid">
+            <!-- Problem 4: Motorcar braking force -->
+            <div class="num-card">
+              <div class="num-header">
+                <div><strong>4.</strong> A motorcar of mass <strong>1000 kg</strong> is moving with a velocity of <strong>108 km/h</strong> (30 m/s) and takes <strong>4 s</strong> to stop after brakes are applied. Calculate the retarding force exerted by the brakes on the motorcar.</div>
+                <div class="num-tag">3 Marks</div>
+              </div>
+              <div class="workspace-box">
+                <div class="ws-col">
+                  <span class="ws-title">Given & Formula</span>
+                  <div><em>m = 1000 kg</em></div>
+                  <div><em>u = 108 km/h = 30 m/s</em></div>
+                  <div><em>v = 0, t = 4 s</em></div>
+                  <div><em>F = m(v - u) / t</em></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Calculation</span>
+                  <div><em>a = (v - u)/t = (0 - 30)/4 = -7.5 m/s&sup2;</em></div>
+                  <div><em>F = m &times; a = 1000 &times; (-7.5) = </em> <span class="solid-write-line" style="width: 70px;"></span></div>
+                  <div>(Negative sign denotes opposing force)</div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Final Answer</span>
+                  <div class="ans-box">Braking Force = <br><span class="solid-write-line" style="width: 70px;"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Problem 5: Comparing Forces -->
+            <div class="num-card">
+              <div class="num-header">
+                <div><strong>5.</strong> Which would require a greater force: accelerating a <strong>2 kg</strong> mass at <strong>5 m/s&sup2;</strong> or accelerating a <strong>4 kg</strong> mass at <strong>2 m/s&sup2;</strong>? Justify by computing both forces using <em>F = ma</em>.</div>
+                <div class="num-tag">3 Marks</div>
+              </div>
+              <div class="workspace-box">
+                <div class="ws-col">
+                  <span class="ws-title">Case 1 (Body A)</span>
+                  <div><em>m<sub>1</sub> = 2 kg, a<sub>1</sub> = 5 m/s&sup2;</em></div>
+                  <div><em>F<sub>1</sub> = m<sub>1</sub> &times; a<sub>1</sub></em></div>
+                  <div><em>F<sub>1</sub> = 2 &times; 5 = </em> <span class="solid-write-line" style="width: 50px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Case 2 (Body B)</span>
+                  <div><em>m<sub>2</sub> = 4 kg, a<sub>2</sub> = 2 m/s&sup2;</em></div>
+                  <div><em>F<sub>2</sub> = m<sub>2</sub> &times; a<sub>2</sub></em></div>
+                  <div><em>F<sub>2</sub> = 4 &times; 2 = </em> <span class="solid-write-line" style="width: 50px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Comparison & Conclusion</span>
+                  <div class="ans-box">Greater Force: <br><span class="solid-write-line" style="width: 75px;"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Problem 6: Force acting over time -->
+            <div class="num-card">
+              <div class="num-header">
+                <div><strong>6.</strong> A constant force acts on an object of mass <strong>5 kg</strong> for <strong>2 s</strong>, increasing its velocity from <strong>3 m/s</strong> to <strong>7 m/s</strong>. Find the magnitude of applied force. If the same force was applied for <strong>5 s</strong>, what would be the final velocity?</div>
+                <div class="num-tag">4 Marks</div>
+              </div>
+              <div class="workspace-box">
+                <div class="ws-col">
+                  <span class="ws-title">Step 1: Find Force F</span>
+                  <div><em>m = 5 kg, u = 3 m/s, v = 7 m/s, t = 2 s</em></div>
+                  <div><em>a = (7 - 3)/2 = 2 m/s&sup2;</em></div>
+                  <div><em>F = m &times; a = 5 &times; 2 = </em> <span class="solid-write-line" style="width: 40px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Step 2: Velocity after t = 5 s</span>
+                  <div><em>u = 3 m/s, a = 2 m/s&sup2;, t' = 5 s</em></div>
+                  <div><em>v' = u + a &times; t' = 3 + (2 &times; 5)</em></div>
+                  <div><em>v' = 3 + 10 = </em> <span class="solid-write-line" style="width: 45px;"></span></div>
+                </div>
+                <div class="ws-col">
+                  <span class="ws-title">Final Answers</span>
+                  <div class="ans-box"><em>F</em> = <span class="solid-write-line" style="width: 45px;"></span><br><em>v'</em> = <span class="solid-write-line" style="width: 45px;"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION F: Real-Life Applied Dynamics (5 Marks) -->
+      <div class="section-box" style="margin-bottom: 4px;">
+        <div class="section-title-bar">
+          <div class="sec-name">
+            <span class="sec-badge">Section F</span>
+            <span>Real-World Physical Applications of Newton's Laws</span>
+          </div>
+          <div class="sec-marks">5 Marks [2 &times; 2.5]</div>
+        </div>
+        <div class="section-prompt">
+          Explain the following physical phenomena using the relationship between force, change in momentum, and contact time.
+        </div>
+        <div class="section-content" style="padding: 5px 8px;">
+          <!-- Q1 -->
+          <div class="theory-item">
+            <div class="theory-prompt">
+              <span><strong>1.</strong> Why does a cricket fielder pull his hands backward while catching a fast-moving ball? Explain using <em>F &prop; &Delta;p / &Delta;t</em>.</span>
+              <span style="font-size: 8.5px; font-weight: 800; border: 1.2px solid #000; padding: 1px 5px; border-radius: 2px;">2.5 Marks</span>
+            </div>
+            <span class="full-write-line"></span>
+            <span class="full-write-line"></span>
+          </div>
+          <!-- Q2 -->
+          <div class="theory-item">
+            <div class="theory-prompt">
+              <span><strong>2.</strong> Why is a person falling on a cemented floor more seriously injured than one falling on a heap of loose sand?</span>
+              <span style="font-size: 8.5px; font-weight: 800; border: 1.2px solid #000; padding: 1px 5px; border-radius: 2px;">2.5 Marks</span>
+            </div>
+            <span class="full-write-line"></span>
+            <span class="full-write-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teacher Evaluation & Score Breakdown Matrix -->
+      <div class="score-matrix-box">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>Sec A (MCQ)</th>
+              <th>Sec B (Graphs)</th>
+              <th>Sec C (Theory)</th>
+              <th>Sec D (Kinematics)</th>
+              <th>Sec E (F=ma)</th>
+              <th>Sec F (Applied)</th>
+              <th>Total Marks</th>
+              <th>Percentage</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&nbsp; / 10</td>
+              <td>&nbsp; / 10</td>
+              <td>&nbsp; / 5</td>
+              <td>&nbsp; / 10</td>
+              <td>&nbsp; / 10</td>
+              <td>&nbsp; / 5</td>
+              <td style="color: #000000; font-weight: 800;">&nbsp; / 50</td>
+              <td>&nbsp; %</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="score-eval-notes">
+          <div><strong>Evaluator's Remarks:</strong> ________________________________________________________________</div>
+          <div><strong>Signature:</strong> <span class="sig-line"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2 Footer -->
+    <div class="test-footer">
+      <div>Class IX Science Assessment &bull; <strong>Motion & Force (NCERT Pattern)</strong></div>
+      <div class="footer-highlight">Page 2 of 2 &bull; End of Question Paper &bull; Verify All Working!</div>
+    </div>
+  </div>
+
+</body>
+</html>

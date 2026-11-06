@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 7 Social Science Ch 1: The Story of Indian Farming — Interactive Notes &amp; Bilingual Question Bank | StudyGuide</title>
+  <meta name="description" content="Master NCERT Class 7 Social Science (Exploring Society: India and Beyond Part 2) Chapter 1: The Story of Indian Farming (भारतीय कृषि की कहानी) with comprehensive bilingual notes, NCERT exercise solutions, and 25 interactive MCQs.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060e14;
+      --bg-card: #0d1a24;
+      --bg-card-hover: #132433;
+      --bg-card-alt: #0a141d;
+      --border-card: rgba(16, 185, 129, 0.22);
+      --border-accent: #10b981;
+
+      --brand-green: #10b981;
+      --brand-emerald: #059669;
+      --brand-amber: #f59e0b;
+      --brand-cyan: #06b6d4;
+      --brand-blue: #0284c7;
+      --brand-purple: #8b5cf6;
+      --brand-rose: #f43f5e;
+
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --bg-card-alt: #f1f5f9;
+      --border-card: #cbd5e1;
+      --border-accent: #059669;
+      --text-main: #0f172a;
+      --text-muted: #334155;
+      --text-dim: #64748b;
+    }
+
+    body.light-theme .top-breadcrumb-bar {
+      background: #ffffff !important;
+      border-bottom-color: #e2e8f0 !important;
+      color: #334155 !important;
+    }
+    body.light-theme .top-breadcrumb-bar a {
+      color: #059669 !important;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.65;
+      background-image:
+        radial-gradient(circle at 10% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 110px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Breadcrumbs Header (PERMANENT RULE: Complete Breadcrumb Navigation) */
+    .top-breadcrumb-bar {
+      background: rgba(13, 26, 36, 0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-card);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-size: 0.86rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .breadcrumb-trail a {
+      color: #34d399;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-trail a:hover {
+      color: #10b981;
+      text-decoration: underline;
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-toggle-btn, .lang-toggle-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover, .lang-toggle-btn:hover {
+      border-color: var(--brand-green);
+      transform: translateY(-1px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Hero Section */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(245, 158, 11, 0.12) 100%);
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      color: #34d399;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-subtitle-hi {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fcd34d;
+      font-family: var(--font-devanagari);
+      margin-bottom: 14px;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+      max-width: 920px;
+      margin-bottom: 20px;
+    }
+
+    /* External Links & Access Bar (PERMANENT RULE: Direct NCERT & Google Drive) */
+    .access-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .access-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .access-btn-primary {
+      background: #10b981;
+      color: #041f14;
+      border: 1px solid #34d399;
+    }
+    .access-btn-primary:hover {
+      background: #34d399;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.4);
+    }
+
+    .access-btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+    }
+    .access-btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--brand-green);
+      transform: translateY(-2px);
+    }
+
+    /* Tabs Navigation */
+    .tab-nav {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      border-color: var(--brand-green);
+    }
+
+    .tab-btn.active {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: #10b981;
+      color: #34d399;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.2);
+    }
+
+    /* Language Switcher Bar */
+    .lang-selector-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .lang-pill-group {
+      display: flex;
+      gap: 6px;
+      background: var(--bg-card-alt);
+      padding: 4px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-card);
+    }
+
+    .lang-pill {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-pill.active {
+      background: var(--brand-green);
+      color: #041f14;
+    }
+
+    /* Notes Cards */
+    .note-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      transition: border-color 0.2s ease;
+    }
+
+    .note-card:hover {
+      border-color: rgba(16, 185, 129, 0.45);
+    }
+
+    .note-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 12px;
+    }
+
+    .note-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid #10b981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .note-title-en {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.35;
+    }
+    body.light-theme .note-title-en {
+      color: #0f172a;
+    }
+
+    .note-title-hi {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #34d399;
+      font-family: var(--font-devanagari);
+    }
+
+    .note-body {
+      color: var(--text-main);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .note-body p {
+      margin-bottom: 12px;
+    }
+
+    .bilingual-pair {
+      margin-bottom: 14px;
+    }
+
+    .pair-en {
+      color: var(--text-main);
+      font-size: 0.93rem;
+      line-height: 1.65;
+      margin-bottom: 4px;
+    }
+
+    .pair-hi {
+      color: #94a3b8;
+      font-size: 0.90rem;
+      line-height: 1.65;
+      font-family: var(--font-devanagari);
+      border-left: 2px solid #10b981;
+      padding-left: 10px;
+    }
+    body.light-theme .pair-hi {
+      color: #475569;
+    }
+
+    /* Key Facts Box / Don't Miss Out */
+    .callout-box {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 4px solid #f59e0b;
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+
+    .callout-title {
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: #f59e0b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    /* Comparison & Data Table */
+    .data-table-container {
+      overflow-x: auto;
+      margin: 16px 0;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+
+    .data-table th {
+      background: var(--bg-card-alt);
+      color: #34d399;
+      padding: 12px 14px;
+      font-weight: 800;
+      border-bottom: 1px solid var(--border-card);
+      white-space: nowrap;
+    }
+
+    .data-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Quiz Cards */
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .quiz-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .quiz-num-badge {
+      background: #10b981;
+      color: #041f14;
+      font-weight: 900;
+      font-size: 0.74rem;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+    }
+
+    .quiz-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .quiz-question-en {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .quiz-question-hi {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #94a3b8;
+      font-family: var(--font-devanagari);
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+    body.light-theme .quiz-question-hi {
+      color: #475569;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .quiz-opt-btn {
+      width: 100%;
+      text-align: left;
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: all 0.2s ease;
+      line-height: 1.45;
+    }
+
+    .quiz-opt-btn:hover:not(:disabled) {
+      border-color: #10b981;
+      background: rgba(16, 185, 129, 0.08);
+      transform: translateX(4px);
+    }
+
+    .quiz-opt-btn.correct {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct) !important;
+      color: #34d399 !important;
+      font-weight: 800;
+    }
+
+    .quiz-opt-btn.wrong {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong) !important;
+      color: #f87171 !important;
+    }
+
+    .opt-letter {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.76rem;
+      flex-shrink: 0;
+      font-family: var(--font-mono);
+    }
+
+    .quiz-explanation {
+      display: none;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid #10b981;
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-top: 12px;
+      font-size: 0.86rem;
+      line-height: 1.6;
+    }
+
+    .quiz-explanation.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Score Bar */
+    .score-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+      border: 1.5px solid #10b981;
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .score-stat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .score-stat-num {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #34d399;
+      font-family: var(--font-mono);
+    }
+
+    .score-stat-lbl {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    /* Exercise Solutions Card */
+    .exercise-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 22px;
+    }
+
+    .exercise-q-num {
+      background: #f59e0b;
+      color: #000;
+      font-weight: 900;
+      font-size: 0.76rem;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-family: var(--font-mono);
+    }
+
+    .exercise-title-en {
+      font-size: 1.08rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+    body.light-theme .exercise-title-en {
+      color: #0f172a;
+    }
+
+    .exercise-title-hi {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #fbbf24;
+      font-family: var(--font-devanagari);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .sol-section {
+      background: var(--bg-card-alt);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      margin-top: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .sol-header {
+      font-size: 0.80rem;
+      font-weight: 800;
+      color: #34d399;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sol-step {
+      margin-bottom: 10px;
+      font-size: 0.90rem;
+      line-height: 1.6;
+    }
+
+    /* Mobile Bottom Navigation Bar (PERMANENT RULE: Dynamic Content-Aware & Theme Toggle) */
+    .mobile-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 8px 12px;
+      z-index: 200;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.70rem;
+      font-weight: 700;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-nav-item.active, .mobile-nav-item:hover {
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+    }
+
+    .mobile-nav-icon {
+      font-size: 1.2rem;
+    }
+
+    /* Floating Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 75px;
+      right: 20px;
+      background: #10b981;
+      color: #041f14;
+      border: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 150;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.45rem;
+      }
+      .hero-subtitle-hi {
+        font-size: 1.15rem;
+      }
+      .top-breadcrumb-bar {
+        font-size: 0.78rem;
+        padding: 10px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Complete Interactive Breadcrumb Navigation Trail (PERMANENT RULE) -->
+  <header class="top-breadcrumb-bar">
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+      <a href="/?class=7">🏠 Home</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=7">Class 7</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=7&subject=c7-social-science">Social Science (Exploring Society)</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=7&subject=c7-social-science&book=part-2">Part 2 (gees2)</a>
+      <span class="breadcrumb-separator">❯</span>
+      <span class="breadcrumb-current">Ch 1: The Story of Indian Farming</span>
+    </nav>
+
+    <div class="top-actions">
+      <button class="lang-toggle-btn" id="headerLangToggle" onclick="cycleLanguage()" title="Switch Language">
+        🌐 <span id="headerLangLabel">द्विभाषी (Bilingual)</span>
+      </button>
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-badge">🌾 NCERT Class 7 Social Science • Part 2 • Chapter 1</div>
+      <h1 class="hero-title">The Story of Indian Farming</h1>
+      <h2 class="hero-subtitle-hi">भारतीय कृषि की कहानी (gees201)</h2>
+      <p class="hero-desc">
+        Comprehensive NEP 2020 Study Studio covering agricultural heritage (Krishi Parashara, Harappan Kalibangan), 
+        cropping rhythms (Kharif, Rabi, Zaid), the 6 major Indian soils, indigenous water conservation systems (Eris, Kuhls, Surangams, Bamboo Drip), 
+        sustainable pathways (ZBNF, Organic Sikkim), and modern agrarian challenges.
+      </p>
+
+      <!-- Direct PDF & Cloud Access Links (PERMANENT RULE) -->
+      <div class="access-grid">
+        <a href="/?class=7&subject=c7-social-science&book=part-2&chapter=c7-soc-part2-ch1" class="access-btn access-btn-primary">
+          📖 Open Inbuilt PDF Reader
+        </a>
+        <a href="/pdf/Class 07/7th SST part-2/gees201.pdf" target="_blank" class="access-btn access-btn-outline">
+          📥 Direct Chapter PDF (Local)
+        </a>
+        <a href="https://ncert.nic.in/textbook/pdf/gees201.pdf" target="_blank" class="access-btn access-btn-outline">
+          🌐 NCERT Official CDN
+        </a>
+        <a href="https://drive.google.com/drive/folders/1CnGQZwM0BW9FacI0WnbWfq0VffMcnts4" target="_blank" class="access-btn access-btn-outline">
+          ☁️ Google Drive Cloud Folder
+        </a>
+      </div>
+    </section>
+
+    <!-- Language Selector Bar (PERMANENT RULE: Bilingual Standard) -->
+    <section class="lang-selector-bar">
+      <div style="font-weight: 800; font-size: 0.85rem; color: var(--text-muted);">
+        🗣️ Study Language Mode / भाषा चयन:
+      </div>
+      <div class="lang-pill-group">
+        <button class="lang-pill active" onclick="setLanguage('bilingual')">Bilingual (द्विभाषी)</button>
+        <button class="lang-pill" onclick="setLanguage('en')">English Only</button>
+        <button class="lang-pill" onclick="setLanguage('hi')">केवल हिंदी</button>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" onclick="switchTab('notes')">
+        📑 Chapter Notes &amp; Concepts (अध्याय नोट्स)
+      </button>
+      <button class="tab-btn" onclick="switchTab('solutions')">
+        📝 NCERT Exercise Solutions (Q1–Q10)
+      </button>
+      <button class="tab-btn" onclick="switchTab('quiz')">
+        🎯 25 Bilingual MCQs Practice (प्रश्नोत्तरी)
+      </button>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- TAB 1: CHAPTER NOTES & CONCEPTS             -->
+    <!-- ========================================== -->
+    <div id="tab-notes" class="tab-content">
+
+      <!-- Section 1: Agricultural Heritage -->
+      <article class="note-card">
+        <div class="note-header">
+          <div class="note-icon-box">🏛️</div>
+          <div>
+            <h3 class="note-title-en">1. Agricultural Landscape &amp; Ancient Roots</h3>
+            <h4 class="note-title-hi">भारतीय कृषि का परिदृश्य एवं प्राचीन जड़ें</h4>
+          </div>
+        </div>
+        <div class="note-body">
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Agriculture / Farming:</strong> Farming is one of humankind's oldest occupations. It encompasses the preparation of soil, cultivation of crops, rearing of livestock (cattle, sheep, goats, poultry), pisciculture, and agroforestry.
+            </p>
+            <p class="pair-hi">
+              <strong>कृषि / खेती:</strong> कृषि मानव सभ्यता के सबसे प्राचीन व्यवसायों में से एक है। इसमें मृदा तैयार करना, फसलों की खेती, पशुपालन (गाय, भेड़, बकरी, मुर्गीपालन), मत्स्यपालन और कृषि वानिकी शामिल हैं।
+            </p>
+          </div>
+
+          <div class="callout-box">
+            <div class="callout-title">📜 Krishi Parashara (कृषि पराशर — ancient agrarian treatise)</div>
+            <p style="font-style: italic; font-size: 0.88rem; margin-bottom: 4px;">
+              "A farmer who looks after the welfare of his cattle, visits his farms daily, has the knowledge of the seasons, is careful about seeds, and is industrious, is rewarded with harvests of all kinds and never perishes."
+            </p>
+            <p style="font-family: var(--font-devanagari); font-size: 0.86rem; color: #fcd34d;">
+              "जो किसान अपने पशुओं के कल्याण का ध्यान रखता है, नित्य खेतों का निरीक्षण करता है, ऋतुओं का ज्ञान रखता है, बीजों के प्रति सजग रहता है और परिश्रमी है, वह सभी प्रकार की फसलों से पुरस्कृत होता है और कभी नष्ट नहीं होता।"
+            </p>
+          </div>
+
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Archaeological Proof of Intercropping:</strong> At the Harappan site of <strong>Kalibangan</strong> (Rajasthan, c. 2800 BCE), archaeologists discovered ancient ploughed fields with perpendicular furrows (furrows crossing at right angles). This proves that Indian farmers practiced <strong>intercropping (double cropping)</strong> over 4,800 years ago—growing tall crops (like mustard) in wide furrows and short crops (like gram) in narrow furrows!
+            </p>
+            <p class="pair-hi">
+              <strong>मिश्रित खेती का पुरातात्विक साक्ष्य:</strong> राजस्थान में हड़प्पा कालीन स्थल <strong>कालीबंगा</strong> (लगभग 2800 ई.पू.) में समकोण पर काटते हुए हल के कूंड (perpendicular furrows) मिले हैं। यह सिद्ध करता है कि 4,800 वर्ष पूर्व भी भारतीय किसान एक ही खेत में दो फसलें (जैसे सरसों और चना) एक साथ उगाते थे!
+            </p>
+          </div>
+
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Ancient Agrarian Texts:</strong> The <em>Rigveda</em> mentions canals (*kulya*) and the plough (*langala*). Kautilya's <em>Arthashastra</em> describes rain gauges (*varshamana*), rainfall distribution, and seed treatment. The <em>Amarakosha</em> classifies 12 distinct soil types based on fertility (*urvara* = fertile; *ushara* = barren). Surapala's <em>Vrikshayurveda</em> discusses arbori-horticulture and organic plant nourishment.
+            </p>
+            <p class="pair-hi">
+              <strong>प्राचीन कृषि ग्रंथ:</strong> <em>ऋग्वेद</em> में नहरों (*कुल्या*) और हल (*लांगल*) का उल्लेख है। कौटिल्य के <em>अर्थशास्त्र</em> में वर्षामापी यंत्र (*वर्षमान*), वर्षा के वितरण और बीज उपचार का वर्णन है। <em>अमरकोश</em> में उर्वरता के आधार पर 12 प्रकार की भूमियों का वर्गीकरण है (*उर्वरा* = उपजाऊ, *ऊसर* = बंजर)। सूरपाल कृत <em>वृक्षायुर्वेद</em> में पादप पोषण का वर्णन है।
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 2: Seasons & Cropping Rhythm -->
+      <article class="note-card">
+        <div class="note-header">
+          <div class="note-icon-box">🌦️</div>
+          <div>
+            <h3 class="note-title-en">2. The Rhythm of Seasons: Kharif, Rabi, and Zaid</h3>
+            <h4 class="note-title-hi">ऋतुओं का चक्र: खरीफ, रबी और जायद</h4>
+          </div>
+        </div>
+        <div class="note-body">
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              Indian agriculture is traditionally synchronized with the southwest monsoon and temperature cycles, divided into three distinct cropping seasons:
+            </p>
+            <p class="pair-hi">
+              भारतीय कृषि पारंपरिक रूप से दक्षिण-पश्चिम मानसून और तापमान चक्रों से जुड़ी हुई है, जिसे मुख्य रूप से तीन फसल ऋतुओं में विभाजित किया गया है:
+            </p>
+          </div>
+
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Cropping Season (ऋतु)</th>
+                  <th>Ancient Sanskrit Name</th>
+                  <th>Sowing &amp; Harvesting</th>
+                  <th>Key Crops (प्रमुख फसलें)</th>
+                  <th>Climatic Requirements</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Kharif (खरीफ)</strong></td>
+                  <td><em>Kedāra (केदारा - Wet crops)</em></td>
+                  <td>Sown: June–July (onset of Monsoon)<br>Harvested: Sept–Oct</td>
+                  <td>Rice (Paddy), Maize, Jowar, Bajra, Cotton, Groundnut, Soybean, Jute</td>
+                  <td>High temperature, high humidity, abundant rainfall (>100 cm)</td>
+                </tr>
+                <tr>
+                  <td><strong>Rabi (रबी)</strong></td>
+                  <td><em>Haimana (हैमन - Winter crops)</em></td>
+                  <td>Sown: Oct–Dec (beginning of Winter)<br>Harvested: April–May</td>
+                  <td>Wheat, Barley, Mustard, Gram (Chickpea), Peas, Linseed</td>
+                  <td>Warm climate for germination, cool climate during growth, sunny dry weather for ripening</td>
+                </tr>
+                <tr>
+                  <td><strong>Zaid (जायद)</strong></td>
+                  <td><em>Graiṣhmika (ग्रैष्मिक - Summer crops)</em></td>
+                  <td>Sown &amp; Harvested: March–June (Short Summer interval)</td>
+                  <td>Watermelon, Muskmelon, Cucumber, Bitter gourd, Seasonal Vegetables, Fodder</td>
+                  <td>Warm, dry weather with long daylight hours and assured irrigation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout-box">
+            <div class="callout-title">💡 Don't Miss Out: Regional Agricultural Adaptation</div>
+            <p class="pair-en">
+              <strong>Why does Kerala grow rice while Punjab grows wheat?</strong> Rice requires hot, humid conditions with continuous standing water (>150 cm rainfall), naturally provided by Kerala's heavy monsoons and tropical climate. Wheat requires cooler temperatures (15°C–20°C) during its growth and moderate moisture, which Punjab receives during north-Indian winters, supplemented by Himalayan canal networks!
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 3: The 6 Major Soils of India -->
+      <article class="note-card">
+        <div class="note-header">
+          <div class="note-icon-box">🌍</div>
+          <div>
+            <h3 class="note-title-en">3. Soils of India &amp; Soil Ecosystem</h3>
+            <h4 class="note-title-hi">भारत की प्रमुख मृदाएं एवं मृदा पारिस्थितिकी</h4>
+          </div>
+        </div>
+        <div class="note-body">
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Soil Profile:</strong> Soil is not just crushed rock; it is a thriving living ecosystem composed of:
+              (1) <em>Topsoil</em> (richest in organic matter / humus, earthworms, beneficial bacteria);
+              (2) <em>Subsoil</em> (clay, iron oxides, minerals);
+              (3) <em>Weathered parent rock</em>; and
+              (4) <em>Bedrock</em> (unweathered solid foundation).
+            </p>
+            <p class="pair-hi">
+              <strong>मृदा परिच्छेदिका:</strong> मिट्टी केवल चट्टान का चूरा नहीं है; यह एक सजीव पारिस्थितिकी तंत्र है जिसमें:
+              (1) <em>शीर्ष मृदा (Topsoil)</em> (ह्यूमस, केंचुए, जीवाणुओं से भरपूर सबसे उपजाऊ परत);
+              (2) <em>उप-मृदा (Subsoil)</em> (चिकनी मिट्टी, खनिज);
+              (3) <em>अपक्षयित जनक चट्टान</em>; तथा
+              (4) <em>मूल चट्टान (Bedrock)</em> शामिल हैं।
+            </p>
+          </div>
+
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Soil Type (मृदा का प्रकार)</th>
+                  <th>Formation &amp; Color</th>
+                  <th>Key Characteristics</th>
+                  <th>Major Regions (क्षेत्र)</th>
+                  <th>Ideal Crops (उपयुक्त फसलें)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Alluvial Soil<br>(जलोढ़ मिट्टी)</strong></td>
+                  <td>River silt deposition from Himalayas &amp; peninsular rivers; light grey to ash.</td>
+                  <td>Most fertile soil in India; rich in potash &amp; lime, low in nitrogen; highly porous.</td>
+                  <td>Northern Plains (Indus, Ganga, Brahmaputra valleys), Coastal deltas.</td>
+                  <td>Wheat, Rice, Sugarcane, Maize, Pulses, Oilseeds.</td>
+                </tr>
+                <tr>
+                  <td><strong>Black Soil / Regur<br>(काली मिट्टी / रेगुर)</strong></td>
+                  <td>Weathering of volcanic basaltic lava of Deccan Trap; deep dark black.</td>
+                  <td>High clay content; self-ploughing (cracks in summer); exceptional moisture retention.</td>
+                  <td>Maharashtra, Gujarat, Western Madhya Pradesh, North Karnataka.</td>
+                  <td>Cotton ("Black Cotton Soil"), Soybean, Tobacco, Millets, Citrus.</td>
+                </tr>
+                <tr>
+                  <td><strong>Red &amp; Yellow Soil<br>(लाल और पीली मिट्टी)</strong></td>
+                  <td>Weathering of crystalline igneous rocks; red from iron diffusion, yellow when hydrated.</td>
+                  <td>Porous, friable structure; deficient in nitrogen and humus; fertile with irrigation.</td>
+                  <td>Odisha, Chhattisgarh, southern parts of Middle Ganga plain, Western Ghats piedmont.</td>
+                  <td>Millets (Ragi, Bajra), Groundnut, Pulses, Tobacco.</td>
+                </tr>
+                <tr>
+                  <td><strong>Laterite Soil<br>(लैटेराइट मिट्टी)</strong></td>
+                  <td>Intense leaching due to heavy tropical rains; brick-red color.</td>
+                  <td>Acidic, poor organic matter due to rapid bacterial leaching; rich in iron &amp; aluminium.</td>
+                  <td>Western Ghats (Kerala, Karnataka), Meghalaya, hills of Odisha.</td>
+                  <td>Tea, Coffee, Cashew nuts (काजू), Rubber, Coconut.</td>
+                </tr>
+                <tr>
+                  <td><strong>Arid / Desert Soil<br>(शुष्क / मरुस्थलीय मिट्टी)</strong></td>
+                  <td>Wind weathering in hyper-arid zones; sandy texture, red to brown.</td>
+                  <td>High salinity, low moisture and humus; kankar (calcium) nodules impede water infiltration.</td>
+                  <td>Western Rajasthan, northern Gujarat, southern Punjab/Haryana.</td>
+                  <td>Bajra, Jowar, Guar, Pulses (with canal irrigation like Indira Gandhi Canal: Wheat).</td>
+                </tr>
+                <tr>
+                  <td><strong>Forest &amp; Mountain Soil<br>(पर्वतीय एवं वन मिट्टी)</strong></td>
+                  <td>Mechanical weathering in steep high-altitude forest ecosystems; heterogeneous.</td>
+                  <td>Loamy and silty in valleys, coarse-grained on upper slopes; vulnerable to soil erosion.</td>
+                  <td>Himalayan ranges (J&amp;K, Himachal, Uttarakhand, Sikkim, Arunachal Pradesh).</td>
+                  <td>Apple, Peach, Walnut, Saffron (Karewas of Kashmir), Terrace Tea, Spices.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Soil Nurturing &amp; Conservation Practices:</strong>
+              • <em>Crop Rotation:</em> Alternating nitrogen-depleting cereal crops with leguminous pulses (gram, moong) that house nitrogen-fixing <em>Rhizobium</em> bacteria.<br>
+              • <em>Green Manuring &amp; Mulching:</em> Ploughing green sunn hemp or sesbania into soil, and covering topsoil with crop residue to preserve moisture.<br>
+              • <em>Contour Ploughing &amp; Terrace Farming:</em> Ploughing parallel to contours and cutting hill slopes into step terraces to stop soil runoff.
+            </p>
+            <p class="pair-hi">
+              <strong>मृदा पोषण और संरक्षण विधियां:</strong>
+              • <em>फसल चक्र (Crop Rotation):</em> दलहनी फसलों को धान्य फसलों के साथ बदलकर बोना ताकि राइजोबियम जीवाणु वायुमंडलीय नाइट्रोजन को मिट्टी में स्थिर कर सकें।<br>
+              • <em>हरी खाद और मल्चिंग:</em> सनई या ढैंचा जैसी हरी फसलों को मिट्टी में दबाना और जैविक अवशेषों से मिट्टी की नमी को उड़ने से रोकना।<br>
+              • <em>समोच्च जुताई और सीढ़ीदार खेती:</em> पहाड़ी ढलानों पर समोच्च रेखाओं के समानांतर जुताई और सीढ़ीदार खेत बनाना ताकि मिट्टी का कटाव रोका जा सके।
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 4: Traditional & Modern Water Systems -->
+      <article class="note-card">
+        <div class="note-header">
+          <div class="note-icon-box">💧</div>
+          <div>
+            <h3 class="note-title-en">4. Water in Agriculture: Rain-Fed vs. Irrigated Systems</h3>
+            <h4 class="note-title-hi">कृषि में जल: वर्षा-आधारित बनाम सिंचित प्रणालियां</h4>
+          </div>
+        </div>
+        <div class="note-body">
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              Over 50% of cropped agricultural land in India is <strong>rain-fed</strong>, relying directly on the unpredictable southwest monsoons. To counter droughts and water shortages, Indian communities perfected magnificent indigenous water-harvesting architectures:
+            </p>
+            <p class="pair-hi">
+              भारत की 50% से अधिक कृषि भूमि <strong>वर्षा-आधारित (Rain-fed)</strong> है। सूखे और अनियमित वर्षा से निपटने के लिए भारत के विभिन्न भौगोलिक क्षेत्रों में अद्भुत पारंपरिक जल संरक्षण प्रणालियां विकसित की गईं:
+            </p>
+          </div>
+
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Traditional Water System</th>
+                  <th>Region (क्षेत्र)</th>
+                  <th>Engineering &amp; Working Mechanism</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Eri / Taḍāgam</strong></td>
+                  <td>Tamil Nadu &amp; South India</td>
+                  <td>Inundation cascade tanks connected by channels; surplus overflow from one tank refills the next tank downstream.</td>
+                </tr>
+                <tr>
+                  <td><strong>Johad &amp; Kund / Tanka</strong></td>
+                  <td>Rajasthan &amp; Gujarat</td>
+                  <td>Earthen check-dams capturing seasonal runoff (Johad), and covered underground rainwater cisterns with lime plaster (Tanka).</td>
+                </tr>
+                <tr>
+                  <td><strong>Kuhl (कुह्ल)</strong></td>
+                  <td>Himachal Pradesh &amp; J&amp;K</td>
+                  <td>Surface water channels that tap glacial streams and divert mountain snowmelt along contours to hillside terrace farms.</td>
+                </tr>
+                <tr>
+                  <td><strong>Ahar-Pyne (आहर-पाइन)</strong></td>
+                  <td>South Bihar</td>
+                  <td>Indigenous floodwater diversion system: Pyne (inundation canal) leads floodwater to Ahar (rectangular catchment reservoir with 3 embankments).</td>
+                </tr>
+                <tr>
+                  <td><strong>Surangam (सुरंगम)</strong></td>
+                  <td>Kasaragod (Kerala) &amp; Coastal Karnataka</td>
+                  <td>Horizontal cave tunnels dug into laterite hills that tap groundwater and funnel it outwards using natural gravity without pumps.</td>
+                </tr>
+                <tr>
+                  <td><strong>Bamboo Drip Irrigation</strong></td>
+                  <td>Meghalaya</td>
+                  <td>200-year-old tribal engineering diverting spring water through bamboo pipes, reducing 18–20 liters/min to 20–80 drops/min at plant roots!</td>
+                </tr>
+                <tr>
+                  <td><strong>Phad System</strong></td>
+                  <td>Maharashtra (Tapi Basin)</td>
+                  <td>Community-managed irrigation diversion weirs (*bandharas*) built across rivers with rotational water turns (*varees*).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout-box">
+            <div class="callout-title">🚿 Modern Micro-Irrigation Revolution</div>
+            <p class="pair-en">
+              <strong>Drip Irrigation:</strong> Delivers water drop-by-drop right at the plant's root zone through perforated drippers. Prevents 60–70% water evaporation, suppresses weed growth, and eliminates soil erosion.<br>
+              <strong>Sprinkler Irrigation:</strong> Sprays pressurized water as artificial rainfall, ideal for undulating uneven sandy lands with scarce water.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 5: Seeds & Sustainable Pathways -->
+      <article class="note-card">
+        <div class="note-header">
+          <div class="note-icon-box">🌱</div>
+          <div>
+            <h3 class="note-title-en">5. Seeds, Green Revolution &amp; Sustainable Pathways</h3>
+            <h4 class="note-title-hi">बीज, हरित क्रांति और सतत कृषि के मार्ग</h4>
+          </div>
+        </div>
+        <div class="note-body">
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Traditional Seeds vs. HYVs:</strong> Traditional indigenous seeds (*deshi beej*) evolved naturally to resist local pests, heat, and droughts without chemical inputs. During the 1960s <strong>Green Revolution</strong>, High-Yielding Variety (HYV) seeds drastically multiplied wheat and rice yields, making India self-sufficient in food grains. However, HYVs require heavy chemical fertilizers, pesticides, and intensive tube-well irrigation, resulting in falling water tables, soil salinity, and biodiversity loss.
+            </p>
+            <p class="pair-hi">
+              <strong>देसी बीज बनाम उन्नत बीज (HYVs):</strong> पारंपरिक देसी बीज स्थानीय कीटों और सूखे के प्रति स्वाभाविक रूप से प्रतिरोधी होते हैं। 1960 के दशक की <strong>हरित क्रांति</strong> ने भारत को खाद्यान्न में आत्मनिर्भर बनाया, किंतु रासायनिक खादों और कीटनाशकों के अत्यधिक उपयोग से भूमिगत जल स्तर गिरा, मृदा खारी हुई और स्वास्थ्य संबंधी संकट (जैसे पंजाब में कैंसर का प्रसार) पैदा हुआ।
+            </p>
+          </div>
+
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Ecological Farming Systems:</strong>
+              <br>• <strong>Kulaghar (कुलाघर - Goa):</strong> Integrated multi-tier homestead agro-ecosystems with areca nut, coconut, pepper vines, and medicinal plants watered by natural springs.
+              <br>• <strong>Pokkali Rice (पोक्काली - Kerala):</strong> Saline-tolerant heirloom rice grown organically in coastal saltwater fields, rotating cyclically with shrimp/prawn culture.
+              <br>• <strong>Beejamrit &amp; Jeevamrit (बीजामृत एवं जीवामृत):</strong> Cow dung, urine, pulse flour, and soil concoctions approved by ICAR to coat seeds and stimulate soil microbiology.
+              <br>• <strong>Sikkim:</strong> In 2016, Sikkim became the <strong>first 100% organic state</strong> in the world, prohibiting synthetic agrochemicals completely.
+            </p>
+            <p class="pair-hi">
+              <strong>पारिस्थितिक कृषि प्रणालियां:</strong>
+              <br>• <strong>कुलाघर (गोवा):</strong> बहुस्तरीय बागवानी प्रणाली (सुपारी, नारियल, काली मिर्च) जो प्राकृतिक झरनों से सिंचित होती है।
+              <br>• <strong>पोक्काली धान (केरल):</strong> खारे पानी में उगने वाला विशेष धान, जिसकी खेती के बाद उसी खेत में झींगा पालन किया जाता है।
+              <br>• <strong>बीजामृत एवं जीवामृत:</strong> गोबर, गोमूत्र, बेसन और मिट्टी का जैविक घोल जिसे ICAR ने बीज शोधन और मृदा संवर्धन हेतु मान्यता दी है।
+              <br>• <strong>सिक्किम:</strong> 2016 में रासायनिक खादों पर पूर्ण प्रतिबंध लगाकर विश्व का पहला 100% जैविक राज्य बना।
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 6: Challenges & Government Role -->
+      <article class="note-card">
+        <div class="note-header">
+          <div class="note-icon-box">🏛️</div>
+          <div>
+            <h3 class="note-title-en">6. Contemporary Challenges &amp; Government Support</h3>
+            <h4 class="note-title-hi">समकालीन चुनौतियां एवं सरकारी सहायता योजनाएं</h4>
+          </div>
+        </div>
+        <div class="note-body">
+          <div class="bilingual-pair">
+            <p class="pair-en">
+              <strong>Key Challenges Faced by Indian Farmers:</strong>
+              <br>1. <em>Small &amp; Fragmented Landholdings:</em> Over 86% of Indian farmers are small or marginal, operating on plots smaller than 2 hectares (average <1 ha), making mechanization expensive.
+              <br>2. <em>Climate Vulnerability &amp; The Ganga Basin Stress:</em> Glacial retreat, heavy groundwater extraction, and dam obstructions reduce summer river volume, threatening the food bowl of 500 million people.
+              <br>3. <em>High Input Costs &amp; Debt Traps:</em> Volatile market prices, crop failures, and reliance on private moneylenders lead thousands of farmers into distress.
+            </p>
+            <p class="pair-hi">
+              <strong>किसानों के समक्ष प्रमुख चुनौतियां:</strong>
+              <br>1. <em>छोटे और खंडित जोत:</em> भारत के 86% से अधिक किसान लघु और सीमांत हैं (2 हेक्टेयर से कम भूमि), जिससे आधुनिक उपकरण खरीदना कठिन होता है।
+              <br>2. <em>गंगा बेसिन का जल संकट:</em> ग्लेशियर पिघलने, अत्यधिक भूजल दोहन और बांधों से गंगा नदी ग्रीष्म ऋतु में सूखने की कगार पर पहुंच रही है, जिससे 50 करोड़ लोगों का जीवन संकट में है।
+              <br>3. <em>ऋण जाल (Debt Trap):</em> फसल नष्ट होने और निजी साहूकारों के भारी ब्याज के कारण किसान कर्ज के चक्रव्यूह में फंस जाते हैं।
+            </p>
+          </div>
+
+          <div class="callout-box">
+            <div class="callout-title">🇮🇳 Key Government Support Initiatives</div>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.65;">
+              <li><strong>PM-KISAN:</strong> Direct income support of ₹6,000 per year transferred in three equal 4-month installments of ₹2,000 to farmers' bank accounts.</li>
+              <li><strong>Soil Health Card Scheme:</strong> Tests soil for 12 nutrients and recommends customized fertilizer dosages.</li>
+              <li><strong>PM Fasal Bima Yojana (PMFBY):</strong> Affordable crop insurance against natural calamities, pests, and unseasonal rains.</li>
+              <li><strong>e-NAM (National Agriculture Market):</strong> Pan-India digital electronic trading portal connecting APMC mandis for transparent price discovery.</li>
+              <li><strong>PM-KUSUM:</strong> Subsidies for solar-powered irrigation pumps and solarizing grid-connected agriculture pumps.</li>
+              <li><strong>Kisan Credit Card (KCC):</strong> Institutional low-interest credit for seeds, fertilizers, and agricultural implements.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: NCERT EXERCISE SOLUTIONS (Q1–Q10)   -->
+    <!-- ========================================== -->
+    <div id="tab-solutions" class="tab-content" style="display: none;">
+
+      <!-- Q1 -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q1</span>
+        <h3 class="exercise-title-en">Why do farmers in Kerala grow rice while farmers in Punjab grow mostly wheat? What would happen if they swapped?</h3>
+        <h4 class="exercise-title-hi">केरल के किसान चावल क्यों उगाते हैं जबकि पंजाब के किसान मुख्य रूप से गेहूं क्यों उगाते हैं? यदि वे फसलों की अदला-बदली कर लें तो क्या होगा?</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Step-by-Step Rationale &amp; Solution (विस्तृत समाधान)</div>
+          <div class="sol-step">
+            <p class="pair-en">
+              <strong>1. Kerala's Conditions for Rice:</strong> Rice (paddy) is a tropical, moisture-loving Kharif crop requiring high temperatures (>25°C), high humidity, and heavy rainfall (>150–200 cm) with waterlogged soil. Kerala receives intense, prolonged rainfall from both the Southwest and Northeast monsoons, and its coastal lowlands and river valleys provide ideal flooded conditions.
+            </p>
+            <p class="pair-hi">
+              <strong>1. चावल के लिए केरल की अनुकूलता:</strong> चावल एक उष्णकटिबंधीय खरीफ फसल है जिसे उच्च तापमान (>25°C), उच्च आर्द्रता और 150-200 सेमी से अधिक वर्षा की आवश्यकता होती है। केरल में दोनों मानसूनों से भारी वर्षा होती है, जिससे जलभराव वाले धान के खेत प्राकृतिक रूप से बनते हैं।
+            </p>
+          </div>
+          <div class="sol-step">
+            <p class="pair-en">
+              <strong>2. Punjab's Conditions for Wheat:</strong> Wheat is a temperate Rabi crop requiring cool temperatures (10°C–15°C) during vegetative growth, moderate moisture (50–75 cm), and warm, dry sunshine during ripening. Punjab's cold continental winter, fertile alluvial soil from Himalayan rivers, and well-developed canal/tube-well irrigation suit wheat perfectly.
+            </p>
+            <p class="pair-hi">
+              <strong>2. गेहूं के लिए पंजाब की अनुकूलता:</strong> गेहूं एक शीतोष्ण रबी फसल है जिसे बढ़ते समय ठंडे मौसम (10°C-15°C) और पकते समय खिली हुई धूप की आवश्यकता होती है। पंजाब की शीतल सर्दियां और उपजाऊ जलोढ़ मिट्टी गेहूं के लिए सर्वोत्तम हैं।
+            </p>
+          </div>
+          <div class="sol-step">
+            <p class="pair-en">
+              <strong>3. If they Swapped:</strong> If Kerala farmers try to grow wheat, the excessive humidity, continuous tropical heat, and lack of winter cold would lead to fungal rot and failure to form grain heads. Conversely, if Punjab grew rice as its main winter crop, the cold frost would kill the paddy seedlings. (Note: Punjab does grow rice in the summer/monsoon with intensive canal irrigation, but swapping their primary adapted seasons would lead to catastrophic crop failure!)
+            </p>
+            <p class="pair-hi">
+              <strong>3. यदि फसलें बदल दी जाएं:</strong> केरल में अत्यधिक गर्मी और नमी के कारण गेहूं में दाने नहीं बनेंगे और फफूंद लग जाएगी। पंजाब में सर्दियों में चावल बोने पर अत्यधिक ठंड और पाले से धान के पौधे मर जाएंगे।
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q2 -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q2 (MATCHING)</span>
+        <h3 class="exercise-title-en">Match the following:</h3>
+        <h4 class="exercise-title-hi">निम्नलिखित का सही मिलान कीजिए:</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Correct Pairs &amp; Explanation (सही जोड़े एवं व्याख्या)</div>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Column A</th>
+                  <th>Correct Match (Column B)</th>
+                  <th>Core Reason / Explanation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>(a) Kharif crops</td>
+                  <td><strong>(ii) Crops grown during the monsoon</strong></td>
+                  <td>Sown in June-July with onset of monsoon (e.g. Paddy, Maize).</td>
+                </tr>
+                <tr>
+                  <td>(b) Rabi crops</td>
+                  <td><strong>(i) Crops during the winter</strong></td>
+                  <td>Sown in Oct-Dec and harvested in spring (e.g. Wheat, Mustard).</td>
+                </tr>
+                <tr>
+                  <td>(c) Alluvial soil</td>
+                  <td><strong>(v) Soil rich in nutrients deposited by rivers</strong></td>
+                  <td>Carried and laid down by river silt in floodplains.</td>
+                </tr>
+                <tr>
+                  <td>(d) Terrace farming</td>
+                  <td><strong>(vi) Method of farming on hillsides</strong></td>
+                  <td>Steps carved into hill slopes to prevent water and soil erosion.</td>
+                </tr>
+                <tr>
+                  <td>(e) Alpine soil</td>
+                  <td><strong>(iii) Thin, rough, and rocky soil found in mountainous regions</strong></td>
+                  <td>Found in high Himalayan slopes above tree line.</td>
+                </tr>
+                <tr>
+                  <td>(f) Zaid crops</td>
+                  <td><strong>(iv) Crops grown in summer</strong></td>
+                  <td>Short dry-season crops (March-June) like watermelon, cucumber.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q3 -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q3</span>
+        <h3 class="exercise-title-en">Why do certain crops thrive in specific regions?</h3>
+        <h4 class="exercise-title-hi">विशिष्ट क्षेत्रों में ही कुछ विशेष फसलें अच्छी तरह से क्यों पनपती हैं?</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Comprehensive Answer</div>
+          <div class="sol-step">
+            <p class="pair-en">
+              Crops thrive in specific geographical regions due to the interplay of four fundamental agro-climatic factors:
+              <br>• <strong>Climate &amp; Temperature:</strong> Photoperiod (daylight duration) and heat units differ. For example, saffron needs temperate Kashmir cold, while cotton needs 210 frost-free days and warm sun.
+              <br>• <strong>Rainfall &amp; Water Availability:</strong> High rainfall supports paddy, jute, and tea, while dry semi-arid regions support drought-hardy millets (bajra, jowar).
+              <br>• <strong>Soil Characteristics:</strong> Black soil retains water ideal for cotton; sandy arid soils drain fast for guar; well-drained acidic laterite soil supports tea and coffee.
+              <br>• <strong>Topography &amp; Relief:</strong> Sloping mountain hills prevent stagnant water at tea plant roots, whereas flat river deltas allow flooded rice fields.
+            </p>
+            <p class="pair-hi">
+              फसलें चार मुख्य कृषि-जलवायु कारकों के संतुलन के कारण विशिष्ट क्षेत्रों में पनपती हैं:
+              <br>• <strong>जलवायु और तापमान:</strong> केसर को कश्मीर की ठंड चाहिए, जबकि कपास को 210 पाला-रहित दिन चाहिए।
+              <br>• <strong>वर्षा:</strong> अधिक वर्षा धान और जूट के लिए, जबकि कम वर्षा बाजरा और ज्वार के लिए उपयुक्त है।
+              <br>• <strong>मिट्टी के गुण:</strong> काली मिट्टी कपास के लिए और लैटेराइट मिट्टी चाय-कॉफी के लिए सर्वोत्तम है।
+              <br>• <strong>धरातलीय ढलान:</strong> चाय की जड़ों में पानी नहीं रुकना चाहिए, इसलिए ढलान वाले पहाड़ उपयुक्त होते हैं।
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q4 -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q4</span>
+        <h3 class="exercise-title-en">How has modern technology helped farmers?</h3>
+        <h4 class="exercise-title-hi">आधुनिक प्रौद्योगिकी ने किसानों की किस प्रकार मदद की है?</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Technology in Agriculture</div>
+          <div class="sol-step">
+            <p class="pair-en">
+              Modern technology has transformed Indian farming across multiple dimensions:
+              <br>1. <strong>Mechanization:</strong> Tractors, laser land-levelers, mechanized transplanters, and combine harvesters save immense labor and reduce post-harvest losses.
+              <br>2. <strong>Precision Irrigation:</strong> Drip and sprinkler systems automate water and fertilizer delivery (fertigation), cutting water waste by up to 70%.
+              <br>3. <strong>Satellite &amp; Weather Forecasting:</strong> Early warnings for monsoons, cyclones, and hailstorms via smartphone apps (e.g. Kisan Suvidha) protect crops.
+              <br>4. <strong>Agricultural Drones &amp; Sensors:</strong> Drones perform rapid aerial health surveys and spray micronutrients with pinpoint accuracy.
+              <br>5. <strong>Digital Marketing &amp; Direct Credit:</strong> e-NAM allows farmers to sell produce to buyers across India without middlemen, and PM-KISAN transfers benefits straight to Aadhaar-linked accounts.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q5 -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q5</span>
+        <h3 class="exercise-title-en">Why is sustainable agriculture important? Write a short note on this.</h3>
+        <h4 class="exercise-title-hi">सतत कृषि (टिकाऊ खेती) क्यों महत्वपूर्ण है? इस पर एक संक्षिप्त टिप्पणी लिखिए।</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Short Note on Sustainable Agriculture</div>
+          <div class="sol-step">
+            <p class="pair-en">
+              <strong>Sustainable Agriculture:</strong> It is farming in a way that satisfies human food needs today without degrading natural resources or compromising the ability of future generations to meet their own needs.
+              <br><br>
+              <strong>Why it is Crucial:</strong>
+              <br>• <em>Protects Soil Health:</em> Avoids excessive synthetic fertilizers that kill earthworms and beneficial soil bacteria, maintaining natural soil fertility.
+              <br>• <em>Conserves Finite Groundwater:</em> Employs rainwater harvesting and micro-irrigation to prevent critical aquifer depletion.
+              <br>• <em>Prevents Toxic Chemical Runoff:</em> Eliminates carcinogenic pesticides that leach into village drinking water wells and food chains.
+              <br>• <em>Economically Empowering:</em> Natural farming (ZBNF) uses on-farm inputs (cow dung, jeevamrit, neem extracts), freeing marginal farmers from crippling debt traps.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q6 -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q6</span>
+        <h3 class="exercise-title-en">Name some challenges that farmers face today. What might be their impact for people?</h3>
+        <h4 class="exercise-title-hi">वर्तमान में किसानों के समक्ष आने वाली कुछ चुनौतियों के नाम बताइए। आम जनता पर इनका क्या प्रभाव पड़ सकता है?</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Challenges &amp; Societal Impact</div>
+          <div class="sol-step">
+            <p class="pair-en">
+              <strong>Challenges:</strong> (1) Fragmented smallholdings (<1 hectare); (2) Unpredictable weather and climate change (droughts, floods); (3) Depleting groundwater; (4) High costs of seeds, electricity, and fuel; (5) Volatile market prices and lack of cold storage.
+              <br><br>
+              <strong>Impact on Society:</strong>
+              <br>• <em>Food Insecurity &amp; Price Inflation:</em> Crop destruction raises prices of staple foods (wheat, pulses, vegetables) for urban consumers.
+              <br>• <em>Distress Agrarian Migration:</em> When farming becomes unviable, millions migrate to overcrowded cities as daily wage laborers.
+              <br>• <em>Loss of Agricultural Heritage:</em> Rare traditional crop varieties and indigenous ecological knowledge vanish.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q7 -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q7 (DEBATE SYNTHESIS)</span>
+        <h3 class="exercise-title-en">Traditional vs. Modern Irrigation Methods: Debate Analysis</h3>
+        <h4 class="exercise-title-hi">पारंपरिक बनाम आधुनिक सिंचाई पद्धतियां: वाद-विवाद विश्लेषण</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Balanced Synthesis</div>
+          <div class="sol-step">
+            <p class="pair-en">
+              <strong>Traditional Methods (Kuhl, Johad, Eri, Bamboo Drip):</strong> Eco-friendly, gravity-powered, cost-free, and recharge local aquifers. However, they depend on seasonal runoff and cannot irrigate massive plains at scale.
+              <br><br>
+              <strong>Modern Methods (Tube wells, Electric Pumps, Canals):</strong> Deliver vast volumes on demand, but over-extraction leads to groundwater depletion and soil salinity.
+              <br><br>
+              <strong>Conclusion / Ideal Model:</strong> Modern <strong>solar-powered micro-drip irrigation</strong> paired with <strong>traditional rainwater catchment ponds (Amrit Sarovars)</strong> offers the optimal, climate-resilient solution!
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q8 to Q10 in summary -->
+      <article class="exercise-card">
+        <span class="exercise-q-num">NCERT TEXTBOOK Q8, Q9 &amp; Q10</span>
+        <h3 class="exercise-title-en">Futuristic Farming, Ganga Basin Crisis &amp; Traditional Crops in Daily Life</h3>
+        <h4 class="exercise-title-hi">भविष्य की खेती, गंगा बेसिन संकट एवं दैनिक जीवन में पारंपरिक फसलें</h4>
+        <div class="sol-section">
+          <div class="sol-header">💡 Comprehensive Insights</div>
+          <div class="sol-step">
+            <p class="pair-en">
+              <strong>Q8 - Farming in 50 Years:</strong> Solar-powered robotic harvesters, AI-controlled micro-drip networks, vertical hydroponic farms in urban fringes, and climate-resilient indigenous millet crops.
+              <br><br>
+              <strong>Q9 - Ganga Basin Action Plan:</strong> Melting Himalayan glaciers and excessive tubewell pumping threaten 500M livelihoods. Solutions: Mandatory drip irrigation, reviving traditional village check-dams (*ahars*), natural farming buffers along riverbanks, and industrial effluent treatment.
+              <br><br>
+              <strong>Q10 - Ancient Crops in our Kitchens:</strong> Barley (*jau*), wheat (*gehun*), rice (*chawal*), sesame (*til*), turmeric (*haldi*), and mustard (*sarson*) mentioned in ancient Vedic texts are still core staples in Indian kitchens, proving over 4,000 years of culinary and cultural continuity!
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: 25 BILINGUAL MCQS PRACTICE          -->
+    <!-- ========================================== -->
+    <div id="tab-quiz" class="tab-content" style="display: none;">
+
+      <!-- Live Quiz Score Bar -->
+      <section class="score-banner">
+        <div class="score-stat">
+          <div class="score-stat-num" id="liveScore">0</div>
+          <div>
+            <div class="score-stat-lbl">Score / प्राप्तांक</div>
+            <div style="font-size: 0.82rem; color: var(--text-main);">Out of 25</div>
+          </div>
+        </div>
+
+        <div class="score-stat">
+          <div class="score-stat-num" id="answeredCount">0</div>
+          <div>
+            <div class="score-stat-lbl">Completed / पूर्ण</div>
+            <div style="font-size: 0.82rem; color: var(--text-main);">Progress: <span id="progressPct">0%</span></div>
+          </div>
+        </div>
+
+        <button onclick="resetQuiz()" class="theme-toggle-btn" style="padding: 8px 16px; border-color: var(--brand-green);">
+          🔄 Reset Quiz
+        </button>
+      </section>
+
+      <!-- Quiz Questions Container -->
+      <div id="quizQuestionsContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Mobile Bottom Navigation Bar (PERMANENT RULE: Dynamic Content-Aware & Theme Toggle) -->
+  <nav class="mobile-bottom-nav">
+    <a href="/?class=7" class="mobile-nav-item">
+      <span class="mobile-nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="/?class=7&subject=c7-social-science" class="mobile-nav-item">
+      <span class="mobile-nav-icon">📚</span>
+      <span>Part 2</span>
+    </a>
+    <button class="mobile-nav-item active" onclick="switchTab('notes')">
+      <span class="mobile-nav-icon">📑</span>
+      <span>Notes</span>
+    </button>
+    <button class="mobile-nav-item" onclick="switchTab('quiz')">
+      <span class="mobile-nav-icon">🎯</span>
+      <span>25 MCQs</span>
+    </button>
+    <button class="mobile-nav-item" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <span class="mobile-nav-icon" id="mobileThemeIcon">🌙</span>
+      <span id="mobileThemeLabel">Theme</span>
+    </button>
+  </nav>
+
+  <!-- Floating Back to Top -->
+  <button id="backToTopBtn" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" title="Back to Top">
+    ↑
+  </button>
+
+  <script>
+    // 25 High-Yield Bilingual MCQs for gees201
+    const QUIZ_DATA = [
+      {
+        id: 1,
+        topic: "Ancient Agriculture",
+        questionEn: "At which Harappan archaeological site were perpendicular furrows discovered, proving the practice of intercropping over 4,800 years ago?",
+        questionHi: "हड़प्पा सभ्यता के किस पुरातात्विक स्थल पर समकोण पर काटते हुए हल के निशान मिले हैं, जो 4,800 वर्ष पूर्व मिश्रित खेती का प्रमाण देते हैं?",
+        optionsEn: [
+          "Lothal (Gujarat)",
+          "Kalibangan (Rajasthan)",
+          "Mohenjo-daro (Sindh)",
+          "Dholavira (Gujarat)"
+        ],
+        optionsHi: [
+          "लोथल (गुजरात)",
+          "कालीबंगा (राजस्थान)",
+          "मोहनजोदड़ो (सिंध)",
+          "धोलावीरा (गुजरात)"
+        ],
+        correct: 1,
+        explanationEn: "Archaeologists at Kalibangan discovered ploughed field furrows running at right angles (perpendicular), showing two different crops (like mustard and gram) were grown simultaneously.",
+        explanationHi: "कालीबंगा (राजस्थान) में समकोण पर काटते हुए हल के कूंड मिले हैं, जो सिद्ध करते हैं कि वहां एक साथ दो फसलें (जैसे सरसों और चना) उगाई जाती थीं।"
+      },
+      {
+        id: 2,
+        topic: "Ancient Texts",
+        questionEn: "Which ancient treatise on agriculture opens with advice on cattle welfare, daily farm visits, and knowledge of seasons?",
+        questionHi: "कृषि पर आधारित कौन सा प्राचीन ग्रंथ पशु कल्याण, दैनिक खेत निरीक्षण और ऋतुओं के ज्ञान से आरंभ होता है?",
+        optionsEn: [
+          "Krishi Parashara",
+          "Charaka Samhita",
+          "Surya Siddhanta",
+          "Natya Shastra"
+        ],
+        optionsHi: [
+          "कृषि पराशर",
+          "चरक संहिता",
+          "सूर्य सिद्धांत",
+          "नाट्य शास्त्र"
+        ],
+        correct: 0,
+        explanationEn: "Krishi Parashara, attributed to sage Parashara, is one of the earliest classical texts dedicated entirely to Indian agricultural practices and rainfall prediction.",
+        explanationHi: "कृषि पराशर ऋषि पराशर द्वारा रचित प्राचीन ग्रंथ है जो कृषि विधियों, पशुधन कल्याण और मौसम पूर्वानुमान पर केंद्रित है।"
+      },
+      {
+        id: 3,
+        topic: "Cropping Seasons",
+        questionEn: "What was the ancient Sanskrit term used for monsoon wet crops before the term 'Kharif' became widely used?",
+        questionHi: "'खरीफ' शब्द के प्रचलन से पूर्व मानसून की फसलों के लिए किस संस्कृत शब्द का प्रयोग किया जाता था?",
+        optionsEn: [
+          "Haimana",
+          "Graiṣhmika",
+          "Kedāra",
+          "Sharada"
+        ],
+        optionsHi: [
+          "हैमन",
+          "ग्रैष्मिक",
+          "केदारा",
+          "शारद"
+        ],
+        correct: 2,
+        explanationEn: "Before Arabic terms came into use, ancient texts classified crops into Kedāra (wet/monsoon crops), Haimana (winter crops / Rabi), and Graiṣhmika (summer crops / Zaid).",
+        explanationHi: "प्राचीन ग्रंथों में फसलों को केदारा (वर्षा/गीली फसलें), हैमन (शीतकालीन फसलें/रबी) और ग्रैष्मिक (ग्रीष्मकालीन फसलें/जायद) कहा गया था।"
+      },
+      {
+        id: 4,
+        topic: "Cropping Seasons",
+        questionEn: "Which of the following crop groups consists entirely of Rabi crops?",
+        questionHi: "निम्नलिखित में से कौन सा समूह पूर्णतः रबी की फसलों का है?",
+        optionsEn: [
+          "Rice, Maize, Jowar",
+          "Wheat, Gram, Mustard, Barley",
+          "Watermelon, Cucumber, Bitter gourd",
+          "Cotton, Jute, Groundnut"
+        ],
+        optionsHi: [
+          "चावल, मक्का, ज्वार",
+          "गेहूं, चना, सरसों, जौ",
+          "तरबूज, खीरा, करेला",
+          "कपास, जूट, मूंगफली"
+        ],
+        correct: 1,
+        explanationEn: "Rabi crops are sown in winter (October–December) and harvested in spring (April–May). Wheat, gram, mustard, and barley are classic Rabi crops.",
+        explanationHi: "रबी की फसलें सर्दियों (अक्टूबर-दिसंबर) में बोई जाती हैं और वसंत (अप्रैल-मई) में काटी जाती हैं। गेहूं, चना, सरसों और जौ रबी फसलें हैं।"
+      },
+      {
+        id: 5,
+        topic: "Soil Types",
+        questionEn: "Which soil is also known as 'Regur' and is famous for its self-ploughing capacity and moisture retention for cotton cultivation?",
+        questionHi: "किस मिट्टी को 'रेगुर' भी कहा जाता है जो कपास की खेती के लिए अपनी उच्च नमी धारण क्षमता और स्वतः जुताई के गुण के लिए प्रसिद्ध है?",
+        optionsEn: [
+          "Alluvial Soil",
+          "Laterite Soil",
+          "Black Soil",
+          "Red Soil"
+        ],
+        optionsHi: [
+          "जलोढ़ मिट्टी",
+          "लैटेराइट मिट्टी",
+          "काली मिट्टी",
+          "लाल मिट्टी"
+        ],
+        correct: 2,
+        explanationEn: "Black soil (Regur), formed from Deccan basalt lava, has high clay content. It develops deep wide cracks when dry (self-ploughing) and retains moisture for a long time.",
+        explanationHi: "काली मिट्टी (रेगुर) दक्कन के लावा से बनती है। इसमें क्ले की मात्रा अधिक होती है और सूखने पर इसमें गहरी दरारें पड़ जाती हैं, जिससे वायु का संचार होता है।"
+      },
+      {
+        id: 6,
+        topic: "Soil Types",
+        questionEn: "Laterite soil is formed primarily as a result of which geological and climatic process?",
+        questionHi: "लैटेराइट मिट्टी का निर्माण मुख्य रूप से किस भूगर्भीय और जलवायु प्रक्रिया के परिणामस्वरूप होता है?",
+        optionsEn: [
+          "River silt sedimentation",
+          "Intense leaching under heavy tropical rainfall",
+          "Wind deposition in arid zones",
+          "Volcanic ash crystallization"
+        ],
+        optionsHi: [
+          "नदियों द्वारा गाद का जमाव",
+          "भारी मानसूनी वर्षा के कारण तीव्र निक्षालन (Leaching)",
+          "शुष्क क्षेत्रों में वायु द्वारा निक्षेपण",
+          "ज्वालामुखीय राख का जमना"
+        ],
+        correct: 1,
+        explanationEn: "Laterite soil develops in tropical regions with alternating wet and dry seasons where heavy rainfall leaches away silica and lime, leaving behind iron and aluminum oxides.",
+        explanationHi: "भारी वर्षा वाले उष्णकटिबंधीय क्षेत्रों में तीव्र निक्षालन (Leaching) के कारण सिलिका और चूना बह जाता है और लोहे व एल्युमिनियम के यौगिक शेष रह जाते हैं।"
+      },
+      {
+        id: 7,
+        topic: "Traditional Water Systems",
+        questionEn: "The 'Eri' system of cascading tanks connected by spillways to store rainwater is traditionally used in which Indian state?",
+        questionHi: "वर्षा जल को संग्रहित करने के लिए एक-दूसरे से जुड़े तालाबों की 'एरी' (Eri) प्रणाली पारंपरिक रूप से किस राज्य में उपयोग की जाती है?",
+        optionsEn: [
+          "Rajasthan",
+          "Tamil Nadu",
+          "Himachal Pradesh",
+          "Punjab"
+        ],
+        optionsHi: [
+          "राजस्थान",
+          "तमिलनाडु",
+          "हिमाचल प्रदेश",
+          "पंजाब"
+        ],
+        correct: 1,
+        explanationEn: "Eris are traditional cascade tanks in Tamil Nadu where water overflowing from an upper tank flows through earthen channels into the next lower tank.",
+        explanationHi: "तमिलनाडु में 'एरी' (Eri) तालाबों की एक श्रृंखला होती है, जिसमें ऊपर के तालाब का अतिरिक्त पानी नहरों द्वारा नीचे के तालाबों में पहुंचता है।"
+      },
+      {
+        id: 8,
+        topic: "Traditional Water Systems",
+        questionEn: "In the hilly terrains of Himachal Pradesh, what are the traditional surface water diversion channels that carry glacial melt to terraced fields called?",
+        questionHi: "हिमाचल प्रदेश के पर्वतीय क्षेत्रों में हिमनदों के पिघले जल को सीढ़ीदार खेतों तक ले जाने वाली पारंपरिक नहरों को क्या कहा जाता है?",
+        optionsEn: [
+          "Kuhls",
+          "Johads",
+          "Kunds",
+          "Pynes"
+        ],
+        optionsHi: [
+          "कुह्ल (Kuhls)",
+          "जोहड़ (Johads)",
+          "कुंड (Kunds)",
+          "पाइन (Pynes)"
+        ],
+        correct: 0,
+        explanationEn: "Kuhls are community-managed surface channels in Himachal Pradesh that divert glacial runoff along mountain contours to irrigate village terrace farms.",
+        explanationHi: "हिमाचल प्रदेश में 'कुह्ल' ऐसी पारंपरिक नहरें हैं जो ग्लेशियरों के पानी को पहाड़ों की ढलानों के साथ-साथ खेतों तक पहुंचाती हैं।"
+      },
+      {
+        id: 9,
+        topic: "Traditional Water Systems",
+        questionEn: "Which northeastern state of India is renowned for its 200-year-old traditional bamboo drip irrigation system?",
+        questionHi: "भारत का कौन सा पूर्वोत्तर राज्य अपनी 200 वर्ष पुरानी पारंपरिक बांस ड्रिप सिंचाई (Bamboo Drip) प्रणाली के लिए प्रसिद्ध है?",
+        optionsEn: [
+          "Assam",
+          "Meghalaya",
+          "Manipur",
+          "Tripura"
+        ],
+        optionsHi: [
+          "असम",
+          "मेघालय",
+          "मणिपुर",
+          "त्रिपुरा"
+        ],
+        correct: 1,
+        explanationEn: "Tribal farmers in Meghalaya use bamboo pipes of varied diameters to divert spring water across difficult mountain terrain directly to betel leaf crops drop by drop.",
+        explanationHi: "मेघालय में किसान बांस के पाइपों की मदद से पहाड़ी झरनों के पानी को सीधे पौधों की जड़ों तक बूंद-बूंद करके पहुंचाते हैं।"
+      },
+      {
+        id: 10,
+        topic: "Sustainable Farming",
+        questionEn: "In 2016, which Indian state was officially recognized as the world's first 100% organic state?",
+        questionHi: "वर्ष 2016 में किस भारतीय राज्य को आधिकारिक तौर पर विश्व का पहला 100% जैविक राज्य घोषित किया गया था?",
+        optionsEn: [
+          "Kerala",
+          "Sikkim",
+          "Goa",
+          "Uttarakhand"
+        ],
+        optionsHi: [
+          "केरल",
+          "सिक्किम",
+          "गोवा",
+          "उत्तराखंड"
+        ],
+        correct: 1,
+        explanationEn: "Sikkim phased out chemical fertilizers and pesticides completely, becoming the world's first fully organic agricultural state in 2016.",
+        explanationHi: "सिक्किम ने रासायनिक खादों और कीटनाशकों को पूर्णतः बंद कर 2016 में विश्व का पहला 100% जैविक राज्य बनने का गौरव प्राप्त किया।"
+      },
+      {
+        id: 11,
+        topic: "Traditional Ecosystems",
+        questionEn: "What is 'Kulaghar', a sustainable traditional farming practice common in the Konkan plains of Goa?",
+        questionHi: "गोवा के कोंकण मैदानों में प्रचलित 'कुलाघर' (Kulaghar) पारंपरिक कृषि प्रणाली क्या है?",
+        optionsEn: [
+          "Monoculture wheat cultivation on flat plains",
+          "Integrated homestead garden with multi-tier crops watered by springs",
+          "Deep sea fishing using trawlers",
+          "Terrace farming in dry desert sands"
+        ],
+        optionsHi: [
+          "समतल मैदानों पर केवल गेहूं की एकल खेती",
+          "झरनों के पानी से सिंचित बहुस्तरीय घरेलू बागवानी प्रणाली",
+          "गहरे समुद्र में मछली पकड़ना",
+          "रेगिस्तान में सीढ़ीदार खेती"
+        ],
+        correct: 1,
+        explanationEn: "A Kulaghar is an agro-ecosystem in Goa where areca palms, coconut, pepper, bananas, and medicinal herbs are grown in multi-tier density using gravity channels from fresh springs.",
+        explanationHi: "कुलाघर गोवा की एक पारंपरिक बहुस्तरीय कृषि प्रणाली है जिसमें सुपारी, नारियल, काली मिर्च और औषधीय पौधे प्राकृतिक झरनों के पानी से एक साथ उगाए जाते हैं।"
+      },
+      {
+        id: 12,
+        topic: "Traditional Ecosystems",
+        questionEn: "The saline-tolerant 'Pokkali' rice variety, which alternates seasonally with shrimp aquaculture, belongs to which Indian state?",
+        questionHi: "खारे पानी को सहन करने वाला 'पोक्काली' धान, जिसकी खेती के बाद झींगा पालन किया जाता है, किस राज्य से संबंधित है?",
+        optionsEn: [
+          "West Bengal",
+          "Odisha",
+          "Kerala",
+          "Andhra Pradesh"
+        ],
+        optionsHi: [
+          "पश्चिम बंगाल",
+          "ओडिशा",
+          "केरल",
+          "आंध्र प्रदेश"
+        ],
+        correct: 2,
+        explanationEn: "Pokkali is a unique heirloom rice cultivated in coastal saline wetlands of Kerala that alternates organically with prawn/shrimp farming in the non-monsoon season.",
+        explanationHi: "पोक्काली केरल के तटीय खारे जलक्षेत्र में उगाया जाने वाला विशेष धान है। मानसून के बाद इसी खेत में प्राकृतिक रूप से झींगा पालन किया जाता है।"
+      },
+      {
+        id: 13,
+        topic: "Soil Ecosystem",
+        questionEn: "What is the topmost layer of soil that contains the maximum organic matter (humus) and soil microorganisms called?",
+        questionHi: "मृदा की सबसे ऊपरी परत क्या कहलाती है जिसमें सर्वाधिक जैविक पदार्थ (ह्यूमस) और सूक्ष्मजीव पाए जाते हैं?",
+        optionsEn: [
+          "Subsoil",
+          "Topsoil",
+          "Weathered rock",
+          "Bedrock"
+        ],
+        optionsHi: [
+          "उप-मृदा (Subsoil)",
+          "शीर्ष मृदा (Topsoil)",
+          "अपक्षयित चट्टान",
+          "मूल चट्टान (Bedrock)"
+        ],
+        correct: 1,
+        explanationEn: "Topsoil is the uppermost layer containing decomposed leaves, organic humus, earthworms, and microorganisms vital for seed germination and plant growth.",
+        explanationHi: "शीर्ष मृदा (Topsoil) सबसे ऊपरी और सबसे उपजाऊ परत होती है जिसमें ह्यूमस और सूक्ष्मजीव प्रचुर मात्रा में होते हैं।"
+      },
+      {
+        id: 14,
+        topic: "Ancient Texts",
+        questionEn: "According to the ancient Sanskrit dictionary 'Amarakoṣha', into how many types was agricultural land classified based on fertility?",
+        questionHi: "प्राचीन संस्कृत कोश 'अमरकोश' के अनुसार उर्वरता के आधार पर कृषि भूमि को कितने प्रकारों में वर्गीकृत किया गया था?",
+        optionsEn: [
+          "4 types",
+          "8 types",
+          "12 types",
+          "20 types"
+        ],
+        optionsHi: [
+          "4 प्रकार",
+          "8 प्रकार",
+          "12 प्रकार",
+          "20 प्रकार"
+        ],
+        correct: 2,
+        explanationEn: "The Amarakosha by Amarasimha classified agricultural land into 12 distinct categories based on fertility and soil characteristics (e.g. urvara, ushara, maru, pankila).",
+        explanationHi: "अमरसिंह द्वारा रचित 'अमरकोश' में मिट्टी की उर्वरता और लक्षणों के आधार पर भूमि को 12 प्रकारों में बांटा गया था।"
+      },
+      {
+        id: 15,
+        topic: "Water Conservation",
+        questionEn: "Which traditional water structure in Kerala and coastal Karnataka consists of horizontal tunnels dug into laterite hills to tap groundwater?",
+        questionHi: "केरल और तटीय कर्नाटक में लैटेराइट पहाड़ियों में क्षैतिज सुरंगें खोदकर भूजल निकालने वाली प्रणाली क्या कहलाती है?",
+        optionsEn: [
+          "Surangam",
+          "Ahar",
+          "Baoli",
+          "Khadin"
+        ],
+        optionsHi: [
+          "सुरंगम (Surangam)",
+          "आहर (Ahar)",
+          "बावड़ी (Baoli)",
+          "खदीन (Khadin)"
+        ],
+        correct: 0,
+        explanationEn: "Surangams are special horizontal cave-like tunnels dug deep into laterite hills in northern Kerala (Kasaragod) that tap groundwater without using any electricity.",
+        explanationHi: "सुरंगम (Surangam) लैटेराइट पहाड़ियों में क्षैतिज रूप से खोदी गई गुफा-नुमा सुरंगें हैं जो बिना किसी मोटर के शुद्ध जल प्रदान करती हैं।"
+      },
+      {
+        id: 16,
+        topic: "Modern Technology",
+        questionEn: "How does drip irrigation help conserve agricultural water compared to traditional flood irrigation?",
+        questionHi: "पारंपरिक बाढ़ सिंचाई की तुलना में ड्रिप (टपक) सिंचाई कृषि जल को कैसे बचाती है?",
+        optionsEn: [
+          "By evaporating water into clouds quickly",
+          "By delivering water drop-by-drop directly to the root zone, reducing evaporation by 50-70%",
+          "By flooding the entire field up to 1 meter",
+          "By spraying salt water on weeds"
+        ],
+        optionsHi: [
+          "पानी को तेजी से वाष्पीकृत करके",
+          "सीधे पौधों की जड़ों में बूंद-बूंद पानी देकर, जिससे 50-70% पानी की बचत होती है",
+          "पूरे खेत को 1 मीटर तक पानी से भरकर",
+          "खरपतवारों पर खारा पानी छिड़ककर"
+        ],
+        correct: 1,
+        explanationEn: "Drip irrigation targets only the plant's root system through emitters, drastically reducing evaporation, runoff, and weed development.",
+        explanationHi: "ड्रिप सिंचाई में पानी पाइपों के माध्यम से सीधे पौधे की जड़ तक पहुंचता है, जिससे वाष्पीकरण रुकता है और 50-70% जल बचता है।"
+      },
+      {
+        id: 17,
+        topic: "Farmer Challenges",
+        questionEn: "Approximately what percentage of farmers in India are classified as small and marginal farmers owning less than 2 hectares of land?",
+        questionHi: "भारत में 2 हेक्टेयर से कम भूमि वाले लघु एवं सीमांत किसानों का प्रतिशत लगभग कितना है?",
+        optionsEn: [
+          "About 25%",
+          "About 50%",
+          "Over 86%",
+          "Less than 10%"
+        ],
+        optionsHi: [
+          "लगभग 25%",
+          "लगभग 50%",
+          "86% से अधिक",
+          "10% से कम"
+        ],
+        correct: 2,
+        explanationEn: "According to agricultural census data, over 86% of Indian farmers are small and marginal, operating on tiny, fragmented plots of land.",
+        explanationHi: "कृषि गणना के अनुसार भारत के 86% से अधिक किसान लघु और सीमांत श्रेणी में आते हैं जिनके पास 2 हेक्टेयर से कम जमीन है।"
+      },
+      {
+        id: 18,
+        topic: "Government Schemes",
+        questionEn: "Under the PM-KISAN scheme, what direct annual financial support is provided to eligible farmer families?",
+        questionHi: "प्रधानमंत्री किसान सम्मान निधि (PM-KISAN) योजना के तहत पात्र किसान परिवारों को प्रति वर्ष कितनी सीधी आर्थिक सहायता दी जाती है?",
+        optionsEn: [
+          "₹2,000 per year",
+          "₹6,000 per year (in 3 equal installments of ₹2,000)",
+          "₹15,000 per year",
+          "₹25,000 per year"
+        ],
+        optionsHi: [
+          "₹2,000 प्रति वर्ष",
+          "₹6,000 प्रति वर्ष (₹2,000 की 3 समान किश्तों में)",
+          "₹15,000 प्रति वर्ष",
+          "₹25,000 प्रति वर्ष"
+        ],
+        correct: 1,
+        explanationEn: "PM-KISAN provides direct income support of ₹6,000 per year in three installments of ₹2,000 directly credited into farmers' bank accounts.",
+        explanationHi: "PM-KISAN योजना के तहत किसानों के बैंक खातों में ₹2,000 की तीन किश्तों में कुल ₹6,000 वार्षिक प्रत्यक्ष सहायता भेजी जाती है।"
+      },
+      {
+        id: 19,
+        topic: "Soil Conservation",
+        questionEn: "What is the primary agricultural purpose of growing leguminous pulse crops (like gram or moong) in crop rotation?",
+        questionHi: "फसल चक्र में दलहनी फसलों (जैसे चना या मूंग) को उगाने का मुख्य कृषि उद्देश्य क्या है?",
+        optionsEn: [
+          "To deplete soil nitrogen rapidly",
+          "To fix atmospheric nitrogen into the soil through root nodule Rhizobium bacteria",
+          "To dry up the groundwater",
+          "To attract insect pests"
+        ],
+        optionsHi: [
+          "मिट्टी से नाइट्रोजन को तेजी से खत्म करना",
+          "जड़ों में मौजूद राइजोबियम जीवाणुओं द्वारा वायुमंडलीय नाइट्रोजन को मिट्टी में स्थिर करना",
+          "भूजल को सुखाना",
+          "कीटों को आकर्षित करना"
+        ],
+        correct: 1,
+        explanationEn: "Legumes have symbiotic Rhizobium bacteria in their root nodules that convert airborne nitrogen into nitrates, restoring soil fertility naturally without synthetic chemical fertilizers.",
+        explanationHi: "दलहनी पौधों की जड़ों की गांठों में राइजोबियम जीवाणु होते हैं जो हवा से नाइट्रोजन लेकर मिट्टी को प्राकृतिक रूप से उपजाऊ बनाते हैं।"
+      },
+      {
+        id: 20,
+        topic: "Soil Profile",
+        questionEn: "In the soil profile, what is the hard, unweathered rock layer found at the very bottom beneath all soil horizons called?",
+        questionHi: "मृदा परिच्छेदिका में सभी संस्तरों के नीचे सबसे नीचे पाई जाने वाली कठोर, मूल चट्टान की परत क्या कहलाती है?",
+        optionsEn: [
+          "Topsoil",
+          "Subsoil",
+          "Humus layer",
+          "Bedrock"
+        ],
+        optionsHi: [
+          "शीर्ष मृदा",
+          "उप-मृदा",
+          "ह्यूमस परत",
+          "मूल चट्टान (Bedrock)"
+        ],
+        correct: 3,
+        explanationEn: "Bedrock is the solid, unweathered rock layer that lies beneath the subsoil and weathered parent rock, serving as the original material from which soils are derived.",
+        explanationHi: "मूल चट्टान (Bedrock) सबसे निचली ठोस और अखंड चट्टान होती है जिसके अपक्षय से कालान्तर में मिट्टी का निर्माण होता है।"
+      },
+      {
+        id: 21,
+        topic: "Ecological Impacts",
+        questionEn: "What severe environmental consequence resulted from excessive chemical fertilizer and pesticide usage in parts of northwestern India following the Green Revolution?",
+        questionHi: "हरित क्रांति के बाद उत्तर-पश्चिमी भारत में रासायनिक खादों और कीटनाशकों के अत्यधिक उपयोग का क्या गंभीर पर्यावरणीय परिणाम हुआ?",
+        optionsEn: [
+          "Groundwater depletion and chemical contamination affecting human health",
+          "Expansion of tropical rainforests",
+          "Complete stoppage of sunlight",
+          "Rise in Himalayan glacier levels"
+        ],
+        optionsHi: [
+          "भूजल का गिरता स्तर और रासायनिक प्रदूषण जिससे मानव स्वास्थ्य प्रभावित हुआ",
+          "वर्षावनों का विस्तार",
+          "सूर्य के प्रकाश का पूर्णतः रुकना",
+          "ग्लेशियरों में भारी वृद्धि"
+        ],
+        correct: 0,
+        explanationEn: "Over-reliance on tube-wells caused water table depletion, while excessive pesticides seeped into drinking water aquifers, leading to soil salinity and severe rural health crises.",
+        explanationHi: "ट्यूबवेलों के अत्यधिक दोहन से भूजल रसातल में गया और कीटनाशकों के रिसाव से पेयजल प्रदूषित होकर कैंसर जैसी बीमारियों का कारण बना।"
+      },
+      {
+        id: 22,
+        topic: "Ancient Texts",
+        questionEn: "Which ancient text provides detailed rainfall measurement guidelines and states that a good rainy season has one-third rain in the first and last months?",
+        questionHi: "किस प्राचीन ग्रंथ में वर्षा मापन के विस्तृत नियम दिए गए हैं और कहा गया है कि अच्छा वर्षा ऋतु वह है जिसमें एक-तिहाई वर्षा पहले और अंतिम महीने में हो?",
+        optionsEn: [
+          "Kautilya's Arthashastra",
+          "Manusmriti",
+          "Ramayana",
+          "Silappadikaram"
+        ],
+        optionsHi: [
+          "कौटिल्य का अर्थशास्त्र",
+          "मनुस्मृति",
+          "रामायण",
+          "शिलप्पादिकारम"
+        ],
+        correct: 0,
+        explanationEn: "Kautilya's Arthashastra contains extensive guidance on agriculture, seed management, rain gauges, and state irrigation water taxes.",
+        explanationHi: "कौटिल्य के अर्थशास्त्र में कृषि प्रबंधन, बीज शोधन, वर्षा मापन और सिंचाई करों के संबंध में विस्तृत निर्देश मिलते हैं।"
+      },
+      {
+        id: 23,
+        topic: "Traditional Irrigation",
+        questionEn: "The traditional 'Ahar-Pyne' indigenous floodwater harvesting system is native to which region of India?",
+        questionHi: "पारंपरिक 'आहर-पाइन' बाढ़ जल संचयन प्रणाली भारत के किस क्षेत्र से संबंधित है?",
+        optionsEn: [
+          "South Bihar",
+          "Thar Desert of Rajasthan",
+          "Kashmir Valley",
+          "Konkan Coast"
+        ],
+        optionsHi: [
+          "दक्षिण बिहार",
+          "राजस्थान का थार मरुस्थल",
+          "कश्मीर घाटी",
+          "कोंकण तट"
+        ],
+        correct: 0,
+        explanationEn: "Ahar-Pyne is an ancient floodwater management system in South Bihar where pynes (inundation canals) lead river water to ahars (three-sided water retention reservoirs).",
+        explanationHi: "आहर-पाइन दक्षिण बिहार की पारंपरिक जल प्रणाली है जिसमें पाइन (नहर) से बाढ़ का पानी आहर (तीन ओर से बंधा जलाशय) में इकट्ठा किया जाता है।"
+      },
+      {
+        id: 24,
+        topic: "Agritech",
+        questionEn: "What is 'e-NAM' introduced by the Government of India to empower farmers?",
+        questionHi: "किसानों को सशक्त बनाने के लिए भारत सरकार द्वारा शुरू किया गया 'e-NAM' क्या है?",
+        optionsEn: [
+          "A pan-India electronic trading portal networking APMC mandis",
+          "A satellite that shoots seeds into fields",
+          "A free diesel distribution scheme",
+          "A special railway train for cattle"
+        ],
+        optionsHi: [
+          "मंडियों को जोड़ने वाला अखिल भारतीय इलेक्ट्रॉनिक व्यापार पोर्टल",
+          "बीज गिराने वाला उपग्रह",
+          "मुफ्त डीजल वितरण योजना",
+          "पशुओं के लिए विशेष रेलगाड़ी"
+        ],
+        correct: 0,
+        explanationEn: "e-NAM (National Agriculture Market) is an online trading platform connecting agricultural wholesale markets (mandis) across India for transparent competitive bidding.",
+        explanationHi: "e-NAM (राष्ट्रीय कृषि बाजार) एक ऑनलाइन ट्रेडिंग पोर्टल है जो देश भर की कृषि मंडियों को जोड़कर किसानों को बेहतर मूल्य दिलाता है।"
+      },
+      {
+        id: 25,
+        topic: "River Ecosystems",
+        questionEn: "Why is the Ganga river basin under environmental stress, threatening the livelihood of over 500 million people?",
+        questionHi: "गंगा नदी बेसिन पर्यावरणीय संकट में क्यों है, जिससे 50 करोड़ से अधिक लोगों की आजीविका पर संकट आ रहा है?",
+        optionsEn: [
+          "Glacial melt acceleration, excessive groundwater pumping, dams, and water diversion for irrigation",
+          "Excessive snowfall in the plains",
+          "Complete lack of agriculture along the banks",
+          "Too many organic fish farms"
+        ],
+        optionsHi: [
+          "ग्लेशियरों का तेजी से पिघलना, अत्यधिक भूजल दोहन, बांध और सिंचाई के लिए बड़े पैमाने पर जल मोड़ना",
+          "मैदानों में अत्यधिक बर्फबारी",
+          "किनारों पर कृषि का बिल्कुल न होना",
+          "अत्यधिक जैविक मछली पालन"
+        ],
+        correct: 0,
+        explanationEn: "A combination of global warming melting Himalayan feeder glaciers, huge irrigation withdrawals, industrial pumping, and numerous dam structures has reduced the Ganga's natural flow and summer volume.",
+        explanationHi: "ग्लेशियरों के पिघलने, अत्यधिक नलकूपों द्वारा दोहन, सैकड़ों बांधों और सिंचाई हेतु पानी निकालने से गंगा का ग्रीष्मकालीन प्रवाह खतरनाक रूप से कम हो गया है।"
+      }
+    ];
+
+    // State
+    let currentLang = 'bilingual';
+    let userAnswers = {};
+    let score = 0;
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check stored theme
+      const savedTheme = localStorage.getItem('studyguide_theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        updateThemeUI('light');
+      }
+
+      renderQuiz();
+      updateScoreUI();
+
+      // Scroll listener for back to top
+      window.addEventListener('scroll', () => {
+        const btn = document.getElementById('backToTopBtn');
+        if (window.scrollY > 300) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      });
+    });
+
+    // Language Handling
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('.lang-pill').forEach(pill => {
+        pill.classList.remove('active');
+        if (pill.getAttribute('onclick').includes(lang)) {
+          pill.classList.add('active');
+        }
+      });
+
+      const labelMap = {
+        'bilingual': 'द्विभाषी (Bilingual)',
+        'en': 'English Only',
+        'hi': 'केवल हिंदी'
+      };
+      document.getElementById('headerLangLabel').textContent = labelMap[lang] || 'द्विभाषी';
+
+      // Update visibility of pairs
+      document.querySelectorAll('.pair-en, .pair-hi, .note-title-en, .note-title-hi, .exercise-title-en, .exercise-title-hi, .quiz-question-en, .quiz-question-hi').forEach(el => {
+        if (lang === 'en') {
+          if (el.classList.contains('pair-hi') || el.classList.contains('note-title-hi') || el.classList.contains('exercise-title-hi') || el.classList.contains('quiz-question-hi')) {
+            el.style.display = 'none';
+          } else {
+            el.style.display = '';
+          }
+        } else if (lang === 'hi') {
+          if (el.classList.contains('pair-en') || el.classList.contains('note-title-en') || el.classList.contains('exercise-title-en') || el.classList.contains('quiz-question-en')) {
+            el.style.display = 'none';
+          } else {
+            el.style.display = '';
+          }
+        } else {
+          el.style.display = '';
+        }
+      });
+
+      // Update quiz options text if quiz already rendered
+      renderQuiz();
+    }
+
+    function cycleLanguage() {
+      if (currentLang === 'bilingual') setLanguage('en');
+      else if (currentLang === 'en') setLanguage('hi');
+      else setLanguage('bilingual');
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      const theme = isLight ? 'light' : 'dark';
+      localStorage.setItem('studyguide_theme', theme);
+      updateThemeUI(theme);
+    }
+
+    function updateThemeUI(theme) {
+      const isLight = theme === 'light';
+      document.getElementById('themeToggleBtn').textContent = isLight ? '☀️' : '🌙';
+      document.getElementById('mobileThemeIcon').textContent = isLight ? '☀️' : '🌙';
+      document.getElementById('mobileThemeLabel').textContent = isLight ? 'Light' : 'Dark';
+    }
+
+    // Tab Switcher
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.mobile-nav-item').forEach(m => m.classList.remove('active'));
+
+      const target = document.getElementById('tab-' + tabId);
+      if (target) target.style.display = 'block';
+
+      // Update buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+
+      document.querySelectorAll('.mobile-nav-item').forEach(item => {
+        if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(tabId)) {
+          item.classList.add('active');
+        }
+      });
+
+      window.scrollTo({ top: 220, behavior: 'smooth' });
+    }
+
+    // Quiz Rendering
+    function renderQuiz() {
+      const container = document.getElementById('quizQuestionsContainer');
+      if (!container) return;
+
+      container.innerHTML = QUIZ_DATA.map((q, idx) => {
+        const letters = ['A', 'B', 'C', 'D'];
+        const isAnswered = userAnswers.hasOwnProperty(q.id);
+        const selectedIdx = userAnswers[q.id];
+
+        let optionsHtml = '';
+        for (let i = 0; i < 4; i++) {
+          let btnClass = 'quiz-opt-btn';
+          if (isAnswered) {
+            if (i === q.correct) btnClass += ' correct';
+            else if (i === selectedIdx && selectedIdx !== q.correct) btnClass += ' wrong';
+          }
+
+          let optText = '';
+          if (currentLang === 'en') {
+            optText = q.optionsEn[i];
+          } else if (currentLang === 'hi') {
+            optText = q.optionsHi[i];
+          } else {
+            optText = `<div>${q.optionsEn[i]}</div><div style="font-family: var(--font-devanagari); font-size: 0.82rem; color: #94a3b8; margin-top: 2px;">${q.optionsHi[i]}</div>`;
+          }
+
+          optionsHtml += `
+            <button class="${btnClass}" onclick="handleOptionSelect(${q.id}, ${i})" ${isAnswered ? 'disabled' : ''}>
+              <span class="opt-letter">${letters[i]}</span>
+              <div>${optText}</div>
+            </button>
+          `;
+        }
+
+        const expClass = isAnswered ? 'quiz-explanation show' : 'quiz-explanation';
+        const expContent = currentLang === 'hi'
+          ? `<strong>व्याख्या:</strong> ${q.explanationHi}`
+          : currentLang === 'en'
+          ? `<strong>Explanation:</strong> ${q.explanationEn}`
+          : `<strong>Explanation:</strong> ${q.explanationEn}<br><strong style="font-family: var(--font-devanagari);">व्याख्या:</strong> ${q.explanationHi}`;
+
+        return `
+          <div class="quiz-card" id="q-card-${q.id}">
+            <div class="quiz-meta">
+              <span class="quiz-num-badge">Q${idx + 1} of 25</span>
+              <span class="quiz-tag">${q.topic}</span>
+            </div>
+            <div class="quiz-question-en" style="${currentLang === 'hi' ? 'display:none;' : ''}">${q.questionEn}</div>
+            <div class="quiz-question-hi" style="${currentLang === 'en' ? 'display:none;' : ''}">${q.questionHi}</div>
+            <div class="quiz-options">
+              ${optionsHtml}
+            </div>
+            <div class="${expClass}" id="exp-${q.id}">
+              💡 ${expContent}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Option selection
+    function handleOptionSelect(qId, selectedIdx) {
+      if (userAnswers.hasOwnProperty(qId)) return;
+
+      const q = QUIZ_DATA.find(item => item.id === qId);
+      if (!q) return;
+
+      userAnswers[qId] = selectedIdx;
+      if (selectedIdx === q.correct) {
+        score++;
+        triggerSmallConfetti();
+      }
+
+      renderQuiz();
+      updateScoreUI();
+
+      // Check if finished
+      if (Object.keys(userAnswers).length === QUIZ_DATA.length) {
+        triggerGrandConfetti();
+      }
+    }
+
+    function updateScoreUI() {
+      const answered = Object.keys(userAnswers).length;
+      document.getElementById('liveScore').textContent = score;
+      document.getElementById('answeredCount').textContent = answered;
+      const pct = Math.round((answered / QUIZ_DATA.length) * 100);
+      document.getElementById('progressPct').textContent = pct + '%';
+    }
+
+    function resetQuiz() {
+      if (confirm('Do you want to reset all answers and try the 25 MCQs again?')) {
+        userAnswers = {};
+        score = 0;
+        renderQuiz();
+        updateScoreUI();
+      }
+    }
+
+    function triggerSmallConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 20,
+          spread: 45,
+          origin: { y: 0.8 },
+          colors: ['#10b981', '#34d399', '#f59e0b', '#06b6d4']
+        });
+      }
+    }
+
+    function triggerGrandConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 120,
+          spread: 90,
+          origin: { y: 0.6 },
+          colors: ['#10b981', '#34d399', '#f59e0b', '#06b6d4', '#ec4899']
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+

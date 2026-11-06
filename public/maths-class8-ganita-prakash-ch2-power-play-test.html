@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Power Play Class 8 Maths Test — 20 Questions (3 Marks Each with Hints) | NCERT Ganita Prakash</title>
+  <meta name="description" content="NCERT Class 8 Mathematics Ganita Prakash Chapter 2: Power Play (hegp102.pdf) — Comprehensive 20 Questions test of 3 Marks each (Total 60 Marks) with step-by-step solutions, formulas, and interactive hints.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(20, 184, 166, 0.25);
+      --accent-teal: #14b8a6;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-purple: #8b5cf6;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 90px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(20, 184, 166, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+    }
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.92); border-bottom: 1px solid #e2e8f0;
+    }
+
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+    .breadcrumb-trail a { color: #2dd4bf; text-decoration: none; }
+    .breadcrumb-trail a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #64748b; font-size: 0.75rem; }
+    .breadcrumb-current { color: var(--text-main); font-weight: 700; }
+
+    .theme-toggle-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 14px; border-radius: 9999px;
+      font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; gap: 6px;
+    }
+    body.light-theme .theme-toggle-btn {
+      background: #e2e8f0; border-color: #cbd5e1; color: #0f172a;
+    }
+
+    .page-container {
+      position: relative; max-width: 980px;
+      margin: 0 auto; padding: 24px 16px;
+      z-index: 1;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(12, 19, 40, 0.95) 0%, rgba(6, 12, 24, 0.95) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: 24px; padding: 32px 24px;
+      text-align: center; margin-bottom: 24px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    }
+    body.light-theme .hero-banner {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border-color: #cbd5e1;
+    }
+
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(20, 184, 166, 0.15);
+      border: 1px solid rgba(20, 184, 166, 0.4);
+      color: #2dd4bf; padding: 4px 14px; border-radius: 9999px;
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.5px;
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 2.2rem; font-weight: 900;
+      letter-spacing: -0.02em; color: var(--text-main); margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem; color: var(--text-muted);
+      max-width: 720px; margin: 0 auto 20px;
+    }
+
+    /* Stats bar */
+    .test-meta-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px; max-width: 650px; margin: 0 auto 20px;
+    }
+    .meta-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 10px 14px; text-align: center;
+    }
+    body.light-theme .meta-box { background: #f8fafc; border-color: #e2e8f0; }
+    .meta-val { font-size: 1.25rem; font-weight: 900; color: #2dd4bf; }
+    .meta-lbl { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+
+    /* Action bar */
+    .quick-actions-bar {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+    }
+    .btn-action {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 12px;
+      font-size: 0.88rem; font-weight: 800; text-decoration: none;
+      cursor: pointer; transition: transform 0.15s; border: none;
+    }
+    .btn-action:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #04AA6D, #10b981); color: #ffffff;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+    }
+    .btn-secondary {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+    }
+    .btn-gold {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4); color: #fbbf24;
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px; padding: 24px; margin-bottom: 22px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+    body.light-theme .q-card {
+      background: #ffffff; border-color: #e2e8f0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+
+    .q-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 12px; gap: 12px; flex-wrap: wrap;
+    }
+    .q-number-pill {
+      background: rgba(20, 184, 166, 0.15);
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      color: #2dd4bf; padding: 4px 12px; border-radius: 8px;
+      font-size: 0.85rem; font-weight: 900;
+    }
+    .q-marks-pill {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24; padding: 4px 10px; border-radius: 8px;
+      font-size: 0.82rem; font-weight: 800;
+    }
+
+    .q-text {
+      font-size: 1.08rem; font-weight: 700; color: var(--text-main);
+      line-height: 1.6; margin-bottom: 16px;
+    }
+
+    .q-tools {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;
+    }
+    .btn-toggle-hint, .btn-toggle-sol {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
+      padding: 6px 14px; border-radius: 10px;
+      font-size: 0.82rem; font-weight: 700; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-toggle-hint:hover {
+      background: rgba(245, 158, 11, 0.15); border-color: #f59e0b; color: #fbbf24;
+    }
+    .btn-toggle-sol:hover {
+      background: rgba(20, 184, 166, 0.15); border-color: #14b8a6; color: #2dd4bf;
+    }
+
+    /* Hint Box */
+    .hint-drawer {
+      display: none; background: rgba(245, 158, 11, 0.08);
+      border: 1px dashed rgba(245, 158, 11, 0.35);
+      border-radius: 12px; padding: 12px 16px; margin: 10px 0;
+      color: #fef08a; font-size: 0.9rem; font-weight: 600;
+    }
+    body.light-theme .hint-drawer {
+      background: #fefce8; border-color: #fde047; color: #854d0e;
+    }
+    .hint-drawer.open { display: block; }
+
+    /* Solution Box */
+    .sol-drawer {
+      display: none; background: rgba(20, 184, 166, 0.05);
+      border: 1px solid rgba(20, 184, 166, 0.25);
+      border-radius: 12px; padding: 16px; margin: 12px 0;
+    }
+    body.light-theme .sol-drawer {
+      background: #f0fdf4; border-color: #bbf7d0;
+    }
+    .sol-drawer.open { display: block; }
+
+    .formula-box {
+      background: rgba(56, 189, 248, 0.1);
+      border-left: 3px solid #38bdf8;
+      border-radius: 6px; padding: 6px 12px;
+      font-size: 0.85rem; font-weight: 700; color: #7dd3fc;
+      margin: 8px 0;
+    }
+    body.light-theme .formula-box {
+      background: #f0f9ff; border-color: #0284c7; color: #0369a1;
+    }
+
+    .step-line {
+      margin: 6px 0; font-size: 0.92rem; color: var(--text-main);
+    }
+    .step-num {
+      font-weight: 800; color: #2dd4bf;
+    }
+    body.light-theme .step-num { color: #04AA6D; }
+
+    .ans-box {
+      margin-top: 10px; padding: 8px 12px; border-radius: 8px;
+      background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981;
+      color: #34d399; font-weight: 800; font-size: 0.95rem;
+      display: inline-block;
+    }
+    body.light-theme .ans-box {
+      background: #ecfdf5; border-color: #059669; color: #065f46;
+    }
+
+    /* Bottom Floating Bar */
+    .bottom-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(6, 12, 24, 0.94); backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 20px; display: flex;
+      justify-content: space-between; align-items: center;
+      z-index: 100;
+    }
+    body.light-theme .bottom-bar {
+      background: rgba(255, 255, 255, 0.94); border-top-color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="breadcrumb-trail">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=8">Class 8</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=8&subject=c8-maths">Mathematics (Ganita Prakash)</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Chapter 2: Power Play (20 Questions × 3 Marks)</span>
+    </div>
+    <button class="theme-toggle-btn" onclick="toggleTheme()">
+      <span id="themeIcon">🌙</span> <span id="themeLabel">Dark</span>
+    </button>
+  </nav>
+
+  <main class="page-container">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="badge-pill">⚡ NCERT Class 8 Mathematics • Chapter 2: Power Play</div>
+      <h1 class="hero-title">Powers & Exponents Mastery Test</h1>
+      <p class="hero-subtitle">
+        20 Analytical & Numerical Problems (3 Marks Each = Total 60 Marks) with step-by-step solutions, key laws of exponents, and on-demand interactive hints.
+      </p>
+
+      <div class="test-meta-grid">
+        <div class="meta-box">
+          <div class="meta-val">20</div>
+          <div class="meta-lbl">Questions</div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-val">3 Marks</div>
+          <div class="meta-lbl">Per Question</div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-val">60 Marks</div>
+          <div class="meta-lbl">Total Marks</div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-val">60 Mins</div>
+          <div class="meta-lbl">Duration</div>
+        </div>
+      </div>
+
+      <div class="quick-actions-bar">
+        <button class="btn-action btn-primary" onclick="toggleAllSolutions()">
+          📝 Reveal All Solutions
+        </button>
+        <button class="btn-action btn-gold" onclick="toggleAllHints()">
+          💡 Reveal All Hints
+        </button>
+        <a href="/pdf/Class 08/8th Ganita Prakash p1/Ganita Prakash-8th p1/hegp1dd/hegp102.pdf" target="_blank" class="btn-action btn-secondary">
+          📖 Open Official Textbook PDF
+        </a>
+      </div>
+    </section>
+
+    <!-- Question Container -->
+    <div id="questionsList"></div>
+  </main>
+
+  <footer class="bottom-bar">
+    <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">
+      Nextsem Study Guide • Class 8 Ganita Prakash Unit 2
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <button class="btn-action btn-primary" onclick="window.print()" style="padding: 6px 14px; font-size: 0.8rem;">
+        🖨️ Print Test
+      </button>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" style="padding: 6px 12px; font-size: 0.8rem;">
+        🌙 / ☀️
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        no: 1,
+        text: "Evaluate the expression: (1/3)⁻² + (1/4)⁻² + (1/5)⁻².",
+        hint: "Remember that (a/b)⁻ⁿ = (b/a)ⁿ. Invert each fraction, square it, and then calculate the total sum.",
+        formula: "(1/a)⁻ⁿ = aⁿ, and a⁻ⁿ = 1/aⁿ",
+        steps: [
+          "Step 1: (1/3)⁻² = 3² = 9.",
+          "Step 2: (1/4)⁻² = 4² = 16.",
+          "Step 3: (1/5)⁻² = 5² = 25.",
+          "Step 4: Sum = 9 + 16 + 25 = 50."
+        ],
+        ans: "50"
+      },
+      {
+        no: 2,
+        text: "Find the value of m for which 5ᵐ ÷ 5⁻³ = 5⁵.",
+        hint: "Use the division law of exponents: aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Take care with the double minus sign: m - (-3) = m + 3.",
+        formula: "aᵖ ÷ aᑫ = aᵖ⁻ᑫ, and if aᵖ = aᑫ then p = q (for base a ≠ 0, 1)",
+        steps: [
+          "Step 1: LHS = 5ᵐ ÷ 5⁻³ = 5ᵐ ⁻ ⁽⁻³⁾ = 5ᵐ ⁺ ³.",
+          "Step 2: Equate LHS with RHS: 5ᵐ ⁺ ³ = 5⁵.",
+          "Step 3: Since the bases are identical, equate exponents: m + 3 = 5 ⟹ m = 5 - 3 = 2."
+        ],
+        ans: "m = 2"
+      },
+      {
+        no: 3,
+        text: "Simplify and evaluate: (8⁻¹ × 5³) ÷ 2⁻⁴.",
+        hint: "Express 8 as a power of 2 (8 = 2³). Then collect powers of base 2 using aᵐ / aⁿ = aᵐ⁻ⁿ.",
+        formula: "8 = 2³, (aᵐ)ⁿ = aᵐⁿ, and a⁻ᵐ / b⁻ⁿ = bⁿ / aᵐ",
+        steps: [
+          "Step 1: Write 8⁻¹ = (2³)⁻¹ = 2⁻³.",
+          "Step 2: Expression becomes (2⁻³ × 5³) / 2⁻⁴ = 2⁻³ ⁻ ⁽⁻⁴⁾ × 5³ = 2¹ × 125.",
+          "Step 3: 2 × 125 = 250."
+        ],
+        ans: "250"
+      },
+      {
+        no: 4,
+        text: "Simplify: {[(-2/3)⁻²]²}. Write your final answer as a positive fraction.",
+        hint: "Use the power of a power law: [(a/b)ᵐ]ⁿ = (a/b)ᵐⁿ. Then apply the negative exponent rule.",
+        formula: "[(a/b)ᵐ]ⁿ = (a/b)ᵐⁿ and (a/b)⁻ⁿ = (b/a)ⁿ",
+        steps: [
+          "Step 1: Apply power of power: [(-2/3)⁻²]² = (-2/3)⁻⁴.",
+          "Step 2: Invert the fraction to make the power positive: (-3/2)⁴.",
+          "Step 3: (-3)⁴ / 2⁴ = 81 / 16."
+        ],
+        ans: "81/16"
+      },
+      {
+        no: 5,
+        text: "The approximate size of a plant cell is 0.00001275 m. Express this measurement in standard scientific notation.",
+        hint: "Standard form is m × 10ⁿ where 1 ≤ m < 10. Count how many places the decimal moves to the right to place it after the first non-zero digit (1).",
+        formula: "Scientific Notation: k × 10⁻ⁿ for numbers less than 1",
+        steps: [
+          "Step 1: The first non-zero digit is 1, so the mantissa is 1.275.",
+          "Step 2: The decimal point shifts 5 places to the right: 0.00001275 ➔ 1.275.",
+          "Step 3: Therefore, 0.00001275 m = 1.275 × 10⁻⁵ m."
+        ],
+        ans: "1.275 × 10⁻⁵ m"
+      },
+      {
+        no: 6,
+        text: "Express 3.02 × 10⁻⁶ in usual decimal form.",
+        hint: "A negative power of 10 (-6) means moving the decimal point 6 places to the left, prepending zeroes as needed.",
+        formula: "x × 10⁻ⁿ = x ÷ 10ⁿ",
+        steps: [
+          "Step 1: The decimal point in 3.02 is moved 6 places to the left.",
+          "Step 2: 1 place covers the digit '3', and 5 additional zeroes are placed before it.",
+          "Step 3: Result = 0.00000302."
+        ],
+        ans: "0.00000302"
+      },
+      {
+        no: 7,
+        text: "A sheet of paper has an initial thickness of 0.001 cm. If it is folded over 14 times, what will its final thickness be in cm? (Given: 2¹⁴ = 16384).",
+        hint: "Thickness doubles with each fold: Tₙ = T₀ × 2ⁿ.",
+        formula: "Final Thickness = Initial Thickness × 2ⁿ",
+        steps: [
+          "Step 1: With each fold, the thickness doubles (powers of 2).",
+          "Step 2: After 14 folds, thickness = 0.001 cm × 2¹⁴.",
+          "Step 3: 0.001 × 16384 = 16.384 cm."
+        ],
+        ans: "16.384 cm"
+      },
+      {
+        no: 8,
+        text: "Evaluate: (3⁰ + 4⁻¹) × 2².",
+        hint: "Any non-zero base raised to the power 0 equals 1 (a⁰ = 1), and 4⁻¹ = 1/4.",
+        formula: "a⁰ = 1, a⁻¹ = 1/a",
+        steps: [
+          "Step 1: 3⁰ = 1.",
+          "Step 2: 4⁻¹ = 1/4.",
+          "Step 3: Inside brackets = 1 + 1/4 = 5/4.",
+          "Step 4: (5/4) × 2² = (5/4) × 4 = 5."
+        ],
+        ans: "5"
+      },
+      {
+        no: 9,
+        text: "Simplify: (25 × t⁻⁴) / (5⁻³ × 10 × t⁻⁸), where t ≠ 0.",
+        hint: "Express 25, 5⁻³, and 10 as powers of prime base 5. Then group powers of base 5 and powers of base t separately.",
+        formula: "25 = 5², 10 = 2 × 5, aᵐ / aⁿ = aᵐ⁻ⁿ",
+        steps: [
+          "Step 1: Numerator base 5: 25 = 5². Denominator base 5: 5⁻³ × 5¹ = 5⁻².",
+          "Step 2: 5² / 5⁻² = 5² ⁻ ⁽⁻²⁾ = 5⁴ = 625.",
+          "Step 3: For variable t: t⁻⁴ / t⁻⁸ = t⁻⁴ ⁻ ⁽⁻⁸⁾ = t⁴.",
+          "Step 4: Dividing by remaining factor 2 in denominator: (625 t⁴) / 2."
+        ],
+        ans: "(625/2) t⁴  (or 312.5 t⁴)"
+      },
+      {
+        no: 10,
+        text: "The mass of the Earth is 5.97 × 10²⁴ kg and the mass of the Moon is 7.35 × 10²² kg. What is the total combined mass of both celestial bodies in standard scientific form?",
+        hint: "To add quantities in scientific notation, express both with the same power of 10 (convert 10²² to 10²⁴).",
+        formula: "a × 10ᵖ + b × 10ᵖ = (a + b) × 10ᵖ",
+        steps: [
+          "Step 1: Express Moon's mass in 10²⁴: 7.35 × 10²² = 0.0735 × 10²⁴ kg.",
+          "Step 2: Add Earth + Moon: (5.97 + 0.0735) × 10²⁴ kg.",
+          "Step 3: Total Mass = 6.0435 × 10²⁴ kg."
+        ],
+        ans: "6.0435 × 10²⁴ kg"
+      },
+      {
+        no: 11,
+        text: "Find the multiplicative inverse (reciprocal) of (2/3)⁻² × (1/2)⁻³.",
+        hint: "Evaluate the product first. The multiplicative inverse of a number x is 1/x.",
+        formula: "Multiplicative inverse of N is 1/N",
+        steps: [
+          "Step 1: (2/3)⁻² = (3/2)² = 9/4.",
+          "Step 2: (1/2)⁻³ = 2³ = 8.",
+          "Step 3: Product = (9/4) × 8 = 18.",
+          "Step 4: The multiplicative inverse of 18 is 1/18."
+        ],
+        ans: "1/18"
+      },
+      {
+        no: 12,
+        text: "Solve for x: (5/3)⁻⁵ × (5/3)⁻¹¹ = (5/3)⁸ˣ.",
+        hint: "When bases are identical, product law states: aᵐ × aⁿ = aᵐ⁺ⁿ. Then equate exponents on both sides.",
+        formula: "aᵖ × aᑫ = aᵖ⁺ᑫ",
+        steps: [
+          "Step 1: LHS = (5/3)⁻⁵ ⁺ ⁽⁻¹¹⁾ = (5/3)⁻¹⁶.",
+          "Step 2: Equate LHS and RHS: (5/3)⁻¹⁶ = (5/3)⁸ˣ.",
+          "Step 3: Equate powers: 8x = -16 ⟹ x = -16 / 8 = -2."
+        ],
+        ans: "x = -2"
+      },
+      {
+        no: 13,
+        text: "A bacterium measures 5 × 10⁻⁷ m and a virus measures 1.2 × 10⁻⁷ m. Which organism is longer, and by how many meters? Express the difference in standard form.",
+        hint: "Since both powers of 10 are identical (10⁻⁷), compare the mantissas directly: 5 > 1.2.",
+        formula: "Difference = (m₁ - m₂) × 10ⁿ",
+        steps: [
+          "Step 1: Both exponents of 10 are -7. Since 5 > 1.2, the bacterium is longer.",
+          "Step 2: Difference = (5 - 1.2) × 10⁻⁷ m.",
+          "Step 3: Difference = 3.8 × 10⁻⁷ m."
+        ],
+        ans: "Bacterium is longer by 3.8 × 10⁻⁷ m"
+      },
+      {
+        no: 14,
+        text: "A stack contains 5 books each of thickness 20 mm and 5 paper sheets each of thickness 0.016 mm. Find the total thickness of the stack in standard scientific form.",
+        hint: "Calculate the total thickness of the books and sheets separately, add them, and convert the sum to standard form.",
+        formula: "Total = (5 × 20) + (5 × 0.016) mm",
+        steps: [
+          "Step 1: Thickness of 5 books = 5 × 20 mm = 100 mm.",
+          "Step 2: Thickness of 5 sheets = 5 × 0.016 mm = 0.08 mm.",
+          "Step 3: Total thickness = 100 + 0.08 = 100.08 mm.",
+          "Step 4: Standard scientific form: 100.08 = 1.0008 × 10² mm."
+        ],
+        ans: "1.0008 × 10² mm"
+      },
+      {
+        no: 15,
+        text: "Evaluate: {[(1/3)⁻¹ - (1/4)⁻¹]}⁻¹.",
+        hint: "Simplify the inside of the brackets first: (1/a)⁻¹ = a.",
+        formula: "(1/a)⁻¹ = a and (-1)⁻¹ = -1",
+        steps: [
+          "Step 1: (1/3)⁻¹ = 3.",
+          "Step 2: (1/4)⁻¹ = 4.",
+          "Step 3: Difference inside brackets = 3 - 4 = -1.",
+          "Step 4: Apply outer power: (-1)⁻¹ = 1 / (-1) = -1."
+        ],
+        ans: "-1"
+      },
+      {
+        no: 16,
+        text: "Simplify: (3⁻⁵ × 10⁻⁵ × 125) / (5⁻⁷ × 6⁻⁵).",
+        hint: "Break composite bases 10, 125, and 6 into prime factors (2, 3, 5).",
+        formula: "(ab)ⁿ = aⁿ bⁿ, 10 = 2 × 5, 6 = 2 × 3, 125 = 5³",
+        steps: [
+          "Step 1: Prime factorise: 10⁻⁵ = 2⁻⁵ × 5⁻⁵, 6⁻⁵ = 2⁻⁵ × 3⁻⁵, 125 = 5³.",
+          "Step 2: Numerator = 3⁻⁵ × 2⁻⁵ × 5⁻⁵ × 5³ = 3⁻⁵ × 2⁻⁵ × 5⁻².",
+          "Step 3: Denominator = 5⁻⁷ × 2⁻⁵ × 3⁻⁵.",
+          "Step 4: Cancel 3⁻⁵ and 2⁻⁵ from both numerator and denominator: 5⁻² / 5⁻⁷ = 5⁻² ⁻ ⁽⁻⁷⁾ = 5⁵ = 3125."
+        ],
+        ans: "3125 (or 5⁵)"
+      },
+      {
+        no: 17,
+        text: "Evaluate: (5/8)⁻⁷ × (8/5)⁻⁵.",
+        hint: "Notice that 8/5 is the reciprocal of 5/8. Convert (8/5)⁻⁵ to base (5/8) using (b/a)⁻ⁿ = (a/b)ⁿ.",
+        formula: "(b/a)⁻ⁿ = (a/b)ⁿ",
+        steps: [
+          "Step 1: Write (8/5)⁻⁵ as (5/8)⁵.",
+          "Step 2: Product = (5/8)⁻⁷ × (5/8)⁵ = (5/8)⁻⁷ ⁺ ⁵ = (5/8)⁻².",
+          "Step 3: Invert and square: (8/5)² = 64 / 25."
+        ],
+        ans: "64/25"
+      },
+      {
+        no: 18,
+        text: "If 2ˣ⁻¹ + 2ˣ = 24, find the value of x.",
+        hint: "Factor out common factor 2ˣ⁻¹ from the left hand side: 2ˣ = 2 × 2ˣ⁻¹.",
+        formula: "2ˣ = 2¹ · 2ˣ⁻¹",
+        steps: [
+          "Step 1: LHS = 2ˣ⁻¹ (1 + 2¹) = 2ˣ⁻¹ (3).",
+          "Step 2: 2ˣ⁻¹ × 3 = 24 ⟹ 2ˣ⁻¹ = 24 / 3 = 8.",
+          "Step 3: Write 8 as a power of 2: 8 = 2³.",
+          "Step 4: Equating powers: x - 1 = 3 ⟹ x = 4."
+        ],
+        ans: "x = 4"
+      },
+      {
+        no: 19,
+        text: "The distance from the Sun to the Earth is 1.5 × 10⁸ km and speed of light is 3 × 10⁵ km/s. How many seconds does it take for sunlight to reach Earth?",
+        hint: "Time = Distance ÷ Speed. Divide mantissas and subtract exponents of 10.",
+        formula: "Time = Distance / Speed",
+        steps: [
+          "Step 1: Time = (1.5 × 10⁸ km) / (3 × 10⁵ km/s).",
+          "Step 2: (1.5 / 3) × 10⁸ ⁻ ⁵ = 0.5 × 10³.",
+          "Step 3: 0.5 × 1000 = 500 seconds (which is 8 minutes and 20 seconds)."
+        ],
+        ans: "500 seconds (or 5 × 10² s)"
+      },
+      {
+        no: 20,
+        text: "Simplify: [(xᵃ)ᵇ⁻ᶜ · (xᵇ)ᶜ⁻ᵃ · (xᶜ)ᵃ⁻ᵇ] ÷ x⁰, where x ≠ 0.",
+        hint: "Apply power of power rule (xᵐ)ⁿ = xᵐⁿ for all three terms, then add all exponents for common base x.",
+        formula: "(xᵖ)ᑫ = xᵖᑫ and xᵖ · xᑫ = xᵖ⁺ᑫ, x⁰ = 1",
+        steps: [
+          "Step 1: Exponents expand to: xᵃᵇ ⁻ ᵃᶜ · xᵇᶜ ⁻ ᵇᵃ · xᶜᵃ ⁻ ᶜᵇ.",
+          "Step 2: Combine exponents into single base: x⁽ᵃᵇ ⁻ ᵃᶜ ⁺ ᵇᶜ ⁻ ᵃᵇ ⁺ ᵃᶜ ⁻ ᵇᶜ⁾.",
+          "Step 3: Notice all pairs cancel out: ab - ab - ac + ac + bc - bc = 0.",
+          "Step 4: x⁰ / x⁰ = 1 / 1 = 1."
+        ],
+        ans: "1"
+      }
+    ];
+
+    function renderQuestions() {
+      const container = document.getElementById('questionsList');
+      container.innerHTML = '';
+      questionsData.forEach(q => {
+        const card = document.createElement('article');
+        card.className = 'q-card';
+        card.id = `q-${q.no}`;
+        card.innerHTML = `
+          <div class="q-header">
+            <span class="q-number-pill">Question ${q.no}</span>
+            <span class="q-marks-pill">3 Marks</span>
+          </div>
+          <div class="q-text">${q.text}</div>
+          <div class="q-tools">
+            <button class="btn-toggle-hint" onclick="toggleHint(${q.no})">
+              💡 Show Hint
+            </button>
+            <button class="btn-toggle-sol" onclick="toggleSol(${q.no})">
+              📝 Reveal Solution & Marking
+            </button>
+          </div>
+          <div class="hint-drawer" id="hint-${q.no}">
+            <strong>💡 Teacher's Hint:</strong> ${q.hint}
+          </div>
+          <div class="sol-drawer" id="sol-${q.no}">
+            <div class="formula-box">📐 Key Law/Formula: ${q.formula}</div>
+            <div style="margin: 10px 0;">
+              ${q.steps.map(s => `<div class="step-line">${s}</div>`).join('')}
+            </div>
+            <div class="ans-box">✅ Final Answer: ${q.ans}</div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function toggleHint(no) {
+      const el = document.getElementById(`hint-${no}`);
+      if (el) el.classList.toggle('open');
+    }
+
+    function toggleSol(no) {
+      const el = document.getElementById(`sol-${no}`);
+      if (el) el.classList.toggle('open');
+    }
+
+    let allHintsOpen = false;
+    function toggleAllHints() {
+      allHintsOpen = !allHintsOpen;
+      document.querySelectorAll('.hint-drawer').forEach(d => {
+        if (allHintsOpen) d.classList.add('open');
+        else d.classList.remove('open');
+      });
+    }
+
+    let allSolsOpen = false;
+    function toggleAllSolutions() {
+      allSolsOpen = !allSolsOpen;
+      document.querySelectorAll('.sol-drawer').forEach(d => {
+        if (allSolsOpen) d.classList.add('open');
+        else d.classList.remove('open');
+      });
+      if (allSolsOpen) confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 } });
+    }
+
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      localStorage.setItem('power_play_theme', isLight ? 'light' : 'dark');
+      document.getElementById('themeIcon').textContent = isLight ? '☀️' : '🌙';
+      document.getElementById('themeLabel').textContent = isLight ? 'Light' : 'Dark';
+    }
+
+    if (localStorage.getItem('power_play_theme') === 'light') {
+      document.body.classList.add('light-theme');
+      document.getElementById('themeIcon').textContent = '☀️';
+      document.getElementById('themeLabel').textContent = 'Light';
+    }
+
+    renderQuestions();
+  </script>
+</body>
+</html>

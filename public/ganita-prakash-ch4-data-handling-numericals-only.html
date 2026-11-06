@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NCERT Class 6 Ganita Prakash Ch 4: Data Handling — 50 Numericals-Only Mastery Test</title>
+  <meta name="description" content="100% calculation-driven practice for NCERT Class 6 Ganita Prakash Chapter 4 (Data Handling Numericals / आँकड़ों के आंकिक प्रश्न) with step-by-step arithmetic solutions.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.85);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(6, 182, 212, 0.35);
+      
+      --brand-cyan: #06b6d4;
+      --brand-cyan-hover: #0891b2;
+      --brand-blue: #3b82f6;
+      --brand-green: #04AA6D;
+      --brand-gold: #e5b842;
+      
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-correct-border: #10b981;
+      
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+      --color-wrong-border: #ef4444;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.9);
+      --border-card: #e2e8f0;
+      --border-glow: rgba(6, 182, 212, 0.4);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(4, 170, 109, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-cyan);
+      background: rgba(6, 182, 212, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-cyan);
+      font-weight: 700;
+      background: rgba(6, 182, 212, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(6, 182, 212, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-cyan);
+      color: var(--brand-cyan);
+      transform: translateY(-1px);
+    }
+
+    .hero-wrapper {
+      max-width: 1080px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #06b6d4, #3b82f6, #04AA6D, #e5b842);
+    }
+
+    .hero-header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-cyan {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: var(--brand-cyan);
+    }
+
+    .tag-badge-blue {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: var(--brand-blue);
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      font-weight: 500;
+    }
+
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .lang-switcher-group {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card-alt);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-card);
+      gap: 4px;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--brand-cyan);
+      color: #000000;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      border-color: var(--brand-cyan);
+      color: var(--brand-cyan);
+    }
+
+    .btn-primary-action {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      color: #000000;
+      border: none;
+      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+    }
+
+    .btn-primary-action:hover {
+      background: linear-gradient(135deg, #0891b2, #0e7490);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .sticky-hud-wrapper {
+      position: sticky;
+      top: 56px;
+      z-index: 90;
+      max-width: 1080px;
+      margin: 0 auto 20px;
+      padding: 0 16px;
+    }
+
+    .hud-card {
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 12px 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hud-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hud-stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .stat-val-highlight {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--brand-cyan);
+    }
+
+    .progress-bar-container {
+      flex: 1;
+      min-width: 180px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body.light-theme .progress-bar-container {
+      background: #e2e8f0;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0%;
+    }
+
+    .topic-filter-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+
+    .topic-filter-btn {
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .topic-filter-btn:hover {
+      border-color: var(--brand-cyan);
+      color: var(--text-main);
+    }
+
+    .topic-filter-btn.active {
+      background: rgba(6, 182, 212, 0.2);
+      border-color: var(--brand-cyan);
+      color: var(--brand-cyan);
+      font-weight: 800;
+    }
+
+    .quiz-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .q-card:hover {
+      border-color: rgba(6, 182, 212, 0.3);
+    }
+
+    .q-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .q-topic-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--brand-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .q-number-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      background: var(--bg-card-alt);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-card);
+    }
+
+    .q-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .q-text-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .q-text-hi {
+      font-family: var(--font-devanagari);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.08);
+      border-left: 3px solid #06b6d4;
+      padding: 8px 12px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      line-height: 1.5;
+    }
+
+    body.light-theme .q-text-hi {
+      color: #0369a1;
+      background: rgba(6, 182, 212, 0.08);
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--bg-card-alt);
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      background: var(--bg-card-hover);
+      border-color: var(--brand-cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .opt-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-card);
+      color: var(--brand-cyan);
+      font-weight: 800;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .opt-btn.opt-correct {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct-border) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.25) !important;
+    }
+
+    .opt-btn.opt-correct .opt-letter {
+      background: #10b981 !important;
+      color: #000000 !important;
+      border-color: #10b981 !important;
+    }
+
+    .opt-btn.opt-wrong {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong-border) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.25) !important;
+    }
+
+    .opt-btn.opt-wrong .opt-letter {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    .opt-btn.opt-dimmed {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .opt-status-icon {
+      font-size: 1rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .exp-box {
+      margin-top: 10px;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      line-height: 1.55;
+      animation: fadeIn 0.3s ease-out;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .exp-box.exp-correct {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #a7f3d0;
+    }
+
+    body.light-theme .exp-box.exp-correct {
+      color: #065f46;
+    }
+
+    .exp-box.exp-wrong {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fecaca;
+    }
+
+    body.light-theme .exp-box.exp-wrong {
+      color: #991b1b;
+    }
+
+    .exp-header {
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: scale(0.92);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    .modal-close-btn {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .matrix-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    .matrix-btn {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-muted);
+      font-weight: 800;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .matrix-btn:hover {
+      border-color: var(--brand-cyan);
+      transform: scale(1.08);
+    }
+
+    .matrix-btn.correct {
+      background: #10b981 !important;
+      color: #000000 !important;
+      border-color: #10b981 !important;
+    }
+
+    .matrix-btn.wrong {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    .score-hero-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.2), rgba(0, 0, 0, 0.4));
+      border: 3px solid var(--brand-cyan);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
+    }
+
+    .score-circle-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--brand-cyan);
+      line-height: 1;
+    }
+
+    .score-circle-total {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .stats-breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .stat-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stat-box-val {
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    .stat-box-lbl {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      font-weight: 700;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 1.55rem; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .lang-switcher-group { justify-content: center; }
+      .action-group { justify-content: center; }
+      .q-card { padding: 18px 16px; }
+      .options-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumb Navigation (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=6" class="breadcrumb-link">Class 6</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=6&subject=mathematics" class="breadcrumb-link">Ganita Prakash</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=6&subject=mathematics&chapter=4" class="breadcrumb-link">Chapter 4</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">50 Numericals Test</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="nav-btn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div class="hero-header-content">
+        <div class="badge-row">
+          <span class="tag-badge tag-badge-cyan">🧮 Pure Calculation & Numericals</span>
+          <span class="tag-badge tag-badge-blue">⚡ 50 Arithmetic Problems</span>
+          <span class="tag-badge tag-badge-cyan">🌐 Bilingual EN + HI</span>
+        </div>
+        <h1 class="hero-title">
+          Data Handling Numericals <span class="hero-title-highlight">| आँकड़ों के आंकिक प्रश्न</span>
+        </h1>
+        <p class="hero-subtitle">
+          50 pure-calculation arithmetic numericals covering Range (Max-Min), Frequency Totals, Tally Arithmetic, Pictograph Scale Quantities, and Bar Graph Unit Heights.
+        </p>
+      </div>
+
+      <!-- Controls Toolbar -->
+      <div class="controls-bar">
+        <div class="lang-switcher-group">
+          <button class="lang-btn active" onclick="setLanguage('both')">🌐 Both (द्विभाषी)</button>
+          <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिन्दी</button>
+        </div>
+
+        <div class="action-group">
+          <button class="btn-action" onclick="openMatrixModal()">
+            <span>🎯 Question Matrix</span>
+          </button>
+          <button class="btn-action" onclick="resetQuiz()">
+            <span>🔄 Restart</span>
+          </button>
+          <button class="btn-action btn-primary-action" onclick="openScorecardModal()">
+            <span>🏆 View Scorecard</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky HUD Stats & Topic Filter -->
+  <div class="sticky-hud-wrapper">
+    <div class="hud-card">
+      <div class="hud-top-row">
+        <div class="hud-stat-pill">
+          <span>Score:</span>
+          <span id="hudScore" class="stat-val-highlight">0</span>
+          <span>/ 50</span>
+        </div>
+        <div class="hud-stat-pill">
+          <span>Answered:</span>
+          <strong id="hudAnswered" style="color: var(--text-main);">0</strong>
+          <span>/ 50</span>
+        </div>
+        <div class="progress-bar-container">
+          <div id="hudProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <div class="hud-stat-pill">
+          <span>Accuracy:</span>
+          <span id="hudAccuracy" style="font-weight: 800; color: var(--brand-cyan);">0%</span>
+        </div>
+      </div>
+
+      <!-- Topic Pills -->
+      <div class="topic-filter-row" id="topicFilterRow">
+        <button class="topic-filter-btn active" onclick="filterByTopic('all')">All 10 Calculation Categories (50)</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('1')">Cat 1: Range (Max-Min)</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('2')">Cat 2: Frequency Totals</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('3')">Cat 3: Tally Arithmetic</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('4')">Cat 4: Pictograph Quantities</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('5')">Cat 5: Symbol Counts</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('6')">Cat 6: Differences & Sums</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('7')">Cat 7: Unit Heights</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('8')">Cat 8: Bar Values</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('9')">Cat 9: Multiple Bars</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('10')">Cat 10: Multi-Step Real-Life</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Questions Container -->
+  <main class="quiz-container" id="quizContainer"></main>
+
+  <!-- Question Matrix Modal -->
+  <div class="modal-overlay" id="matrixModal" onclick="closeMatrixModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title">🎯 Calculation Matrix (1 to 50)</h3>
+        <button class="modal-close-btn" onclick="closeMatrixModal()">✕</button>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">Click any number to jump directly to that numerical problem.</p>
+      <div class="matrix-grid" id="matrixGrid"></div>
+    </div>
+  </div>
+
+  <!-- Scorecard Modal -->
+  <div class="modal-overlay" id="scoreModal" onclick="closeScoreModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title">🏆 Numericals Mastery Scorecard</h3>
+        <button class="modal-close-btn" onclick="closeScoreModal()">✕</button>
+      </div>
+
+      <div class="score-hero-circle">
+        <div class="score-circle-num" id="modalScoreVal">0</div>
+        <div class="score-circle-total">OUT OF 50</div>
+      </div>
+
+      <div style="text-align: center;">
+        <h4 id="modalGradeTitle" style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">Keep Calculating! 🚀</h4>
+        <p id="modalGradeMsg" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Complete all 50 numericals to evaluate your calculation precision.</p>
+      </div>
+
+      <div class="stats-breakdown-grid">
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalCorrectCount" style="color: var(--color-correct);">0</div>
+          <div class="stat-box-lbl">Correct</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalWrongCount" style="color: var(--color-wrong);">0</div>
+          <div class="stat-box-lbl">Incorrect</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalAccuracyVal" style="color: var(--brand-cyan);">0%</div>
+          <div class="stat-box-lbl">Accuracy</div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+        <button class="btn-action" onclick="closeScoreModal()">Continue Practice</button>
+        <button class="btn-action btn-primary-action" onclick="resetQuiz(); closeScoreModal();">Retake Test</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const QUESTIONS = [
+      // Cat 1: Range Calculations (Max - Min)
+      {
+        topic: 1,
+        topicName: "Cat 1: Range Calculations (Max - Min)",
+        qEn: "Find the range of the following data set: 42, 18, 55, 29, 63, 15.",
+        qHi: "दिए गए आँकड़ों का परिसर (Range) ज्ञात कीजिए: 42, 18, 55, 29, 63, 15।",
+        optsEn: ["45", "48 (63 - 15)", "55", "37"],
+        optsHi: ["45", "48 (63 - 15)", "55", "37"],
+        correct: 1,
+        exp: "Range = Maximum - Minimum = 63 - 15 = 48."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Range Calculations (Max - Min)",
+        qEn: "Temperatures recorded in a week are 34°C, 28°C, 41°C, 31°C, 26°C, 39°C. What is the temperature range?",
+        qHi: "एक सप्ताह के तापमान 34°C, 28°C, 41°C, 31°C, 26°C, 39°C दर्ज किए गए। तापमान का परिसर क्या है?",
+        optsEn: ["15°C (41°C - 26°C)", "13°C", "17°C", "20°C"],
+        optsHi: ["15°C (41°C - 26°C)", "13°C", "17°C", "20°C"],
+        correct: 0,
+        exp: "Range = Highest - Lowest = 41°C - 26°C = 15°C."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Range Calculations (Max - Min)",
+        qEn: "A batsman scored the following runs in 6 innings: 104, 0, 48, 85, 12, 96. What is the range of his runs?",
+        qHi: "एक बल्लेबाज ने 6 पारियों में 104, 0, 48, 85, 12, 96 रन बनाए। रनों का परिसर क्या है?",
+        optsEn: ["96", "92", "104 (104 - 0)", "85"],
+        optsHi: ["96", "92", "104 (104 - 0)", "85"],
+        correct: 2,
+        exp: "Range = Max - Min = 104 - 0 = 104 runs."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Range Calculations (Max - Min)",
+        qEn: "Test scores of 6 students out of 50 are: 38, 47, 19, 50, 24, 33. The range is:",
+        qHi: "50 में से 6 छात्रों के अंक 38, 47, 19, 50, 24, 33 हैं। परिसर क्या होगा?",
+        optsEn: ["28", "35", "30", "31 (50 - 19)"],
+        optsHi: ["28", "35", "30", "31 (50 - 19)"],
+        correct: 3,
+        exp: "Range = Max - Min = 50 - 19 = 31."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Range Calculations (Max - Min)",
+        qEn: "Heights of 6 plants in cm are: 132, 148, 125, 156, 140, 129. What is the range?",
+        qHi: "6 पौधों की ऊँचाई सेमी में 132, 148, 125, 156, 140, 129 है। परिसर ज्ञात कीजिए:",
+        optsEn: ["31 cm (156 - 125)", "28 cm", "33 cm", "25 cm"],
+        optsHi: ["31 सेमी (156 - 125)", "28 सेमी", "33 सेमी", "25 सेमी"],
+        correct: 0,
+        exp: "Range = 156 - 125 = 31 cm."
+      },
+
+      // Cat 2: Frequency Table Totals & Missing Values
+      {
+        topic: 2,
+        topicName: "Cat 2: Frequency Table Totals & Missing Values",
+        qEn: "The frequencies of 5 classes are 8, 12, 15, 9, 6. What is the total number of observations?",
+        qHi: "5 वर्गों की बारंबारताएँ 8, 12, 15, 9, 6 हैं। कुल प्रेक्षणों की संख्या क्या है?",
+        optsEn: ["45", "48", "50 (8 + 12 + 15 + 9 + 6)", "52"],
+        optsHi: ["45", "48", "50 (8 + 12 + 15 + 9 + 6)", "52"],
+        correct: 2,
+        exp: "Total = 8 + 12 + 15 + 9 + 6 = 50."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Frequency Table Totals & Missing Values",
+        qEn: "In a survey of 60 students: Blue=18, Red=14, Green=16, and Yellow=x. Find the value of x.",
+        qHi: "60 विद्यार्थियों के सर्वेक्षण में: नीला=18, लाल=14, हरा=16, पीला=x। x का मान ज्ञात कीजिए:",
+        optsEn: ["10", "12 (60 - 48)", "14", "8"],
+        optsHi: ["10", "12 (60 - 48)", "14", "8"],
+        correct: 1,
+        exp: "x = 60 - (18 + 14 + 16) = 60 - 48 = 12."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Frequency Table Totals & Missing Values",
+        qEn: "A die is rolled 40 times: Face 1=6, Face 2=8, Face 3=7, Face 4=5, Face 5=9, and Face 6=k. Find k.",
+        qHi: "एक पासा 40 बार फेंका गया: 1=6, 2=8, 3=7, 4=5, 5=9, और 6=k। k का मान क्या है?",
+        optsEn: ["4", "6", "7", "5 (40 - 35)"],
+        optsHi: ["4", "6", "7", "5 (40 - 35)"],
+        correct: 3,
+        exp: "k = 40 - (6 + 8 + 7 + 5 + 9) = 40 - 35 = 5."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Frequency Table Totals & Missing Values",
+        qEn: "Sum of frequencies 23, 17, 31, 19, and 10 equals:",
+        qHi: "बारंबारताओं 23, 17, 31, 19 और 10 का योगफल है:",
+        optsEn: ["100 (23 + 17 + 31 + 19 + 10)", "90", "95", "105"],
+        optsHi: ["100 (23 + 17 + 31 + 19 + 10)", "90", "95", "105"],
+        correct: 0,
+        exp: "Total = 23 + 17 + 31 + 19 + 10 = 100."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Frequency Table Totals & Missing Values",
+        qEn: "45 families were surveyed: 0 vehicles=5, 1 vehicle=22, 2 vehicles=y, 3 vehicles=3. Find y.",
+        qHi: "45 परिवारों का सर्वेक्षण: 0 वाहन=5, 1 वाहन=22, 2 वाहन=y, 3 वाहन=3। y का मान क्या है?",
+        optsEn: ["12", "18", "15 (45 - 30)", "10"],
+        optsHi: ["12", "18", "15 (45 - 30)", "10"],
+        correct: 2,
+        exp: "y = 45 - (5 + 22 + 3) = 45 - 30 = 15."
+      },
+
+      // Cat 3: Tally Mark Arithmetic
+      {
+        topic: 3,
+        topicName: "Cat 3: Tally Mark Arithmetic",
+        qEn: "A tally column contains 7 bundles of 5 plus 4 individual lines. What is the total count?",
+        qHi: "एक मिलान स्तंभ में 5 के 7 समूह और 4 एकल रेखाएँ हैं। कुल संख्या क्या है?",
+        optsEn: ["35", "37", "39 (7 x 5 + 4)", "41"],
+        optsHi: ["35", "37", "39 (7 x 5 + 4)", "41"],
+        correct: 2,
+        exp: "Total = (7 x 5) + 4 = 35 + 4 = 39."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Tally Mark Arithmetic",
+        qEn: "How many complete 5-tally bundles can be formed from 48 observations?",
+        qHi: "48 प्रेक्षणों से 5-5 के कितने पूर्ण समूह बनेंगे?",
+        optsEn: ["8 bundles", "9 bundles (48 ÷ 5 = 9, rem 3)", "10 bundles", "7 bundles"],
+        optsHi: ["8 समूह", "9 समूह (48 ÷ 5 = 9, शेष 3)", "10 समूह", "7 समूह"],
+        correct: 1,
+        exp: "48 = (9 x 5) + 3, so 9 full bundles are formed."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Tally Mark Arithmetic",
+        qEn: "For a frequency of 57, how many individual tally strokes remain outside complete 5-bundles?",
+        qHi: "57 की बारंबारता के लिए पूर्ण 5-समूहों के बाहर कितनी एकल रेखाएँ बचेंगी?",
+        optsEn: ["2 strokes (57 mod 5)", "3 strokes", "4 strokes", "1 stroke"],
+        optsHi: ["2 रेखाएँ (57 mod 5)", "3 रेखाएँ", "4 रेखाएँ", "1 रेखा"],
+        correct: 0,
+        exp: "57 = (11 x 5) + 2, remainder is 2 strokes."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Tally Mark Arithmetic",
+        qEn: "What total numerical frequency is represented by 12 complete bundles of 5 tally marks?",
+        qHi: "मिलान चिह्नों के 12 पूर्ण 5-समूहों द्वारा कुल कितनी संख्या प्रदर्शित होती है?",
+        optsEn: ["55", "50", "65", "60 (12 x 5)"],
+        optsHi: ["55", "50", "65", "60 (12 x 5)"],
+        correct: 3,
+        exp: "Total = 12 x 5 = 60."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Tally Mark Arithmetic",
+        qEn: "Category A has 6 bundles of 5 and Category B has 4 bundles of 5. What is the combined total?",
+        qHi: "वर्ग A में 5 के 6 समूह और वर्ग B में 5 के 4 समूह हैं। दोनों का कुल योग क्या है?",
+        optsEn: ["50 (30 + 20)", "45", "55", "40"],
+        optsHi: ["50 (30 + 20)", "45", "55", "40"],
+        correct: 0,
+        exp: "Total = (6 x 5) + (4 x 5) = 30 + 20 = 50."
+      },
+
+      // Cat 4: Pictograph Total Quantities
+      {
+        topic: 4,
+        topicName: "Cat 4: Pictograph Total Quantities",
+        qEn: "In a pictograph where 1 🚜 = 25 tractors, how many tractors are represented by 8 🚜 symbols?",
+        qHi: "एक चित्रालेख में 1 🚜 = 25 ट्रैक्टर हैं, तो 8 🚜 प्रतीक कितने ट्रैक्टर दर्शाते हैं?",
+        optsEn: ["175", "200 (8 x 25)", "225", "250"],
+        optsHi: ["175", "200 (8 x 25)", "225", "250"],
+        correct: 1,
+        exp: "Total = 8 x 25 = 200 tractors."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Pictograph Total Quantities",
+        qEn: "If 1 🌲 = 50 trees, how many trees are represented by 14 🌲 symbols?",
+        qHi: "यदि 1 🌲 = 50 पेड़ हैं, तो 14 🌲 प्रतीक कितने पेड़ दर्शाते हैं?",
+        optsEn: ["650", "750", "700 (14 x 50)", "600"],
+        optsHi: ["650", "750", "700 (14 x 50)", "600"],
+        correct: 2,
+        exp: "Total = 14 x 50 = 700 trees."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Pictograph Total Quantities",
+        qEn: "If 1 📚 = 20 books, how many books are represented by 7 full symbols and 1 half-symbol (7.5 symbols)?",
+        qHi: "यदि 1 📚 = 20 पुस्तकें, तो 7 पूर्ण और 1 आधा प्रतीक (7.5 प्रतीक) कितनी पुस्तकें दर्शाते हैं?",
+        optsEn: ["140", "145", "160", "150 (7.5 x 20)"],
+        optsHi: ["140", "145", "160", "150 (7.5 x 20)"],
+        correct: 3,
+        exp: "Total = 7.5 x 20 = 150 books."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Pictograph Total Quantities",
+        qEn: "If 1 🚗 = 40 cars, how many cars are represented by 12 🚗 symbols?",
+        qHi: "यदि 1 🚗 = 40 कारें हैं, तो 12 🚗 प्रतीक कितनी कारें दर्शाते हैं?",
+        optsEn: ["480 (12 x 40)", "440", "500", "520"],
+        optsHi: ["480 (12 x 40)", "440", "500", "520"],
+        correct: 0,
+        exp: "Total = 12 x 40 = 480 cars."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Pictograph Total Quantities",
+        qEn: "In a housing pictograph, 1 🏠 = 100 houses. A colony has 18.5 symbols. Total houses = ?",
+        qHi: "चित्रालेख में 1 🏠 = 100 मकान हैं। एक कॉलोनी में 18.5 प्रतीक हैं। कुल मकान कितने हैं?",
+        optsEn: ["1800", "1850 (18.5 x 100)", "1900", "185"],
+        optsHi: ["1800", "1850 (18.5 x 100)", "1900", "185"],
+        correct: 1,
+        exp: "Total = 18.5 x 100 = 1850 houses."
+      },
+
+      // Cat 5: Pictograph Symbols Count (Total ÷ Scale)
+      {
+        topic: 5,
+        topicName: "Cat 5: Pictograph Symbols Count (Total ÷ Scale)",
+        qEn: "320 bicycles were sold. If 1 🚲 represents 40 bicycles, how many symbols should be drawn?",
+        qHi: "320 साइकिलें बिकीं। यदि 1 🚲 = 40 साइकिलें, तो कितने प्रतीक बनाए जाने चाहिए?",
+        optsEn: ["6", "10", "8 (320 ÷ 40)", "7"],
+        optsHi: ["6", "10", "8 (320 ÷ 40)", "7"],
+        correct: 2,
+        exp: "Symbols = 320 ÷ 40 = 8 symbols."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Pictograph Symbols Count (Total ÷ Scale)",
+        qEn: "A school has 750 students. Using a scale of 1 🧑 = 50 students, how many symbols are drawn?",
+        qHi: "एक विद्यालय में 750 छात्र हैं। 1 🧑 = 50 छात्र का पैमाना लेने पर कितने प्रतीक बनेंगे?",
+        optsEn: ["15 (750 ÷ 50)", "12", "18", "20"],
+        optsHi: ["15 (750 ÷ 50)", "12", "18", "20"],
+        correct: 0,
+        exp: "Symbols = 750 ÷ 50 = 15 symbols."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Pictograph Symbols Count (Total ÷ Scale)",
+        qEn: "1200 quintals of wheat was harvested. If 1 🌾 = 150 quintals, how many symbols are needed?",
+        qHi: "1200 क्विंटल गेहूँ उपजा। यदि 1 🌾 = 150 क्विंटल, तो कितने प्रतीकों की आवश्यकता होगी?",
+        optsEn: ["6", "10", "7", "8 (1200 ÷ 150)"],
+        optsHi: ["6", "10", "7", "8 (1200 ÷ 150)"],
+        correct: 3,
+        exp: "Symbols = 1200 ÷ 150 = 8 symbols."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Pictograph Symbols Count (Total ÷ Scale)",
+        qEn: "640 tickets were sold for a concert. If 1 🎟️ = 80 tickets, how many ticket symbols represent this?",
+        qHi: "एक संगीत कार्यक्रम के लिए 640 टिकट बिके। यदि 1 🎟️ = 80 टिकट, तो कितने प्रतीक बनेंगे?",
+        optsEn: ["7", "8 (640 ÷ 80)", "9", "6"],
+        optsHi: ["7", "8 (640 ÷ 80)", "9", "6"],
+        correct: 1,
+        exp: "Symbols = 640 ÷ 80 = 8 symbols."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Pictograph Symbols Count (Total ÷ Scale)",
+        qEn: "450 apples are stored in a crate. If 1 🍎 = 100 apples, how many total symbols (full + half) are drawn?",
+        qHi: "एक पेटी में 450 सेब हैं। यदि 1 🍎 = 100 सेब, तो कुल कितने प्रतीक (पूर्ण + आधा) बनेंगे?",
+        optsEn: ["4.5 symbols (4 full + 1 half)", "5 symbols", "4 symbols", "3.5 symbols"],
+        optsHi: ["4.5 प्रतीक (4 पूर्ण + 1 आधा)", "5 प्रतीक", "4 प्रतीक", "3.5 प्रतीक"],
+        correct: 0,
+        exp: "450 ÷ 100 = 4.5 symbols (4 full apples + 1 half apple)."
+      },
+
+      // Cat 6: Pictograph Differences & Sums
+      {
+        topic: 6,
+        topicName: "Cat 6: Pictograph Differences & Sums",
+        qEn: "Village A has 9 🚜 and Village B has 4 🚜 (1 🚜 = 15 tractors). How many more tractors in Village A?",
+        qHi: "गाँव A में 9 🚜 और गाँव B में 4 🚜 हैं (1 🚜 = 15 ट्रैक्टर)। गाँव A में कितने अधिक ट्रैक्टर हैं?",
+        optsEn: ["60", "70", "75 ((9 - 4) x 15)", "80"],
+        optsHi: ["60", "70", "75 ((9 - 4) x 15)", "80"],
+        correct: 2,
+        exp: "Difference = (9 - 4) x 15 = 5 x 15 = 75 tractors."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Pictograph Differences & Sums",
+        qEn: "On Monday 11 🍦 and Tuesday 7 🍦 were sold (1 🍦 = 30 ice creams). What is the difference?",
+        qHi: "सोमवार को 11 🍦 और मंगलवार को 7 🍦 बिकीं (1 🍦 = 30 आइसक्रीम)। दोनों दिनों का अंतर क्या है?",
+        optsEn: ["90", "150", "100", "120 ((11 - 7) x 30)"],
+        optsHi: ["90", "150", "100", "120 ((11 - 7) x 30)"],
+        correct: 3,
+        exp: "Difference = (11 - 7) x 30 = 4 x 30 = 120 ice creams."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Pictograph Differences & Sums",
+        qEn: "City X has 15 🚌 and City Y has 22 🚌 (1 🚌 = 20 buses). What is the total number of buses in both cities?",
+        qHi: "शहर X में 15 🚌 और शहर Y में 22 🚌 हैं (1 🚌 = 20 बसें)। दोनों शहरों में कुल कितनी बसें हैं?",
+        optsEn: ["740 ((15 + 22) x 20)", "700", "760", "680"],
+        optsHi: ["740 ((15 + 22) x 20)", "700", "760", "680"],
+        correct: 0,
+        exp: "Total = (15 + 22) x 20 = 37 x 20 = 740 buses."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Pictograph Differences & Sums",
+        qEn: "Library A has 16 📚 and Library B has 10 📚 (1 📚 = 50 books). How many more books in Library A?",
+        qHi: "पुस्तकालय A में 16 📚 और पुस्तकालय B में 10 📚 हैं (1 📚 = 50 पुस्तकें)। A में कितनी अधिक पुस्तकें हैं?",
+        optsEn: ["250", "300 ((16 - 10) x 50)", "350", "200"],
+        optsHi: ["250", "300 ((16 - 10) x 50)", "350", "200"],
+        correct: 1,
+        exp: "Difference = (16 - 10) x 50 = 6 x 50 = 300 books."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Pictograph Differences & Sums",
+        qEn: "Section A has 8 🎓 and Section B has 12 🎓 (1 🎓 = 25 students). What is the combined total students?",
+        qHi: "वर्ग A में 8 🎓 और वर्ग B में 12 🎓 हैं (1 🎓 = 25 छात्र)। दोनों वर्गों का कुल योग क्या है?",
+        optsEn: ["450", "400", "500 ((8 + 12) x 25)", "550"],
+        optsHi: ["450", "400", "500 ((8 + 12) x 25)", "550"],
+        correct: 2,
+        exp: "Total = (8 + 12) x 25 = 20 x 25 = 500 students."
+      },
+
+      // Cat 7: Bar Graph Unit Heights (Value ÷ Scale)
+      {
+        topic: 7,
+        topicName: "Cat 7: Bar Graph Unit Heights (Value ÷ Scale)",
+        qEn: "On a bar graph scale 1 unit = ₹500, what is the bar height for house rent of ₹4500?",
+        qHi: "दंड आलेख पैमाने 1 इकाई = ₹500 पर, ₹4500 के मकान किराए के लिए दंड की ऊँचाई क्या होगी?",
+        optsEn: ["8 units", "9 units (4500 ÷ 500)", "10 units", "7.5 units"],
+        optsHi: ["8 इकाइयाँ", "9 इकाइयाँ (4500 ÷ 500)", "10 इकाइयाँ", "7.5 इकाइयाँ"],
+        correct: 1,
+        exp: "Height = 4500 ÷ 500 = 9 units."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bar Graph Unit Heights (Value ÷ Scale)",
+        qEn: "Scale is 1 unit = 25 runs. Smriti scored 175 runs. What should be the height of her bar?",
+        qHi: "पैमाना 1 इकाई = 25 रन है। स्मृति ने 175 रन बनाए। उनके दंड की ऊँचाई क्या होनी चाहिए?",
+        optsEn: ["6 units", "8 units", "7.5 units", "7 units (175 ÷ 25)"],
+        optsHi: ["6 इकाइयाँ", "8 इकाइयाँ", "7.5 इकाइयाँ", "7 इकाइयाँ (175 ÷ 25)"],
+        correct: 3,
+        exp: "Height = 175 ÷ 25 = 7 units."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bar Graph Unit Heights (Value ÷ Scale)",
+        qEn: "Scale is 1 unit = 40 students. For a school strength of 600 students, the bar height will be:",
+        qHi: "पैमाना 1 इकाई = 40 छात्र है। 600 छात्रों की संख्या के लिए दंड की ऊँचाई होगी:",
+        optsEn: ["15 units (600 ÷ 40)", "12 units", "16 units", "14 units"],
+        optsHi: ["15 इकाइयाँ (600 ÷ 40)", "12 इकाइयाँ", "16 इकाइयाँ", "14 इकाइयाँ"],
+        correct: 0,
+        exp: "Height = 600 ÷ 40 = 15 units."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bar Graph Unit Heights (Value ÷ Scale)",
+        qEn: "Scale is 1 cm = 120 kg. For a weight of 840 kg, what is the length of the bar?",
+        qHi: "पैमाना 1 सेमी = 120 किग्रा है। 840 किग्रा भार के लिए दंड की लंबाई क्या होगी?",
+        optsEn: ["6 cm", "8 cm", "7 cm (840 ÷ 120)", "7.5 cm"],
+        optsHi: ["6 सेमी", "8 सेमी", "7 सेमी (840 ÷ 120)", "7.5 सेमी"],
+        correct: 2,
+        exp: "Length = 840 ÷ 120 = 7 cm."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bar Graph Unit Heights (Value ÷ Scale)",
+        qEn: "Scale is 1 unit = ₹200. For Food expenditure of ₹3400, the bar height is:",
+        qHi: "पैमाना 1 इकाई = ₹200 है। ₹3400 के भोजन खर्च के लिए दंड की ऊँचाई होगी:",
+        optsEn: ["16 units", "17 units (3400 ÷ 200)", "18 units", "15 units"],
+        optsHi: ["16 इकाइयाँ", "17 इकाइयाँ (3400 ÷ 200)", "18 इकाइयाँ", "15 इकाइयाँ"],
+        correct: 1,
+        exp: "Height = 3400 ÷ 200 = 17 units."
+      },
+
+      // Cat 8: Bar Graph Values (Height × Scale)
+      {
+        topic: 8,
+        topicName: "Cat 8: Bar Graph Values (Height × Scale)",
+        qEn: "A bar has a height of 14 units. If 1 unit = 30 passengers, find the total passengers.",
+        qHi: "एक दंड की ऊँचाई 14 इकाई है। यदि 1 इकाई = 30 यात्री, तो कुल यात्री संख्या ज्ञात कीजिए:",
+        optsEn: ["400", "440", "390", "420 (14 x 30)"],
+        optsHi: ["400", "440", "390", "420 (14 x 30)"],
+        correct: 3,
+        exp: "Total = 14 x 30 = 420 passengers."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Bar Graph Values (Height × Scale)",
+        qEn: "A bar length is 8.5 cm. If scale is 1 cm = 200 liters, find the total water volume.",
+        qHi: "दंड की लंबाई 8.5 सेमी है। यदि पैमाना 1 सेमी = 200 लीटर है, तो कुल जल की मात्रा ज्ञात कीजिए:",
+        optsEn: ["1700 liters (8.5 x 200)", "1600 liters", "1800 liters", "1750 liters"],
+        optsHi: ["1700 लीटर (8.5 x 200)", "1600 लीटर", "1800 लीटर", "1750 लीटर"],
+        correct: 0,
+        exp: "Volume = 8.5 x 200 = 1700 liters."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Bar Graph Values (Height × Scale)",
+        qEn: "A student's score bar is 12 units high. If 1 unit = 15 marks, what is the student's score?",
+        qHi: "छात्र के अंकों का दंड 12 इकाई ऊँचा है। यदि 1 इकाई = 15 अंक, तो छात्र का प्राप्तांक क्या है?",
+        optsEn: ["170", "180 (12 x 15)", "190", "165"],
+        optsHi: ["170", "180 (12 x 15)", "190", "165"],
+        correct: 1,
+        exp: "Score = 12 x 15 = 180 marks."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Bar Graph Values (Height × Scale)",
+        qEn: "A tree plantation bar is 6.5 units high. If 1 unit = 50 trees, how many trees were planted?",
+        qHi: "वृक्षारोपण का दंड 6.5 इकाई ऊँचा है। यदि 1 इकाई = 50 पेड़, तो कितने पेड़ लगाए गए?",
+        optsEn: ["300", "350", "325 (6.5 x 50)", "315"],
+        optsHi: ["300", "350", "325 (6.5 x 50)", "315"],
+        correct: 2,
+        exp: "Trees = 6.5 x 50 = 325 trees."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Bar Graph Values (Height × Scale)",
+        qEn: "Savings bar has height 16 units with scale 1 unit = ₹250. What is total savings?",
+        qHi: "बचत दंड की ऊँचाई 16 इकाई है और पैमाना 1 इकाई = ₹250 है। कुल बचत क्या है?",
+        optsEn: ["₹4000 (16 x 250)", "₹3800", "₹4200", "₹3500"],
+        optsHi: ["₹4000 (16 x 250)", "₹3800", "₹4200", "₹3500"],
+        correct: 0,
+        exp: "Total = 16 x 250 = ₹4000."
+      },
+
+      // Cat 9: Multiple Bars Differences & Totals
+      {
+        topic: 9,
+        topicName: "Cat 9: Multiple Bars Differences & Totals",
+        qEn: "Bar A = 18 units and Bar B = 11 units. If 1 unit = 40 items, what is the difference between A and B?",
+        qHi: "दंड A = 18 इकाई और B = 11 इकाई है। यदि 1 इकाई = 40 वस्तुएँ, तो A और B का अंतर क्या है?",
+        optsEn: ["240", "280 ((18 - 11) x 40)", "320", "260"],
+        optsHi: ["240", "280 ((18 - 11) x 40)", "320", "260"],
+        correct: 1,
+        exp: "Difference = (18 - 11) x 40 = 7 x 40 = 280 items."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: Multiple Bars Differences & Totals",
+        qEn: "Three bars have heights 5, 8, and 12 units. If 1 unit = 10 items, what is the sum of all three?",
+        qHi: "तीन दंडों की ऊँचाई 5, 8 और 12 इकाई है। यदि 1 इकाई = 10 वस्तुएँ, तो तीनों का कुल योग क्या है?",
+        optsEn: ["220", "240", "260", "250 ((5 + 8 + 12) x 10)"],
+        optsHi: ["220", "240", "260", "250 ((5 + 8 + 12) x 10)"],
+        correct: 3,
+        exp: "Total = (5 + 8 + 12) x 10 = 25 x 10 = 250 items."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: Multiple Bars Differences & Totals",
+        qEn: "Production in Year 1 is 9 cm and Year 2 is 14 cm. Scale is 1 cm = 50 tonnes. What is the increase?",
+        qHi: "वर्ष 1 में उत्पादन 9 सेमी और वर्ष 2 में 14 सेमी है। पैमाना 1 सेमी = 50 टन है। वृद्धि कितनी हुई?",
+        optsEn: ["250 tonnes ((14 - 9) x 50)", "200 tonnes", "300 tonnes", "225 tonnes"],
+        optsHi: ["250 टन ((14 - 9) x 50)", "200 टन", "300 टन", "225 टन"],
+        correct: 0,
+        exp: "Increase = (14 - 9) x 50 = 5 x 50 = 250 tonnes."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: Multiple Bars Differences & Totals",
+        qEn: "City A = 16 units, City B = 10 units with scale 1 unit = 75 tourists. How many more tourists in City A?",
+        qHi: "शहर A = 16 इकाई, शहर B = 10 इकाई (पैमाना 1 इकाई = 75 पर्यटक)। शहर A में कितने अधिक पर्यटक हैं?",
+        optsEn: ["400", "450 ((16 - 10) x 75)", "500", "375"],
+        optsHi: ["400", "450 ((16 - 10) x 75)", "500", "375"],
+        correct: 1,
+        exp: "Difference = (16 - 10) x 75 = 6 x 75 = 450 tourists."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: Multiple Bars Differences & Totals",
+        qEn: "Marks in 4 subjects: Math=15, Sci=14, Eng=12, Hist=9 units. Scale 1 unit = 5 marks. What are the total marks?",
+        qHi: "4 विषयों के दंड: गणित=15, विज्ञान=14, अंग्रेजी=12, इतिहास=9 इकाई (1 इकाई = 5 अंक)। कुल प्राप्तांक क्या हैं?",
+        optsEn: ["240", "260", "250 ((15 + 14 + 12 + 9) x 5)", "255"],
+        optsHi: ["240", "260", "250 ((15 + 14 + 12 + 9) x 5)", "255"],
+        correct: 2,
+        exp: "Total = (15 + 14 + 12 + 9) x 5 = 50 x 5 = 250 marks."
+      },
+
+      // Cat 10: Multi-Step Real-Life Numericals
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Numericals",
+        qEn: "Bumrah's wickets in 30 matches: 0 wkts in 4 matches, 1 wkt in 8 matches, 2 wkts in 10 matches, 3 wkts in 5 matches, 4 wkts in 3 matches. Total wickets = ?",
+        qHi: "बुमराह के 30 मैचों के विकेट: 4 मैचों में 0, 8 मैचों में 1, 10 मैचों में 2, 5 मैचों में 3, 3 मैचों में 4 विकेट। कुल विकेट कितने हैं?",
+        optsEn: ["50", "52", "58", "55 (0 + 8 + 20 + 15 + 12)"],
+        optsHi: ["50", "52", "58", "55 (0 + 8 + 20 + 15 + 12)"],
+        correct: 3,
+        exp: "Total = (0x4) + (1x8) + (2x10) + (3x5) + (4x3) = 0 + 8 + 20 + 15 + 12 = 55 wickets."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Numericals",
+        qEn: "India's population grew from 36 crore (1951) to 102 crore (2001) over 5 decades. What was the average decadal increase?",
+        qHi: "भारत की जनसंख्या 1951 में 36 करोड़ से 2001 में 102 करोड़ (5 दशक में) हुई। प्रति दशक औसत वृद्धि क्या थी?",
+        optsEn: ["13.2 crore/decade ((102 - 36) ÷ 5)", "12.5 crore/decade", "14.0 crore/decade", "11.8 crore/decade"],
+        optsHi: ["13.2 करोड़/दशक ((102 - 36) ÷ 5)", "12.5 करोड़/दशक", "14.0 करोड़/दशक", "11.8 करोड़/दशक"],
+        correct: 0,
+        exp: "Average = (102 - 36) ÷ 5 = 66 ÷ 5 = 13.2 crore per decade."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Numericals",
+        qEn: "Imran's budget: Rent=₹3000, Food=₹3400, Education=₹800, Electricity=₹400, Transport=₹600, Misc=₹1200. Total monthly expenditure = ?",
+        qHi: "इमरान का बजट: किराया=₹3000, भोजन=₹3400, शिक्षा=₹800, बिजली=₹400, परिवहन=₹600, विविध=₹1200। कुल मासिक खर्च क्या है?",
+        optsEn: ["₹9200", "₹9400 (3000+3400+800+400+600+1200)", "₹9600", "₹9000"],
+        optsHi: ["₹9200", "₹9400 (3000+3400+800+400+600+1200)", "₹9600", "₹9000"],
+        correct: 1,
+        exp: "Total = 3000 + 3400 + 800 + 400 + 600 + 1200 = ₹9400."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Numericals",
+        qEn: "In Imran's budget, what is the difference between expenditure on Food (₹3400) and Miscellaneous (₹1200)?",
+        qHi: "इमरान के बजट में भोजन खर्च (₹3400) और विविध खर्च (₹1200) का अंतर क्या है?",
+        optsEn: ["₹2000", "₹2400", "₹2200 (3400 - 1200)", "₹1800"],
+        optsHi: ["₹2000", "₹2400", "₹2200 (3400 - 1200)", "₹1800"],
+        correct: 2,
+        exp: "Difference = ₹3400 - ₹1200 = ₹2200."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Numericals",
+        qEn: "A die was rolled 50 times. The face '3' appeared with a frequency of 14. What percentage of total rolls was face '3'?",
+        qHi: "एक पासा 50 बार फेंका गया। फलक '3' की बारंबारता 14 थी। फलक '3' कुल फेंकों का कितना प्रतिशत था?",
+        optsEn: ["28% ((14 ÷ 50) x 100%)", "25%", "30%", "32%"],
+        optsHi: ["28% ((14 ÷ 50) x 100%)", "25%", "30%", "32%"],
+        correct: 0,
+        exp: "Percentage = (14 ÷ 50) x 100% = 28%."
+      }
+    ];
+
+    let currentLang = "both";
+    let selectedAnswers = {};
+    let currentTopic = "all";
+    let isLightMode = false;
+
+    // DOM Elements
+    const quizContainer = document.getElementById("quizContainer");
+    const hudScore = document.getElementById("hudScore");
+    const hudAnswered = document.getElementById("hudAnswered");
+    const hudProgressBar = document.getElementById("hudProgressBar");
+    const hudAccuracy = document.getElementById("hudAccuracy");
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Theme Toggle
+    themeToggleBtn.addEventListener("click", () => {
+      isLightMode = !isLightMode;
+      document.body.classList.toggle("light-theme", isLightMode);
+      themeIcon.innerText = isLightMode ? "🌙" : "☀️";
+    });
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll(".lang-btn").forEach((btn, idx) => {
+        const langs = ['both', 'en', 'hi'];
+        btn.classList.toggle("active", langs[idx] === lang);
+      });
+      renderQuiz();
+    }
+
+    function filterByTopic(topicId) {
+      currentTopic = topicId;
+      document.querySelectorAll(".topic-filter-btn").forEach(btn => {
+        btn.classList.remove("active");
+      });
+      event.target.classList.add("active");
+      renderQuiz();
+    }
+
+    function handleSelectOption(qIdx, optIdx) {
+      if (selectedAnswers[qIdx] !== undefined) return;
+      selectedAnswers[qIdx] = optIdx;
+      updateStats();
+      renderQuiz();
+
+      if (optIdx === QUESTIONS[qIdx].correct) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 35, spread: 55, origin: { y: 0.8 } });
+        }
+      }
+    }
+
+    function updateStats() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      hudScore.innerText = score;
+      hudAnswered.innerText = totalAnswered;
+      const pct = (totalAnswered / QUESTIONS.length) * 100;
+      hudProgressBar.style.width = `${pct}%`;
+
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+      hudAccuracy.innerText = `${accuracy}%`;
+
+      if (totalAnswered === QUESTIONS.length && score >= 40) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
+        }
+      }
+    }
+
+    function resetQuiz() {
+      if (confirm("Restart numericals test and reset your score?")) {
+        selectedAnswers = {};
+        updateStats();
+        renderQuiz();
+      }
+    }
+
+    function renderQuiz() {
+      quizContainer.innerHTML = "";
+
+      const filtered = QUESTIONS.map((q, idx) => ({ ...q, originalIndex: idx }))
+        .filter(q => currentTopic === "all" || q.topic.toString() === currentTopic);
+
+      if (filtered.length === 0) {
+        quizContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted);">No questions found for this topic.</div>`;
+        return;
+      }
+
+      filtered.forEach((q) => {
+        const isAnswered = selectedAnswers[q.originalIndex] !== undefined;
+        const userAnswer = selectedAnswers[q.originalIndex];
+
+        const card = document.createElement("div");
+        card.className = "q-card";
+        card.id = `q-card-${q.originalIndex}`;
+
+        const headerHtml = `
+          <div class="q-header">
+            <span class="q-topic-tag">🧮 ${q.topicName}</span>
+            <span class="q-number-pill">Problem ${q.originalIndex + 1} of 50</span>
+          </div>
+        `;
+
+        let bodyHtml = '<div class="q-body">';
+        if (currentLang === "both") {
+          bodyHtml += `
+            <div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>
+            <div class="q-text-hi">🇮🇳 हिन्दी: ${q.qHi}</div>
+          `;
+        } else if (currentLang === "en") {
+          bodyHtml += `<div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>`;
+        } else {
+          bodyHtml += `<div class="q-text-hi" style="font-size: 1.05rem;">प्र${q.originalIndex + 1}. ${q.qHi}</div>`;
+        }
+        bodyHtml += '</div>';
+
+        let optionsHtml = '<div class="options-grid">';
+        q.optsEn.forEach((optEn, oIdx) => {
+          const optHi = q.optsHi[oIdx];
+          let optText = currentLang === "both" ? `${optEn}` : (currentLang === "en" ? optEn : optHi);
+
+          let optClass = "opt-btn";
+          let statusIcon = "";
+
+          if (isAnswered) {
+            if (oIdx === q.correct) {
+              optClass += " opt-correct";
+              statusIcon = '<span class="opt-status-icon">✓</span>';
+            } else if (oIdx === userAnswer && userAnswer !== q.correct) {
+              optClass += " opt-wrong";
+              statusIcon = '<span class="opt-status-icon">✗</span>';
+            } else {
+              optClass += " opt-dimmed";
+            }
+          }
+
+          optionsHtml += `
+            <button class="${optClass}" onclick="handleSelectOption(${q.originalIndex}, ${oIdx})" ${isAnswered ? 'disabled' : ''}>
+              <div class="opt-content">
+                <span class="opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+                <span>${optText}</span>
+              </div>
+              ${statusIcon}
+            </button>
+          `;
+        });
+        optionsHtml += '</div>';
+
+        let explanationHtml = "";
+        if (isAnswered) {
+          const isCorrect = userAnswer === q.correct;
+          explanationHtml = `
+            <div class="exp-box ${isCorrect ? 'exp-correct' : 'exp-wrong'}">
+              <div class="exp-header">
+                <span>${isCorrect ? '✓ Correct Calculation!' : '✗ Calculation Error!'}</span>
+              </div>
+              <div><strong>Step-by-Step Solution:</strong> ${q.exp}</div>
+            </div>
+          `;
+        }
+
+        card.innerHTML = headerHtml + bodyHtml + optionsHtml + explanationHtml;
+        quizContainer.appendChild(card);
+      });
+    }
+
+    // Modal Matrix
+    function openMatrixModal() {
+      const grid = document.getElementById("matrixGrid");
+      grid.innerHTML = "";
+
+      QUESTIONS.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "matrix-btn";
+        btn.innerText = idx + 1;
+
+        if (selectedAnswers[idx] !== undefined) {
+          if (selectedAnswers[idx] === q.correct) {
+            btn.classList.add("correct");
+          } else {
+            btn.classList.add("wrong");
+          }
+        }
+
+        btn.onclick = () => {
+          closeMatrixModal();
+          currentTopic = "all";
+          renderQuiz();
+          setTimeout(() => {
+            const el = document.getElementById(`q-card-${idx}`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        };
+
+        grid.appendChild(btn);
+      });
+
+      document.getElementById("matrixModal").classList.add("active");
+    }
+
+    function closeMatrixModal() {
+      document.getElementById("matrixModal").classList.remove("active");
+    }
+
+    // Modal Scorecard
+    function openScorecardModal() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      const wrong = totalAnswered - score;
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+
+      document.getElementById("modalScoreVal").innerText = score;
+      document.getElementById("modalCorrectCount").innerText = score;
+      document.getElementById("modalWrongCount").innerText = wrong;
+      document.getElementById("modalAccuracyVal").innerText = `${accuracy}%`;
+
+      const gradeTitle = document.getElementById("modalGradeTitle");
+      const gradeMsg = document.getElementById("modalGradeMsg");
+
+      if (score >= 45) {
+        gradeTitle.innerText = "Calculation Prodigy! 🧮🏆";
+        gradeMsg.innerText = "Flawless arithmetic and data interpretation accuracy!";
+      } else if (score >= 35) {
+        gradeTitle.innerText = "Great Problem Solver! 🎯";
+        gradeMsg.innerText = "Strong speed and calculation precision.";
+      } else if (score >= 25) {
+        gradeTitle.innerText = "Good Effort! 📚";
+        gradeMsg.innerText = "Review step solutions and re-attempt for full score.";
+      } else {
+        gradeTitle.innerText = "Keep Calculating! 💡";
+        gradeMsg.innerText = "Check arithmetic steps carefully and try again.";
+      }
+
+      document.getElementById("scoreModal").classList.add("active");
+      if (score >= 35 && typeof confetti === 'function') {
+        confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("scoreModal").classList.remove("active");
+    }
+
+    // Initial render
+    renderQuiz();
+    updateStats();
+  </script>
+</body>
+</html>

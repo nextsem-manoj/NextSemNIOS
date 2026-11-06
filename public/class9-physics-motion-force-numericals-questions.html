@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 9 Physics: Distance, Speed, Acceleration, Average Speed & Force | Comprehensive Questions & Solved Numericals</title>
+  <meta name="description" content="NCERT Class 9 Physics Master Question Bank: Distance, Speed, Average Speed, Acceleration, Deceleration & Force (F=ma). Complete bilingual questions (English & Hindi) with hidden step-by-step solutions, formula cheatsheet, and interactive quiz.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3b;
+      --border-card: rgba(56, 189, 248, 0.24);
+      --accent-cyan: #06b6d4;
+      --accent-sky: #38bdf8;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --code-bg: #030712;
+      --table-header: #1e293b;
+      --table-row-alt: rgba(255, 255, 255, 0.02);
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --code-bg: #f1f5f9;
+      --table-header: #e2e8f0;
+      --table-row-alt: rgba(0, 0, 0, 0.02);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 90px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(6, 182, 212, 0.14) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Sticky Navbar with Interactive Breadcrumbs (Permanent Rule) */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      display: flex; flex-direction: column; gap: 8px;
+      z-index: 100;
+    }
+
+    .nav-content {
+      display: flex; justify-content: space-between; align-items: center; width: 100%;
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;
+    }
+    .brand-logo-emblem {
+      width: 34px; height: 34px; border-radius: 9px;
+      background: linear-gradient(135deg, #0284c7, #06b6d4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 17px; color: #fff;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.45);
+    }
+    .brand-title-wrap { display: flex; flex-direction: column; }
+    .brand-title { font-weight: 800; font-size: 15px; color: #fff; line-height: 1.2; }
+    .brand-sub { font-size: 10px; font-weight: 700; color: #38bdf8; letter-spacing: 0.5px; text-transform: uppercase; }
+
+    /* Interactive Breadcrumbs Trail (Permanent Rule) */
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: var(--text-muted); overflow-x: auto; white-space: nowrap; padding-bottom: 2px;
+    }
+    .breadcrumb-trail a {
+      color: #38bdf8; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+      transition: color 0.2s;
+    }
+    .breadcrumb-trail a:hover { color: #7dd3fc; text-decoration: underline; }
+    .breadcrumb-sep { opacity: 0.5; font-size: 10px; }
+    .breadcrumb-current { color: #f59e0b; font-weight: 700; }
+
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.16); transform: translateY(-1px); }
+    .nav-btn.primary {
+      background: linear-gradient(135deg, #0284c7, #06b6d4); color: #fff; border-color: rgba(6, 182, 212, 0.4);
+    }
+    .nav-btn.primary:hover { box-shadow: 0 0 16px rgba(6, 182, 212, 0.45); }
+
+    /* Main Container */
+    .container {
+      position: relative; max-width: 1080px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.16), rgba(16, 185, 129, 0.12), rgba(168, 85, 247, 0.1));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      position: relative; overflow: hidden;
+    }
+    .hero-badge-row {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 800; padding: 4px 12px; border-radius: 9999px;
+    }
+    .hero-tag.class { background: rgba(6, 182, 212, 0.2); border: 1px solid rgba(6, 182, 212, 0.4); color: var(--accent-cyan); }
+    .hero-tag.topics { background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.4); color: var(--accent-gold); }
+    .hero-tag.bilingual { background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: var(--accent-emerald); }
+
+    .hero-title {
+      font-size: 30px; font-weight: 900; line-height: 1.3; margin-bottom: 10px;
+      background: linear-gradient(135deg, #ffffff 40%, #7dd3fc 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; max-width: 820px; margin: 0 auto 18px; }
+
+    /* Formula Cheat Sheet Grid */
+    .formula-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px; margin-bottom: 24px;
+    }
+    .formula-card {
+      background: var(--bg-card); border: 1px solid var(--border-card);
+      border-radius: 12px; padding: 14px; text-align: center;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .formula-card:hover { transform: translateY(-2px); border-color: var(--accent-cyan); }
+    .formula-name { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+    .formula-eq { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #38bdf8; }
+    .formula-unit { font-size: 11px; color: var(--accent-emerald); font-weight: 700; margin-top: 4px; }
+
+    /* Control Bar: Master Expand, Language, Filter */
+    .controls-panel {
+      background: var(--bg-card); border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 14px 18px; margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .control-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .ctrl-label { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); margin-right: 4px; }
+
+    .pill-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main); font-size: 12px; font-weight: 700; padding: 6px 12px;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s ease;
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: rgba(6, 182, 212, 0.2); border-color: var(--accent-cyan); color: var(--accent-cyan);
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px;
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 8px 16px; border-radius: 10px; font-size: 13px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: rgba(6, 182, 212, 0.2); border-color: var(--accent-cyan);
+      color: #38bdf8; transform: translateY(-1px);
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px; padding: 22px 24px;
+      margin-bottom: 22px; box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .q-card:hover {
+      border-color: rgba(6, 182, 212, 0.45);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+
+    .q-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 14px; gap: 8px; flex-wrap: wrap;
+    }
+    .q-meta-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .q-badge {
+      font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 6px;
+      background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+    .topic-badge {
+      font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+    .difficulty-badge {
+      font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px;
+    }
+    .diff-easy { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .diff-medium { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .diff-hard { background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.3); }
+
+    .q-body {
+      font-size: 15px; font-weight: 600; line-height: 1.7; margin-bottom: 16px;
+    }
+    .q-en { color: var(--text-main); margin-bottom: 6px; }
+    .q-hi { color: #94a3b8; font-size: 14px; font-style: normal; margin-bottom: 12px; }
+
+    /* MCQ Option List */
+    .mcq-options {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px; margin: 14px 0 16px;
+    }
+    .mcq-opt {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 14px; border-radius: 10px; font-size: 13px; font-weight: 600;
+      display: flex; align-items: baseline; gap: 8px; color: var(--text-muted);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .mcq-opt:hover {
+      background: rgba(6, 182, 212, 0.08); border-color: rgba(6, 182, 212, 0.3); color: var(--text-main);
+    }
+    .opt-key {
+      font-weight: 800; color: var(--accent-cyan); background: rgba(6, 182, 212, 0.15);
+      width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 11px;
+    }
+
+    /* Action Buttons Row */
+    .action-row {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;
+    }
+    .sol-toggle-btn {
+      background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-emerald);
+      color: #34d399; padding: 8px 16px; border-radius: 10px; font-size: 13px; font-weight: 800;
+      cursor: pointer; transition: all 0.25s ease; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .sol-toggle-btn:hover {
+      background: rgba(16, 185, 129, 0.3); transform: translateY(-1px);
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.3);
+    }
+    .sol-toggle-btn.revealed {
+      background: rgba(244, 63, 94, 0.15); border-color: var(--accent-rose); color: #fda4af;
+    }
+    .sol-toggle-btn.revealed:hover {
+      background: rgba(244, 63, 94, 0.3);
+    }
+
+    /* Solution Box (Hidden by default) */
+    .sol-drawer {
+      display: none;
+      background: rgba(3, 7, 18, 0.75);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-left: 4px solid var(--accent-emerald);
+      border-radius: 12px; padding: 18px 22px;
+      margin-top: 14px; font-size: 14px; line-height: 1.8;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ans-highlight-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399; font-weight: 800; font-size: 13px; padding: 4px 12px; border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    /* Step Box for Numericals */
+    .step-box {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px; padding: 12px 16px; margin: 10px 0; font-size: 13.5px;
+    }
+    .step-title {
+      font-weight: 800; color: #38bdf8; font-size: 12px; text-transform: uppercase; margin-bottom: 4px;
+    }
+    .calc-line {
+      font-family: 'JetBrains Mono', monospace; color: #f8fafc; font-size: 13px; margin: 4px 0;
+    }
+    body.light-theme .calc-line { color: #0f172a; }
+
+    /* Footer */
+    .page-footer {
+      text-align: center; padding: 30px 16px; border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px; color: var(--text-muted);
+    }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px; margin-top: 10px; flex-wrap: wrap;
+    }
+    .footer-links a { color: #38bdf8; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 24px; }
+      .container { padding: 16px 10px; }
+      .q-card { padding: 16px 14px; }
+      .controls-panel { flex-direction: column; align-items: stretch; }
+      .control-group { justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Nav with Full Breadcrumbs (Permanent Rule) -->
+  <nav class="top-nav">
+    <div class="nav-content">
+      <a href="/" class="nav-brand">
+        <div class="brand-logo-emblem">9</div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">NextSem Study Guide</span>
+          <span class="brand-sub">Class 9 Science • Physics Mastery</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="nav-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓 <span id="themeLabel">Light</span></button>
+        <button class="nav-btn primary" onclick="toggleAllSolutions()" id="masterToggleBtn">👁️ Reveal All</button>
+        <button class="nav-btn" onclick="window.print()">🖨️ Print / PDF</button>
+      </div>
+    </div>
+
+    <!-- Complete Top Navbar Breadcrumb Navigation (PERMANENT RULE) -->
+    <div class="breadcrumb-trail">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=9">Class 9</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/reader.html?book=iesc1&ch=6">Science (Physics)</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Motion & Force Studio (Distance, Speed, Acceleration, Avg Speed & Force)</span>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="hero-badge-row">
+        <span class="hero-tag class">🔬 NCERT Class 9th Science</span>
+        <span class="hero-tag topics">⚡ Distance • Speed • Acceleration • Avg Speed • Force</span>
+        <span class="hero-tag bilingual">🌐 Dual Language: English & हिंदी</span>
+      </div>
+      <h1 class="hero-title">Physics Numerical Studio & Master Question Bank</h1>
+      <p class="hero-subtitle">
+        Master every conceptual distinction and numerical step for <strong>Distance</strong>, <strong>Displacement</strong>, <strong>Speed</strong>, <strong>Velocity</strong>, <strong>Average Speed</strong>, <strong>Acceleration</strong>, and <strong>Force ($F = ma$)</strong>. Solutions are <strong>hidden by default</strong> so you can solve on paper first!
+      </p>
+    </header>
+
+    <!-- Formula Cheat Sheet Cards -->
+    <section class="formula-grid">
+      <div class="formula-card">
+        <div class="formula-name">Speed / चाल</div>
+        <div class="formula-eq">v = s / t</div>
+        <div class="formula-unit">SI Unit: m/s (or km/h)</div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-name">Average Speed / औसत चाल</div>
+        <div class="formula-eq">v_avg = Total s / Total t</div>
+        <div class="formula-unit">Equal dist: 2v₁v₂ / (v₁+v₂)</div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-name">Acceleration / त्वरण</div>
+        <div class="formula-eq">a = (v - u) / t</div>
+        <div class="formula-unit">SI Unit: m/s²</div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-name">Newton's 2nd Law / बल</div>
+        <div class="formula-eq">F = m × a = (mv - mu)/t</div>
+        <div class="formula-unit">SI Unit: Newton (N = kg·m/s²)</div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-name">1st Equation / प्रथम समीकरण</div>
+        <div class="formula-eq">v = u + a·t</div>
+        <div class="formula-unit">Velocity-Time Relation</div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-name">2nd Equation / द्वितीय समीकरण</div>
+        <div class="formula-eq">s = u·t + ½·a·t²</div>
+        <div class="formula-unit">Position-Time Relation</div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-name">3rd Equation / तृतीय समीकरण</div>
+        <div class="formula-eq">v² - u² = 2·a·s</div>
+        <div class="formula-unit">Position-Velocity Relation</div>
+      </div>
+      <div class="formula-card">
+        <div class="formula-name">Unit Conversion / इकाई रूपांतरण</div>
+        <div class="formula-eq">1 km/h = 5/18 m/s</div>
+        <div class="formula-unit">1 m/s = 18/5 km/h = 3.6 km/h</div>
+      </div>
+    </section>
+
+    <!-- Controls Panel -->
+    <section class="controls-panel">
+      <div class="control-group">
+        <span class="ctrl-label">Language View:</span>
+        <button class="pill-btn active" onclick="setLanguage('both', this)">Bilingual (English + हिंदी)</button>
+        <button class="pill-btn" onclick="setLanguage('en', this)">English Only</button>
+        <button class="pill-btn" onclick="setLanguage('hi', this)">हिंदी Only</button>
+      </div>
+      <div class="control-group">
+        <span class="ctrl-label">Quick Actions:</span>
+        <button class="pill-btn" onclick="expandAll(true)">👁️ Show All Solutions</button>
+        <button class="pill-btn" onclick="expandAll(false)">🔒 Hide All Solutions</button>
+      </div>
+    </section>
+
+    <!-- Filter Tabs by Topic / Type -->
+    <div class="filter-tabs">
+      <button class="tab-btn active" onclick="filterQuestions('all', this)">All Questions (25)</button>
+      <button class="tab-btn" onclick="filterQuestions('mcq', this)">1-Mark Conceptual MCQs (Q1-Q8)</button>
+      <button class="tab-btn" onclick="filterQuestions('speed', this)">Speed & Average Speed (Q9-Q13)</button>
+      <button class="tab-btn" onclick="filterQuestions('accel', this)">Acceleration & Equations (Q14-Q19)</button>
+      <button class="tab-btn" onclick="filterQuestions('force', this)">Force & Newton's Laws (Q20-Q25)</button>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="questionsContainer"></div>
+  </main>
+
+  <footer class="page-footer">
+    <div>Nextsem Academy • Complete Free CBSE & NCERT Dev Curriculum</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/?class=9">Class 9 Science Hub</a>
+      <a href="/science-class9-ch6-how-forces-affect-motion-notes-mcq.html">Chapter 6 Notes</a>
+      <a href="/science-class9-ch3-tissues-in-action-difficult-mcq.html">Biology Tissues MCQs</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Management with localStorage persistence (Permanent Rule)
+    function initTheme() {
+      const saved = localStorage.getItem('nextsem_theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-theme');
+        document.getElementById('themeLabel').textContent = 'Dark';
+      } else {
+        document.body.classList.remove('light-theme');
+        document.getElementById('themeLabel').textContent = 'Light';
+      }
+    }
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+      document.getElementById('themeLabel').textContent = isLight ? 'Dark' : 'Light';
+    }
+    initTheme();
+
+    // Language view state
+    let currentLang = 'both';
+    function setLanguage(lang, btn) {
+      currentLang = lang;
+      document.querySelectorAll('.controls-panel .pill-btn').forEach(b => {
+        if (b.innerText.toLowerCase().includes('english') || b.innerText.toLowerCase().includes('हिंदी') || b.innerText.toLowerCase().includes('bilingual')) {
+          b.classList.remove('active');
+        }
+      });
+      btn.classList.add('active');
+
+      document.querySelectorAll('.q-en').forEach(el => el.style.display = (lang === 'hi') ? 'none' : 'block');
+      document.querySelectorAll('.q-hi').forEach(el => el.style.display = (lang === 'en') ? 'none' : 'block');
+      document.querySelectorAll('.sol-en').forEach(el => el.style.display = (lang === 'hi') ? 'none' : 'block');
+      document.querySelectorAll('.sol-hi').forEach(el => el.style.display = (lang === 'en') ? 'none' : 'block');
+    }
+
+    // Question Bank: 25 High-Yield Bilingual Questions with Step-by-Step Solutions
+    const questionsData = [
+      // Q1 (MCQ: Distance vs Displacement)
+      {
+        id: "1", qNum: "Q1", section: "mcq", topic: "Distance vs Displacement", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "A farmer moves along the boundary of a square field of side 10 m in 40 s. What will be the magnitude of displacement of the farmer at the end of 2 minutes 20 seconds from his initial position?",
+        qHi: "एक किसान 10 मीटर भुजा वाले एक वर्गाकार खेत की सीमा पर 40 सेकंड में चक्कर लगाता है। 2 मिनट 20 सेकंड के अंत में किसान का प्रारंभिक स्थिति से विस्थापन का परिमाण क्या होगा?",
+        options: [
+          { key: "A", text: "35 m" },
+          { key: "B", text: "10√2 m (~ 14.14 m)" },
+          { key: "C", text: "10 m" },
+          { key: "D", text: "0 m" }
+        ],
+        ansTitle: "Correct Option: (B) 10√2 m (~ 14.14 m)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Step-by-Step Solution:</div>
+          <div class="calc-line">1. Side of square field (s) = 10 m. Perimeter = 4 × 10 m = 40 m.</div>
+          <div class="calc-line">2. Time for 1 round = 40 s. Total time = 2 min 20 s = (2 × 60) + 20 = 140 s.</div>
+          <div class="calc-line">3. Number of rounds = Total Time / Time per round = 140 / 40 = 3.5 rounds.</div>
+          <div class="calc-line">4. In 3 complete rounds, displacement = 0. In the remaining 0.5 round, farmer reaches diagonally opposite corner!</div>
+          <div class="calc-line">5. Displacement = Diagonal of square = √(10² + 10²) = √(200) = <strong>10√2 m ≈ 14.14 m</strong>.</div>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> 140 सेकंड में किसान 3.5 चक्कर लगाएगा। 3 पूरे चक्करों में विस्थापन शून्य होगा। आधे चक्कर के बाद वह प्रारंभिक कोने के ठीक विकर्णतः विपरीत (Diagonally opposite) कोने पर होगा। विस्थापन = विकर्ण की लंबाई = √(10² + 10²) = <strong>10√2 मीटर (लगभग 14.14 मीटर)</strong>।"
+      },
+
+      // Q2 (MCQ: Zero Displacement but Non-zero Distance)
+      {
+        id: "2", qNum: "Q2", section: "mcq", topic: "Distance vs Displacement", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "Can an object have zero displacement even if it has moved through a non-zero distance? Give an example.",
+        qHi: "क्या किसी वस्तु का विस्थापन शून्य हो सकता है, भले ही उसने शून्य से अधिक दूरी तय की हो? उदाहरण दीजिए।",
+        options: [
+          { key: "A", text: "No, if distance is non-zero, displacement must be positive" },
+          { key: "B", text: "Yes, when an object returns back to its starting point (e.g. circular path or round trip)" },
+          { key: "C", text: "Yes, only when the object is stationary from beginning" },
+          { key: "D", text: "No, displacement is always greater than or equal to distance" }
+        ],
+        ansTitle: "Correct Option: (B) Yes, when an object returns back to its starting point",
+        solEn: `<div class="step-box">
+          <div class="step-title">Key Concept:</div>
+          <p><strong>Distance:</strong> Total actual path length covered (always a positive scalar quantity, can never decrease or be zero if moving).</p>
+          <p><strong>Displacement:</strong> Shortest straight-line vector distance between initial and final points. If initial position = final position, <strong>Displacement = 0</strong>.</p>
+          <p><em>Example:</em> A boy throws a ball vertically upwards to height $h$ and catches it back. Total Distance = $2h$, but Displacement = $0$.</p>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> हाँ, जब कोई वस्तु अपनी प्रारंभिक स्थिति पर वापस लौट आती है (जैसे वृत्ताकार पथ का एक पूरा चक्कर या घर से स्कूल जाकर वापस आना), तो दूरी $2s$ होगी किन्तु विस्थापन शून्य (0) होगा।"
+      },
+
+      // Q3 (MCQ: Speed vs Velocity)
+      {
+        id: "3", qNum: "Q3", section: "mcq", topic: "Speed vs Velocity", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "Under what condition is the magnitude of average velocity of an object equal to its average speed?",
+        qHi: "किस स्थिति में किसी वस्तु के औसत वेग का परिमाण उसकी औसत चाल के बराबर होता है?",
+        options: [
+          { key: "A", text: "When an object moves along a curved path" },
+          { key: "B", text: "When an object moves along a straight line in a single unchanging direction" },
+          { key: "C", text: "When an object moves in a circular path" },
+          { key: "D", text: "Under all circumstances" }
+        ],
+        ansTitle: "Correct Option: (B) Straight-line motion in a single unchanging direction",
+        solEn: `<div class="step-box">
+          <div class="step-title">Explanation:</div>
+          <p>Average Speed = $\\frac{\\text{Total Distance}}{\\text{Total Time}}$, whereas Average Velocity = $\\frac{\\text{Total Displacement}}{\\text{Total Time}}$.</p>
+          <p>Magnitude of displacement equals distance <strong>only when motion is in a straight line without reversing direction</strong>. In that case, $|\\text{Average Velocity}| = \\text{Average Speed}$.</p>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> जब वस्तु एक सीधी रेखा में बिना मुड़े केवल एक ही दिशा में गति करती है, तो दूरी और विस्थापन का परिमाण बराबर होता है। अतः इस स्थिति में औसत चाल = औसत वेग का परिमाण।"
+      },
+
+      // Q4 (MCQ: Acceleration Definition & Sign)
+      {
+        id: "4", qNum: "Q4", section: "mcq", topic: "Acceleration & Deceleration", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "Which of the following statements about acceleration is INCORRECT?",
+        qHi: "त्वरण (Acceleration) के संबंध में निम्नलिखित में से कौन-सा कथन असत्य है?",
+        options: [
+          { key: "A", text: "Acceleration is the rate of change of velocity with time: a = (v - u)/t" },
+          { key: "B", text: "Its SI unit is m/s²" },
+          { key: "C", text: "Negative acceleration is called deceleration or retardation" },
+          { key: "D", text: "An object moving with uniform speed in a circle has zero acceleration" }
+        ],
+        ansTitle: "Correct Option: (D) Uniform circular motion has non-zero acceleration",
+        solEn: `<div class="step-box">
+          <div class="step-title">Why Option (D) is incorrect:</div>
+          <p>Velocity is a vector quantity having both magnitude (speed) and direction. In uniform circular motion, even though the speed is constant, the <strong>direction of motion changes continuously at every point</strong>. Therefore, velocity is changing, which means the object experiences a non-zero centripetal acceleration directed toward the center!</p>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> कथन (D) गलत है। एकसमान वृत्तीय गति में चाल स्थिर रहने पर भी दिशा प्रत्येक बिंदु पर बदलती रहती है, जिससे वेग में परिवर्तन होता है। अतः वृत्तीय गति हमेशा त्वरित (Accelerated) गति होती है।"
+      },
+
+      // Q5 (MCQ: Newton's First Law & Inertia)
+      {
+        id: "5", qNum: "Q5", section: "mcq", topic: "Force & Inertia", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "Which of the following has the highest inertia?",
+        qHi: "निम्नलिखित में से किसका जड़त्व (Inertia) सबसे अधिक है?",
+        options: [
+          { key: "A", text: "A rubber ball" },
+          { key: "B", text: "A stone of the same size" },
+          { key: "C", text: "A bicycle" },
+          { key: "D", text: "A loaded railway train" }
+        ],
+        ansTitle: "Correct Option: (D) A loaded railway train",
+        solEn: `<div class="step-box">
+          <div class="step-title">Law of Inertia:</div>
+          <p><strong>Mass is the quantitative measure of inertia</strong> of a body. Greater the mass of a body, greater is its inertia (resistance to change its state of rest or uniform motion). Since a loaded railway train has the largest mass, it possesses the maximum inertia.</p>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> द्रव्यमान (Mass) किसी वस्तु के जड़त्व की माप होता है। जिस वस्तु का द्रव्यमान जितना अधिक होगा, उसका जड़त्व भी उतना ही अधिक होगा। अतः मालगाड़ी (Loaded train) का जड़त्व सर्वाधिक होगा।"
+      },
+
+      // Q6 (MCQ: Force and Newton's Second Law)
+      {
+        id: "6", qNum: "Q6", section: "mcq", topic: "Force (F = ma)", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "According to Newton's Second Law of Motion, the applied force on a body is directly proportional to:",
+        qHi: "न्यूटन के गति के द्वितीय नियम के अनुसार किसी वस्तु पर लगाया गया बल किसके सीधे समानुपाती होता है?",
+        options: [
+          { key: "A", text: "Velocity of the body" },
+          { key: "B", text: "Rate of change of momentum of the body" },
+          { key: "C", text: "Total mass of the body only" },
+          { key: "D", text: "Kinetic energy of the body" }
+        ],
+        ansTitle: "Correct Option: (B) Rate of change of momentum of the body",
+        solEn: `<div class="step-box">
+          <div class="step-title">Mathematical Formulation:</div>
+          <div class="calc-line">F ∝ dp/dt ⟹ F ∝ (m·v - m·u) / t ⟹ F = k·m·((v - u)/t) = k·m·a</div>
+          <div class="calc-line">In SI system, k = 1, so: <strong>F = m · a</strong>.</div>
+          <div class="calc-line">1 Newton is the force that produces an acceleration of 1 m/s² in a mass of 1 kg.</div>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> न्यूटन का द्वितीय नियम: संवेग परिवर्तन की दर (Rate of change of momentum) लगाए गए असंतुलित बल के समानुपाती होती है तथा बल की दिशा में होती है ($F = ma$)।"
+      },
+
+      // Q7 (MCQ: Balanced vs Unbalanced Forces)
+      {
+        id: "7", qNum: "Q7", section: "mcq", topic: "Balanced & Unbalanced Forces", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "When a balanced force acts on a moving object, what happens to its state of motion?",
+        qHi: "जब किसी गतिशील वस्तु पर संतुलित बल (Balanced Forces) कार्य करते हैं, तो उसकी गति की अवस्था पर क्या प्रभाव पड़ता है?",
+        options: [
+          { key: "A", text: "The object immediately comes to rest" },
+          { key: "B", text: "The object continues to move with constant velocity (zero acceleration)" },
+          { key: "C", text: "The object accelerates in the direction of the stronger component" },
+          { key: "D", text: "The speed of the object increases indefinitely" }
+        ],
+        ansTitle: "Correct Option: (B) Continues moving with constant velocity (zero acceleration)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Explanation:</div>
+          <p>Balanced forces have a resultant net force of zero ($F_{net} = 0$). Since $a = F_{net}/m$, $a = 0$. Zero acceleration means velocity does NOT change — the body maintains its existing speed and direction unchanged.</p>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> संतुलित बलों का परिणामी बल शून्य ($F_{net} = 0$) होता है। अतः त्वरण $a = 0$ होगा। वस्तु अपनी पूर्व गति और दिशा में निरंतर एकसमान वेग से चलती रहेगी।"
+      },
+
+      // Q8 (MCQ: Odometer & Speedometer)
+      {
+        id: "8", qNum: "Q8", section: "mcq", topic: "Measurement Instruments", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "What do the speedometer and odometer of an automobile measure respectively?",
+        qHi: "किसी ऑटोमोबाइल का स्पीडोमीटर और ओडोमीटर क्रमशः क्या मापते हैं?",
+        options: [
+          { key: "A", text: "Speedometer measures distance, Odometer measures speed" },
+          { key: "B", text: "Speedometer measures instantaneous speed, Odometer measures total distance traveled" },
+          { key: "C", text: "Speedometer measures average speed, Odometer measures displacement" },
+          { key: "D", text: "Both measure velocity in m/s" }
+        ],
+        ansTitle: "Correct Option: (B) Speedometer measures instantaneous speed; Odometer measures distance",
+        solEn: `<div class="step-box">
+          <p>• <strong>Speedometer:</strong> Measures the instantaneous speed of the vehicle at that exact moment (in km/h).</p>
+          <p>• <strong>Odometer:</strong> Measures the total cumulative distance traveled by the vehicle (in kilometers).</p>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> स्पीडोमीटर (चालमापी) तात्क्षणिक चाल मापता है, जबकि ओडोमीटर (पथमापी) तय की गई कुल दूरी मापता है।"
+      },
+
+      // Q9 (Speed & Average Speed: Round Trip)
+      {
+        id: "9", qNum: "Q9", section: "speed", topic: "Average Speed (Classic NCERT)", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "Abdul, while driving to school, computes the average speed for his trip to be 20 km/h. On his return trip along the same route, there is less traffic and the average speed is 30 km/h. What is the average speed for Abdul's entire round trip?",
+        qHi: "अब्दुल गाड़ी से स्कूल जाते समय औसत चाल 20 किमी/घंटा पाता है। उसी रास्ते से लौटते समय ट्रैफिक कम होने के कारण औसत चाल 30 किमी/घंटा है। पूरी यात्रा (आने और जाने) के लिए अब्दुल की औसत चाल क्या है?",
+        ansTitle: "Average Speed = 24 km/h (Not 25 km/h!)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Detailed Calculation:</div>
+          <div class="calc-line">Let one-way distance to school = d km.</div>
+          <div class="calc-line">1. Time taken going to school (t₁) = Distance / Speed = d / 20 hours.</div>
+          <div class="calc-line">2. Time taken returning back (t₂) = Distance / Speed = d / 30 hours.</div>
+          <div class="calc-line">3. Total Distance covered = d + d = 2d km.</div>
+          <div class="calc-line">4. Total Time taken = t₁ + t₂ = (d/20) + (d/30) = (3d + 2d)/60 = 5d / 60 = d / 12 hours.</div>
+          <div class="calc-line">5. Average Speed = Total Distance / Total Time = 2d / (d/12) = 2d × (12/d) = <strong>24 km/h</strong>.</div>
+          <div style="margin-top:8px; color:#fcd34d;"><strong>Direct Harmonic Mean Formula for Equal Distances:</strong> v_avg = (2 · v₁ · v₂) / (v₁ + v₂) = (2 × 20 × 30) / (20 + 30) = 1200 / 50 = <strong>24 km/h</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong><br>माना एक तरफ की दूरी = $d$ किमी।<br>जाने में समय $t_1 = d / 20$ घंटे, लौटने में समय $t_2 = d / 30$ घंटे।<br>कुल दूरी = $2d$ किमी।<br>कुल समय = $d/20 + d/30 = 5d/60 = d/12$ घंटे।<br>औसत चाल = कुल दूरी / कुल समय = $2d / (d/12) = \\mathbf{24\\text{ किमी/घंटा}}$।"
+      },
+
+      // Q10 (Average Speed: Two Segments)
+      {
+        id: "10", qNum: "Q10", section: "speed", topic: "Average Speed (Two Halves of Time)", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "A bus travels the first half of its total journey time at a speed of 40 km/h and the second half of its journey time at a speed of 60 km/h. Find its average speed.",
+        qHi: "एक बस अपनी कुल यात्रा के समय के पहले आधे भाग में 40 किमी/घंटा की चाल से और दूसरे आधे समय में 60 किमी/घंटा की चाल से चलती है। बस की औसत चाल ज्ञात कीजिए।",
+        ansTitle: "Average Speed = 50 km/h",
+        solEn: `<div class="step-box">
+          <div class="step-title">Detailed Calculation:</div>
+          <div class="calc-line">Let total journey time = 2t (each half = t hours).</div>
+          <div class="calc-line">1. Distance covered in first half (s₁) = Speed × Time = 40 × t = 40t km.</div>
+          <div class="calc-line">2. Distance covered in second half (s₂) = Speed × Time = 60 × t = 60t km.</div>
+          <div class="calc-line">3. Total Distance = s₁ + s₂ = 40t + 60t = 100t km.</div>
+          <div class="calc-line">4. Total Time = t + t = 2t hours.</div>
+          <div class="calc-line">5. Average Speed = Total Distance / Total Time = 100t / 2t = <strong>50 km/h</strong>.</div>
+          <div style="margin-top:6px; color:#34d399;"><strong>Note:</strong> When <em>time intervals are equal</em>, Average Speed is the arithmetic mean: (v₁ + v₂)/2 = (40 + 60)/2 = 50 km/h!</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> जब समय अंतराल समान हों, तो औसत चाल साधारण समांतर माध्य (Arithmetic mean) होती है: $v_{avg} = (v_1 + v_2)/2 = (40 + 60)/2 = \\mathbf{50\\text{ किमी/घंटा}}$।"
+      },
+
+      // Q11 (Circular Track Distance and Displacement)
+      {
+        id: "11", qNum: "Q11", section: "speed", topic: "Circular Track Athlete", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "An athlete completes one round of a circular track of diameter 200 m in 40 s. What will be the distance covered and the displacement at the end of 2 minutes 20 seconds?",
+        qHi: "एक एथलीट 200 मीटर व्यास वाले एक वृत्ताकार पथ का एक चक्कर 40 सेकंड में पूरा करता है। 2 मिनट 20 सेकंड के अंत में उसके द्वारा तय की गई दूरी और विस्थापन क्या होगा?",
+        ansTitle: "Distance = 2200 m | Displacement = 200 m",
+        solEn: `<div class="step-box">
+          <div class="step-title">Given Data & Steps:</div>
+          <div class="calc-line">• Diameter (D) = 200 m ⟹ Radius (r) = 100 m.</div>
+          <div class="calc-line">• Circumference of track = 2πr = 2 × (22/7) × 100 = 4400/7 m.</div>
+          <div class="calc-line">• Time for 1 round = 40 s. Total time = 2 min 20 s = 140 s.</div>
+          <div class="calc-line">• Number of rounds = 140 / 40 = 3.5 rounds.</div>
+          <div class="calc-line">1. <strong>Total Distance:</strong> 3.5 × Circumference = 3.5 × (4400/7) = (7/2) × (4400/7) = <strong>2,200 m</strong>.</div>
+          <div class="calc-line">2. <strong>Displacement:</strong> After 3 complete rounds, displacement = 0. In the final half round, the athlete is at the diametrically opposite point of the track.</div>
+          <div class="calc-line">⟹ Displacement = Diameter of circle = <strong>200 m</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong><br>140 सेकंड में चक्कर = $140 / 40 = 3.5$ चक्कर।<br>• <strong>तय की गई कुल दूरी:</strong> $3.5 \\times 2 \\pi r = 3.5 \\times (2 \\times \\frac{22}{7} \\times 100) = \\mathbf{2,200\\text{ मीटर}}$।<br>• <strong>विस्थापन:</strong> 3.5 चक्कर के बाद वह प्रारंभिक बिंदु के ठीक सामने व्यास पर होगा, अतः विस्थापन = वृत्त का व्यास = $\\mathbf{200\\text{ मीटर}}$।"
+      },
+
+      // Q12 (Unit Conversion km/h to m/s)
+      {
+        id: "12", qNum: "Q12", section: "speed", topic: "Speed Conversion & Distance", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "A train travels at a speed of 90 km/h. How much distance in meters does it cover in 20 seconds?",
+        qHi: "एक रेलगाड़ी 90 किमी/घंटा की चाल से चल रही है। 20 सेकंड में वह मीटर में कितनी दूरी तय करेगी?",
+        ansTitle: "Distance = 500 m",
+        solEn: `<div class="step-box">
+          <div class="step-title">Calculation:</div>
+          <div class="calc-line">1. Convert speed from km/h to m/s:</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;Speed (v) = 90 × (5/18) = 5 × 5 = <strong>25 m/s</strong>.</div>
+          <div class="calc-line">2. Distance (s) = Speed × Time = 25 m/s × 20 s = <strong>500 meters</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong><br>चाल को मी/से में बदलें: $v = 90 \\times \\frac{5}{18} = 25\\text{ मी/से}$।<br>दूरी $s = v \\times t = 25 \\times 20 = \\mathbf{500\\text{ मीटर}}$।"
+      },
+
+      // Q13 (Average Speed Multi-Stage)
+      {
+        id: "13", qNum: "Q13", section: "speed", topic: "Multi-Stage Average Speed", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "An object travels 16 m in 4 s and then another 16 m in 2 s. What is the average speed of the object?",
+        qHi: "एक वस्तु 16 मीटर की दूरी 4 सेकंड में तय करती है तथा पुनः 16 मीटर की दूरी 2 सेकंड में तय करती है। वस्तु की औसत चाल क्या होगी?",
+        ansTitle: "Average Speed = 5.33 m/s",
+        solEn: `<div class="step-box">
+          <div class="step-title">Formula & Steps:</div>
+          <div class="calc-line">1. Total Distance = 16 m + 16 m = 32 m.</div>
+          <div class="calc-line">2. Total Time = 4 s + 2 s = 6 s.</div>
+          <div class="calc-line">3. Average Speed = Total Distance / Total Time = 32 / 6 = <strong>5.33 m/s</strong> (or 16/3 m/s).</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> कुल दूरी = $16 + 16 = 32$ मीटर। कुल समय = $4 + 2 = 6$ सेकंड।<br>औसत चाल = $32 / 6 = \\mathbf{5.33\\text{ मी/से}}$।"
+      },
+
+      // Q14 (Acceleration: Speed Increase)
+      {
+        id: "14", qNum: "Q14", section: "accel", topic: "Acceleration (v = u + at)", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "A bus decreases its speed from 80 km/h to 60 km/h in 5 s. Find the acceleration of the bus.",
+        qHi: "एक बस की चाल 5 सेकंड में 80 किमी/घंटा से घटकर 60 किमी/घंटा हो जाती है। बस का त्वरण ज्ञात कीजिए।",
+        ansTitle: "Acceleration = -1.11 m/s² (Retardation of 1.11 m/s²)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Step-by-Step Calculation:</div>
+          <div class="calc-line">1. Initial velocity (u) = 80 km/h = 80 × (5/18) = 400/18 = 200/9 m/s ≈ 22.22 m/s.</div>
+          <div class="calc-line">2. Final velocity (v) = 60 km/h = 60 × (5/18) = 300/18 = 50/3 m/s ≈ 16.67 m/s.</div>
+          <div class="calc-line">3. Time (t) = 5 seconds.</div>
+          <div class="calc-line">4. a = (v - u) / t = (50/3 - 200/9) / 5 = ((150 - 200)/9) / 5 = (-50/9) / 5 = -10/9 = <strong>-1.11 m/s²</strong>.</div>
+          <div class="calc-line">Negative sign indicates retardation (deceleration) of 1.11 m/s².</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> प्रारंभिक वेग $u = 80 \\times \\frac{5}{18} = \\frac{200}{9}\\text{ मी/से}$, अंतिम वेग $v = 60 \\times \\frac{5}{18} = \\frac{150}{9}\\text{ मी/से}$।<br>त्वरण $a = \\frac{v - u}{t} = \\frac{(150 - 200)/9}{5} = -\\frac{10}{9} = \\mathbf{-1.11\\text{ मी/से}^2}$ (मंदन)।"
+      },
+
+      // Q15 (Acceleration from Rest & Distance)
+      {
+        id: "15", qNum: "Q15", section: "accel", topic: "Starting from Rest & 2nd Equation", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "A car starts from rest and attains a velocity of 72 km/h in 10 seconds. Assuming uniform acceleration, find: (i) the acceleration, and (ii) the distance traveled by the car during this time.",
+        qHi: "एक कार विरामावस्था से चलना प्रारंभ करती है और 10 सेकंड में 72 किमी/घंटा का वेग प्राप्त करती है। एकसमान त्वरण मानते हुए ज्ञात कीजिए: (i) त्वरण, तथा (ii) इस समय में कार द्वारा तय की गई दूरी।",
+        ansTitle: "(i) a = 2 m/s² | (ii) Distance s = 100 m",
+        solEn: `<div class="step-box">
+          <div class="step-title">Given Data:</div>
+          <div class="calc-line">• Starts from rest: u = 0 m/s.</div>
+          <div class="calc-line">• Final velocity: v = 72 km/h = 72 × (5/18) = 20 m/s.</div>
+          <div class="calc-line">• Time: t = 10 s.</div>
+          <div class="calc-line"><strong>(i) Acceleration (a):</strong> a = (v - u)/t = (20 - 0)/10 = <strong>2 m/s²</strong>.</div>
+          <div class="calc-line"><strong>(ii) Distance (s):</strong> Using s = ut + ½at²:</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;s = (0 × 10) + ½ × 2 × (10)² = 0 + 100 = <strong>100 meters</strong>.</div>
+          <div class="calc-line"><em>Verification using 3rd equation:</em> v² - u² = 2as ⟹ (20)² - 0 = 2(2)s ⟹ 400 = 4s ⟹ s = 100 m.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong><br>$u = 0$, $v = 72 \\times \\frac{5}{18} = 20\\text{ मी/से}$, $t = 10\\text{ से}$।<br>(i) त्वरण $a = \\frac{20 - 0}{10} = \\mathbf{2\\text{ मी/से}^2}$।<br>(ii) दूरी $s = ut + \\frac{1}{2}at^2 = 0 + \\frac{1}{2}(2)(10)^2 = \\mathbf{100\\text{ मीटर}}$।"
+      },
+
+      // Q16 (Brakes Applied / Retardation & Stopping Distance)
+      {
+        id: "16", qNum: "Q16", section: "accel", topic: "Stopping Distance (Braking Retardation)", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "The brakes applied to a car produce an acceleration of 6 m/s² in the opposite direction to the motion. If the car takes 2 s to stop after the application of brakes, calculate the distance it travels during this time.",
+        qHi: "किसी कार पर ब्रेक लगाने पर गति के विपरीत दिशा में 6 मी/से² का त्वरण उत्पन्न होता है। यदि कार ब्रेक लगाए जाने के बाद रुकने में 2 सेकंड का समय लेती है, तो इस समय में तय की गई दूरी ज्ञात कीजिए।",
+        ansTitle: "Distance s = 12 meters (Initial velocity u was 12 m/s)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Step-by-Step Calculation:</div>
+          <div class="calc-line">• Opposite acceleration: a = -6 m/s².</div>
+          <div class="calc-line">• Time to stop: t = 2 s.</div>
+          <div class="calc-line">• Stops, so final velocity: v = 0 m/s.</div>
+          <div class="calc-line">1. Find initial velocity (u) using v = u + at:</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;0 = u + (-6)(2) ⟹ 0 = u - 12 ⟹ <strong>u = 12 m/s</strong>.</div>
+          <div class="calc-line">2. Find distance (s) using s = ut + ½at²:</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;s = (12 × 2) + ½ × (-6) × (2)² = 24 - 12 = <strong>12 meters</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> $a = -6\\text{ मी/से}^2$, $t = 2\\text{ से}$, $v = 0$।<br>1. $v = u + at \\implies 0 = u - 6(2) \\implies u = 12\\text{ मी/से}$।<br>2. दूरी $s = ut + \\frac{1}{2}at^2 = (12)(2) + \\frac{1}{2}(-6)(2)^2 = 24 - 12 = \\mathbf{12\\text{ मीटर}}$।"
+      },
+
+      // Q17 (Third Equation of Motion Numerical)
+      {
+        id: "17", qNum: "Q17", section: "accel", topic: "3rd Equation (v² - u² = 2as)", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "A stone is thrown in a vertically upward direction with a velocity of 5 m/s. If the acceleration of the stone during its motion is 10 m/s² in the downward direction, what will be the height attained by the stone and how much time will it take to reach there?",
+        qHi: "एक पत्थर को 5 मी/से के वेग से ऊपर की ओर फेंका जाता है। यदि गति के दौरान नीचे की ओर गुरुत्वीय त्वरण 10 मी/से² हो, तो पत्थर कितनी ऊंचाई प्राप्त करेगा और वहां तक पहुंचने में उसे कितना समय लगेगा?",
+        ansTitle: "Height h = 1.25 m | Time t = 0.5 seconds",
+        solEn: `<div class="step-box">
+          <div class="step-title">Given Data & Steps:</div>
+          <div class="calc-line">• Initial velocity: u = +5 m/s (upward).</div>
+          <div class="calc-line">• Downward acceleration: a = -10 m/s² (opposes upward motion).</div>
+          <div class="calc-line">• At highest point: v = 0 m/s.</div>
+          <div class="calc-line">1. <strong>Maximum Height (s or h):</strong> Using v² - u² = 2as:</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;0² - (5)² = 2(-10)s ⟹ -25 = -20s ⟹ s = 25 / 20 = <strong>1.25 meters</strong>.</div>
+          <div class="calc-line">2. <strong>Time to reach peak (t):</strong> Using v = u + at:</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;0 = 5 + (-10)t ⟹ 10t = 5 ⟹ t = 5 / 10 = <strong>0.5 seconds</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> $u = 5\\text{ मी/से}$, $a = -10\\text{ मी/से}^2$, उच्चतम बिंदु पर $v = 0$।<br>1. $v^2 - u^2 = 2as \\implies 0 - 25 = -20s \\implies s = \\frac{25}{20} = \\mathbf{1.25\\text{ मीटर}}$।<br>2. $v = u + at \\implies 0 = 5 - 10t \\implies t = \\frac{5}{10} = \\mathbf{0.5\\text{ सेकंड}}$।"
+      },
+
+      // Q18 (Train Accelerating from Station)
+      {
+        id: "18", qNum: "Q18", section: "accel", topic: "Uniform Acceleration", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "A train starting from a railway station and moving with uniform acceleration attains a speed of 40 km/h in 10 minutes. Find its acceleration in m/s².",
+        qHi: "एक रेलगाड़ी स्टेशन से चलना प्रारंभ करती है और एकसमान त्वरण से 10 मिनट में 40 किमी/घंटा की चाल प्राप्त करती है। इसका त्वरण ज्ञात कीजिए।",
+        ansTitle: "Acceleration = 0.0185 m/s² (or 1/54 m/s²)",
+        solEn: `<div class="step-box">
+          <div class="calc-line">• u = 0 m/s (starts from rest).</div>
+          <div class="calc-line">• v = 40 km/h = 40 × (5/18) = 100/9 m/s ≈ 11.11 m/s.</div>
+          <div class="calc-line">• t = 10 minutes = 10 × 60 s = 600 s.</div>
+          <div class="calc-line">• a = (v - u)/t = (100/9 - 0) / 600 = 100 / (9 × 600) = 1/54 m/s² ≈ <strong>0.0185 m/s²</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> $u = 0$, $v = 40 \\times \\frac{5}{18} = \\frac{100}{9}\\text{ मी/से}$, $t = 10 \\times 60 = 600\\text{ से}$।<br>$a = \\frac{100/9}{600} = \\frac{1}{54} \\approx \\mathbf{0.0185\\text{ मी/से}^2}$।"
+      },
+
+      // Q19 (Trolley on Inclined Plane)
+      {
+        id: "19", qNum: "Q19", section: "accel", topic: "Inclined Plane Acceleration", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "A trolley, while going down an inclined plane, has an acceleration of 2 cm/s². What will be its velocity 3 s after the start?",
+        qHi: "एक ट्रॉली एक आनत तल (Inclined plane) पर 2 सेमी/से² के त्वरण से नीचे जा रही है। गति प्रारंभ करने के 3 सेकंड बाद उसका वेग क्या होगा?",
+        ansTitle: "Velocity v = 6 cm/s = 0.06 m/s",
+        solEn: `<div class="step-box">
+          <div class="calc-line">• Initial velocity: u = 0.</div>
+          <div class="calc-line">• Acceleration: a = 2 cm/s² = 0.02 m/s².</div>
+          <div class="calc-line">• Time: t = 3 s.</div>
+          <div class="calc-line">• v = u + at = 0 + (2 cm/s² × 3 s) = <strong>6 cm/s = 0.06 m/s</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> $u = 0$, $a = 2\\text{ सेमी/से}^2$, $t = 3\\text{ से}$।<br>$v = u + at = 0 + 2(3) = \\mathbf{6\\text{ सेमी/से} = 0.06\\text{ मी/से}}$।"
+      },
+
+      // Q20 (Force: F = ma Direct Calculation)
+      {
+        id: "20", qNum: "Q20", section: "force", topic: "Force & Acceleration (F = ma)", diff: "diff-easy", diffLabel: "Easy",
+        qEn: "What force would be needed to produce an acceleration of 4 m/s² in a ball of mass 6 kg?",
+        qHi: "6 किलोग्राम द्रव्यमान की किसी गेंद में 4 मी/से² का त्वरण उत्पन्न करने के लिए कितने बल की आवश्यकता होगी?",
+        ansTitle: "Force F = 24 Newton (N)",
+        solEn: `<div class="step-box">
+          <div class="calc-line">• Mass (m) = 6 kg</div>
+          <div class="calc-line">• Acceleration (a) = 4 m/s²</div>
+          <div class="calc-line">• According to Newton's Second Law: <strong>F = m × a</strong></div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;F = 6 kg × 4 m/s² = <strong>24 N</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> $m = 6\\text{ किग्रा}$, $a = 4\\text{ मी/से}^2$।<br>$F = m \\times a = 6 \\times 4 = \\mathbf{24\\text{ न्यूटन (N)}}$।"
+      },
+
+      // Q21 (Force: Comparison of Two Forces)
+      {
+        id: "21", qNum: "Q21", section: "force", topic: "Force Comparison (NCERT Classic)", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "Which would require a greater force: accelerating a 2 kg mass at 5 m/s² or a 4 kg mass at 2 m/s²?",
+        qHi: "किसमें अधिक बल की आवश्यकता होगी: 2 किग्रा द्रव्यमान को 5 मी/से² की दर से त्वरित करने में अथवा 4 किग्रा द्रव्यमान को 2 मी/से² की दर से त्वरित करने में?",
+        ansTitle: "Accelerating 2 kg mass at 5 m/s² requires more force (10 N vs 8 N)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Comparison:</div>
+          <div class="calc-line"><strong>Case 1:</strong> m₁ = 2 kg, a₁ = 5 m/s²</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;F₁ = m₁ × a₁ = 2 kg × 5 m/s² = <strong>10 N</strong>.</div>
+          <div class="calc-line"><strong>Case 2:</strong> m₂ = 4 kg, a₂ = 2 m/s²</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;F₂ = m₂ × a₂ = 4 kg × 2 m/s² = <strong>8 N</strong>.</div>
+          <div class="calc-line">Since F₁ (10 N) > F₂ (8 N), <strong>accelerating the 2 kg mass at 5 m/s² requires a greater force</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong><br>स्थिति 1: $F_1 = 2 \\times 5 = 10\\text{ N}$।<br>स्थिति 2: $F_2 = 4 \\times 2 = 8\\text{ N}$।<br>चूंकि $10\\text{ N} > 8\\text{ N}$, अतः 2 किग्रा की वस्तु को 5 मी/से² से त्वरित करने में अधिक बल लगेगा।"
+      },
+
+      // Q22 (Force on Catching Cricket Ball)
+      {
+        id: "22", qNum: "Q22", section: "force", topic: "Change of Momentum & Impulse", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "A cricket ball of mass 150 g moving with a velocity of 20 m/s is brought to rest by a player in 0.1 s. Calculate: (i) the impulse / change in momentum of the ball, and (ii) the average force applied by the player.",
+        qHi: "150 ग्राम द्रव्यमान की एक क्रिकेट गेंद 20 मी/से के वेग से आ रही है। एक खिलाड़ी इसे 0.1 सेकंड में रोक देता है। ज्ञात कीजिए: (i) गेंद के संवेग में परिवर्तन, तथा (ii) खिलाड़ी द्वारा लगाया गया औसत बल।",
+        ansTitle: "(i) Change in momentum = -3 kg·m/s | (ii) Force = 30 N opposing",
+        solEn: `<div class="step-box">
+          <div class="step-title">Given Data & Solution:</div>
+          <div class="calc-line">• Mass (m) = 150 g = 150/1000 = 0.15 kg.</div>
+          <div class="calc-line">• Initial velocity (u) = 20 m/s; Final velocity (v) = 0 m/s.</div>
+          <div class="calc-line">• Time (t) = 0.1 s.</div>
+          <div class="calc-line"><strong>(i) Change in Momentum (Δp):</strong></div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;Δp = m(v - u) = 0.15 × (0 - 20) = <strong>-3 kg·m/s (or N·s)</strong>.</div>
+          <div class="calc-line"><strong>(ii) Average Force Applied (F):</strong></div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;F = Δp / t = -3 / 0.1 = <strong>-30 N</strong>.</div>
+          <div class="calc-line">The negative sign shows that the player applies a resisting/stopping force of <strong>30 N</strong> in the opposite direction.</div>
+          <div style="margin-top:6px; color:#fcd34d;"><em>Conceptual Note:</em> By pulling his hands backwards, the fielder increases time $t$, which drastically reduces the impact force $F$ on his palms!</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> $m = 0.15\\text{ किग्रा}$, $u = 20\\text{ मी/से}$, $v = 0$, $t = 0.1\\text{ से}$।<br>(i) संवेग परिवर्तन $\\Delta p = m(v - u) = 0.15(0 - 20) = \\mathbf{-3\\text{ किग्रा·मी/से}}$।<br>(ii) औसत बल $F = \\frac{\\Delta p}{t} = \\frac{-3}{0.1} = \\mathbf{-30\\text{ न्यूटन}}$ (विरोधी बल)।"
+      },
+
+      // Q23 (Bullet Penetrating Wooden Block - Force & Deceleration)
+      {
+        id: "23", qNum: "Q23", section: "force", topic: "Work-Energy / Deceleration Force", diff: "diff-hard", diffLabel: "Hard",
+        qEn: "A bullet of mass 10 g traveling horizontally with a velocity of 150 m/s strikes a stationary wooden block and comes to rest in 0.03 s. Calculate: (i) the distance of penetration of the bullet into the block, and (ii) the magnitude of the force exerted by the wooden block on the bullet.",
+        qHi: "10 ग्राम द्रव्यमान की एक गोली 150 मी/से के वेग से एक स्थिर लकड़ी के गुटके से टकराती है और 0.03 सेकंड में रुक जाती है। ज्ञात कीजिए: (i) गुटके में गोली द्वारा तय की गई वेधन दूरी, तथा (ii) गुटके द्वारा गोली पर लगाया गया बल।",
+        ansTitle: "(i) Penetration distance = 2.25 m | (ii) Resisting Force = 50 N",
+        solEn: `<div class="step-box">
+          <div class="step-title">Given Data:</div>
+          <div class="calc-line">• Mass (m) = 10 g = 10/1000 = 0.01 kg.</div>
+          <div class="calc-line">• Initial velocity (u) = 150 m/s; Final velocity (v) = 0 m/s.</div>
+          <div class="calc-line">• Time (t) = 0.03 s.</div>
+          <div class="calc-line"><strong>1. Acceleration (a):</strong> a = (v - u)/t = (0 - 150)/0.03 = -15000/3 = <strong>-5,000 m/s²</strong>.</div>
+          <div class="calc-line"><strong>2. Penetration Distance (s):</strong> Using v² - u² = 2as:</div>
+          <div class="calc-line">&nbsp;&nbsp;&nbsp;&nbsp;0 - (150)² = 2 × (-5000) × s ⟹ -22500 = -10000s ⟹ s = 22500 / 10000 = <strong>2.25 meters</strong>.</div>
+          <div class="calc-line"><strong>3. Resisting Force (F):</strong> F = m × a = 0.01 kg × (-5000 m/s²) = <strong>-50 N</strong>.</div>
+          <div class="calc-line">Magnitude of resistive force = <strong>50 Newton</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong><br>$m = 0.01\\text{ किग्रा}$, $u = 150\\text{ मी/से}$, $v = 0$, $t = 0.03\\text{ से}$।<br>1. त्वरण $a = \\frac{0 - 150}{0.03} = -5000\\text{ मी/से}^2$।<br>2. दूरी $v^2 - u^2 = 2as \\implies 0 - (150)^2 = 2(-5000)s \\implies s = \\mathbf{2.25\\text{ मीटर}}$।<br>3. बल $F = ma = 0.01 \\times 5000 = \\mathbf{50\\text{ न्यूटन}}$।"
+      },
+
+      // Q24 (Motorcar Braking Force)
+      {
+        id: "24", qNum: "Q24", section: "force", topic: "Braking Force on Vehicle", diff: "diff-medium", diffLabel: "Medium",
+        qEn: "A motorcar is moving with a velocity of 108 km/h and it takes 4 s to stop after the brakes are applied. Calculate the force exerted by the brakes on the motorcar if its mass along with the passengers is 1000 kg.",
+        qHi: "एक मोटरकार 108 किमी/घंटा के वेग से चल रही है और ब्रेक लगाने के बाद रुकने में 4 सेकंड का समय लेती है। मोटरकार पर ब्रेक द्वारा लगाया गया बल ज्ञात कीजिए यदि यात्रियों सहित कार का कुल द्रव्यमान 1000 किग्रा है।",
+        ansTitle: "Braking Force = -7,500 N (Retarding Force)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Step-by-Step Calculation:</div>
+          <div class="calc-line">1. Mass (m) = 1000 kg.</div>
+          <div class="calc-line">2. Initial velocity (u) = 108 km/h = 108 × (5/18) = 6 × 5 = 30 m/s.</div>
+          <div class="calc-line">3. Final velocity (v) = 0 m/s; Time (t) = 4 s.</div>
+          <div class="calc-line">4. Acceleration (a) = (v - u)/t = (0 - 30)/4 = <strong>-7.5 m/s²</strong>.</div>
+          <div class="calc-line">5. Force (F) = m × a = 1000 kg × (-7.5 m/s²) = <strong>-7,500 N</strong>.</div>
+          <div class="calc-line">Hence, the brakes exert an opposing retarding force of <strong>7,500 Newton</strong>.</div>
+        </div>`,
+        solHi: "<strong>हल:</strong> $m = 1000\\text{ किग्रा}$, $u = 108 \\times \\frac{5}{18} = 30\\text{ मी/से}$, $v = 0$, $t = 4\\text{ से}$।<br>त्वरण $a = \\frac{0 - 30}{4} = -7.5\\text{ मी/से}^2$।<br>बल $F = m \\times a = 1000 \\times (-7.5) = \\mathbf{-7,500\\text{ न्यूटन}}$।"
+      },
+
+      // Q25 (Force on Two Masses Coupled)
+      {
+        id: "25", qNum: "Q25", section: "force", topic: "Combined Masses Acceleration", diff: "diff-hard", diffLabel: "Hard",
+        qEn: "A constant force of 5 N gives a mass m₁ an acceleration of 10 m/s² and a mass m₂ an acceleration of 20 m/s². What acceleration would the same force give if both the masses were tied together?",
+        qHi: "5 न्यूटन का एक नियत बल द्रव्यमान $m_1$ को 10 मी/से² का त्वरण तथा द्रव्यमान $m_2$ को 20 मी/से² का त्वरण देता है। यदि दोनों द्रव्यमानों को एक साथ बांध दिया जाए, तो वही बल कितना त्वरण उत्पन्न करेगा?",
+        ansTitle: "Combined Acceleration a = 6.67 m/s² (or 20/3 m/s²)",
+        solEn: `<div class="step-box">
+          <div class="step-title">Step-by-Step Calculation:</div>
+          <div class="calc-line">1. For mass m₁: F = m₁ × a₁ ⟹ 5 = m₁ × 10 ⟹ <strong>m₁ = 5/10 = 0.5 kg</strong>.</div>
+          <div class="calc-line">2. For mass m₂: F = m₂ × a₂ ⟹ 5 = m₂ × 20 ⟹ <strong>m₂ = 5/20 = 0.25 kg</strong>.</div>
+          <div class="calc-line">3. Combined Mass (M) = m₁ + m₂ = 0.5 kg + 0.25 kg = <strong>0.75 kg (or 3/4 kg)</strong>.</div>
+          <div class="calc-line">4. Acceleration with tied masses: a = F / M = 5 / 0.75 = 5 / (3/4) = 20 / 3 ≈ <strong>6.67 m/s²</strong>.</div>
+          <div style="margin-top:6px; color:#38bdf8;"><em>Shortcut Rule:</em> 1/a = 1/a₁ + 1/a₂ = 1/10 + 1/20 = 3/20 ⟹ a = 20/3 = 6.67 m/s²!</div>
+        </div>`,
+        solHi: "<strong>हल:</strong><br>$m_1 = F / a_1 = 5 / 10 = 0.5\\text{ किग्रा}$।<br>$m_2 = F / a_2 = 5 / 20 = 0.25\\text{ किग्रा}$।<br>संयुक्त द्रव्यमान $M = 0.5 + 0.25 = 0.75\\text{ किग्रा}$।<br>नया त्वरण $a = F / M = 5 / 0.75 = \\frac{20}{3} \\approx \\mathbf{6.67\\text{ मी/से}^2}$।"
+      }
+    ];
+
+    // Render Questions
+    function renderQuestions(filter = 'all') {
+      const container = document.getElementById('questionsContainer');
+      container.innerHTML = '';
+
+      const filtered = questionsData.filter(item => {
+        if (filter === 'all') return true;
+        return item.section === filter;
+      });
+
+      filtered.forEach(q => {
+        const card = document.createElement('article');
+        card.className = 'q-card';
+        card.id = `card_${q.id}`;
+
+        let optionsHtml = '';
+        if (q.options && q.options.length > 0) {
+          optionsHtml = `<div class="mcq-options">` +
+            q.options.map(opt => `
+              <div class="mcq-opt" onclick="checkOption('${q.id}', '${opt.key}', '${q.ansTitle}')">
+                <span class="opt-key">${opt.key}</span>
+                <span>${opt.text}</span>
+              </div>
+            `).join('') + `</div>`;
+        }
+
+        card.innerHTML = `
+          <div class="q-header">
+            <div class="q-meta-left">
+              <span class="q-badge">${q.qNum}</span>
+              <span class="topic-badge">${q.topic}</span>
+              <span class="difficulty-badge ${q.diff}">${q.diffLabel}</span>
+            </div>
+          </div>
+
+          <div class="q-body">
+            <div class="q-en">${q.qEn}</div>
+            <div class="q-hi">${q.qHi}</div>
+            ${optionsHtml}
+          </div>
+
+          <div class="action-row">
+            <button class="sol-toggle-btn" id="btn_${q.id}" onclick="toggleSolution('${q.id}')">
+              💡 Reveal Solution / उत्तर देखें
+            </button>
+          </div>
+
+          <div class="sol-drawer" id="sol_${q.id}">
+            <div class="ans-highlight-pill">✓ ${q.ansTitle}</div>
+            <div class="sol-en">${q.solEn}</div>
+            <div class="sol-hi" style="margin-top:10px; border-top:1px dashed rgba(255,255,255,0.1); padding-top:10px; color:#cbd5e1;">${q.solHi}</div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      // Re-apply language filter
+      setLanguage(currentLang, document.querySelector(`.controls-panel .pill-btn.active`) || document.querySelector(`.controls-panel .pill-btn`));
+    }
+
+    // Toggle individual solution
+    function toggleSolution(id) {
+      const drawer = document.getElementById(`sol_${id}`);
+      const btn = document.getElementById(`btn_${id}`);
+      if (!drawer || !btn) return;
+
+      const isHidden = window.getComputedStyle(drawer).display === 'none';
+      if (isHidden) {
+        drawer.style.display = 'block';
+        btn.classList.add('revealed');
+        btn.innerHTML = '🔒 Hide Solution / उत्तर छिपाएं';
+        try {
+          confetti({ particleCount: 20, spread: 50, origin: { y: 0.85 } });
+        } catch (e) {}
+      } else {
+        drawer.style.display = 'none';
+        btn.classList.remove('revealed');
+        btn.innerHTML = '💡 Reveal Solution / उत्तर देखें';
+      }
+    }
+
+    // Interactive Option Click in MCQs
+    function checkOption(qId, selectedKey, correctTitle) {
+      const drawer = document.getElementById(`sol_${qId}`);
+      const btn = document.getElementById(`btn_${qId}`);
+      if (drawer) {
+        drawer.style.display = 'block';
+      }
+      if (btn) {
+        btn.classList.add('revealed');
+        btn.innerHTML = '🔒 Hide Solution / उत्तर छिपाएं';
+      }
+      if (correctTitle.includes(`(${selectedKey})`)) {
+        try {
+          confetti({ particleCount: 35, spread: 70, origin: { y: 0.8 } });
+        } catch(e) {}
+      }
+    }
+
+    // Master expand/collapse
+    let allRevealed = false;
+    function toggleAllSolutions() {
+      expandAll(!allRevealed);
+    }
+
+    function expandAll(show) {
+      allRevealed = show;
+      document.querySelectorAll('.sol-drawer').forEach(el => el.style.display = show ? 'block' : 'none');
+      document.querySelectorAll('.sol-toggle-btn').forEach(btn => {
+        if (show) {
+          btn.classList.add('revealed');
+          btn.innerHTML = '🔒 Hide Solution / उत्तर छिपाएं';
+        } else {
+          btn.classList.remove('revealed');
+          btn.innerHTML = '💡 Reveal Solution / उत्तर देखें';
+        }
+      });
+      const masterBtn = document.getElementById('masterToggleBtn');
+      if (masterBtn) {
+        masterBtn.innerHTML = show ? '🔒 Hide All' : '👁️ Reveal All';
+      }
+      if (show) {
+        try {
+          confetti({ particleCount: 60, spread: 80, origin: { y: 0.6 } });
+        } catch(e) {}
+      }
+    }
+
+    // Filter section tabs
+    function filterQuestions(section, tabBtn) {
+      document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+      tabBtn.classList.add('active');
+      renderQuestions(section);
+    }
+
+    // Initial render
+    renderQuestions('all');
+  </script>
+</body>
+</html>

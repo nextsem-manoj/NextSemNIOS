@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 9 Circle Geometry: 12 Theorems Lab & 60 Questions | Nextsem</title>
+  <meta name="description" content="NCERT Class 9 Mathematics (Ganita Manjari Part 1) Chapter 5 Circle Geometry - Interactive 12 Theorem Visualizer & 60 Numerical/Theoretical Practice Questions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭕</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --border-card: rgba(56, 189, 248, 0.25);
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-purple: #a855f7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-links { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      color: #94a3b8; text-decoration: none; font-size: 13px;
+      padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s;
+    }
+    .nav-btn:hover { color: #fff; border-color: var(--accent-sky); background: rgba(56, 189, 248, 0.1); }
+
+    .container { position: relative; max-width: 1020px; margin: 0 auto; padding: 24px 16px; z-index: 1; }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(168, 85, 247, 0.1));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8; font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 30px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+    .hero-subtitle { color: #cbd5e1; font-size: 15px; }
+
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px; padding: 24px;
+      margin-bottom: 24px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .section-icon {
+      font-size: 24px; width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255, 255, 255, 0.05); border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .section-title { font-size: 20px; font-weight: 700; color: #ffffff; }
+
+    /* Interactive Circle Visualizer */
+    .lab-box {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px; padding: 20px; text-align: center;
+    }
+
+    .canvas-container {
+      display: flex; justify-content: center; margin: 16px 0;
+    }
+
+    svg { max-width: 100%; height: auto; }
+
+    /* Theorem Nav Tabs */
+    .theorem-tabs {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+    }
+
+    .th-tab {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1; padding: 6px 14px; border-radius: 8px;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .th-tab:hover, .th-tab.active {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8; color: #38bdf8;
+    }
+
+    /* Question Card */
+    .q-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px; padding: 16px; margin-bottom: 14px;
+    }
+
+    .q-badge {
+      display: inline-block; font-size: 11px; font-weight: 800;
+      padding: 2px 8px; border-radius: 4px; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .badge-num { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .badge-theo { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); }
+
+    .q-text { font-size: 15px; color: #f1f5f9; font-weight: 600; margin-bottom: 8px; }
+    
+    .q-btn {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8; font-size: 13px; font-weight: 700;
+      padding: 6px 14px; border-radius: 6px; cursor: pointer;
+      margin-top: 8px;
+    }
+    .q-btn:hover { background: rgba(56, 189, 248, 0.25); }
+
+    .sol-box {
+      display: none; margin-top: 12px;
+      background: rgba(0, 0, 0, 0.5);
+      border-left: 3px solid #38bdf8;
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      color: #e2e8f0; font-size: 14px; line-height: 1.8;
+    }
+
+    .control-row {
+      display: flex; gap: 14px; justify-content: center; align-items: center;
+      flex-wrap: wrap; margin-top: 10px;
+    }
+
+    .slider-label { font-size: 14px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">Class 9 Geometry</span>
+      <span style="font-weight: 700; font-size: 15px;">Ganita Manjari Ch 5</span>
+    </a>
+    <div class="nav-links">
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+      <a href="/docs/class9_maths_ganita_manjari_ch5_circle_theorems_60_questions_bank.md" class="nav-btn" target="_blank">📄 Full 60 Qs MD</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">📐 NCERT Class 9 Mathematics • Chapter 5</div>
+      <h1 class="hero-title">Circle Geometry: 12 Theorems Interactive Lab</h1>
+      <p class="hero-subtitle">Interactive Geometric Proof Visualizers & 60 Rigorous Numerical / Theoretical Questions with Step-by-Step Proofs</p>
+    </header>
+
+    <!-- Interactive Visualizer -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">⭕</div>
+        <div>
+          <h2 class="section-title">Interactive Circle Theorem Explorer</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">Drag the slider to observe Theorem 9 (Angle at Center = 2 × Inscribed Angle)</p>
+        </div>
+      </div>
+
+      <div class="lab-box">
+        <div class="canvas-container">
+          <svg id="circleSvg" width="340" height="340" viewBox="0 0 340 340">
+            <!-- Circle -->
+            <circle cx="170" cy="170" r="130" fill="none" stroke="#38bdf8" stroke-width="3"/>
+            <!-- Center O -->
+            <circle cx="170" cy="170" r="5" fill="#f59e0b"/>
+            <text x="178" y="165" fill="#f59e0b" font-size="14" font-weight="bold">O</text>
+            
+            <!-- Lines & Points will be rendered dynamically -->
+            <path id="centerAngleSector" d="" fill="rgba(245, 158, 11, 0.15)"/>
+            <line id="lineOA" x1="170" y1="170" x2="0" y2="0" stroke="#f59e0b" stroke-width="2"/>
+            <line id="lineOB" x1="170" y1="170" x2="0" y2="0" stroke="#f59e0b" stroke-width="2"/>
+            
+            <line id="lineDA" x1="0" y1="0" x2="0" y2="0" stroke="#10b981" stroke-width="2" stroke-dasharray="4"/>
+            <line id="lineDB" x1="0" y1="0" x2="0" y2="0" stroke="#10b981" stroke-width="2" stroke-dasharray="4"/>
+
+            <circle id="ptA" cx="0" cy="0" r="6" fill="#38bdf8"/>
+            <text id="txtA" x="0" y="0" fill="#38bdf8" font-size="14" font-weight="bold">A</text>
+
+            <circle id="ptB" cx="0" cy="0" r="6" fill="#38bdf8"/>
+            <text id="txtB" x="0" y="0" fill="#38bdf8" font-size="14" font-weight="bold">B</text>
+
+            <circle id="ptD" cx="0" cy="0" r="6" fill="#10b981"/>
+            <text id="txtD" x="0" y="0" fill="#10b981" font-size="14" font-weight="bold">D</text>
+          </svg>
+        </div>
+
+        <div class="control-row">
+          <span class="slider-label">Central Angle (∠AOB): <strong id="angleVal" style="color: #f59e0b;">120°</strong></span>
+          <input type="range" id="angleSlider" min="30" max="170" value="120" step="2" oninput="updateCircleVis(this.value)">
+        </div>
+        <div style="margin-top: 10px; color: #34d399; font-size: 15px; font-weight: 700;">
+          👉 Inscribed Angle (∠ADB) = <span id="inscribedVal">60°</span> (Exactly Half of Central Angle!)
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 Theorem Tabs & Question Bank -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📚</div>
+        <div>
+          <h2 class="section-title">Theorems 1 to 12 Question Bank (5 Questions per Theorem)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">Select a theorem below to explore its 5 numerical and theoretical problems</p>
+        </div>
+      </div>
+
+      <div class="theorem-tabs" id="tabsContainer">
+        <!-- Tabs 1 to 12 generated by JS -->
+      </div>
+
+      <div id="theoremQuestionsContainer">
+        <!-- Questions injected by JS -->
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const theoremsData = [
+      {
+        id: 1,
+        title: "Theorem 1: Unique Circle Through 3 Non-Collinear Points",
+        statement: "There is one and only one circle passing through three given non-collinear points.",
+        questions: [
+          { type: "Theoretical", text: "Why can no circle pass through 3 distinct collinear points?", sol: "The perpendicular bisectors of the line segments joining collinear points are parallel and never intersect, so no common center exists." },
+          { type: "Numerical", text: "In right ΔABC with AB = 6 cm, BC = 8 cm, ∠B = 90°, find the circumcircle radius.", sol: "Hypotenuse AC = √(6² + 8²) = 10 cm. Circumradius R = AC / 2 = 5 cm." },
+          { type: "Theoretical", text: "Describe steps to find the center of a circular coin with no center mark.", sol: "Pick 3 points A, B, C on circle. Draw chords AB and BC. Their perpendicular bisectors intersect at the center O." },
+          { type: "Numerical", text: "An equilateral triangle of side 12 cm is inscribed in a circle. Find circumradius.", sol: "Altitude h = (√3/2) × 12 = 6√3 cm. Radius R = (2/3) × h = 4√3 cm ≈ 6.93 cm." },
+          { type: "Theoretical", text: "Given 5 non-collinear points in a plane, how many distinct circles can be uniquely drawn?", sol: "Total circles = C(5, 3) = 10 circles." }
+        ]
+      },
+      {
+        id: 2,
+        title: "Theorem 2: Equal Chords Subtend Equal Angles at Centre",
+        statement: "Equal chords of a circle subtend equal angles at the centre.",
+        questions: [
+          { type: "Theoretical", text: "Prove Theorem 2 using the SSS congruence criterion.", sol: "In ΔAOB and ΔCOD: OA = OC, OB = OD (radii) and AB = CD (given). By SSS congruence, ΔAOB ≅ ΔCOD ⇒ ∠AOB = ∠COD." },
+          { type: "Numerical", text: "Two equal chords AB and CD subtend 70° at the center. What is the angle subtended by a third equal chord EF?", sol: "By Theorem 2, equal chords subtend equal angles, so ∠EOF = 70° (Reflex = 290°)." },
+          { type: "Numerical", text: "A regular hexagon is inscribed in a circle. Find the angle subtended by each side at center.", sol: "Regular hexagon has 6 equal chords. Angle = 360° / 6 = 60°." },
+          { type: "Theoretical", text: "For two concentric circles cut by a secant line at A, B, C, D, show ∠AOB = ∠COD.", sol: "AB = CD, OA = OD, OB = OC. By SSS congruence, ΔAOB ≅ ΔCOD ⇒ ∠AOB = ∠COD." },
+          { type: "Numerical", text: "If chord AB equals the radius r, find the angle subtended at the center.", sol: "ΔAOB is equilateral (OA = OB = AB = r), hence ∠AOB = 60°." }
+        ]
+      },
+      {
+        id: 3,
+        title: "Theorem 3: Chords Subtending Equal Angles at Centre are Equal",
+        statement: "Chords of a circle that subtend equal angles at the centre are equal in length (Converse of Th. 2).",
+        questions: [
+          { type: "Theoretical", text: "Prove Theorem 3 using SAS congruence.", sol: "OA = OC, ∠AOB = ∠COD, OB = OD. By SAS, ΔAOB ≅ ΔCOD ⇒ AB = CD." },
+          { type: "Numerical", text: "Chords PQ and RS subtend 90° each in a circle of r = 14 cm. Find chord length PQ.", sol: "PQ = √(14² + 14²) = 14√2 cm ≈ 19.8 cm." },
+          { type: "Numerical", text: "Two equal chords subtend (3x + 15)° and (5x - 25)° at the center. Find x and the angle.", sol: "3x + 15 = 5x - 25 ⇒ 2x = 40 ⇒ x = 20. Angle = 75°." },
+          { type: "Theoretical", text: "If two diameters intersect at the center, prove the chords connecting endpoints form a rectangle.", sol: "Vertically opposite angles are equal ⇒ opposite chords equal (parallelogram). Diagonals are equal diameters ⇒ rectangle." },
+          { type: "Numerical", text: "Chords AB and CD subtend 120° each in circle r = 6 cm. Find AB.", sol: "AB = 2 × 6 sin(60°) = 2 × 6 × (√3/2) = 6√3 cm ≈ 10.39 cm." }
+        ]
+      },
+      {
+        id: 4,
+        title: "Theorem 4: Line from Centre to Midpoint of Chord is Perpendicular",
+        statement: "The line joining the centre of a circle and the midpoint of a chord is perpendicular to the chord.",
+        questions: [
+          { type: "Theoretical", text: "Prove OM ⊥ AB where M is the midpoint of chord AB.", sol: "In ΔOMA and ΔOMB: OA = OB, AM = MB, OM = OM. By SSS, ΔOMA ≅ ΔOMB ⇒ ∠OMA = ∠OMB = 90°." },
+          { type: "Numerical", text: "Chord AB = 16 cm in circle r = 10 cm. Find distance OM from center to midpoint.", sol: "AM = 8 cm. OM = √(10² - 8²) = √(100 - 64) = 6 cm." },
+          { type: "Numerical", text: "Midpoint of 24 cm chord is 5 cm from center. Find circle diameter.", sol: "Radius = √(5² + 12²) = 13 cm. Diameter = 26 cm." },
+          { type: "Theoretical", text: "Prove the line joining midpoints of two parallel chords passes through the center.", sol: "Perpendicular bisectors of parallel lines are collinear and both pass through center O." },
+          { type: "Numerical", text: "A bridge arch has 48 m chord span, 7 m below center. Find radius.", sol: "R = √(24² + 7²) = √(576 + 49) = 25 m." }
+        ]
+      },
+      {
+        id: 5,
+        title: "Theorem 5: Perpendicular from Centre to Chord Bisects the Chord",
+        statement: "The perpendicular from the centre of a circle to a chord bisects the chord.",
+        questions: [
+          { type: "Theoretical", text: "Prove OL ⊥ AB bisects AB using RHS congruence.", sol: "In right ΔOLA and ΔOLB: ∠OLA = ∠OLB = 90°, OA = OB, OL = OL. By RHS, ΔOLA ≅ ΔOLB ⇒ AL = LB." },
+          { type: "Numerical", text: "Find chord length when r = 7 cm and distance d = 6 cm (PDF Ex 5.5).", sol: "Length = 2√(7² - 6²) = 2√13 cm ≈ 7.21 cm." },
+          { type: "Numerical", text: "Two parallel chords of 6 cm and 8 cm on opposite sides of center in circle r = 5 cm. Find distance between them.", sol: "d1 = √(5² - 3²) = 4 cm, d2 = √(5² - 4²) = 3 cm. Total distance = 4 + 3 = 7 cm." },
+          { type: "Numerical", text: "Same chords on the SAME side of center. Find distance between them.", sol: "Distance = 4 - 3 = 1 cm." },
+          { type: "Theoretical", text: "A line cuts two concentric circles at A, B, C, D in order. Prove AB = CD.", sol: "Perpendicular from center bisects AD (AM = MD) and BC (BM = MC). Subtracting gives AB = CD." }
+        ]
+      },
+      {
+        id: 6,
+        title: "Theorem 6: Equal Chords are Equidistant from Centre",
+        statement: "Chords of a circle having the same length are all at the same distance from the centre.",
+        questions: [
+          { type: "Theoretical", text: "Use Pythagoras theorem to show why equal chords must be equidistant.", sol: "Distance d = √(r² - (L/2)²). Since r and L are identical for equal chords, distances d are equal." },
+          { type: "Numerical", text: "Two chords of 18 cm each in circle r = 15 cm. Find perpendicular distance from center.", sol: "d = √(15² - 9²) = √(225 - 81) = 12 cm." },
+          { type: "Numerical", text: "Equal chords AB and CD intersect at X. Show line OX bisects ∠MXN.", sol: "OM = ON (equal chords), OX is common, RHS congruence gives ΔOMX ≅ ΔONX ⇒ ∠OXM = ∠OXN." },
+          { type: "Theoretical", text: "What happens to distance d as chord length approaches zero?", sol: "As L → 0, d = √(r² - 0) = r (radius). The chord becomes a tangent." },
+          { type: "Numerical", text: "Four equal chords of 10 cm in r = 13 cm circle form a square. Find distance of each from center.", sol: "d = √(13² - 5²) = 12 cm." }
+        ]
+      },
+      {
+        id: 7,
+        title: "Theorem 7: Chords Equidistant from Centre are Equal",
+        statement: "Chords of a circle that are equidistant from the centre have the same length (Converse of Th. 6).",
+        questions: [
+          { type: "Theoretical", text: "Prove Theorem 7 using RHS congruence.", sol: "OM = ON, OA = OC. RHS gives ΔOMA ≅ ΔONC ⇒ AM = CN ⇒ AB = 2AM = 2CN = CD." },
+          { type: "Numerical", text: "In circle r = 25 cm, chord AB is at distance 7 cm. Find length of chord CD also at distance 7 cm.", sol: "Half-length = √(25² - 7²) = 24 cm. Length CD = 2 × 24 = 48 cm." },
+          { type: "Numerical", text: "Two equal chords are at distances (2x + 1) cm and (3x - 4) cm. Find x.", sol: "2x + 1 = 3x - 4 ⇒ x = 5 cm." },
+          { type: "Theoretical", text: "Two congruent circles intersect with common chord at distance d from each center. Find chord length.", sol: "Length = 2√(r² - d²)." },
+          { type: "Numerical", text: "If all 4 sides of an inscribed quadrilateral are 4 cm from center, what quadrilateral is it?", sol: "Equilateral cyclic quadrilateral = Square." }
+        ]
+      },
+      {
+        id: 8,
+        title: "Theorem 8: Longer Chords are Closer to the Centre",
+        statement: "If AB > DE, then the distance from centre to AB is strictly less than distance to DE.",
+        questions: [
+          { type: "Theoretical", text: "Prove algebraically why larger chord implies smaller distance from center.", sol: "L1 > L2 ⇒ (L1/2)² > (L2/2)² ⇒ r² - (L1/2)² < r² - (L2/2)² ⇒ d1 < d2." },
+          { type: "Numerical", text: "In r = 10 cm, chords have lengths 12 cm, 16 cm, 19.6 cm. Order by distance from center.", sol: "d(19.6) ≈ 1.99 cm < d(16) = 6 cm < d(12) = 8 cm. Longest chord is closest!" },
+          { type: "Theoretical", text: "If distance of AB is twice distance of CD, is CD = 2 AB? (PDF Ex 5.4 Q3)", sol: "No! Chord length is not inversely proportional to distance due to square root relationship." },
+          { type: "Theoretical", text: "Why is the diameter the maximum chord of a circle?", sol: "Distance d = 0 is the minimum possible distance from center, maximizing length L = 2r." },
+          { type: "Numerical", text: "Two chords subtend 45° and 110° at center. Which chord is closer to the center?", sol: "Chord subtending 110° is longer, so it is closer to the center." }
+        ]
+      },
+      {
+        id: 9,
+        title: "Theorem 9: Inscribed Angle Theorem (Angle at Centre = 2 × Inscribed Angle)",
+        statement: "The angle subtended by an arc at the centre is double the angle subtended by it at any point on the circle.",
+        questions: [
+          { type: "Numerical", text: "Arc AB subtends 130° at center O. Point C is on major arc. Find ∠ACB.", sol: "∠ACB = 130° / 2 = 65°." },
+          { type: "Numerical", text: "AB is diameter, C is on circle, ∠BAC = 35°. Find ∠ABC.", sol: "Angle in semicircle ∠ACB = 90°. ∠ABC = 180° - (90° + 35°) = 55°." },
+          { type: "Numerical", text: "Point D is on minor arc AB with central angle ∠AOB = 110°. Find ∠ADB.", sol: "Reflex ∠AOB = 360° - 110° = 250°. ∠ADB = 250° / 2 = 125°." },
+          { type: "Numerical", text: "In PDF Fig 5.26, ∠ACB = 100°. Find x = ∠ADB on same segment.", sol: "Angles in same segment are equal ⇒ x = 100°." },
+          { type: "Theoretical", text: "Prove that the angle subtended by a diameter at any point on the circle is 90°.", sol: "Diameter central angle = 180°. Inscribed angle = 180° / 2 = 90°." }
+        ]
+      },
+      {
+        id: 10,
+        title: "Theorem 10: Concyclicity Criterion (Equal Angles on Same Side)",
+        statement: "If line segment AB subtends equal angles at C, D on the same side, then A, B, C, D are concyclic.",
+        questions: [
+          { type: "Theoretical", text: "Explain proof by contradiction using exterior angle theorem for Theorem 10.", sol: "If D is outside, ∠AEB = ∠ACB. But exterior ∠AEB > ∠ADB ⇒ ∠ACB > ∠ADB, contradiction." },
+          { type: "Numerical", text: "Right triangles ΔABC and ΔADC share hypotenuse AC. If ∠BAC = 40°, find ∠BDC.", sol: "A, B, C, D lie on circle with diameter AC. ∠BDC = ∠BAC = 40° (same segment)." },
+          { type: "Numerical", text: "Segment PQ subtends ∠PRQ = 62° and ∠PSQ = 62° on same side. Are P, Q, R, S concyclic?", sol: "Yes, by Theorem 10 they are concyclic." },
+          { type: "Theoretical", text: "If diagonals intersect at P with PA·PC = PB·PD, prove A, B, C, D are concyclic.", sol: "ΔPAB ~ ΔPDC ⇒ ∠CAB = ∠CDB ⇒ concyclic by Theorem 10." },
+          { type: "Numerical", text: "Prove any isosceles trapezium is concyclic.", sol: "ΔACD ≅ ΔBDC ⇒ ∠CAD = ∠CBD on base CD ⇒ concyclic." }
+        ]
+      },
+      {
+        id: 11,
+        title: "Theorem 11: Opposite Angles of Cyclic Quadrilateral are Supplementary",
+        statement: "The sum of two opposite angles of a cyclic quadrilateral is 180°.",
+        questions: [
+          { type: "Theoretical", text: "Prove Theorem 11 using reflex angles at the center.", sol: "∠BAD = (1/2) reflex ∠BOD, ∠BCD = (1/2) ∠BOD. Sum = (1/2)(360°) = 180°." },
+          { type: "Numerical", text: "In cyclic ABCD, ∠A = (2x + 4)° and ∠C = (3x - 14)°. Find x and the angles.", sol: "(2x + 4) + (3x - 14) = 180 ⇒ 5x = 190 ⇒ x = 38. ∠A = 80°, ∠C = 100°." },
+          { type: "Numerical", text: "Side AB of cyclic ABCD is extended to E. If ∠CBE = 75°, find ∠ADC.", sol: "∠ABC = 105°. ∠ADC = 180° - 105° = 75° (Exterior angle = interior opposite angle)." },
+          { type: "Theoretical", text: "Prove any cyclic parallelogram must be a rectangle.", sol: "∠A = ∠C (parallelogram) and ∠A + ∠C = 180° (cyclic) ⇒ 2∠A = 180° ⇒ ∠A = 90° (rectangle)." },
+          { type: "Numerical", text: "In cyclic ABCD, diagonals meet at O. If ∠DBC = 55° and ∠BAC = 45°, find ∠BCD.", sol: "∠CAD = 55° ⇒ ∠DAB = 100° ⇒ ∠BCD = 180° - 100° = 80°." }
+        ]
+      },
+      {
+        id: 12,
+        title: "Theorem 12: Supplementary Opposite Angles Implies Cyclic",
+        statement: "If opposite angles of a quadrilateral add up to 180°, then its vertices lie on a circle (Converse of Th. 11).",
+        questions: [
+          { type: "Theoretical", text: "Explain the contradiction proof for Theorem 12.", sol: "If C not on circle, CD meets circle at E ⇒ ∠BED = ∠BCD. But exterior ∠BED > ∠BCD, contradiction." },
+          { type: "Numerical", text: "Can a circle pass through vertices of quadrilateral with angles 80°, 110°, 100°, 70°? (PDF Pg 22)", sol: "80° + 100° = 180° and 110° + 70° = 180°. Yes, it is cyclic!" },
+          { type: "Numerical", text: "Angles of PQRS are 95°, 85°, 90°, 90°. Is PQRS cyclic?", sol: "95° + 90° = 185° ≠ 180°. No, PQRS is not cyclic." },
+          { type: "Theoretical", text: "Prove any cyclic rhombus must be a square.", sol: "∠A = ∠C and ∠A + ∠C = 180° ⇒ ∠A = 90° ⇒ Square." },
+          { type: "Numerical", text: "In ABCD, ∠B = 90°, ∠D = 90°, AB = 8 cm, BC = 6 cm, CD = 5 cm. Find AD and radius.", sol: "Diagonal AC = √(8² + 6²) = 10 cm. AD = √(10² - 5²) = 5√3 cm ≈ 8.66 cm. Radius = 5 cm." }
+        ]
+      }
+    ];
+
+    let currentTh = 1;
+
+    function renderTabs() {
+      const c = document.getElementById('tabsContainer');
+      c.innerHTML = theoremsData.map(th => `
+        <button class="th-tab ${th.id === currentTh ? 'active' : ''}" onclick="selectTheorem(${th.id})">
+          Th ${th.id}
+        </button>
+      `).join('');
+    }
+
+    function selectTheorem(id) {
+      currentTh = id;
+      renderTabs();
+      renderQuestions();
+    }
+
+    function renderQuestions() {
+      const th = theoremsData.find(t => t.id === currentTh);
+      const c = document.getElementById('theoremQuestionsContainer');
+      c.innerHTML = `
+        <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+          <h3 style="color: #38bdf8; font-size: 17px; margin-bottom: 4px;">${th.title}</h3>
+          <p style="color: #cbd5e1; font-size: 14px; font-style: italic;">"${th.statement}"</p>
+        </div>
+        ${th.questions.map((q, idx) => `
+          <div class="q-card">
+            <span class="q-badge ${q.type === 'Numerical' ? 'badge-num' : 'badge-theo'}">${q.type}</span>
+            <div class="q-text">Q${currentTh}.${idx + 1}: ${q.text}</div>
+            <button class="q-btn" onclick="toggleSolution('sol_${currentTh}_${idx}')">Show Solution 💡</button>
+            <div class="sol-box" id="sol_${currentTh}_${idx}">
+              <strong>Step-by-Step Solution:</strong><br>
+              ${q.sol}
+            </div>
+          </div>
+        `).join('')}
+      `;
+    }
+
+    function toggleSolution(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+        confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+      }
+    }
+
+    function updateCircleVis(val) {
+      const angle = parseFloat(val);
+      document.getElementById('angleVal').innerText = angle + '°';
+      document.getElementById('inscribedVal').innerText = (angle / 2) + '°';
+
+      const cx = 170, cy = 170, r = 130;
+      const radA = -angle * Math.PI / 360;
+      const radB = angle * Math.PI / 360;
+
+      const ax = cx + r * Math.sin(radA);
+      const ay = cy + r * Math.cos(radA);
+
+      const bx = cx + r * Math.sin(radB);
+      const by = cy + r * Math.cos(radB);
+
+      // Top point D
+      const dx = cx;
+      const dy = cy - r;
+
+      document.getElementById('lineOA').setAttribute('x2', ax);
+      document.getElementById('lineOA').setAttribute('y2', ay);
+      document.getElementById('lineOB').setAttribute('x2', bx);
+      document.getElementById('lineOB').setAttribute('y2', by);
+
+      document.getElementById('lineDA').setAttribute('x1', dx);
+      document.getElementById('lineDA').setAttribute('y1', dy);
+      document.getElementById('lineDA').setAttribute('x2', ax);
+      document.getElementById('lineDA').setAttribute('y2', ay);
+
+      document.getElementById('lineDB').setAttribute('x1', dx);
+      document.getElementById('lineDB').setAttribute('y1', dy);
+      document.getElementById('lineDB').setAttribute('x2', bx);
+      document.getElementById('lineDB').setAttribute('y2', by);
+
+      document.getElementById('ptA').setAttribute('cx', ax);
+      document.getElementById('ptA').setAttribute('cy', ay);
+      document.getElementById('txtA').setAttribute('x', ax - 16);
+      document.getElementById('txtA').setAttribute('y', ay + 16);
+
+      document.getElementById('ptB').setAttribute('cx', bx);
+      document.getElementById('ptB').setAttribute('cy', by);
+      document.getElementById('txtB').setAttribute('x', bx + 8);
+      document.getElementById('txtB').setAttribute('y', by + 16);
+
+      document.getElementById('ptD').setAttribute('cx', dx);
+      document.getElementById('ptD').setAttribute('cy', dy);
+      document.getElementById('txtD').setAttribute('x', dx - 6);
+      document.getElementById('txtD').setAttribute('y', dy - 10);
+    }
+
+    renderTabs();
+    renderQuestions();
+    updateCircleVis(120);
+  </script>
+</body>
+</html>

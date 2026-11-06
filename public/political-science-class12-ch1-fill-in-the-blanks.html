@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>रिक्त स्थान भरो (Fill-in-the-Blanks Test) - कक्षा 12 राजनीति विज्ञान अध्याय 1: दो ध्रुवीयता का अंत | Nextsem Study Guide</title>
+  <meta name="description" content="NCERT Class 12 Political Science Chapter 1 'दो ध्रुवीयता का अंत' (lhps101.pdf) - सम्पूर्ण अध्याय के पृष्ठ-दर-पृष्ठ रिक्त स्थान भरो सक्रिय अभ्यास प्रश्नोत्तरी।">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --border-card: rgba(4, 170, 109, 0.25);
+      --accent-emerald: #04aa6d;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+      line-height: 1.8;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Auto-Hide Top Navigation */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 16px;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px;
+      z-index: 50;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+    .top-nav.nav-hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; min-width: 0;
+    }
+    .nav-actions {
+      display: flex; gap: 6px; align-items: center; flex-shrink: 0;
+    }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 12.5px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 5px;
+      transition: all 0.2s; white-space: nowrap;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); transform: translateY(-1px); }
+
+    @media (max-width: 640px) {
+      .top-nav { padding: 8px 12px; }
+      .nav-brand-title { font-size: 13px !important; }
+      .nav-brand-sub { display: none; }
+      .nav-actions { gap: 4px; }
+      .nav-btn { padding: 5px 8px; font-size: 11.5px; }
+    }
+
+    .container {
+      max-width: 960px; margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    .breadcrumbs {
+      display: flex; gap: 8px; align-items: center; justify-content: center;
+      font-size: 13px; color: var(--text-muted); margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .breadcrumbs a { color: #04aa6d; text-decoration: none; font-weight: 600; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(4, 170, 109, 0.15), rgba(56, 189, 248, 0.1));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(4, 170, 109, 0.2); border: 1px solid rgba(4, 170, 109, 0.4);
+      color: #34d399; font-size: 12px; font-weight: 800; padding: 4px 12px;
+      border-radius: 9999px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: clamp(22px, 3.5vw, 30px); font-weight: 900;
+      color: #ffffff; margin-bottom: 8px; line-height: 1.3;
+    }
+    body.light-theme .hero-title { color: #0f172a; }
+    .hero-subtitle { font-size: 14px; color: var(--text-muted); max-width: 760px; margin: 0 auto; }
+
+    /* Score Bar */
+    .score-bar {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 14px; text-align: center;
+    }
+    .stat-val { font-size: 24px; font-weight: 800; color: var(--text-main); }
+    .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 2px; }
+
+    /* Controls Bar */
+    .controls-bar {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .filter-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: #04aa6d; color: #ffffff; border-color: #04aa6d;
+    }
+
+    /* Fill in Blanks Card */
+    .blank-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px; margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+    .card-meta {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;
+    }
+    .page-pill {
+      font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 6px;
+      background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .topic-title { font-size: 14px; font-weight: 700; color: #34d399; }
+
+    .sentence-box {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 18px; font-size: 16px; line-height: 2.1;
+      color: var(--text-main);
+    }
+    .blank-slot {
+      display: inline-block; min-width: 140px; padding: 2px 12px;
+      background: rgba(4, 170, 109, 0.18); border-bottom: 2px dashed #04aa6d;
+      border-radius: 4px; color: #34d399; font-weight: 800; text-align: center;
+    }
+    .blank-slot.hidden-ans {
+      color: transparent; user-select: none;
+    }
+
+    .action-row {
+      display: flex; gap: 10px; align-items: center; margin-top: 14px; flex-wrap: wrap;
+    }
+    .type-input {
+      background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff; padding: 6px 12px; border-radius: 8px; font-size: 14px;
+      font-weight: 600; width: 220px; outline: none;
+    }
+    .type-input:focus { border-color: #04aa6d; }
+    .action-btn {
+      background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 700;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .action-btn:hover { background: rgba(56, 189, 248, 0.25); }
+
+    .footer-bar {
+      text-align: center; margin-top: 40px; padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px; color: var(--text-muted);
+    }
+    .footer-bar a { color: #04aa6d; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Smart Auto-Hide -->
+  <header class="top-nav" id="topNavHeader">
+    <a href="/" class="nav-brand">
+      <span style="font-size: 22px;">🏛️</span>
+      <div>
+        <div class="nav-brand-title" style="font-weight: 800; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">समकालीन विश्व राजनीति • रिक्त स्थान</div>
+        <div class="nav-brand-sub" style="font-size: 11px; color: var(--text-muted);">कक्षा 12 • अध्याय 1: दो ध्रुवीयता का अंत (lhps101.pdf)</div>
+      </div>
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="resetPractice()">🔄 रीसेट</button>
+      <button class="nav-btn" id="themeToggleBtn" onclick="toggleTheme()">🌙 Theme</button>
+      <a href="/" class="nav-btn">🏠 Home</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <a href="/">Home</a> ❯ 
+      <a href="/?class=12">Class 12</a> ❯ 
+      <a href="/?subject=c12-political-science">Political Science</a> ❯ 
+      <span>अध्याय 1: दो ध्रुवीयता का अंत (रिक्त स्थान भरो)</span>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-tag">🎯 संपूर्ण अध्याय • रिक्त स्थान भरो अभ्यास (ACTIVE RECALL TEST)</div>
+      <h1 class="hero-title">दो ध्रुवीयता का अंत (The End of Bipolarity)</h1>
+      <p class="hero-subtitle">
+        NCERT Class 12 Political Science Textbook (lhps101.pdf) के सभी 14 पृष्ठों के मुख्य ऐतिहासिक तथ्यों, संधियों, नेताओं और अवधारणाओं पर आधारित <strong>रिक्त स्थान भरो सक्रिय अभ्यास</strong>।
+      </p>
+    </div>
+
+    <!-- Score Bar -->
+    <div class="score-bar">
+      <div class="stat-card">
+        <div class="stat-val" id="totalCount">27</div>
+        <div class="stat-label">कुल प्रश्न (Total Items)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="revealedCount" style="color: #38bdf8;">0</div>
+        <div class="stat-label">सत्यापित (Verified)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="accuracyScore" style="color: #04aa6d;">0%</div>
+        <div class="stat-label">प्रगति दर (Progress)</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls-bar">
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterSection('all', this)">सभी पृष्ठ (27)</button>
+        <button class="filter-btn" onclick="filterSection('intro', this)">बर्लिन व सोवियत प्रणाली (1-3)</button>
+        <button class="filter-btn" onclick="filterSection('dissolution', this)">विघटन व परिणाम (4-6)</button>
+        <button class="filter-btn" onclick="filterSection('shock', this)">शॉक थेरेपी (7-9)</button>
+        <button class="filter-btn" onclick="filterSection('conflict', this)">तनाव, संघर्ष व भारत (10-14)</button>
+      </div>
+    </div>
+
+    <!-- Cards Container -->
+    <div id="cardsContainer"></div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <p>NCERT Class 12 Political Science • समकालीन विश्व राजनीति • अध्याय 1: दो ध्रुवीयता का अंत</p>
+      <p style="margin-top: 6px;">Nextsem Academy • Free School & College Curriculum • <a href="/">Return to Dashboard</a></p>
+    </div>
+  </div>
+
+  <script>
+    const BLANKS_DATA = [
+  {
+    "id": 1,
+    "page": "Page 1",
+    "topic": "बर्लिन की दीवार",
+    "sentenceBefore": "बर्लिन की दीवार पूंजीवादी और साम्यवादी दुनिया के विभाजन तथा ",
+    "blankAnswer": "शीतयुद्ध",
+    "sentenceAfter": " का सबसे बड़ा प्रतीक थी, जिसे 1961 में खड़ा किया गया था।"
+  },
+  {
+    "id": 2,
+    "page": "Page 1",
+    "topic": "दीवार का पतन व एकीकरण",
+    "sentenceBefore": "9 नवंबर 1989 को आम जनता द्वारा 150 किमी लंबी बर्लिन की दीवार ढहाए जाने के बाद ऐतिहासिक रूप से ",
+    "blankAnswer": "जर्मनी",
+    "sentenceAfter": " का एकीकरण संभव हुआ।"
+  },
+  {
+    "id": 3,
+    "page": "Page 2",
+    "topic": "बोल्शेविक क्रांति",
+    "sentenceBefore": "सोवियत संघ में समाजवादी शासन व्यवस्था की स्थापना 1917 की रूसी क्रांति के बाद ",
+    "blankAnswer": "व्लादिमीर लेनिन",
+    "sentenceAfter": " के नेतृत्व में हुई थी।"
+  },
+  {
+    "id": 4,
+    "page": "Page 2",
+    "topic": "दूसरी दुनिया",
+    "sentenceBefore": "द्वितीय विश्वयुद्ध के बाद सोवियत संघ के समाजवादी खेमे में शामिल पूर्वी यूरोप के देशों को सामूहिक रूप से ",
+    "blankAnswer": "दूसरी दुनिया",
+    "sentenceAfter": " कहा गया।"
+  },
+  {
+    "id": 5,
+    "page": "Page 2",
+    "topic": "उत्पादन व आत्मनिर्भरता",
+    "sentenceBefore": "सोवियत अर्थव्यवस्था की विशालता का प्रमाण था कि यहाँ घरेलू स्तर पर ",
+    "blankAnswer": "पिन से लेकर कार",
+    "sentenceAfter": " तक सभी आवश्यक वस्तुओं का उत्पादन होता था।"
+  },
+  {
+    "id": 6,
+    "page": "Page 2",
+    "topic": "राजनीतिक कमियां",
+    "sentenceBefore": "सोवियत राजनीतिक व्यवस्था में केवल एक पार्टी यानी ",
+    "blankAnswer": "कम्युनिस्ट पार्टी",
+    "sentenceAfter": " का दबदबा था, जिसमें किसी अन्य विपक्षी दल की अनुमति नहीं थी।"
+  },
+  {
+    "id": 7,
+    "page": "Page 3",
+    "topic": "अफगानिस्तान संकट",
+    "sentenceBefore": "वर्ष 1979 में सोवियत संघ द्वारा ",
+    "blankAnswer": "अफगानिस्तान",
+    "sentenceAfter": " में किए गए सैन्य हस्तक्षेप ने उसकी अर्थव्यवस्था को अंदर से खोखला कर दिया।"
+  },
+  {
+    "id": 8,
+    "page": "Page 3",
+    "topic": "गोर्बाचेव के सुधार",
+    "sentenceBefore": "1985 में सोवियत संघ के महासचिव बने मिखाइल गोर्बाचेव ने सुधार हेतु पेरेस्त्रोइका (पुनर्गठन) और ",
+    "blankAnswer": "ग्लासनोस्त",
+    "sentenceAfter": " की ऐतिहासिक नीतियां प्रारंभ कीं।"
+  },
+  {
+    "id": 9,
+    "page": "Page 3",
+    "topic": "विघटन की घोषणा",
+    "sentenceBefore": "दिसंबर 1991 में बोरिस येल्तसिन के नेतृत्व में रूस, यूक्रेन और ",
+    "blankAnswer": "बेलारूस",
+    "sentenceAfter": " ने सोवियत संघ के विघटन की औपचारिक घोषणा की।"
+  },
+  {
+    "id": 10,
+    "page": "Page 4",
+    "topic": "सुरक्षा परिषद में सीट",
+    "sentenceBefore": "सोवियत संघ के विघटन के बाद संयुक्त राष्ट्र सुरक्षा परिषद में उसकी स्थायी वीटो सीट ",
+    "blankAnswer": "रूस",
+    "sentenceAfter": " को सौंपी गई।"
+  },
+  {
+    "id": 11,
+    "page": "Page 4",
+    "topic": "संसाधनों का अपव्यय",
+    "sentenceBefore": "सोवियत अर्थव्यवस्था के पतन का प्रमुख कारण अपने बहुमूल्य संसाधनों का बड़ा हिस्सा अमेरिका के साथ ",
+    "blankAnswer": "सैन्य व परमाणु होड़",
+    "sentenceAfter": " पर अंधाधुंध खर्च करना था।"
+  },
+  {
+    "id": 12,
+    "page": "Page 5",
+    "topic": "बाल्टिक गणराज्य",
+    "sentenceBefore": "सोवियत संघ के विघटन की चिंगारी सबसे पहले बाल्टिक क्षेत्र के तीन गणराज्यों एस्टोनिया, लातविया और ",
+    "blankAnswer": "लिथुआनिया",
+    "sentenceAfter": " में राष्ट्रवाद और स्वतंत्रता की मांग के रूप में भड़की।"
+  },
+  {
+    "id": 13,
+    "page": "Page 6",
+    "topic": "एकध्रुवीय विश्व",
+    "sentenceBefore": "सोवियत संघ के पतन के साथ ही द्वि-ध्रुवीय व्यवस्था समाप्त हो गई और विश्व राजनीति ",
+    "blankAnswer": "एकध्रुवीय",
+    "sentenceAfter": " स्वरूप में तब्दील हो गई।"
+  },
+  {
+    "id": 14,
+    "page": "Page 6",
+    "topic": "नए देशों का उदय",
+    "sentenceBefore": "सोवियत संघ के बिखराव के परिणामस्वरूप कुल ",
+    "blankAnswer": "15",
+    "sentenceAfter": " नए स्वतंत्र गणराज्यों का उदय हुआ।"
+  },
+  {
+    "id": 15,
+    "page": "Page 7",
+    "topic": "शॉक थेरेपी का अर्थ",
+    "sentenceBefore": "साम्यवाद से पूंजीवाद की ओर संक्रमण के लिए विश्व बैंक और आईएमएफ द्वारा निर्देशित कष्टप्रद मॉडल को ",
+    "blankAnswer": "शॉक थेरेपी",
+    "sentenceAfter": " कहा गया।"
+  },
+  {
+    "id": 16,
+    "page": "Page 7",
+    "topic": "कृषि में बदलाव",
+    "sentenceBefore": "शॉक थेरेपी के तहत सोवियत काल के राज्य-नियंत्रित सामूहिक फार्मों को समाप्त कर ",
+    "blankAnswer": "निजी फार्मों",
+    "sentenceAfter": " में बदल दिया गया।"
+  },
+  {
+    "id": 17,
+    "page": "Page 8",
+    "topic": "गैराज सेल",
+    "sentenceBefore": "शॉक थेरेपी के दौरान रूस के 90% बड़े सरकारी उद्योगों को कौड़ियों के भाव निजी हाथों में बेचने की घटना को इतिहास की सबसे बड़ी ",
+    "blankAnswer": "गैराज सेल",
+    "sentenceAfter": " कहा जाता है।"
+  },
+  {
+    "id": 18,
+    "page": "Page 8",
+    "topic": "रूसी मुद्रा का अवमूल्यन",
+    "sentenceBefore": "शॉक थेरेपी के आर्थिक झटके के कारण रूसी राष्ट्रीय मुद्रा ",
+    "blankAnswer": "रूबल",
+    "sentenceAfter": " के मूल्य में नाटकीय रूप से भारी गिरावट आई।"
+  },
+  {
+    "id": 19,
+    "page": "Page 9",
+    "topic": "कार्यपालिका की तानाशाही",
+    "sentenceBefore": "मध्य एशियाई देशों जैसे तुर्कमेनिस्तान और उज्बेकिस्तान के राष्ट्रपतियों ने संविधान में संशोधन कर अपने कार्यकाल को ",
+    "blankAnswer": "10 वर्षों",
+    "sentenceAfter": " के लिए आगे बढ़ा लिया और विरोधियों को कुचल दिया।"
+  },
+  {
+    "id": 20,
+    "page": "Page 9",
+    "topic": "रूस की वापसी का आधार",
+    "sentenceBefore": "वर्ष 2000 के बाद रूस और अधिकांश सोवियत गणराज्यों की अर्थव्यवस्था के पुनर्जीवित होने का मुख्य कारण खनिज तेल व ",
+    "blankAnswer": "प्राकृतिक गैस",
+    "sentenceAfter": " का भारी निर्यात था।"
+  },
+  {
+    "id": 21,
+    "page": "Page 10",
+    "topic": "चेचन्या व दागेस्तान",
+    "sentenceBefore": "रूस के दो अशांत मुस्लिम बहुल गणराज्यों ",
+    "blankAnswer": "चेचन्या",
+    "sentenceAfter": " और दागेस्तान में भयानक हिंसक अलगाववादी आंदोलन चले।"
+  },
+  {
+    "id": 22,
+    "page": "Page 10",
+    "topic": "ताजिकिस्तान गृहयुद्ध",
+    "sentenceBefore": "मध्य एशियाई गणराज्य ताजिकिस्तान में लगातार ",
+    "blankAnswer": "10 वर्षों",
+    "sentenceAfter": " तक भीषण गृहयुद्ध चला।"
+  },
+  {
+    "id": 23,
+    "page": "Page 10",
+    "topic": "यूगोस्लाविया का विखंडन",
+    "sentenceBefore": "बाल्कन क्षेत्र में स्थित समाजवादी देश ",
+    "blankAnswer": "यूगोस्लाविया",
+    "sentenceAfter": " कई जातियों के हिंसक संघर्ष के बाद गृहयुद्ध में टूट गया।"
+  },
+  {
+    "id": 24,
+    "page": "Page 11",
+    "topic": "बहुध्रुवीय विश्व का सपना",
+    "sentenceBefore": "भारत और रूस दोनों का अंतरराष्ट्रीय व्यवस्था के प्रति साझा दृष्टिकोण ",
+    "blankAnswer": "बहुध्रुवीय विश्व",
+    "sentenceAfter": " का निर्माण करना है।"
+  },
+  {
+    "id": 25,
+    "page": "Page 12",
+    "topic": "कश्मीर व सुरक्षा परिषद",
+    "sentenceBefore": "संयुक्त राष्ट्र सुरक्षा परिषद में भारत की स्थायी सदस्यता और ",
+    "blankAnswer": "कश्मीर",
+    "sentenceAfter": " के मसले पर रूस ने हमेशा भारत का अटूट समर्थन किया है।"
+  },
+  {
+    "id": 26,
+    "page": "Page 12",
+    "topic": "सैन्य व तकनीकी सहयोग",
+    "sentenceBefore": "भारत और रूस के संयुक्त वैज्ञानिक व रक्षा सहयोग का सबसे उत्कृष्ट व शक्तिशाली प्रतीक ",
+    "blankAnswer": "ब्रह्मोस",
+    "sentenceAfter": " सुपरसोनिक क्रूज मिसाइल है।"
+  },
+  {
+    "id": 27,
+    "page": "Page 13",
+    "topic": "सांस्कृतिक जुड़ाव",
+    "sentenceBefore": "रूस और मध्य एशिया में भारतीय सिनेमा के अभिनेता ",
+    "blankAnswer": "राज कपूर",
+    "sentenceAfter": " और अमिताभ बच्चन के गीत आज भी बेहद लोकप्रिय हैं।"
+  }
+];
+    let revealedMap = {};
+    let currentFilter = 'all';
+    let autoHideTimers = {};
+
+    function renderCards() {
+      const container = document.getElementById('cardsContainer');
+      container.innerHTML = '';
+
+      const filtered = BLANKS_DATA.filter(item => {
+        if (currentFilter === 'all') return true;
+        if (currentFilter === 'intro') return item.id <= 9;
+        if (currentFilter === 'dissolution') return item.id >= 10 && item.id <= 14;
+        if (currentFilter === 'shock') return item.id >= 15 && item.id <= 20;
+        if (currentFilter === 'conflict') return item.id >= 21;
+        return true;
+      });
+
+      filtered.forEach((item, idx) => {
+        const isRevealed = revealedMap[item.id] === true;
+        const card = document.createElement('div');
+        card.className = 'blank-card';
+        card.id = 'blank-card-' + item.id;
+
+        card.innerHTML = `
+          <div class="card-meta">
+            <span class="topic-title">#${item.id}. ${item.topic}</span>
+            <span class="page-pill">${item.page}</span>
+          </div>
+          <div class="sentence-box">
+            <span>${item.sentenceBefore}</span>
+            <span class="blank-slot ${isRevealed ? '' : 'hidden-ans'}" id="slot-${item.id}">${item.blankAnswer}</span>
+            <span>${item.sentenceAfter}</span>
+          </div>
+          <div class="action-row">
+            <input type="text" class="type-input" placeholder="उत्तर यहाँ लिखें..." id="input-${item.id}" onkeyup="handleKeyUp(event, ${item.id})" />
+            <button class="nav-btn" onclick="checkAnswer(${item.id})">✅ जाँचे</button>
+            <button class="action-btn" onclick="toggleItem(${item.id})">
+              ${isRevealed ? '🔒 छुपाएं' : '👁️ उत्तर देखें'}
+            </button>
+            <span id="msg-${item.id}" style="font-size: 13px; font-weight: 700;"></span>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      updateStats();
+    }
+
+    function handleKeyUp(e, id) {
+      if (e.key === 'Enter') checkAnswer(id);
+    }
+
+    function checkAnswer(id) {
+      const item = BLANKS_DATA.find(x => x.id === id);
+      if (!item) return;
+
+      const input = document.getElementById('input-' + id);
+      const msg = document.getElementById('msg-' + id);
+      const typed = (input.value || '').trim().toLowerCase();
+      const expected = item.blankAnswer.toLowerCase();
+
+      if (!typed) {
+        msg.innerHTML = '<span style="color: #f59e0b;">⚠️ कृपया पहले उत्तर लिखें!</span>';
+        return;
+      }
+
+      if (typed === expected || expected.includes(typed) || typed.includes(expected)) {
+        msg.innerHTML = '<span style="color: #10b981;">🎉 बिल्कुल सही उत्तर! (' + item.blankAnswer + ')</span>';
+        revealedMap[id] = true;
+        const slot = document.getElementById('slot-' + id);
+        if (slot) slot.classList.remove('hidden-ans');
+        triggerConfetti();
+      } else {
+        msg.innerHTML = '<span style="color: #f43f5e;">❌ गलत उत्तर! पुनः प्रयास करें।</span>';
+      }
+
+      updateStats();
+    }
+
+    // Auto-Hide Revealed Answers after 4 seconds
+    function toggleItem(id) {
+      const slot = document.getElementById('slot-' + id);
+      const msg = document.getElementById('msg-' + id);
+
+      if (revealedMap[id]) {
+        if (autoHideTimers[id]) {
+          clearInterval(autoHideTimers[id]);
+          delete autoHideTimers[id];
+        }
+        revealedMap[id] = false;
+        if (slot) slot.classList.add('hidden-ans');
+        if (msg) msg.innerHTML = '';
+        renderCards();
+      } else {
+        revealedMap[id] = true;
+        if (slot) slot.classList.remove('hidden-ans');
+
+        let timeLeft = 4;
+        if (msg) {
+          msg.innerHTML = '<span style="color: #38bdf8; font-size: 12.5px; font-weight: 700;">⏱️ ' + timeLeft + 's में स्वतः छुप जाएगा (Auto-hiding)...</span>';
+        }
+
+        if (autoHideTimers[id]) clearInterval(autoHideTimers[id]);
+        autoHideTimers[id] = setInterval(() => {
+          timeLeft--;
+          if (timeLeft > 0) {
+            if (msg) msg.innerHTML = '<span style="color: #38bdf8; font-size: 12.5px; font-weight: 700;">⏱️ ' + timeLeft + 's में स्वतः छुप जाएगा...</span>';
+          } else {
+            clearInterval(autoHideTimers[id]);
+            delete autoHideTimers[id];
+            revealedMap[id] = false;
+            const s = document.getElementById('slot-' + id);
+            const m = document.getElementById('msg-' + id);
+            if (s) s.classList.add('hidden-ans');
+            if (m) m.innerHTML = '';
+            renderCards();
+          }
+        }, 1000);
+      }
+      updateStats();
+    }
+
+    function resetPractice() {
+      Object.keys(autoHideTimers).forEach(k => clearInterval(autoHideTimers[k]));
+      autoHideTimers = {};
+      revealedMap = {};
+      renderCards();
+    }
+
+    function filterSection(sec, btn) {
+      currentFilter = sec;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderCards();
+    }
+
+    function updateStats() {
+      const total = BLANKS_DATA.length;
+      const count = Object.keys(revealedMap).filter(k => revealedMap[k]).length;
+      const pct = Math.round((count / total) * 100);
+
+      document.getElementById('totalCount').innerText = total;
+      document.getElementById('revealedCount').innerText = count;
+      document.getElementById('accuracyScore').innerText = pct + '%';
+    }
+
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      document.getElementById('themeToggleBtn').innerText = isLight ? '☀️ Theme' : '🌙 Theme';
+    }
+
+    function triggerConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({ particleCount: 80, spread: 60, origin: { y: 0.7 } });
+      }
+    }
+
+    // Smart Auto-Hide Navbar on Scroll Down, Reveal on Scroll Up
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('topNavHeader');
+      if (!nav) return;
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > 60) {
+        if (st > lastScrollTop) {
+          nav.classList.add('nav-hidden');
+        } else {
+          nav.classList.remove('nav-hidden');
+        }
+      } else {
+        nav.classList.remove('nav-hidden');
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    }, { passive: true });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        document.getElementById('themeToggleBtn').innerText = '☀️ Theme';
+      }
+      renderCards();
+    });
+  </script>
+</body>
+</html>

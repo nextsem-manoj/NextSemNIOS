@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta content="mobile_tab" name="shell-type" />
+  <title>StudyApp • Student Portal</title>
+  
+  <style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        min-height: max(884px, 100dvh);
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#f7f9fb",
+            "secondary-fixed-dim": "#4edea3",
+            "on-error-container": "#93000a",
+            "on-surface": "#191c1e",
+            "surface-container-highest": "#e0e3e5",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#6ffbbe",
+            "outline-variant": "#c7c4d8",
+            "primary-fixed": "#e2dfff",
+            tertiary: "#8b1b34",
+            "primary-container": "#4f46e5",
+            "surface-container": "#eceef0",
+            secondary: "#006c49",
+            primary: "#3525cd",
+            "surface-dim": "#d8dadc",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#400010",
+            surface: "#f7f9fb",
+            "on-primary-container": "#dad7ff",
+            "primary-fixed-dim": "#c3c0ff",
+            "on-primary-fixed-variant": "#3323cc",
+            "inverse-primary": "#c3c0ff",
+            "on-secondary-container": "#00714d",
+            outline: "#777587",
+            "on-primary-fixed": "#0f0069",
+            "tertiary-fixed": "#ffdadc",
+            "secondary-container": "#6cf8bb",
+            "tertiary-fixed-dim": "#ffb2b9",
+            "on-background": "#191c1e",
+            "on-tertiary-fixed-variant": "#891933",
+            "on-secondary-fixed": "#002113",
+            "on-secondary-fixed-variant": "#005236",
+            "surface-bright": "#f7f9fb",
+            "inverse-surface": "#2d3133",
+            "on-tertiary-container": "#ffd0d3",
+            "surface-container-lowest": "#ffffff",
+            error: "#ba1a1a",
+            "tertiary-container": "#ab354b",
+            "error-container": "#ffdad6",
+            "on-surface-variant": "#464555",
+            "inverse-on-surface": "#eff1f3",
+            "surface-variant": "#e0e3e5",
+            "surface-tint": "#4d44e3",
+            "on-error": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e6e8ea"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            gutter: "1rem",
+            margin: "1.25rem"
+          },
+          fontFamily: {
+            "body-md": ["Inter", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+            "headline-md": ["24px", { lineHeight: "30px", fontWeight: "600" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "32px", fontWeight: "700" }],
+            "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+            "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+            "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }],
+            "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts & Material Symbols from Stitch -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+
+  <!-- Firebase Auth SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+  <!-- Confetti Celebration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen">
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       EXACT STITCH HEADER
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pt-safe">
+    <div class="h-16 px-gutter flex items-center justify-between">
+      <h1 id="top-header-title" class="text-headline-sm font-headline-sm text-on-surface">Home</h1>
+      <div id="top-user-avatar-btn" onclick="handleAvatarClick()" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer overflow-hidden shadow-sm">
+        <span id="top-user-avatar-icon" class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       MAIN VIEW CONTAINER
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <main class="flex flex-col relative w-full px-gutter pt-16 pb-24 bg-surface flex-grow">
+
+    <!-- ─────────────────────────────────────────────────────────────────────────
+         SCREEN 1: EXACT STITCH "LOGIN" SCREEN
+         ───────────────────────────────────────────────────────────────────────── -->
+    <div id="screen-login" class="flex flex-col w-full items-center justify-center py-space-xl px-gutter my-auto">
+      <!-- Decorative Background Glow -->
+      <div class="absolute inset-0 -z-10 flex items-center justify-center opacity-30 pointer-events-none">
+        <div class="w-72 h-72 rounded-full bg-primary-fixed blur-3xl"></div>
+        <div class="w-64 h-64 rounded-full bg-secondary-fixed-dim blur-3xl translate-x-12 translate-y-12"></div>
+      </div>
+
+      <!-- App Logo / Hero Visual (Updated from Stitch) -->
+      <img src="https://lh3.googleusercontent.com/aida/AEtjO1VyTx1eagf6KUVOX6ef7aUj9DI30GYbWBr7X7JLEJG8cQ52PUutLS9kDgNxZGSzaM5zsHs6NNNo2ArJePqEyLv8mcRuZeQQQBrL57tKg-lb3FCCamXmqcvzGZVP5fJ0LNmajyRESL0bHkWkGBKUJxHPZ4Bd1dnzpK9yO0dZzTofC4IkaWnZV4hjCKgrwrUNnnKmqJTx1XEk9T1XsksUOl4x-DCB-W6oENkIs-lyufdTIDzmWPkrv9j63NI" alt="NextSem Logo" class="w-24 h-24 mb-space-lg rounded-2xl object-contain shadow-lg" />
+
+      <!-- Typography: Headline & Welcome Tagline -->
+      <h2 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface text-center mb-space-xs">NextSem</h2>
+      <p class="text-body-lg text-on-surface-variant text-center max-w-[280px] mb-space-xl">Master your studies with ease and joy every single day.</p>
+
+      <!-- Login Card container -->
+      <div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl p-space-lg shadow-xl shadow-primary/5 flex flex-col gap-space-md mb-space-xl">
+        <div class="flex flex-col gap-space-xs text-center mb-space-xs">
+          <h3 class="text-headline-sm font-headline-sm text-on-surface">Welcome back!</h3>
+          <p class="text-body-md text-on-surface-variant">Sign in to sync your progress across devices.</p>
+        </div>
+
+        <!-- Continue with Google Button (Authentic Firebase OAuth) -->
+        <a id="google-login-action-btn" class="w-full h-12 rounded-xl bg-surface border border-outline-variant/30 hover:bg-surface-container-low active:scale-[0.98] transition-all flex items-center justify-center gap-space-md px-space-md shadow-sm group cursor-pointer" href="#" onclick="handleGoogleLogin(event)">
+          <!-- Official Google 'G' Logo SVG -->
+          <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
+            <path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" fill="#4285F4"></path>
+            <path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.13 0-5.78-2.11-6.73-4.96H1.18v3.15C3.15 21.32 7.23 24 12 24z" fill="#34A853"></path>
+            <path d="M5.27 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.6H1.18C.43 8.12 0 9.85 0 12s.43 3.88 1.18 5.4l4.09-3.16z" fill="#FBBC05"></path>
+            <path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.23 0 3.15 2.68 1.18 6.6l4.09 3.15c.95-2.85 3.6-4.96 6.73-4.96z" fill="#EA4335"></path>
+          </svg>
+          <span class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors">Continue with Google</span>
+        </a>
+
+        <!-- Divider / Perks -->
+        <div class="flex items-center gap-space-sm pt-space-xs text-on-surface-variant/60">
+          <div class="h-[1px] flex-1 bg-surface-container-high"></div>
+          <span class="text-body-sm uppercase tracking-wider font-label-sm">Secure &amp; Fast</span>
+          <div class="h-[1px] flex-1 bg-surface-container-high"></div>
+        </div>
+
+        <div id="login-feedback-box" class="hidden text-xs p-2.5 rounded-lg bg-error-container text-on-error-container text-center"></div>
+      </div>
+
+      <!-- Feature Pills / Micro Delight -->
+      <div class="flex flex-wrap justify-center gap-space-sm max-w-xs">
+        <div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant text-body-sm shadow-sm">
+          <span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          <span>Daily streaks</span>
+        </div>
+        <div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface-variant text-body-sm shadow-sm">
+          <span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+          <span>Smart quizzes</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────────────────
+         SCREEN 2: EXACT STITCH "SELECT CLASS" SCREEN
+         ───────────────────────────────────────────────────────────────────────── -->
+    <div id="screen-select-class" class="hidden flex-col w-full gap-space-lg pb-space-xl">
+      <!-- Welcome Banner -->
+      <div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+        <div class="flex items-center gap-space-md">
+          <div id="dash-user-avatar-initial" class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-headline-sm overflow-hidden">
+            A
+          </div>
+          <div class="flex flex-col">
+            <span class="text-body-sm text-on-surface-variant">Signed in via Google</span>
+            <h2 class="text-headline-sm font-headline-sm text-on-surface">Welcome, <span id="dash-welcome-name">Alex</span>! 👋</h2>
+          </div>
+        </div>
+        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+        </div>
+      </div>
+
+      <!-- Instruction Header -->
+      <div class="flex flex-col gap-space-xs">
+        <h3 class="text-headline-md font-headline-md text-on-surface">Select your academic level</h3>
+        <p class="text-body-md text-on-surface-variant">We will tailor your daily quizzes, study notes, and flashcards specifically for your curriculum.</p>
+      </div>
+
+      <!-- Class Selection List / Grid from Stitch -->
+      <div class="flex flex-col gap-space-md" id="class-grid">
+        <!-- Card: Middle School -->
+        <div class="class-card cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low transition-all duration-200 hover:bg-surface-container group" data-class="middle" onclick="selectClass(this, 'middle')">
+          <div class="flex items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-on-primary">
+              <span class="material-symbols-outlined">school</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-headline-sm font-headline-sm text-on-surface">Middle School</span>
+              <span class="text-body-sm text-on-surface-variant">Classes 6, 7 &amp; 8 • Foundation Building</span>
+            </div>
+          </div>
+          <div class="radio-indicator w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent transition-all">
+            <span class="material-symbols-outlined text-[16px]">check</span>
+          </div>
+        </div>
+
+        <!-- Card: Class 9 -->
+        <div class="class-card cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low transition-all duration-200 hover:bg-surface-container group" data-class="class-9" onclick="selectClass(this, 'class-9')">
+          <div class="flex items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-on-primary">
+              <span class="material-symbols-outlined">menu_book</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-headline-sm font-headline-sm text-on-surface">Class 9</span>
+              <span class="text-body-sm text-on-surface-variant">Early High School • Core Sciences &amp; Math</span>
+            </div>
+          </div>
+          <div class="radio-indicator w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent transition-all">
+            <span class="material-symbols-outlined text-[16px]">check</span>
+          </div>
+        </div>
+
+        <!-- Card: Class 10 (Pre-selected in Stitch) -->
+        <div class="class-card selected cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-primary-fixed shadow-md transition-all duration-200 group" data-class="class-10" onclick="selectClass(this, 'class-10')">
+          <div class="flex items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined">workspace_premium</span>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center gap-space-xs">
+                <span class="text-headline-sm font-headline-sm text-on-primary-fixed">Class 10</span>
+                <span class="px-space-xs py-0.5 rounded bg-primary text-on-primary text-label-sm font-label-sm">Most Popular</span>
+              </div>
+              <span class="text-body-sm text-on-primary-fixed-variant">Board Exam Prep • Intensive Practice</span>
+            </div>
+          </div>
+          <div class="radio-indicator w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center transition-all">
+            <span class="material-symbols-outlined text-[16px]">check</span>
+          </div>
+        </div>
+
+        <!-- Card: Class 11 -->
+        <div class="class-card cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low transition-all duration-200 hover:bg-surface-container group" data-class="class-11" onclick="selectClass(this, 'class-11')">
+          <div class="flex items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-on-primary">
+              <span class="material-symbols-outlined">science</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-headline-sm font-headline-sm text-on-surface">Class 11</span>
+              <span class="text-body-sm text-on-surface-variant">Higher Secondary • Stream Specialization</span>
+            </div>
+          </div>
+          <div class="radio-indicator w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent transition-all">
+            <span class="material-symbols-outlined text-[16px]">check</span>
+          </div>
+        </div>
+
+        <!-- Card: Class 12 -->
+        <div class="class-card cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low transition-all duration-200 hover:bg-surface-container group" data-class="class-12" onclick="selectClass(this, 'class-12')">
+          <div class="flex items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-on-primary">
+              <span class="material-symbols-outlined">psychology</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-headline-sm font-headline-sm text-on-surface">Class 12</span>
+              <span class="text-body-sm text-on-surface-variant">Final Boards &amp; Entrance Exams</span>
+            </div>
+          </div>
+          <div class="radio-indicator w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent transition-all">
+            <span class="material-symbols-outlined text-[16px]">check</span>
+          </div>
+        </div>
+
+        <!-- Card: College / University -->
+        <div class="class-card cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low transition-all duration-200 hover:bg-surface-container group" data-class="college" onclick="selectClass(this, 'college')">
+          <div class="flex items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-on-primary">
+              <span class="material-symbols-outlined">flare</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-headline-sm font-headline-sm text-on-surface">College / University</span>
+              <span class="text-body-sm text-on-surface-variant">Undergraduate • Advanced Majors</span>
+            </div>
+          </div>
+          <div class="radio-indicator w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent transition-all">
+            <span class="material-symbols-outlined text-[16px]">check</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action CTA Area from Stitch -->
+      <div class="pt-space-sm flex flex-col gap-space-xs">
+        <button id="btn-continue-dashboard" class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-md flex items-center justify-center gap-space-xs shadow-md transition-all active:scale-[0.98] cursor-pointer" onclick="handleContinue(event)">
+          <span>Continue to Dashboard</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+        <span class="text-center text-body-sm text-on-surface-variant">You can easily change your class anytime in settings.</span>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────────────────
+         SCREEN 3: EXACT STITCH "SELECT SUBJECT" SCREEN
+         ───────────────────────────────────────────────────────────────────────── -->
+    <div id="screen-select-subject" class="hidden flex-col w-full pb-8">
+      <!-- Search & Filter Bar -->
+      <div class="flex items-center gap-space-sm mb-space-md">
+        <div class="flex-1 flex items-center bg-surface-container-high rounded-xl px-space-md py-space-sm gap-space-sm shadow-sm">
+          <span class="material-symbols-outlined text-on-surface-variant">search</span>
+          <input id="subject-search-input" oninput="filterSubjectCards(this.value)" class="bg-transparent text-on-surface placeholder:text-on-surface-variant w-full outline-none text-body-md" placeholder="Search subjects, topics..." type="text" />
+        </div>
+        <button class="w-11 h-11 flex items-center justify-center bg-surface-container-high rounded-xl text-on-surface hover:bg-surface-container-highest transition-all shadow-sm">
+          <span class="material-symbols-outlined">tune</span>
+        </button>
+      </div>
+
+      <!-- Hero Daily Goal Banner (Delight feature from Stitch) -->
+      <div class="relative overflow-hidden bg-primary text-on-primary rounded-2xl p-space-lg mb-space-lg shadow-lg flex flex-col justify-between">
+        <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-primary-container/40 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="relative z-10 flex justify-between items-start mb-space-md">
+          <div>
+            <span id="subject-track-title" class="text-label-sm uppercase tracking-wider text-on-primary-container font-headline-sm">Class 10 • Board Prep</span>
+            <h2 class="text-headline-md font-headline-md mt-space-xs">Daily Mastery Goal</h2>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-on-primary/10 flex items-center justify-center backdrop-blur-md">
+            <span class="material-symbols-outlined text-secondary-fixed">local_fire_department</span>
+          </div>
+        </div>
+        <div class="relative z-10 flex items-center gap-space-md">
+          <div class="flex-1">
+            <div class="flex justify-between text-body-sm mb-space-xs text-on-primary-container">
+              <span>4 of 6 topics completed</span>
+              <span class="font-headline-sm">66%</span>
+            </div>
+            <div class="w-full h-2.5 bg-on-primary/20 rounded-full overflow-hidden">
+              <div class="h-full bg-secondary-fixed rounded-full transition-all duration-500" style="width: 66%;"></div>
+            </div>
+          </div>
+          <button class="bg-secondary text-on-secondary px-space-md py-space-sm rounded-xl text-label-md font-headline-sm hover:opacity-90 transition-all shadow-md flex items-center gap-space-xs shrink-0 cursor-pointer">
+            <span>Resume</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Section Header -->
+      <div class="flex items-center justify-between mb-space-md">
+        <h3 class="text-headline-sm font-headline-sm text-on-surface">Enrolled Subjects</h3>
+        <span class="text-label-sm text-primary font-headline-sm cursor-pointer">View All (6)</span>
+      </div>
+
+      <!-- Subject Grid from Stitch -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="stitch-subject-grid">
+        
+        <!-- Mathematics -->
+        <a class="subject-item-card group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-lg overflow-hidden cursor-pointer" href="#" onclick="navigateToChapterBrowser('Mathematics')">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-primary-fixed/30 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div class="flex items-start justify-between relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">functions</span>
+            </div>
+            <span class="text-label-sm px-space-sm py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-headline-sm">82% Mastery</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-headline-sm font-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Mathematics</h4>
+            <p class="text-body-sm text-on-surface-variant mb-space-md">Calculus, Vectors &amp; 3D Geometry</p>
+            <div class="space-y-space-xs">
+              <div class="flex justify-between text-body-sm">
+                <span class="text-on-surface-variant">Progress</span>
+                <span class="font-headline-sm text-on-surface">24 / 30 Topics</span>
+              </div>
+              <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                <div class="h-full bg-primary rounded-full" style="width: 82%;"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Physics -->
+        <a class="subject-item-card group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-lg overflow-hidden cursor-pointer" href="#" onclick="navigateToChapterBrowser('Physics')">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-tertiary-fixed/30 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div class="flex items-start justify-between relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+            </div>
+            <span class="text-label-sm px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-headline-sm">65% Mastery</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-headline-sm font-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Physics</h4>
+            <p class="text-body-sm text-on-surface-variant mb-space-md">Electromagnetism &amp; Optics</p>
+            <div class="space-y-space-xs">
+              <div class="flex justify-between text-body-sm">
+                <span class="text-on-surface-variant">Progress</span>
+                <span class="font-headline-sm text-on-surface">18 / 28 Topics</span>
+              </div>
+              <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                <div class="h-full bg-tertiary-container rounded-full" style="width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Chemistry -->
+        <a class="subject-item-card group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-lg overflow-hidden cursor-pointer" href="#" onclick="navigateToChapterBrowser('Chemistry')">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-secondary-fixed/30 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div class="flex items-start justify-between relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">science</span>
+            </div>
+            <span class="text-label-sm px-space-sm py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-headline-sm">90% Mastery</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-headline-sm font-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Chemistry</h4>
+            <p class="text-body-sm text-on-surface-variant mb-space-md">Organic Chemistry &amp; Kinetics</p>
+            <div class="space-y-space-xs">
+              <div class="flex justify-between text-body-sm">
+                <span class="text-on-surface-variant">Progress</span>
+                <span class="font-headline-sm text-on-surface">27 / 30 Topics</span>
+              </div>
+              <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                <div class="h-full bg-secondary rounded-full" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Biology -->
+        <a class="subject-item-card group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-lg overflow-hidden cursor-pointer" href="#" onclick="navigateToChapterBrowser('Biology')">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-primary-fixed/30 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div class="flex items-start justify-between relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+            </div>
+            <span class="text-label-sm px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-headline-sm">45% Mastery</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-headline-sm font-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Biology</h4>
+            <p class="text-body-sm text-on-surface-variant mb-space-md">Genetics, Evolution &amp; Ecology</p>
+            <div class="space-y-space-xs">
+              <div class="flex justify-between text-body-sm">
+                <span class="text-on-surface-variant">Progress</span>
+                <span class="font-headline-sm text-on-surface">12 / 26 Topics</span>
+              </div>
+              <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                <div class="h-full bg-primary-container rounded-full" style="width: 45%;"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Computer Science -->
+        <a class="subject-item-card group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-lg overflow-hidden cursor-pointer" href="#" onclick="navigateToChapterBrowser('Computer Science')">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-tertiary-fixed/30 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div class="flex items-start justify-between relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">code</span>
+            </div>
+            <span class="text-label-sm px-space-sm py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-headline-sm">95% Mastery</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-headline-sm font-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">Computer Science</h4>
+            <p class="text-body-sm text-on-surface-variant mb-space-md">Data Structures &amp; Python</p>
+            <div class="space-y-space-xs">
+              <div class="flex justify-between text-body-sm">
+                <span class="text-on-surface-variant">Progress</span>
+                <span class="font-headline-sm text-on-surface">19 / 20 Topics</span>
+              </div>
+              <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                <div class="h-full bg-secondary rounded-full" style="width: 95%;"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- English -->
+        <a class="subject-item-card group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-lg overflow-hidden cursor-pointer" href="#" onclick="navigateToChapterBrowser('English')">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-primary-fixed/30 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+          <div class="flex items-start justify-between relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+            </div>
+            <span class="text-label-sm px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-headline-sm">78% Mastery</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-headline-sm font-headline-sm text-on-surface mb-space-xs group-hover:text-primary transition-colors">English</h4>
+            <p class="text-body-sm text-on-surface-variant mb-space-md">Literature &amp; Advanced Grammar</p>
+            <div class="space-y-space-xs">
+              <div class="flex justify-between text-body-sm">
+                <span class="text-on-surface-variant">Progress</span>
+                <span class="font-headline-sm text-on-surface">14 / 18 Topics</span>
+              </div>
+              <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                <div class="h-full bg-primary rounded-full" style="width: 78%;"></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Delightful Study Tip Card from Stitch -->
+      <div class="mt-space-lg bg-surface-container-low rounded-2xl p-space-lg flex items-center gap-space-md">
+        <div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+        </div>
+        <div>
+          <h5 class="text-headline-sm font-headline-sm text-on-surface mb-0.5">Quick Study Tip</h5>
+          <p class="text-body-sm text-on-surface-variant">Consistent 20-minute daily review sessions yield better retention than 3-hour cramming blocks!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────────────────
+         SCREEN 4: PROFILE & ACCOUNT VIEW
+         ───────────────────────────────────────────────────────────────────────── -->
+    <div id="screen-profile" class="hidden flex-col w-full gap-space-lg pb-space-xl">
+      <div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm border border-surface-container-high flex flex-col items-center text-center gap-space-md">
+        <div id="profile-large-avatar" class="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-headline-lg text-2xl overflow-hidden shadow-md">
+          A
+        </div>
+        <div>
+          <h3 id="profile-display-name" class="text-headline-md font-headline-md text-on-surface">Student Name</h3>
+          <p id="profile-display-email" class="text-body-md text-on-surface-variant">student@gmail.com</p>
+          <span class="inline-flex items-center gap-1 mt-1 text-xs px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">
+            <span class="material-symbols-outlined text-[14px]">verified</span> Google Verified
+          </span>
+        </div>
+        <div class="w-full pt-space-md border-t border-surface-container-high flex flex-col gap-space-sm">
+          <button onclick="handleSignOut()" class="w-full h-12 rounded-xl bg-error-container text-on-error-container font-label-md flex items-center justify-center gap-space-xs transition-all active:scale-[0.98] cursor-pointer">
+            <span class="material-symbols-outlined text-[18px]">logout</span>
+            <span>Sign Out (लॉगआउट)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       EXACT STITCH BOTTOM NAVIGATION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary bg-surface-container-high">
+    <div class="flex justify-around items-center h-20 px-space-sm">
+      <a aria-current="page" class="nav-tab-btn flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl transition-all text-primary bg-surface-container-high cursor-pointer" data-path="home" href="#" onclick="switchTab('home', event)">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-label-sm">Home</span>
+      </a>
+      <a class="nav-tab-btn flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-path="subjects" href="#" onclick="switchTab('subjects', event)">
+        <span class="material-symbols-outlined">book</span>
+        <span class="text-label-sm">Subjects</span>
+      </a>
+      <a class="nav-tab-btn flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-path="analytics" href="#" onclick="switchTab('analytics', event)">
+        <span class="material-symbols-outlined">bar_chart</span>
+        <span class="text-label-sm">Analytics</span>
+      </a>
+      <a class="nav-tab-btn flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-path="profile" href="#" onclick="switchTab('profile', event)">
+        <span class="material-symbols-outlined">person</span>
+        <span class="text-label-sm">Profile</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       INTERACTIVE JAVASCRIPT & FIREBASE INTEGRATION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <script>
+    let currentUser = null;
+    let selectedClassKey = 'class-10';
+    let firebaseAuth = null;
+    let activeTab = 'home';
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Firebase Setup
+    // ─────────────────────────────────────────────────────────────────────────
+    function initFirebase() {
+      try {
+        if (typeof firebase !== 'undefined' && firebase.apps.length === 0) {
+          firebase.initializeApp({
+            projectId: "nextsem-ncert-2403",
+            appId: "1:99854054653:web:ef406da12dc5d3478b3a94",
+            storageBucket: "nextsem-ncert-2403.firebasestorage.app",
+            apiKey: window.__FIREBASE_API_KEY__ || "",
+            authDomain: "nextsem-ncert-2403.firebaseapp.com",
+            messagingSenderId: "99854054653"
+          });
+          firebaseAuth = firebase.auth();
+        } else if (typeof firebase !== 'undefined') {
+          firebaseAuth = firebase.auth();
+        }
+
+        if (firebaseAuth) {
+          firebaseAuth.onAuthStateChanged(user => {
+            if (user) onAuthSuccess(user);
+          });
+          firebaseAuth.getRedirectResult().then(res => {
+            if (res && res.user) onAuthSuccess(res.user);
+          }).catch(console.warn);
+        }
+      } catch (e) {
+        console.error("Firebase init notice:", e);
+      }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Google Login Handler
+    // ─────────────────────────────────────────────────────────────────────────
+    async function handleGoogleLogin(e) {
+      if (e) e.preventDefault();
+      const btn = document.getElementById('google-login-action-btn');
+      const feedback = document.getElementById('login-feedback-box');
+      if (feedback) feedback.classList.add('hidden');
+
+      if (!firebaseAuth) initFirebase();
+
+      if (btn) {
+        btn.innerHTML = `<div class="w-5 h-5 border-2 border-primary border-t-transparent rounded-full animate-spin"></div><span class="text-label-md font-label-md text-primary">Signing in...</span>`;
+        btn.style.pointerEvents = 'none';
+      }
+
+      try {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        provider.setCustomParameters({ prompt: 'select_account' });
+        const result = await firebaseAuth.signInWithPopup(provider);
+        if (result && result.user) {
+          onAuthSuccess(result.user);
+        }
+      } catch (err) {
+        console.error('Google Sign-In Notice:', err);
+        if (err.code === 'auth/popup-blocked') {
+          const provider = new firebase.auth.GoogleAuthProvider();
+          provider.setCustomParameters({ prompt: 'select_account' });
+          await firebaseAuth.signInWithRedirect(provider);
+          return;
+        }
+        if (feedback) {
+          feedback.textContent = err.message || 'Login cancelled or failed.';
+          feedback.classList.remove('hidden');
+        }
+      } finally {
+        if (btn) {
+          btn.innerHTML = `
+            <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" fill="#4285F4"></path>
+              <path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.13 0-5.78-2.11-6.73-4.96H1.18v3.15C3.15 21.32 7.23 24 12 24z" fill="#34A853"></path>
+              <path d="M5.27 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.6H1.18C.43 8.12 0 9.85 0 12s.43 3.88 1.18 5.4l4.09-3.16z" fill="#FBBC05"></path>
+              <path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.23 0 3.15 2.68 1.18 6.6l4.09 3.15c.95-2.85 3.6-4.96 6.73-4.96z" fill="#EA4335"></path>
+            </svg>
+            <span class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors">Continue with Google</span>
+          `;
+          btn.style.pointerEvents = 'auto';
+        }
+      }
+    }
+
+    function onAuthSuccess(user) {
+      currentUser = {
+        name: user.displayName || user.email.split('@')[0],
+        email: user.email,
+        photoURL: user.photoURL,
+        uid: user.uid
+      };
+      localStorage.setItem('stitch_student_user', JSON.stringify(currentUser));
+      updateUI();
+      if (typeof confetti === 'function') {
+        confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
+      }
+    }
+
+    function handleSignOut() {
+      if (confirm('Are you sure you want to sign out?')) {
+        if (firebaseAuth) firebaseAuth.signOut();
+        localStorage.removeItem('stitch_student_user');
+        currentUser = null;
+        updateUI();
+      }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Tab Navigation & Screen Switching (Stitch Pattern)
+    // ─────────────────────────────────────────────────────────────────────────
+    function switchTab(tab, event) {
+      if (event) event.preventDefault();
+      activeTab = tab;
+
+      // Update Nav Styling
+      const tabs = document.querySelectorAll('.nav-tab-btn');
+      tabs.forEach(t => {
+        if (t.getAttribute('data-path') === tab) {
+          t.className = "nav-tab-btn flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl transition-all text-primary bg-surface-container-high cursor-pointer";
+        } else {
+          t.className = "nav-tab-btn flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-on-surface-variant hover:text-on-surface transition-all cursor-pointer";
+        }
+      });
+
+      // Update Header Title
+      const headerTitle = document.getElementById('top-header-title');
+      if (headerTitle) {
+        if (tab === 'home') headerTitle.textContent = currentUser ? 'Select Class' : 'Home';
+        if (tab === 'subjects') headerTitle.textContent = 'Subjects';
+        if (tab === 'analytics') headerTitle.textContent = 'Analytics';
+        if (tab === 'profile') headerTitle.textContent = 'Profile';
+      }
+
+      updateUI();
+    }
+
+    function updateUI() {
+      const screenLogin = document.getElementById('screen-login');
+      const screenSelectClass = document.getElementById('screen-select-class');
+      const screenSelectSubject = document.getElementById('screen-select-subject');
+      const screenProfile = document.getElementById('screen-profile');
+      const headerAvatar = document.getElementById('top-user-avatar-btn');
+      const headerTitle = document.getElementById('top-header-title');
+
+      // Hide all first
+      screenLogin.classList.add('hidden');
+      screenSelectClass.classList.add('hidden');
+      screenSelectSubject.classList.add('hidden');
+      screenProfile.classList.add('hidden');
+
+      if (!currentUser) {
+        // Not logged in: Show Login Screen
+        screenLogin.classList.remove('hidden');
+        if (headerTitle) headerTitle.textContent = 'Home';
+        if (headerAvatar) {
+          headerAvatar.innerHTML = `<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>`;
+        }
+        return;
+      }
+
+      // User is logged in: update avatar in header
+      if (headerAvatar) {
+        if (currentUser.photoURL) {
+          headerAvatar.innerHTML = `<img src="${currentUser.photoURL}" alt="${currentUser.name}" class="w-full h-full object-cover" referrerpolicy="no-referrer" />`;
+        } else {
+          headerAvatar.innerHTML = `<span class="text-on-primary font-bold text-xs">${currentUser.name.charAt(0).toUpperCase()}</span>`;
+        }
+      }
+
+      // Update Screen 2 details
+      const dashName = document.getElementById('dash-welcome-name');
+      const dashAvatarInitial = document.getElementById('dash-user-avatar-initial');
+      if (dashName) dashName.textContent = currentUser.name;
+      if (dashAvatarInitial) {
+        if (currentUser.photoURL) {
+          dashAvatarInitial.innerHTML = `<img src="${currentUser.photoURL}" alt="${currentUser.name}" class="w-full h-full object-cover" referrerpolicy="no-referrer" />`;
+        } else {
+          dashAvatarInitial.textContent = currentUser.name.charAt(0).toUpperCase();
+        }
+      }
+
+      // Update Profile Screen details
+      const profName = document.getElementById('profile-display-name');
+      const profEmail = document.getElementById('profile-display-email');
+      const profAvatar = document.getElementById('profile-large-avatar');
+      if (profName) profName.textContent = currentUser.name;
+      if (profEmail) profEmail.textContent = currentUser.email;
+      if (profAvatar) {
+        if (currentUser.photoURL) {
+          profAvatar.innerHTML = `<img src="${currentUser.photoURL}" alt="${currentUser.name}" class="w-full h-full object-cover" referrerpolicy="no-referrer" />`;
+        } else {
+          profAvatar.textContent = currentUser.name.charAt(0).toUpperCase();
+        }
+      }
+
+      // Render active screen according to tab
+      if (activeTab === 'home') {
+        screenSelectClass.classList.remove('hidden');
+        screenSelectClass.classList.add('flex');
+        if (headerTitle) headerTitle.textContent = 'Select Class';
+      } else if (activeTab === 'subjects' || activeTab === 'analytics') {
+        screenSelectSubject.classList.remove('hidden');
+        screenSelectSubject.classList.add('flex');
+        if (headerTitle) headerTitle.textContent = 'Subjects';
+      } else if (activeTab === 'profile') {
+        screenProfile.classList.remove('hidden');
+        screenProfile.classList.add('flex');
+        if (headerTitle) headerTitle.textContent = 'Profile';
+      }
+    }
+
+    function handleAvatarClick() {
+      if (currentUser) {
+        switchTab('profile');
+      } else {
+        switchTab('home');
+      }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Class Selection Interaction (Exact Stitch Script)
+    // ─────────────────────────────────────────────────────────────────────────
+    function selectClass(element, classKey) {
+      selectedClassKey = classKey;
+      const cards = document.querySelectorAll('.class-card');
+      cards.forEach(card => {
+        card.classList.remove('selected', 'bg-primary-fixed', 'shadow-md');
+        card.classList.add('bg-surface-container-low');
+        
+        const title = card.querySelector('.font-headline-sm');
+        if (title) title.className = "text-headline-sm font-headline-sm text-on-surface";
+        
+        const subtitle = card.querySelector('.text-body-sm, .text-on-primary-fixed-variant');
+        if (subtitle) subtitle.className = "text-body-sm text-on-surface-variant";
+        
+        const iconBox = card.querySelector('.w-12.h-12');
+        if (iconBox) iconBox.className = "w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-on-primary";
+        
+        const indicator = card.querySelector('.radio-indicator');
+        if (indicator) indicator.className = "radio-indicator w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent transition-all";
+        
+        const badge = card.querySelector('.px-space-xs');
+        if (badge) badge.remove();
+      });
+
+      // Apply selected state to clicked card
+      element.classList.remove('bg-surface-container-low', 'hover:bg-surface-container');
+      element.classList.add('selected', 'bg-primary-fixed', 'shadow-md');
+
+      const title = element.querySelector('.font-headline-sm');
+      if (title) title.className = "text-headline-sm font-headline-sm text-on-primary-fixed";
+      
+      const subtitle = element.querySelector('.text-body-sm, text-on-surface-variant');
+      if (subtitle) subtitle.className = "text-body-sm text-on-primary-fixed-variant";
+      
+      const iconBox = element.querySelector('.w-12.h-12');
+      if (iconBox) iconBox.className = "w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm";
+      
+      const indicator = element.querySelector('.radio-indicator');
+      if (indicator) indicator.className = "radio-indicator w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center transition-all";
+
+      // Update Subject track label
+      const trackLabel = document.getElementById('subject-track-title');
+      if (trackLabel) {
+        const readable = {
+          'middle': 'Middle School (Classes 6-8)',
+          'class-9': 'Class 9 • High School',
+          'class-10': 'Class 10 • Board Prep',
+          'class-11': 'Class 11 • Senior Sec',
+          'class-12': 'Class 12 • Science Track',
+          'college': 'College / University'
+        };
+        trackLabel.textContent = readable[classKey] || 'Class 10 • Board Prep';
+      }
+    }
+
+    function handleContinue(event) {
+      const btn = event.currentTarget;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Setting up your classroom...</span>';
+      setTimeout(() => {
+        btn.innerHTML = '<span>Continue to Dashboard</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>';
+        switchTab('subjects');
+      }, 700);
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Subject Browser Simulation (Exact Stitch Script from select_subject.html)
+    // ─────────────────────────────────────────────────────────────────────────
+    function navigateToChapterBrowser(subjectName) {
+      const mainContainer = document.querySelector('main') || document.body;
+      mainContainer.style.opacity = '0';
+      mainContainer.style.transform = 'translateY(8px)';
+      mainContainer.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      
+      setTimeout(() => {
+        const titleEl = document.getElementById('top-header-title');
+        if (titleEl) titleEl.innerText = subjectName + ' Chapters';
+        
+        mainContainer.innerHTML = `
+          <div class="flex flex-col w-full pb-8 animate-fadeIn">
+            <button onclick="location.reload()" class="flex items-center gap-space-xs text-primary font-headline-sm text-label-md mb-space-md w-fit cursor-pointer">
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              <span>Back to Subjects</span>
+            </button>
+            <div class="bg-primary-container text-on-primary-container rounded-2xl p-space-lg mb-space-lg shadow-md">
+              <span class="text-label-sm uppercase tracking-wider font-headline-sm opacity-80">Interactive Browser</span>
+              <h2 class="text-headline-md font-headline-md text-on-primary mt-space-xs">${subjectName} Curriculum</h2>
+              <p class="text-body-md mt-space-xs opacity-90">Select a chapter below to dive into topics, practice problems, and video notes.</p>
+            </div>
+            <div class="space-y-space-md">
+              <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container transition-all">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center font-headline-sm">01</div>
+                  <div>
+                    <h4 class="text-headline-sm font-headline-sm text-on-surface">Chapter 1: Foundations & Core Concepts</h4>
+                    <p class="text-body-sm text-on-surface-variant">5 Topics • 2 Quizzes • 1 Lab</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+              </div>
+              <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container transition-all">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm">02</div>
+                  <div>
+                    <h4 class="text-headline-sm font-headline-sm text-on-surface">Chapter 2: Advanced Applications</h4>
+                    <p class="text-body-sm text-on-surface-variant">8 Topics • 3 Quizzes • 2 Labs</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+              </div>
+              <div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container transition-all">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-headline-sm">03</div>
+                  <div>
+                    <h4 class="text-headline-sm font-headline-sm text-on-surface">Chapter 3: Problem Solving & Case Studies</h4>
+                    <p class="text-body-sm text-on-surface-variant">6 Topics • 1 Final Assessment</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+              </div>
+            </div>
+          </div>
+        `;
+        mainContainer.style.opacity = '1';
+        mainContainer.style.transform = 'translateY(0)';
+      }, 150);
+    }
+
+    function filterSubjectCards(query) {
+      const q = (query || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.subject-item-card');
+      cards.forEach(c => {
+        const text = c.innerText.toLowerCase();
+        if (!q || text.includes(q)) {
+          c.style.display = 'flex';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Init on Page Load
+    // ─────────────────────────────────────────────────────────────────────────
+    window.addEventListener('DOMContentLoaded', () => {
+      initFirebase();
+      try {
+        const saved = localStorage.getItem('stitch_student_user');
+        if (saved) currentUser = JSON.parse(saved);
+      } catch (e) {
+        currentUser = null;
+      }
+      updateUI();
+    });
+  </script>
+
+</body>
+</html>

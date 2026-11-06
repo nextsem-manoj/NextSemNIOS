@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NCERT Class 11 Financial Accounting Ch 3 (keac103): 50 Numericals Test | Recording of Transactions - I</title>
+  <meta name="description" content="50 Comprehensive Pure Numerical Problem Calculations based on NCERT Class 11 Financial Accounting Chapter 3 (Recording of Transactions - I / keac103.pdf) covering Accounting Equation, Opening & Closing Capital, Trade & Cash Discounts, Compound Entries, and Ledger Balancing.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.88);
+      --border-card: rgba(255, 255, 255, 0.08);
+
+      --brand-emerald: #10b981;
+      --brand-emerald-hover: #059669;
+      --brand-cyan: #06b6d4;
+      --brand-gold: #e5b842;
+      --brand-purple: #a855f7;
+      --brand-rose: #f43f5e;
+
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-correct-border: #10b981;
+
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+      --color-wrong-border: #ef4444;
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.92);
+      --border-card: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(229, 184, 66, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 90px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Navbar with Breadcrumbs (Permanent Rule) */
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #e5b842, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-gold);
+      background: rgba(229, 184, 66, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-gold);
+      font-weight: 700;
+      background: rgba(229, 184, 66, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(229, 184, 66, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-gold);
+      color: var(--brand-gold);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Banner */
+    .hero-wrapper {
+      max-width: 1100px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #e5b842, #10b981, #06b6d4, #a855f7);
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-gold {
+      background: rgba(229, 184, 66, 0.15);
+      border: 1px solid rgba(229, 184, 66, 0.4);
+      color: var(--brand-gold);
+    }
+
+    .tag-badge-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--brand-emerald);
+    }
+
+    .hero-title {
+      font-size: 2.05rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #e5b842 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 850px;
+      font-weight: 500;
+    }
+
+    /* Controls Toolbar */
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .lang-switcher-group {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card-alt);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-card);
+      gap: 4px;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--brand-gold);
+      color: #000000;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(229, 184, 66, 0.3);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      border-color: var(--brand-gold);
+      color: var(--brand-gold);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary-action {
+      background: var(--brand-gold);
+      color: #000000;
+      border-color: var(--brand-gold);
+      font-weight: 800;
+    }
+
+    .btn-primary-action:hover {
+      background: #d4a632;
+      color: #000000;
+    }
+
+    /* Floating / Sticky HUD */
+    .hud-bar {
+      max-width: 1100px;
+      margin: 0 auto 20px;
+      padding: 0 16px;
+      position: sticky;
+      top: 60px;
+      z-index: 90;
+    }
+
+    .hud-inner {
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    .hud-stats-group {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .hud-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .hud-stat-val {
+      font-weight: 900;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .hud-stat-val.score-val {
+      color: var(--brand-gold);
+    }
+
+    .hud-progress-wrap {
+      flex: 1;
+      max-width: 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hud-progress-track {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .hud-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #e5b842, #10b981);
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Category Filter Pills */
+    .filter-wrapper {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+      padding: 0 16px;
+    }
+
+    .filter-scroll-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+
+    .topic-filter-btn {
+      padding: 7px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .topic-filter-btn:hover {
+      border-color: var(--brand-gold);
+      color: var(--text-main);
+    }
+
+    .topic-filter-btn.active {
+      background: rgba(229, 184, 66, 0.15);
+      border-color: var(--brand-gold);
+      color: var(--brand-gold);
+      font-weight: 800;
+    }
+
+    /* Questions Grid */
+    .quiz-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .q-card:hover {
+      border-color: rgba(229, 184, 66, 0.3);
+    }
+
+    .q-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 12px;
+    }
+
+    .q-topic-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--brand-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .q-number-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      background: var(--bg-card-alt);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-card);
+    }
+
+    .q-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .q-text-en {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    .q-text-hi {
+      font-size: 0.95rem;
+      font-family: var(--font-devanagari);
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      padding-top: 6px;
+    }
+
+    .opt-btn {
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      transition: all 0.2s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      background: var(--bg-card-hover);
+      border-color: var(--brand-gold);
+      transform: translateY(-1px);
+    }
+
+    .opt-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .opt-letter {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: rgba(229, 184, 66, 0.15);
+      color: var(--brand-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .opt-btn.opt-correct {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct-border) !important;
+      color: #ffffff !important;
+    }
+
+    .opt-btn.opt-correct .opt-letter {
+      background: #10b981;
+      color: #ffffff;
+    }
+
+    .opt-btn.opt-wrong {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong-border) !important;
+      color: #ffffff !important;
+    }
+
+    .opt-btn.opt-wrong .opt-letter {
+      background: #ef4444;
+      color: #ffffff;
+    }
+
+    .opt-btn.opt-dimmed {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .opt-status-icon {
+      font-size: 1.1rem;
+      font-weight: 900;
+    }
+
+    /* Explanation Box */
+    .exp-box {
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .exp-correct {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #a7f3d0;
+    }
+
+    .exp-wrong {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+    }
+
+    .exp-header {
+      font-weight: 800;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Modal Styling */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      max-width: 540px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 12px;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 6px;
+    }
+
+    .matrix-btn {
+      aspect-ratio: 1;
+      border-radius: 8px;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .matrix-btn:hover {
+      border-color: var(--brand-gold);
+      color: var(--text-main);
+    }
+
+    .matrix-btn.correct {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    .matrix-btn.wrong {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: #ef4444;
+      color: #f87171;
+    }
+
+    .score-circle-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 0;
+    }
+
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(229, 184, 66, 0.2), rgba(16, 185, 129, 0.2));
+      border: 3px solid var(--brand-gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .score-big-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--brand-gold);
+      line-height: 1;
+    }
+
+    .score-total-denom {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .score-stat-breakdown {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: center;
+    }
+
+    .score-stat-card {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 12px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 1.55rem; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .lang-switcher-group { justify-content: center; }
+      .action-group { justify-content: center; }
+      .q-card { padding: 18px 16px; }
+      .options-grid { grid-template-columns: 1fr; }
+      .matrix-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumb Navigation (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11" class="breadcrumb-link">Class 11</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy" class="breadcrumb-link">Financial Accounting-I</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy&chapter=3" class="breadcrumb-link">Chapter 3 (keac103)</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">50 Numericals Test Engine</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="nav-btn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <a href="/financial-accounting-ch4-subsidiary-books.html" class="nav-btn" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #d8b4fe; font-weight: 800;">
+          <span>📑 Ch 4 Subsidiary Books</span>
+        </a>
+        <a href="/journal-to-ledger-posting.html" class="nav-btn" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 800;">
+          <span>📊 Ledger Masterclass</span>
+        </a>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div class="hero-header-content">
+        <div class="badge-row">
+          <span class="tag-badge tag-badge-gold">💼 NCERT Class 11 • Financial Accounting-I</span>
+          <span class="tag-badge tag-badge-emerald">🧮 50 Pure Numericals Test (keac103.pdf)</span>
+          <span class="tag-badge tag-badge-gold">🌐 Bilingual EN + HI</span>
+        </div>
+        <h1 class="hero-title" style="margin-top: 6px;">
+          Recording of Transactions - I <span class="hero-title-highlight">| 50 Accounting Numericals Engine</span>
+        </h1>
+        <p class="hero-subtitle">
+          50 Comprehensive Calculation Problems covering Fundamental Accounting Equations ($A = L + C$), Opening vs Closing Capital, Net Profit/Loss, Trade & Cash Discounts, Compound Entries, Bad Debts, and Ledger Balancing Figures.
+        </p>
+      </div>
+
+      <!-- Controls Toolbar -->
+      <div class="controls-bar">
+        <div class="lang-switcher-group">
+          <button class="lang-btn active" onclick="setLanguage('both')">🌐 Both (द्विभाषी)</button>
+          <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिन्दी</button>
+        </div>
+
+        <div class="action-group">
+          <button class="btn-action" onclick="openMatrixModal()">
+            <span>🎯 Question Matrix</span>
+          </button>
+          <button class="btn-action" onclick="resetQuiz()">
+            <span>🔄 Restart</span>
+          </button>
+          <button class="btn-action btn-primary-action" onclick="openScorecardModal()">
+            <span>🏆 View Scorecard</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky HUD -->
+  <div class="hud-bar">
+    <div class="hud-inner">
+      <div class="hud-stats-group">
+        <div class="hud-stat-item">
+          <span>Score:</span>
+          <span class="hud-stat-val score-val" id="hudScore">0</span>
+          <span style="color: var(--text-dim);">/ 50</span>
+        </div>
+        <div class="hud-stat-item">
+          <span>Answered:</span>
+          <span class="hud-stat-val" id="hudAnswered">0</span>
+          <span style="color: var(--text-dim);">/ 50</span>
+        </div>
+        <div class="hud-stat-item">
+          <span>Accuracy:</span>
+          <span class="hud-stat-val" id="hudAccuracy">0%</span>
+        </div>
+      </div>
+
+      <div class="hud-progress-wrap">
+        <div class="hud-progress-track">
+          <div class="hud-progress-fill" id="hudProgressBar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic Filter Pills -->
+  <div class="filter-wrapper">
+    <div class="filter-scroll-container">
+      <button class="topic-filter-btn active" onclick="filterByTopic('all')">All 10 Categories (50 Numericals)</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('1')">Cat 1: Fundamental Equation (A = L + C)</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('2')">Cat 2: Opening & Closing Capital</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('3')">Cat 3: Transaction Impact on Capital</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('4')">Cat 4: Trade & Cash Discounts</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('5')">Cat 5: Bad Debts & Settlements</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('6')">Cat 6: Asset Costs & Compound Entries</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('7')">Cat 7: Bank & Cash Transactions</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('8')">Cat 8: Ledger Account Balancing</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('9')">Cat 9: NCERT Textbook Exercises</button>
+      <button class="topic-filter-btn" onclick="filterByTopic('10')">Cat 10: Multi-Step Real-Life Equations</button>
+    </div>
+  </div>
+
+  <!-- Main Questions Container -->
+  <main class="quiz-container" id="quizContainer"></main>
+
+  <!-- Question Matrix Modal -->
+  <div class="modal-overlay" id="matrixModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">🔢 1–50 Numericals Matrix Jump</h3>
+        <button class="modal-close-btn" onclick="closeMatrixModal()">×</button>
+      </div>
+      <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: -10px;">Click any number to instantly scroll to that numerical problem.</p>
+      <div class="matrix-grid" id="matrixGrid"></div>
+      <button class="btn-action" style="justify-content: center; width: 100%; margin-top: 10px;" onclick="closeMatrixModal()">Close Matrix</button>
+    </div>
+  </div>
+
+  <!-- Scorecard Result Modal -->
+  <div class="modal-overlay" id="scoreModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">🏆 Accounting Mastery Scorecard</h3>
+        <button class="modal-close-btn" onclick="closeScoreModal()">×</button>
+      </div>
+
+      <div class="score-circle-wrap">
+        <div class="score-circle">
+          <span class="score-big-num" id="modalScoreVal">0</span>
+          <span class="score-total-denom">out of 50</span>
+        </div>
+        <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);" id="modalGradeTitle">Test in Progress</h4>
+        <p style="font-size: 0.82rem; color: var(--text-muted); text-align: center; margin-top: 4px;" id="modalGradeMsg">Keep answering numericals to build your financial accuracy.</p>
+      </div>
+
+      <div class="score-stat-breakdown">
+        <div class="score-stat-card">
+          <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Correct</span>
+          <span style="font-size: 1.25rem; font-weight: 900; color: #34d399;" id="modalCorrectCount">0</span>
+        </div>
+        <div class="score-stat-card">
+          <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Incorrect</span>
+          <span style="font-size: 1.25rem; font-weight: 900; color: #f87171;" id="modalWrongCount">0</span>
+        </div>
+        <div class="score-stat-card">
+          <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Accuracy</span>
+          <span style="font-size: 1.25rem; font-weight: 900; color: var(--brand-gold);" id="modalAccuracyVal">0%</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 8px;">
+        <button class="btn-action" style="flex: 1; justify-content: center;" onclick="closeScoreModal()">Review Problems</button>
+        <button class="btn-action btn-primary-action" style="flex: 1; justify-content: center;" onclick="closeScoreModal(); resetQuiz();">Restart Test</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 50 Pure Numerical Problem Calculations based on NCERT keac103.pdf
+    const QUESTIONS = [
+      // Cat 1: Fundamental Equation (A = L + C)
+      {
+        topic: 1,
+        topicName: "Cat 1: Fundamental Equation (A = L + C)",
+        qEn: "A business has Capital of ₹2,50,000 and External Liabilities of ₹1,20,000. What is the total value of Assets?",
+        qHi: "एक व्यवसाय की पूँजी ₹2,50,000 और बाह्य दायित्व ₹1,20,000 हैं। कुल परिसंपत्तियों (Assets) का मूल्य क्या है?",
+        optsEn: ["₹3,70,000 (2,50,000 + 1,20,000)", "₹1,30,000", "₹3,50,000", "₹2,50,000"],
+        optsHi: ["₹3,70,000 (2,50,000 + 1,20,000)", "₹1,30,000", "₹3,50,000", "₹2,50,000"],
+        correct: 0,
+        exp: "Accounting Equation: Assets = Liabilities + Capital = ₹1,20,000 + ₹2,50,000 = ₹3,70,000."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Fundamental Equation (A = L + C)",
+        qEn: "If Total Assets of a business are ₹6,80,000 and Outside Liabilities are ₹2,30,000, what is the Owner's Equity (Capital)?",
+        qHi: "यदि किसी व्यवसाय की कुल परिसंपत्तियाँ ₹6,80,000 और बाह्य दायित्व ₹2,30,000 हैं, तो स्वामी की पूँजी (Capital) क्या होगी?",
+        optsEn: ["₹9,10,000", "₹4,50,000 (6,80,000 - 2,30,000)", "₹4,80,000", "₹3,50,000"],
+        optsHi: ["₹9,10,000", "₹4,50,000 (6,80,000 - 2,30,000)", "₹4,80,000", "₹3,50,000"],
+        correct: 1,
+        exp: "Capital = Total Assets - Outside Liabilities = ₹6,80,000 - ₹2,30,000 = ₹4,50,000."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Fundamental Equation (A = L + C)",
+        qEn: "A firm has Total Assets of ₹9,50,000 and Capital of ₹5,50,000. What is the total amount of Outside Liabilities?",
+        qHi: "एक फर्म की कुल परिसंपत्तियाँ ₹9,50,000 और पूँजी ₹5,50,000 है। कुल बाह्य दायित्वों की राशि क्या है?",
+        optsEn: ["₹15,00,000", "₹3,50,000", "₹4,00,000 (9,50,000 - 5,50,000)", "₹4,50,000"],
+        optsHi: ["₹15,00,000", "₹3,50,000", "₹4,00,000 (9,50,000 - 5,50,000)", "₹4,50,000"],
+        correct: 2,
+        exp: "Liabilities = Total Assets - Capital = ₹9,50,000 - ₹5,50,000 = ₹4,00,000."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Fundamental Equation (A = L + C)",
+        qEn: "Raman started business introducing Cash ₹1,00,000, Goods ₹60,000, and Machinery ₹40,000. What is Raman's starting Capital?",
+        qHi: "रमन ने नकद ₹1,00,000, माल ₹60,000 तथा मशीनरी ₹40,000 लगाकर व्यापार शुरू किया। रमन की प्रारंभिक पूँजी क्या है?",
+        optsEn: ["₹1,60,000", "₹2,00,000 (1,00,000 + 60,000 + 40,000)", "₹1,00,000", "₹1,40,000"],
+        optsHi: ["₹1,60,000", "₹2,00,000 (1,00,000 + 60,000 + 40,000)", "₹1,00,000", "₹1,40,000"],
+        correct: 1,
+        exp: "Capital = Total Assets invested = Cash (₹1,00,000) + Stock (₹60,000) + Machinery (₹40,000) = ₹2,00,000."
+      },
+      {
+        topic: 1,
+        topicName: "Cat 1: Fundamental Equation (A = L + C)",
+        qEn: "A trader started business with own capital ₹3,50,000 and borrowed a bank loan of ₹1,50,000. What are the total assets in the business?",
+        qHi: "एक व्यापारी ने अपनी पूँजी ₹3,50,000 और बैंक ऋण ₹1,50,000 लेकर व्यापार शुरू किया। व्यवसाय में कुल परिसंपत्तियाँ क्या हैं?",
+        optsEn: ["₹5,00,000 (3,50,000 + 1,50,000)", "₹2,00,000", "₹3,50,000", "₹4,00,000"],
+        optsHi: ["₹5,00,000 (3,50,000 + 1,50,000)", "₹2,00,000", "₹3,50,000", "₹4,00,000"],
+        correct: 0,
+        exp: "Total Assets = Capital (₹3,50,000) + Bank Loan Liability (₹1,50,000) = ₹5,00,000."
+      },
+
+      // Cat 2: Opening & Closing Capital Calculations
+      {
+        topic: 2,
+        topicName: "Cat 2: Opening & Closing Capital Calculations",
+        qEn: "Opening Capital = ₹3,00,000, Additional Capital introduced = ₹50,000, Profit for the year = ₹80,000, Drawings = ₹30,000. Calculate Closing Capital.",
+        qHi: "प्रारंभिक पूँजी = ₹3,00,000, अतिरिक्त पूँजी = ₹50,000, वर्ष का लाभ = ₹80,000, आहरण = ₹30,000। अंतिम पूँजी की गणना करें।",
+        optsEn: ["₹3,40,000", "₹4,00,000 (3,00,000 + 50,000 + 80,000 - 30,000)", "₹4,60,000", "₹3,80,000"],
+        optsHi: ["₹3,40,000", "₹4,00,000 (3,00,000 + 50,000 + 80,000 - 30,000)", "₹4,60,000", "₹3,80,000"],
+        correct: 1,
+        exp: "Closing Capital = Opening Capital + Additional Capital + Profit - Drawings = ₹3,00,000 + ₹50,000 + ₹80,000 - ₹30,000 = ₹4,00,000."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Opening & Closing Capital Calculations",
+        qEn: "Closing Capital = ₹5,20,000, Drawings = ₹40,000, Additional Capital = ₹60,000, Opening Capital = ₹4,00,000. What was the Net Profit earned?",
+        qHi: "अंतिम पूँजी = ₹5,20,000, आहरण = ₹40,000, अतिरिक्त पूँजी = ₹60,000, प्रारंभिक पूँजी = ₹4,00,000। अर्जित शुद्ध लाभ क्या था?",
+        optsEn: ["₹80,000", "₹1,20,000", "₹1,00,000 (5,20,000 + 40,000 - 60,000 - 4,00,000)", "₹90,000"],
+        optsHi: ["₹80,000", "₹1,20,000", "₹1,00,000 (5,20,000 + 40,000 - 60,000 - 4,00,000)", "₹90,000"],
+        correct: 2,
+        exp: "Profit = Closing Capital + Drawings - Additional Capital - Opening Capital = ₹5,20,000 + ₹40,000 - ₹60,000 - ₹4,00,000 = ₹1,00,000."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Opening & Closing Capital Calculations",
+        qEn: "On 1st April 2025, Capital = ₹2,00,000. On 31st March 2026, Assets = ₹4,50,000 and Liabilities = ₹1,50,000 (no drawings/fresh capital). Profit = ?",
+        qHi: "1 अप्रैल 2025 को पूँजी = ₹2,00,000। 31 मार्च 2026 को परिसंपत्तियाँ = ₹4,50,000 और दायित्व = ₹1,50,000 थे (कोई आहरण/नई पूँजी नहीं)। लाभ = ?",
+        optsEn: ["₹1,00,000 ((4,50,000 - 1,50,000) - 2,00,000)", "₹1,50,000", "₹2,50,000", "₹80,000"],
+        optsHi: ["₹1,00,000 ((4,50,000 - 1,50,000) - 2,00,000)", "₹1,50,000", "₹2,50,000", "₹80,000"],
+        correct: 0,
+        exp: "Closing Capital = Assets - Liabilities = ₹4,50,000 - ₹1,50,000 = ₹3,00,000. Profit = Closing Capital - Opening Capital = ₹3,00,000 - ₹2,00,000 = ₹1,00,000."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Opening & Closing Capital Calculations",
+        qEn: "Assets = ₹8,00,000, Liabilities = ₹3,20,000 on 31st Dec. Opening Capital was ₹4,00,000 and Drawings were ₹50,000. Calculate Net Profit.",
+        qHi: "31 दिसंबर को परिसंपत्तियाँ = ₹8,00,000, दायित्व = ₹3,20,000। प्रारंभिक पूँजी ₹4,00,000 और आहरण ₹50,000 थे। शुद्ध लाभ की गणना करें।",
+        optsEn: ["₹1,20,000", "₹1,30,000 ((8,00,000 - 3,20,000) + 50,000 - 4,00,000)", "₹80,000", "₹1,50,000"],
+        optsHi: ["₹1,20,000", "₹1,30,000 ((8,00,000 - 3,20,000) + 50,000 - 4,00,000)", "₹80,000", "₹1,50,000"],
+        correct: 1,
+        exp: "Closing Capital = ₹8,00,000 - ₹3,20,000 = ₹4,80,000. Net Profit = Closing Capital (₹4,80,000) + Drawings (₹50,000) - Opening Capital (₹4,00,000) = ₹1,30,000."
+      },
+      {
+        topic: 2,
+        topicName: "Cat 2: Opening & Closing Capital Calculations",
+        qEn: "Opening Capital = ₹6,00,000. Net Loss suffered during the year = ₹75,000, Drawings = ₹45,000. What is the Closing Capital?",
+        qHi: "प्रारंभिक पूँजी = ₹6,00,000। वर्ष में शुद्ध हानि = ₹75,000 और आहरण = ₹45,000 थे। अंतिम पूँजी क्या है?",
+        optsEn: ["₹5,25,000", "₹4,80,000 (6,00,000 - 75,000 - 45,000)", "₹5,55,000", "₹4,50,000"],
+        optsHi: ["₹5,25,000", "₹4,80,000 (6,00,000 - 75,000 - 45,000)", "₹5,55,000", "₹4,50,000"],
+        correct: 1,
+        exp: "Closing Capital = Opening Capital - Loss - Drawings = ₹6,00,000 - ₹75,000 - ₹45,000 = ₹4,80,000."
+      },
+
+      // Cat 3: Transaction Impact on Capital & Assets
+      {
+        topic: 3,
+        topicName: "Cat 3: Transaction Impact on Capital & Assets",
+        qEn: "Goods costing ₹30,000 were sold for ₹40,000 on cash. What is the net increase in Capital?",
+        qHi: "₹30,000 लागत का माल नकद ₹40,000 में बेचा गया। पूँजी में शुद्ध वृद्धि क्या है?",
+        optsEn: ["₹40,000", "₹10,000 (40,000 - 30,000 Profit)", "₹30,000", "₹70,000"],
+        optsHi: ["₹40,000", "₹10,000 (40,000 - 30,000 Profit)", "₹30,000", "₹70,000"],
+        correct: 1,
+        exp: "Profit on sale of goods = Selling Price (₹40,000) - Cost Price (₹30,000) = ₹10,000, which increases Capital."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Transaction Impact on Capital & Assets",
+        qEn: "Goods costing ₹50,000 were sold for ₹42,000 on credit. What is the net impact on Capital?",
+        qHi: "₹50,000 लागत का माल ₹42,000 में उधार बेचा गया। पूँजी पर शुद्ध प्रभाव क्या है?",
+        optsEn: ["Capital increases by ₹8,000", "Capital decreases by ₹8,000 (50,000 - 42,000 Loss)", "Capital decreases by ₹42,000", "No impact on Capital"],
+        optsHi: ["पूँजी ₹8,000 बढ़ती है", "पूँजी ₹8,000 घटती है (50,000 - 42,000 हानि)", "पूँजी ₹42,000 घटती है", "पूँजी पर कोई प्रभाव नहीं"],
+        correct: 1,
+        exp: "Loss on sale = Cost (₹50,000) - Selling Price (₹42,000) = ₹8,000, which decreases Capital."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Transaction Impact on Capital & Assets",
+        qEn: "Paid rent ₹15,000 in cash and rent outstanding is ₹5,000. What is the total expense amount that reduces Capital for this period?",
+        qHi: "नकद किराया ₹15,000 चुकाया और ₹5,000 किराया अदत्त (outstanding) है। इस अवधि में पूँजी को घटाने वाला कुल व्यय क्या है?",
+        optsEn: ["₹15,000", "₹20,000 (15,000 + 5,000)", "₹5,000", "₹10,000"],
+        optsHi: ["₹15,000", "₹20,000 (15,000 + 5,000)", "₹5,000", "₹10,000"],
+        correct: 1,
+        exp: "Total Rent Expense = Rent Paid (₹15,000) + Outstanding Rent (₹5,000) = ₹20,000. Total expense reduces Capital by ₹20,000."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Transaction Impact on Capital & Assets",
+        qEn: "Received commission ₹12,000 in cash and accrued commission is ₹3,000. What is the total addition to Capital?",
+        qHi: "नकद कमीशन ₹12,000 प्राप्त हुआ और ₹3,000 उपार्जित (accrued) कमीशन है। पूँजी में कुल कितनी वृद्धि होगी?",
+        optsEn: ["₹12,000", "₹15,000 (12,000 + 3,000)", "₹9,000", "₹3,000"],
+        optsHi: ["₹12,000", "₹15,000 (12,000 + 3,000)", "₹9,000", "₹3,000"],
+        correct: 1,
+        exp: "Total Revenue = Cash Commission (₹12,000) + Accrued Commission (₹3,000) = ₹15,000 increases Capital."
+      },
+      {
+        topic: 3,
+        topicName: "Cat 3: Transaction Impact on Capital & Assets",
+        qEn: "Owner withdrew goods costing ₹10,000 (market selling price ₹14,000) for personal domestic use. What amount is deducted as Drawings from Capital?",
+        qHi: "स्वामी ने घरेलू उपयोग के लिए ₹10,000 लागत (बाजार विक्रय मूल्य ₹14,000) का माल निकाला। पूँजी से आहरण के रूप में क्या राशि घटाई जाएगी?",
+        optsEn: ["₹14,000", "₹10,000 (Goods at Cost Price)", "₹4,000", "₹24,000"],
+        optsHi: ["₹14,000", "₹10,000 (लागत मूल्य पर माल)", "₹4,000", "₹24,000"],
+        correct: 1,
+        exp: "Goods withdrawn for personal use are always valued at Cost Price (₹10,000). Purchases A/c is credited and Drawings A/c is debited by ₹10,000."
+      },
+
+      // Cat 4: Trade & Cash Discounts Computations
+      {
+        topic: 4,
+        topicName: "Cat 4: Trade & Cash Discounts Computations",
+        qEn: "Purchased goods of list price ₹80,000 at 10% trade discount for cash. What is the net cash paid?",
+        qHi: "₹80,000 सूची मूल्य का माल 10% व्यापारिक छूट पर नकद खरीदा। शुद्ध नकद भुगतान कितना किया गया?",
+        optsEn: ["₹72,000 (80,000 - 8,000)", "₹80,000", "₹70,000", "₹74,000"],
+        optsHi: ["₹72,000 (80,000 - 8,000)", "₹80,000", "₹70,000", "₹74,000"],
+        correct: 0,
+        exp: "Trade Discount = 10% of ₹80,000 = ₹8,000. Net Cash Paid = ₹80,000 - ₹8,000 = ₹72,000."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Trade & Cash Discounts Computations",
+        qEn: "Sold goods of list price ₹1,00,000 at 15% trade discount and 2% cash discount for immediate cash payment. Net cash received = ?",
+        qHi: "₹1,00,000 सूची मूल्य का माल 15% व्यापारिक छूट और 2% नकद छूट पर तत्काल नकद बेचा। शुद्ध नकद प्राप्ति क्या होगी?",
+        optsEn: ["₹85,000", "₹83,300 (85,000 - 1,700)", "₹83,000", "₹84,000"],
+        optsHi: ["₹85,000", "₹83,300 (85,000 - 1,700)", "₹83,000", "₹84,000"],
+        correct: 1,
+        exp: "Invoice Price = ₹1,00,000 - 15% (₹15,000) = ₹85,000. Cash Discount = 2% of ₹85,000 = ₹1,700. Net Cash Received = ₹85,000 - ₹1,700 = ₹83,300."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Trade & Cash Discounts Computations",
+        qEn: "Bought goods from Raghu for ₹50,000 at 20% trade discount and 5% cash discount. Paid 40% immediately in cash. What is the cash discount availed?",
+        qHi: "रघु से ₹50,000 का माल 20% व्यापारिक छूट और 5% नकद छूट पर खरीदा। 40% राशि का तत्काल नकद भुगतान किया। प्राप्त नकद छूट क्या है?",
+        optsEn: ["₹2,000", "₹800 (5% on 40% of 40,000)", "₹1,000", "₹1,600"],
+        optsHi: ["₹2,000", "₹800 (40,000 के 40% पर 5%)", "₹1,000", "₹1,600"],
+        correct: 1,
+        exp: "Net Invoice Price = ₹50,000 - 20% (₹10,000) = ₹40,000. Cash portion = 40% of ₹40,000 = ₹16,000. Cash Discount = 5% of ₹16,000 = ₹800."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Trade & Cash Discounts Computations",
+        qEn: "In the previous problem with Raghu, what was the actual net cash paid to Raghu?",
+        qHi: "रघु वाले पिछले प्रश्न में, रघु को वास्तव में कितना शुद्ध नकद भुगतान किया गया?",
+        optsEn: ["₹16,000", "₹15,200 (16,000 - 800)", "₹15,000", "₹14,800"],
+        optsHi: ["₹16,000", "₹15,200 (16,000 - 800)", "₹15,000", "₹14,800"],
+        correct: 1,
+        exp: "Actual Cash Paid = Cash Portion (₹16,000) - Cash Discount (₹800) = ₹15,200."
+      },
+      {
+        topic: 4,
+        topicName: "Cat 4: Trade & Cash Discounts Computations",
+        qEn: "Sold goods to Meena for list price ₹60,000 at 10% trade discount and 3% cash discount. Meena paid 50% immediately by cheque. Amount debited to Bank = ?",
+        qHi: "मीना को ₹60,000 सूची मूल्य का माल 10% व्यापारिक छूट और 3% नकद छूट पर बेचा। मीना ने 50% चेक द्वारा तत्काल भुगतान किया। बैंक खाता किस राशि से डेबिट होगा?",
+        optsEn: ["₹27,000", "₹26,190 (27,000 - 810)", "₹26,500", "₹25,800"],
+        optsHi: ["₹27,000", "₹26,190 (27,000 - 810)", "₹26,500", "₹25,800"],
+        correct: 1,
+        exp: "Invoice = ₹60,000 - 10% (₹6,000) = ₹54,000. 50% Cheque portion = ₹27,000. Cash discount = 3% of ₹27,000 = ₹810. Bank debited = ₹27,000 - ₹810 = ₹26,190."
+      },
+
+      // Cat 5: Bad Debts & Settlement Numericals
+      {
+        topic: 5,
+        topicName: "Cat 5: Bad Debts & Settlement Numericals",
+        qEn: "Mohan who owed ₹20,000 became insolvent and only 60 paise in a rupee is recovered from his estate. What is the Bad Debts amount?",
+        qHi: "मोहन जिससे ₹20,000 लेने थे दिवालिया हो गया और उसकी संपत्ति से केवल 60 पैसे प्रति रुपया वसूला जा सका। डूबत ऋण (Bad Debts) की राशि क्या है?",
+        optsEn: ["₹12,000", "₹8,000 (20,000 x 40%)", "₹10,000", "₹6,000"],
+        optsHi: ["₹12,000", "₹8,000 (20,000 x 40%)", "₹10,000", "₹6,000"],
+        correct: 1,
+        exp: "Cash recovered = 60% of ₹20,000 = ₹12,000. Bad Debts (Loss) = 40% of ₹20,000 = ₹8,000."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Bad Debts & Settlement Numericals",
+        qEn: "Received ₹7,500 from Sohan in full and final settlement of his debt of ₹8,000. What is the Discount Allowed amount?",
+        qHi: "सोहन से उसके ₹8,000 के ऋण के पूर्ण एवं अंतिम निपटान में ₹7,500 प्राप्त हुए। दी गई छूट (Discount Allowed) क्या है?",
+        optsEn: ["₹8,000", "₹7,500", "₹500 (8,000 - 7,500)", "₹1,000"],
+        optsHi: ["₹8,000", "₹7,500", "₹500 (8,000 - 7,500)", "₹1,000"],
+        correct: 2,
+        exp: "Discount Allowed = Total Debt (₹8,000) - Cash Received (₹7,500) = ₹500."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Bad Debts & Settlement Numericals",
+        qEn: "Paid Suresh ₹14,200 in full settlement of our debt of ₹15,000. What is the Discount Received credited in Journal?",
+        qHi: "सुरेश को उसके ₹15,000 के ऋण के पूर्ण निपटान में ₹14,200 चुकाए। जर्नल में क्रेडिट की गई प्राप्त छूट (Discount Received) क्या है?",
+        optsEn: ["₹1,000", "₹800 (15,000 - 14,200)", "₹600", "₹1,200"],
+        optsHi: ["₹1,000", "₹800 (15,000 - 14,200)", "₹600", "₹1,200"],
+        correct: 1,
+        exp: "Discount Received = Debt Payable (₹15,000) - Cash Paid (₹14,200) = ₹800."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Bad Debts & Settlement Numericals",
+        qEn: "A bad debt of ₹12,000 written off last year was recovered to the extent of 75% this year. Amount credited to Bad Debts Recovered A/c = ?",
+        qHi: "पिछले वर्ष अपलिखित ₹12,000 के डूबत ऋण में से इस वर्ष 75% की वसूली हो गई। डूबत ऋण वसूली खाता (Bad Debts Recovered A/c) किस राशि से क्रेडिट होगा?",
+        optsEn: ["₹12,000", "₹9,000 (12,000 x 75%)", "₹3,000", "₹8,000"],
+        optsHi: ["₹12,000", "₹9,000 (12,000 x 75%)", "₹3,000", "₹8,000"],
+        correct: 1,
+        exp: "Bad Debts Recovered = 75% of ₹12,000 = ₹9,000 (Cash A/c Dr. ₹9,000 to Bad Debts Recovered A/c ₹9,000)."
+      },
+      {
+        topic: 5,
+        topicName: "Cat 5: Bad Debts & Settlement Numericals",
+        qEn: "A debtor Ramesh owed ₹35,000. He paid ₹15,000 in cash and a cheque of ₹18,500 in full settlement. Total discount allowed to Ramesh = ?",
+        qHi: "रमेश देनदार से ₹35,000 लेने थे। उसने पूर्ण निपटान में ₹15,000 नकद और ₹18,500 का चेक दिया। रमेश को दी गई कुल छूट क्या है?",
+        optsEn: ["₹1,000", "₹1,500 (35,000 - (15,000 + 18,500))", "₹2,000", "₹500"],
+        optsHi: ["₹1,000", "₹1,500 (35,000 - (15,000 + 18,500))", "₹2,000", "₹500"],
+        correct: 1,
+        exp: "Discount Allowed = Total Debt (₹35,000) - Total Payment Received (₹15,000 + ₹18,500 = ₹33,500) = ₹1,500."
+      },
+
+      // Cat 6: Asset Costs & Compound Entries
+      {
+        topic: 6,
+        topicName: "Cat 6: Asset Costs & Compound Entries",
+        qEn: "Purchased second-hand machinery for ₹1,80,000, spent ₹15,000 on immediate repairs, ₹5,000 on freight, and ₹2,000 on installation wages. Total Machinery A/c debit = ?",
+        qHi: "पुरानी मशीनरी ₹1,80,000 में खरीदी, ₹15,000 मरम्मत, ₹5,000 भाड़ा और ₹2,000 स्थापना मजदूरी पर खर्च किए। मशीनरी खाते में कुल कितना डेबिट होगा?",
+        optsEn: ["₹1,80,000", "₹2,02,000 (1,80,000 + 15,000 + 5,000 + 2,000)", "₹1,95,000", "₹2,00,000"],
+        optsHi: ["₹1,80,000", "₹2,02,000 (1,80,000 + 15,000 + 5,000 + 2,000)", "₹1,95,000", "₹2,00,000"],
+        correct: 1,
+        exp: "Capital expenditure on readying second-hand machinery is added to cost: ₹1,80,000 + ₹15,000 + ₹5,000 + ₹2,000 = ₹2,02,000."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Asset Costs & Compound Entries",
+        qEn: "Bought land for ₹5,00,000, paid 2% registration charges and ₹10,000 legal fee. Total cost debited to Land Account = ?",
+        qHi: "₹5,00,000 में भूमि खरीदी, 2% पंजीकरण शुल्क और ₹10,000 कानूनी शुल्क का भुगतान किया। भूमि खाते में कुल डेबिट की गई लागत क्या है?",
+        optsEn: ["₹5,10,000", "₹5,20,000 (5,00,000 + 10,000 + 10,000)", "₹5,00,000", "₹5,30,000"],
+        optsHi: ["₹5,10,000", "₹5,20,000 (5,00,000 + 10,000 + 10,000)", "₹5,00,000", "₹5,30,000"],
+        correct: 1,
+        exp: "Registration fee = 2% of ₹5,00,000 = ₹10,000. Total Land Cost = ₹5,00,000 + ₹10,000 + ₹10,000 = ₹5,20,000."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Asset Costs & Compound Entries",
+        qEn: "Depreciation at 10% p.a. is provided on machinery costing ₹2,50,000 for 6 months. What is the Depreciation amount?",
+        qHi: "₹2,50,000 की मशीनरी पर 6 महीने के लिए 10% वार्षिक दर से मूल्यह्रास लगाया गया। मूल्यह्रास की राशि क्या है?",
+        optsEn: ["₹25,000", "₹12,500 (2,50,000 x 10% x 6/12)", "₹15,000", "₹10,000"],
+        optsHi: ["₹25,000", "₹12,500 (2,50,000 x 10% x 6/12)", "₹15,000", "₹10,000"],
+        correct: 1,
+        exp: "Depreciation = ₹2,50,000 × 10% × (6/12) = ₹12,500."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Asset Costs & Compound Entries",
+        qEn: "Goods costing ₹40,000 were destroyed by fire. The insurance company admitted a claim for 80%. What amount is debited to Profit & Loss (Loss by Fire)?",
+        qHi: "₹40,000 लागत का माल आग में नष्ट हो गया। बीमा कंपनी ने 80% दावे को स्वीकार किया। लाभ-हानि (आग से हानि) खाते में क्या राशि डेबिट होगी?",
+        optsEn: ["₹32,000", "₹8,000 (40,000 - 32,000)", "₹40,000", "₹10,000"],
+        optsHi: ["₹32,000", "₹8,000 (40,000 - 32,000)", "₹40,000", "₹10,000"],
+        correct: 1,
+        exp: "Insurance Claim = 80% of ₹40,000 = ₹32,000. Uninsured Net Loss = ₹40,000 - ₹32,000 = ₹8,000."
+      },
+      {
+        topic: 6,
+        topicName: "Cat 6: Asset Costs & Compound Entries",
+        qEn: "Paid salary ₹45,000, office rent ₹15,000, and trade expenses ₹10,000 by a single combined cheque. Total Bank Account credit = ?",
+        qHi: "वेतन ₹45,000, कार्यालय किराया ₹15,000 और व्यापारिक व्यय ₹10,000 का एक ही संयुक्त चेक द्वारा भुगतान किया। बैंक खाता कुल किस राशि से क्रेडिट होगा?",
+        optsEn: ["₹60,000", "₹70,000 (45,000 + 15,000 + 10,000)", "₹55,000", "₹75,000"],
+        optsHi: ["₹60,000", "₹70,000 (45,000 + 15,000 + 10,000)", "₹55,000", "₹75,000"],
+        correct: 1,
+        exp: "Combined Cheque Payment = ₹45,000 + ₹15,000 + ₹10,000 = ₹70,000 credited to Bank Account."
+      },
+
+      // Cat 7: Bank & Cash Compound Transactions
+      {
+        topic: 7,
+        topicName: "Cat 7: Bank & Cash Compound Transactions",
+        qEn: "Bank charges debited by bank ₹450, and interest on overdraft debited ₹1,250. By what total amount did the bank balance decrease?",
+        qHi: "बैंक द्वारा बैंक प्रभार ₹450 और अधिविकर्ष पर ब्याज ₹1,250 डेबिट किया गया। बैंक शेष में कुल कितनी कमी हुई?",
+        optsEn: ["₹1,250", "₹1,700 (450 + 1,250)", "₹800", "₹1,500"],
+        optsHi: ["₹1,250", "₹1,700 (450 + 1,250)", "₹800", "₹1,500"],
+        correct: 1,
+        exp: "Total Bank Deduction = Bank Charges (₹450) + Overdraft Interest (₹1,250) = ₹1,700."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bank & Cash Compound Transactions",
+        qEn: "Proprietor paid his personal Life Insurance Premium ₹18,000 and business Fire Insurance ₹12,000 by business cheque. Amount debited to Drawings A/c = ?",
+        qHi: "स्वामी ने अपने व्यक्तिगत जीवन बीमा प्रीमियम का ₹18,000 और व्यापार के अग्नि बीमा का ₹12,000 चेक द्वारा चुकाया। आहरण खाते (Drawings A/c) में क्या राशि डेबिट होगी?",
+        optsEn: ["₹30,000", "₹18,000 (Personal Life Insurance)", "₹12,000", "₹6,000"],
+        optsHi: ["₹30,000", "₹18,000 (व्यक्तिगत जीवन बीमा)", "₹12,000", "₹6,000"],
+        correct: 1,
+        exp: "Proprietor's Life Insurance Premium is a personal expense, hence debited to Drawings A/c (₹18,000). Fire Insurance (₹12,000) is a business expense."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bank & Cash Compound Transactions",
+        qEn: "In the previous insurance transaction, what amount is debited to the Insurance Expense Account?",
+        qHi: "पिछले बीमा लेन-देन में, बीमा व्यय खाते (Insurance Expense A/c) में कितनी राशि डेबिट होगी?",
+        optsEn: ["₹18,000", "₹12,000 (Business Fire Insurance)", "₹30,000", "₹6,000"],
+        optsHi: ["₹18,000", "₹12,000 (व्यावसायिक अग्नि बीमा)", "₹30,000", "₹6,000"],
+        correct: 1,
+        exp: "Business Fire Insurance (₹12,000) is a business expense, debited to Insurance Expense A/c."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bank & Cash Compound Transactions",
+        qEn: "Deposited into bank: Cash ₹50,000 and customer cheques ₹30,000 on the same day. What is the total debit to Bank Account?",
+        qHi: "बैंक में उसी दिन जमा किया गया: नकद ₹50,000 और ग्राहकों के चेक ₹30,000। बैंक खाते में कुल कितना डेबिट होगा?",
+        optsEn: ["₹50,000", "₹80,000 (50,000 + 30,000)", "₹30,000", "₹20,000"],
+        optsHi: ["₹50,000", "₹80,000 (50,000 + 30,000)", "₹30,000", "₹20,000"],
+        correct: 1,
+        exp: "Total Bank Deposit = Cash (₹50,000) + Cheques (₹30,000) = ₹80,000."
+      },
+      {
+        topic: 7,
+        topicName: "Cat 7: Bank & Cash Compound Transactions",
+        qEn: "Withdrew from bank: ₹25,000 for office cash and ₹15,000 for daughter's college fees. What amount is debited to Cash Account?",
+        qHi: "बैंक से आहरित किया: कार्यालय उपयोग हेतु ₹25,000 नकद और पुत्री की कॉलेज फीस हेतु ₹15,000। रोकड़ खाते (Cash A/c) में कितनी राशि डेबिट होगी?",
+        optsEn: ["₹40,000", "₹25,000 (Office Cash only)", "₹15,000", "₹10,000"],
+        optsHi: ["₹40,000", "₹25,000 (केवल कार्यालय रोकड़)", "₹15,000", "₹10,000"],
+        correct: 1,
+        exp: "Only the amount withdrawn for office use (₹25,000) enters the Cash A/c. The personal fee (₹15,000) is debited to Drawings A/c."
+      },
+
+      // Cat 8: Ledger Account Balancing & Closing Balances
+      {
+        topic: 8,
+        topicName: "Cat 8: Ledger Account Balancing & Closing Balances",
+        qEn: "Cash Account: Debit side total is ₹3,40,000 and Credit side total is ₹2,65,000. What is the closing balance of Cash Account?",
+        qHi: "रोकड़ खाता (Cash A/c): डेबिट पक्ष का कुल योग ₹3,40,000 और क्रेडिट पक्ष का योग ₹2,65,000 है। रोकड़ खाते का अंतिम शेष क्या है?",
+        optsEn: ["₹75,000 Debit Balance (3,40,000 - 2,65,000)", "₹75,000 Credit Balance", "₹6,05,000", "₹85,000 Debit Balance"],
+        optsHi: ["₹75,000 डेबिट शेष (3,40,000 - 2,65,000)", "₹75,000 क्रेडिट शेष", "₹6,05,000", "₹85,000 डेबिट शेष"],
+        correct: 0,
+        exp: "Closing Balance = Debit Total (₹3,40,000) - Credit Total (₹2,65,000) = ₹75,000 (Debit Balance, as Debit > Credit)."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Ledger Account Balancing & Closing Balances",
+        qEn: "Bank Account: Debit side total is ₹4,20,000 and Credit side total is ₹4,80,000. What is the nature and amount of closing balance?",
+        qHi: "बैंक खाता (Bank A/c): डेबिट पक्ष का योग ₹4,20,000 और क्रेडिट पक्ष का योग ₹4,80,000 है। अंतिम शेष की प्रकृति और राशि क्या है?",
+        optsEn: ["₹60,000 Debit Balance", "₹60,000 Credit / Overdraft Balance (4,80,000 - 4,20,000)", "₹9,00,000", "₹80,000 Credit Balance"],
+        optsHi: ["₹60,000 डेबिट शेष", "₹60,000 क्रेडिट / अधिविकर्ष शेष (4,80,000 - 4,20,000)", "₹9,00,000", "₹80,000 क्रेडिट शेष"],
+        correct: 1,
+        exp: "When Credit side > Debit side in Bank A/c, it indicates an Overdraft of ₹4,80,000 - ₹4,20,000 = ₹60,000 (Credit Balance)."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Ledger Account Balancing & Closing Balances",
+        qEn: "Rohit (Debtor) Account: Debit side (credit sales) = ₹80,000. Credit side: Cash received ₹55,000 and Discount allowed ₹2,000. Balance due from Rohit = ?",
+        qHi: "रोहित (देनदार) खाता: डेबिट पक्ष (उधार विक्रय) = ₹80,000। क्रेडिट पक्ष: नकद प्राप्ति ₹55,000 और दी गई छूट ₹2,000। रोहित से प्राप्य शेष क्या है?",
+        optsEn: ["₹25,000", "₹23,000 (80,000 - 57,000)", "₹27,000", "₹22,000"],
+        optsHi: ["₹25,000", "₹23,000 (80,000 - 57,000)", "₹27,000", "₹22,000"],
+        correct: 1,
+        exp: "Balance Due = Debit Total (₹80,000) - Credit Total (₹55,000 + ₹2,000 = ₹57,000) = ₹23,000."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Ledger Account Balancing & Closing Balances",
+        qEn: "Vikas (Creditor) Account: Credit side (credit purchases) = ₹1,20,000. Debit side: Bank payment ₹70,000 and Goods returned ₹5,000. Balance payable = ?",
+        qHi: "विकास (लेनदार) खाता: क्रेडिट पक्ष (उधार क्रय) = ₹1,20,000। डेबिट पक्ष: बैंक भुगतान ₹70,000 और क्रय वापसी ₹5,000। विकास को देय शेष क्या है?",
+        optsEn: ["₹50,000", "₹45,000 (1,20,000 - 75,000)", "₹55,000", "₹40,000"],
+        optsHi: ["₹50,000", "₹45,000 (1,20,000 - 75,000)", "₹55,000", "₹40,000"],
+        correct: 1,
+        exp: "Balance Payable = Credit Total (₹1,20,000) - Debit Total (₹70,000 + ₹5,000 = ₹75,000) = ₹45,000."
+      },
+      {
+        topic: 8,
+        topicName: "Cat 8: Ledger Account Balancing & Closing Balances",
+        qEn: "Capital Account: Opening balance ₹5,00,000 (Cr), Additional capital ₹1,00,000 (Cr), Net Profit ₹1,50,000 (Cr), Drawings ₹80,000 (Dr). Closing balance = ?",
+        qHi: "पूँजी खाता: प्रारंभिक शेष ₹5,00,000 (Cr), अतिरिक्त पूँजी ₹1,00,000 (Cr), शुद्ध लाभ ₹1,50,000 (Cr), आहरण ₹80,000 (Dr)। अंतिम शेष क्या है?",
+        optsEn: ["₹7,50,000 Cr", "₹6,70,000 Cr (5,00,000 + 1,00,000 + 1,50,000 - 80,000)", "₹6,00,000 Cr", "₹7,20,000 Cr"],
+        optsHi: ["₹7,50,000 Cr", "₹6,70,000 Cr (5,00,000 + 1,00,000 + 1,50,000 - 80,000)", "₹6,00,000 Cr", "₹7,20,000 Cr"],
+        correct: 1,
+        exp: "Closing Capital = Total Credits (₹5,00,000 + ₹1,00,000 + ₹1,50,000 = ₹7,50,000) - Debit Drawings (₹80,000) = ₹6,70,000 (Cr)."
+      },
+
+      // Cat 9: NCERT Textbook Exercises Numericals
+      {
+        topic: 9,
+        topicName: "Cat 9: NCERT Textbook Exercises Numericals",
+        qEn: "Manish commenced business with Cash ₹2,00,000, Bank ₹3,00,000, Stock ₹1,00,000, Furniture ₹50,000, and owes ₹80,000 to suppliers. What is his Net Capital?",
+        qHi: "मनीष ने नकद ₹2,00,000, बैंक ₹3,00,000, माल ₹1,00,000, फर्नीचर ₹50,000 लगाकर व्यापार शुरू किया तथा आपूर्तिकर्ताओं को ₹80,000 देने हैं। उसकी शुद्ध पूँजी क्या है?",
+        optsEn: ["₹6,50,000", "₹5,70,000 (6,50,000 - 80,000)", "₹7,30,000", "₹5,50,000"],
+        optsHi: ["₹6,50,000", "₹5,70,000 (6,50,000 - 80,000)", "₹7,30,000", "₹5,50,000"],
+        correct: 1,
+        exp: "Total Assets = ₹2,00,000 + ₹3,00,000 + ₹1,00,000 + ₹50,000 = ₹6,50,000. Capital = Assets (₹6,50,000) - Liabilities (₹80,000) = ₹5,70,000."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: NCERT Textbook Exercises Numericals",
+        qEn: "Bought goods for ₹1,50,000 from Harish. Paid ₹50,000 in cash, gave a cheque for ₹40,000, and balance on credit. What is the balance payable to Harish?",
+        qHi: "हरीश से ₹1,50,000 का माल खरीदा। ₹50,000 नकद दिए, ₹40,000 का चेक दिया और शेष उधार रहा। हरीश को देय शेष राशि क्या है?",
+        optsEn: ["₹1,00,000", "₹60,000 (1,50,000 - 50,000 - 40,000)", "₹50,000", "₹40,000"],
+        optsHi: ["₹1,00,000", "₹60,000 (1,50,000 - 50,000 - 40,000)", "₹50,000", "₹40,000"],
+        correct: 1,
+        exp: "Balance Payable to Harish = Total Purchases (₹1,50,000) - Cash (₹50,000) - Cheque (₹40,000) = ₹60,000."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: NCERT Textbook Exercises Numericals",
+        qEn: "Sold goods costing ₹60,000 to Sunil at a profit of 25% on cost, allowing a 10% trade discount. What is the net invoice sales value to Sunil?",
+        qHi: "सुनील को ₹60,000 लागत का माल 25% लाभ पर 10% व्यापारिक छूट देकर बेचा। सुनील के नाम बनाया गया शुद्ध विक्रय बीजक मूल्य क्या है?",
+        optsEn: ["₹75,000", "₹67,500 ((60,000 + 15,000) - 10%)", "₹66,000", "₹65,000"],
+        optsHi: ["₹75,000", "₹67,500 ((60,000 + 15,000) - 10%)", "₹66,000", "₹65,000"],
+        correct: 1,
+        exp: "Catalogue Price = Cost (₹60,000) + 25% Profit (₹15,000) = ₹75,000. Less 10% Trade Discount (₹7,500) = Net Invoice Sales Value ₹67,500."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: NCERT Textbook Exercises Numericals",
+        qEn: "In the previous transaction with Sunil (invoice ₹67,500), Sunil paid 60% immediately and got 2% cash discount on it. How much cash was received from Sunil?",
+        qHi: "सुनील के पिछले लेन-देन (बीजक ₹67,500) में सुनील ने 60% तत्काल चुकाया और 2% नकद छूट प्राप्त की। सुनील से कितना नकद प्राप्त हुआ?",
+        optsEn: ["₹40,500", "₹39,690 (40,500 - 810)", "₹39,000", "₹40,000"],
+        optsHi: ["₹40,500", "₹39,690 (40,500 - 810)", "₹39,000", "₹40,000"],
+        correct: 1,
+        exp: "60% portion = 0.60 × ₹67,500 = ₹40,500. Cash discount = 2% of ₹40,500 = ₹810. Cash Received = ₹40,500 - ₹810 = ₹39,690."
+      },
+      {
+        topic: 9,
+        topicName: "Cat 9: NCERT Textbook Exercises Numericals",
+        qEn: "In the Sunil transaction (Cost ₹60,000, Net Invoice Sales ₹67,500), what was the net gross profit earned before cash discount?",
+        qHi: "सुनील के लेन-देन (लागत ₹60,000, शुद्ध बीजक विक्रय ₹67,500) में नकद छूट से पूर्व कितना सकल लाभ अर्जित किया गया?",
+        optsEn: ["₹15,000", "₹7,500 (67,500 - 60,000)", "₹10,000", "₹6,000"],
+        optsHi: ["₹15,000", "₹7,500 (67,500 - 60,000)", "₹10,000", "₹6,000"],
+        correct: 1,
+        exp: "Gross Profit = Net Sales Revenue (₹67,500) - Cost of Goods Sold (₹60,000) = ₹7,500."
+      },
+
+      // Cat 10: Multi-Step Real-Life Equation Numericals
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Equation Numericals",
+        qEn: "A firm has Total Assets of ₹12,00,000. If Outside Liabilities are 25% of Total Assets, what is the Capital of the firm?",
+        qHi: "एक फर्म की कुल परिसंपत्तियाँ ₹12,00,000 हैं। यदि बाह्य दायित्व कुल परिसंपत्तियों के 25% हैं, तो फर्म की पूँजी क्या है?",
+        optsEn: ["₹3,00,000", "₹9,00,000 (12,00,000 - 3,00,000)", "₹8,00,000", "₹10,00,000"],
+        optsHi: ["₹3,00,000", "₹9,00,000 (12,00,000 - 3,00,000)", "₹8,00,000", "₹10,00,000"],
+        correct: 1,
+        exp: "Liabilities = 25% of ₹12,00,000 = ₹3,00,000. Capital = Assets (₹12,00,000) - Liabilities (₹3,00,000) = ₹9,00,000."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Equation Numericals",
+        qEn: "A firm's Capital is 3 times its External Liabilities. If Total Assets are ₹8,00,000, what is the amount of External Liabilities?",
+        qHi: "एक फर्म की पूँजी उसके बाह्य दायित्वों की 3 गुनी है। यदि कुल परिसंपत्तियाँ ₹8,00,000 हैं, तो बाह्य दायित्वों की राशि क्या है?",
+        optsEn: ["₹2,00,000 (8,00,000 / 4)", "₹6,00,000", "₹2,50,000", "₹1,50,000"],
+        optsHi: ["₹2,00,000 (8,00,000 / 4)", "₹6,00,000", "₹2,50,000", "₹1,50,000"],
+        correct: 0,
+        exp: "Let Liabilities = L, Capital = 3L. Assets = L + 3L = 4L = ₹8,00,000 => L = ₹2,00,000."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Equation Numericals",
+        qEn: "In the previous problem (Assets ₹8,00,000, Liabilities ₹2,00,000), what is the amount of Capital?",
+        qHi: "पिछले प्रश्न (परिसंपत्तियाँ ₹8,00,000, दायित्व ₹2,00,000) में पूँजी की राशि क्या है?",
+        optsEn: ["₹2,00,000", "₹6,00,000 (3 x 2,00,000)", "₹5,00,000", "₹4,00,000"],
+        optsHi: ["₹2,00,000", "₹6,00,000 (3 x 2,00,000)", "₹5,00,000", "₹4,00,000"],
+        correct: 1,
+        exp: "Capital = 3 × Liabilities = 3 × ₹2,00,000 = ₹6,00,000."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Equation Numericals",
+        qEn: "On 1st Jan, Assets = ₹5,00,000 and Liabilities = ₹1,50,000. During the month, Assets increased by ₹1,20,000 and Liabilities decreased by ₹30,000. Closing Capital = ?",
+        qHi: "1 जनवरी को परिसंपत्तियाँ = ₹5,00,000 और दायित्व = ₹1,50,000 थे। माह के दौरान परिसंपत्तियों में ₹1,20,000 की वृद्धि हुई और दायित्वों में ₹30,000 की कमी आई। माह के अंत में पूँजी क्या है?",
+        optsEn: ["₹4,50,000", "₹5,00,000 ((5,00,000 + 1,20,000) - (1,50,000 - 30,000))", "₹4,80,000", "₹5,20,000"],
+        optsHi: ["₹4,50,000", "₹5,00,000 ((5,00,000 + 1,20,000) - (1,50,000 - 30,000))", "₹4,80,000", "₹5,20,000"],
+        correct: 1,
+        exp: "Closing Assets = ₹5,00,000 + ₹1,20,000 = ₹6,20,000. Closing Liabilities = ₹1,50,000 - ₹30,000 = ₹1,20,000. Closing Capital = ₹6,20,000 - ₹1,20,000 = ₹5,00,000."
+      },
+      {
+        topic: 10,
+        topicName: "Cat 10: Multi-Step Real-Life Equation Numericals",
+        qEn: "In the previous problem, what was the net change (increase) in Capital during the month?",
+        qHi: "पिछले प्रश्न में माह के दौरान पूँजी में कुल कितना शुद्ध परिवर्तन (वृद्धि) हुआ?",
+        optsEn: ["₹1,20,000", "₹1,50,000 (5,00,000 - 3,50,000)", "₹90,000", "₹1,00,000"],
+        optsHi: ["₹1,20,000", "₹1,50,000 (5,00,000 - 3,50,000)", "₹90,000", "₹1,00,000"],
+        correct: 1,
+        exp: "Opening Capital = ₹5,00,000 - ₹1,50,000 = ₹3,50,000. Closing Capital = ₹5,00,000. Net Increase in Capital = ₹5,00,000 - ₹3,50,000 = ₹1,50,000."
+      }
+    ];
+
+    let currentLang = "both";
+    let selectedAnswers = {};
+    let currentTopic = "all";
+    let isLightMode = false;
+
+    // DOM Elements
+    const quizContainer = document.getElementById("quizContainer");
+    const hudScore = document.getElementById("hudScore");
+    const hudAnswered = document.getElementById("hudAnswered");
+    const hudProgressBar = document.getElementById("hudProgressBar");
+    const hudAccuracy = document.getElementById("hudAccuracy");
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Theme Toggle
+    themeToggleBtn.addEventListener("click", () => {
+      isLightMode = !isLightMode;
+      document.body.classList.toggle("light-theme", isLightMode);
+      themeIcon.innerText = isLightMode ? "🌙" : "☀️";
+    });
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll(".lang-btn").forEach((btn, idx) => {
+        const langs = ['both', 'en', 'hi'];
+        btn.classList.toggle("active", langs[idx] === lang);
+      });
+      renderQuiz();
+    }
+
+    function filterByTopic(topicId) {
+      currentTopic = topicId;
+      document.querySelectorAll(".topic-filter-btn").forEach(btn => {
+        btn.classList.remove("active");
+      });
+      event.target.classList.add("active");
+      renderQuiz();
+    }
+
+    function handleSelectOption(qIdx, optIdx) {
+      if (selectedAnswers[qIdx] !== undefined) return;
+      selectedAnswers[qIdx] = optIdx;
+      updateStats();
+      renderQuiz();
+
+      if (optIdx === QUESTIONS[qIdx].correct) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 35, spread: 55, origin: { y: 0.8 } });
+        }
+      }
+    }
+
+    function updateStats() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      hudScore.innerText = score;
+      hudAnswered.innerText = totalAnswered;
+      const pct = (totalAnswered / QUESTIONS.length) * 100;
+      hudProgressBar.style.width = `${pct}%`;
+
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+      hudAccuracy.innerText = `${accuracy}%`;
+
+      if (totalAnswered === QUESTIONS.length && score >= 40) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
+        }
+      }
+    }
+
+    function resetQuiz() {
+      if (confirm("Restart numericals test and reset your score?")) {
+        selectedAnswers = {};
+        updateStats();
+        renderQuiz();
+      }
+    }
+
+    function renderQuiz() {
+      quizContainer.innerHTML = "";
+
+      const filtered = QUESTIONS.map((q, idx) => ({ ...q, originalIndex: idx }))
+        .filter(q => currentTopic === "all" || q.topic.toString() === currentTopic);
+
+      if (filtered.length === 0) {
+        quizContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted);">No numericals found for this topic.</div>`;
+        return;
+      }
+
+      filtered.forEach((q) => {
+        const isAnswered = selectedAnswers[q.originalIndex] !== undefined;
+        const userAnswer = selectedAnswers[q.originalIndex];
+
+        const card = document.createElement("div");
+        card.className = "q-card";
+        card.id = `q-card-${q.originalIndex}`;
+
+        const headerHtml = `
+          <div class="q-header">
+            <span class="q-topic-tag">🧮 ${q.topicName}</span>
+            <span class="q-number-pill">Numerical Problem ${q.originalIndex + 1} of 50</span>
+          </div>
+        `;
+
+        let bodyHtml = '<div class="q-body">';
+        if (currentLang === "both") {
+          bodyHtml += `
+            <div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>
+            <div class="q-text-hi">🇮🇳 हिन्दी: ${q.qHi}</div>
+          `;
+        } else if (currentLang === "en") {
+          bodyHtml += `<div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>`;
+        } else {
+          bodyHtml += `<div class="q-text-hi" style="font-size: 1.05rem;">प्र${q.originalIndex + 1}. ${q.qHi}</div>`;
+        }
+        bodyHtml += '</div>';
+
+        let optionsHtml = '<div class="options-grid">';
+        q.optsEn.forEach((optEn, oIdx) => {
+          const optHi = q.optsHi[oIdx];
+          let optText = currentLang === "both" ? `${optEn}` : (currentLang === "en" ? optEn : optHi);
+
+          let optClass = "opt-btn";
+          let statusIcon = "";
+
+          if (isAnswered) {
+            if (oIdx === q.correct) {
+              optClass += " opt-correct";
+              statusIcon = '<span class="opt-status-icon">✓</span>';
+            } else if (oIdx === userAnswer && userAnswer !== q.correct) {
+              optClass += " opt-wrong";
+              statusIcon = '<span class="opt-status-icon">✗</span>';
+            } else {
+              optClass += " opt-dimmed";
+            }
+          }
+
+          optionsHtml += `
+            <button class="${optClass}" onclick="handleSelectOption(${q.originalIndex}, ${oIdx})" ${isAnswered ? 'disabled' : ''}>
+              <div class="opt-content">
+                <span class="opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+                <span>${optText}</span>
+              </div>
+              ${statusIcon}
+            </button>
+          `;
+        });
+        optionsHtml += '</div>';
+
+        let explanationHtml = "";
+        if (isAnswered) {
+          const isCorrect = userAnswer === q.correct;
+          explanationHtml = `
+            <div class="exp-box ${isCorrect ? 'exp-correct' : 'exp-wrong'}">
+              <div class="exp-header">
+                <span>${isCorrect ? '✓ Correct Calculation!' : '✗ Calculation Error!'}</span>
+              </div>
+              <div><strong>Step-by-Step Accounting Solution:</strong> ${q.exp}</div>
+            </div>
+          `;
+        }
+
+        card.innerHTML = headerHtml + bodyHtml + optionsHtml + explanationHtml;
+        quizContainer.appendChild(card);
+      });
+    }
+
+    // Modal Matrix
+    function openMatrixModal() {
+      const grid = document.getElementById("matrixGrid");
+      grid.innerHTML = "";
+
+      QUESTIONS.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "matrix-btn";
+        btn.innerText = idx + 1;
+
+        if (selectedAnswers[idx] !== undefined) {
+          if (selectedAnswers[idx] === q.correct) {
+            btn.classList.add("correct");
+          } else {
+            btn.classList.add("wrong");
+          }
+        }
+
+        btn.onclick = () => {
+          closeMatrixModal();
+          currentTopic = "all";
+          renderQuiz();
+          setTimeout(() => {
+            const el = document.getElementById(`q-card-${idx}`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        };
+
+        grid.appendChild(btn);
+      });
+
+      document.getElementById("matrixModal").classList.add("active");
+    }
+
+    function closeMatrixModal() {
+      document.getElementById("matrixModal").classList.remove("active");
+    }
+
+    // Modal Scorecard
+    function openScorecardModal() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      const wrong = totalAnswered - score;
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+
+      document.getElementById("modalScoreVal").innerText = score;
+      document.getElementById("modalCorrectCount").innerText = score;
+      document.getElementById("modalWrongCount").innerText = wrong;
+      document.getElementById("modalAccuracyVal").innerText = `${accuracy}%`;
+
+      const gradeTitle = document.getElementById("modalGradeTitle");
+      const gradeMsg = document.getElementById("modalGradeMsg");
+
+      if (score >= 45) {
+        gradeTitle.innerText = "Accounting Prodigy! 📊🏆";
+        gradeMsg.innerText = "Flawless financial calculation precision and equation mastery!";
+      } else if (score >= 35) {
+        gradeTitle.innerText = "Great Accountant! 🎯";
+        gradeMsg.innerText = "Strong speed and accounting equation accuracy.";
+      } else if (score >= 25) {
+        gradeTitle.innerText = "Good Effort! 📚";
+        gradeMsg.innerText = "Review step solutions and re-attempt for full score.";
+      } else {
+        gradeTitle.innerText = "Keep Calculating! 💡";
+        gradeMsg.innerText = "Check debit/credit equations carefully and try again.";
+      }
+
+      document.getElementById("scoreModal").classList.add("active");
+      if (score >= 35 && typeof confetti === 'function') {
+        confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("scoreModal").classList.remove("active");
+    }
+
+    // Initial render
+    renderQuiz();
+    updateStats();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>माँ, कह एक कहानी: इंटरैक्टिव कविता, कथा एवं अभ्यास | NCERT Class 7 Hindi (मल्हार)</title>
+  <meta name="description" content="राष्ट्रकवि मैथिलीशरण गुप्त द्वारा रचित 'माँ, कह एक कहानी' - ऑडियो वाचन, लाइव फिल-अप्स, तुरंत जांच, पहेलियां और संवाद खेल के साथ सम्पूर्ण इंटरैक्टिव अभ्यास।">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪶</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(236, 72, 153, 0.28);
+      --accent-rose: #ec4899;
+      --accent-pink: #f43f5e;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-indigo: #6366f1;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Devanagari', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(236, 72, 153, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(56, 189, 248, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .story-container {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 20px 16px 100px;
+      z-index: 1;
+    }
+
+    /* Hero Header */
+    .story-hero {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 28px 20px;
+      background: linear-gradient(180deg, rgba(12, 19, 40, 0.95) 0%, rgba(6, 12, 24, 0.95) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: 22px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #ec4899, #f59e0b, #38bdf8, #10b981);
+    }
+
+    .badge-capsule {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background: rgba(236, 72, 153, 0.15);
+      color: #f472b6;
+      border: 1px solid rgba(236, 72, 153, 0.4);
+      margin-bottom: 12px;
+    }
+
+    .story-main-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      background: linear-gradient(135deg, #ffffff 0%, #f472b6 45%, #fbbf24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .story-subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+
+    .nav-buttons-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: rgba(236, 72, 153, 0.18);
+      border-color: #ec4899;
+      color: #fbcfe8;
+      transform: translateY(-1px);
+    }
+
+    .nav-btn.primary {
+      background: rgba(236, 72, 153, 0.25);
+      border-color: #ec4899;
+      color: #fbcfe8;
+    }
+
+    /* Interactive Audio Recitation Bar */
+    .audio-reciter-box {
+      margin-top: 18px;
+      padding: 12px 18px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .audio-reciter-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #a5b4fc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .audio-btn {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border: none;
+      color: #ffffff;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.84rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+    }
+
+    .audio-btn:hover {
+      transform: scale(1.03);
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    }
+
+    /* Live Progress Bar */
+    .progress-deck {
+      background: rgba(12, 19, 40, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 12px 18px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #cbd5e1;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ec4899, #f59e0b, #10b981);
+      border-radius: 9999px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Sticky Control Toolbar */
+    .sticky-toolbar {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(12, 19, 40, 0.94);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(236, 72, 153, 0.35);
+      border-radius: 14px;
+      padding: 10px 18px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stats-info {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats-highlight {
+      color: #f472b6;
+      background: rgba(236, 72, 153, 0.14);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(236, 72, 153, 0.3);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tool-btn:hover {
+      background: rgba(236, 72, 153, 0.2);
+      border-color: #ec4899;
+      color: #ffffff;
+    }
+
+    .mode-switch-btn {
+      background: rgba(16, 185, 129, 0.16);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+
+    .mode-switch-btn:hover {
+      background: rgba(16, 185, 129, 0.3);
+      color: #6ee7b7;
+    }
+
+    /* Story Card */
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 26px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .story-card:hover {
+      border-color: rgba(236, 72, 153, 0.45);
+      background: var(--bg-card-hover);
+    }
+
+    .card-top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .card-top-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fcd34d;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 11px;
+      border-radius: 9999px;
+      background: rgba(236, 72, 153, 0.15);
+      color: #f472b6;
+      border: 1px solid rgba(236, 72, 153, 0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .story-text {
+      font-size: 1.05rem;
+      line-height: 2.35;
+      color: #f1f5f9;
+    }
+
+    .poem-box {
+      background: rgba(0, 0, 0, 0.4);
+      border-left: 4px solid #ec4899;
+      padding: 14px 18px;
+      margin: 14px 0 16px;
+      border-radius: 0 14px 14px 0;
+      font-style: italic;
+      color: #fbcfe8;
+      font-size: 1.02rem;
+      line-height: 2.1;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Live Interactive Input Box */
+    .interactive-blank-input {
+      display: inline-block;
+      width: 140px;
+      padding: 3px 8px;
+      margin: 0 4px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(236, 72, 153, 0.4);
+      border-radius: 6px;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: center;
+      transition: all 0.2s ease;
+      vertical-align: middle;
+    }
+
+    .interactive-blank-input:focus {
+      outline: none;
+      border-color: #ec4899;
+      background: rgba(236, 72, 153, 0.12);
+      box-shadow: 0 0 8px rgba(236, 72, 153, 0.4);
+    }
+
+    .interactive-blank-input.correct {
+      border-color: #10b981 !important;
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #6ee7b7 !important;
+    }
+
+    .interactive-blank-input.incorrect {
+      border-color: #f43f5e !important;
+      background: rgba(244, 63, 94, 0.18) !important;
+      color: #fda4af !important;
+    }
+
+    /* Fill in the Blank Number */
+    .blank-num {
+      display: inline-block;
+      font-weight: 800;
+      color: #f59e0b;
+      margin-right: 2px;
+      font-size: 0.95rem;
+    }
+
+    /* Dropdowns */
+    details.hint-drop, details.ans-drop {
+      display: inline-block;
+      margin: 0 3px;
+      vertical-align: middle;
+    }
+
+    details.hint-drop > summary, details.ans-drop > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 2px 9px;
+      border-radius: 6px;
+      user-select: none;
+      transition: all 0.15s ease;
+      list-style: none;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.hint-drop > summary {
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+    details.hint-drop > summary:hover {
+      background: rgba(16, 185, 129, 0.28);
+      color: #6ee7b7;
+    }
+    details.hint-drop[open] > summary {
+      background: rgba(16, 185, 129, 0.35);
+      border-color: #34d399;
+    }
+
+    details.ans-drop > summary {
+      background: rgba(236, 72, 153, 0.16);
+      border: 1px solid rgba(236, 72, 153, 0.45);
+      color: #f472b6;
+    }
+    details.ans-drop > summary:hover {
+      background: rgba(236, 72, 153, 0.3);
+      color: #fbcfe8;
+    }
+    details.ans-drop[open] > summary {
+      background: rgba(236, 72, 153, 0.4);
+      border-color: #f472b6;
+    }
+
+    .reveal-pill {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      animation: pillFade 0.2s ease-in-out;
+    }
+
+    .hint-content {
+      background: rgba(16, 185, 129, 0.22);
+      color: #a7f3d0;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      font-weight: 500;
+    }
+
+    .ans-content {
+      background: rgba(245, 158, 11, 0.24);
+      color: #fef08a;
+      border: 1px solid rgba(245, 158, 11, 0.5);
+    }
+
+    @keyframes pillFade {
+      from { opacity: 0; transform: translateY(-2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Interactive Riddle Flip Card Deck */
+    .riddle-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .riddle-card {
+      background: rgba(12, 19, 40, 0.8);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .riddle-card:hover {
+      transform: translateY(-2px);
+      border-color: #f59e0b;
+    }
+
+    .riddle-tag {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #f59e0b;
+      text-transform: uppercase;
+    }
+
+    .riddle-verse {
+      font-size: 0.96rem;
+      font-style: italic;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    .riddle-reveal-btn {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fde68a;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .riddle-reveal-btn:hover {
+      background: rgba(245, 158, 11, 0.3);
+      color: #ffffff;
+    }
+
+    /* Footer */
+    .story-footer-note {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      .story-main-title {
+        font-size: 1.6rem;
+      }
+      .story-card {
+        padding: 18px 16px;
+      }
+      .story-text {
+        font-size: 0.98rem;
+        line-height: 2.2;
+      }
+      .sticky-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .toolbar-actions {
+        justify-content: center;
+      }
+      .interactive-blank-input {
+        width: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="story-container">
+
+    <!-- Top Hero Banner -->
+    <header class="story-hero">
+      <div class="badge-capsule">🪶 NCERT Class 7 Hindi • मल्हार (Malhar) • पाठ १</div>
+      <h1 class="story-main-title">माँ, कह एक कहानी: सम्पूर्ण कविता व अभ्यास</h1>
+      <div class="story-subtitle">
+        राष्ट्रकवि मैथिलीशरण गुप्त द्वारा रचित यशोधरा और राहुल का संवाद — ऑडियो वाचन, लाइव फिल-अप्स, तुरंत जांच और पहेलियों के साथ!
+      </div>
+
+      <!-- Audio Narration Bar -->
+      <div class="audio-reciter-box">
+        <div class="audio-reciter-title">
+          <span>🔊</span>
+          <span>कविता का भावपूर्ण पाठ सुनें (Text-to-Speech Hindi Recitation)</span>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="audio-btn" id="playAudioBtn" onclick="togglePoemRecitation()">
+            ▶️ कविता सुनें (Play)
+          </button>
+          <button type="button" class="tool-btn" onclick="stopPoemRecitation()">
+            ⏹️ रोकें (Stop)
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-buttons-row">
+        <a href="/?class=7" class="nav-btn primary" title="Class 7 Subjects Dashboard">🎒 Class 7 Hub</a>
+        <a href="https://drive.google.com/file/d/1P2wazajXAjZ8tl4HRWDm5yHo-Lax3L0L/view" target="_blank" class="nav-btn" title="Open Google Drive PDF">📄 View NCERT PDF (मल्हार)</a>
+        <a href="/" class="nav-btn" title="Back to Home Dashboard">🏠 Home</a>
+      </div>
+    </header>
+
+    <!-- Progress Deck -->
+    <div class="progress-deck">
+      <div class="progress-header">
+        <span>📊 अभ्यास प्रगति (Progress Tracker)</span>
+        <span id="progressText">0 / 55 पूर्ण (0%)</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+      </div>
+    </div>
+
+    <!-- Global Control Toolbar -->
+    <div class="sticky-toolbar">
+      <div class="stats-info">
+        <span>📖 १० खंड • ५५ रिक्त स्थान</span>
+      </div>
+      <div class="toolbar-actions">
+        <button type="button" class="tool-btn" onclick="toggleAllHints(true)">💡 Show All Hints</button>
+        <button type="button" class="tool-btn" onclick="toggleAllAnswers(true)">👁️ Show All Answers</button>
+        <button type="button" class="tool-btn" onclick="hideAllDetails()">🔒 Hide All</button>
+        <button type="button" class="tool-btn mode-switch-btn" id="modeSwitchBtn" onclick="toggleAutoFillAnswers()">⚡ Quick Revision Mode</button>
+      </div>
+    </div>
+
+    <!-- 1. Rahul's Insistence & Mother's Dialogue -->
+    <article class="story-card" id="section-1">
+      <div class="card-top-header">
+        <h2><span>१.</span> राहुल की हठ और माँ का परिहास</h2>
+        <span class="section-badge">NCERT पृष्ठ १–२</span>
+      </div>
+      <div class="story-text">
+        बालक 
+        <span class="blank-num">(1)</span>
+        <input type="text" class="interactive-blank-input" data-ans="राहुल" data-ans-en="rahul" placeholder="पुत्र का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">यशोधरा और सिद्धार्थ के पुत्र (Rahul)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">राहुल (Rahul)</span></details>
+        अपनी माँ 
+        <span class="blank-num">(2)</span>
+        <input type="text" class="interactive-blank-input" data-ans="यशोधरा" data-ans-en="yashodhara" placeholder="माँ का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">राजकुमारी / सिद्धार्थ की पत्नी (Yashodhara)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">यशोधरा (Yashodhara)</span></details>
+        से हठ करते हुए कहता है— “माँ, कह एक कहानी।” माँ मुस्कुराते हुए पूछती है कि क्या तूने मुझे अपनी 
+        <span class="blank-num">(3)</span>
+        <input type="text" class="interactive-blank-input" data-ans="नानी" data-ans-en="nani" placeholder="रिश्ता..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">माँ की माँ (Grandmother)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">नानी (Grandmother)</span></details>
+        समझ लिया है? तब राहुल तर्क देता है कि यह बात मुझसे 
+        <span class="blank-num">(4)</span>
+        <input type="text" class="interactive-blank-input" data-ans="चेटी" data-ans-en="cheti" placeholder="दासी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">दासी / सेविका (Cheti / Maid servant)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">चेटी (सेविका / दासी)</span></details>
+        ने कही है कि तू मेरी नानी की ही बेटी है! राहुल आग्रह करता है कि माँ लेटी-लेटी ही सुनाओ कि वह 
+        <span class="blank-num">(5)</span>
+        <input type="text" class="interactive-blank-input" data-ans="राजा था या रानी" data-ans-en="raja tha ya rani" placeholder="पात्र..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">नृप अथवा महारानी (Raja tha ya Rani)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">राजा था या रानी</span></details>।
+        माँ अपने बेटे को 
+        <span class="blank-num">(6)</span>
+        <input type="text" class="interactive-blank-input" data-ans="हठी मानधन" data-ans-en="hathi mandhan" placeholder="संबोधन..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">लाड़ला जिद्दी पुत्र (Hathi Mandhan)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">हठी मानधन</span></details>
+        कहकर कहानी शुरू करती है।
+      </div>
+    </article>
+
+    <!-- 2. The Royal Garden & Morning Stroll -->
+    <article class="story-card" id="section-2">
+      <div class="card-top-header">
+        <h2><span>२.</span> उपवन का मनोहारी प्रभात और तात का भ्रमण</h2>
+        <span class="section-badge">NCERT पृष्ठ १–२</span>
+      </div>
+      <div class="story-text">
+        माँ बताती हैं कि बड़े सबेरे तुम्हारे 
+        <span class="blank-num">(7)</span>
+        <input type="text" class="interactive-blank-input" data-ans="तात" data-ans-en="taat" placeholder="पिता..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">पिता सिद्धार्थ (Father / Siddhartha)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">तात (पिता सिद्धार्थ)</span></details>
+        राजमहल के 
+        <span class="blank-num">(8)</span>
+        <input type="text" class="interactive-blank-input" data-ans="उपवन" data-ans-en="upvan" placeholder="बगीचा..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">बगीचा / वाटिका (Garden)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">उपवन (Garden)</span></details>
+        में भ्रमण कर रहे थे, जहाँ मनमानी 
+        <span class="blank-num">(9)</span>
+        <input type="text" class="interactive-blank-input" data-ans="सुरभि" data-ans-en="surabhi" placeholder="सुगंध..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">खुशबू / महक (Pleasant Fragrance)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">सुरभि (सुगंध)</span></details>
+        महक रही थी। उपवन में 
+        <span class="blank-num">(10)</span>
+        <input type="text" class="interactive-blank-input" data-ans="वर्ण-वर्ण के फूल" data-ans-en="varna varna ke phool" placeholder="रंग-बिरंगे फूल..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">रंग-बिरंगे फूल (Multi-coloured blooms)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">वर्ण-वर्ण के फूल</span></details>
+        खिले हुए थे। फूलों की पंखुड़ियों पर झलमल करती हुई 
+        <span class="blank-num">(11)</span>
+        <input type="text" class="interactive-blank-input" data-ans="हिम-बिंदु" data-ans-en="him bindu" placeholder="ओस की बूँदें..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">ओस की बूँदें (Him-bindu / Dew drops)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">हिम-बिंदु (ओस कण)</span></details>
+        झिलमिला रही थीं और शीतल पवन के हल्के झोंकों से तालाब का पानी 
+        <span class="blank-num">(12)</span>
+        <input type="text" class="interactive-blank-input" data-ans="लहराता था" data-ans-en="lahrata tha" placeholder="तरंगित होना..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">तरंगित होना / हिलना (Rippling)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">लहराता था</span></details>।
+      </div>
+    </article>
+
+    <!-- 3. The Fall of the Wounded Swan -->
+    <article class="story-card" id="section-3">
+      <div class="card-top-header">
+        <h2><span>३.</span> तीखे बाण से बिद्ध हंस का गिरना</h2>
+        <span class="section-badge">NCERT पृष्ठ २</span>
+      </div>
+      <div class="story-text">
+        उपवन के वृक्षों पर 
+        <span class="blank-num">(13)</span>
+        <input type="text" class="interactive-blank-input" data-ans="खग" data-ans-en="khag" placeholder="पक्षी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">पक्षी / पंछी (Birds)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">खग (पक्षी)</span></details>
+        कल-कल स्वर में मधुर गान कर रहे थे। तभी अचानक ऊपर आकाश से एक 
+        <span class="blank-num">(14)</span>
+        <input type="text" class="interactive-blank-input" data-ans="हंस" data-ans-en="hans" placeholder="पक्षी का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">सफेद जलीय पक्षी (Swan)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">हंस (Swan)</span></details>
+        नीचे आ गिरा। वह शिकारी के 
+        <span class="blank-num">(15)</span>
+        <input type="text" class="interactive-blank-input" data-ans="खर-शर" data-ans-en="khar shar" placeholder="तीखा तीर..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">तीखे/तेज बाण (Sharp arrow)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">खर-शर (तीखे तीर)</span></details>
+        से 
+        <span class="blank-num">(16)</span>
+        <input type="text" class="interactive-blank-input" data-ans="बिद्ध" data-ans-en="biddha" placeholder="घायल..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">छिदा हुआ / घायल (Pierced)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">बिद्ध (घायल)</span></details>
+        हो चुका था। तीर लगने से उसके 
+        <span class="blank-num">(17)</span>
+        <input type="text" class="interactive-blank-input" data-ans="पक्ष की हानी" data-ans-en="paksh ki haani" placeholder="पंख की हानि..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">डैना / पंख (Wing loss/injury)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">पक्ष (पंख) की हानी</span></details>
+        हुई थी। राहुल दुखी होकर कहता है— "हुई पक्ष की हानी? यह तो अत्यंत 
+        <span class="blank-num">(18)</span>
+        <input type="text" class="interactive-blank-input" data-ans="करुणा-भरी कहानी" data-ans-en="karuna bhari kahani" placeholder="दया भरी कहानी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">दया व संवेदना से भरी (Compassionate tale)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">करुणा-भरी कहानी</span></details>
+        है!"
+      </div>
+    </article>
+
+    <!-- 4. Siddhartha's Compassion & Rebirth -->
+    <article class="story-card" id="section-4">
+      <div class="card-top-header">
+        <h2><span>४.</span> सिद्धार्थ की ममता और हंस का पुनर्जन्म</h2>
+        <span class="section-badge">NCERT पृष्ठ २</span>
+      </div>
+      <div class="story-text">
+        पक्षी के गिरने की आवाज सुनकर तात सिद्धार्थ चौंक पड़े और उन्होंने तुरंत उसे 
+        <span class="blank-num">(19)</span>
+        <input type="text" class="interactive-blank-input" data-ans="उठाया" data-ans-en="uthaya" placeholder="गोद में लिया..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">गोद में लेना / उठाना (Lifted up)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">उठाया</span></details>।
+        सिद्धार्थ के स्नेहपूर्ण स्पर्श और उपचार से उस घायल पक्षी ने मानो 
+        <span class="blank-num">(20)</span>
+        <input type="text" class="interactive-blank-input" data-ans="नया जन्म-सा" data-ans-en="naya janam sa" placeholder="नया जीवन..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">पुनर्जन्म / नया जीवन (New life / rebirth)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">नया जन्म-सा</span></details>
+        पाया। इतने में ही वहाँ पक्षी का शिकार करने वाला 
+        <span class="blank-num">(21)</span>
+        <input type="text" class="interactive-blank-input" data-ans="आखेटक" data-ans-en="aakhetak" placeholder="शिकारी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">शिकारी (Hunter / Archer)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">आखेटक (शिकारी)</span></details>
+        आ पहुँचा। वह अपने अचूक 
+        <span class="blank-num">(22)</span>
+        <input type="text" class="interactive-blank-input" data-ans="लक्ष्य-सिद्धि का मानी" data-ans-en="lakshya siddhi ka maani" placeholder="निशाने का घमंड..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">निशाना साधने का घमंड (Proud of hitting target)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">लक्ष्य-सिद्धि का मानी</span></details>
+        (अहंकारी) था। राहुल कहता है— "लक्ष्य-सिद्धि का मानी? यह तो 
+        <span class="blank-num">(23)</span>
+        <input type="text" class="interactive-blank-input" data-ans="कोमल-कठिन कहानी" data-ans-en="komal kathin kahani" placeholder="नाजुक व जटिल कहानी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">नाजुक व जटिल (Tender yet difficult story)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">कोमल-कठिन कहानी</span></details>
+        हो गई!"
+      </div>
+    </article>
+
+    <!-- 5. Dispute: Rakshi vs Khag-bhakshi -->
+    <article class="story-card" id="section-5">
+      <div class="card-top-header">
+        <h2><span>५.</span> रक्षी और खगभक्षी का संघर्ष</h2>
+        <span class="section-badge">NCERT पृष्ठ २–३</span>
+      </div>
+      <div class="story-text">
+        शिकारी ने सिद्धार्थ से अपना 
+        <span class="blank-num">(24)</span>
+        <input type="text" class="interactive-blank-input" data-ans="आहत पक्षी" data-ans-en="aahat pakshi" placeholder="घायल पक्षी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">घायल / तीर लगा पक्षी (Injured bird)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">आहत पक्षी</span></details>
+        माँगा, किंतु तुम्हारे तात उसके 
+        <span class="blank-num">(25)</span>
+        <input type="text" class="interactive-blank-input" data-ans="रक्षी" data-ans-en="rakshi" placeholder="बचाने वाले..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">रक्षक / बचाने वाले (Protector)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">रक्षी (रक्षक)</span></details>
+        थे। तब उस शिकारी ने, जो पक्षियों का मांस खाने वाला 
+        <span class="blank-num">(26)</span>
+        <input type="text" class="interactive-blank-input" data-ans="खगभक्षी" data-ans-en="khagbhakshi" placeholder="पक्षी भक्षक..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">पक्षियों का भक्षण करने वाला (Eater/killer of birds)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">खगभक्षी</span></details>
+        था, पक्षी लेने की 
+        <span class="blank-num">(27)</span>
+        <input type="text" class="interactive-blank-input" data-ans="हठ करने की ठानी" data-ans-en="hath karne ki thani" placeholder="जिद्द करना..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">जिद्द / संकल्प (Determined stubbornness)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">हठ करने की ठानी</span></details>।
+        इस प्रकार दयालु ( 
+        <span class="blank-num">(28)</span>
+        <input type="text" class="interactive-blank-input" data-ans="सदय" data-ans-en="sadaya" placeholder="दयावान..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">दयावान व्यक्ति (Compassionate one)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">सदय</span></details>
+        ) और क्रूर शिकारी ( 
+        <span class="blank-num">(29)</span>
+        <input type="text" class="interactive-blank-input" data-ans="निर्दय" data-ans-en="nirdaya" placeholder="कठोर..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">निर्दयी / कठोर व्यक्ति (Cruel one)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">निर्दय</span></details>
+        ) के बीच तीव्र विवाद छिड़ गया।
+      </div>
+    </article>
+
+    <!-- 6. The Dispute in Royal Court -->
+    <article class="story-card" id="section-6">
+      <div class="card-top-header">
+        <h2><span>६.</span> न्यायालय में न्याय की गुहार</h2>
+        <span class="section-badge">NCERT पृष्ठ २–३</span>
+      </div>
+      <div class="story-text">
+        दोनों (उभय) अपने-अपने विषय पर 
+        <span class="blank-num">(30)</span>
+        <input type="text" class="interactive-blank-input" data-ans="आग्रही थे" data-ans-en="aagrahi the" placeholder="अड़े हुए..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">अपनी बात पर अड़े हुए (Insistent on their stand)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">आग्रही थे (अड़े हुए थे)</span></details>।
+        जब दोनों में समझौता न हो सका, तब यह बात 
+        <span class="blank-num">(31)</span>
+        <input type="text" class="interactive-blank-input" data-ans="न्यायालय" data-ans-en="nyayalaya" placeholder="राजदरबार..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">राजदरबार / कचहरी (Court of Justice)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">न्यायालय (Court)</span></details>
+        में पहुँची, जहाँ दरबार के सभी लोगों ने इसे सुना और जाना।
+        राहुल कहता है— "सुनी सभी ने जानी? यह तो बहुत 
+        <span class="blank-num">(32)</span>
+        <input type="text" class="interactive-blank-input" data-ans="व्यापक हुई कहानी" data-ans-en="vyapak hui kahani" placeholder="विस्तृत कहानी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">विस्तृत / दूर-दूर तक फैली (Widespread tale)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">व्यापक हुई कहानी</span></details>!"
+      </div>
+    </article>
+
+    <!-- 7. Rahul's Fearless Judgment -->
+    <article class="story-card" id="section-7">
+      <div class="card-top-header">
+        <h2><span>७.</span> राहुल का निर्भीक न्याय निर्णय</h2>
+        <span class="section-badge">NCERT पृष्ठ ३</span>
+      </div>
+      <div class="story-text">
+        माँ यशोधरा ने राहुल की बुद्धि और न्याय-चेतना को परखने के लिए कहा:
+        <div class="poem-box">
+          “राहुल, तू निर्णय कर इसका– न्याय पक्ष लेता है किसका?<br>
+          कह दे निर्भय, जय हो जिसका। सुन लूँ तेरी बानी।”
+        </div>
+        राहुल ने अत्यंत विवेक और 
+        <span class="blank-num">(33)</span>
+        <input type="text" class="interactive-blank-input" data-ans="निर्भय" data-ans-en="nirbhay" placeholder="निडर..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">बिना किसी डर के (Fearlessly)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">निर्भय (निडर)</span></details>
+        होकर उत्तर दिया:
+        <div class="poem-box">
+          “कोई निरपराध को मारे, तो क्यों अन्य उसे न उबारे?<br>
+          रक्षक पर भक्षक को वारे, न्याय दया का दानी!”
+        </div>
+        राहुल का निर्णय था कि यदि कोई किसी 
+        <span class="blank-num">(34)</span>
+        <input type="text" class="interactive-blank-input" data-ans="निरपराध" data-ans-en="nirapradh" placeholder="निर्दोष जीव..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">मासूम / जिसका कोई दोष न हो (Innocent)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">निरपराध (निर्दोष)</span></details>
+        जीव को मारता है, तो दूसरे को उसकी जान 
+        <span class="blank-num">(35)</span>
+        <input type="text" class="interactive-blank-input" data-ans="उबारनी" data-ans-en="ubarni" placeholder="बचानी..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">बचाना / रक्षा करना (Rescue / Save)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">उबारनी (बचानी)</span></details>
+        चाहिए। मारने वाले ( 
+        <span class="blank-num">(36)</span>
+        <input type="text" class="interactive-blank-input" data-ans="भक्षक" data-ans-en="bhakshak" placeholder="मारने वाला..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">शिकारी / मारने वाला (Slayer)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">भक्षक</span></details>
+        ) की तुलना में बचाने वाला ( 
+        <span class="blank-num">(37)</span>
+        <input type="text" class="interactive-blank-input" data-ans="रक्षक" data-ans-en="rakshak" placeholder="बचाने वाला..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">प्राण रक्षक (Protector)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">रक्षक</span></details>
+        ) हमेशा श्रेष्ठ होता है। सच्चा न्याय सदैव 
+        <span class="blank-num">(38)</span>
+        <input type="text" class="interactive-blank-input" data-ans="दया का दानी" data-ans-en="daya ka daani" placeholder="करुणा का पक्ष..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">करुणा / रहम (Compassion / Mercy)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">दया का दानी</span></details>
+        होता है!
+        माँ प्रसन्न होकर कहती है— “तूने 
+        <span class="blank-num">(39)</span>
+        <input type="text" class="interactive-blank-input" data-ans="गुनी कहानी" data-ans-en="guni kahani" placeholder="मर्म समझ लिया..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">मर्म समझ लिया / विचार कर लिया (Understood the core)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">गुनी कहानी (मर्म समझ लिया)</span></details>।”
+      </div>
+    </article>
+
+    <!-- 8. Character Identification & Match -->
+    <article class="story-card" id="section-8">
+      <div class="card-top-header">
+        <h2><span>८.</span> पाठ के प्रमुख पात्र और उनका परिचय</h2>
+        <span class="section-badge">NCERT पृष्ठ ५</span>
+      </div>
+      <div class="story-text">
+        पाठ में आए प्रमुख पात्रों का सही मिलान:
+        <br>• कहानी में <strong>'बेटा'</strong> शब्द 
+        <span class="blank-num">(40)</span>
+        <input type="text" class="interactive-blank-input" data-ans="राहुल" data-ans-en="rahul" placeholder="पात्र..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">सिद्धार्थ और यशोधरा के बालक (Son)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">राहुल (Rahul)</span></details>
+        के लिए प्रयुक्त हुआ है।
+        <br>• कहानी में <strong>'माँ'</strong> शब्द राजकुमारी 
+        <span class="blank-num">(41)</span>
+        <input type="text" class="interactive-blank-input" data-ans="यशोधरा" data-ans-en="yashodhara" placeholder="पात्र..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">सिद्धार्थ की पत्नी (Wife of Siddhartha)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">यशोधरा (Yashodhara)</span></details>
+        के लिए आया है।
+        <br>• कहानी में <strong>'तात'</strong> शब्द राजकुमार 
+        <span class="blank-num">(42)</span>
+        <input type="text" class="interactive-blank-input" data-ans="सिद्धार्थ" data-ans-en="siddhartha" placeholder="पात्र..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">भगवान बुद्ध का पूर्व नाम (Gautam Buddha)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">सिद्धार्थ (गौतम बुद्ध)</span></details>
+        के लिए आया है।
+        <br>• तीर चलाकर हंस को घायल करने वाला <strong>'आखेटक'</strong> सिद्धार्थ का चचेरा भाई 
+        <span class="blank-num">(43)</span>
+        <input type="text" class="interactive-blank-input" data-ans="देवदत्त" data-ans-en="devadatta" placeholder="शिकारी का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">अहंकारी शिकारी (Devadatta)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">देवदत्त (Devadatta)</span></details>
+        था।
+      </div>
+    </article>
+
+    <!-- 9. Poet Biography: Maithili Sharan Gupt -->
+    <article class="story-card" id="section-9">
+      <div class="card-top-header">
+        <h2><span>९.</span> कवि परिचय: राष्ट्रकवि मैथिलीशरण गुप्त</h2>
+        <span class="section-badge">NCERT पृष्ठ ३</span>
+      </div>
+      <div class="story-text">
+        ‘माँ, कह एक कहानी’ कविता के रचयिता 
+        <span class="blank-num">(44)</span>
+        <input type="text" class="interactive-blank-input" data-ans="मैथिलीशरण गुप्त" data-ans-en="maithili sharan gupt" placeholder="कवि का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">प्रसिद्ध राष्ट्रकवि (Great Hindi Poet)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">मैथिलीशरण गुप्त (1886–1964)</span></details>
+        हैं। उनका जन्म उत्तर प्रदेश के झाँसी जिले के 
+        <span class="blank-num">(45)</span>
+        <input type="text" class="interactive-blank-input" data-ans="चिरगाँव" data-ans-en="chirgaon" placeholder="गाँव का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">झाँसी का गाँव (Birthplace village)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">चिरगाँव (Chirgaon, Jhansi)</span></details>
+        में हुआ था। उन्होंने मात्र 15-16 वर्ष की आयु में काव्य रचना प्रारंभ की थी। स्वतंत्रता आंदोलन में उनकी रचनाओं ने देशप्रेम की भावना जगाई, जिसके कारण उन्हें 
+        <span class="blank-num">(46)</span>
+        <input type="text" class="interactive-blank-input" data-ans="राष्ट्रकवि" data-ans-en="rashtrakavi" placeholder="उपाधि..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">महात्मा गांधी द्वारा दी गई उपाधि (National Poet)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">राष्ट्रकवि (National Poet)</span></details>
+        कहा गया। उनकी प्रसिद्ध काव्य-कृतियों में 
+        <span class="blank-num">(47)</span>
+        <input type="text" class="interactive-blank-input" data-ans="साकेत" data-ans-en="saket" placeholder="महाकाव्य..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">उर्मिला पर आधारित महाकाव्य (Saket)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">साकेत</span></details>,
+        <span class="blank-num">(48)</span>
+        <input type="text" class="interactive-blank-input" data-ans="भारत-भारती" data-ans-en="bharat bharati" placeholder="काव्य संग्रह..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">देशभक्ति काव्य संग्रह (Bharat-Bharati)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">भारत-भारती</span></details>,
+        तथा 
+        <span class="blank-num">(49)</span>
+        <input type="text" class="interactive-blank-input" data-ans="यशोधरा" data-ans-en="yashodhara" placeholder="खंडकाव्य..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">गौतम बुद्ध की पत्नी पर आधारित खंडकाव्य (Yashodhara)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">यशोधरा</span></details>
+        अग्रगण्य हैं। प्रस्तुत कविता उनकी काव्य-कृति 
+        <span class="blank-num">(50)</span>
+        <input type="text" class="interactive-blank-input" data-ans="यशोधरा" data-ans-en="yashodhara" placeholder="काव्य का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">काव्य-कृति का नाम (Yashodhara)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">यशोधरा</span></details>
+        से ही ली गई है।
+      </div>
+    </article>
+
+    <!-- 10. Riddles Deck -->
+    <article class="story-card" id="section-10">
+      <div class="card-top-header">
+        <h2><span>१०.</span> पाठ की पहेलियाँ एवं काव्य सौंदर्य</h2>
+        <span class="section-badge">NCERT पृष्ठ १२</span>
+      </div>
+      <div class="story-text">
+        इस कविता की शैली 
+        <span class="blank-num">(51)</span>
+        <input type="text" class="interactive-blank-input" data-ans="संवादात्मक शैली" data-ans-en="sanvadatmak shaili" placeholder="शैली का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">बातचीत वाली शैली (Dialogue format)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">संवादात्मक शैली (Dialogue form)</span></details>
+        है तथा इसमें मुख्य रूप से 
+        <span class="blank-num">(52)</span>
+        <input type="text" class="interactive-blank-input" data-ans="करुणा रस" data-ans-en="karuna rasa" placeholder="रस का नाम..." oninput="checkBlank(this)">
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">दया व संवेदना का रस (Karuna Rasa / Compassion)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">करुणा रस (Compassion)</span></details>
+        की प्रधानता है।
+      </div>
+
+      <!-- Interactive Riddles Flip Deck -->
+      <div class="riddle-grid">
+        <div class="riddle-card">
+          <div>
+            <div class="riddle-tag">🎯 पहेली १ (Riddle 1)</div>
+            <div class="riddle-verse">
+              "नानी की बेटी है कौन?<br>
+              मामा की बहना है कौन?<br>
+              भार्या है पिता की कौन?<br>
+              भाभी है चाचा की कौन?"
+            </div>
+          </div>
+          <button type="button" class="riddle-reveal-btn" onclick="revealRiddle(this, 'माँ (Mother) 👩‍👦')">
+            🔍 उत्तर बूझें
+          </button>
+        </div>
+
+        <div class="riddle-card">
+          <div>
+            <div class="riddle-tag">🎯 पहेली २ (Riddle 2)</div>
+            <div class="riddle-verse">
+              "आसमान में उड़-उड़ जाए,<br>
+              तरह-तरह के गाने गाए,<br>
+              पर फैलाकर करता सैर,<br>
+              दो हैं जिसके पर और पैर।"
+            </div>
+          </div>
+          <button type="button" class="riddle-reveal-btn" onclick="revealRiddle(this, 'पक्षी / हंस (Bird/Swan) 🕊️')">
+            🔍 उत्तर बूझें
+          </button>
+        </div>
+
+        <div class="riddle-card">
+          <div>
+            <div class="riddle-tag">🎯 पहेली ३ (Riddle 3)</div>
+            <div class="riddle-verse">
+              "बागों में जो सुगंध फैलाती,<br>
+              फूल-फूल में बसती गाती,<br>
+              हवा-हवा में घुल-मिल जाए,<br>
+              कौन है जो यह नाम बताए?"
+            </div>
+          </div>
+          <button type="button" class="riddle-reveal-btn" onclick="revealRiddle(this, 'सुरभि (सुगंध / Fragrance) 🌸')">
+            🔍 उत्तर बूझें
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="story-footer-note">
+      Nextsem Academy • NCERT Solutions & Interactive Study Aids • पाठ्यपुस्तक संदर्भ: मल्हार (कक्षा ७ हिंदी - राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद)
+    </footer>
+
+  </div>
+
+  <script>
+    const POEM_VERSES_HINDI = `माँ, कह एक कहानी। 
+बेटा, समझ लिया क्या तूने मुझको अपनी नानी?
+कहती है मुझसे यह चेटी, तू मेरी नानी की बेटी! 
+कह माँ, कह, लेटी ही लेटी, राजा था या रानी?
+तू है हठी मानधन मेरे, सुन, उपवन में बड़े सबेरे, तात भ्रमण करते थे तेरे, जहाँ सुरभि मनमानी।
+वर्ण वर्ण के फूल खिले थे, झलमल कर हिम-बिंदु झिले थे, हलके झोंके हिले-मिले थे, लहराता था पानी।
+गाते थे खग कल कल स्वर से, सहसा एक हंस ऊपर से, गिरा, बिद्ध होकर खर-शर से, हुई पक्ष की हानी!
+चौंक उन्होंने उसे उठाया, नया जन्म-सा उसने पाया। इतने में आखेटक आया, लक्ष्य-सिद्धि का मानी।
+माँगा उसने आहत पक्षी, तेरे तात किंतु थे रक्षी। तब उसने, जो था खगभक्षी, हठ करने की ठानी।
+हुआ विवाद सदय-निर्दय में, उभय आग्रही थे स्वविषय में, गई बात तब न्यायालय में, सुनी सभी ने जानी।
+राहुल, तू निर्णय कर इसका, न्याय पक्ष लेता है किसका? कह दे निर्भय, जय हो जिसका। सुन लूँ तेरी बानी।
+माँ, मेरी क्या बानी? मैं सुन रहा कहानी। 
+कोई निरपराध को मारे, तो क्यों अन्य उसे न उबारे? रक्षक पर भक्षक को वारे, न्याय दया का दानी! 
+न्याय दया का दानी? तूने गुनी कहानी।`;
+
+    let speechSynth = window.speechSynthesis;
+    let currentUtterance = null;
+    let isSpeaking = false;
+
+    function togglePoemRecitation() {
+      if (!speechSynth) {
+        alert('आपके ब्राउज़र में Text-to-Speech समर्थित नहीं है।');
+        return;
+      }
+      if (speechSynth.speaking) {
+        speechSynth.cancel();
+        document.getElementById('playAudioBtn').innerText = '▶️ कविता सुनें (Play)';
+        isSpeaking = false;
+        return;
+      }
+      currentUtterance = new SpeechSynthesisUtterance(POEM_VERSES_HINDI);
+      currentUtterance.lang = 'hi-IN';
+      currentUtterance.rate = 0.9;
+      currentUtterance.pitch = 1.05;
+
+      currentUtterance.onend = function() {
+        document.getElementById('playAudioBtn').innerText = '▶️ कविता सुनें (Play)';
+        isSpeaking = false;
+      };
+      currentUtterance.onerror = function() {
+        document.getElementById('playAudioBtn').innerText = '▶️ कविता सुनें (Play)';
+        isSpeaking = false;
+      };
+
+      speechSynth.speak(currentUtterance);
+      document.getElementById('playAudioBtn').innerText = '⏸️ रोकें / Pause';
+      isSpeaking = true;
+    }
+
+    function stopPoemRecitation() {
+      if (speechSynth) {
+        speechSynth.cancel();
+      }
+      document.getElementById('playAudioBtn').innerText = '▶️ कविता सुनें (Play)';
+      isSpeaking = false;
+    }
+
+    function checkBlank(input) {
+      const val = (input.value || '').trim().toLowerCase();
+      const ansHindi = (input.getAttribute('data-ans') || '').trim().toLowerCase();
+      const ansEn = (input.getAttribute('data-ans-en') || '').trim().toLowerCase();
+
+      if (!val) {
+        input.classList.remove('correct', 'incorrect');
+        updateProgress();
+        return;
+      }
+
+      if (val === ansHindi || val === ansEn || ansHindi.includes(val) && val.length >= 3) {
+        input.classList.add('correct');
+        input.classList.remove('incorrect');
+      } else {
+        input.classList.add('incorrect');
+        input.classList.remove('correct');
+      }
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const totalInputs = document.querySelectorAll('.interactive-blank-input').length;
+      const correctInputs = document.querySelectorAll('.interactive-blank-input.correct').length;
+      const percent = Math.round((correctInputs / totalInputs) * 100);
+
+      document.getElementById('progressBarFill').style.width = percent + '%';
+      document.getElementById('progressText').innerText = `${correctInputs} / ${totalInputs} पूर्ण (${percent}%)`;
+
+      if (correctInputs === totalInputs && typeof confetti === 'function') {
+        confetti({
+          particleCount: 120,
+          spread: 80,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    function toggleAllHints(openState) {
+      document.querySelectorAll('details.hint-drop').forEach(function(el) {
+        el.open = openState;
+      });
+    }
+
+    function toggleAllAnswers(openState) {
+      document.querySelectorAll('details.ans-drop').forEach(function(el) {
+        el.open = openState;
+      });
+    }
+
+    function hideAllDetails() {
+      document.querySelectorAll('details.hint-drop, details.ans-drop').forEach(function(el) {
+        el.open = false;
+      });
+    }
+
+    let isAutoFilled = false;
+    function toggleAutoFillAnswers() {
+      const btn = document.getElementById('modeSwitchBtn');
+      const inputs = document.querySelectorAll('.interactive-blank-input');
+      
+      if (!isAutoFilled) {
+        inputs.forEach(function(input) {
+          input.value = input.getAttribute('data-ans') || '';
+          input.classList.add('correct');
+          input.classList.remove('incorrect');
+        });
+        toggleAllAnswers(true);
+        btn.innerText = '🔄 Reset to Self-Test Mode';
+        btn.style.background = 'rgba(236, 72, 153, 0.25)';
+        btn.style.color = '#fbcfe8';
+        isAutoFilled = true;
+      } else {
+        inputs.forEach(function(input) {
+          input.value = '';
+          input.classList.remove('correct', 'incorrect');
+        });
+        hideAllDetails();
+        btn.innerText = '⚡ Quick Revision Mode';
+        btn.style.background = 'rgba(16, 185, 129, 0.16)';
+        btn.style.color = '#34d399';
+        isAutoFilled = false;
+      }
+      updateProgress();
+    }
+
+    function revealRiddle(btn, answerText) {
+      btn.innerHTML = `<strong>✨ उत्तर: ${answerText}</strong>`;
+      btn.style.background = 'rgba(16, 185, 129, 0.25)';
+      btn.style.borderColor = '#10b981';
+      btn.style.color = '#a7f3d0';
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 30,
+          spread: 50,
+          origin: { y: 0.8 }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

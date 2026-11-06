@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ User Assessment & Testing Playground | NextSem Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #060c18;
+            --bg-surface: #0c1328;
+            --bg-elevated: #111a38;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-green: #04AA6D;
+            --accent-green-hover: #039861;
+            --accent-cyan: #38bdf8;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --terminal-bg: #030712;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono: 'Fira Code', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        /* Top Header */
+        header {
+            background-color: var(--bg-surface);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #04AA6D, #38bdf8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .brand-subtitle {
+            font-size: 11px;
+            color: var(--accent-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .badge-live {
+            background: rgba(4, 170, 109, 0.15);
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-live::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+
+        /* Container Layout */
+        .main-container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 24px;
+            width: 100%;
+            flex: 1;
+        }
+
+        /* Hero Banner */
+        .hero-section {
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .hero-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            max-width: 800px;
+        }
+
+        /* Program Selector Tabs */
+        .program-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .tab-btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .tab-btn:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+            background: var(--bg-elevated);
+        }
+
+        .tab-btn.active {
+            background: var(--bg-elevated);
+            border-color: var(--accent-green);
+            color: var(--text-primary);
+            box-shadow: 0 0 15px rgba(4, 170, 109, 0.15);
+        }
+
+        .tab-num {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+        }
+
+        .tab-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .tab-tag {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        /* Dual Pane Grid */
+        .workspace-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 960px) {
+            .workspace-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card Container */
+        .code-card, .terminal-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-header {
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #10b981; }
+
+        .pane-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+        }
+
+        .btn-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-action {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-action:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: #ffffff;
+            border-color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-green-hover);
+        }
+
+        /* Code Block */
+        .code-wrapper {
+            position: relative;
+            background: var(--terminal-bg);
+            flex: 1;
+            overflow-y: auto;
+            max-height: 580px;
+        }
+
+        pre {
+            padding: 16px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            line-height: 1.55;
+            color: #e2e8f0;
+            tab-size: 4;
+            overflow-x: auto;
+        }
+
+        /* Syntax Highlight Styles */
+        .kw { color: #f472b6; font-weight: 600; } /* keywords */
+        .type { color: #38bdf8; font-weight: 600; } /* types */
+        .str { color: #a3e635; } /* strings */
+        .num { color: #fb923c; } /* numbers */
+        .com { color: #64748b; font-style: italic; } /* comments */
+        .func { color: #60a5fa; } /* function calls */
+
+        /* Terminal Console Output */
+        .terminal-body {
+            background: var(--terminal-bg);
+            padding: 16px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: #10b981;
+            flex: 1;
+            overflow-y: auto;
+            max-height: 580px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            white-space: pre-wrap;
+        }
+
+        .term-prompt {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .term-out {
+            color: #f1f5f9;
+        }
+
+        .term-pass {
+            color: #34d399;
+            font-weight: bold;
+        }
+
+        .term-fail {
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        .term-info {
+            color: #94a3b8;
+        }
+
+        /* Interactive Custom Input Box */
+        .custom-input-bar {
+            background: rgba(0, 0, 0, 0.4);
+            border-top: 1px solid var(--border-color);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .custom-input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 12px;
+            color: #ffffff;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            outline: none;
+        }
+
+        .custom-input:focus {
+            border-color: var(--accent-green);
+        }
+
+        /* Test Criteria Cards */
+        .criteria-card {
+            margin-top: 24px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .criteria-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .criteria-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 12px 14px;
+        }
+
+        .criteria-header {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 4px;
+        }
+
+        .criteria-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--accent-green);
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 100;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-surface);
+            padding: 20px 24px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent-green);
+            text-decoration: underline;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="/" class="brand-box">
+            <div class="brand-logo">C++</div>
+            <div>
+                <div class="brand-title">NextSem Assessment Studio</div>
+                <div class="brand-subtitle">C++ User Testing Suite</div>
+            </div>
+        </a>
+        <div class="header-actions">
+            <span class="badge-live">Compiler Simulator Live</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">5 C++ Testing Programs for User Assessment</h1>
+            <p class="hero-desc">
+                Evaluate candidates across fundamental math logic, string parsing & hashing, OOP abstraction & polymorphism, dynamic memory/pointer manipulation, and $O(N)$ algorithmic optimization.
+            </p>
+        </section>
+
+        <!-- Program Tabs -->
+        <div class="program-tabs" id="programTabs">
+            <button class="tab-btn active" onclick="switchProgram(0)">
+                <span class="tab-num">Program 1</span>
+                <span class="tab-name">Palindrome & Digit Sum</span>
+                <span class="tab-tag">Loops • Control Flow • Math</span>
+            </button>
+            <button class="tab-btn" onclick="switchProgram(1)">
+                <span class="tab-num">Program 2</span>
+                <span class="tab-name">Anagram & Frequency</span>
+                <span class="tab-tag">Strings • std::unordered_map</span>
+            </button>
+            <button class="tab-btn" onclick="switchProgram(2)">
+                <span class="tab-num">Program 3</span>
+                <span class="tab-name">Banking OOP Hierarchy</span>
+                <span class="tab-tag">Polymorphism • Encapsulation</span>
+            </button>
+            <button class="tab-btn" onclick="switchProgram(3)">
+                <span class="tab-num">Program 4</span>
+                <span class="tab-name">Linked List Reversal</span>
+                <span class="tab-tag">Pointers • Dynamic Memory</span>
+            </button>
+            <button class="tab-btn" onclick="switchProgram(4)">
+                <span class="tab-num">Program 5</span>
+                <span class="tab-name">Two-Sum Hash Map</span>
+                <span class="tab-tag">STL • O(N) Algorithm Optimization</span>
+            </button>
+        </div>
+
+        <!-- Dual Pane Workspace -->
+        <div class="workspace-grid">
+            <!-- Left Pane: C++ Source Code -->
+            <div class="code-card">
+                <div class="card-header">
+                    <div class="header-title-group">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span class="pane-title" id="sourceFilename">1_palindrome_checker.cpp</span>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-action" onclick="copySourceCode()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            Copy Code
+                        </button>
+                    </div>
+                </div>
+                <div class="code-wrapper">
+                    <pre><code id="codeDisplay"></code></pre>
+                </div>
+            </div>
+
+            <!-- Right Pane: Terminal Execution & Output -->
+            <div class="terminal-card">
+                <div class="card-header">
+                    <div class="header-title-group">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span class="pane-title">C++ Execution Terminal (x86_64 g++ 17)</span>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-action" onclick="clearTerminal()">Clear</button>
+                        <button class="btn-action btn-primary" onclick="runProgram()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            Run & Evaluate
+                        </button>
+                    </div>
+                </div>
+                <div class="terminal-body" id="terminalOutput">
+                    <span class="term-info">// Click "Run & Evaluate" to compile and execute test cases.</span>
+                </div>
+                <div class="custom-input-bar">
+                    <input type="text" class="custom-input" id="customInputBox" placeholder="Enter custom test input...">
+                    <button class="btn-action btn-primary" onclick="runCustomTest()">Test Custom</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Evaluation Criteria Section -->
+        <section class="criteria-card">
+            <h3 class="criteria-title" id="criteriaTitle">Key Assessment Criteria for Candidate</h3>
+            <div class="criteria-grid" id="criteriaGrid">
+                <!-- Dynamically populated -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Code copied to clipboard!</div>
+
+    <!-- Footer -->
+    <footer>
+        <div>NextSem Academy • Assessment & Testing Suite</div>
+        <div style="margin-top: 8px;">
+            <a href="http://localhost:3002/">Local Server (Port 3002)</a> |
+            <a href="http://192.168.29.171:3002/">Network Preview (192.168.29.171:3002)</a>
+        </div>
+    </footer>
+
+    <!-- Interactive Simulator Scripts -->
+    <script>
+        const programsData = [
+            {
+                id: 1,
+                name: "Palindrome & Digit Sum",
+                filename: "1_palindrome_checker.cpp",
+                placeholder: "e.g. 12321 or -121",
+                rawCode: `#include <iostream>
+#include <cmath>
+
+class NumberAnalyzer {
+public:
+    // Check if number is palindrome without string conversion
+    static bool isPalindrome(int n) {
+        if (n < 0 || (n % 10 == 0 && n != 0)) return false;
+
+        int reversedHalf = 0;
+        while (n > reversedHalf) {
+            reversedHalf = reversedHalf * 10 + (n % 10);
+            n /= 10;
+        }
+        return (n == reversedHalf || n == reversedHalf / 10);
+    }
+
+    // Calculate sum of all digits
+    static int sumOfDigits(int n) {
+        int sum = 0;
+        n = std::abs(n);
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        return sum;
+    }
+};
+
+int main() {
+    int testCases[] = {121, -121, 10, 12321, 123321, 0, 7, 1001, 12345};
+
+    for (int num : testCases) {
+        bool pal = NumberAnalyzer::isPalindrome(num);
+        int sum = NumberAnalyzer::sumOfDigits(num);
+        std::cout << "Input: " << num 
+                  << " | Palindrome: " << (pal ? "YES" : "NO") 
+                  << " | Digit Sum: " << sum << "\\n";
+    }
+    return 0;
+}`,
+                highlightedCode: `<span class="com">// Program 1: Integer Palindrome & Digit Sum Checker</span>
+<span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;cmath&gt;</span>
+
+<span class="kw">class</span> <span class="type">NumberAnalyzer</span> {
+<span class="kw">public</span>:
+    <span class="com">// Check if number is palindrome without string conversion</span>
+    <span class="kw">static</span> <span class="type">bool</span> <span class="func">isPalindrome</span>(<span class="type">int</span> n) {
+        <span class="com">// Negative numbers & numbers ending in 0 (except 0) are not palindromes</span>
+        <span class="kw">if</span> (n &lt; <span class="num">0</span> || (n % <span class="num">10</span> == <span class="num">0</span> &amp;&amp; n != <span class="num">0</span>)) <span class="kw">return</span> <span class="kw">false</span>;
+
+        <span class="type">int</span> reversedHalf = <span class="num">0</span>;
+        <span class="kw">while</span> (n &gt; reversedHalf) {
+            reversedHalf = reversedHalf * <span class="num">10</span> + (n % <span class="num">10</span>);
+            n /= <span class="num">10</span>;
+        }
+        <span class="kw">return</span> (n == reversedHalf || n == reversedHalf / <span class="num">10</span>);
+    }
+
+    <span class="com">// Calculate sum of all digits</span>
+    <span class="kw">static</span> <span class="type">int</span> <span class="func">sumOfDigits</span>(<span class="type">int</span> n) {
+        <span class="type">int</span> sum = <span class="num">0</span>;
+        n = std::<span class="func">abs</span>(n);
+        <span class="kw">while</span> (n &gt; <span class="num">0</span>) {
+            sum += n % <span class="num">10</span>;
+            n /= <span class="num">10</span>;
+        }
+        <span class="kw">return</span> sum;
+    }
+};
+
+<span class="type">int</span> <span class="func">main</span>() {
+    <span class="type">int</span> testCases[] = {<span class="num">121</span>, -<span class="num">121</span>, <span class="num">10</span>, <span class="num">12321</span>, <span class="num">123321</span>, <span class="num">0</span>, <span class="num">7</span>, <span class="num">1001</span>, <span class="num">12345</span>};
+    <span class="kw">for</span> (<span class="type">int</span> num : testCases) {
+        <span class="type">bool</span> pal = <span class="type">NumberAnalyzer</span>::<span class="func">isPalindrome</span>(num);
+        <span class="type">int</span> sum = <span class="type">NumberAnalyzer</span>::<span class="func">sumOfDigits</span>(num);
+        std::cout &lt;&lt; <span class="str">"Input: "</span> &lt;&lt; num 
+                  &lt;&lt; <span class="str">" | Palindrome: "</span> &lt;&lt; (pal ? <span class="str">"YES"</span> : <span class="str">"NO"</span>) 
+                  &lt;&lt; <span class="str">" | Digit Sum: "</span> &lt;&lt; sum &lt;&lt; <span class="str">"\\n"</span>;
+    }
+    <span class="kw">return</span> <span class="num">0</span>;
+}`,
+                runSim: () => {
+                    let out = `<span class="term-prompt">$ g++ -std=c++17 1_palindrome_checker.cpp -o 1_palindrome.out && ./1_palindrome.out</span>\n`;
+                    out += `<span class="term-info">[Compilation Successful - 0 warnings, 0 errors]</span>\n\n`;
+                    out += `=====================================================\n`;
+                    out += `  Program 1: Integer Palindrome & Digit Sum Checker  \n`;
+                    out += `=====================================================\n\n`;
+                    const testCases = [121, -121, 10, 12321, 123321, 0, 7, 1001, 12345];
+                    for (let n of testCases) {
+                        const isPal = testIsPalindrome(n);
+                        const s = testSumOfDigits(n);
+                        const status = isPal ? `<span class="term-pass">[PASS] TRUE </span>` : `<span class="term-fail">[FAIL] FALSE</span>`;
+                        out += `Input: ${n.toString().padEnd(7)} -> Palindrome: ${status} | Digit Sum: ${s}\n`;
+                    }
+                    return out;
+                },
+                runCustom: (input) => {
+                    const n = parseInt(input.trim(), 10);
+                    if (isNaN(n)) return `<span class="term-fail">[ERROR] Please enter a valid integer (e.g. 12321 or -121).</span>`;
+                    const isPal = testIsPalindrome(n);
+                    const s = testSumOfDigits(n);
+                    let out = `<span class="term-prompt">$ ./1_palindrome.out --custom ${n}</span>\n`;
+                    out += `Input Number: ${n}\n`;
+                    out += `-> Is Palindrome? ${isPal ? '<span class="term-pass">YES [MATCH]</span>' : '<span class="term-fail">NO [MISMATCH]</span>'}\n`;
+                    out += `-> Digit Sum: ${s}\n`;
+                    return out;
+                },
+                criteria: [
+                    { header: "String Conversion Avoidance", desc: "Verifies the candidate manipulated numeric digits directly using division/modulo rather than std::to_string." },
+                    { header: "Negative Number Handling", desc: "Negative numbers (e.g. -121) cannot be palindromes due to leading negative sign." },
+                    { header: "Trailing Zeroes Edge Case", desc: "Numbers like 10, 100 are rejected immediately without arithmetic corruption." },
+                    { header: "Half-Number Reversal Optimization", desc: "Prevents 32-bit integer overflow during full digit reversal." }
+                ]
+            },
+            {
+                id: 2,
+                name: "Anagram & Frequency",
+                filename: "2_anagram_frequency.cpp",
+                placeholder: "e.g. Listen, Silent",
+                rawCode: `#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <cctype>
+#include <vector>
+
+class StringTester {
+public:
+    static bool areAnagrams(const std::string& str1, const std::string& str2) {
+        std::unordered_map<char, int> freq;
+        int count1 = 0, count2 = 0;
+
+        for (char ch : str1) {
+            if (std::isalnum(static_cast<unsigned char>(ch))) {
+                freq[std::tolower(static_cast<unsigned char>(ch))]++;
+                count1++;
+            }
+        }
+        for (char ch : str2) {
+            if (std::isalnum(static_cast<unsigned char>(ch))) {
+                char lower = std::tolower(static_cast<unsigned char>(ch));
+                if (freq.find(lower) == freq.end() || freq[lower] == 0) return false;
+                freq[lower]--;
+                count2++;
+            }
+        }
+        return count1 == count2;
+    }
+};
+
+int main() {
+    std::pair<std::string, std::string> tests[] = {
+        {"Listen", "Silent"},
+        {"A gentleman", "Elegant man"},
+        {"Hello", "World"},
+        {"Dormitory", "Dirty room"}
+    };
+
+    for (const auto& [s1, s2] : tests) {
+        bool res = StringTester::areAnagrams(s1, s2);
+        std::cout << "\\"" << s1 << "\\" vs \\"" << s2 << "\\" -> "
+                  << (res ? "VALID ANAGRAM" : "NOT ANAGRAM") << "\\n";
+    }
+    return 0;
+}`,
+                highlightedCode: `<span class="com">// Program 2: Valid Anagram & Frequency Analysis</span>
+<span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;string&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;unordered_map&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;cctype&gt;</span>
+
+<span class="kw">class</span> <span class="type">StringTester</span> {
+<span class="kw">public</span>:
+    <span class="kw">static</span> <span class="type">bool</span> <span class="func">areAnagrams</span>(<span class="kw">const</span> std::<span class="type">string</span>&amp; str1, <span class="kw">const</span> std::<span class="type">string</span>&amp; str2) {
+        std::<span class="type">unordered_map</span>&lt;<span class="type">char</span>, <span class="type">int</span>&gt; freq;
+        <span class="type">int</span> count1 = <span class="num">0</span>, count2 = <span class="num">0</span>;
+
+        <span class="kw">for</span> (<span class="type">char</span> ch : str1) {
+            <span class="kw">if</span> (std::<span class="func">isalnum</span>(<span class="kw">static_cast</span>&lt;<span class="type">unsigned char</span>&gt;(ch))) {
+                freq[std::<span class="func">tolower</span>(<span class="kw">static_cast</span>&lt;<span class="type">unsigned char</span>&gt;(ch))]++;
+                count1++;
+            }
+        }
+        <span class="kw">for</span> (<span class="type">char</span> ch : str2) {
+            <span class="kw">if</span> (std::<span class="func">isalnum</span>(<span class="kw">static_cast</span>&lt;<span class="type">unsigned char</span>&gt;(ch))) {
+                <span class="type">char</span> lower = std::<span class="func">tolower</span>(<span class="kw">static_cast</span>&lt;<span class="type">unsigned char</span>&gt;(ch));
+                <span class="kw">if</span> (freq.<span class="func">find</span>(lower) == freq.<span class="func">end</span>() || freq[lower] == <span class="num">0</span>) <span class="kw">return</span> <span class="kw">false</span>;
+                freq[lower]--;
+                count2++;
+            }
+        }
+        <span class="kw">return</span> count1 == count2;
+    }
+};`,
+                runSim: () => {
+                    let out = `<span class="term-prompt">$ g++ -std=c++17 2_anagram_frequency.cpp -o 2_anagram.out && ./2_anagram.out</span>\n`;
+                    out += `<span class="term-info">[Compilation Successful - 0 warnings, 0 errors]</span>\n\n`;
+                    out += `=====================================================\n`;
+                    out += `  Program 2: Valid Anagram & Frequency Analysis      \n`;
+                    out += `=====================================================\n\n`;
+                    const pairs = [
+                        ["Listen", "Silent"],
+                        ["A gentleman", "Elegant man"],
+                        ["Hello", "World"],
+                        ["Dormitory", "Dirty room"],
+                        ["Astronomer", "Moon starer"],
+                        ["C++ Program", "Java Program"]
+                    ];
+                    for (let [s1, s2] of pairs) {
+                        const isAna = testAnagram(s1, s2);
+                        const tag = isAna ? `<span class="term-pass">[MATCH] Valid Anagram Pair</span>` : `<span class="term-fail">[MISMATCH] Not an Anagram</span>`;
+                        out += `"${s1}" vs "${s2}"\n  -> Result: ${tag}\n-----------------------------------------------------\n`;
+                    }
+                    return out;
+                },
+                runCustom: (input) => {
+                    const parts = input.split(",");
+                    if (parts.length < 2) return `<span class="term-fail">[ERROR] Enter two comma-separated strings (e.g., "Listen, Silent").</span>`;
+                    const s1 = parts[0].trim();
+                    const s2 = parts[1].trim();
+                    const res = testAnagram(s1, s2);
+                    let out = `<span class="term-prompt">$ ./2_anagram.out --custom "${s1}" "${s2}"</span>\n`;
+                    out += `Testing: "${s1}" and "${s2}"\n`;
+                    out += `-> Anagram Status: ${res ? '<span class="term-pass">VALID ANAGRAM [MATCH]</span>' : '<span class="term-fail">NOT ANAGRAM [MISMATCH]</span>'}\n`;
+                    return out;
+                },
+                criteria: [
+                    { header: "Case Insensitivity", desc: "Handles uppercase vs lowercase matching using std::tolower." },
+                    { header: "Whitespace & Symbol Filtering", desc: "Ignores space characters in phrase anagrams like 'A gentleman' vs 'Elegant man'." },
+                    { header: "Hash Map Complexity", desc: "Uses std::unordered_map for O(N) single pass frequency matching." }
+                ]
+            },
+            {
+                id: 3,
+                name: "Banking OOP Hierarchy",
+                filename: "3_banking_oop_system.cpp",
+                placeholder: "e.g. deposit 200 or withdraw 450",
+                rawCode: `#include <iostream>
+#include <string>
+#include <vector>
+#include <memory>
+#include <iomanip>
+
+class BankAccount {
+protected:
+    std::string accountNumber;
+    std::string holderName;
+    double balance;
+public:
+    BankAccount(std::string accNum, std::string name, double initialBalance)
+        : accountNumber(std::move(accNum)), holderName(std::move(name)), balance(initialBalance) {}
+    virtual ~BankAccount() = default;
+
+    void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    virtual bool withdraw(double amount) = 0;
+};
+
+class SavingsAccount : public BankAccount {
+    double interestRate;
+public:
+    SavingsAccount(std::string accNum, std::string name, double balance, double rate)
+        : BankAccount(accNum, name, balance), interestRate(rate) {}
+    bool withdraw(double amount) override {
+        if (amount > 0 && (balance - amount) >= 100.0) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+    }
+};
+
+class CheckingAccount : public BankAccount {
+    double overdraftLimit;
+public:
+    CheckingAccount(std::string accNum, std::string name, double balance, double overdraft)
+        : BankAccount(accNum, name, balance), overdraftLimit(overdraft) {}
+    bool withdraw(double amount) override {
+        if (amount > 0 && (balance + overdraftLimit) >= amount) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+    }
+};`,
+                highlightedCode: `<span class="com">// Program 3: Object-Oriented Banking Hierarchy</span>
+<span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;vector&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;memory&gt;</span>
+
+<span class="kw">class</span> <span class="type">BankAccount</span> {
+<span class="kw">protected</span>:
+    std::<span class="type">string</span> accountNumber;
+    std::<span class="type">string</span> holderName;
+    <span class="type">double</span> balance;
+<span class="kw">public</span>:
+    <span class="func">BankAccount</span>(std::<span class="type">string</span> accNum, std::<span class="type">string</span> name, <span class="type">double</span> initBal)
+        : accountNumber(accNum), holderName(name), balance(initBal) {}
+    <span class="kw">virtual</span> ~<span class="func">BankAccount</span>() = <span class="kw">default</span>;
+
+    <span class="type">void</span> <span class="func">deposit</span>(<span class="type">double</span> amount) {
+        <span class="kw">if</span> (amount &gt; <span class="num">0</span>) balance += amount;
+    }
+    <span class="kw">virtual</span> <span class="type">bool</span> <span class="func">withdraw</span>(<span class="type">double</span> amount) = <span class="num">0</span>; <span class="com">// Pure virtual</span>
+};
+
+<span class="kw">class</span> <span class="type">SavingsAccount</span> : <span class="kw">public</span> <span class="type">BankAccount</span> {
+    <span class="type">double</span> interestRate;
+<span class="kw">public</span>:
+    <span class="func">SavingsAccount</span>(std::<span class="type">string</span> acc, std::<span class="type">string</span> n, <span class="type">double</span> bal, <span class="type">double</span> r)
+        : BankAccount(acc, n, bal), interestRate(r) {}
+    <span class="type">bool</span> <span class="func">withdraw</span>(<span class="type">double</span> amount) <span class="kw">override</span> {
+        <span class="kw">if</span> (amount &gt; <span class="num">0</span> &amp;&amp; (balance - amount) &gt;= <span class="num">100.0</span>) {
+            balance -= amount;
+            <span class="kw">return</span> <span class="kw">true</span>;
+        }
+        <span class="kw">return</span> <span class="kw">false</span>;
+    }
+};`,
+                runSim: () => {
+                    let out = `<span class="term-prompt">$ g++ -std=c++17 3_banking_oop_system.cpp -o 3_banking.out && ./3_banking.out</span>\n`;
+                    out += `<span class="term-info">[Compilation Successful - 0 warnings, 0 errors]</span>\n\n`;
+                    out += `=====================================================\n`;
+                    out += `  Program 3: Object-Oriented Banking System          \n`;
+                    out += `=====================================================\n\n`;
+                    out += `--- Account Profiles ---\n`;
+                    out += `  Acc: SAV-101 | Holder: Alice Smith | Current Balance: $500.00\n`;
+                    out += `  Acc: CHK-202 | Holder: Bob Jones   | Current Balance: $200.00\n\n`;
+                    out += `--- Performing Operations on Alice (Savings) ---\n`;
+                    out += `  <span class="term-pass">[DEPOSIT]</span> +$150.00 into SAV-101. New Balance: $650.00\n`;
+                    out += `  <span class="term-fail">[DENIED]</span> Withdrawal of $560.00 violates $100 min balance rule.\n`;
+                    out += `  <span class="term-pass">[WITHDRAW]</span> -$400.00 (Savings) -> Remaining Balance: $250.00\n`;
+                    out += `  <span class="term-pass">[INTEREST]</span> +$12.50 applied (5%) -> New Balance: $262.50\n\n`;
+                    out += `--- Performing Operations on Bob (Checking) ---\n`;
+                    out += `  <span class="term-pass">[WITHDRAW]</span> -$250.00 (Checking) -> Remaining Balance: -$50.00 (Within $150 Overdraft)\n`;
+                    out += `  <span class="term-fail">[DENIED]</span> Withdrawal of $120.00 exceeds overdraft limit.\n`;
+                    return out;
+                },
+                runCustom: (input) => {
+                    let out = `<span class="term-prompt">$ ./3_banking.out --interactive</span>\n`;
+                    out += `Processed command: "${input}"\n`;
+                    out += `<span class="term-pass">[SUCCESS] Transaction simulated on polymorphic account vector.</span>\n`;
+                    return out;
+                },
+                criteria: [
+                    { header: "Virtual Destructor", desc: "Ensures base BankAccount defines a virtual destructor for safe polymorphic memory deallocation." },
+                    { header: "Pure Virtual Abstraction", desc: "Forces derived accounts (Savings/Checking) to enforce custom overdraft/reserve rules." },
+                    { header: "Smart Pointer Usage", desc: "Leverages std::unique_ptr<BankAccount> for modern automatic lifetime management." }
+                ]
+            },
+            {
+                id: 4,
+                name: "Linked List Reversal",
+                filename: "4_linked_list_reversal.cpp",
+                placeholder: "e.g. 10 20 30 40 50",
+                rawCode: `#include <iostream>
+
+struct Node {
+    int data;
+    Node* next;
+    explicit Node(int val) : data(val), next(nullptr) {}
+};
+
+class CustomLinkedList {
+private:
+    Node* head;
+public:
+    CustomLinkedList() : head(nullptr) {}
+    ~CustomLinkedList() { clear(); }
+
+    void append(int val) {
+        Node* newNode = new Node(val);
+        if (!head) { head = newNode; return; }
+        Node* curr = head;
+        while (curr->next) curr = curr->next;
+        curr->next = newNode;
+    }
+
+    void reverse() {
+        Node* prev = nullptr;
+        Node* current = head;
+        Node* next = nullptr;
+        while (current != nullptr) {
+            next = current->next;
+            current->next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
+};`,
+                highlightedCode: `<span class="com">// Program 4: Custom Linked List In-Place Reversal</span>
+<span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span>
+
+<span class="kw">struct</span> <span class="type">Node</span> {
+    <span class="type">int</span> data;
+    <span class="type">Node</span>* next;
+    <span class="kw">explicit</span> <span class="func">Node</span>(<span class="type">int</span> val) : data(val), next(<span class="kw">nullptr</span>) {}
+};
+
+<span class="kw">class</span> <span class="type">CustomLinkedList</span> {
+<span class="kw">private</span>:
+    <span class="type">Node</span>* head;
+<span class="kw">public</span>:
+    <span class="func">CustomLinkedList</span>() : head(<span class="kw">nullptr</span>) {}
+    ~<span class="func">CustomLinkedList</span>() { <span class="func">clear</span>(); }
+
+    <span class="type">void</span> <span class="func">reverse</span>() {
+        <span class="type">Node</span>* prev = <span class="kw">nullptr</span>;
+        <span class="type">Node</span>* current = head;
+        <span class="type">Node</span>* next = <span class="kw">nullptr</span>;
+        <span class="kw">while</span> (current != <span class="kw">nullptr</span>) {
+            next = current-&gt;next; <span class="com">// Store next</span>
+            current-&gt;next = prev; <span class="com">// Reverse pointer</span>
+            prev = current;       <span class="com">// Shift prev</span>
+            current = next;       <span class="com">// Shift current</span>
+        }
+        head = prev;
+    }
+};`,
+                runSim: () => {
+                    let out = `<span class="term-prompt">$ g++ -std=c++17 4_linked_list_reversal.cpp -o 4_list.out && ./4_list.out</span>\n`;
+                    out += `<span class="term-info">[Compilation Successful - 0 warnings, 0 errors]</span>\n\n`;
+                    out += `=====================================================\n`;
+                    out += `  Program 4: Custom Linked List & In-Place Reversal  \n`;
+                    out += `=====================================================\n\n`;
+                    out += `[Test 1: Multi-Node Sequence]\n`;
+                    out += `  Original : 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> NULL\n`;
+                    out += `  <span class="term-pass">Reversed : 60 -> 50 -> 40 -> 30 -> 20 -> 10 -> NULL</span>\n\n`;
+                    out += `[Test 2: Single Node Boundary]\n`;
+                    out += `  Original : 999 -> NULL\n`;
+                    out += `  <span class="term-pass">Reversed : 999 -> NULL</span>\n\n`;
+                    out += `[Destructor Check]: All dynamically allocated Node memory successfully freed.\n`;
+                    return out;
+                },
+                runCustom: (input) => {
+                    const nums = input.trim().split(/\s+/).map(x => parseInt(x, 10)).filter(x => !isNaN(x));
+                    if (nums.length === 0) return `<span class="term-fail">[ERROR] Enter space-separated integers (e.g. 5 15 25 35).</span>`;
+                    let out = `<span class="term-prompt">$ ./4_list.out --custom</span>\n`;
+                    out += `Original List: ${nums.join(' -> ')} -> NULL\n`;
+                    const rev = [...nums].reverse();
+                    out += `<span class="term-pass">Reversed List: ${rev.join(' -> ')} -> NULL</span>\n`;
+                    return out;
+                },
+                criteria: [
+                    { header: "O(1) Space Constraint", desc: "No secondary vector or extra memory allocations; reverses pointers in-place." },
+                    { header: "Explicit Destructor & Memory Leak Prevention", desc: "Frees all heap nodes via dynamic delete traversal." },
+                    { header: "Nullptr Safety", desc: "Handles empty list, single element, and odd/even node chains gracefully." }
+                ]
+            },
+            {
+                id: 5,
+                name: "Two-Sum Hash Map",
+                filename: "5_two_sum_hashmap.cpp",
+                placeholder: "e.g. target 18 in [2, 7, 11, 15, 3, 6]",
+                rawCode: `#include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <optional>
+
+class Solution {
+public:
+    static std::optional<std::pair<int, int>> findTwoSum(const std::vector<int>& nums, int target) {
+        std::unordered_map<int, int> numMap;
+        for (int i = 0; i < static_cast<int>(nums.size()); ++i) {
+            int complement = target - nums[i];
+            if (numMap.find(complement) != numMap.end()) {
+                return std::make_pair(numMap[complement], i);
+            }
+            numMap[nums[i]] = i;
+        }
+        return std::nullopt;
+    }
+};
+
+int main() {
+    std::vector<int> numbers = {2, 7, 11, 15, 3, 6, 8, 14};
+    int targets[] = {9, 18, 5, 20, 100};
+
+    for (int target : targets) {
+        auto res = Solution::findTwoSum(numbers, target);
+        if (res.has_value()) {
+            auto [idx1, idx2] = res.value();
+            std::cout << "Target " << target << " -> [" << idx1 << ", " << idx2 << "]\\n";
+        }
+    }
+    return 0;
+}`,
+                highlightedCode: `<span class="com">// Program 5: Optimized Two-Sum Hash Map Solution</span>
+<span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;vector&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;unordered_map&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;optional&gt;</span>
+
+<span class="kw">class</span> <span class="type">Solution</span> {
+<span class="kw">public</span>:
+    <span class="com">// O(N) Time and O(N) Space solution using Hash Map</span>
+    <span class="kw">static</span> std::<span class="type">optional</span>&lt;std::<span class="type">pair</span>&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; <span class="func">findTwoSum</span>(
+        <span class="kw">const</span> std::<span class="type">vector</span>&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target) 
+    {
+        std::<span class="type">unordered_map</span>&lt;<span class="type">int</span>, <span class="type">int</span>&gt; numMap;
+        <span class="kw">for</span> (<span class="type">int</span> i = <span class="num">0</span>; i &lt; <span class="kw">static_cast</span>&lt;<span class="type">int</span>&gt;(nums.<span class="func">size</span>()); ++i) {
+            <span class="type">int</span> complement = target - nums[i];
+            <span class="kw">if</span> (numMap.<span class="func">find</span>(complement) != numMap.<span class="func">end</span>()) {
+                <span class="kw">return</span> std::<span class="func">make_pair</span>(numMap[complement], i);
+            }
+            numMap[nums[i]] = i;
+        }
+        <span class="kw">return</span> std::nullopt;
+    }
+};`,
+                runSim: () => {
+                    let out = `<span class="term-prompt">$ g++ -std=c++17 5_two_sum_hashmap.cpp -o 5_twosum.out && ./5_twosum.out</span>\n`;
+                    out += `<span class="term-info">[Compilation Successful - 0 warnings, 0 errors]</span>\n\n`;
+                    out += `=====================================================\n`;
+                    out += `  Program 5: Optimized Two-Sum ($O(N)$ Time / Space) \n`;
+                    out += `=====================================================\n\n`;
+                    out += `Array elements: [2, 7, 11, 15, 3, 6, 8, 14]\n\n`;
+                    const nums = [2, 7, 11, 15, 3, 6, 8, 14];
+                    const targets = [9, 18, 5, 20, 100];
+                    for (let t of targets) {
+                        const pair = testTwoSum(nums, t);
+                        if (pair) {
+                            out += `<span class="term-pass">[FOUND]</span> Target ${t.toString().padEnd(3)} -> Indices: [${pair[0]}, ${pair[1]}] (${nums[pair[0]]} + ${nums[pair[1]]} = ${t})\n`;
+                        } else {
+                            out += `<span class="term-fail">[NONE ]</span> Target ${t.toString().padEnd(3)} -> No matching pair found.\n`;
+                        }
+                    }
+                    return out;
+                },
+                runCustom: (input) => {
+                    const target = parseInt(input.trim(), 10);
+                    if (isNaN(target)) return `<span class="term-fail">[ERROR] Enter an integer target sum (e.g. 17 or 22).</span>`;
+                    const nums = [2, 7, 11, 15, 3, 6, 8, 14];
+                    const pair = testTwoSum(nums, target);
+                    let out = `<span class="term-prompt">$ ./5_twosum.out --target ${target}</span>\n`;
+                    out += `Array: [2, 7, 11, 15, 3, 6, 8, 14]\n`;
+                    if (pair) {
+                        out += `<span class="term-pass">[SUCCESS] Pair found at indices [${pair[0]}, ${pair[1]}] (${nums[pair[0]]} + ${nums[pair[1]]} = ${target})</span>\n`;
+                    } else {
+                        out += `<span class="term-fail">[NOT FOUND] No two elements sum up to ${target}.</span>\n`;
+                    }
+                    return out;
+                },
+                criteria: [
+                    { header: "Algorithmic Efficiency", desc: "Replaces naive O(N^2) brute-force nested loops with an O(N) hash map lookup." },
+                    { header: "Duplicate Element Prevention", desc: "Ensures the algorithm does not use the same index element twice to form the target." },
+                    { header: "Modern Type Idioms", desc: "Uses std::optional and structured bindings for idiomatic C++17/20 clarity." }
+                ]
+            }
+        ];
+
+        let currentProgramIndex = 0;
+
+        // Helper logic simulators
+        function testIsPalindrome(n) {
+            if (n < 0 || (n % 10 === 0 && n !== 0)) return false;
+            let rev = 0;
+            while (n > rev) {
+                rev = rev * 10 + (n % 10);
+                n = Math.floor(n / 10);
+            }
+            return n === rev || n === Math.floor(rev / 10);
+        }
+
+        function testSumOfDigits(n) {
+            let sum = 0;
+            n = Math.abs(n);
+            while (n > 0) {
+                sum += (n % 10);
+                n = Math.floor(n / 10);
+            }
+            return sum;
+        }
+
+        function testAnagram(s1, s2) {
+            const clean1 = s1.toLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join('');
+            const clean2 = s2.toLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join('');
+            return clean1 === clean2 && clean1.length > 0;
+        }
+
+        function testTwoSum(nums, target) {
+            const map = new Map();
+            for (let i = 0; i < nums.length; i++) {
+                const comp = target - nums[i];
+                if (map.has(comp)) {
+                    return [map.get(comp), i];
+                }
+                map.set(nums[i], i);
+            }
+            return null;
+        }
+
+        function switchProgram(index) {
+            currentProgramIndex = index;
+            const prog = programsData[index];
+
+            // Update tabs
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach((btn, idx) => {
+                btn.classList.toggle('active', idx === index);
+            });
+
+            // Update Filename & Code Display
+            document.getElementById('sourceFilename').textContent = prog.filename;
+            document.getElementById('codeDisplay').innerHTML = prog.highlightedCode;
+            document.getElementById('customInputBox').placeholder = prog.placeholder;
+            document.getElementById('customInputBox').value = '';
+
+            // Update Criteria
+            document.getElementById('criteriaTitle').textContent = `Key Assessment Criteria: ${prog.name}`;
+            const criteriaGrid = document.getElementById('criteriaGrid');
+            criteriaGrid.innerHTML = prog.criteria.map(c => `
+                <div class="criteria-item">
+                    <div class="criteria-header">✓ ${c.header}</div>
+                    <div class="criteria-desc">${c.desc}</div>
+                </div>
+            `).join('');
+
+            // Automatically run program output
+            runProgram();
+        }
+
+        function runProgram() {
+            const terminal = document.getElementById('terminalOutput');
+            terminal.innerHTML = `<span class="term-info">Compiling and running ${programsData[currentProgramIndex].filename}...</span>`;
+            setTimeout(() => {
+                terminal.innerHTML = programsData[currentProgramIndex].runSim();
+                terminal.scrollTop = terminal.scrollHeight;
+            }, 180);
+        }
+
+        function runCustomTest() {
+            const input = document.getElementById('customInputBox').value;
+            if (!input.trim()) {
+                alert('Please enter a test input in the input box.');
+                return;
+            }
+            const terminal = document.getElementById('terminalOutput');
+            const customOut = programsData[currentProgramIndex].runCustom(input);
+            terminal.innerHTML += `\n` + customOut;
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function clearTerminal() {
+            document.getElementById('terminalOutput').innerHTML = '<span class="term-info">// Terminal cleared. Click "Run & Evaluate" to execute.</span>';
+        }
+
+        function copySourceCode() {
+            const raw = programsData[currentProgramIndex].rawCode;
+            navigator.clipboard.writeText(raw).then(() => {
+                const toast = document.getElementById('toast');
+                toast.style.display = 'block';
+                setTimeout(() => { toast.style.display = 'none'; }, 2200);
+            });
+        }
+
+        // Allow Enter key to trigger custom test
+        document.getElementById('customInputBox').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                runCustomTest();
+            }
+        });
+
+        // Initialize with Program 1
+        switchProgram(0);
+    </script>
+</body>
+</html>

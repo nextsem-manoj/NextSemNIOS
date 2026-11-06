@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Input Elements Masterclass & Interactive Playground | Nextsem</title>
+  <meta name="description" content="Comprehensive, interactive showcase and playground of all HTML5 input types, attributes, validation rules, and real-world form examples.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #0a0e17;
+      --bg-surface: #111827;
+      --bg-surface-elevated: #1a2234;
+      --bg-glass: rgba(17, 24, 39, 0.7);
+      --bg-glass-card: rgba(26, 34, 52, 0.65);
+      
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(99, 102, 241, 0.5);
+      --border-glow: rgba(99, 102, 241, 0.35);
+
+      --accent-primary: #6366f1;
+      --accent-primary-hover: #4f46e5;
+      --accent-secondary: #8b5cf6;
+      --accent-emerald: #10b981;
+      --accent-emerald-subtle: rgba(16, 185, 129, 0.15);
+      --accent-amber: #f59e0b;
+      --accent-amber-subtle: rgba(245, 158, 11, 0.15);
+      --accent-rose: #f43f5e;
+      --accent-rose-subtle: rgba(244, 63, 94, 0.15);
+      --accent-cyan: #06b6d4;
+      --accent-cyan-subtle: rgba(6, 182, 212, 0.15);
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-full: 9999px;
+
+      --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+      --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.25);
+
+      --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Light Theme Overrides */
+    [data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-glass: rgba(255, 255, 255, 0.85);
+      --bg-glass-card: rgba(255, 255, 255, 0.9);
+      
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-focus: rgba(99, 102, 241, 0.6);
+      --border-glow: rgba(99, 102, 241, 0.2);
+
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+
+      --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+      --shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Ambient Background Glow */
+    .ambient-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 30px 20px 80px 20px;
+    }
+
+    /* Header Styling */
+    .app-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .header-pill span.pulse {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-emerald);
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px var(--accent-emerald);
+      animation: pulseAnim 2s infinite;
+    }
+
+    @keyframes pulseAnim {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+
+    .app-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    [data-theme="light"] .app-title {
+      background: linear-gradient(135deg, #0f172a 0%, #334155 60%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .app-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 28px auto;
+    }
+
+    /* Top Action Bar & Theme Toggle */
+    .top-action-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .mode-tab-group {
+      display: flex;
+      background: var(--bg-surface-elevated);
+      padding: 5px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .mode-tab-btn {
+      padding: 9px 22px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-base);
+    }
+
+    .mode-tab-btn:hover {
+      color: var(--text-main);
+    }
+
+    .mode-tab-btn.active {
+      background: var(--accent-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .theme-toggle-btn:hover {
+      transform: rotate(20deg) scale(1.05);
+      border-color: var(--border-focus);
+    }
+
+    /* Search & Filter Bar */
+    .search-filter-section {
+      background: var(--bg-glass);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 18px 24px;
+      margin-bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .search-box-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-subtle);
+      pointer-events: none;
+      font-size: 1.1rem;
+    }
+
+    .main-search-input {
+      width: 100%;
+      padding: 14px 18px 14px 48px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      transition: var(--transition-base);
+    }
+
+    .main-search-input:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    .filter-chips-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-chip-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .chip-btn {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition-base);
+    }
+
+    .chip-btn:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .chip-btn.active {
+      background: rgba(99, 102, 241, 0.15);
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      font-weight: 600;
+    }
+
+    /* Views Layout */
+    .tab-view {
+      display: none;
+    }
+
+    .tab-view.active {
+      display: block;
+      animation: fadeIn 0.35s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Catalog Grid */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 500px) {
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Input Card Component */
+    .input-card {
+      background: var(--bg-glass-card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-base);
+      position: relative;
+    }
+
+    .input-card:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .card-title-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      background: var(--accent-cyan-subtle);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      width: fit-content;
+    }
+
+    .card-heading {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .card-description {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Interactive Input Demo Area */
+    .demo-field-wrap {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .demo-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .validity-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--transition-base);
+    }
+
+    .validity-pill.valid {
+      background: var(--accent-emerald-subtle);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .validity-pill.invalid {
+      background: var(--accent-rose-subtle);
+      color: var(--accent-rose);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .validity-pill.neutral {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-subtle);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Standard Interactive Inputs in Card */
+    .card-input {
+      width: 100%;
+      padding: 11px 14px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: var(--transition-base);
+    }
+
+    .card-input:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    .card-input:invalid:not(:placeholder-shown) {
+      border-color: var(--accent-rose);
+    }
+
+    .card-input:valid:not(:placeholder-shown) {
+      border-color: var(--accent-emerald);
+    }
+
+    /* Specific Form Controls */
+    input[type="color"].color-picker-input {
+      height: 48px;
+      padding: 4px;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+    }
+
+    input[type="range"] {
+      accent-color: var(--accent-primary);
+      cursor: pointer;
+      height: 6px;
+      margin: 10px 0;
+    }
+
+    .range-value-display {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-subtle);
+      font-family: var(--font-mono);
+    }
+
+    .range-output-badge {
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: var(--accent-cyan-subtle);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .checkbox-radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .custom-check-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .custom-check-label input[type="checkbox"],
+    .custom-check-label input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent-primary);
+      cursor: pointer;
+    }
+
+    /* Toggle Switch Component */
+    .switch-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 0;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 26px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider-toggle {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      transition: .3s;
+      border-radius: 34px;
+    }
+
+    .slider-toggle:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #cbd5e1;
+      transition: .3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider-toggle {
+      background-color: var(--accent-primary);
+      border-color: var(--accent-primary);
+    }
+
+    input:checked + .slider-toggle:before {
+      transform: translateX(22px);
+      background-color: #ffffff;
+    }
+
+    /* Live Value Inspector Strip */
+    .live-value-strip {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      border-top: 1px dashed var(--border-subtle);
+      padding-top: 8px;
+      word-break: break-all;
+    }
+
+    .live-value-code {
+      font-family: var(--font-mono);
+      color: var(--accent-amber);
+      font-weight: 500;
+    }
+
+    /* Attributes Tag Row */
+    .attr-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .attr-tag {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      padding: 2px 7px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+
+    /* Copy Code Button */
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .btn-copy-code {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-base);
+    }
+
+    .btn-copy-code:hover {
+      background: var(--bg-surface-elevated);
+      color: var(--accent-primary);
+      border-color: var(--border-focus);
+    }
+
+    .tag-category {
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Password Input Wrap with Eye Toggle */
+    .password-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .password-wrap input {
+      padding-right: 42px;
+    }
+
+    .btn-eye-toggle {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: var(--text-subtle);
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-eye-toggle:hover {
+      color: var(--text-main);
+    }
+
+    /* Real-World Form Tab Styling */
+    .form-tab-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .realworld-form-card {
+      background: var(--bg-glass-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-elevated);
+    }
+
+    @media (max-width: 600px) {
+      .realworld-form-card {
+        padding: 20px 16px;
+      }
+    }
+
+    .form-card-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .form-card-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .form-card-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .semantic-fieldset {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 26px;
+      background: rgba(17, 24, 39, 0.4);
+    }
+
+    .semantic-legend {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .form-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .form-group label span.req {
+      color: var(--accent-rose);
+    }
+
+    .form-hint {
+      font-size: 0.78rem;
+      color: var(--text-subtle);
+    }
+
+    .unified-input {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: var(--transition-base);
+    }
+
+    .unified-input:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    .password-strength-bar {
+      height: 4px;
+      width: 100%;
+      background: var(--bg-surface-elevated);
+      border-radius: var(--radius-full);
+      margin-top: 4px;
+      overflow: hidden;
+    }
+
+    .password-strength-fill {
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    /* Drag & Drop File Upload Container */
+    .file-dropzone {
+      border: 2px dashed var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+      background: rgba(17, 24, 39, 0.3);
+      cursor: pointer;
+      transition: var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .file-dropzone:hover {
+      border-color: var(--accent-primary);
+      background: rgba(99, 102, 241, 0.05);
+    }
+
+    .file-dropzone input[type="file"] {
+      display: none;
+    }
+
+    .file-dropzone-icon {
+      font-size: 2rem;
+      color: var(--accent-primary);
+    }
+
+    .file-selected-text {
+      font-size: 0.85rem;
+      color: var(--accent-emerald);
+      font-weight: 600;
+    }
+
+    /* Form Action Buttons Bar */
+    .form-actions-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-base);
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface-elevated);
+      border-color: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-focus);
+    }
+
+    .btn-reset {
+      background: transparent;
+      color: var(--text-muted);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-reset:hover {
+      background: var(--accent-rose-subtle);
+      color: var(--accent-rose);
+      border-color: rgba(244, 63, 94, 0.3);
+    }
+
+    /* Tab 3: Real-Time Inspector */
+    .inspector-card {
+      background: var(--bg-glass-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-elevated);
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .inspector-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .inspector-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .code-display-block {
+      background: #060911;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: #38bdf8;
+      overflow-x: auto;
+      line-height: 1.6;
+      max-height: 500px;
+    }
+
+    /* Toast Notification */
+    .toast-notice {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--accent-primary);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(99, 102, 241, 0.3);
+      color: var(--text-main);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+    }
+
+    .toast-notice.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Footer */
+    .app-footer {
+      margin-top: 70px;
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-subtle);
+      color: var(--text-subtle);
+      font-size: 0.88rem;
+    }
+
+    .app-footer a {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+
+    .app-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Light Effect -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Toast Notification Box -->
+  <div class="toast-notice" id="toastBox">
+    <span id="toastIcon">📋</span>
+    <span id="toastMessage">Snippet copied to clipboard!</span>
+  </div>
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="header-pill">
+        <span class="pulse"></span>
+        Interactive HTML5 Developer Reference
+      </div>
+      <h1 class="app-title">HTML5 Input Elements Masterclass</h1>
+      <p class="app-subtitle">
+        Explore and test all 22+ HTML input types, validation attributes, pseudo-classes, and real-world form architectures with real-time feedback and one-click code copy.
+      </p>
+
+      <!-- View Selector & Theme Toggle -->
+      <div class="top-action-bar">
+        <div class="mode-tab-group" role="tablist" aria-label="Explorer Mode">
+          <button type="button" class="mode-tab-btn active" data-tab="catalogTab" role="tab" aria-selected="true" id="tabBtnCatalog">
+            <span>📚</span> Input Types Catalog
+          </button>
+          <button type="button" class="mode-tab-btn" data-tab="formTab" role="tab" aria-selected="false" id="tabBtnForm">
+            <span>📝</span> Unified Registration Form
+          </button>
+          <button type="button" class="mode-tab-btn" data-tab="inspectorTab" role="tab" aria-selected="false" id="tabBtnInspector">
+            <span>⚡</span> Real-Time Form Inspector
+          </button>
+        </div>
+
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light / Dark Mode" aria-label="Toggle Light / Dark Mode">
+          🌓
+        </button>
+      </div>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- TAB 1: MODULAR INPUT TYPE CATALOG & INTERACTIVE CARDS -->
+    <!-- ================================================================= -->
+    <main class="tab-view active" id="catalogTab" role="tabpanel" aria-labelledby="tabBtnCatalog">
+
+      <!-- Search & Category Filters -->
+      <section class="search-filter-section" aria-label="Input Search & Filter">
+        <div class="search-box-wrapper">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="search" class="main-search-input" id="catalogSearchInput" placeholder="Filter by input type (e.g. text, password, range, date, file, color, email)..." aria-label="Search input elements">
+        </div>
+
+        <div class="filter-chips-wrapper" role="group" aria-label="Category Filters">
+          <span class="filter-chip-label">Category:</span>
+          <button type="button" class="chip-btn active" data-cat="all">All (24)</button>
+          <button type="button" class="chip-btn" data-cat="text">Text & Auth</button>
+          <button type="button" class="chip-btn" data-cat="numeric">Numbers & Sliders</button>
+          <button type="button" class="chip-btn" data-cat="datetime">Dates & Times</button>
+          <button type="button" class="chip-btn" data-cat="selection">Choices & Toggles</button>
+          <button type="button" class="chip-btn" data-cat="media">Media & Advanced</button>
+          <button type="button" class="chip-btn" data-cat="buttons">Buttons & Actions</button>
+        </div>
+      </section>
+
+      <!-- Input Grid -->
+      <section class="catalog-grid" id="catalogGrid" aria-label="HTML5 Input Cards Grid">
+
+        <!-- 1. Text -->
+        <article class="input-card" data-category="text" data-name="text">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="text"</span>
+              <h2 class="card-heading">Single-Line Text Input</h2>
+            </div>
+            <span class="tag-category">Text & Auth</span>
+          </div>
+          <p class="card-description">Standard single-line text entry for names, titles, usernames, and generic text strings.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoText">Student Full Name:</label>
+              <span class="validity-pill neutral" id="validPillText">Neutral</span>
+            </div>
+            <input type="text" id="demoText" class="card-input" placeholder="e.g. Rahul Sharma" minlength="3" maxlength="30" autocomplete="name" required>
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoText">(empty)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">placeholder</span>
+            <span class="attr-tag">minlength="3"</span>
+            <span class="attr-tag">maxlength="30"</span>
+            <span class="attr-tag">required</span>
+            <span class="attr-tag">autocomplete="name"</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="fullName">Student Full Name:</label>&#10;<input type="text" id="fullName" name="fullName" placeholder="e.g. Rahul Sharma" minlength="3" maxlength="30" required>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 2. Password -->
+        <article class="input-card" data-category="text" data-name="password">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="password"</span>
+              <h2 class="card-heading">Masked Password</h2>
+            </div>
+            <span class="tag-category">Text & Auth</span>
+          </div>
+          <p class="card-description">Obscures user input for confidential credentials with built-in show/hide toggle support.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoPassword">Account Password:</label>
+              <span class="validity-pill neutral" id="validPillPassword">Neutral</span>
+            </div>
+            <div class="password-wrap">
+              <input type="password" id="demoPassword" class="card-input" placeholder="Enter secure password" minlength="8" required>
+              <button type="button" class="btn-eye-toggle" id="btnToggleDemoPass" title="Show / Hide Password" aria-label="Toggle Password Visibility">👁️</button>
+            </div>
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoPassword">(empty)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="password"</span>
+            <span class="attr-tag">minlength="8"</span>
+            <span class="attr-tag">required</span>
+            <span class="attr-tag">autocomplete="new-password"</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="password">Password:</label>&#10;<input type="password" id="password" name="password" minlength="8" required autocomplete="current-password">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 3. Email -->
+        <article class="input-card" data-category="text" data-name="email">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="email"</span>
+              <h2 class="card-heading">Email Address</h2>
+            </div>
+            <span class="tag-category">Text & Auth</span>
+          </div>
+          <p class="card-description">Enforces syntactic email structure (<code>user@domain.com</code>) with mobile-optimized keyboard layout.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoEmail">Official Email:</label>
+              <span class="validity-pill neutral" id="validPillEmail">Neutral</span>
+            </div>
+            <input type="email" id="demoEmail" class="card-input" placeholder="student@university.edu" required autocomplete="email">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoEmail">(empty)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="email"</span>
+            <span class="attr-tag">multiple</span>
+            <span class="attr-tag">required</span>
+            <span class="attr-tag">pattern</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="email">Official Email:</label>&#10;<input type="email" id="email" name="email" placeholder="user@domain.com" required>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. Number -->
+        <article class="input-card" data-category="numeric" data-name="number">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="number"</span>
+              <h2 class="card-heading">Numeric Quantity / Stepper</h2>
+            </div>
+            <span class="tag-category">Numbers & Sliders</span>
+          </div>
+          <p class="card-description">Restricts input to numbers with customizable minimum, maximum, and increment step steps.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoNumber">Marks Percentage (%):</label>
+              <span class="validity-pill neutral" id="validPillNumber">Neutral</span>
+            </div>
+            <input type="number" id="demoNumber" class="card-input" min="0" max="100" step="0.5" value="75" placeholder="0 to 100">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoNumber">75</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">min="0"</span>
+            <span class="attr-tag">max="100"</span>
+            <span class="attr-tag">step="0.5"</span>
+            <span class="attr-tag">value="75"</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="score">Marks Percentage (%):</label>&#10;<input type="number" id="score" name="score" min="0" max="100" step="0.5">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 5. Tel (Telephone) -->
+        <article class="input-card" data-category="text" data-name="tel">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="tel"</span>
+              <h2 class="card-heading">Phone / Mobile Number</h2>
+            </div>
+            <span class="tag-category">Text & Auth</span>
+          </div>
+          <p class="card-description">Displays numeric keypad on mobile devices and supports strict regex pattern validation.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoTel">10-Digit Mobile Number:</label>
+              <span class="validity-pill neutral" id="validPillTel">Neutral</span>
+            </div>
+            <input type="tel" id="demoTel" class="card-input" pattern="[0-9]{10}" placeholder="9876543210" maxlength="10" required>
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoTel">(empty)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="tel"</span>
+            <span class="attr-tag">pattern="[0-9]{10}"</span>
+            <span class="attr-tag">maxlength="10"</span>
+            <span class="attr-tag">inputmode="tel"</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="phone">Phone Number:</label>&#10;<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="9876543210" required>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 6. URL -->
+        <article class="input-card" data-category="text" data-name="url">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="url"</span>
+              <h2 class="card-heading">Website URL</h2>
+            </div>
+            <span class="tag-category">Text & Auth</span>
+          </div>
+          <p class="card-description">Validates full URI format requiring protocol schemes like <code>https://</code>.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoUrl">Portfolio / LinkedIn URL:</label>
+              <span class="validity-pill neutral" id="validPillUrl">Neutral</span>
+            </div>
+            <input type="url" id="demoUrl" class="card-input" placeholder="https://nextsem.online/portfolio">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoUrl">(empty)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="url"</span>
+            <span class="attr-tag">placeholder="https://..."</span>
+            <span class="attr-tag">pattern</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="website">Portfolio URL:</label>&#10;<input type="url" id="website" name="website" placeholder="https://example.com">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 7. Search -->
+        <article class="input-card" data-category="text" data-name="search">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="search"</span>
+              <h2 class="card-heading">Search Input</h2>
+            </div>
+            <span class="tag-category">Text & Auth</span>
+          </div>
+          <p class="card-description">Provides a native quick-clear button (<code>✕</code>) and specialized assistive search semantics.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoSearch">Query Query:</label>
+              <span class="validity-pill neutral" id="validPillSearch">Neutral</span>
+            </div>
+            <input type="search" id="demoSearch" class="card-input" placeholder="Search books, chapters...">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoSearch">(empty)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="search"</span>
+            <span class="attr-tag">results</span>
+            <span class="attr-tag">autosave</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="searchQuery">Search:</label>&#10;<input type="search" id="searchQuery" name="q" placeholder="Type query...'>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 8. Range (Slider) -->
+        <article class="input-card" data-category="numeric" data-name="range">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="range"</span>
+              <h2 class="card-heading">Range Slider with Output</h2>
+            </div>
+            <span class="tag-category">Numbers & Sliders</span>
+          </div>
+          <p class="card-description">Interactive horizontal slider paired with semantic <code>&lt;output&gt;</code> for live numeric updates.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoRange">Weekly Study Hours:</label>
+              <span class="range-output-badge" id="outputRangeBadge">25 hrs</span>
+            </div>
+            <input type="range" id="demoRange" min="5" max="60" step="1" value="25">
+            <div class="range-value-display">
+              <span>Min: 5 hrs</span>
+              <span>Max: 60 hrs</span>
+            </div>
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoRange">25</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">min="5"</span>
+            <span class="attr-tag">max="60"</span>
+            <span class="attr-tag">step="1"</span>
+            <span class="attr-tag">&lt;output&gt;</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="hours">Study Hours: <output id="outHours">25</output></label>&#10;<input type="range" id="hours" name="hours" min="5" max="60" value="25" oninput="outHours.value=this.value">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 9. Color Picker -->
+        <article class="input-card" data-category="media" data-name="color">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="color"</span>
+              <h2 class="card-heading">Color Picker</h2>
+            </div>
+            <span class="tag-category">Media & Advanced</span>
+          </div>
+          <p class="card-description">Native OS color palette dialog returning a 7-character hexadecimal string (e.g. <code>#6366f1</code>).</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoColor">Accent Theme Color:</label>
+              <span class="live-value-code" id="hexColorBadge">#6366F1</span>
+            </div>
+            <input type="color" id="demoColor" class="color-picker-input card-input" value="#6366f1">
+            <div class="live-value-strip">
+              <span>Color Preview:</span> <span id="colorSwatchPreview" style="display:inline-block;width:20px;height:12px;border-radius:2px;background:#6366f1;"></span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="color"</span>
+            <span class="attr-tag">value="#hex"</span>
+            <span class="attr-tag">hexadecimal</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="themeColor">Theme Accent:</label>&#10;<input type="color" id="themeColor" name="themeColor" value="#6366f1">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 10. Date -->
+        <article class="input-card" data-category="datetime" data-name="date">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="date"</span>
+              <h2 class="card-heading">Calendar Date (YYYY-MM-DD)</h2>
+            </div>
+            <span class="tag-category">Dates & Times</span>
+          </div>
+          <p class="card-description">Native graphical date picker enforcing Year, Month, and Day formatting.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoDate">Date of Birth (DOB):</label>
+              <span class="validity-pill neutral" id="validPillDate">Neutral</span>
+            </div>
+            <input type="date" id="demoDate" class="card-input" min="1990-01-01" max="2015-12-31" value="2005-08-15">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoDate">2005-08-15</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">min="1990-01-01"</span>
+            <span class="attr-tag">max="2015-12-31"</span>
+            <span class="attr-tag">value="YYYY-MM-DD"</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="dob">Date of Birth:</label>&#10;<input type="date" id="dob" name="dob" min="1990-01-01" max="2015-12-31" required>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 11. Time -->
+        <article class="input-card" data-category="datetime" data-name="time">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="time"</span>
+              <h2 class="card-heading">Clock Time (HH:MM)</h2>
+            </div>
+            <span class="tag-category">Dates & Times</span>
+          </div>
+          <p class="card-description">Picker for hours and minutes in 12-hour or 24-hour time without timezone offset.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoTime">Lab Practical Slot Time:</label>
+              <span class="validity-pill neutral" id="validPillTime">Neutral</span>
+            </div>
+            <input type="time" id="demoTime" class="card-input" value="10:30">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoTime">10:30</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="time"</span>
+            <span class="attr-tag">min="09:00"</span>
+            <span class="attr-tag">max="18:00"</span>
+            <span class="attr-tag">step="60"</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="examTime">Exam Time:</label>&#10;<input type="time" id="examTime" name="examTime" min="09:00" max="18:00" required>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 12. Datetime-local -->
+        <article class="input-card" data-category="datetime" data-name="datetime-local">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="datetime-local"</span>
+              <h2 class="card-heading">Date & Local Time</h2>
+            </div>
+            <span class="tag-category">Dates & Times</span>
+          </div>
+          <p class="card-description">Combined date and time selector without time zone specification.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoDatetime">Orientation Schedule:</label>
+              <span class="validity-pill neutral" id="validPillDatetime">Neutral</span>
+            </div>
+            <input type="datetime-local" id="demoDatetime" class="card-input" value="2026-09-01T09:00">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoDatetime">2026-09-01T09:00</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="datetime-local"</span>
+            <span class="attr-tag">ISO 8601</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="schedule">Orientation Session:</label>&#10;<input type="datetime-local" id="schedule" name="schedule">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 13. Month -->
+        <article class="input-card" data-category="datetime" data-name="month">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="month"</span>
+              <h2 class="card-heading">Month & Year Picker</h2>
+            </div>
+            <span class="tag-category">Dates & Times</span>
+          </div>
+          <p class="card-description">Allows selection of year and month (e.g. <code>2026-08</code>) for graduation or expiry dates.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoMonth">Graduation Batch:</label>
+              <span class="validity-pill neutral" id="validPillMonth">Neutral</span>
+            </div>
+            <input type="month" id="demoMonth" class="card-input" value="2026-06">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoMonth">2026-06</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="month"</span>
+            <span class="attr-tag">YYYY-MM</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="gradMonth">Expected Graduation:</label>&#10;<input type="month" id="gradMonth" name="gradMonth" value="2026-06">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 14. Week -->
+        <article class="input-card" data-category="datetime" data-name="week">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="week"</span>
+              <h2 class="card-heading">Calendar Week & Year</h2>
+            </div>
+            <span class="tag-category">Dates & Times</span>
+          </div>
+          <p class="card-description">Selects a specific ISO calendar week number (e.g. <code>2026-W35</code>).</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoWeek">Project Submission Week:</label>
+              <span class="validity-pill neutral" id="validPillWeek">Neutral</span>
+            </div>
+            <input type="week" id="demoWeek" class="card-input" value="2026-W35">
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoWeek">2026-W35</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="week"</span>
+            <span class="attr-tag">YYYY-Www</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="submitWeek">Submission Week:</label>&#10;<input type="week" id="submitWeek" name="submitWeek" value="2026-W35">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 15. Checkbox -->
+        <article class="input-card" data-category="selection" data-name="checkbox">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="checkbox"</span>
+              <h2 class="card-heading">Checkboxes & Switch</h2>
+            </div>
+            <span class="tag-category">Choices & Toggles</span>
+          </div>
+          <p class="card-description">Independent binary state selection (0, 1, or multiple choices selected concurrently).</p>
+          <div class="demo-field-wrap">
+            <div class="checkbox-radio-group">
+              <label class="custom-check-label">
+                <input type="checkbox" id="chkHtml" name="skills" value="HTML5" checked>
+                <span>HTML5 & Semantic Markup</span>
+              </label>
+              <label class="custom-check-label">
+                <input type="checkbox" id="chkCss" name="skills" value="CSS3" checked>
+                <span>CSS3 Flexbox / Grid</span>
+              </label>
+              <div class="switch-wrap">
+                <span style="font-size:0.9rem;">Enable Email Notifications:</span>
+                <label class="switch">
+                  <input type="checkbox" id="chkNotify" checked>
+                  <span class="slider-toggle"></span>
+                </label>
+              </div>
+            </div>
+            <div class="live-value-strip">
+              <span>State:</span> <span class="live-value-code" id="valDemoCheck">HTML5, CSS3 (Notify: ON)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">checked</span>
+            <span class="attr-tag">value</span>
+            <span class="attr-tag">indeterminate</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label><input type="checkbox" name="skill" value="html" checked> HTML5</label>&#10;<label><input type="checkbox" name="skill" value="css"> CSS3</label>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 16. Radio Buttons -->
+        <article class="input-card" data-category="selection" data-name="radio">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="radio"</span>
+              <h2 class="card-heading">Radio Group (Mutually Exclusive)</h2>
+            </div>
+            <span class="tag-category">Choices & Toggles</span>
+          </div>
+          <p class="card-description">Select exactly ONE option from a set of choices sharing the same <code>name</code> attribute.</p>
+          <div class="demo-field-wrap">
+            <div class="checkbox-radio-group">
+              <label class="custom-check-label">
+                <input type="radio" name="demoGender" value="Male" checked>
+                <span>Male</span>
+              </label>
+              <label class="custom-check-label">
+                <input type="radio" name="demoGender" value="Female">
+                <span>Female</span>
+              </label>
+              <label class="custom-check-label">
+                <input type="radio" name="demoGender" value="Other">
+                <span>Other / Prefer not to say</span>
+              </label>
+            </div>
+            <div class="live-value-strip">
+              <span>Selected:</span> <span class="live-value-code" id="valDemoRadio">Male</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">name="group"</span>
+            <span class="attr-tag">value="..."</span>
+            <span class="attr-tag">checked</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<fieldset>&#10;  <legend>Gender:</legend>&#10;  <label><input type="radio" name="gender" value="male" checked> Male</label>&#10;  <label><input type="radio" name="gender" value="female"> Female</label>&#10;</fieldset>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 17. File Upload -->
+        <article class="input-card" data-category="media" data-name="file">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="file"</span>
+              <h2 class="card-heading">File Upload</h2>
+            </div>
+            <span class="tag-category">Media & Advanced</span>
+          </div>
+          <p class="card-description">Allows local file selection. Requires <code>enctype="multipart/form-data"</code> on parent form.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoFile">Passport Photo / Certificate:</label>
+              <span class="validity-pill neutral" id="validPillFile">No File</span>
+            </div>
+            <input type="file" id="demoFile" class="card-input" accept="image/png, image/jpeg, .pdf">
+            <div class="live-value-strip">
+              <span>Selected File:</span> <span class="live-value-code" id="valDemoFile">None</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">accept="image/*"</span>
+            <span class="attr-tag">multiple</span>
+            <span class="attr-tag">capture</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="doc">Upload ID:</label>&#10;<input type="file" id="doc" name="document" accept=".pdf,image/*" required>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 18. Datalist with Input -->
+        <article class="input-card" data-category="media" data-name="datalist">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">&lt;datalist&gt;</span>
+              <h2 class="card-heading">Autocomplete Suggestions</h2>
+            </div>
+            <span class="tag-category">Media & Advanced</span>
+          </div>
+          <p class="card-description">Combines free text entry with predefined dropdown suggestions connected via the <code>list</code> attribute.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <label for="demoDatalistInput">Major Subject (type or pick):</label>
+              <span class="validity-pill neutral">Suggestions</span>
+            </div>
+            <input list="subjectsList" id="demoDatalistInput" class="card-input" placeholder="Start typing (e.g. Web, Cloud)...">
+            <datalist id="subjectsList">
+              <option value="Web Development & Architecture">
+              <option value="Data Structures & Algorithms">
+              <option value="Cloud Computing & DevOps">
+              <option value="Artificial Intelligence & ML">
+              <option value="Database Management (SQL)">
+            </datalist>
+            <div class="live-value-strip">
+              <span>Value:</span> <span class="live-value-code" id="valDemoDatalist">(empty)</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">list="id"</span>
+            <span class="attr-tag">&lt;datalist&gt;</span>
+            <span class="attr-tag">&lt;option&gt;</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<label for="course">Subject:</label>&#10;<input list="courses" id="course" name="course">&#10;<datalist id="courses">&#10;  <option value="Web Development">&#10;  <option value="Data Structures">&#10;</datalist>'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 19. Hidden Input -->
+        <article class="input-card" data-category="media" data-name="hidden">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">type="hidden"</span>
+              <h2 class="card-heading">Hidden Form Token</h2>
+            </div>
+            <span class="tag-category">Media & Advanced</span>
+          </div>
+          <p class="card-description">Invisible to end users. Stores application state, session IDs, or CSRF security tokens for submission.</p>
+          <div class="demo-field-wrap">
+            <div class="demo-label">
+              <span>Invisible Element in DOM:</span>
+              <span class="validity-pill neutral">CSRF Token</span>
+            </div>
+            <input type="hidden" id="demoHidden" name="csrf_token" value="sec_tok_994827af71b2">
+            <div style="padding:10px;background:var(--bg-surface-elevated);border-radius:4px;font-family:var(--font-mono);font-size:0.8rem;color:var(--text-subtle);">
+              &lt;input type="hidden" name="csrf_token" value="sec_tok_994827af71b2"&gt;
+            </div>
+            <div class="live-value-strip">
+              <span>Stored Payload:</span> <span class="live-value-code">sec_tok_994827af71b2</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="hidden"</span>
+            <span class="attr-tag">name="csrf"</span>
+            <span class="attr-tag">value="..."</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<input type="hidden" name="csrf_token" value="a1b2c3d4e5">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+        <!-- 20. Action Buttons: Submit, Reset, Button -->
+        <article class="input-card" data-category="buttons" data-name="submit reset button">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <span class="type-badge">Buttons</span>
+              <h2 class="card-heading">Submit, Reset & Generic Buttons</h2>
+            </div>
+            <span class="tag-category">Buttons & Actions</span>
+          </div>
+          <p class="card-description">Triggers form processing, resets inputs to defaults, or invokes custom JavaScript event handlers.</p>
+          <div class="demo-field-wrap">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <input type="button" class="btn btn-secondary" style="padding:8px 16px;font-size:0.85rem;" value="type='button'" onclick="alert('Standard button clicked!')">
+              <input type="reset" class="btn btn-reset" style="padding:8px 16px;font-size:0.85rem;" value="type='reset'">
+              <input type="submit" class="btn btn-primary" style="padding:8px 16px;font-size:0.85rem;" value="type='submit'">
+            </div>
+            <div class="live-value-strip">
+              <span>Behavior:</span> <span class="live-value-code">Standard Form Life-Cycle Triggers</span>
+            </div>
+          </div>
+          <div class="attr-tags-row">
+            <span class="attr-tag">type="submit"</span>
+            <span class="attr-tag">type="reset"</span>
+            <span class="attr-tag">type="button"</span>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn-copy-code" data-code='<input type="reset" value="Clear Form">&#10;<input type="submit" value="Submit Form">'>
+              📋 Copy HTML
+            </button>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- TAB 2: UNIFIED REAL-WORLD REGISTRATION FORM -->
+    <!-- ================================================================= -->
+    <section class="tab-view form-tab-container" id="formTab" role="tabpanel" aria-labelledby="tabBtnForm">
+      <div class="realworld-form-card">
+        <div class="form-card-header">
+          <span class="header-pill">🎓 Real-World Form Architecture</span>
+          <h2>University Admission & Registration Portal</h2>
+          <p>This complete, accessible form unifies text, passwords, dates, numbers, files, pickers, ranges, and validation rules into semantic fieldsets.</p>
+        </div>
+
+        <form id="unifiedDemoForm" action="/submit-registration" method="post" enctype="multipart/form-data" novalidate>
+
+          <!-- Fieldset 1: Identity -->
+          <fieldset class="semantic-fieldset">
+            <legend class="semantic-legend"><span>👤</span> Personal & Identity Information</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="uFullName">Full Name <span class="req">*</span></label>
+                <input type="text" id="uFullName" name="fullName" class="unified-input" placeholder="Aarav Sharma" minlength="3" maxlength="40" required autocomplete="name">
+                <span class="form-hint">Minimum 3 characters, alphabets and spaces.</span>
+              </div>
+              <div class="form-group">
+                <label for="uEmail">Email Address <span class="req">*</span></label>
+                <input type="email" id="uEmail" name="email" class="unified-input" placeholder="aarav@example.com" required autocomplete="email">
+                <span class="form-hint">Must be valid email format.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="uPhone">10-Digit Mobile Phone <span class="req">*</span></label>
+                <input type="tel" id="uPhone" name="phone" class="unified-input" pattern="[0-9]{10}" placeholder="9876543210" maxlength="10" required>
+                <span class="form-hint">Standard 10-digit Indian phone pattern.</span>
+              </div>
+              <div class="form-group">
+                <label for="uDob">Date of Birth <span class="req">*</span></label>
+                <input type="date" id="uDob" name="dob" class="unified-input" min="1995-01-01" max="2012-12-31" value="2004-05-18" required>
+                <span class="form-hint">Eligible age: 14 to 30 years.</span>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 10px;">
+              <label>Gender Identification <span class="req">*</span></label>
+              <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:4px;">
+                <label class="custom-check-label"><input type="radio" name="uGender" value="Male" checked> Male</label>
+                <label class="custom-check-label"><input type="radio" name="uGender" value="Female"> Female</label>
+                <label class="custom-check-label"><input type="radio" name="uGender" value="Other"> Other</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 2: Program & Academics -->
+          <fieldset class="semantic-fieldset">
+            <legend class="semantic-legend"><span>🎓</span> Academic Course & Program Selection</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="uProgram">Degree Program <span class="req">*</span></label>
+                <select id="uProgram" name="program" class="unified-input" required>
+                  <option value="" disabled>Select degree program...</option>
+                  <optgroup label="Undergraduate Degrees">
+                    <option value="BCA" selected>BCA (Bachelor of Computer Applications)</option>
+                    <option value="BSc-CS">B.Sc. in Computer Science</option>
+                    <option value="BTech">B.Tech Information Technology</option>
+                  </optgroup>
+                  <optgroup label="Postgraduate Degrees">
+                    <option value="MCA">MCA (Master of Computer Applications)</option>
+                    <option value="MSc-IT">M.Sc. Information Technology</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="uSemester">Current Semester <span class="req">*</span></label>
+                <select id="uSemester" name="semester" class="unified-input" required>
+                  <option value="1" selected>Semester 1 (Freshman)</option>
+                  <option value="2">Semester 2</option>
+                  <option value="3">Semester 3</option>
+                  <option value="4">Semester 4</option>
+                  <option value="5">Semester 5</option>
+                  <option value="6">Semester 6 (Final Year)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 10px;">
+              <label>Elective Subject Interests</label>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:10px;margin-top:6px;">
+                <label class="custom-check-label"><input type="checkbox" name="electives" value="Cloud" checked> Cloud Architecture</label>
+                <label class="custom-check-label"><input type="checkbox" name="electives" value="AI-ML" checked> Machine Learning</label>
+                <label class="custom-check-label"><input type="checkbox" name="electives" value="Security"> Cybersecurity</label>
+                <label class="custom-check-label"><input type="checkbox" name="electives" value="Mobile"> Mobile App Dev</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 3: Customization, Sliders & Documents -->
+          <fieldset class="semantic-fieldset">
+            <legend class="semantic-legend"><span>🎨</span> Preferences, Schedule & Attachments</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="uHours">Weekly Commitment: <span id="uHoursDisplay" style="color:var(--accent-cyan);font-weight:700;">20 hrs/week</span></label>
+                <input type="range" id="uHours" name="studyHours" min="5" max="40" step="5" value="20">
+                <span class="form-hint">Slider from 5 to 40 hours with step=5.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="uBadgeColor">Student Badge Theme Color</label>
+                <div style="display:flex;gap:12px;align-items:center;">
+                  <input type="color" id="uBadgeColor" name="badgeColor" class="color-picker-input" value="#6366f1" style="width:70px;">
+                  <span id="uBadgeColorText" style="font-family:var(--font-mono);font-size:0.9rem;color:var(--accent-primary);">#6366F1</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 10px;">
+              <label>Student Photo / ID Card (File Upload) <span class="req">*</span></label>
+              <label class="file-dropzone" for="uDocFile">
+                <span class="file-dropzone-icon">📁</span>
+                <span style="font-weight:600;">Click to select file or drop here</span>
+                <span class="form-hint">Accepts PNG, JPG, or PDF (Max 2MB)</span>
+                <span class="file-selected-text" id="uFileFeedback">No file chosen yet</span>
+                <input type="file" id="uDocFile" name="studentPhoto" accept=".jpg,.jpeg,.png,.pdf" required>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 4: Security Credentials -->
+          <fieldset class="semantic-fieldset">
+            <legend class="semantic-legend"><span>🔐</span> Portal Security & Password</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="uPass">Create Secure Password <span class="req">*</span></label>
+                <div class="password-wrap">
+                  <input type="password" id="uPass" name="password" class="unified-input" placeholder="At least 8 characters" minlength="8" required>
+                  <button type="button" class="btn-eye-toggle" id="uPassEye" title="Show / Hide Password" aria-label="Toggle Password">👁️</button>
+                </div>
+                <div class="password-strength-bar">
+                  <div class="password-strength-fill" id="uPassStrength"></div>
+                </div>
+                <span class="form-hint" id="uPassHint">Must include minimum 8 characters.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="uBio">Student Bio / Objectives</label>
+                <textarea id="uBio" name="bio" class="unified-input" rows="3" placeholder="Briefly introduce your career aspirations..." maxlength="250"></textarea>
+                <span class="form-hint" id="uBioCount">0 / 250 characters</span>
+              </div>
+            </div>
+
+            <!-- Hidden Field Example -->
+            <input type="hidden" name="form_timestamp" id="uFormTimestamp" value="2026-08-29T22:30:00Z">
+            <input type="hidden" name="session_token" value="tok_portal_88241">
+          </fieldset>
+
+          <!-- Declaration Checkbox -->
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label class="custom-check-label" style="align-items:flex-start;">
+              <input type="checkbox" id="uTerms" name="agreeTerms" required style="margin-top:4px;">
+              <span>I hereby certify that all information submitted in this application is accurate, and I agree to the <a href="#privacy" style="color:var(--accent-primary);">University Code of Conduct</a>. <span class="req">*</span></span>
+            </label>
+          </div>
+
+          <!-- Buttons -->
+          <div class="form-actions-bar">
+            <button type="button" class="btn btn-secondary" id="btnFillSample">
+              <span>✨</span> Fill Sample Data
+            </button>
+            <input type="reset" class="btn btn-reset" value="Reset Form">
+            <button type="submit" class="btn btn-primary" id="btnSubmitUnified">
+              <span>🚀</span> Submit Registration
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- TAB 3: REAL-TIME FORM STATE INSPECTOR -->
+    <!-- ================================================================= -->
+    <section class="tab-view" id="inspectorTab" role="tabpanel" aria-labelledby="tabBtnInspector">
+      <div class="inspector-card">
+        <div class="inspector-header">
+          <div class="inspector-title">
+            <span>⚡</span> Real-Time FormData Serializer
+          </div>
+          <button type="button" class="btn btn-secondary" id="btnCopyJson" style="font-size:0.82rem;padding:6px 14px;">
+            📋 Copy JSON
+          </button>
+        </div>
+        <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:16px;">
+          The JSON object below automatically syncs in real-time as you interact with any form control in the Unified Registration Form or Catalog cards.
+        </p>
+        <pre class="code-display-block"><code id="inspectorJsonOutput">{
+  "status": "Awaiting user input...",
+  "ready": true
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>
+        Nextsem Academy Developer Series • Crafted with Pure Modern HTML5, CSS & JavaScript
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Interactive Logic -->
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    let currentTheme = localStorage.getItem('ns_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('ns_theme', currentTheme);
+    });
+
+    // Toast Functionality
+    const toastBox = document.getElementById('toastBox');
+    const toastMessage = document.getElementById('toastMessage');
+    let toastTimeout;
+
+    function showToast(msg, icon = '📋') {
+      document.getElementById('toastIcon').textContent = icon;
+      toastMessage.textContent = msg;
+      toastBox.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toastBox.classList.remove('show');
+      }, 2500);
+    }
+
+    // Tab Navigation
+    const tabButtons = document.querySelectorAll('.mode-tab-btn');
+    const tabViews = document.querySelectorAll('.tab-view');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        tabViews.forEach(v => v.classList.remove('active'));
+
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const targetView = document.getElementById(btn.dataset.tab);
+        if (targetView) {
+          targetView.classList.add('active');
+        }
+        if (btn.dataset.tab === 'inspectorTab') {
+          syncInspector();
+        }
+      });
+    });
+
+    // Category Filtering
+    const chipBtns = document.querySelectorAll('.chip-btn');
+    const inputCards = document.querySelectorAll('.input-card');
+
+    chipBtns.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chipBtns.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const cat = chip.dataset.cat;
+        filterCards();
+      });
+    });
+
+    // Search Filtering
+    const catalogSearchInput = document.getElementById('catalogSearchInput');
+    catalogSearchInput.addEventListener('input', () => {
+      filterCards();
+    });
+
+    function filterCards() {
+      const activeCategory = document.querySelector('.chip-btn.active').dataset.cat;
+      const query = catalogSearchInput.value.toLowerCase().trim();
+
+      inputCards.forEach(card => {
+        const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+        const textContent = card.innerText.toLowerCase();
+        const matchesSearch = query === '' || textContent.includes(query);
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Copy Code Buttons in Catalog
+    document.querySelectorAll('.btn-copy-code').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const codeSnippet = btn.dataset.code;
+        navigator.clipboard.writeText(codeSnippet).then(() => {
+          showToast('HTML code copied to clipboard!', '✅');
+        }).catch(() => {
+          showToast('Failed to copy', '⚠️');
+        });
+      });
+    });
+
+    // Copy JSON Inspector Button
+    document.getElementById('btnCopyJson').addEventListener('click', () => {
+      const jsonText = document.getElementById('inspectorJsonOutput').innerText;
+      navigator.clipboard.writeText(jsonText).then(() => {
+        showToast('JSON payload copied!', '⚡');
+      });
+    });
+
+    // Catalog Inputs Interactive Listeners
+    // 1. Text
+    const demoText = document.getElementById('demoText');
+    const valDemoText = document.getElementById('valDemoText');
+    const validPillText = document.getElementById('validPillText');
+    demoText.addEventListener('input', () => {
+      valDemoText.textContent = demoText.value || '(empty)';
+      updateValidityPill(demoText, validPillText);
+    });
+
+    // 2. Password
+    const demoPassword = document.getElementById('demoPassword');
+    const valDemoPassword = document.getElementById('valDemoPassword');
+    const validPillPassword = document.getElementById('validPillPassword');
+    const btnToggleDemoPass = document.getElementById('btnToggleDemoPass');
+    btnToggleDemoPass.addEventListener('click', () => {
+      const isPass = demoPassword.type === 'password';
+      demoPassword.type = isPass ? 'text' : 'password';
+      btnToggleDemoPass.textContent = isPass ? '🔒' : '👁️';
+    });
+    demoPassword.addEventListener('input', () => {
+      valDemoPassword.textContent = demoPassword.value ? '•'.repeat(demoPassword.value.length) : '(empty)';
+      updateValidityPill(demoPassword, validPillPassword);
+    });
+
+    // 3. Email
+    const demoEmail = document.getElementById('demoEmail');
+    const valDemoEmail = document.getElementById('valDemoEmail');
+    const validPillEmail = document.getElementById('validPillEmail');
+    demoEmail.addEventListener('input', () => {
+      valDemoEmail.textContent = demoEmail.value || '(empty)';
+      updateValidityPill(demoEmail, validPillEmail);
+    });
+
+    // 4. Number
+    const demoNumber = document.getElementById('demoNumber');
+    const valDemoNumber = document.getElementById('valDemoNumber');
+    const validPillNumber = document.getElementById('validPillNumber');
+    demoNumber.addEventListener('input', () => {
+      valDemoNumber.textContent = demoNumber.value;
+      updateValidityPill(demoNumber, validPillNumber);
+    });
+
+    // 5. Tel
+    const demoTel = document.getElementById('demoTel');
+    const valDemoTel = document.getElementById('valDemoTel');
+    const validPillTel = document.getElementById('validPillTel');
+    demoTel.addEventListener('input', () => {
+      valDemoTel.textContent = demoTel.value || '(empty)';
+      updateValidityPill(demoTel, validPillTel);
+    });
+
+    // 6. URL
+    const demoUrl = document.getElementById('demoUrl');
+    const valDemoUrl = document.getElementById('valDemoUrl');
+    const validPillUrl = document.getElementById('validPillUrl');
+    demoUrl.addEventListener('input', () => {
+      valDemoUrl.textContent = demoUrl.value || '(empty)';
+      updateValidityPill(demoUrl, validPillUrl);
+    });
+
+    // 7. Search
+    const demoSearch = document.getElementById('demoSearch');
+    const valDemoSearch = document.getElementById('valDemoSearch');
+    demoSearch.addEventListener('input', () => {
+      valDemoSearch.textContent = demoSearch.value || '(empty)';
+    });
+
+    // 8. Range
+    const demoRange = document.getElementById('demoRange');
+    const valDemoRange = document.getElementById('valDemoRange');
+    const outputRangeBadge = document.getElementById('outputRangeBadge');
+    demoRange.addEventListener('input', () => {
+      valDemoRange.textContent = demoRange.value;
+      outputRangeBadge.textContent = demoRange.value + ' hrs';
+    });
+
+    // 9. Color
+    const demoColor = document.getElementById('demoColor');
+    const hexColorBadge = document.getElementById('hexColorBadge');
+    const colorSwatchPreview = document.getElementById('colorSwatchPreview');
+    demoColor.addEventListener('input', () => {
+      const hex = demoColor.value.toUpperCase();
+      hexColorBadge.textContent = hex;
+      colorSwatchPreview.style.background = hex;
+    });
+
+    // 10. Date
+    const demoDate = document.getElementById('demoDate');
+    const valDemoDate = document.getElementById('valDemoDate');
+    demoDate.addEventListener('input', () => {
+      valDemoDate.textContent = demoDate.value || '(empty)';
+    });
+
+    // 11. Time
+    const demoTime = document.getElementById('demoTime');
+    const valDemoTime = document.getElementById('valDemoTime');
+    demoTime.addEventListener('input', () => {
+      valDemoTime.textContent = demoTime.value || '(empty)';
+    });
+
+    // 12. Datetime
+    const demoDatetime = document.getElementById('demoDatetime');
+    const valDemoDatetime = document.getElementById('valDemoDatetime');
+    demoDatetime.addEventListener('input', () => {
+      valDemoDatetime.textContent = demoDatetime.value || '(empty)';
+    });
+
+    // 13. Month
+    const demoMonth = document.getElementById('demoMonth');
+    const valDemoMonth = document.getElementById('valDemoMonth');
+    demoMonth.addEventListener('input', () => {
+      valDemoMonth.textContent = demoMonth.value || '(empty)';
+    });
+
+    // 14. Week
+    const demoWeek = document.getElementById('demoWeek');
+    const valDemoWeek = document.getElementById('valDemoWeek');
+    demoWeek.addEventListener('input', () => {
+      valDemoWeek.textContent = demoWeek.value || '(empty)';
+    });
+
+    // 15. Checkboxes
+    const chkHtml = document.getElementById('chkHtml');
+    const chkCss = document.getElementById('chkCss');
+    const chkNotify = document.getElementById('chkNotify');
+    const valDemoCheck = document.getElementById('valDemoCheck');
+    function updateCheckValues() {
+      const selected = [];
+      if (chkHtml.checked) selected.push('HTML5');
+      if (chkCss.checked) selected.push('CSS3');
+      valDemoCheck.textContent = `${selected.join(', ') || 'None'} (Notify: ${chkNotify.checked ? 'ON' : 'OFF'})`;
+    }
+    [chkHtml, chkCss, chkNotify].forEach(c => c.addEventListener('change', updateCheckValues));
+
+    // 16. Radio
+    const radios = document.querySelectorAll('input[name="demoGender"]');
+    const valDemoRadio = document.getElementById('valDemoRadio');
+    radios.forEach(r => {
+      r.addEventListener('change', () => {
+        valDemoRadio.textContent = r.value;
+      });
+    });
+
+    // 17. File
+    const demoFile = document.getElementById('demoFile');
+    const valDemoFile = document.getElementById('valDemoFile');
+    const validPillFile = document.getElementById('validPillFile');
+    demoFile.addEventListener('change', () => {
+      if (demoFile.files.length > 0) {
+        const file = demoFile.files[0];
+        valDemoFile.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+        validPillFile.textContent = 'Selected ✅';
+        validPillFile.className = 'validity-pill valid';
+      } else {
+        valDemoFile.textContent = 'None';
+        validPillFile.textContent = 'No File';
+        validPillFile.className = 'validity-pill neutral';
+      }
+    });
+
+    // 18. Datalist
+    const demoDatalistInput = document.getElementById('demoDatalistInput');
+    const valDemoDatalist = document.getElementById('valDemoDatalist');
+    demoDatalistInput.addEventListener('input', () => {
+      valDemoDatalist.textContent = demoDatalistInput.value || '(empty)';
+    });
+
+    function updateValidityPill(inputEl, pillEl) {
+      if (!pillEl) return;
+      if (inputEl.value.length === 0) {
+        pillEl.textContent = 'Neutral';
+        pillEl.className = 'validity-pill neutral';
+      } else if (inputEl.checkValidity()) {
+        pillEl.textContent = 'Valid ✅';
+        pillEl.className = 'validity-pill valid';
+      } else {
+        pillEl.textContent = 'Invalid ❌';
+        pillEl.className = 'validity-pill invalid';
+      }
+    }
+
+    // =================================================================
+    // UNIFIED REGISTRATION FORM LOGIC
+    // =================================================================
+    const unifiedForm = document.getElementById('unifiedDemoForm');
+    const uHours = document.getElementById('uHours');
+    const uHoursDisplay = document.getElementById('uHoursDisplay');
+    uHours.addEventListener('input', () => {
+      uHoursDisplay.textContent = `${uHours.value} hrs/week`;
+      syncInspector();
+    });
+
+    const uBadgeColor = document.getElementById('uBadgeColor');
+    const uBadgeColorText = document.getElementById('uBadgeColorText');
+    uBadgeColor.addEventListener('input', () => {
+      uBadgeColorText.textContent = uBadgeColor.value.toUpperCase();
+      uBadgeColorText.style.color = uBadgeColor.value;
+      syncInspector();
+    });
+
+    const uDocFile = document.getElementById('uDocFile');
+    const uFileFeedback = document.getElementById('uFileFeedback');
+    uDocFile.addEventListener('change', () => {
+      if (uDocFile.files && uDocFile.files[0]) {
+        const f = uDocFile.files[0];
+        uFileFeedback.textContent = `Attached: ${f.name} (${(f.size/1024).toFixed(1)} KB)`;
+        uFileFeedback.style.color = 'var(--accent-emerald)';
+      } else {
+        uFileFeedback.textContent = 'No file chosen yet';
+        uFileFeedback.style.color = 'var(--accent-rose)';
+      }
+      syncInspector();
+    });
+
+    // Eye Toggle in Unified Form
+    const uPass = document.getElementById('uPass');
+    const uPassEye = document.getElementById('uPassEye');
+    const uPassStrength = document.getElementById('uPassStrength');
+    const uPassHint = document.getElementById('uPassHint');
+
+    uPassEye.addEventListener('click', () => {
+      const isPass = uPass.type === 'password';
+      uPass.type = isPass ? 'text' : 'password';
+      uPassEye.textContent = isPass ? '🔒' : '👁️';
+    });
+
+    uPass.addEventListener('input', () => {
+      const val = uPass.value;
+      let strength = 0;
+      if (val.length >= 8) strength += 30;
+      if (/[A-Z]/.test(val)) strength += 25;
+      if (/[0-9]/.test(val)) strength += 25;
+      if (/[^A-Za-z0-9]/.test(val)) strength += 20;
+
+      uPassStrength.style.width = strength + '%';
+      if (strength <= 30) {
+        uPassStrength.style.backgroundColor = 'var(--accent-rose)';
+        uPassHint.textContent = 'Weak password. Add uppercase, numbers & symbols.';
+      } else if (strength < 80) {
+        uPassStrength.style.backgroundColor = 'var(--accent-amber)';
+        uPassHint.textContent = 'Moderate password strength.';
+      } else {
+        uPassStrength.style.backgroundColor = 'var(--accent-emerald)';
+        uPassHint.textContent = 'Strong password ✅';
+      }
+      syncInspector();
+    });
+
+    // Bio Character Counter
+    const uBio = document.getElementById('uBio');
+    const uBioCount = document.getElementById('uBioCount');
+    uBio.addEventListener('input', () => {
+      uBioCount.textContent = `${uBio.value.length} / 250 characters`;
+      syncInspector();
+    });
+
+    // Fill Sample Data Button
+    document.getElementById('btnFillSample').addEventListener('click', () => {
+      document.getElementById('uFullName').value = 'Rahul Verma';
+      document.getElementById('uEmail').value = 'rahul.verma@example.edu.in';
+      document.getElementById('uPhone').value = '9876543210';
+      document.getElementById('uDob').value = '2004-11-20';
+      document.getElementById('uProgram').value = 'BCA';
+      document.getElementById('uSemester').value = '1';
+      document.getElementById('uHours').value = '30';
+      uHoursDisplay.textContent = '30 hrs/week';
+      document.getElementById('uBadgeColor').value = '#06b6d4';
+      uBadgeColorText.textContent = '#06B6D4';
+      uBadgeColorText.style.color = '#06b6d4';
+      document.getElementById('uPass').value = 'SecretPass@2026';
+      uPass.dispatchEvent(new Event('input'));
+      document.getElementById('uBio').value = 'Aspiring full-stack engineer passionate about cloud architecture and developer tools.';
+      uBio.dispatchEvent(new Event('input'));
+      document.getElementById('uTerms').checked = true;
+
+      showToast('Sample student data filled!', '✨');
+      syncInspector();
+    });
+
+    // Unified Form Submit Handler
+    unifiedForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!unifiedForm.checkValidity()) {
+        showToast('Please fix invalid or required fields!', '⚠️');
+        unifiedForm.reportValidity();
+        return;
+      }
+
+      showToast('Registration submitted successfully! 🎉', '🚀');
+      syncInspector();
+
+      // Switch to inspector tab to view final payload
+      setTimeout(() => {
+        document.getElementById('tabBtnInspector').click();
+      }, 700);
+    });
+
+    // Form Change Listener for live Inspector sync
+    unifiedForm.addEventListener('input', syncInspector);
+    unifiedForm.addEventListener('change', syncInspector);
+
+    function syncInspector() {
+      const formData = new FormData(unifiedForm);
+      const dataObj = {};
+
+      formData.forEach((val, key) => {
+        if (val instanceof File) {
+          dataObj[key] = val.name ? `[File: ${val.name} (${(val.size / 1024).toFixed(1)} KB)]` : '[No file uploaded]';
+        } else if (dataObj[key]) {
+          if (!Array.isArray(dataObj[key])) {
+            dataObj[key] = [dataObj[key]];
+          }
+          dataObj[key].push(val);
+        } else {
+          dataObj[key] = val;
+        }
+      });
+
+      // Also gather catalog states
+      dataObj['_catalogSampleValues'] = {
+        text: demoText.value || null,
+        email: demoEmail.value || null,
+        score: demoNumber.value || null,
+        color: demoColor.value || null,
+        sliderHours: demoRange.value || null,
+        dob: demoDate.value || null
+      };
+
+      document.getElementById('inspectorJsonOutput').textContent = JSON.stringify(dataObj, null, 2);
+    }
+
+    // Initial sync
+    syncInspector();
+  </script>
+</body>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NCERT Class 11 Financial Accounting Ch 4: Special Purpose Books (Subsidiary Books)</title>
+  <meta name="description" content="Master NCERT Class 11 Financial Accounting Chapter 4 (Recording of Transactions - II / विशेष प्रयोजन सहायक बहियाँ) with topic-by-topic interactive study, real-life examples, and bilingual MCQs.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.85);
+      --border-card: rgba(255, 255, 255, 0.08);
+      
+      --brand-purple: #a855f7;
+      --brand-purple-hover: #9333ea;
+      --brand-emerald: #10b981;
+      --brand-gold: #e5b842;
+      
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-correct-border: #10b981;
+      
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+      --color-wrong-border: #ef4444;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.9);
+      --border-card: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(229, 184, 66, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-purple);
+      background: rgba(168, 85, 247, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-purple);
+      font-weight: 700;
+      background: rgba(168, 85, 247, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(168, 85, 247, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-purple);
+      color: var(--brand-purple);
+      transform: translateY(-1px);
+    }
+
+    .hero-wrapper {
+      max-width: 1080px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #a855f7, #ec4899, #10b981, #e5b842);
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-purple {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: var(--brand-purple);
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      font-weight: 500;
+    }
+
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .lang-switcher-group {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card-alt);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-card);
+      gap: 4px;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--brand-purple);
+      color: #ffffff;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(168, 85, 247, 0.3);
+    }
+
+    .topic-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .topic-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 12px;
+    }
+
+    .topic-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    .example-box {
+      padding: 16px;
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--brand-purple);
+      border-radius: var(--radius-md);
+      font-size: 0.86rem;
+      line-height: 1.6;
+    }
+
+    .mcq-card {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .opts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 8px;
+    }
+
+    .opt-btn {
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      transition: all 0.2s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--brand-purple);
+      transform: translateY(-1px);
+    }
+
+    .opt-btn.correct-btn {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct-border) !important;
+      color: #ffffff !important;
+    }
+
+    .opt-btn.wrong-btn {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong-border) !important;
+      color: #ffffff !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumb Navigation (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11" class="breadcrumb-link">Class 11</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy" class="breadcrumb-link">Financial Accounting-I</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy&chapter=4" class="breadcrumb-link">Chapter 4</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">Subsidiary Books Study & MCQs</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="nav-btn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div class="hero-header-content">
+        <div class="badge-row">
+          <span class="tag-badge tag-badge-purple">📑 NCERT Class 11 • Financial Accounting</span>
+          <span class="tag-badge tag-badge-purple">⚡ Interactive Masterclass</span>
+        </div>
+        <h1 class="hero-title">
+          Special Purpose Books (Subsidiary Books) <span class="hero-title-highlight">| विशेष प्रयोजन सहायक बहियाँ</span>
+        </h1>
+        <p class="hero-subtitle">
+          Comprehensive topic-by-topic interactive study covering Cash Book, Purchases Book, Sales Book, Returns Books, Journal Proper, and Trade vs Cash Discounts.
+        </p>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-bar">
+        <div class="lang-switcher-group">
+          <button class="lang-btn active" onclick="setLanguage('both')">🌐 Both (द्विभाषी)</button>
+          <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिन्दी</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic Container -->
+  <main id="contentContainer" style="max-width: 1080px; margin: 0 auto; padding: 0 16px;"></main>
+
+  <script>
+    let currentLang = "both"; // 'both', 'en', 'hi'
+    let selectedAnswers = {};
+
+    const TOPICS = [
+      {
+        id: 1,
+        titleEn: "Topic 1: Need for Special Purpose Books (Subsidiary Books)",
+        titleHi: "विषय 1: विशेष प्रयोजन बहियों (सहायक बहियों) की आवश्यकता",
+        explanationEn: `
+          <ul class="list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li><strong>The Problem with a Single Journal:</strong> In a medium or large enterprise, thousands of transactions take place every single day. If every transaction is written in a single Journal, it becomes bulky, chaotic, prone to errors, and impossible to distribute work among multiple accountants.</li>
+            <li><strong>The Solution — Sub-division of Journal:</strong> Instead of one giant journal, the journal is divided into specialized separate books known as <strong>Subsidiary Books (Special Purpose Books / Day Books)</strong>.</li>
+            <li><strong>Classification of Subsidiary Books:</strong>
+              <ol class="list-decimal list-inside ml-4 mt-1 space-y-1 text-slate-200">
+                <li><strong>Cash Book:</strong> Records all cash and bank receipts and payments.</li>
+                <li><strong>Purchases Book:</strong> Records credit purchases of goods meant for resale.</li>
+                <li><strong>Sales Book:</strong> Records credit sales of goods.</li>
+                <li><strong>Purchases Return Book:</strong> Records returns of credit goods to suppliers.</li>
+                <li><strong>Sales Return Book:</strong> Records returns of credit goods from customers.</li>
+                <li><strong>Journal Proper:</strong> Records all other transactions that don't fit into the above books.</li>
+              </ol>
+            </li>
+          </ul>
+        `,
+        explanationHi: `
+          <ul class="list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li><strong>एकमात्र मुख्य जर्नल की सीमाएँ:</strong> जब किसी व्यापार में प्रतिदिन सैकड़ों-हजारों लेन-देन होते हैं, तो सबको एक ही जर्नल में लिखना अव्यवहारिक हो जाता है। इससे कार्य विभाजन संभव नहीं हो पाता और समय बर्बाद होता है।</li>
+            <li><strong>समाधान — जर्नल का उप-विभाजन:</strong> जर्नल को प्रकृति के आधार पर अलग-अलग विशेष बहियों में बाँट दिया जाता है जिन्हें <strong>सहायक बहियाँ (Subsidiary Books)</strong> कहा जाता है।</li>
+            <li><strong>प्रमुख सहायक बहियाँ:</strong> रोकड़ बही (Cash Book), क्रय बही (Purchases Book), विक्रय बही (Sales Book), क्रय वापसी बही (Purchases Return Book), विक्रय वापसी बही (Sales Return Book), तथा मुख्य जर्नल (Journal Proper)।</li>
+          </ul>
+        `,
+        example: `
+          <div class="p-3.5 bg-slate-900 border border-slate-700 rounded-xl text-xs sm:text-sm font-mono text-emerald-400">
+            <strong>Real-Life Business Example / व्यावहारिक उदाहरण:</strong><br>
+            A garment store "Fashion Hub" makes 500 sales a day:<br>
+            • Cash/UPI sales → Entered directly into the <strong>Cash Book</strong>.<br>
+            • Credit sales to boutique owners → Entered in the <strong>Sales Book</strong>.<br>
+            • Fabric bought on credit from mills → Entered in the <strong>Purchases Book</strong>.<br>
+            • Old shop counter sold on credit → Entered in <strong>Journal Proper</strong> (not sales book, as it is an asset, not goods!).
+          </div>
+        `,
+        mcqs: [
+          {
+            qEn: "Subdivision of the Journal into specialized books of original entry is known as:",
+            qHi: "जर्नल को विशेष प्रारंभिक प्रविष्टि बहियों में उप-विभाजित करना कहलाता है:",
+            optsEn: ["Trial Balance", "Subsidiary Books (Special Purpose Books)", "Ledger Accounts", "Balance Sheet"],
+            optsHi: ["तलपट", "सहायक बहियाँ (विशेष प्रयोजन पुस्तकें)", "खाता बही", "चिट्ठा"],
+            correct: 1,
+            exp: "Subsidiary books are subdivisions of the journal created for specific categories of transactions."
+          },
+          {
+            qEn: "Which of the following is NOT a subsidiary book?",
+            qHi: "निम्नलिखित में से कौन-सी सहायक बही नहीं है?",
+            optsEn: ["Purchases Book", "Sales Book", "Cash Book", "Trial Balance"],
+            optsHi: ["क्रय बही", "विक्रय बही", "रोकड़ बही", "तलपट (Trial Balance)"],
+            correct: 3,
+            exp: "Trial Balance is a statement of ledger balances, not a book of original entry (subsidiary book)."
+          },
+          {
+            qEn: "Credit purchase of old office furniture by a textile shop is recorded in:",
+            qHi: "कपड़ा व्यापारी द्वारा उधार खरीदे गए पुराने कार्यालय फर्नीचर का लेखा किसमें किया जाता है?",
+            optsEn: ["Purchases Book", "Cash Book", "Journal Proper", "Sales Book"],
+            optsHi: ["क्रय बही", "रोकड़ बही", "मुख्य जर्नल (Journal Proper)", "विक्रय बही"],
+            correct: 2,
+            exp: "Purchases book only records credit purchase of GOODS for resale. Purchase of fixed assets on credit goes to Journal Proper."
+          }
+        ]
+      },
+      {
+        id: 2,
+        titleEn: "Topic 2: Simple Cash Book (Single Column Cash Book)",
+        titleHi: "विषय 2: साधारण रोकड़ बही (एक-स्तंभीय रोकड़ बही)",
+        explanationEn: `
+          <ul class="list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li><strong>Purpose:</strong> A Simple Cash Book records all cash receipts and cash payments in chronological (date-wise) order.</li>
+            <li><strong>Format:</strong> Divided into two halves (T-shape):
+              <br>• <strong>Left side (Debit / Receipts side):</strong> Records all incoming cash (e.g. cash sales, cash received from debtors, capital introduced).
+              <br>• <strong>Right side (Credit / Payments side):</strong> Records all outgoing cash (e.g. cash purchases, salaries paid, rent paid, cash paid to creditors).
+            </li>
+            <li><strong>Key Rule — Always Debit Balance:</strong> A Simple Cash Book <strong>can never have a credit balance</strong>, because a business cannot pay more physical cash than it actually has in hand!</li>
+            <li><strong>Double Role:</strong> The Cash Book acts as <em>both a Subsidiary Book (Journal) and a Ledger Account</em>. Therefore, when a Cash Book is maintained, a separate Cash Account is NOT opened in the ledger.</li>
+          </ul>
+        `,
+        explanationHi: `
+          <ul class="list-disc list-inside space-y-2 text-slate-300 text-sm">
+            <li><strong>उद्देश्य:</strong> साधारण रोकड़ बही में समस्त नकद प्राप्तियों और नकद भुगतानों का तिथिवार लेखा किया जाता है।</li>
+            <li><strong>प्रारूप:</strong> बायाँ पक्ष <strong>डेबिट (प्राप्तियाँ)</strong> होता है जहाँ नकद आवक लिखी जाती है। दायाँ पक्ष <strong>क्रेडिट (भुगतान)</strong> होता है जहाँ नकद जावक लिखी जाती है।</li>
+            <li><strong>महत्वपूर्ण नियम:</strong> रोकड़ बही का हमेशा <strong>डेबिट शेष (Debit Balance)</strong> ही होता है, क्योंकि कोई भी व्यापारी हाथ में उपलब्ध नकद से अधिक भुगतान नहीं कर सकता।</li>
+            <li><strong>दोहरी भूमिका:</strong> रोकड़ बही प्रारंभिक प्रविष्टि की पुस्तक और खाता बही (लेज़र) दोनों का कार्य करती है। अतः अलग से 'रोकड़ खाता' खोलने की आवश्यकता नहीं होती।</li>
+          </ul>
+        `,
+        example: `
+          <div class="p-3.5 bg-slate-900 border border-slate-700 rounded-xl text-xs sm:text-sm font-mono text-emerald-400">
+            <strong>Simple Cash Book Format / उदाहरण:</strong><br>
+            <div class="overflow-x-auto mt-2">
+              <table class="w-full border-collapse border border-slate-700 text-[11px] text-slate-200">
+                <thead>
+                  <tr class="bg-slate-800 text-[#04AA6D]">
+                    <th class="border border-slate-700 p-1">Date</th>
+                    <th class="border border-slate-700 p-1">Receipts (Debit)</th>
+                    <th class="border border-slate-700 p-1">L.F.</th>
+                    <th class="border border-slate-700 p-1">Amount (₹)</th>
+                    <th class="border border-slate-700 p-1">Date</th>
+                    <th class="border border-slate-700 p-1">Payments (Credit)</th>
+                    <th class="border border-slate-700 p-1">L.F.</th>
+                    <th class="border border-slate-700 p-1">Amount (₹)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-slate-700 p-1">2026 Jan 1</td>
+                    <td class="border border-slate-700 p-1">To Capital A/c</td>
+                    <td class="border border-slate-700 p-1"></td>
+                    <td class="border border-slate-700 p-1">50,000</td>
+                    <td class="border border-slate-700 p-1">2026 Jan 3</td>
+                    <td class="border border-slate-700 p-1">By Purchases A/c</td>
+                    <td class="border border-slate-700 p-1"></td>
+                    <td class="border border-slate-700 p-1">15,000</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-slate-700 p-1">Jan 5</td>
+                    <td class="border border-slate-700 p-1">To Sales A/c</td>
+                    <td class="border border-slate-700 p-1"></td>
+                    <td class="border border-slate-700 p-1">10,000</td>
+                    <td class="border border-slate-700 p-1">Jan 10</td>
+                    <td class="border border-slate-700 p-1">By Rent A/c</td>
+                    <td class="border border-slate-700 p-1"></td>
+                    <td class="border border-slate-700 p-1">5,000</td>
+                  </tr>
+                  <tr class="font-bold text-amber-300">
+                    <td class="border border-slate-700 p-1"></td>
+                    <td class="border border-slate-700 p-1">Total</td>
+                    <td class="border border-slate-700 p-1"></td>
+                    <td class="border border-slate-700 p-1">60,000</td>
+                    <td class="border border-slate-700 p-1">Jan 31</td>
+                    <td class="border border-slate-700 p-1">By Balance c/d (₹60k - ₹20k)</td>
+                    <td class="border border-slate-700 p-1"></td>
+                    <td class="border border-slate-700 p-1">40,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `,
+        mcqs: [
+          {
+            qEn: "The Simple Cash Book records:",
+            qHi: "साधारण रोकड़ बही में किसका लेखा किया जाता है?",
+            optsEn: ["Only cash receipts and payments", "All credit transactions", "Only discounts", "Purchases on credit"],
+            optsHi: ["केवल नकद प्राप्तियों और भुगतानों का", "सभी उधार लेन-देनों का", "केवल छूट का", "उधार क्रय का"],
+            correct: 0,
+            exp: "A simple cash book only records cash transactions. Credit transactions are strictly excluded."
+          },
+          {
+            qEn: "Can the Cash Book have a negative / credit balance for physical cash in hand?",
+            qHi: "क्या हाथ में उपलब्ध नकद के लिए रोकड़ बही का क्रेडिट (ऋणात्मक) शेष हो सकता है?",
+            optsEn: ["Yes, anytime", "No, never (one cannot pay more cash than available)", "Only in December", "Depends on accountant"],
+            optsHi: ["हाँ, कभी भी", "नहीं, कभी नहीं (उपलब्ध नकद से अधिक भुगतान नहीं हो सकता)", "केवल दिसंबर में", "लेखाकार पर निर्भर है"],
+            correct: 1,
+            exp: "Physical cash in hand can either be positive or zero; it can never be negative (credit balance)."
+          },
+          {
+            qEn: "When a Cash Book is maintained by a firm, which separate ledger account is NOT opened?",
+            qHi: "जब कोई फर्म रोकड़ बही बनाती है, तो खाता बही में कौन-सा अलग खाता नहीं खोला जाता?",
+            optsEn: ["Bank Account", "Cash Account", "Capital Account", "Sales Account"],
+            optsHi: ["बैंक खाता", "रोकड़ खाता (Cash Account)", "पूँजी खाता", "विक्रय खाता"],
+            correct: 1,
+            exp: "The Cash Book itself acts as the Cash Account, so a duplicate Cash Account in the ledger is unnecessary."
+          }
+        ]
+      }
+    ];
+
+    let isLightMode = false;
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    themeToggleBtn.addEventListener("click", () => {
+      isLightMode = !isLightMode;
+      document.body.classList.toggle("light-theme", isLightMode);
+      themeIcon.innerText = isLightMode ? "🌙" : "☀️";
+    });
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll(".lang-btn").forEach((btn, idx) => {
+        const langs = ['both', 'en', 'hi'];
+        btn.classList.toggle("active", langs[idx] === lang);
+      });
+      renderContent();
+    }
+
+    function renderContent() {
+      const container = document.getElementById("contentContainer");
+      container.innerHTML = "";
+
+      TOPICS.forEach(topic => {
+        const section = document.createElement("section");
+        section.className = "topic-section";
+
+        let titleHtml = "";
+        let expHtml = "";
+
+        if (currentLang === "both") {
+          titleHtml = `
+            <div class="topic-title-row">
+              <div>
+                <h2 class="topic-title">${topic.titleEn}</h2>
+                <h3 style="font-size: 0.88rem; color: var(--brand-purple); font-weight: 700; margin-top: 2px;">${topic.titleHi}</h3>
+              </div>
+              <span class="tag-badge tag-badge-purple">Topic ${topic.id}</span>
+            </div>
+          `;
+          expHtml = `<div style="font-size: 0.88rem; line-height: 1.6; color: var(--text-muted);">${topic.explanationEn}<hr style="border: 0; border-top: 1px solid var(--border-card); margin: 12px 0;">${topic.explanationHi}</div>`;
+        } else if (currentLang === "en") {
+          titleHtml = `
+            <div class="topic-title-row">
+              <h2 class="topic-title">${topic.titleEn}</h2>
+              <span class="tag-badge tag-badge-purple">Topic ${topic.id}</span>
+            </div>
+          `;
+          expHtml = `<div style="font-size: 0.88rem; line-height: 1.6; color: var(--text-muted);">${topic.explanationEn}</div>`;
+        } else {
+          titleHtml = `
+            <div class="topic-title-row">
+              <h2 class="topic-title">${topic.titleHi}</h2>
+              <span class="tag-badge tag-badge-purple">विषय ${topic.id}</span>
+            </div>
+          `;
+          expHtml = `<div style="font-size: 0.88rem; line-height: 1.6; color: var(--text-muted);">${topic.explanationHi}</div>`;
+        }
+
+        let mcqSection = '<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border-card);">';
+        mcqSection += '<h4 style="font-size: 0.78rem; font-weight: 800; text-transform: uppercase; color: var(--brand-gold); letter-spacing: 0.05em;">⚡ Check Your Understanding (MCQs):</h4>';
+
+        topic.mcqs.forEach((mcq, mIdx) => {
+          const qKey = `${topic.id}_${mIdx}`;
+          const isAnswered = selectedAnswers[qKey] !== undefined;
+          const userAns = selectedAnswers[qKey];
+
+          let qText = currentLang === "both" ? `<div style="font-weight: 700; color: var(--text-main); font-size: 0.92rem;">Q${mIdx + 1}. ${mcq.qEn}</div><div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">हिन्दी: ${mcq.qHi}</div>` : (currentLang === "en" ? `<div style="font-weight: 700; color: var(--text-main); font-size: 0.92rem;">Q${mIdx + 1}. ${mcq.qEn}</div>` : `<div style="font-weight: 700; color: var(--text-main); font-size: 0.92rem;">प्र${mIdx + 1}. ${mcq.qHi}</div>`);
+
+          let optsHtml = '<div class="opts-grid">';
+          mcq.optsEn.forEach((optEn, oIdx) => {
+            const optHi = mcq.optsHi[oIdx];
+            let optText = currentLang === "both" ? `${optEn} (${optHi})` : currentLang === "en" ? optEn : optHi;
+
+            let btnClass = "opt-btn";
+            if (isAnswered) {
+              if (oIdx === mcq.correct) btnClass += " correct-btn font-bold";
+              else if (oIdx === userAns) btnClass += " wrong-btn";
+              else btnClass += " opt-dimmed";
+            }
+
+            optsHtml += `
+              <button onclick="handleAnswer('${qKey}', ${oIdx}, ${mcq.correct})" ${isAnswered ? 'disabled' : ''} class="${btnClass}">
+                <span><strong style="color: var(--brand-purple); margin-right: 4px;">${String.fromCharCode(65 + oIdx)}.</strong> ${optText}</span>
+                ${isAnswered && oIdx === mcq.correct ? '<span>✓</span>' : ''}
+                ${isAnswered && oIdx === userAns && userAns !== mcq.correct ? '<span>✗</span>' : ''}
+              </button>
+            `;
+          });
+          optsHtml += '</div>';
+
+          let expBox = "";
+          if (isAnswered) {
+            const isCorrect = userAns === mcq.correct;
+            expBox = `
+              <div style="padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.8rem; margin-top: 6px; border: 1px solid ${isCorrect ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)'}; background: ${isCorrect ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)'}; color: ${isCorrect ? '#a7f3d0' : '#fecaca'};">
+                <strong>${isCorrect ? '✓ Correct!' : '✗ Incorrect!'}</strong> ${mcq.exp}
+              </div>
+            `;
+          }
+
+          mcqSection += `
+            <div class="mcq-card">
+              ${qText}
+              ${optsHtml}
+              ${expBox}
+            </div>
+          `;
+        });
+        mcqSection += '</div>';
+
+        section.innerHTML = `
+          ${titleHtml}
+          ${expHtml}
+          ${topic.example}
+          ${mcqSection}
+        `;
+
+        container.appendChild(section);
+      });
+    }
+
+    function handleAnswer(qKey, optIdx, correctIdx) {
+      if (selectedAnswers[qKey] !== undefined) return;
+      selectedAnswers[qKey] = optIdx;
+      renderContent();
+      if (optIdx === correctIdx) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 35, spread: 50, origin: { y: 0.8 } });
+        }
+      }
+    }
+
+    renderContent();
+  </script>
+</body>
+</html>

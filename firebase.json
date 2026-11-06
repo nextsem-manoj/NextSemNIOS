@@ -1,0 +1,70 @@
+{
+  "hosting": {
+    "site": "nextsem-ncert-2403",
+    "public": "dist",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "pdf/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/merge",
+        "destination": "/merge.html"
+      },
+      {
+        "source": "/bilingual-pdf-merger",
+        "destination": "/bilingual-pdf-merger.html"
+      },
+      {
+        "source": "/kids-kg",
+        "destination": "/kids-kg.html"
+      },
+      {
+        "source": "/kids",
+        "destination": "/kids-kg.html"
+      },
+      {
+        "source": "/kids-foundational-worksheet",
+        "destination": "/kids-foundational-worksheet.html"
+      },
+      {
+        "source": "/kids-month",
+        "destination": "/kids-month.html"
+      },
+      {
+        "source": "/kids-1month-worksheets",
+        "destination": "/kids-1month-worksheets.html"
+      },
+      {
+        "source": "/ts-grewal",
+        "destination": "/ts-grewal-class11.html"
+      },
+      {
+        "source": "/ts-grewal-class11",
+        "destination": "/ts-grewal-class11.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          },
+          {
+            "key": "Service-Worker-Allowed",
+            "value": "/"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "topic": "Law of Reflection & Radius of Curvature",
+    "questionEn": "For a spherical mirror of small aperture, what is the relation between its radius of curvature (R) and focal length (f)?",
+    "questionHi": "छोटे द्वारक के गोलीय दर्पण के लिए, उसकी वक्रता त्रिज्या (R) तथा फोकस दूरी (f) के बीच क्या संबंध होता है?",
+    "options": [
+      { "key": "a", "textEn": "R = f / 2", "textHi": "R = f / 2" },
+      { "key": "b", "textEn": "R = 2f", "textHi": "R = 2f" },
+      { "key": "c", "textEn": "R = 3f", "textHi": "R = 3f" },
+      { "key": "d", "textEn": "R = f²", "textHi": "R = f²" }
+    ],
+    "correct": "b",
+    "explanationEn": "For spherical mirrors of small apertures, the radius of curvature is found to be equal to twice the focal length (R = 2f). This means that the principal focus (F) lies midway between the pole (P) and the centre of curvature (C).",
+    "explanationHi": "छोटे द्वारक के गोलीय दर्पणों के लिए वक्रता त्रिज्या, फोकस दूरी की दोगुनी होती है (R = 2f)। इसका अर्थ है कि मुख्य फोकस (F), ध्रुव (P) तथा वक्रता केंद्र (C) के ठीक मध्य में स्थित होता है।"
+  },
+  {
+    "id": 2,
+    "topic": "Concave Mirror — Shaving & Dental Use",
+    "questionEn": "To get an erect and magnified (enlarged) image using a concave mirror, where should the object be placed?",
+    "questionHi": "अवतल दर्पण का उपयोग करके किसी वस्तु का सीधा तथा आवर्धित (बड़ा) प्रतिबिंब प्राप्त करने के लिए वस्तु को कहाँ रखा जाना चाहिए?",
+    "options": [
+      { "key": "a", "textEn": "At the centre of curvature (C)", "textHi": "वक्रता केंद्र (C) पर" },
+      { "key": "b", "textEn": "Between focus (F) and centre of curvature (C)", "textHi": "फोकस (F) और वक्रता केंद्र (C) के बीच" },
+      { "key": "c", "textEn": "Between the pole (P) and the principal focus (F)", "textHi": "ध्रुव (P) तथा मुख्य फोकस (F) के बीच" },
+      { "key": "d", "textEn": "At infinity", "textHi": "अनंत पर" }
+    ],
+    "correct": "c",
+    "explanationEn": "When an object is placed between the pole (P) and principal focus (F) of a concave mirror, it forms a virtual, erect, and magnified image behind the mirror. This property is used in dentist mirrors and shaving mirrors.",
+    "explanationHi": "जब वस्तु को अवतल दर्पण के ध्रुव (P) और मुख्य फोकस (F) के बीच रखा जाता है, तो दर्पण के पीछे आभासी, सीधा और आवर्धित प्रतिबिंब बनता है। इसी गुण का उपयोग दंत चिकित्सक और शेविंग दर्पणों में करते हैं।"
+  },
+  {
+    "id": 3,
+    "topic": "Convex Mirror — Rear-View Mirrors",
+    "questionEn": "Why are convex mirrors preferred as rear-view mirrors in vehicles?",
+    "questionHi": "वाहनों में पश्च-दृश्य (रियर-व्यू) दर्पण के रूप में उत्तल दर्पण को प्राथमिकता क्यों दी जाती है?",
+    "options": [
+      { "key": "a", "textEn": "They form inverted and real images of distant vehicles", "textHi": "वे दूर के वाहनों का उल्टा और वास्तविक प्रतिबिंब बनाते हैं" },
+      { "key": "b", "textEn": "They always give an erect, though diminished image, and offer a much wider field of view", "textHi": "वे हमेशा सीधा लेकिन छोटा प्रतिबिंब देते हैं, और उनका दृष्टि-क्षेत्र बहुत व्यापक होता है" },
+      { "key": "c", "textEn": "They have a focal length equal to infinity", "textHi": "उनकी फोकस दूरी अनंत के बराबर होती है" },
+      { "key": "d", "textEn": "They produce an enlarged virtual image of the vehicle behind", "textHi": "वे पीछे के वाहन का आवर्धित आभासी प्रतिबिंब बनाते हैं" }
+    ],
+    "correct": "b",
+    "explanationEn": "Convex mirrors are curved outwards, which gives them a wider field of view than a plane mirror. Furthermore, they always produce an erect, though diminished image, allowing the driver to see a wide area of traffic behind safely.",
+    "explanationHi": "उत्तल दर्पण बाहर की ओर वक्रित होते हैं जिससे उनका दृष्टि-क्षेत्र समतल दर्पण की तुलना में काफी बड़ा होता है। इसके अलावा वे हमेशा सीधा (यद्यपि छोटा) प्रतिबिंब बनाते हैं, जिससे चालक पीछे के बड़े यातायात क्षेत्र को देख सकता है।"
+  },
+  {
+    "id": 4,
+    "topic": "Sign Convention for Mirrors & Lenses",
+    "questionEn": "A spherical mirror and a thin spherical lens have each a focal length of -15 cm. The mirror and the lens are likely to be:",
+    "questionHi": "किसी गोलीय दर्पण तथा किसी पतले गोलीय लेंस दोनों की फोकस दूरियाँ -15 सेमी हैं। दर्पण तथा लेंस संभवतः हैं:",
+    "options": [
+      { "key": "a", "textEn": "Both concave", "textHi": "दोनों अवतल" },
+      { "key": "b", "textEn": "Both convex", "textHi": "दोनों उत्तल" },
+      { "key": "c", "textEn": "The mirror is concave and the lens is convex", "textHi": "दर्पण अवतल तथा लेंस उत्तल" },
+      { "key": "d", "textEn": "The mirror is convex and the lens is concave", "textHi": "दर्पण उत्तल तथा लेंस अवतल" }
+    ],
+    "correct": "a",
+    "explanationEn": "According to the New Cartesian Sign Convention, the focal length of both a concave mirror and a concave lens is negative by convention (f < 0). Therefore, both are concave.",
+    "explanationHi": "नई कार्तीय चिह्न परिपाटी के अनुसार, अवतल दर्पण और अवतल लेंस दोनों की फोकस दूरी ऋणात्मक (-ve) ली जाती है। अतः दोनों ही अवतल हैं।"
+  },
+  {
+    "id": 5,
+    "topic": "Mirror Formula & Linear Magnification",
+    "questionEn": "The correct mirror formula relating object distance (u), image distance (v), and focal length (f) is:",
+    "questionHi": "वस्तु दूरी (u), प्रतिबिंब दूरी (v) और फोकस दूरी (f) से संबंधित सही दर्पण सूत्र है:",
+    "options": [
+      { "key": "a", "textEn": "1/v - 1/u = 1/f", "textHi": "1/v - 1/u = 1/f" },
+      { "key": "b", "textEn": "1/v + 1/u = 1/f", "textHi": "1/v + 1/u = 1/f" },
+      { "key": "c", "textEn": "v + u = f", "textHi": "v + u = f" },
+      { "key": "d", "textEn": "1/f = u / v", "textHi": "1/f = u / v" }
+    ],
+    "correct": "b",
+    "explanationEn": "The mirror formula is 1/v + 1/u = 1/f. Magnification produced by a mirror is m = -v/u = h'/h. (Note: Lens formula has a minus sign: 1/v - 1/u = 1/f).",
+    "explanationHi": "दर्पण सूत्र 1/v + 1/u = 1/f होता है। दर्पण द्वारा उत्पन्न आवर्धन m = -v/u = h'/h होता है। (ध्यान दें: लेंस सूत्र में ऋण चिह्न होता है: 1/v - 1/u = 1/f)।"
+  },
+  {
+    "id": 6,
+    "topic": "Magnification Sign Significance",
+    "questionEn": "The magnification produced by a plane mirror is +1. What does the '+' sign and '1' indicate?",
+    "questionHi": "समतल दर्पण द्वारा उत्पन्न आवर्धन +1 है। इसमें '+' चिह्न और संख्या '1' क्या दर्शाते हैं?",
+    "options": [
+      { "key": "a", "textEn": "+ indicates real image, 1 indicates image is half the object size", "textHi": "+ वास्तविक प्रतिबिंब दर्शाता है, 1 दर्शाता है कि प्रतिबिंब आधा है" },
+      { "key": "b", "textEn": "+ indicates virtual & erect image; 1 indicates image size is equal to object size", "textHi": "+ आभासी एवं सीधा प्रतिबिंब दर्शाता है; 1 दर्शाता है कि प्रतिबिंब का आकार वस्तु के आकार के बराबर है" },
+      { "key": "c", "textEn": "+ indicates inverted image; 1 indicates object is at infinity", "textHi": "+ उल्टा प्रतिबिंब दर्शाता है; 1 दर्शाता है कि वस्तु अनंत पर है" },
+      { "key": "d", "textEn": "+ indicates real and inverted image of double size", "textHi": "+ वास्तविक और उल्टे प्रतिबिंब को दोगुने आकार में दर्शाता है" }
+    ],
+    "correct": "b",
+    "explanationEn": "In linear magnification m = h'/h: A positive sign indicates the image is virtual and erect. The numerical value 1 means height of the image equals height of the object (h' = h).",
+    "explanationHi": "आवर्धन m = h'/h में धनात्मक चिह्न (+) यह दर्शाता है कि प्रतिबिंब आभासी तथा सीधा है। संख्या 1 यह दर्शाती है कि प्रतिबिंब की ऊँचाई वस्तु की ऊँचाई के ठीक बराबर है (h' = h)।"
+  },
+  {
+    "id": 7,
+    "topic": "Refraction of Light — Cause",
+    "questionEn": "What is the primary cause of refraction when light travels obliquely from one medium to another?",
+    "questionHi": "जब प्रकाश एक माध्यम से दूसरे माध्यम में तिरछा प्रवेश करता है, तो अपवर्तन का मुख्य कारण क्या होता है?",
+    "options": [
+      { "key": "a", "textEn": "Total internal reflection of light rays", "textHi": "प्रकाश किरणों का पूर्ण आंतरिक परावर्तन" },
+      { "key": "b", "textEn": "Change in the speed of light in different transparent media", "textHi": "भिन्न-भिन्न पारदर्शी माध्यमों में प्रकाश की चाल (गति) में परिवर्तन" },
+      { "key": "c", "textEn": "Attraction by the gravitational field of atoms", "textHi": "परमाणुओं के गुरुत्वाकर्षण क्षेत्र द्वारा आकर्षण" },
+      { "key": "d", "textEn": "Change in the color and frequency of light", "textHi": "प्रकाश के रंग और आवृत्ति में परिवर्तन" }
+    ],
+    "correct": "b",
+    "explanationEn": "Refraction is due to the change in the speed of light as it enters from one transparent medium to another. In optically denser media, light slows down; in rarer media, it speeds up.",
+    "explanationHi": "अपवर्तन का मूल कारण एक पारदर्शी माध्यम से दूसरे माध्यम में जाने पर प्रकाश की चाल (गति) में परिवर्तन होना है। सघन माध्यम में चाल घटती है और विरल माध्यम में बढ़ती है।"
+  },
+  {
+    "id": 8,
+    "topic": "Snell's Law of Refraction",
+    "questionEn": "According to Snell's law of refraction, the ratio of sin(i) to sin(r) for a given pair of media is:",
+    "questionHi": "स्नेल के अपवर्तन नियम के अनुसार, किन्हीं दो माध्यमों के दिए गए युग्म के लिए sin(i) तथा sin(r) का अनुपात होता है:",
+    "options": [
+      { "key": "a", "textEn": "Variable, depending on object distance", "textHi": "परिवर्तनशील, वस्तु की दूरी पर निर्भर" },
+      { "key": "b", "textEn": "Constant, equal to the refractive index of the second medium relative to first (n₂₁)", "textHi": "स्थिरांक, जो पहले माध्यम के सापेक्ष दूसरे माध्यम के अपवर्तनांक (n₂₁) के बराबर होता है" },
+      { "key": "c", "textEn": "Always equal to 1.00", "textHi": "सदैव 1.00 के बराबर" },
+      { "key": "d", "textEn": "Equal to sin(i + r)", "textHi": "sin(i + r) के बराबर" }
+    ],
+    "correct": "b",
+    "explanationEn": "Snell's Law states: sin(i) / sin(r) = constant = n₂₁ (the refractive index of the second medium with respect to the first medium), where 0° < i < 90°.",
+    "explanationHi": "स्नेल का नियम: sin(i) / sin(r) = स्थिरांक = n₂₁ (पहले माध्यम के सापेक्ष दूसरे माध्यम का अपवर्तनांक), जहाँ 0° < i < 90°।"
+  },
+  {
+    "id": 9,
+    "topic": "Optical Density vs Mass Density",
+    "questionEn": "Kerosene has a refractive index of 1.44, while water has 1.33. Kerosene floats on water. This proves that:",
+    "questionHi": "केरोसिन का अपवर्तनांक 1.44 है, जबकि जल का 1.33 है। केरोसिन जल पर तैरता है। यह क्या सिद्ध करता है?",
+    "options": [
+      { "key": "a", "textEn": "Kerosene has higher mass density than water", "textHi": "केरोसिन का द्रव्यमान घनत्व जल से अधिक है" },
+      { "key": "b", "textEn": "An optically denser medium may have lower mass density than an optically rarer medium", "textHi": "प्रकाशिक सघन माध्यम का द्रव्यमान घनत्व, प्रकाशिक विरल माध्यम से कम हो सकता है" },
+      { "key": "c", "textEn": "Light travels faster in kerosene than in water", "textHi": "केरोसिन में प्रकाश जल की तुलना में अधिक तीव्र गति से चलता है" },
+      { "key": "d", "textEn": "Optical density is always identical to mass density", "textHi": "प्रकाशिक घनत्व सदैव द्रव्यमान घनत्व के समान होता है" }
+    ],
+    "correct": "b",
+    "explanationEn": "Optical density is not the same as mass density. Kerosene has a higher refractive index (1.44) than water (1.33), making it optically denser; however, its mass density is less than water, so it floats on water.",
+    "explanationHi": "प्रकाशिक घनत्व और द्रव्यमान घनत्व एक समान नहीं होते। केरोसिन का अपवर्तनांक (1.44) जल (1.33) से अधिक होने के कारण यह प्रकाशिक रूप से सघन है, फिर भी इसका द्रव्यमान घनत्व कम होने के कारण यह जल पर तैरता है।"
+  },
+  {
+    "id": 10,
+    "topic": "Absolute Refractive Index Calculation",
+    "questionEn": "If light enters from air to glass having a refractive index of 1.50, and speed of light in vacuum is 3 × 10⁸ m/s, what is the speed of light in glass?",
+    "questionHi": "यदि प्रकाश वायु से 1.50 अपवर्तनांक वाले काँच में प्रवेश करता है, और निर्वात में प्रकाश की चाल 3 × 10⁸ m/s है, तो काँच में प्रकाश की चाल क्या होगी?",
+    "options": [
+      { "key": "a", "textEn": "4.5 × 10⁸ m/s", "textHi": "4.5 × 10⁸ m/s" },
+      { "key": "b", "textEn": "2.0 × 10⁸ m/s", "textHi": "2.0 × 10⁸ m/s" },
+      { "key": "c", "textEn": "1.5 × 10⁸ m/s", "textHi": "1.5 × 10⁸ m/s" },
+      { "key": "d", "textEn": "3.0 × 10⁸ m/s", "textHi": "3.0 × 10⁸ m/s" }
+    ],
+    "correct": "b",
+    "explanationEn": "Refractive index n = c / v. Thus, v = c / n = (3 × 10⁸ m/s) / 1.50 = 2.0 × 10⁸ m/s.",
+    "explanationHi": "अपवर्तनांक n = c / v होता है। अतः v = c / n = (3 × 10⁸ m/s) / 1.50 = 2.0 × 10⁸ m/s।"
+  },
+  {
+    "id": 11,
+    "topic": "Refractive Index of Diamond",
+    "questionEn": "The refractive index of diamond is 2.42. What physical insight does this number provide?",
+    "questionHi": "हीरे का अपवर्तनांक 2.42 है। इस कथन का भौतिक अर्थ क्या है?",
+    "options": [
+      { "key": "a", "textEn": "Light travels 2.42 times faster in diamond than in vacuum", "textHi": "प्रकाश हीरे में निर्वात की तुलना में 2.42 गुना तेज गति से चलता है" },
+      { "key": "b", "textEn": "The speed of light in diamond is 1/2.42 times (or ~41%) of the speed of light in air/vacuum", "textHi": "हीरे में प्रकाश की चाल, वायु या निर्वात में प्रकाश की चाल का 1/2.42 गुना (लगभग 41%) रह जाती है" },
+      { "key": "c", "textEn": "Diamond has the lowest optical density among all natural substances", "textHi": "हीरे का प्रकाशिक घनत्व सभी प्राकृतिक पदार्थों में सबसे कम होता है" },
+      { "key": "d", "textEn": "Angle of refraction inside diamond is always 2.42 times angle of incidence", "textHi": "हीरे के भीतर अपवर्तन कोण सदैव आपतन कोण का 2.42 गुना होता है" }
+    ],
+    "correct": "b",
+    "explanationEn": "Since n = c / v = 2.42, the speed of light in diamond is v = c / 2.42. This means light travels with only ~41% of its speed in vacuum, making diamond the optically densest natural material in NCERT Table 9.3.",
+    "explanationHi": "चूँकि n = c / v = 2.42, हीरे में प्रकाश की चाल v = c / 2.42 होती है। इसका अर्थ है कि हीरे में प्रकाश की गति निर्वात की तुलना में बहुत धीमी (~41%) हो जाती है।"
+  },
+  {
+    "id": 12,
+    "topic": "Lens Material Selection (NCERT Ex 1)",
+    "questionEn": "Which one of the following materials CANNOT be used to make a lens?",
+    "questionHi": "निम्नलिखित में से कौन सा पदार्थ लेंस बनाने के लिए प्रयुक्त नहीं किया जा सकता?",
+    "options": [
+      { "key": "a", "textEn": "Water", "textHi": "जल" },
+      { "key": "b", "textEn": "Glass", "textHi": "काँच" },
+      { "key": "c", "textEn": "Plastic", "textHi": "प्लास्टिक" },
+      { "key": "d", "textEn": "Clay", "textHi": "मिट्टी" }
+    ],
+    "correct": "d",
+    "explanationEn": "A lens must be made of a transparent material so that light can pass through it and undergo refraction. Clay is completely opaque and does not transmit light, so it cannot be used to make a lens.",
+    "explanationHi": "लेंस बनाने के लिए पारदर्शी पदार्थ की आवश्यकता होती है जिससे प्रकाश का अपवर्तन हो सके। मिट्टी (Clay) अपारदर्शी पदार्थ है और प्रकाश को पार नहीं होने देती, अतः इसका उपयोग लेंस बनाने में नहीं किया जा सकता।"
+  },
+  {
+    "id": 13,
+    "topic": "Convex Lens Image Formation",
+    "questionEn": "Where should an object be placed in front of a convex lens to get a real image of the same size as the object?",
+    "questionHi": "किसी उत्तल लेंस के सामने वस्तु को कहाँ रखा जाए कि उसका वास्तविक और वस्तु के बराबर आकार का प्रतिबिंब बने?",
+    "options": [
+      { "key": "a", "textEn": "At the principal focus (F₁)", "textHi": "मुख्य फोकस (F₁) पर" },
+      { "key": "b", "textEn": "At twice the focal length (2F₁)", "textHi": "फोकस दूरी की दोगुनी दूरी (2F₁) पर" },
+      { "key": "c", "textEn": "At infinity", "textHi": "अनंत पर" },
+      { "key": "d", "textEn": "Between optical centre (O) and focus (F₁)", "textHi": "प्रकाशिक केंद्र (O) और मुख्य फोकस (F₁) के बीच" }
+    ],
+    "correct": "b",
+    "explanationEn": "When an object is placed at 2F₁ in front of a convex lens, its real, inverted image of the same size is formed at 2F₂ on the other side of the lens.",
+    "explanationHi": "जब वस्तु को उत्तल लेंस के सामने 2F₁ पर रखा जाता है, तो उसका वास्तविक, उल्टा और समान आकार का प्रतिबिंब दूसरी ओर 2F₂ पर प्राप्त होता है।"
+  },
+  {
+    "id": 14,
+    "topic": "Concave Lens Image Nature",
+    "questionEn": "A concave lens always forms an image that is:",
+    "questionHi": "अवतल लेंस द्वारा बना प्रतिबिंब सदैव कैसा होता है?",
+    "options": [
+      { "key": "a", "textEn": "Real, inverted and enlarged", "textHi": "वास्तविक, उल्टा और बड़ा" },
+      { "key": "b", "textEn": "Virtual, erect and diminished", "textHi": "आभासी, सीधा और छोटा (ह्रासित)" },
+      { "key": "c", "textEn": "Real, erect and same size", "textHi": "वास्तविक, सीधा और समान आकार" },
+      { "key": "d", "textEn": "Virtual, inverted and magnified", "textHi": "आभासी, उल्टा और आवर्धित" }
+    ],
+    "correct": "b",
+    "explanationEn": "A concave lens is a diverging lens and always diverges rays. For any position of an object, it produces a virtual, erect, and diminished image located between the optical centre O and focus F₁.",
+    "explanationHi": "अवतल लेंस अपसारी लेंस होता है। वस्तु की किसी भी स्थिति के लिए यह सदैव आभासी, सीधा तथा छोटा (ह्रासित) प्रतिबिंब बनाता है जो प्रकाशिक केंद्र O और फोकस F₁ के बीच स्थित होता है।"
+  },
+  {
+    "id": 15,
+    "topic": "Lens Formula & Magnification",
+    "questionEn": "The lens formula and the magnification (m) for spherical lenses are given respectively by:",
+    "questionHi": "गोलीय लेंस के लिए लेंस सूत्र तथा आवर्धन (m) क्रमशः किस रूप में व्यक्त किए जाते हैं?",
+    "options": [
+      { "key": "a", "textEn": "1/v - 1/u = 1/f  and  m = v / u", "textHi": "1/v - 1/u = 1/f  तथा  m = v / u" },
+      { "key": "b", "textEn": "1/v + 1/u = 1/f  and  m = -v / u", "textHi": "1/v + 1/u = 1/f  तथा  m = -v / u" },
+      { "key": "c", "textEn": "1/v - 1/u = 1/f  and  m = -v / u", "textHi": "1/v - 1/u = 1/f  तथा  m = -v / u" },
+      { "key": "d", "textEn": "1/f = u - v  and  m = u / v", "textHi": "1/f = u - v  तथा  m = u / v" }
+    ],
+    "correct": "a",
+    "explanationEn": "For spherical lenses, the lens formula is 1/v - 1/u = 1/f, and magnification is m = h'/h = +v/u. (Contrast with mirrors where 1/v + 1/u = 1/f and m = -v/u).",
+    "explanationHi": "गोलीय लेंस के लिए लेंस सूत्र 1/v - 1/u = 1/f होता है और आवर्धन m = h'/h = +v/u होता है। (जबकि दर्पण के लिए सूत्र 1/v + 1/u = 1/f और m = -v/u होता है)।"
+  },
+  {
+    "id": 16,
+    "topic": "Power of a Lens & SI Unit",
+    "questionEn": "The power (P) of a lens of focal length f (in metres) and its SI unit are:",
+    "questionHi": "मीटर में फोकस दूरी f वाले लेंस की क्षमता (P) तथा इसका SI मात्रक क्या है?",
+    "options": [
+      { "key": "a", "textEn": "P = f, Joule", "textHi": "P = f, जूल" },
+      { "key": "b", "textEn": "P = 1 / f, Dioptre (D = m⁻¹)", "textHi": "P = 1 / f, डाइऑप्टर (D = m⁻¹)" },
+      { "key": "c", "textEn": "P = 100 / f, Watt", "textHi": "P = 100 / f, वॉट" },
+      { "key": "d", "textEn": "P = 2f, Candela", "textHi": "P = 2f, कैन्डेला" }
+    ],
+    "correct": "b",
+    "explanationEn": "Power of a lens is defined as the reciprocal of its focal length in metres: P = 1 / f (in metres). Its SI unit is 'dioptre' (D), where 1 D = 1 m⁻¹.",
+    "explanationHi": "लेंस की क्षमता उसकी फोकस दूरी (मीटर में) का व्युत्क्रम होती है: P = 1 / f (मीटर में)। इसका SI मात्रक 'डाइऑप्टर' (D) है, जहाँ 1 D = 1 m⁻¹।"
+  },
+  {
+    "id": 17,
+    "topic": "Power to Focal Length Calculation",
+    "questionEn": "A doctor prescribes a corrective lens of power -2.0 D. What is its focal length and what type of lens is this?",
+    "questionHi": "एक डॉक्टर -2.0 D क्षमता का संशोधक लेंस निर्धारित करता है। इसकी फोकस दूरी क्या है और यह किस प्रकार का लेंस है?",
+    "options": [
+      { "key": "a", "textEn": "f = +0.50 m, Convex lens", "textHi": "f = +0.50 m, उत्तल लेंस" },
+      { "key": "b", "textEn": "f = -0.50 m, Concave lens", "textHi": "f = -0.50 m, अवतल लेंस" },
+      { "key": "c", "textEn": "f = -2.0 m, Cylindrical lens", "textHi": "f = -2.0 m, बेलनाकार लेंस" },
+      { "key": "d", "textEn": "f = +2.0 m, Plane glass", "textHi": "f = +2.0 m, समतल काँच" }
+    ],
+    "correct": "b",
+    "explanationEn": "Focal length f = 1 / P = 1 / (-2.0 D) = -0.50 m (-50 cm). A negative focal length and power correspond to a diverging or concave lens (used to correct myopia).",
+    "explanationHi": "फोकस दूरी f = 1 / P = 1 / (-2.0 D) = -0.50 m (-50 सेमी)। ऋणात्मक फोकस दूरी और क्षमता अवतल (अपसारी) लेंस की पहचान है (निकट दृष्टि दोष निवारण हेतु)।"
+  },
+  {
+    "id": 18,
+    "topic": "Combination of Lenses",
+    "questionEn": "Two thin lenses of powers +2.0 D and -0.5 D are placed in contact. What is the net power of the lens combination?",
+    "questionHi": "दो पतले लेंस जिनकी क्षमताएँ +2.0 D तथा -0.5 D हैं, परस्पर संपर्क में रखे हैं। संयोजन की कुल क्षमता क्या होगी?",
+    "options": [
+      { "key": "a", "textEn": "-1.0 D", "textHi": "-1.0 D" },
+      { "key": "b", "textEn": "+1.5 D", "textHi": "+1.5 D" },
+      { "key": "c", "textEn": "+2.5 D", "textHi": "+2.5 D" },
+      { "key": "d", "textEn": "+4.0 D", "textHi": "+4.0 D" }
+    ],
+    "correct": "b",
+    "explanationEn": "The net power P of lenses placed in contact is the algebraic sum of their individual powers: P = P₁ + P₂ = (+2.0 D) + (-0.5 D) = +1.5 D.",
+    "explanationHi": "संपर्क में रखे लेंसों की कुल क्षमता उनकी व्यक्तिगत क्षमताओं का बीजगणितीय योग होती है: P = P₁ + P₂ = (+2.0 D) + (-0.5 D) = +1.5 D।"
+  },
+  {
+    "id": 19,
+    "topic": "Apparent Displacement & Refraction",
+    "questionEn": "A lemon kept in water in a glass tumbler appears bigger than its actual size when viewed from the sides. This happens due to:",
+    "questionHi": "काँच के गिलास में जल में रखा नींबू पार्श्व (साइड) से देखने पर अपने वास्तविक आकार से बड़ा दिखाई देता है। ऐसा किसके कारण होता है?",
+    "options": [
+      { "key": "a", "textEn": "Reflection of light", "textHi": "प्रकाश का परावर्तन" },
+      { "key": "b", "textEn": "Refraction of light as it travels from water (denser) into air (rarer)", "textHi": "जल (सघन) से वायु (विरल) में आते समय प्रकाश का अपवर्तन" },
+      { "key": "c", "textEn": "Diffraction of light by water molecules", "textHi": "जल के अणुओं द्वारा प्रकाश का विवर्तन" },
+      { "key": "d", "textEn": "Dispersion of light into rainbow colors", "textHi": "प्रकाश का वर्ण-विक्षेपण" }
+    ],
+    "correct": "b",
+    "explanationEn": "Light rays coming from the lemon inside water bend away from the normal as they enter the rarer medium (air). The curved surface of the glass tumbler acts like a magnifying cylindrical lens, making the lemon appear enlarged due to refraction.",
+    "explanationHi": "जल (सघन माध्यम) से वायु (विरल माध्यम) में आते समय प्रकाश किरणें अभिलंब से दूर झुकती हैं। काँच के गिलास की वक्र सतह एक आवर्धक लेंस की तरह व्यवहार करती है, जिससे अपवर्तन के कारण नींबू बड़ा दिखाई देता है।"
+  },
+  {
+    "id": 20,
+    "topic": "Magnifying Glass Choice (NCERT Ex 6)",
+    "questionEn": "Which of the following lenses would you prefer to use while reading small letters found in a dictionary?",
+    "questionHi": "किसी शब्दकोश (डिक्शनरी) में पाए गए छोटे अक्षरों को पढ़ते समय आप निम्न में से कौन सा लेंस पसंद करेंगे?",
+    "options": [
+      { "key": "a", "textEn": "A convex lens of focal length 50 cm", "textHi": "50 सेमी फोकस दूरी का एक उत्तल लेंस" },
+      { "key": "b", "textEn": "A concave lens of focal length 50 cm", "textHi": "50 सेमी फोकस दूरी का एक अवतल लेंस" },
+      { "key": "c", "textEn": "A convex lens of focal length 5 cm", "textHi": "5 सेमी फोकस दूरी का एक उत्तल लेंस" },
+      { "key": "d", "textEn": "A concave lens of focal length 5 cm", "textHi": "5 सेमी फोकस दूरी का एक अवतल लेंस" }
+    ],
+    "correct": "c",
+    "explanationEn": "To read small letters, a convex lens is needed to obtain a magnified virtual image when the object is held within its focus. Since magnifying power is inversely proportional to focal length (P = 1/f), a convex lens of smaller focal length (5 cm) produces significantly higher magnification than one of 50 cm.",
+    "explanationHi": "छोटे अक्षरों को बड़ा करके पढ़ने के लिए उत्तल लेंस की आवश्यकता होती है। चूँकि आवर्धन क्षमता फोकस दूरी के व्युत्क्रमानुपाती होती है (P = 1/f), इसलिए कम फोकस दूरी (5 सेमी) वाला उत्तल लेंस 50 सेमी वाले लेंस की तुलना में कहीं अधिक आवर्धन प्रदान करता है।"
+  }
+]

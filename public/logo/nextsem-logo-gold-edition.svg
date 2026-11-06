@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="nsGoldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1328"/>
+      <stop offset="100%" stop-color="#060c18"/>
+    </linearGradient>
+    <linearGradient id="nsGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d77f"/>
+      <stop offset="50%" stop-color="#c1a648"/>
+      <stop offset="100%" stop-color="#8a6f23"/>
+    </linearGradient>
+    <filter id="nsGoldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#c1a648" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Container Box with Gold Border -->
+  <rect x="4" y="4" width="152" height="152" rx="36" fill="url(#nsGoldBg)" stroke="url(#nsGoldGrad)" stroke-width="4"/>
+  <rect x="12" y="12" width="136" height="136" rx="28" fill="none" stroke="#c1a648" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- GOLD N (Imperial Gold) -->
+  <path d="M 28 120 V 40 L 72 120 V 40" 
+        fill="none" 
+        stroke="url(#nsGoldGrad)" 
+        stroke-width="18" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#nsGoldGlow)"/>
+
+  <!-- EMERALD S (Nextsem Heritage) -->
+  <path d="M 132 54 C 132 38, 92 38, 92 58 C 92 80, 132 80, 132 102 C 132 120, 92 120, 92 104" 
+        fill="none" 
+        stroke="#04AA6D" 
+        stroke-width="18" 
+        stroke-linecap="round"/>
+</svg>

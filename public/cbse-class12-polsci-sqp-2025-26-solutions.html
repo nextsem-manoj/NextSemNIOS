@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 12 Political Science SQP 2025-26 — Full Solutions (English & Hindi)</title>
+  <meta name="description" content="Complete bilingual solutions with hints for CBSE Class 12 Political Science Sample Question Paper 2025-26. All 30 questions solved in English and Hindi." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #060c18;
+      --surface: #0c1328;
+      --card: #111827;
+      --border: rgba(255,255,255,0.07);
+      --gold: #c1a648;
+      --gold-light: #e8c96a;
+      --emerald: #04AA6D;
+      --cyan: #22d3ee;
+      --red: #f87171;
+      --purple: #a78bfa;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #070e20 0%, #0a1530 50%, #0c1a3a 100%);
+      border-bottom: 1px solid var(--gold);
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .header-left h1 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .header-left p {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .lang-toggle {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .lang-btn {
+      padding: 8px 18px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--gold);
+      color: #000;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #07111f 0%, #0d1f3c 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(193,166,72,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+    }
+    .hero h2 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .stat-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    .stat-pill .num { font-size: 1.4rem; font-weight: 900; color: var(--gold); }
+    .stat-pill .lbl { font-size: 0.7rem; color: var(--muted); }
+
+    /* SECTION NAV */
+    .section-nav {
+      display: flex;
+      gap: 10px;
+      padding: 16px 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .sec-btn {
+      padding: 7px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .sec-btn:hover { color: var(--white); border-color: var(--gold); }
+    .sec-btn.a { border-color: var(--cyan); color: var(--cyan); }
+    .sec-btn.b { border-color: var(--emerald); color: var(--emerald); }
+    .sec-btn.c { border-color: var(--gold); color: var(--gold); }
+    .sec-btn.d { border-color: var(--purple); color: var(--purple); }
+    .sec-btn.e { border-color: var(--red); color: var(--red); }
+
+    /* CONTENT */
+    .content { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+    /* SECTION HEADER */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 36px 0 20px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+    }
+    .section-header.sec-a { background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.3); }
+    .section-header.sec-b { background: rgba(4,170,109,0.08); border: 1px solid rgba(4,170,109,0.3); }
+    .section-header.sec-c { background: rgba(193,166,72,0.08); border: 1px solid rgba(193,166,72,0.3); }
+    .section-header.sec-d { background: rgba(167,139,250,0.08); border: 1px solid rgba(167,139,250,0.3); }
+    .section-header.sec-e { background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); }
+    .sec-badge {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; font-weight: 900;
+      flex-shrink: 0;
+    }
+    .sec-a .sec-badge { background: rgba(34,211,238,0.2); color: var(--cyan); }
+    .sec-b .sec-badge { background: rgba(4,170,109,0.2); color: var(--emerald); }
+    .sec-c .sec-badge { background: rgba(193,166,72,0.2); color: var(--gold); }
+    .sec-d .sec-badge { background: rgba(167,139,250,0.2); color: var(--purple); }
+    .sec-e .sec-badge { background: rgba(248,113,113,0.2); color: var(--red); }
+    .sec-info h3 { font-size: 1.1rem; font-weight: 800; color: var(--white); }
+    .sec-info p { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+    .sec-marks {
+      margin-left: auto;
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+    .sec-a .sec-marks { color: var(--cyan); }
+    .sec-b .sec-marks { color: var(--emerald); }
+    .sec-c .sec-marks { color: var(--gold); }
+    .sec-d .sec-marks { color: var(--purple); }
+    .sec-e .sec-marks { color: var(--red); }
+
+    /* QUESTION CARD */
+    .q-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .q-card:hover { border-color: rgba(255,255,255,0.12); }
+
+    .q-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px 14px;
+    }
+    .q-num {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .sec-a-q .q-num { background: rgba(34,211,238,0.15); color: var(--cyan); }
+    .sec-b-q .q-num { background: rgba(4,170,109,0.15); color: var(--emerald); }
+    .sec-c-q .q-num { background: rgba(193,166,72,0.15); color: var(--gold); }
+    .sec-d-q .q-num { background: rgba(167,139,250,0.15); color: var(--purple); }
+    .sec-e-q .q-num { background: rgba(248,113,113,0.15); color: var(--red); }
+
+    .q-text { flex: 1; }
+    .q-text .question {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.5;
+    }
+    .q-marks {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* MCQ OPTIONS */
+    .mcq-options {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 0 20px 14px 70px;
+    }
+    .mcq-opt {
+      padding: 7px 12px;
+      border-radius: 7px;
+      font-size: 0.83rem;
+      color: var(--muted);
+      border: 1px solid transparent;
+      background: rgba(255,255,255,0.03);
+    }
+    .mcq-opt.correct {
+      background: rgba(4,170,109,0.12);
+      border-color: rgba(4,170,109,0.4);
+      color: #6ee7b7;
+      font-weight: 700;
+    }
+
+    /* ANSWER BLOCK */
+    .answer-block {
+      border-top: 1px solid var(--border);
+      padding: 16px 20px;
+    }
+    .answer-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .ans-tab {
+      padding: 5px 14px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ans-tab.active {
+      background: var(--gold);
+      color: #000;
+      border-color: var(--gold);
+    }
+
+    .answer-content { display: none; }
+    .answer-content.active { display: block; }
+
+    .answer-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .sec-a-q .answer-label { color: var(--cyan); }
+    .sec-b-q .answer-label { color: var(--emerald); }
+    .sec-c-q .answer-label { color: var(--gold); }
+    .sec-d-q .answer-label { color: var(--purple); }
+    .sec-e-q .answer-label { color: var(--red); }
+
+    .answer-text {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .answer-text ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+    .answer-text ul li {
+      margin-bottom: 5px;
+    }
+    .answer-text strong {
+      color: var(--white);
+      font-weight: 700;
+    }
+    .answer-text .keyword {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* HINT BOX */
+    .hint-box {
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(193,166,72,0.07);
+      border: 1px solid rgba(193,166,72,0.2);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .hint-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .hint-text {
+      font-size: 0.8rem;
+      color: #d4b86a;
+      line-height: 1.5;
+    }
+    .hint-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    /* CORRECT ANSWER PILL */
+    .correct-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(4,170,109,0.15);
+      border: 1px solid rgba(4,170,109,0.4);
+      color: #6ee7b7;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    /* MATCH TABLE */
+    .match-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.83rem;
+      margin: 8px 0;
+    }
+    .match-table th {
+      background: rgba(255,255,255,0.05);
+      color: var(--gold);
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .match-table td {
+      padding: 7px 12px;
+      border-top: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* PASSAGE BOX */
+    .passage-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+    footer a { color: var(--emerald); text-decoration: underline; }
+
+    /* SCROLL TOP */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px; height: 44px;
+      background: var(--gold);
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(193,166,72,0.4);
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 1.2rem; }
+      .mcq-options { padding-left: 20px; }
+      .q-header { padding: 14px 16px 10px; }
+      .answer-block { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-left">
+      <h1>📘 Political Science — SQP 2025-26</h1>
+      <p>CBSE Class XII • Complete Solutions • All 30 Questions</p>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-eng" onclick="setLang('eng')">🇬🇧 English</button>
+      <button class="lang-btn" id="btn-hin" onclick="setLang('hin')">🇮🇳 हिंदी</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">CBSE SQP 2025–26 • OFFICIAL SYLLABUS</div>
+  <h2>Complete Solutions with Hints</h2>
+  <p>Both English & Hindi Medium • Chapter-wise references • Exam-ready answers</p>
+  <div class="stats-row">
+    <div class="stat-pill"><div class="num">30</div><div class="lbl">Questions</div></div>
+    <div class="stat-pill"><div class="num">80</div><div class="lbl">Total Marks</div></div>
+    <div class="stat-pill"><div class="num">5</div><div class="lbl">Sections</div></div>
+    <div class="stat-pill"><div class="num">2</div><div class="lbl">Languages</div></div>
+  </div>
+</section>
+
+<!-- SECTION NAV -->
+<nav class="section-nav">
+  <a href="#secA" class="sec-btn a">Section A — MCQ (12M)</a>
+  <a href="#secB" class="sec-btn b">Section B — Short 2M (12M)</a>
+  <a href="#secC" class="sec-btn c">Section C — Short 4M (20M)</a>
+  <a href="#secD" class="sec-btn d">Section D — Source Based (12M)</a>
+  <a href="#secE" class="sec-btn e">Section E — Long 6M (24M)</a>
+</nav>
+
+<main class="content">
+
+<!-- ============================================================ -->
+<!--  SECTION A                                                   -->
+<!-- ============================================================ -->
+<div id="secA" class="section-header sec-a">
+  <div class="sec-badge">A</div>
+  <div class="sec-info">
+    <h3>Section A — Multiple Choice Questions</h3>
+    <p>Q.1 to Q.12 • 1 mark each • No negative marking</p>
+  </div>
+  <div class="sec-marks">12M</div>
+</div>
+
+<!-- Q1 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">1</div>
+    <div class="q-text">
+      <div class="question">The end of bipolarity in international politics led to an increase in ___________.</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) Proxy wars between super powers</div>
+    <div class="mcq-opt">B) Arms race between super powers</div>
+    <div class="mcq-opt correct">✓ C) Multilateral diplomacy and cooperation</div>
+    <div class="mcq-opt">D) Bipolarity in international politics</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q1-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q1-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (C)</div>
+    <div id="q1-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        The collapse of the <strong>Soviet Union (1991)</strong> ended the bipolar world order. With the US and USSR no longer competing as two blocs, international politics moved toward <span class="keyword">multilateralism</span>. Countries began cooperating through <strong>multilateral institutions</strong> like the UN, WTO, and IMF rather than forming military blocs.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Keyword: "End of Cold War → Rise of Multilateralism". Chapter 1 — The End of Bipolarity. Remember the year 1991.</div>
+      </div>
+    </div>
+    <div id="q1-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <strong>सोवियत संघ के विघटन (1991)</strong> के बाद द्विध्रुवीय विश्व व्यवस्था समाप्त हो गई। इसके बाद अंतर्राष्ट्रीय राजनीति में <span class="keyword">बहुपक्षीय कूटनीति और सहयोग</span> में वृद्धि हुई। देश अब सैन्य गुटों के बजाय संयुक्त राष्ट्र, WTO जैसी बहुपक्षीय संस्थाओं के माध्यम से सहयोग करने लगे।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>याद रखें: "शीत युद्ध की समाप्ति → बहुपक्षवाद का उदय"। अध्याय 1 — द्विध्रुवीयता का अंत।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q2 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">2</div>
+    <div class="q-text">
+      <div class="question">Agenda-21 is related to which one of the following?</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt correct">✓ A) Rio Summit</div>
+    <div class="mcq-opt">B) Antarctic Treaty</div>
+    <div class="mcq-opt">C) Montreal Protocol</div>
+    <div class="mcq-opt">D) Antarctic Environmental Protocol</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q2-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q2-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (A)</div>
+    <div id="q2-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <span class="keyword">Agenda-21</span> was adopted at the <strong>Rio Earth Summit (1992)</strong> — officially the United Nations Conference on Environment and Development (UNCED) held in Rio de Janeiro, Brazil. It is a non-binding action plan for sustainable development linking economic growth with environmental protection.
+        <ul>
+          <li><strong>Montreal Protocol (1987)</strong> — Ozone layer protection</li>
+          <li><strong>Antarctic Treaty (1959)</strong> — Peaceful use of Antarctica</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Memory trick: Rio = Agenda-21 + UNFCCC. Chapter 8 — Environment and Natural Resources.</div>
+      </div>
+    </div>
+    <div id="q2-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <span class="keyword">एजेंडा-21</span> को <strong>रियो पृथ्वी सम्मेलन (1992)</strong> — जिसे UNCED भी कहते हैं — में अपनाया गया था। यह ब्राज़ील के रियो डी जेनेरियो में आयोजित हुआ था। यह सतत विकास के लिए एक कार्य-योजना है।
+        <ul>
+          <li><strong>मॉन्ट्रियल प्रोटोकॉल (1987)</strong> — ओज़ोन परत की सुरक्षा</li>
+          <li><strong>अंटार्कटिक संधि (1959)</strong> — अंटार्कटिका का शांतिपूर्ण उपयोग</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>याद रखें: रियो = एजेंडा-21 + UNFCCC। अध्याय 8 — पर्यावरण और प्राकृतिक संसाधन।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q3 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">3</div>
+    <div class="q-text">
+      <div class="question">
+        <strong>Statement I:</strong> In the traditional view of security, most threats to a country's security come from outside its borders.<br>
+        <strong>Statement II:</strong> In world politics, each country has to be responsible for its own security.<br><br>
+        <em>In the light of above statements, choose the correct answer:</em>
+      </div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) Only Statement I is correct</div>
+    <div class="mcq-opt">B) Only Statement II is correct</div>
+    <div class="mcq-opt correct">✓ C) Both Statements I and II are correct</div>
+    <div class="mcq-opt">D) Both Statements I and II are not correct</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q3-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q3-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (C)</div>
+    <div id="q3-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <strong>Statement I is TRUE:</strong> The traditional view of security focuses on military threats from other states. The main concern is protecting borders from external aggression.<br><br>
+        <strong>Statement II is TRUE:</strong> In the traditional view, since there is no world government above nation-states, each country must ensure its own security through military power, alliances, or balance of power.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Traditional Security = External threats, Self-help, Military power. Chapter 7 — Security in the Contemporary World.</div>
+      </div>
+    </div>
+    <div id="q3-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <strong>कथन I सत्य है:</strong> सुरक्षा का पारंपरिक दृष्टिकोण मुख्यतः बाहरी सैन्य खतरों पर केन्द्रित है। देश की सीमाओं को बाह्य आक्रमण से सुरक्षित करना प्रमुख लक्ष्य होता है।<br><br>
+        <strong>कथन II सत्य है:</strong> राष्ट्र-राज्यों के ऊपर कोई विश्व सरकार नहीं होती, इसलिए प्रत्येक देश को अपनी सुरक्षा स्वयं करनी होती है — सैन्य शक्ति, गठबंधन या शक्ति-संतुलन के माध्यम से।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>पारंपरिक सुरक्षा = बाहरी खतरे, स्व-सहायता, सैन्य शक्ति। अध्याय 7 — समकालीन विश्व में सुरक्षा।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q4 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">4</div>
+    <div class="q-text">
+      <div class="question">Identify the group of countries that had been part of the Soviet Union before its disintegration.</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt correct">✓ A) Tajikistan, Azerbaijan, Armenia</div>
+    <div class="mcq-opt">B) Armenia, West Germany, Azerbaijan</div>
+    <div class="mcq-opt">C) Poland, East Germany, Norway</div>
+    <div class="mcq-opt">D) Norway, Hungary, Romania</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q4-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q4-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (A)</div>
+    <div id="q4-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        The Soviet Union broke into <strong>15 independent republics</strong> in 1991. <span class="keyword">Tajikistan, Azerbaijan, and Armenia</span> were all former Soviet republics (part of the USSR). <br><br>
+        <strong>Why others are wrong:</strong> West Germany and Norway were never part of USSR. Poland, East Germany, Romania, Hungary were part of the Soviet <em>bloc</em> (Warsaw Pact) but not the USSR itself.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>USSR had 15 republics. "-stan" countries (Kazakhstan, Tajikistan, etc.) + Baltic states + Caucasus states. Chapter 1.</div>
+      </div>
+    </div>
+    <div id="q4-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        1991 में सोवियत संघ <strong>15 स्वतंत्र गणराज्यों</strong> में टूट गया। <span class="keyword">ताजिकिस्तान, अज़रबैजान और आर्मेनिया</span> सभी पूर्व सोवियत गणराज्य थे।<br><br>
+        <strong>अन्य गलत क्यों:</strong> पश्चिम जर्मनी और नॉर्वे कभी USSR का हिस्सा नहीं थे। पोलैंड, पूर्वी जर्मनी, रोमानिया सोवियत <em>गुट</em> (वारसा पैक्ट) के थे, लेकिन USSR के नहीं।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>USSR के 15 गणराज्य थे। "-स्तान" वाले देश + बाल्टिक देश + काकेशस देश। अध्याय 1।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">5</div>
+    <div class="q-text">
+      <div class="question">The idea of global security emerged in:</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) 1980s</div>
+    <div class="mcq-opt">B) 1970s</div>
+    <div class="mcq-opt">C) 1980s</div>
+    <div class="mcq-opt correct">✓ D) 1990s</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q5-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q5-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (D) — 1990s</div>
+    <div id="q5-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        The concept of <span class="keyword">global/cooperative security</span> emerged in the <strong>1990s</strong> after the end of the Cold War. With bipolarity gone, countries recognized that threats like terrorism, nuclear proliferation, climate change, and pandemics required <strong>collective global responses</strong> rather than individual state action.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Post-Cold War era = 1990s → emergence of new cooperative security frameworks. Chapter 7.</div>
+      </div>
+    </div>
+    <div id="q5-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <span class="keyword">वैश्विक/सहकारी सुरक्षा</span> की अवधारणा <strong>1990 के दशक</strong> में शीत युद्ध की समाप्ति के बाद उभरी। द्विध्रुवीयता समाप्त होने के बाद, देशों ने महसूस किया कि आतंकवाद, परमाणु प्रसार, जलवायु परिवर्तन जैसी चुनौतियों से निपटने के लिए <strong>सामूहिक वैश्विक प्रयास</strong> आवश्यक हैं।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>शीत युद्ध के बाद = 1990 का दशक → नई सहकारी सुरक्षा संरचनाओं का उदय। अध्याय 7।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q6 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">6</div>
+    <div class="q-text">
+      <div class="question">
+        <strong>Assertion (A):</strong> At the G-8 meeting in June 2005, India pointed out that the per capita emission rates of the developing countries are a tiny fraction of those in the developed world.<br>
+        <strong>Reason (R):</strong> A review of the implementation of the agreements at the Earth Summit in Rio was undertaken by India in 1997.<br><br>
+        <em>Choose the appropriate option:</em>
+      </div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) Both A and R are true, and R is the correct explanation of A</div>
+    <div class="mcq-opt">B) Both A and R are true, but R is not the correct explanation of A</div>
+    <div class="mcq-opt correct">✓ C) A is true, but R is false</div>
+    <div class="mcq-opt">D) A is false, but R is true</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q6-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q6-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (C)</div>
+    <div id="q6-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <strong>Assertion (A) is TRUE:</strong> India has consistently argued that developing nations have far lower per capita emissions compared to industrialized countries. India raised this at the G-8 Gleneagles Summit, 2005.<br><br>
+        <strong>Reason (R) is FALSE:</strong> The review of Rio Earth Summit agreements (Earth Summit+5) was held as a <strong>UN General Assembly Special Session in New York in 1997</strong> — it was a global review, not undertaken by India alone.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>A = Correct fact about India's position. R = Incorrect — it was a UN review (Earth Summit+5), not by India. Chapter 8.</div>
+      </div>
+    </div>
+    <div id="q6-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <strong>अभिकथन (A) सत्य है:</strong> भारत ने G-8 ग्लेनेगल्स शिखर सम्मेलन 2005 में कहा कि विकासशील देशों की प्रति व्यक्ति उत्सर्जन दर, विकसित देशों की तुलना में बहुत कम है।<br><br>
+        <strong>कारण (R) असत्य है:</strong> रियो पृथ्वी सम्मेलन की समीक्षा (Earth Summit+5) 1997 में <strong>न्यूयॉर्क में संयुक्त राष्ट्र महासभा के विशेष सत्र</strong> में हुई थी — यह वैश्विक समीक्षा थी, केवल भारत द्वारा नहीं।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>A = सत्य (भारत का रुख), R = असत्य (यह UN की समीक्षा थी, केवल भारत की नहीं)। अध्याय 8।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q7 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">7</div>
+    <div class="q-text">
+      <div class="question">What is the primary purpose of India's foreign policy?</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) Pursuing Territorial expansion</div>
+    <div class="mcq-opt">B) Promoting Economic exploitation</div>
+    <div class="mcq-opt correct">✓ C) National security and economic development</div>
+    <div class="mcq-opt">D) Building exclusive military alliances</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q7-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q7-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (C)</div>
+    <div id="q7-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        India's foreign policy has been guided by two core principles: <span class="keyword">national security</span> and <span class="keyword">economic development</span>. Since independence, India has sought to protect its sovereignty and territorial integrity while creating favorable conditions for economic growth through trade, investment, and international cooperation. India's Non-Alignment policy also served these goals.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>India never pursued territorial expansion or exclusive alliances. Core = Security + Development. Chapter 4 (Part B).</div>
+      </div>
+    </div>
+    <div id="q7-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        भारत की विदेश नीति दो मूल सिद्धांतों पर आधारित है: <span class="keyword">राष्ट्रीय सुरक्षा</span> और <span class="keyword">आर्थिक विकास</span>। स्वतंत्रता के बाद से भारत ने अपनी संप्रभुता और क्षेत्रीय अखंडता की रक्षा करते हुए व्यापार, निवेश और अंतर्राष्ट्रीय सहयोग के माध्यम से आर्थिक विकास के लिए अनुकूल परिस्थितियां बनाई हैं।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>भारत ने कभी क्षेत्रीय विस्तार या विशेष गठबंधन नहीं बनाए। मूल = सुरक्षा + विकास।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q8 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">8</div>
+    <div class="q-text">
+      <div class="question">External affairs minister to visit China in 1979 was:</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) Rajiv Gandhi</div>
+    <div class="mcq-opt correct">✓ B) Atal Bihari Vajpayee</div>
+    <div class="mcq-opt">C) P.V. Narasimha Rao</div>
+    <div class="mcq-opt">D) Manmohan Singh</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q8-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q8-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (B)</div>
+    <div id="q8-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <span class="keyword">Atal Bihari Vajpayee</span>, then India's External Affairs Minister under the Janata Party government, visited China in 1979. This was a significant step in normalizing India-China relations after the 1962 war. However, the visit was cut short due to China's invasion of Vietnam.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>1979: Vajpayee visited China as EAM. Visit cut short due to China-Vietnam War. Chapter on India's External Relations.</div>
+      </div>
+    </div>
+    <div id="q8-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <span class="keyword">अटल बिहारी वाजपेयी</span>, जो उस समय जनता पार्टी सरकार में भारत के विदेश मंत्री थे, ने 1979 में चीन की यात्रा की। 1962 के युद्ध के बाद भारत-चीन संबंधों को सामान्य बनाने की दिशा में यह महत्वपूर्ण कदम था। हालांकि, चीन के वियतनाम पर आक्रमण के कारण यात्रा बीच में ही समाप्त करनी पड़ी।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>1979: वाजपेयी ने विदेश मंत्री के रूप में चीन यात्रा की। चीन-वियतनाम युद्ध के कारण यात्रा छोटी रही।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q9 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">9</div>
+    <div class="q-text">
+      <div class="question">Identify the leader who initiated the concept of integral humanism:</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) Ram Manohar Lohia</div>
+    <div class="mcq-opt">B) S.P. Mukherjee</div>
+    <div class="mcq-opt correct">✓ C) Deen Dayal Upadhyaya</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q9-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q9-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (C)</div>
+    <div id="q9-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <span class="keyword">Pandit Deen Dayal Upadhyaya</span> propounded the concept of <strong>Integral Humanism (Ekatma Manavdarshan)</strong> in 1965. He was a key ideologue of the Jana Sangh (predecessor to BJP). The concept advocates for a holistic approach to human development rooted in Indian culture and tradition, rejecting both Western capitalism and Soviet communism.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Deen Dayal = Integral Humanism + Jana Sangh. S.P. Mukherjee = Founder of Jana Sangh. Chapter 2 (Part B).</div>
+      </div>
+    </div>
+    <div id="q9-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <span class="keyword">पंडित दीन दयाल उपाध्याय</span> ने 1965 में <strong>एकात्म मानववाद (Integral Humanism)</strong> की अवधारणा प्रस्तुत की। वे जनसंघ (BJP के पूर्वज) के प्रमुख विचारक थे। यह अवधारणा भारतीय संस्कृति पर आधारित समग्र मानव विकास की पैरवी करती है — पश्चिमी पूंजीवाद और सोवियत साम्यवाद दोनों को अस्वीकार करते हुए।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>दीन दयाल = एकात्म मानववाद + जनसंघ। श्यामा प्रसाद मुखर्जी = जनसंघ के संस्थापक। अध्याय 2 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q10 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">10</div>
+    <div class="q-text">
+      <div class="question">Match the names of the leaders with their political parties:</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div style="padding: 0 20px 14px;">
+    <table class="match-table">
+      <tr><th>Leaders</th><th>Political Parties</th></tr>
+      <tr><td>I. Acharya Narendra Dev</td><td>i. Communist Party of India</td></tr>
+      <tr><td>II. A.K. Gopalan</td><td>ii. Bhartiya Jana Sangh</td></tr>
+      <tr><td>III. Rafi Ahmed Kidwai</td><td>iii. Praja Socialist Party</td></tr>
+      <tr><td>IV. Shyama Prasad Mukherjee</td><td>iv. Indian National Congress</td></tr>
+    </table>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) I-(ii), II-(iv), III-(iii), IV-(i)</div>
+    <div class="mcq-opt correct">✓ B) I-(iii), II-(i), III-(iv), IV-(ii)</div>
+    <div class="mcq-opt">C) I-(iv), II-(i), III-(ii), IV-(iii)</div>
+    <div class="mcq-opt">D) I-(ii), II-(iii), III-(iv), IV-(i)</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q10-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q10-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (B)</div>
+    <div id="q10-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <ul>
+          <li><strong>Acharya Narendra Dev</strong> → <span class="keyword">Praja Socialist Party</span> (iii) — He was a founding leader of the Socialist Party, later Praja Socialist Party</li>
+          <li><strong>A.K. Gopalan</strong> → <span class="keyword">Communist Party of India</span> (i) — Prominent CPI leader and MP</li>
+          <li><strong>Rafi Ahmed Kidwai</strong> → <span class="keyword">Indian National Congress</span> (iv) — Congress stalwart, Minister in Nehru's cabinet</li>
+          <li><strong>Shyama Prasad Mukherjee</strong> → <span class="keyword">Bhartiya Jana Sangh</span> (ii) — Founder of Jana Sangh</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Shyama Prasad = Founder of Jana Sangh. A.K. Gopalan = Famous Communist leader. Chapter 2 (Part B).</div>
+      </div>
+    </div>
+    <div id="q10-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <ul>
+          <li><strong>आचार्य नरेंद्र देव</strong> → <span class="keyword">प्रजा सोशलिस्ट पार्टी</span> (iii)</li>
+          <li><strong>ए.के. गोपालन</strong> → <span class="keyword">भारतीय कम्युनिस्ट पार्टी</span> (i) — प्रमुख CPI नेता</li>
+          <li><strong>रफी अहमद किदवई</strong> → <span class="keyword">भारतीय राष्ट्रीय कांग्रेस</span> (iv) — नेहरू मंत्रिमंडल में मंत्री</li>
+          <li><strong>श्यामा प्रसाद मुखर्जी</strong> → <span class="keyword">भारतीय जनसंघ</span> (ii) — जनसंघ के संस्थापक</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>श्यामा प्रसाद = जनसंघ के संस्थापक। ए.के. गोपालन = प्रसिद्ध साम्यवादी नेता। अध्याय 2 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q11 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">11</div>
+    <div class="q-text">
+      <div class="question">Identify the leader of Indian National Congress who became the first Chief Minister of Jammu and Kashmir:</div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt">A) Sheikh Abdullah</div>
+    <div class="mcq-opt">B) Omar Abdullah</div>
+    <div class="mcq-opt correct">✓ C) Ghulam Mohammed Sadiq</div>
+    <div class="mcq-opt">D) Mufti Mohammed Sayeed</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q11-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q11-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (C)</div>
+    <div id="q11-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <span class="keyword">Ghulam Mohammed Sadiq</span> became the first Chief Minister of J&K from the <strong>Indian National Congress</strong> (1964–1971). He merged the National Conference with the Congress in 1965. <br><br>
+        <strong>Note:</strong> Sheikh Abdullah was the first PM (then CM) of J&K (1948-53), but he was from the National Conference, not INC.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Sheikh Abdullah = National Conference. G.M. Sadiq = First INC CM of J&K. Chapter 8 (Part B) — Regional Aspirations.</div>
+      </div>
+    </div>
+    <div id="q11-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <span class="keyword">गुलाम मोहम्मद सादिक</span> <strong>भारतीय राष्ट्रीय कांग्रेस</strong> से J&K के पहले मुख्यमंत्री बने (1964–1971)। उन्होंने 1965 में नेशनल कॉन्फ्रेंस का कांग्रेस में विलय किया।<br><br>
+        <strong>ध्यान दें:</strong> शेख अब्दुल्ला J&K के पहले PM/CM थे (1948-53), लेकिन वे नेशनल कॉन्फ्रेंस से थे, कांग्रेस से नहीं।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>शेख अब्दुल्ला = नेशनल कॉन्फ्रेंस। G.M. सादिक = J&K के पहले कांग्रेसी CM। अध्याय 8 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q12 -->
+<div class="q-card sec-a-q">
+  <div class="q-header">
+    <div class="q-num">12</div>
+    <div class="q-text">
+      <div class="question">
+        Arrange the following in chronological order of their creation:<br>
+        I) Arunachal Pradesh &nbsp; II) Punjab &nbsp; III) Nagaland &nbsp; IV) Tripura
+      </div>
+    </div>
+    <div class="q-marks">1 Mark</div>
+  </div>
+  <div class="mcq-options">
+    <div class="mcq-opt correct">✓ A) (III), (II), (IV), (I)</div>
+    <div class="mcq-opt">B) (II), (IV), (I), (III)</div>
+    <div class="mcq-opt">C) (IV), (I), (III), (II)</div>
+    <div class="mcq-opt">D) (I), (II), (III), (IV)</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q12-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q12-hin')">हिंदी</button>
+    </div>
+    <div class="correct-pill">✓ Correct Answer: (A) — III, II, IV, I</div>
+    <div id="q12-eng" class="answer-content active">
+      <div class="answer-label">Answer & Explanation</div>
+      <div class="answer-text">
+        <table class="match-table">
+          <tr><th>State</th><th>Year of Statehood</th></tr>
+          <tr><td>III. Nagaland</td><td><strong>1963</strong> — 16th state of India</td></tr>
+          <tr><td>II. Punjab</td><td><strong>1966</strong> — reorganized by States Reorganisation</td></tr>
+          <tr><td>IV. Tripura</td><td><strong>1972</strong> — full statehood</td></tr>
+          <tr><td>I. Arunachal Pradesh</td><td><strong>1987</strong> — 24th state of India</td></tr>
+        </table>
+        Chronological order: <span class="keyword">Nagaland (1963) → Punjab (1966) → Tripura (1972) → Arunachal Pradesh (1987)</span>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Exam Hint</span>Memory: N-P-T-A (1963, 1966, 1972, 1987). Chapter 8 (Part B) — Regional Aspirations.</div>
+      </div>
+    </div>
+    <div id="q12-hin" class="answer-content">
+      <div class="answer-label">उत्तर एवं व्याख्या</div>
+      <div class="answer-text">
+        <table class="match-table">
+          <tr><th>राज्य</th><th>राज्य बनने का वर्ष</th></tr>
+          <tr><td>III. नागालैंड</td><td><strong>1963</strong></td></tr>
+          <tr><td>II. पंजाब</td><td><strong>1966</strong></td></tr>
+          <tr><td>IV. त्रिपुरा</td><td><strong>1972</strong></td></tr>
+          <tr><td>I. अरुणाचल प्रदेश</td><td><strong>1987</strong></td></tr>
+        </table>
+        कालक्रम: <span class="keyword">नागालैंड → पंजाब → त्रिपुरा → अरुणाचल प्रदेश</span>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">परीक्षा संकेत</span>याद करें: N-P-T-A (1963, 1966, 1972, 1987)। अध्याय 8 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!--  SECTION B                                                   -->
+<!-- ============================================================ -->
+<div id="secB" class="section-header sec-b">
+  <div class="sec-badge">B</div>
+  <div class="sec-info">
+    <h3>Section B — Short Answer Questions</h3>
+    <p>Q.13 to Q.18 • 2 marks each • 50–60 words</p>
+  </div>
+  <div class="sec-marks">12M</div>
+</div>
+
+<!-- Q13 -->
+<div class="q-card sec-b-q">
+  <div class="q-header">
+    <div class="q-num">13</div>
+    <div class="q-text">
+      <div class="question">What were the early initiatives taken by the Planning Commission (now NITI Aayog) for building a new India?</div>
+    </div>
+    <div class="q-marks">2 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q13-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q13-hin')">हिंदी</button>
+    </div>
+    <div id="q13-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (2 Marks)</div>
+      <div class="answer-text">
+        The <span class="keyword">Planning Commission</span> was established in 1950 under PM Nehru. Its early initiatives included:
+        <ul>
+          <li><strong>Five Year Plans:</strong> The First Five Year Plan (1951-56) focused on agriculture and irrigation to address food scarcity</li>
+          <li><strong>Mixed Economy Model:</strong> Combined public sector investment in heavy industries with private enterprise, balancing growth and equity</li>
+          <li><strong>Land Reforms:</strong> Recommended abolition of zamindari system and equitable redistribution of resources</li>
+          <li><strong>Industrial Policy:</strong> Guided development of large-scale public sector industries (steel, power, defense)</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Planning Commission (1950) → Five Year Plans → Mixed Economy → Land Reforms → Public sector. Chapter 3 (Part B) — Politics of Planned Development.</div>
+      </div>
+    </div>
+    <div id="q13-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (2 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">योजना आयोग</span> की स्थापना 1950 में PM नेहरू के नेतृत्व में हुई। इसकी प्रारंभिक पहलें:
+        <ul>
+          <li><strong>पंचवर्षीय योजनाएँ:</strong> प्रथम पंचवर्षीय योजना (1951-56) कृषि और सिंचाई पर केन्द्रित थी</li>
+          <li><strong>मिश्रित अर्थव्यवस्था:</strong> सार्वजनिक क्षेत्र और निजी उद्यम का संयोजन</li>
+          <li><strong>भूमि सुधार:</strong> जमींदारी उन्मूलन और संसाधनों का समान वितरण</li>
+          <li><strong>औद्योगिक नीति:</strong> इस्पात, विद्युत, रक्षा जैसे भारी उद्योगों का विकास</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>योजना आयोग → पंचवर्षीय योजनाएँ → मिश्रित अर्थव्यवस्था → भूमि सुधार। अध्याय 3 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q14 -->
+<div class="q-card sec-b-q">
+  <div class="q-header">
+    <div class="q-num">14</div>
+    <div class="q-text">
+      <div class="question">Explain the process of democratisation in Maldives.</div>
+    </div>
+    <div class="q-marks">2 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q14-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q14-hin')">हिंदी</button>
+    </div>
+    <div id="q14-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (2 Marks)</div>
+      <div class="answer-text">
+        The <span class="keyword">democratisation of Maldives</span> was a gradual process:
+        <ul>
+          <li><strong>1968:</strong> Maldives became a republic (previously a sultanate under British protection)</li>
+          <li><strong>Long Authoritarian Rule:</strong> President Maumoon Abdul Gayoom ruled for 30 years (1978–2008)</li>
+          <li><strong>2008:</strong> A new democratic constitution was adopted; <strong>Mohamed Nasheed</strong> won the first multi-party presidential election, becoming the first democratically elected president</li>
+          <li><strong>Significance:</strong> Showed that democracy can take root even in small island nations</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>1968 Republic → Gayoom 30 years → 2008 Constitution → Nasheed first elected PM. Chapter 5 (Part A) — Contemporary South Asia.</div>
+      </div>
+    </div>
+    <div id="q14-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (2 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">मालदीव का लोकतंत्रीकरण</span> एक क्रमिक प्रक्रिया थी:
+        <ul>
+          <li><strong>1968:</strong> मालदीव गणराज्य बना (पहले ब्रिटिश संरक्षण में सल्तनत था)</li>
+          <li><strong>दीर्घकालिक सत्तावादी शासन:</strong> राष्ट्रपति मौमून अब्दुल गय्यूम ने 30 वर्ष (1978–2008) शासन किया</li>
+          <li><strong>2008:</strong> नया लोकतांत्रिक संविधान अपनाया गया; <strong>मोहम्मद नशीद</strong> पहले बहुदलीय राष्ट्रपति चुनाव में विजयी हुए</li>
+          <li><strong>महत्व:</strong> यह दर्शाता है कि छोटे द्वीपीय राष्ट्रों में भी लोकतंत्र की जड़ें पकड़ सकती हैं</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>1968 गणराज्य → गय्यूम 30 वर्ष → 2008 संविधान → नशीद पहले निर्वाचित राष्ट्रपति। अध्याय 5 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q15 -->
+<div class="q-card sec-b-q">
+  <div class="q-header">
+    <div class="q-num">15</div>
+    <div class="q-text">
+      <div class="question">Describe two forms of cooperative security as per its traditional notion.</div>
+    </div>
+    <div class="q-marks">2 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q15-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q15-hin')">हिंदी</button>
+    </div>
+    <div id="q15-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (2 Marks)</div>
+      <div class="answer-text">
+        Under the <span class="keyword">traditional notion of security</span>, cooperative security involves:
+        <ul>
+          <li><strong>1. Alliance Formation:</strong> Countries form military alliances (e.g., NATO) to collectively deter threats. The principle: an attack on one is an attack on all. This balances power against potential aggressors.</li>
+          <li><strong>2. Balance of Power:</strong> States cooperate to prevent any single state from becoming too powerful. They form coalitions to maintain equilibrium in the international system, reducing the chance of war.</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Traditional cooperative security = Alliance + Balance of Power. Chapter 7 (Part A).</div>
+      </div>
+    </div>
+    <div id="q15-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (2 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">पारंपरिक सुरक्षा</span> की दृष्टि से सहकारी सुरक्षा के दो रूप:
+        <ul>
+          <li><strong>1. गठबंधन निर्माण:</strong> देश सैन्य गठबंधन बनाते हैं (जैसे NATO) ताकि सामूहिक रूप से खतरों को रोका जा सके। सिद्धांत: एक पर हमला = सब पर हमला।</li>
+          <li><strong>2. शक्ति संतुलन:</strong> राज्य सहयोग करते हैं ताकि कोई एक राज्य अत्यधिक शक्तिशाली न बन जाए। गठजोड़ बनाकर अंतर्राष्ट्रीय व्यवस्था में संतुलन बनाए रखा जाता है।</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>पारंपरिक सहकारी सुरक्षा = गठबंधन + शक्ति संतुलन। अध्याय 7 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q16 -->
+<div class="q-card sec-b-q">
+  <div class="q-header">
+    <div class="q-num">16</div>
+    <div class="q-text">
+      <div class="question">Why was Mandal Commission appointed? Explain the reason.</div>
+    </div>
+    <div class="q-marks">2 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q16-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q16-hin')">हिंदी</button>
+    </div>
+    <div id="q16-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (2 Marks)</div>
+      <div class="answer-text">
+        The <span class="keyword">Mandal Commission</span> (Socially and Educationally Backward Classes Commission) was appointed in <strong>1979</strong> by the Janata Party government under PM Charan Singh, chaired by <strong>B.P. Mandal</strong>.
+        <ul>
+          <li><strong>Reason:</strong> To identify the <strong>socially and educationally backward classes</strong> (OBCs) and recommend measures for their advancement</li>
+          <li>Article 340 of the Constitution mandates the President to appoint such a commission</li>
+          <li>Its 1980 report recommended <strong>27% reservation</strong> for OBCs in government jobs and educational institutions (implemented in 1990 by PM V.P. Singh)</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>1979 appointed → B.P. Mandal → identify OBCs → 27% reservation recommended → implemented 1990. Chapter 6 (Part B).</div>
+      </div>
+    </div>
+    <div id="q16-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (2 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">मंडल आयोग</span> (सामाजिक एवं शैक्षिक दृष्टि से पिछड़े वर्गों का आयोग) की नियुक्ति <strong>1979</strong> में जनता पार्टी सरकार ने की, जिसके अध्यक्ष <strong>बी.पी. मंडल</strong> थे।
+        <ul>
+          <li><strong>कारण:</strong> <strong>सामाजिक और शैक्षिक रूप से पिछड़े वर्गों (OBC)</strong> की पहचान करना और उनके उत्थान के लिए सिफारिशें करना</li>
+          <li>संविधान का अनुच्छेद 340 राष्ट्रपति को ऐसे आयोग की नियुक्ति का अधिकार देता है</li>
+          <li>1980 की रिपोर्ट में सरकारी नौकरियों में OBC के लिए <strong>27% आरक्षण</strong> की सिफारिश की गई (1990 में PM V.P. Singh द्वारा लागू)</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>1979 → बी.पी. मंडल → OBC पहचान → 27% आरक्षण → 1990 में लागू। अध्याय 6 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q17 -->
+<div class="q-card sec-b-q">
+  <div class="q-header">
+    <div class="q-num">17</div>
+    <div class="q-text">
+      <div class="question">What is the difference between one-party dominance and a one-party system?</div>
+    </div>
+    <div class="q-marks">2 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q17-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q17-hin')">हिंदी</button>
+    </div>
+    <div id="q17-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (2 Marks)</div>
+      <div class="answer-text">
+        <table class="match-table">
+          <tr><th>One-Party Dominance</th><th>One-Party System</th></tr>
+          <tr><td>Multiple parties exist and compete</td><td>Only one party is legally permitted</td></tr>
+          <tr><td>One party wins repeatedly due to public support (e.g., Congress in 1952-67)</td><td>All other parties are banned (e.g., China — CCP, Cuba)</td></tr>
+          <tr><td>Free elections held; opposition can win</td><td>No free elections; no opposition</td></tr>
+          <tr><td>Democratic system</td><td>Authoritarian/totalitarian system</td></tr>
+        </table>
+        <br><span class="keyword">India's Congress dominance (1952–67) was one-party dominance, NOT a one-party system</span> — opposition parties existed and participated freely.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Dominance = democratic, competitive; System = authoritarian, no opposition. Chapter 2 (Part B) — Era of One Party Dominance.</div>
+      </div>
+    </div>
+    <div id="q17-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (2 अंक)</div>
+      <div class="answer-text">
+        <table class="match-table">
+          <tr><th>एकदलीय प्रभुत्व</th><th>एकदलीय व्यवस्था</th></tr>
+          <tr><td>अनेक दल अस्तित्व में रहते हैं और चुनाव लड़ते हैं</td><td>केवल एक दल को कानूनी मान्यता होती है</td></tr>
+          <tr><td>एक दल जनसमर्थन से बार-बार जीतता है (जैसे 1952-67 में कांग्रेस)</td><td>अन्य सभी दल प्रतिबंधित होते हैं (जैसे चीन में CCP)</td></tr>
+          <tr><td>स्वतंत्र चुनाव होते हैं; विपक्ष जीत सकता है</td><td>स्वतंत्र चुनाव नहीं; कोई विपक्ष नहीं</td></tr>
+          <tr><td>लोकतांत्रिक व्यवस्था</td><td>सत्तावादी व्यवस्था</td></tr>
+        </table>
+        <br><span class="keyword">भारत में कांग्रेस का प्रभुत्व (1952-67) एकदलीय प्रभुत्व था, एकदलीय व्यवस्था नहीं</span> — विपक्षी दल स्वतंत्र रूप से चुनाव लड़ते थे।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>प्रभुत्व = लोकतांत्रिक; व्यवस्था = सत्तावादी। अध्याय 2 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q18 -->
+<div class="q-card sec-b-q">
+  <div class="q-header">
+    <div class="q-num">18</div>
+    <div class="q-text">
+      <div class="question">Explain the meaning of global poverty.</div>
+    </div>
+    <div class="q-marks">2 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q18-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q18-hin')">हिंदी</button>
+    </div>
+    <div id="q18-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (2 Marks)</div>
+      <div class="answer-text">
+        <span class="keyword">Global poverty</span> refers to the condition in which a significant portion of the world's population lacks access to basic necessities — food, shelter, clean water, healthcare, and education.
+        <ul>
+          <li><strong>World Bank Definition:</strong> Living on less than $2.15/day (extreme poverty line)</li>
+          <li><strong>Extent:</strong> Sub-Saharan Africa and South Asia account for the largest share of the global poor</li>
+          <li><strong>Causes:</strong> Colonial exploitation, unequal global trade, debt burdens, and lack of technology transfer from rich to poor nations</li>
+          <li><strong>Link to World Politics:</strong> Global poverty fuels conflict, terrorism, and migration — making it a global security concern</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Lack of basic needs + $2.15/day benchmark + causes + global impact. Chapter 9 (Part A) — Globalisation.</div>
+      </div>
+    </div>
+    <div id="q18-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (2 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">वैश्विक निर्धनता</span> से तात्पर्य उस स्थिति से है जिसमें विश्व की बड़ी जनसंख्या के पास भोजन, आश्रय, स्वच्छ जल, स्वास्थ्य सेवा और शिक्षा जैसी बुनियादी आवश्यकताओं का अभाव है।
+        <ul>
+          <li><strong>विश्व बैंक परिभाषा:</strong> $2.15/दिन से कम पर जीवन-यापन (अत्यंत गरीबी)</li>
+          <li><strong>विस्तार:</strong> उप-सहारा अफ्रीका और दक्षिण एशिया में सर्वाधिक गरीब</li>
+          <li><strong>कारण:</strong> औपनिवेशिक शोषण, असमान वैश्विक व्यापार, ऋण-भार और प्रौद्योगिकी हस्तांतरण का अभाव</li>
+          <li><strong>वैश्विक राजनीति से संबंध:</strong> निर्धनता संघर्ष, आतंकवाद और प्रवास को बढ़ावा देती है</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>बुनियादी जरूरतों का अभाव + $2.15/दिन + कारण + वैश्विक प्रभाव। अध्याय 9 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!--  SECTION C                                                   -->
+<!-- ============================================================ -->
+<div id="secC" class="section-header sec-c">
+  <div class="sec-badge">C</div>
+  <div class="sec-info">
+    <h3>Section C — Short Answer Questions</h3>
+    <p>Q.19 to Q.23 • 4 marks each • 100–120 words</p>
+  </div>
+  <div class="sec-marks">20M</div>
+</div>
+
+<!-- Q19 -->
+<div class="q-card sec-c-q">
+  <div class="q-header">
+    <div class="q-num">19</div>
+    <div class="q-text">
+      <div class="question">Explain any four consequences of the disintegration of the Soviet Union for the world politics.</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q19-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q19-hin')">हिंदी</button>
+    </div>
+    <div id="q19-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (4 Marks)</div>
+      <div class="answer-text">
+        The <span class="keyword">collapse of the Soviet Union (1991)</span> had far-reaching consequences:
+        <ul>
+          <li><strong>1. End of Cold War:</strong> The ideological rivalry between capitalism (USA) and communism (USSR) ended. The world moved from a bipolar to a unipolar order dominated by the USA.</li>
+          <li><strong>2. Emergence of New States:</strong> 15 new independent nations were born from the former USSR — including Russia, Ukraine, Kazakhstan, Armenia, Azerbaijan, and the Baltic states.</li>
+          <li><strong>3. US Hegemony:</strong> The USA became the sole superpower. It established its military, economic, and cultural dominance globally (Pax Americana).</li>
+          <li><strong>4. Spread of Liberal Democracy:</strong> Democratic movements swept through Eastern Europe. Countries like Poland, Czech Republic, and Hungary adopted multi-party democracy and market economies.</li>
+          <li><strong>5. New Security Threats:</strong> Ethnic conflicts, civil wars, and nuclear proliferation arose in former Soviet states, creating new global security challenges.</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Write any 4: End of Cold War + Unipolar world + 15 new states + US hegemony + Democracy spread + New threats. Chapter 1 (Part A).</div>
+      </div>
+    </div>
+    <div id="q19-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (4 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">सोवियत संघ के विघटन (1991)</span> के दूरगामी परिणाम:
+        <ul>
+          <li><strong>1. शीत युद्ध की समाप्ति:</strong> पूंजीवाद और साम्यवाद की वैचारिक प्रतिद्वंद्विता समाप्त हुई। विश्व द्विध्रुवीय से एकध्रुवीय बना।</li>
+          <li><strong>2. नए राज्यों का उदय:</strong> पूर्व USSR से 15 नए स्वतंत्र राष्ट्र बने — रूस, यूक्रेन, कजाकिस्तान, आर्मेनिया आदि।</li>
+          <li><strong>3. अमेरिकी आधिपत्य:</strong> USA एकमात्र महाशक्ति बना। उसने सैन्य, आर्थिक और सांस्कृतिक वर्चस्व स्थापित किया।</li>
+          <li><strong>4. उदार लोकतंत्र का विस्तार:</strong> पूर्वी यूरोप में लोकतांत्रिक आंदोलन फैले। पोलैंड, चेक गणराज्य आदि ने बहुदलीय लोकतंत्र अपनाया।</li>
+          <li><strong>5. नई सुरक्षा चुनौतियाँ:</strong> जातीय संघर्ष, गृहयुद्ध और परमाणु प्रसार जैसी समस्याएँ उभरीं।</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>कोई 4 लिखें: शीत युद्ध का अंत + एकध्रुवीय विश्व + 15 नए राज्य + अमेरिकी वर्चस्व + लोकतंत्र। अध्याय 1 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q20 -->
+<div class="q-card sec-c-q">
+  <div class="q-header">
+    <div class="q-num">20</div>
+    <div class="q-text">
+      <div class="question">Describe the main features of the Non-Alignment Movement (NAM). How was it different from neutrality?</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q20-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q20-hin')">हिंदी</button>
+    </div>
+    <div id="q20-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (4 Marks)</div>
+      <div class="answer-text">
+        <strong>Main Features of NAM:</strong>
+        <ul>
+          <li><strong>1. Avoidance of Military Alliances:</strong> NAM countries refused to join either NATO (US bloc) or Warsaw Pact (Soviet bloc)</li>
+          <li><strong>2. Independent Foreign Policy:</strong> Decisions were made based on national interest, not superpower pressure</li>
+          <li><strong>3. Anti-Colonialism & Anti-Imperialism:</strong> NAM strongly supported independence movements worldwide</li>
+          <li><strong>4. Peaceful Coexistence:</strong> Based on Panchsheel (Five Principles) — mutual respect, non-aggression, non-interference, equality, peaceful coexistence</li>
+          <li><strong>5. Founded by:</strong> India (Nehru), Egypt (Nasser), Yugoslavia (Tito) — First NAM Summit, Belgrade 1961</li>
+        </ul>
+        <br>
+        <strong>NAM vs Neutrality:</strong><br>
+        Neutrality means staying out of war. <span class="keyword">NAM was not neutrality</span> — NAM nations actively participated in world affairs, took sides on colonial issues, and engaged with both blocs on their own terms.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>NAM = No alliance + Independent policy + Anti-colonial. NAM ≠ Neutrality (active engagement). Chapter 1 (Part B) — Nation Building.</div>
+      </div>
+    </div>
+    <div id="q20-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (4 अंक)</div>
+      <div class="answer-text">
+        <strong>गुटनिरपेक्षता (NAM) की विशेषताएँ:</strong>
+        <ul>
+          <li><strong>1. सैन्य गठबंधनों से परहेज:</strong> NAM देशों ने न NATO (अमेरिकी गुट) और न वारसा पैक्ट (सोवियत गुट) में शामिल होने से मना किया</li>
+          <li><strong>2. स्वतंत्र विदेश नीति:</strong> निर्णय राष्ट्रीय हित के आधार पर, महाशक्तियों के दबाव में नहीं</li>
+          <li><strong>3. उपनिवेशवाद-विरोध:</strong> NAM ने विश्वभर में स्वतंत्रता आंदोलनों का समर्थन किया</li>
+          <li><strong>4. शांतिपूर्ण सहअस्तित्व:</strong> पंचशील (पाँच सिद्धांत) पर आधारित</li>
+          <li><strong>5. संस्थापक:</strong> नेहरू (भारत), नासिर (मिस्र), टीटो (यूगोस्लाविया) — प्रथम NAM शिखर, बेलग्रेड 1961</li>
+        </ul>
+        <br>
+        <strong>NAM बनाम तटस्थता:</strong><br>
+        तटस्थता का अर्थ युद्ध से दूर रहना है। <span class="keyword">NAM तटस्थता नहीं था</span> — NAM देश सक्रिय रूप से विश्व मामलों में भाग लेते थे और उपनिवेशवाद के मुद्दे पर पक्ष लेते थे।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>NAM = गठबंधन नहीं + स्वतंत्र नीति + उपनिवेशवाद-विरोधी। NAM ≠ तटस्थता। अध्याय 1 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q21 -->
+<div class="q-card sec-c-q">
+  <div class="q-header">
+    <div class="q-num">21</div>
+    <div class="q-text">
+      <div class="question">Analyze the major issues that have led to tension between India and Pakistan. Suggest any two ways to improve relations.</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q21-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q21-hin')">हिंदी</button>
+    </div>
+    <div id="q21-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (4 Marks)</div>
+      <div class="answer-text">
+        <strong>Major Issues of Tension:</strong>
+        <ul>
+          <li><strong>1. Kashmir Dispute:</strong> Both claim the entire region. India holds 2/3, Pakistan holds 1/3 (Azad Kashmir). Multiple wars fought (1947, 1965, 1999 Kargil).</li>
+          <li><strong>2. Cross-Border Terrorism:</strong> India accuses Pakistan of supporting terrorist groups like Lashkar-e-Taiba (2008 Mumbai attacks). Major stumbling block in relations.</li>
+          <li><strong>3. Water Disputes:</strong> Indus Waters Treaty (1960) governs river sharing, but disputes recur over dam construction.</li>
+          <li><strong>4. Nuclear Rivalry:</strong> Both tested nuclear weapons in 1998, raising fears of arms race.</li>
+          <li><strong>5. Trade & Connectivity:</strong> Restricted trade despite geographic proximity.</li>
+        </ul>
+        <strong>Two ways to improve:</strong>
+        <ul>
+          <li>Resume <strong>Composite Dialogue</strong> on all issues — trade, people-to-people contact</li>
+          <li>Third-party <strong>mediation through SAARC</strong> on specific issues</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Kashmir + Terrorism + Water + Nuclear + Trade. Chapter 5 (Part A) — Contemporary South Asia.</div>
+      </div>
+    </div>
+    <div id="q21-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (4 अंक)</div>
+      <div class="answer-text">
+        <strong>प्रमुख तनाव के मुद्दे:</strong>
+        <ul>
+          <li><strong>1. कश्मीर विवाद:</strong> दोनों पूरे क्षेत्र पर दावा करते हैं। अनेक युद्ध (1947, 1965, 1999 कारगिल) हुए।</li>
+          <li><strong>2. सीमापार आतंकवाद:</strong> भारत पाकिस्तान पर आतंकी संगठनों को समर्थन का आरोप लगाता है (2008 मुंबई हमले)।</li>
+          <li><strong>3. जल विवाद:</strong> सिंधु जल संधि (1960) नदी-बँटवारे की व्यवस्था करती है, लेकिन बाँध निर्माण पर विवाद जारी।</li>
+          <li><strong>4. परमाणु प्रतिद्वंद्विता:</strong> दोनों ने 1998 में परमाणु परीक्षण किए।</li>
+          <li><strong>5. व्यापार:</strong> भौगोलिक निकटता के बावजूद सीमित व्यापार।</li>
+        </ul>
+        <strong>सुधार के दो उपाय:</strong>
+        <ul>
+          <li>सभी मुद्दों पर <strong>समग्र वार्ता</strong> पुनः आरंभ करना</li>
+          <li><strong>SAARC के माध्यम से</strong> विशेष मुद्दों पर मध्यस्थता</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>कश्मीर + आतंकवाद + जल + परमाणु + व्यापार। अध्याय 5 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q22 -->
+<div class="q-card sec-c-q">
+  <div class="q-header">
+    <div class="q-num">22</div>
+    <div class="q-text">
+      <div class="question">Describe the challenges to national integration faced by India immediately after independence.</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q22-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q22-hin')">हिंदी</button>
+    </div>
+    <div id="q22-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (4 Marks)</div>
+      <div class="answer-text">
+        India faced formidable challenges to national integration after 1947:
+        <ul>
+          <li><strong>1. Integration of Princely States:</strong> 562 princely states had to be merged into India. Sardar Vallabhbhai Patel's role was crucial. States like Hyderabad, Junagadh, and Kashmir posed the greatest challenges.</li>
+          <li><strong>2. Partition & Refugee Crisis:</strong> The division of British India into India and Pakistan led to massive displacement (14 million people) and communal violence, straining resources and social fabric.</li>
+          <li><strong>3. Linguistic Reorganisation of States:</strong> Demands for states on linguistic lines (e.g., Andhra for Telugu speakers) led to agitations. The States Reorganisation Commission (1953) led to the creation of linguistic states in 1956.</li>
+          <li><strong>4. Poverty & Underdevelopment:</strong> Vast inequality and poverty threatened democratic consolidation and social cohesion.</li>
+          <li><strong>5. Regional & Ethnic Demands:</strong> Naga, Mizo movements sought autonomy/independence.</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Princely states + Partition + Linguistic states + Poverty + Ethnic demands. Chapter 1 (Part B) — Challenges of Nation Building.</div>
+      </div>
+    </div>
+    <div id="q22-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (4 अंक)</div>
+      <div class="answer-text">
+        स्वतंत्रता के बाद भारत के सामने राष्ट्रीय एकीकरण की कठिन चुनौतियाँ थीं:
+        <ul>
+          <li><strong>1. रियासतों का विलय:</strong> 562 रियासतों को भारत में मिलाना था। सरदार पटेल की भूमिका महत्वपूर्ण रही। हैदराबाद, जूनागढ़, कश्मीर सबसे चुनौतीपूर्ण थे।</li>
+          <li><strong>2. विभाजन और शरणार्थी संकट:</strong> भारत-पाकिस्तान विभाजन ने 1.4 करोड़ लोगों को विस्थापित किया और सांप्रदायिक हिंसा भड़की।</li>
+          <li><strong>3. भाषाई आधार पर राज्य पुनर्गठन:</strong> आंध्र (तेलुगुभाषी) जैसी माँगों के लिए आंदोलन हुए। राज्य पुनर्गठन आयोग (1953) → 1956 में भाषाई राज्य।</li>
+          <li><strong>4. गरीबी और अविकास:</strong> असमानता और गरीबी ने लोकतंत्र को खतरे में डाला।</li>
+          <li><strong>5. क्षेत्रीय और जातीय माँगें:</strong> नागा, मिज़ो आंदोलनों ने स्वायत्तता/स्वतंत्रता माँगी।</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>रियासतें + विभाजन + भाषाई राज्य + गरीबी + जातीय माँगें। अध्याय 1 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q23 -->
+<div class="q-card sec-c-q">
+  <div class="q-header">
+    <div class="q-num">23</div>
+    <div class="q-text">
+      <div class="question">What is globalisation? Explain its impact on the developing world.</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q23-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q23-hin')">हिंदी</button>
+    </div>
+    <div id="q23-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (4 Marks)</div>
+      <div class="answer-text">
+        <span class="keyword">Globalisation</span> is the process of growing interconnections and interdependence among countries across economic, political, social, and cultural dimensions. It involves the free movement of goods, services, capital, technology, and people across national borders.
+        <br><br>
+        <strong>Impact on Developing Countries:</strong>
+        <ul>
+          <li><strong>Positive:</strong> Access to foreign investment, technology, and markets; export-led economic growth (China, India); spread of democratic ideas</li>
+          <li><strong>Negative:</strong> Widening inequality within nations; MNCs dominating local markets; loss of cultural identity; environmental exploitation; "race to the bottom" in labor standards</li>
+          <li><strong>Debate:</strong> Leftist critics argue globalization benefits the rich world. Pro-globalization economists argue it lifts millions out of poverty (India's IT sector, export growth)</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Define + Positive impacts + Negative impacts + Example (India/China). Chapter 9 (Part A) — Globalisation.</div>
+      </div>
+    </div>
+    <div id="q23-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (4 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">वैश्वीकरण</span> देशों के बीच बढ़ती अंतर्संबद्धता और परस्पर निर्भरता की प्रक्रिया है — आर्थिक, राजनीतिक, सामाजिक और सांस्कृतिक आयामों में। इसमें राष्ट्रीय सीमाओं के पार वस्तुओं, सेवाओं, पूँजी, प्रौद्योगिकी और लोगों का स्वतंत्र आवागमन शामिल है।
+        <br><br>
+        <strong>विकासशील देशों पर प्रभाव:</strong>
+        <ul>
+          <li><strong>सकारात्मक:</strong> विदेशी निवेश, प्रौद्योगिकी और बाज़ारों तक पहुँच; निर्यात-आधारित विकास (चीन, भारत); लोकतांत्रिक विचारों का प्रसार</li>
+          <li><strong>नकारात्मक:</strong> आय असमानता में वृद्धि; बहुराष्ट्रीय कंपनियों का वर्चस्व; सांस्कृतिक पहचान का क्षरण; पर्यावरण का शोषण</li>
+          <li><strong>बहस:</strong> वामपंथी आलोचकों का मानना है कि वैश्वीकरण अमीर देशों को लाभ देता है। समर्थकों का कहना है कि इससे लाखों लोग गरीबी से बाहर निकले (भारत का IT क्षेत्र)</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>परिभाषा + सकारात्मक + नकारात्मक + उदाहरण (भारत/चीन)। अध्याय 9 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!--  SECTION D                                                   -->
+<!-- ============================================================ -->
+<div id="secD" class="section-header sec-d">
+  <div class="sec-badge">D</div>
+  <div class="sec-info">
+    <h3>Section D — Source / Map / Picture Based</h3>
+    <p>Q.24 to Q.26 • Internal choice • 4 marks each</p>
+  </div>
+  <div class="sec-marks">12M</div>
+</div>
+
+<!-- Q24 -->
+<div class="q-card sec-d-q">
+  <div class="q-header">
+    <div class="q-num">24</div>
+    <div class="q-text">
+      <div class="question">[Picture/Cartoon Based] Read the given political cartoon/image and answer the sub-questions related to hegemony and US dominance in world politics.</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q24-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q24-hin')">हिंदी</button>
+    </div>
+    <div id="q24-eng" class="answer-content active">
+      <div class="answer-label">Concept Answer — US Hegemony</div>
+      <div class="answer-text">
+        <strong>Key Concept: American Hegemony</strong>
+        <ul>
+          <li><strong>Military Hegemony:</strong> US defence budget = larger than next 12 nations combined. Bases in 60+ countries. Only nation capable of global power projection.</li>
+          <li><strong>Economic Hegemony:</strong> US dollar is the world's reserve currency. Dominates World Bank, IMF, WTO rule-making.</li>
+          <li><strong>Cultural Hegemony:</strong> American movies, music, food (McDonald's), language (English as lingua franca) shape global culture — "soft power".</li>
+          <li><strong>Challenges to Hegemony:</strong> Rise of China, EU, terrorism, and multilateralism challenge US dominance.</li>
+        </ul>
+        <em>Note: Answer specific sub-questions based on the actual image provided in your paper.</em>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>For picture questions: identify what's shown → link to concept → use textbook terminology. Chapter 3 (Part A) — US Hegemony.</div>
+      </div>
+    </div>
+    <div id="q24-hin" class="answer-content">
+      <div class="answer-label">अवधारणा उत्तर — अमेरिकी आधिपत्य</div>
+      <div class="answer-text">
+        <strong>मुख्य अवधारणा: अमेरिकी आधिपत्य</strong>
+        <ul>
+          <li><strong>सैन्य आधिपत्य:</strong> अमेरिकी रक्षा बजट अगले 12 देशों के संयुक्त बजट से अधिक। 60+ देशों में सैन्य अड्डे।</li>
+          <li><strong>आर्थिक आधिपत्य:</strong> डॉलर विश्व की आरक्षित मुद्रा। विश्व बैंक, IMF, WTO में दबदबा।</li>
+          <li><strong>सांस्कृतिक आधिपत्य:</strong> अमेरिकी फिल्में, संगीत, फास्टफूड — "soft power"।</li>
+          <li><strong>चुनौतियाँ:</strong> चीन का उदय, यूरोपीय संघ, आतंकवाद और बहुपक्षवाद।</li>
+        </ul>
+        <em>नोट: अपने प्रश्नपत्र में दी गई वास्तविक छवि के उप-प्रश्नों का उत्तर उसी के अनुसार दें।</em>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>चित्र प्रश्न के लिए: पहचानें क्या दिखाया → अवधारणा से जोड़ें → पाठ्यपुस्तक की शब्दावली उपयोग करें। अध्याय 3 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q25 -->
+<div class="q-card sec-d-q">
+  <div class="q-header">
+    <div class="q-num">25</div>
+    <div class="q-text">
+      <div class="question">[Map Based] On the given political map of India, identify and locate the states that were reorganised on linguistic basis after the States Reorganisation Act of 1956.</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q25-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q25-hin')">हिंदी</button>
+    </div>
+    <div id="q25-eng" class="answer-content active">
+      <div class="answer-label">Concept Answer — States Reorganisation</div>
+      <div class="answer-text">
+        <strong>States Reorganisation Act, 1956:</strong>
+        <ul>
+          <li><strong>Background:</strong> Demand by Potti Sriramulu for separate Andhra state (Telugu speakers). He died on hunger strike in 1952 → Andhra Pradesh formed in 1953.</li>
+          <li><strong>States Reorganisation Commission (SRC):</strong> Appointed 1953; report submitted 1955; Act passed 1956</li>
+          <li><strong>Key States Created:</strong>
+            <ul>
+              <li>Andhra Pradesh (Telugu)</li>
+              <li>Maharashtra (Marathi) — separated from Bombay state in 1960</li>
+              <li>Gujarat (Gujarati) — separated from Bombay state in 1960</li>
+              <li>Karnataka (Kannada) — reorganized from Mysore</li>
+              <li>Kerala (Malayalam)</li>
+            </ul>
+          </li>
+          <li><strong>Principle:</strong> Language became the primary basis of state formation in India</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>Potti Sriramulu → Andhra (1953) → SRC (1953) → Act 1956 → Linguistic states. Chapter 8 (Part B).</div>
+      </div>
+    </div>
+    <div id="q25-hin" class="answer-content">
+      <div class="answer-label">अवधारणा उत्तर — राज्य पुनर्गठन</div>
+      <div class="answer-text">
+        <strong>राज्य पुनर्गठन अधिनियम, 1956:</strong>
+        <ul>
+          <li><strong>पृष्ठभूमि:</strong> पोट्टी श्रीरामुलु ने तेलुगु भाषी आंध्र राज्य की माँग की। 1952 में आमरण अनशन के बाद निधन → 1953 में आंध्र प्रदेश बना।</li>
+          <li><strong>राज्य पुनर्गठन आयोग (SRC):</strong> 1953 में नियुक्त; 1955 में रिपोर्ट; 1956 में अधिनियम</li>
+          <li><strong>प्रमुख राज्य:</strong>
+            <ul>
+              <li>आंध्र प्रदेश (तेलुगु)</li>
+              <li>महाराष्ट्र (मराठी) — 1960 में बॉम्बे से अलग</li>
+              <li>गुजरात (गुजराती) — 1960 में बॉम्बे से अलग</li>
+              <li>कर्नाटक (कन्नड़)</li>
+              <li>केरल (मलयालम)</li>
+            </ul>
+          </li>
+          <li><strong>सिद्धांत:</strong> भाषा भारत में राज्य गठन का प्रमुख आधार बनी</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>पोट्टी श्रीरामुलु → आंध्र (1953) → SRC → अधिनियम 1956 → भाषाई राज्य। अध्याय 8 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q26 -->
+<div class="q-card sec-d-q">
+  <div class="q-header">
+    <div class="q-num">26</div>
+    <div class="q-text">
+      <div class="question">[Passage Based] Read the passage about India's environmental policy and answer the sub-questions based on it.</div>
+    </div>
+    <div class="q-marks">4 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q26-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q26-hin')">हिंदी</button>
+    </div>
+    <div id="q26-eng" class="answer-content active">
+      <div class="answer-label">Concept Answer — India & Environment</div>
+      <div class="answer-text">
+        <strong>India's position on Global Environmental Agreements:</strong>
+        <ul>
+          <li><strong>India's Argument:</strong> Developed nations are historically responsible for most emissions. Developing nations need "right to development" — they cannot be asked to limit growth when they haven't yet industrialized.</li>
+          <li><strong>Common but Differentiated Responsibilities (CBDR):</strong> India supports this principle — all nations share responsibility for environment, but developed nations bear greater burden</li>
+          <li><strong>Key Agreements:</strong>
+            <ul>
+              <li>Kyoto Protocol (1997): India signed but was not required to cut emissions as a developing country</li>
+              <li>Paris Agreement (2015): India committed to Nationally Determined Contributions (NDCs)</li>
+            </ul>
+          </li>
+          <li><strong>India's achievements:</strong> Largest renewable energy expansion; solar energy leadership</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>CBDR + Right to Development + Kyoto Protocol + Paris Agreement + India's renewable push. Chapter 8 (Part A).</div>
+      </div>
+    </div>
+    <div id="q26-hin" class="answer-content">
+      <div class="answer-label">अवधारणा उत्तर — भारत और पर्यावरण</div>
+      <div class="answer-text">
+        <strong>वैश्विक पर्यावरण समझौतों पर भारत का रुख:</strong>
+        <ul>
+          <li><strong>भारत का तर्क:</strong> विकसित देश ऐतिहासिक रूप से अधिकांश उत्सर्जन के लिए जिम्मेदार हैं। विकासशील देशों को "विकास का अधिकार" है।</li>
+          <li><strong>CBDR (साझा पर सभिन्न जिम्मेदारियाँ):</strong> भारत इस सिद्धांत का समर्थन करता है — विकसित देशों की अधिक जिम्मेदारी।</li>
+          <li><strong>प्रमुख समझौते:</strong>
+            <ul>
+              <li>क्योटो प्रोटोकॉल (1997): भारत ने हस्ताक्षर किए, उत्सर्जन कटौती की बाध्यता नहीं</li>
+              <li>पेरिस समझौता (2015): NDC प्रतिबद्धताएँ</li>
+            </ul>
+          </li>
+          <li><strong>भारत की उपलब्धियाँ:</strong> नवीकरणीय ऊर्जा विस्तार, सौर ऊर्जा नेतृत्व</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>CBDR + विकास का अधिकार + क्योटो + पेरिस + भारत की नवीकरणीय ऊर्जा। अध्याय 8 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!--  SECTION E                                                   -->
+<!-- ============================================================ -->
+<div id="secE" class="section-header sec-e">
+  <div class="sec-badge">E</div>
+  <div class="sec-info">
+    <h3>Section E — Long Answer Questions</h3>
+    <p>Q.27 to Q.30 • 6 marks each • 170–180 words</p>
+  </div>
+  <div class="sec-marks">24M</div>
+</div>
+
+<!-- Q27 -->
+<div class="q-card sec-e-q">
+  <div class="q-header">
+    <div class="q-num">27</div>
+    <div class="q-text">
+      <div class="question">What do you understand by the New International Economic Order (NIEO)? Why did developing countries demand it? Explain.</div>
+    </div>
+    <div class="q-marks">6 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q27-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q27-hin')">हिंदी</button>
+    </div>
+    <div id="q27-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (6 Marks)</div>
+      <div class="answer-text">
+        <strong>New International Economic Order (NIEO):</strong><br>
+        The <span class="keyword">NIEO</span> was a set of proposals put forward by developing nations in the 1970s through the UN to restructure the global economic system in their favor. It was formally articulated in the <strong>UN General Assembly Declaration (1974)</strong>.
+        <br><br>
+        <strong>Background:</strong><br>
+        After decolonization, former colonies found themselves economically dependent on their former colonial masters. The existing international economic order (Bretton Woods — World Bank, IMF, GATT) was seen as designed to benefit rich nations.
+        <br><br>
+        <strong>Key Demands of NIEO:</strong>
+        <ul>
+          <li><strong>1. Sovereignty over Natural Resources:</strong> Developing nations demanded the right to nationalize foreign companies and control their own natural resources</li>
+          <li><strong>2. Fair Trade Prices:</strong> Better and stable prices for their commodity exports (commodities vs. manufactured goods price gap — "terms of trade" problem)</li>
+          <li><strong>3. Technology Transfer:</strong> Access to modern technology from developed nations at affordable costs</li>
+          <li><strong>4. Debt Relief:</strong> Reduction of debt burden and better loan terms from international financial institutions</li>
+          <li><strong>5. More Representation:</strong> Greater voice in decision-making of World Bank and IMF</li>
+          <li><strong>6. Preferential Market Access:</strong> Developed nations should open markets to developing country exports</li>
+        </ul>
+        <br>
+        <strong>Why Developing Nations Demanded:</strong><br>
+        The existing system maintained the colonial economic structure — raw material exporters vs. industrial goods importers. The <strong>Group of 77 (G-77)</strong> developing nations united to demand systemic reform. The <span class="keyword">UNCTAD (UN Conference on Trade and Development)</span> became their platform.
+        <br><br>
+        <strong>Outcome:</strong> NIEO demands were largely not implemented as Western nations resisted. However, it raised awareness of global economic inequality and influenced later WTO negotiations and debt relief initiatives.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>NIEO (1974) + 6 demands + G-77 + UNCTAD + Why developing nations needed it + Outcome. Chapter 2 (Part A) — The End of Bipolarity.</div>
+      </div>
+    </div>
+    <div id="q27-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (6 अंक)</div>
+      <div class="answer-text">
+        <strong>नई अंतर्राष्ट्रीय आर्थिक व्यवस्था (NIEO):</strong><br>
+        <span class="keyword">NIEO</span> 1970 के दशक में विकासशील देशों द्वारा UN के माध्यम से वैश्विक आर्थिक व्यवस्था को अपने पक्ष में पुनर्गठित करने के प्रस्तावों का समूह था। इसे <strong>UN महासभा घोषणा (1974)</strong> में औपचारिक रूप दिया गया।
+        <br><br>
+        <strong>पृष्ठभूमि:</strong><br>
+        विउपनिवेशीकरण के बाद पूर्व उपनिवेश आर्थिक रूप से अपने पूर्व औपनिवेशिक स्वामियों पर निर्भर रहे। विद्यमान व्यवस्था (ब्रेटन वुड्स) अमीर देशों के हित में थी।
+        <br><br>
+        <strong>NIEO की प्रमुख माँगें:</strong>
+        <ul>
+          <li><strong>1. प्राकृतिक संसाधनों पर संप्रभुता:</strong> विदेशी कंपनियों का राष्ट्रीयकरण करने का अधिकार</li>
+          <li><strong>2. उचित व्यापार मूल्य:</strong> कच्चे माल के निर्यात पर उचित और स्थिर मूल्य</li>
+          <li><strong>3. प्रौद्योगिकी हस्तांतरण:</strong> सस्ती दरों पर आधुनिक तकनीक तक पहुँच</li>
+          <li><strong>4. ऋण राहत:</strong> विश्व बैंक-IMF से बेहतर शर्तों पर ऋण</li>
+          <li><strong>5. अधिक प्रतिनिधित्व:</strong> IMF-विश्व बैंक में अधिक भागीदारी</li>
+          <li><strong>6. बाज़ार पहुँच:</strong> विकसित देशों के बाज़ार में उत्पादों को प्राथमिकता</li>
+        </ul>
+        <br>
+        <strong>परिणाम:</strong> पश्चिमी देशों के विरोध के कारण NIEO की माँगें काफी हद तक लागू नहीं हुईं, लेकिन इसने वैश्विक आर्थिक असमानता की जागरूकता बढ़ाई।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>NIEO (1974) + 6 माँगें + G-77 + UNCTAD + कारण + परिणाम। अध्याय 2 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q28 -->
+<div class="q-card sec-e-q">
+  <div class="q-header">
+    <div class="q-num">28</div>
+    <div class="q-text">
+      <div class="question">Explain India's nuclear policy. What are the main features of India's approach to nuclear weapons?</div>
+    </div>
+    <div class="q-marks">6 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q28-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q28-hin')">हिंदी</button>
+    </div>
+    <div id="q28-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (6 Marks)</div>
+      <div class="answer-text">
+        <strong>India's Nuclear Policy:</strong>
+        <br><br>
+        <strong>Historical Background:</strong>
+        <ul>
+          <li><strong>1974:</strong> India's first nuclear test — "Pokhran I" (Operation Smiling Buddha). India declared it a "peaceful nuclear explosion".</li>
+          <li><strong>1998:</strong> "Pokhran II" (Operation Shakti) — 5 tests. India declared itself a nuclear weapons state.</li>
+          <li><strong>In response:</strong> Pakistan also conducted nuclear tests in 1998.</li>
+        </ul>
+        <br>
+        <strong>Main Features of India's Nuclear Doctrine:</strong>
+        <ul>
+          <li><strong>1. No First Use (NFU):</strong> India will not be the first to use nuclear weapons. Nuclear weapons are for deterrence only, not war-fighting.</li>
+          <li><strong>2. Minimum Credible Deterrence:</strong> India maintains the minimum number of nuclear weapons sufficient to deter adversaries — not an arms race.</li>
+          <li><strong>3. No Use Against Non-Nuclear States:</strong> India will not use nuclear weapons against countries that don't have them.</li>
+          <li><strong>4. Civilian Control:</strong> India's nuclear weapons are under civilian authority (Cabinet Committee on Security — CCS), not the military.</li>
+          <li><strong>5. Opposition to NPT (Non-Proliferation Treaty):</strong> India has not signed the NPT as it considers it discriminatory — it allows the "P-5" nations to keep nukes while others cannot develop them.</li>
+          <li><strong>6. Support for Global Disarmament:</strong> India supports universal nuclear disarmament through CTBT and other multilateral frameworks.</li>
+        </ul>
+        <br>
+        <strong>India-US Nuclear Deal (2008):</strong> India signed a civilian nuclear cooperation agreement with the USA, recognizing India as a responsible nuclear state outside the NPT framework. This gave India access to civilian nuclear technology.
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>1974 + 1998 tests → NFU + Minimum deterrence + No NPT + Civilian control + India-US deal. Chapter 7 (Part A).</div>
+      </div>
+    </div>
+    <div id="q28-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (6 अंक)</div>
+      <div class="answer-text">
+        <strong>भारत की परमाणु नीति:</strong>
+        <br><br>
+        <strong>ऐतिहासिक पृष्ठभूमि:</strong>
+        <ul>
+          <li><strong>1974:</strong> प्रथम परमाणु परीक्षण — "पोखरण-I" (ऑपरेशन स्माइलिंग बुद्धा)</li>
+          <li><strong>1998:</strong> "पोखरण-II" (ऑपरेशन शक्ति) — 5 परीक्षण। भारत ने स्वयं को परमाणु शक्ति घोषित किया।</li>
+        </ul>
+        <br>
+        <strong>भारत के परमाणु सिद्धांत की मुख्य विशेषताएँ:</strong>
+        <ul>
+          <li><strong>1. नो फर्स्ट यूज (NFU):</strong> भारत पहले परमाणु हथियार का प्रयोग नहीं करेगा — ये केवल प्रतिरोध के लिए।</li>
+          <li><strong>2. न्यूनतम विश्वसनीय प्रतिरोध:</strong> केवल उतने परमाणु हथियार जितने शत्रु को रोकने के लिए पर्याप्त हों।</li>
+          <li><strong>3. गैर-परमाणु देशों पर प्रयोग नहीं:</strong> जिन देशों के पास परमाणु हथियार नहीं, उन पर प्रयोग नहीं करेंगे।</li>
+          <li><strong>4. नागरिक नियंत्रण:</strong> परमाणु हथियार CCS (कैबिनेट समिति) के अधीन — सेना के नहीं।</li>
+          <li><strong>5. NPT का विरोध:</strong> NPT भेदभावपूर्ण है — P-5 को हथियार रखने का अधिकार, अन्य को नहीं।</li>
+          <li><strong>6. वैश्विक निरस्त्रीकरण का समर्थन:</strong> CTBT और बहुपक्षीय ढाँचे के माध्यम से।</li>
+        </ul>
+        <br>
+        <strong>भारत-अमेरिका परमाणु समझौता (2008):</strong> भारत को NPT के बाहर एक जिम्मेदार परमाणु राज्य के रूप में मान्यता।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>1974 + 1998 → NFU + न्यूनतम प्रतिरोध + NPT नहीं + नागरिक नियंत्रण + भारत-अमेरिका समझौता।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q29 -->
+<div class="q-card sec-e-q">
+  <div class="q-header">
+    <div class="q-num">29</div>
+    <div class="q-text">
+      <div class="question">Describe the main features of coalition politics in India. How has coalition politics affected governance in India?</div>
+    </div>
+    <div class="q-marks">6 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q29-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q29-hin')">हिंदी</button>
+    </div>
+    <div id="q29-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (6 Marks)</div>
+      <div class="answer-text">
+        <span class="keyword">Coalition politics</span> refers to governance by an alliance of multiple political parties when no single party wins an outright majority.
+        <br><br>
+        <strong>Emergence of Coalition Era in India:</strong>
+        <ul>
+          <li>1967: First signs — Congress lost majority in many states; coalition governments formed</li>
+          <li>1977: Janata Party coalition defeated Congress for the first time at the Centre</li>
+          <li>1989 onwards: Era of <strong>coalition governments at the Centre</strong> — V.P. Singh, Chandrasekhar, Deve Gowda, Gujral governments</li>
+          <li>1999–2004: NDA (BJP-led coalition) under Vajpayee</li>
+          <li>2004–2014: UPA (Congress-led coalition) under Manmohan Singh</li>
+        </ul>
+        <br>
+        <strong>Main Features:</strong>
+        <ul>
+          <li><strong>1.</strong> Multiple parties with different ideologies govern together through a <strong>Common Minimum Programme (CMP)</strong></li>
+          <li><strong>2.</strong> Rise of regional parties as <strong>kingmakers</strong> (e.g., SP, BSP, Trinamool, DMK)</li>
+          <li><strong>3.</strong> Negotiated policy-making through compromise</li>
+          <li><strong>4.</strong> Federal federalism strengthened — states have greater bargaining power</li>
+        </ul>
+        <br>
+        <strong>Impact on Governance:</strong>
+        <ul>
+          <li><strong>Positive:</strong> Diversity represented; no single party dominance; federal balance; inclusive politics</li>
+          <li><strong>Negative:</strong> Policy paralysis due to coalition compulsions; smaller parties can hold governments hostage; instability (7 PMs in 10 years 1989-99)</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>1977 Janata → 1989 era → NDA/UPA → Features → Impact (positive + negative). Chapter 5/6 (Part B).</div>
+      </div>
+    </div>
+    <div id="q29-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (6 अंक)</div>
+      <div class="answer-text">
+        <span class="keyword">गठबंधन राजनीति</span> से तात्पर्य तब होता है जब कोई एकल दल स्पष्ट बहुमत न पाए और अनेक दल मिलकर सरकार बनाएँ।
+        <br><br>
+        <strong>भारत में गठबंधन युग का उदय:</strong>
+        <ul>
+          <li>1967: प्रथम संकेत — अनेक राज्यों में कांग्रेस ने बहुमत खोया</li>
+          <li>1977: जनता पार्टी गठबंधन ने पहली बार केंद्र में कांग्रेस को हराया</li>
+          <li>1989 के बाद: V.P. सिंह, चंद्रशेखर, देवगौड़ा, गुजराल सरकारें</li>
+          <li>1999–2004: NDA (BJP गठबंधन) वाजपेयी के नेतृत्व में</li>
+          <li>2004–2014: UPA (कांग्रेस गठबंधन) मनमोहन सिंह के नेतृत्व में</li>
+        </ul>
+        <br>
+        <strong>मुख्य विशेषताएँ:</strong>
+        <ul>
+          <li><strong>1.</strong> अनेक दल <strong>सामान्य न्यूनतम कार्यक्रम (CMP)</strong> के आधार पर मिलकर शासन करते हैं</li>
+          <li><strong>2.</strong> क्षेत्रीय दलों का <strong>किंगमेकर</strong> के रूप में उभरना</li>
+          <li><strong>3.</strong> समझौते के आधार पर नीति-निर्माण</li>
+          <li><strong>4.</strong> संघवाद मजबूत — राज्यों की सौदेबाजी शक्ति बढ़ी</li>
+        </ul>
+        <br>
+        <strong>शासन पर प्रभाव:</strong>
+        <ul>
+          <li><strong>सकारात्मक:</strong> विविधता का प्रतिनिधित्व; समावेशी राजनीति; संघीय संतुलन</li>
+          <li><strong>नकारात्मक:</strong> नीतिगत जड़ता; अस्थिरता (1989-99 में 10 वर्षों में 7 PM)</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>1977 जनता → 1989 युग → NDA/UPA → विशेषताएँ → प्रभाव। अध्याय 5/6 (भाग B)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q30 -->
+<div class="q-card sec-e-q">
+  <div class="q-header">
+    <div class="q-num">30</div>
+    <div class="q-text">
+      <div class="question">Analyze the challenges faced by democracy in South Asia. Which countries have been able to sustain democracy and which have not? Give reasons.</div>
+    </div>
+    <div class="q-marks">6 Marks</div>
+  </div>
+  <div class="answer-block">
+    <div class="answer-tabs">
+      <button class="ans-tab active" onclick="switchTab(this, 'q30-eng')">English</button>
+      <button class="ans-tab" onclick="switchTab(this, 'q30-hin')">हिंदी</button>
+    </div>
+    <div id="q30-eng" class="answer-content active">
+      <div class="answer-label">Model Answer (6 Marks)</div>
+      <div class="answer-text">
+        <strong>Democracy in South Asia — Overview:</strong>
+        <br><br>
+        South Asia is home to 1.5 billion people and comprises 8 nations — all of which have experimented with democracy to varying degrees.
+        <br><br>
+        <strong>Countries that SUSTAINED Democracy:</strong>
+        <ul>
+          <li><strong>India:</strong> Uninterrupted democracy since 1947 (except 1975-77 Emergency). World's largest democracy. Strong institutions, independent judiciary, free press.</li>
+          <li><strong>Sri Lanka:</strong> Long democratic tradition with regular elections, though ethnic conflict (Tamil issue) created instability.</li>
+          <li><strong>Maldives:</strong> Transitioned to democracy in 2008 (first multi-party presidential election).</li>
+        </ul>
+        <br>
+        <strong>Countries that FAILED to Sustain Democracy:</strong>
+        <ul>
+          <li><strong>Pakistan:</strong> Frequent military coups (1958 Ayub Khan, 1969 Yahya Khan, 1977 Zia-ul-Haq, 1999 Pervez Musharraf). Military remained dominant over civilian governments.</li>
+          <li><strong>Bangladesh:</strong> After 1971 independence, democracy disrupted by coups and military rule (Ziaur Rahman, H.M. Ershad). Restored in 1990s.</li>
+          <li><strong>Nepal:</strong> Monarchy vs democracy conflict until 2008 when it became a republic.</li>
+          <li><strong>Myanmar (Burma):</strong> Military junta ruled for decades; democratic transition under Aung San Suu Kyi was reversed by coup in 2021.</li>
+        </ul>
+        <br>
+        <strong>Challenges to Democracy in South Asia:</strong>
+        <ul>
+          <li>Powerful military establishments</li>
+          <li>Ethnic and religious divisions</li>
+          <li>Poverty and economic inequality</li>
+          <li>External interference (US, China)</li>
+          <li>Weak democratic institutions and political culture</li>
+        </ul>
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">Key Points</span>India/Sri Lanka/Maldives sustained democracy. Pakistan/Bangladesh/Nepal had coups. 5 challenges. Chapter 5 (Part A).</div>
+      </div>
+    </div>
+    <div id="q30-hin" class="answer-content">
+      <div class="answer-label">आदर्श उत्तर (6 अंक)</div>
+      <div class="answer-text">
+        <strong>दक्षिण एशिया में लोकतंत्र — अवलोकन:</strong>
+        <br><br>
+        दक्षिण एशिया 1.5 अरब की आबादी का घर है और 8 राष्ट्रों से मिलकर बना है।
+        <br><br>
+        <strong>लोकतंत्र को बनाए रखने वाले देश:</strong>
+        <ul>
+          <li><strong>भारत:</strong> 1947 से अखंड लोकतंत्र (1975-77 आपातकाल को छोड़कर)। विश्व का सबसे बड़ा लोकतंत्र। मजबूत संस्थाएँ, स्वतंत्र न्यायपालिका।</li>
+          <li><strong>श्रीलंका:</strong> नियमित चुनाव, हालाँकि जातीय संघर्ष (तमिल मुद्दा) ने अस्थिरता पैदा की।</li>
+          <li><strong>मालदीव:</strong> 2008 में लोकतंत्र में परिवर्तन।</li>
+        </ul>
+        <br>
+        <strong>लोकतंत्र बनाए न रख सकने वाले देश:</strong>
+        <ul>
+          <li><strong>पाकिस्तान:</strong> बार-बार सैन्य तख्तापलट (1958, 1969, 1977, 1999)। सेना का दबदबा।</li>
+          <li><strong>बांग्लादेश:</strong> 1971 की स्वतंत्रता के बाद सैन्य शासन। 1990 के दशक में लोकतंत्र की वापसी।</li>
+          <li><strong>नेपाल:</strong> राजतंत्र बनाम लोकतंत्र का संघर्ष — 2008 में गणराज्य बना।</li>
+          <li><strong>म्याँमार:</strong> सैन्य जुंटा का शासन; 2021 में तख्तापलट।</li>
+        </ul>
+        <br>
+        <strong>चुनौतियाँ:</strong> शक्तिशाली सेना + जातीय विभाजन + गरीबी + बाह्य हस्तक्षेप + कमजोर संस्थाएँ।
+      </div>
+      <div class="hint-box">
+        <div class="hint-icon">💡</div>
+        <div class="hint-text"><span class="hint-label">मुख्य बिंदु</span>भारत/श्रीलंका/मालदीव सफल। पाकिस्तान/बांग्लादेश/नेपाल में सैन्य तख्तापलट। 5 चुनौतियाँ। अध्याय 5 (भाग A)।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>🎓 <strong>NextSem Academy</strong> — CBSE Class 12 Political Science SQP 2025-26 Complete Solutions</p>
+  <p style="margin-top:6px;">Source: <a href="https://cbseacademic.nic.in/web_material/SQP/ClassXII_2025_26/PolSci-SQP.pdf" target="_blank">Official CBSE SQP PDF</a> • Author: Er. Manoj Kumar</p>
+  <p style="margin-top:8px;"><a href="/privacy">Privacy Policy</a> • <a href="/terms">Terms of Service</a> • <a href="/contact">Contact Support</a> • <a href="/about">About Us</a></p>
+</footer>
+
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('btn-' + lang).classList.add('active');
+
+    document.querySelectorAll('.answer-tabs').forEach(tabs => {
+      const btns = tabs.querySelectorAll('.ans-tab');
+      btns.forEach(b => {
+        const isHin = b.textContent.includes('हिंदी');
+        if ((lang === 'hin' && isHin) || (lang === 'eng' && !isHin)) {
+          b.click();
+        }
+      });
+    });
+  }
+
+  function switchTab(btn, targetId) {
+    const block = btn.closest('.answer-block');
+    block.querySelectorAll('.ans-tab').forEach(b => b.classList.remove('active'));
+    block.querySelectorAll('.answer-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(targetId).classList.add('active');
+  }
+</script>
+</body>
+</html>

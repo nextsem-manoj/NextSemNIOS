@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#0c1322",
+        "on-background": "#dce2f7",
+        surface: "#0c1322",
+        "on-surface": "#dce2f7",
+        "surface-container-lowest": "#070e1d",
+        "surface-container-low": "#141b2b",
+        "surface-container": "#191f2f",
+        "surface-container-high": "#232a3a",
+        "surface-container-highest": "#2e3545",
+        "on-surface-variant": "#c7c4d7",
+        primary: "#c0c1ff",
+        "on-primary": "#1000a9",
+        "primary-container": "#8083ff",
+        "on-primary-container": "#0d0096",
+        "primary-fixed": "#e1e0ff",
+        "primary-fixed-dim": "#c0c1ff",
+        secondary: "#4edea3",
+        "on-secondary": "#003824",
+        "secondary-container": "#2f3aa3",
+        "on-secondary-container": "#a8afff",
+        outline: "#908fa0",
+        "outline-variant": "#464554",
+        error: "#ffb4ab"
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px"
+      },
+      spacing: {
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2.5rem",
+        gutter: "1rem",
+        margin: "1.25rem"
+      },
+      fontFamily: {
+        "body-md": ["Inter"],
+        "headline-lg": ["Space Grotesk", "Plus Jakarta Sans"],
+        "headline-md": ["Space Grotesk", "Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Space Grotesk", "Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "label-sm": ["JetBrains Mono", "Inter"],
+        "body-sm": ["Inter"],
+        "headline-sm": ["Space Grotesk", "Plus Jakarta Sans"],
+        "label-md": ["JetBrains Mono", "Inter"]
+      },
+      fontSize: {
+        "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}],
+        "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "700"}],
+        "headline-md": ["24px", {lineHeight: "30px", fontWeight: "600"}],
+        "headline-lg-mobile": ["26px", {lineHeight: "32px", fontWeight: "700"}],
+        "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}],
+        "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}],
+        "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}],
+        "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}],
+        "label-md": ["13px", {lineHeight: "18px", fontWeight: "500"}]
+      }
+    }
+  }
+};</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .theme-transition, .theme-transition *, .theme-transition *::before, .theme-transition *::after {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+  </style></head><body class="bg-[#0B0F19] dark:bg-[#0B0F19] text-[#E2E8F0] dark:text-[#E2E8F0] font-body-md flex flex-col min-h-screen theme-transition"><header class="fixed top-0 inset-x-0 z-50 bg-[#0B0F19]/80 dark:bg-[#0B0F19]/80 backdrop-blur-xl border-b border-[#1E293B] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><h1 class="text-headline-sm font-headline-sm text-[#F8FAFC]">Home</h1><div class="flex items-center gap-2.5"><!-- Theme Toggle Switch Button --><button aria-label="Toggle Theme" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1E293B] border border-[#334155] text-xs font-medium text-[#CBD5E1] hover:text-white hover:bg-[#334155] active:scale-95 transition-all shadow-sm" id="theme-toggle" onclick="toggleTheme()"><span class="material-symbols-outlined text-[17px] text-amber-400 dark:inline hidden" id="theme-icon-sun">light_mode</span><span class="material-symbols-outlined text-[17px] text-indigo-400 dark:hidden inline" id="theme-icon-moon">dark_mode</span><span class="font-label-md text-[12px] tracking-wide" id="theme-text">Dark</span></button><div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-gutter pt-16 pb-24 bg-[#0B0F19] flex-grow"><div class="flex flex-col w-full items-center justify-center py-space-xl px-gutter my-auto"><!-- Decorative Background Glow --><div class="absolute inset-0 -z-10 flex items-center justify-center opacity-30 pointer-events-none"><div class="w-80 h-80 rounded-full bg-indigo-600/30 blur-[90px]"></div><div class="w-72 h-72 rounded-full bg-emerald-500/20 blur-[80px] translate-x-12 translate-y-12"></div></div><!-- App Logo / Hero Visual --><div class="relative flex items-center justify-center w-24 h-24 mb-space-lg rounded-3xl bg-[#161F30] border border-[#2A374F] shadow-2xl shadow-indigo-950/50"><div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-primary/5 to-transparent"></div><span class="material-symbols-outlined text-[48px] text-primary" style="font-variation-settings: 'FILL' 1;">school</span><div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-tertiary-container text-white flex items-center justify-center shadow-lg border-2 border-[#161F30]"><span class="material-symbols-outlined text-[16px] text-emerald-300">bolt</span></div></div><!-- Typography: Headline & Welcome Tagline --><h2 class="text-headline-lg-mobile font-headline-lg-mobile text-[#F8FAFC] text-center mb-space-xs tracking-tight">StudyApp</h2><p class="text-body-lg text-[#94A3B8] text-center max-w-[280px] mb-space-xl leading-relaxed">Master your studies with ease and joy every single day.</p><!-- Login Card container --><div class="w-full max-w-sm bg-[#161F30] border border-[#243247] rounded-2xl p-space-lg shadow-2xl shadow-black/40 flex flex-col gap-space-md mb-space-xl backdrop-blur-sm"><div class="flex flex-col gap-space-xs text-center mb-space-xs"><h3 class="text-headline-sm font-headline-sm text-[#F8FAFC]">Welcome back!</h3><p class="text-body-md text-[#94A3B8]">Sign in to sync your progress across devices.</p></div><!-- Continue with Google Button --><a class="w-full h-12 rounded-xl bg-[#0B0F19] hover:bg-[#1E293B] border border-[#334155] active:scale-[0.98] transition-all flex items-center justify-center gap-space-md px-space-md shadow-sm group" href="#" onclick="handleGoogleLogin(event)"><!-- Official Google 'G' Logo SVG --><svg class="w-5 h-5 flex-shrink-0" viewbox="0 0 24 24"><path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" fill="#4285F4"></path><path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.13 0-5.78-2.11-6.73-4.96H1.18v3.15C3.15 21.32 7.23 24 12 24z" fill="#34A853"></path><path d="M5.27 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.6H1.18C.43 8.12 0 9.85 0 12s.43 3.88 1.18 5.4l4.09-3.16z" fill="#FBBC05"></path><path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.23 0 3.15 2.68 1.18 6.6l4.09 3.15c.95-2.85 3.6-4.96 6.73-4.96z" fill="#EA4335"></path></svg><span class="text-label-md font-label-md text-[#E2E8F0] group-hover:text-primary transition-colors">Continue with Google</span></a><!-- Divider / Perks --><div class="flex items-center gap-space-sm pt-space-xs text-[#64748B]"><div class="h-[1px] flex-1 bg-[#243247]"></div><span class="text-body-sm uppercase tracking-wider font-label-sm text-[11px] text-[#64748B]">Secure &amp; Fast</span><div class="h-[1px] flex-1 bg-[#243247]"></div></div></div><!-- Feature Pills / Micro Delight --><div class="flex flex-wrap justify-center gap-space-sm max-w-xs"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-[#161F30] border border-[#243247] text-[#94A3B8] text-body-sm shadow-sm"><span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span><span>Daily streaks</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-[#161F30] border border-[#243247] text-[#94A3B8] text-body-sm shadow-sm"><span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span><span>Smart quizzes</span></div></div></div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#0B0F19]/90 dark:bg-[#0B0F19]/90 backdrop-blur-xl border-t border-[#1E293B] shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary bg-[#1E293B]"><div class="flex justify-around items-center h-20 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl transition-all text-primary bg-[#1E293B] border border-primary/20 shadow-sm" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="text-label-sm font-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-[#94A3B8] hover:text-[#F8FAFC] transition-all" data-path="subjects" href="#"><span class="material-symbols-outlined text-[22px]">book</span><span class="text-label-sm font-label-sm">Subjects</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-[#94A3B8] hover:text-[#F8FAFC] transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="text-label-sm font-label-sm">Analytics</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-[#94A3B8] hover:text-[#F8FAFC] transition-all" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="text-label-sm font-label-sm">Profile</span></a></div></nav><!-- Dynamic Theme Switcher & Interactive Scripts --><script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.classList.contains('dark');
+      const body = document.body;
+      const header = document.querySelector('header');
+      const nav = document.querySelector('nav');
+      const main = document.querySelector('main');
+      const card = document.querySelector('.max-w-sm');
+      const logoBox = document.querySelector('.w-24.h-24');
+      const googleBtn = document.querySelector('a[onclick*="handleGoogleLogin"]');
+      const pills = document.querySelectorAll('.max-w-xs > div');
+      const themeText = document.getElementById('theme-text');
+      const sunIcon = document.getElementById('theme-icon-sun');
+      const moonIcon = document.getElementById('theme-icon-moon');
+      const headings = document.querySelectorAll('h1, h2, h3');
+      const dividerLines = document.querySelectorAll('.h-\\[1px\\]');
+      const activeNavTab = document.querySelector('nav a[aria-current="page"]');
+
+      if (isDark) {
+        // Switch to Light
+        html.classList.remove('dark');
+        body.classList.remove('bg-[#0B0F19]', 'text-[#E2E8F0]');
+        body.classList.add('bg-[#F8FAFC]', 'text-[#1E293B]');
+        
+        main.classList.remove('bg-[#0B0F19]');
+        main.classList.add('bg-[#F8FAFC]');
+
+        header.classList.remove('bg-[#0B0F19]/80', 'border-[#1E293B]');
+        header.classList.add('bg-white/80', 'border-slate-200');
+
+        nav.classList.remove('bg-[#0B0F19]/90', 'border-[#1E293B]');
+        nav.classList.add('bg-white/90', 'border-slate-200');
+
+        card.classList.remove('bg-[#161F30]', 'border-[#243247]', 'shadow-black/40');
+        card.classList.add('bg-white', 'border-slate-200/80', 'shadow-xl', 'shadow-indigo-500/5');
+
+        logoBox.classList.remove('bg-[#161F30]', 'border-[#2A374F]');
+        logoBox.classList.add('bg-indigo-50', 'border-indigo-100');
+
+        googleBtn.classList.remove('bg-[#0B0F19]', 'border-[#334155]', 'hover:bg-[#1E293B]');
+        googleBtn.classList.add('bg-white', 'border-slate-300', 'hover:bg-slate-50');
+        const googleText = googleBtn.querySelector('span');
+        if (googleText) {
+          googleText.classList.remove('text-[#E2E8F0]');
+          googleText.classList.add('text-[#1E293B]');
+        }
+
+        pills.forEach(pill => {
+          pill.classList.remove('bg-[#161F30]', 'border-[#243247]', 'text-[#94A3B8]');
+          pill.classList.add('bg-slate-100', 'border-slate-200', 'text-slate-600');
+        });
+
+        headings.forEach(h => {
+          h.classList.remove('text-[#F8FAFC]');
+          h.classList.add('text-slate-900');
+        });
+
+        dividerLines.forEach(line => {
+          line.classList.remove('bg-[#243247]');
+          line.classList.add('bg-slate-200');
+        });
+
+        if (activeNavTab) {
+          activeNavTab.classList.remove('bg-[#1E293B]', 'border-primary/20');
+          activeNavTab.classList.add('bg-indigo-50', 'text-indigo-600');
+        }
+
+        themeText.textContent = 'Light';
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      } else {
+        // Switch to Dark
+        html.classList.add('dark');
+        body.classList.remove('bg-[#F8FAFC]', 'text-[#1E293B]');
+        body.classList.add('bg-[#0B0F19]', 'text-[#E2E8F0]');
+
+        main.classList.remove('bg-[#F8FAFC]');
+        main.classList.add('bg-[#0B0F19]');
+
+        header.classList.remove('bg-white/80', 'border-slate-200');
+        header.classList.add('bg-[#0B0F19]/80', 'border-[#1E293B]');
+
+        nav.classList.remove('bg-white/90', 'border-slate-200');
+        nav.classList.add('bg-[#0B0F19]/90', 'border-[#1E293B]');
+
+        card.classList.remove('bg-white', 'border-slate-200/80', 'shadow-xl', 'shadow-indigo-500/5');
+        card.classList.add('bg-[#161F30]', 'border-[#243247]', 'shadow-black/40');
+
+        logoBox.classList.remove('bg-indigo-50', 'border-indigo-100');
+        logoBox.classList.add('bg-[#161F30]', 'border-[#2A374F]');
+
+        googleBtn.classList.remove('bg-white', 'border-slate-300', 'hover:bg-slate-50');
+        googleBtn.classList.add('bg-[#0B0F19]', 'border-[#334155]', 'hover:bg-[#1E293B]');
+        const googleText = googleBtn.querySelector('span');
+        if (googleText) {
+          googleText.classList.remove('text-[#1E293B]');
+          googleText.classList.add('text-[#E2E8F0]');
+        }
+
+        pills.forEach(pill => {
+          pill.classList.remove('bg-slate-100', 'border-slate-200', 'text-slate-600');
+          pill.classList.add('bg-[#161F30]', 'border-[#243247]', 'text-[#94A3B8]');
+        });
+
+        headings.forEach(h => {
+          h.classList.remove('text-slate-900');
+          h.classList.add('text-[#F8FAFC]');
+        });
+
+        dividerLines.forEach(line => {
+          line.classList.remove('bg-slate-200');
+          line.classList.add('bg-[#243247]');
+        });
+
+        if (activeNavTab) {
+          activeNavTab.classList.remove('bg-indigo-50', 'text-indigo-600');
+          activeNavTab.classList.add('bg-[#1E293B]', 'border-primary/20');
+        }
+
+        themeText.textContent = 'Dark';
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      }
+    }
+
+    function handleGoogleLogin(e) {
+      e.preventDefault();
+      const btn = e.currentTarget;
+      btn.innerHTML = `<div class="w-5 h-5 border-2 border-primary border-t-transparent rounded-full animate-spin"></div><span class="text-label-md font-label-md text-primary">Signing in...</span>`;
+      setTimeout(() => {
+        const subjectsNavTab = document.querySelector('nav a[data-path="subjects"]');
+        if (subjectsNavTab) {
+          subjectsNavTab.click();
+        } else {
+          window.location.hash = '#subjects';
+        }
+      }, 900);
+    }
+  </script></body></html>

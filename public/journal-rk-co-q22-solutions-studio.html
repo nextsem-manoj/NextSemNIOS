@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Journal Entries Studio: M/s R.K. & Co. (Q22) | Class 11 Financial Accounting</title>
+  <meta name="description" content="Complete step-by-step interactive journal solutions for M/s. R.K. & Co. (Q22) covering Trade Discount, Cash vs Credit, Cost + Profit Markups, and Returns.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.2);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --table-header: #101c36;
+      --row-zebra: rgba(255, 255, 255, 0.02);
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --table-header: #e2e8f0;
+      --row-zebra: rgba(0, 0, 0, 0.02);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 90px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 90% 70%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-card);
+      z-index: 50; padding: 0.85rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.3s;
+    }
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+    .breadcrumb a { color: var(--accent-sky); text-decoration: none; font-weight: 600; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb .sep { opacity: 0.5; }
+
+    .nav-actions { display: flex; align-items: center; gap: 0.65rem; }
+    .btn-tool {
+      background: var(--bg-card); border: 1px solid var(--border-card);
+      color: var(--text-main); padding: 0.4rem 0.8rem; border-radius: 8px;
+      font-size: 0.82rem; font-weight: 600; cursor: pointer; display: flex;
+      align-items: center; gap: 0.4rem; transition: all 0.2s;
+    }
+    .btn-tool:hover { background: var(--bg-card-hover); border-color: var(--accent-sky); transform: translateY(-1px); }
+
+    .container { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1rem; position: relative; z-index: 1; }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(13, 21, 39, 0.95), rgba(30, 41, 59, 0.85));
+      border: 1px solid var(--border-card); border-radius: 16px;
+      padding: 1.75rem; margin-bottom: 1.5rem;
+      position: relative; overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    body.light-theme .hero-banner {
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .badge-pill {
+      display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px;
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      background: rgba(56, 189, 248, 0.15); color: var(--accent-sky);
+      border: 1px solid rgba(56, 189, 248, 0.3); margin-bottom: 0.75rem;
+    }
+
+    h1 { font-size: 1.85rem; font-weight: 800; line-height: 1.3; margin-bottom: 0.4rem; }
+    .hero-subtitle { color: var(--text-muted); font-size: 0.95rem; }
+
+    .stats-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem; margin: 1.5rem 0;
+    }
+    .stat-card {
+      background: var(--bg-card); border: 1px solid var(--border-card);
+      border-radius: 12px; padding: 1rem 1.25rem;
+    }
+    .stat-card .val { font-size: 1.5rem; font-weight: 800; color: var(--accent-emerald); font-family: 'JetBrains Mono', monospace; }
+    .stat-card .lbl { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-top: 0.2rem; }
+
+    .control-deck {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem;
+    }
+    .pill-group { display: flex; gap: 0.4rem; background: var(--bg-card); padding: 0.3rem; border-radius: 10px; border: 1px solid var(--border-card); }
+    .pill-btn {
+      background: transparent; border: none; color: var(--text-muted);
+      padding: 0.35rem 0.85rem; border-radius: 7px; font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .pill-btn.active { background: var(--accent-sky); color: #000; box-shadow: 0 2px 8px rgba(56, 189, 248, 0.35); }
+
+    /* Journal Table Styling */
+    .table-responsive {
+      overflow-x: auto; background: var(--bg-card);
+      border: 1px solid var(--border-card); border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+    table.journal-table {
+      width: 100%; border-collapse: collapse; text-align: left;
+      font-size: 0.92rem;
+    }
+    table.journal-table th {
+      background: var(--table-header); color: var(--accent-sky);
+      padding: 1rem; font-weight: 800; font-size: 0.82rem; text-transform: uppercase;
+      letter-spacing: 0.5px; border-bottom: 2px solid var(--border-card);
+    }
+    table.journal-table td {
+      padding: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      vertical-align: top;
+    }
+    body.light-theme table.journal-table td {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    table.journal-table tr:nth-child(even) { background: var(--row-zebra); }
+    table.journal-table tr:hover { background: var(--bg-card-hover); }
+
+    .amt-col {
+      text-align: right; font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; min-width: 120px;
+    }
+    .dr-amt { color: var(--accent-emerald); }
+    .cr-amt { color: var(--accent-sky); }
+
+    .entry-header { font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
+    .txn-badge {
+      background: rgba(245, 158, 11, 0.15); color: var(--accent-gold);
+      padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;
+    }
+    .narration {
+      font-size: 0.82rem; color: var(--text-muted); font-style: italic;
+      margin-top: 0.4rem; padding-left: 0.85rem; border-left: 2px solid rgba(56, 189, 248, 0.4);
+    }
+    .calc-card {
+      margin-top: 0.6rem; padding: 0.65rem 0.85rem; border-radius: 8px;
+      background: rgba(56, 189, 248, 0.06); border: 1px dashed rgba(56, 189, 248, 0.25);
+      font-size: 0.82rem; font-family: 'JetBrains Mono', monospace; color: var(--text-muted);
+    }
+    .calc-card strong { color: var(--accent-gold); }
+
+    .tfoot-total {
+      background: var(--table-header); font-weight: 900; font-size: 1.05rem;
+    }
+    .tfoot-total td { border-top: 2px solid var(--accent-emerald); border-bottom: 3px double var(--accent-emerald); }
+
+    /* Rules & Tips Card */
+    .rule-card {
+      margin-top: 1.75rem; background: var(--bg-card);
+      border: 1px solid var(--border-card); border-radius: 14px;
+      padding: 1.5rem;
+    }
+    .rule-card h3 { color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+    .rule-card ul { padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-muted); }
+    .rule-card li { margin-bottom: 0.5rem; }
+    .rule-card strong { color: var(--text-main); }
+
+    /* Practice Calculator Box */
+    .calc-tool-box {
+      margin-top: 1.75rem; background: linear-gradient(135deg, rgba(13, 21, 39, 0.9), rgba(16, 28, 54, 0.95));
+      border: 1px solid var(--border-card); border-radius: 14px; padding: 1.5rem;
+    }
+    body.light-theme .calc-tool-box { background: #f8fafc; }
+    .calc-tool-box h3 { color: var(--accent-emerald); font-size: 1.15rem; margin-bottom: 1rem; }
+    .input-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .input-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.35rem; }
+    .input-group input {
+      width: 100%; padding: 0.6rem 0.8rem; border-radius: 8px;
+      background: var(--bg-body); border: 1px solid var(--border-card);
+      color: var(--text-main); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+    }
+    .calc-res-banner {
+      margin-top: 1rem; padding: 0.85rem; border-radius: 8px;
+      background: rgba(16, 185, 129, 0.12); border: 1px solid var(--accent-emerald);
+      display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Print styles */
+    @media print {
+      .top-nav, .control-deck, .btn-tool, .calc-tool-box { display: none !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .hero-banner, .table-responsive, .stat-card { border: 1px solid #ccc !important; box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <nav class="top-nav">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">❯</span>
+      <a href="/?class=11">Class 11</a>
+      <span class="sep">❯</span>
+      <a href="/?class=11&subject=c11-accountancy">Accountancy</a>
+      <span class="sep">❯</span>
+      <span>Journal M/s R.K. & Co. (Q22)</span>
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn-tool" onclick="toggleLang()" id="langBtn">🌐 <span id="langLabel">हिंदी / Dual</span></button>
+      <button class="btn-tool" onclick="toggleTheme()" id="themeBtn">🌙 Mode</button>
+      <button class="btn-tool" onclick="window.print()">🖨️ Print</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="badge-pill">Class 11 Financial Accounting • Journal Mastery</div>
+      <h1>M/s. R.K. & Co. — Journal Entries Studio (Q22)</h1>
+      <p class="hero-subtitle">
+        Comprehensive step-by-step solutions for Question 22 with exact calculations for Trade Discount, Cheque vs Cash settlement, Markup profits (Cost + 20%), and Returns outward/inward.
+      </p>
+    </header>
+
+    <!-- Stats & Balances Overview -->
+    <section class="stats-row">
+      <div class="stat-card">
+        <div class="val">₹2,80,050</div>
+        <div class="lbl">Total Journal Debit / Credit</div>
+      </div>
+      <div class="stat-card">
+        <div class="val">12 Txns</div>
+        <div class="lbl">All Numerical Cases Covered</div>
+      </div>
+      <div class="stat-card">
+        <div class="val">0 Errors</div>
+        <div class="lbl">Double-Entry Tally Status</div>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <div class="control-deck">
+      <div class="pill-group">
+        <button class="pill-btn active" onclick="filterType('all', this)">All Transactions (12)</button>
+        <button class="pill-btn" onclick="filterType('purchases', this)">Purchases & Returns (5)</button>
+        <button class="pill-btn" onclick="filterType('sales', this)">Sales & Returns (7)</button>
+      </div>
+
+      <button class="btn-tool" onclick="triggerConfetti()" style="background: rgba(16, 185, 129, 0.15); border-color: var(--accent-emerald);">
+        🎉 Check Balancing Proof
+      </button>
+    </div>
+
+    <!-- Main Journal Table -->
+    <div class="table-responsive">
+      <table class="journal-table" id="journalTable">
+        <thead>
+          <tr>
+            <th style="width: 70px;">S.No.</th>
+            <th>Particulars (Account Titles & Working Details)</th>
+            <th style="width: 60px; text-align: center;">L.F.</th>
+            <th class="amt-col">Debit (₹)</th>
+            <th class="amt-col">Credit (₹)</th>
+          </tr>
+        </thead>
+        <tbody id="journalBody">
+          <!-- Populated by JavaScript -->
+        </tbody>
+        <tfoot>
+          <tr class="tfoot-total">
+            <td colspan="3" style="text-align: right; padding-right: 1.5rem;">TOTAL (कुल योग):</td>
+            <td class="amt-col dr-amt">₹2,80,050</td>
+            <td class="amt-col cr-amt">₹2,80,050</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- Interactive Trade Discount & Markup Calculator -->
+    <section class="calc-tool-box">
+      <h3>⚡ Instant Trade Discount & Markup Simulator</h3>
+      <div class="input-grid">
+        <div class="input-group">
+          <label>List Price / Cost (₹)</label>
+          <input type="number" id="simCost" value="10000" oninput="runSim()">
+        </div>
+        <div class="input-group">
+          <label>Profit Markup (%)</label>
+          <input type="number" id="simProfit" value="20" oninput="runSim()">
+        </div>
+        <div class="input-group">
+          <label>Trade Discount (%)</label>
+          <input type="number" id="simDiscount" value="10" oninput="runSim()">
+        </div>
+      </div>
+      <div class="calc-res-banner" id="simResult">
+        <span>Selling Price (Catalogue): ₹12,000 | Trade Discount: ₹1,200</span>
+        <strong style="color: var(--accent-emerald); font-size: 1.1rem;">Net Invoice: ₹10,800</strong>
+      </div>
+    </section>
+
+    <!-- Fundamental Concept Takeaways -->
+    <section class="rule-card">
+      <h3>💡 Golden Principles Applied in Q22:</h3>
+      <ul>
+        <li><strong>Trade Discount Deduction:</strong> Trade discount is deducted immediately from the catalogue list price. It never appears in the debit or credit money columns of the journal.</li>
+        <li><strong>Return of Discounted Goods (Txn v & xii):</strong> When goods bought/sold at a trade discount are returned, the trade discount percentage must be deducted from their list price as well.</li>
+        <li><strong>Cheque Payments (Txn i & vi):</strong> Cheque issued is credited to <code>Bank A/c</code>. Cheque received and deposited is debited to <code>Bank A/c</code>.</li>
+        <li><strong>Cost Plus Profit (Txn x & xi):</strong> Profit percentage is added to Cost first to establish catalogue selling price, then trade discount is subtracted from this sum.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    const transactions = [
+      {
+        id: "(i)",
+        type: "purchases",
+        debitAcc: "Purchases A/c",
+        creditAcc: "Bank A/c",
+        debitAmt: 16000,
+        creditAmt: 16000,
+        enDesc: "Purchased goods of list price of ₹20,000 from Vishal at 20% trade discount against cheque payment.",
+        hiDesc: "विशाल से ₹20,000 सूची मूल्य का माल 20% व्यापारिक छूट पर चेक देकर खरीदा।",
+        calc: "List Price: ₹20,000 - 20% Trade Discount (₹4,000) = ₹16,000",
+        narrationEn: "(Being goods purchased at 20% trade discount against cheque payment)",
+        narrationHi: "(विशाल से 20% व्यापारिक छूट पर चेक द्वारा माल क्रय किया)"
+      },
+      {
+        id: "(ii)",
+        type: "purchases",
+        debitAcc: "Purchases A/c",
+        creditAcc: "Cash A/c",
+        debitAmt: 17000,
+        creditAmt: 17000,
+        enDesc: "Purchased goods of list price of ₹20,000 from Naman at 15% trade discount against cash.",
+        hiDesc: "नमन से ₹20,000 सूची मूल्य का माल 15% व्यापारिक छूट पर नकद खरीदा।",
+        calc: "List Price: ₹20,000 - 15% Trade Discount (₹3,000) = ₹17,000",
+        narrationEn: "(Being goods purchased for cash at 15% trade discount)",
+        narrationHi: "(15% व्यापारिक छूट पर नकद माल खरीदा)"
+      },
+      {
+        id: "(iii)",
+        type: "purchases",
+        debitAcc: "Purchases A/c",
+        creditAcc: "Amrit",
+        debitAmt: 24000,
+        creditAmt: 24000,
+        enDesc: "Purchased goods of list price of ₹30,000 from Amrit at 20% trade discount.",
+        hiDesc: "अमृत से ₹30,000 सूची मूल्य का माल 20% व्यापारिक छूट पर उधार खरीदा।",
+        calc: "List Price: ₹30,000 - 20% Trade Discount (₹6,000) = ₹24,000 (Credit Purchase)",
+        narrationEn: "(Being goods purchased on credit from Amrit at 20% trade discount)",
+        narrationHi: "(अमृत से 20% व्यापारिक छूट पर उधार माल क्रय किया)"
+      },
+      {
+        id: "(iv)",
+        type: "purchases",
+        debitAcc: "Purchases A/c",
+        creditAcc: "Cash A/c",
+        debitAmt: 35000,
+        creditAmt: 35000,
+        enDesc: "Purchased goods from Hari & Co. of list price ₹40,000 for ₹35,000 against cash.",
+        hiDesc: "हरी एंड कंपनी से ₹40,000 सूची मूल्य का माल ₹35,000 में नकद खरीदा।",
+        calc: "Agreed Cash Price = ₹35,000 (Implicit ₹5,000 trade discount ignored)",
+        narrationEn: "(Being goods of list price ₹40,000 purchased for ₹35,000 in cash)",
+        narrationHi: "(हरी एंड कं. से नकद माल खरीदा)"
+      },
+      {
+        id: "(v)",
+        type: "purchases",
+        debitAcc: "Amrit",
+        creditAcc: "Purchases Return A/c",
+        debitAmt: 8000,
+        creditAmt: 8000,
+        enDesc: "Goods purchased from Amrit of list price ₹10,000 returned.",
+        hiDesc: "अमृत से खरीदा गया ₹10,000 सूची मूल्य का माल वापस किया।",
+        calc: "List Price: ₹10,000 - 20% original Trade Discount (₹2,000) = ₹8,000 net return",
+        narrationEn: "(Being goods returned to Amrit after deducting 20% trade discount)",
+        narrationHi: "(अमृत को 20% व्यापारिक छूट काटकर माल वापस किया)"
+      },
+      {
+        id: "(vi)",
+        type: "sales",
+        debitAcc: "Bank A/c",
+        creditAcc: "Sales A/c",
+        debitAmt: 36000,
+        creditAmt: 36000,
+        enDesc: "Sold goods to Parul of list price of ₹40,000 at 10% trade discount against cheque payment.",
+        hiDesc: "पारुल को ₹40,000 सूची मूल्य का माल 10% व्यापारिक छूट पर चेक लेकर बेचा।",
+        calc: "List Price: ₹40,000 - 10% Trade Discount (₹4,000) = ₹36,000",
+        narrationEn: "(Being goods sold at 10% trade discount against cheque)",
+        narrationHi: "(पारुल को 10% व्यापारिक छूट पर चेक द्वारा माल बेचा)"
+      },
+      {
+        id: "(vii)",
+        type: "sales",
+        debitAcc: "Cash A/c",
+        creditAcc: "Sales A/c",
+        debitAmt: 27000,
+        creditAmt: 27000,
+        enDesc: "Sold goods to Aman of list price of ₹30,000 at 10% trade discount against cash.",
+        hiDesc: "अमन को ₹30,000 सूची मूल्य का माल 10% व्यापारिक छूट पर नकद बेचा।",
+        calc: "List Price: ₹30,000 - 10% Trade Discount (₹3,000) = ₹27,000",
+        narrationEn: "(Being goods sold for cash at 10% trade discount)",
+        narrationHi: "(अमन को 10% व्यापारिक छूट पर नकद माल बेचा)"
+      },
+      {
+        id: "(viii)",
+        type: "sales",
+        debitAcc: "Pawan",
+        creditAcc: "Sales A/c",
+        debitAmt: 18000,
+        creditAmt: 18000,
+        enDesc: "Sold goods to Pawan of list price of ₹20,000 at 10% trade discount.",
+        hiDesc: "पवन को ₹20,000 सूची मूल्य का माल 10% व्यापारिक छूट पर उधार बेचा।",
+        calc: "List Price: ₹20,000 - 10% Trade Discount (₹2,000) = ₹18,000 (Credit Sale)",
+        narrationEn: "(Being goods sold on credit to Pawan at 10% trade discount)",
+        narrationHi: "(पवन को 10% व्यापारिक छूट पर उधार माल बेचा)"
+      },
+      {
+        id: "(ix)",
+        type: "sales",
+        debitAcc: "Yamini",
+        creditAcc: "Sales A/c",
+        debitAmt: 23000,
+        creditAmt: 23000,
+        enDesc: "Sold goods to Yamini of list price of ₹25,000 for ₹23,000.",
+        hiDesc: "यामिनी को ₹25,000 सूची मूल्य का माल ₹23,000 में उधार बेचा।",
+        calc: "Net Agreed Sale Price = ₹23,000 (Implicit ₹2,000 trade discount)",
+        narrationEn: "(Being goods of list price ₹25,000 sold for ₹23,000 on credit)",
+        narrationHi: "(यामिनी को ₹23,000 में उधार माल बेचा)"
+      },
+      {
+        id: "(x)",
+        type: "sales",
+        debitAcc: "Bhupesh",
+        creditAcc: "Sales A/c",
+        debitAmt: 10800,
+        creditAmt: 10800,
+        enDesc: "Sold goods costing ₹10,000 at cost plus 20% less 10% trade discount to Bhupesh.",
+        hiDesc: "भूपेश को ₹10,000 लागत का माल लागत + 20% लाभ घटाकर 10% व्यापारिक छूट पर बेचा।",
+        calc: "Cost ₹10,000 + 20% Profit (₹2,000) = ₹12,000; Less 10% TD (₹1,200) = ₹10,800",
+        narrationEn: "(Being goods costing ₹10,000 sold at cost + 20% less 10% trade discount)",
+        narrationHi: "(भूपेश को लागत + 20% लाभ घटाकर 10% छूट पर माल बेचा)"
+      },
+      {
+        id: "(xi)",
+        type: "sales",
+        debitAcc: "Bank A/c",
+        creditAcc: "Sales A/c",
+        debitAmt: 56250,
+        creditAmt: 56250,
+        enDesc: "Sold goods purchased at list price of ₹50,000 sold at a profit of 25% less 10% trade discount against cheque.",
+        hiDesc: "₹50,000 सूची मूल्य का माल 25% लाभ जोड़कर 10% व्यापारिक छूट काटकर चेक लेकर बेचा।",
+        calc: "Base ₹50,000 + 25% Profit (₹12,500) = ₹62,500; Less 10% TD (₹6,250) = ₹56,250",
+        narrationEn: "(Being goods sold at 25% profit less 10% trade discount against cheque)",
+        narrationHi: "(चेक द्वारा 25% लाभ और 10% छूट पर माल बेचा)"
+      },
+      {
+        id: "(xii)",
+        type: "sales",
+        debitAcc: "Sales Return A/c",
+        creditAcc: "Aman",
+        debitAmt: 9000,
+        creditAmt: 9000,
+        enDesc: "Aman returned goods of list price of ₹10,000 sold to him at 10% trade discount.",
+        hiDesc: "अमन ने ₹10,000 सूची मूल्य का माल वापस किया जिसे 10% व्यापारिक छूट पर बेचा गया था।",
+        calc: "List Price: ₹10,000 - 10% original Trade Discount (₹1,000) = ₹9,000 net return",
+        narrationEn: "(Being goods returned by Aman after deducting 10% trade discount)",
+        narrationHi: "(अमन से 10% छूट काटकर बिक्री वापसी प्राप्त हुई)"
+      }
+    ];
+
+    let currentLang = 'bilingual';
+    let currentFilter = 'all';
+
+    function renderTable() {
+      const tbody = document.getElementById('journalBody');
+      tbody.innerHTML = '';
+
+      const filtered = transactions.filter(t => currentFilter === 'all' || t.type === currentFilter);
+
+      filtered.forEach(t => {
+        const tr = document.createElement('tr');
+        
+        let descHtml = '';
+        if (currentLang === 'en') {
+          descHtml = `<div class="entry-header"><span class="txn-badge">${t.id}</span> <strong>${t.enDesc}</strong></div>`;
+        } else if (currentLang === 'hi') {
+          descHtml = `<div class="entry-header"><span class="txn-badge">${t.id}</span> <strong>${t.hiDesc}</strong></div>`;
+        } else {
+          descHtml = `<div class="entry-header"><span class="txn-badge">${t.id}</span> <strong>${t.enDesc}</strong></div>
+                      <div style="font-size:0.85rem; color:var(--accent-sky); margin-bottom:0.35rem;">${t.hiDesc}</div>`;
+        }
+
+        tr.innerHTML = `
+          <td style="font-weight:700; color:var(--text-muted);">${t.id}</td>
+          <td>
+            ${descHtml}
+            <div style="margin: 0.5rem 0 0.2rem; font-family:'JetBrains Mono', monospace; font-size:0.95rem;">
+              <div><strong style="color:var(--accent-emerald);">${t.debitAcc}</strong> <span style="float:right; color:var(--text-muted);">...Dr.</span></div>
+              <div style="padding-left: 2.5rem; margin-top: 0.2rem;"><span style="color:var(--text-muted);">To</span> <strong style="color:var(--accent-sky);">${t.creditAcc}</strong></div>
+            </div>
+            <div class="narration">${currentLang === 'hi' ? t.narrationHi : t.narrationEn}</div>
+            <div class="calc-card">⚡ <strong>Working:</strong> ${t.calc}</div>
+          </td>
+          <td style="text-align:center; font-family:'JetBrains Mono', monospace; color:var(--text-muted);">-</td>
+          <td class="amt-col dr-amt">₹${t.debitAmt.toLocaleString('en-IN')}</td>
+          <td class="amt-col cr-amt"><div style="margin-top: 1.5rem;">₹${t.creditAmt.toLocaleString('en-IN')}</div></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function toggleLang() {
+      if (currentLang === 'bilingual') {
+        currentLang = 'en';
+        document.getElementById('langLabel').innerText = 'English Only';
+      } else if (currentLang === 'en') {
+        currentLang = 'hi';
+        document.getElementById('langLabel').innerText = 'हिंदी Only';
+      } else {
+        currentLang = 'bilingual';
+        document.getElementById('langLabel').innerText = 'हिंदी / Dual';
+      }
+      renderTable();
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      document.getElementById('themeBtn').innerText = isLight ? '☀️ Light' : '🌙 Dark';
+      localStorage.setItem('theme_pref', isLight ? 'light' : 'dark');
+    }
+
+    function filterType(type, btn) {
+      currentFilter = type;
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderTable();
+    }
+
+    function runSim() {
+      const cost = parseFloat(document.getElementById('simCost').value) || 0;
+      const profitPct = parseFloat(document.getElementById('simProfit').value) || 0;
+      const discPct = parseFloat(document.getElementById('simDiscount').value) || 0;
+
+      const profitAmt = cost * (profitPct / 100);
+      const catalogue = cost + profitAmt;
+      const discAmt = catalogue * (discPct / 100);
+      const net = catalogue - discAmt;
+
+      document.getElementById('simResult').innerHTML = `
+        <span>Catalogue: ₹${catalogue.toLocaleString('en-IN')} | Discount (${discPct}%): ₹${discAmt.toLocaleString('en-IN')}</span>
+        <strong style="color: var(--accent-emerald); font-size: 1.1rem;">Net Invoice: ₹${net.toLocaleString('en-IN')}</strong>
+      `;
+    }
+
+    function triggerConfetti() {
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+
+    // Initialize theme from storage
+    if (localStorage.getItem('theme_pref') === 'light') {
+      document.body.classList.add('light-theme');
+      document.getElementById('themeBtn').innerText = '☀️ Light';
+    }
+
+    renderTable();
+  </script>
+</body>
+</html>

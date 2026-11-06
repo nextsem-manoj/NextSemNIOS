@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>The Rainbow Solutions & Solved PDF | NCERT Class 5 English Santoor Chapter 3</title>
+  <meta name="description" content="NCERT Class 5 English Santoor Chapter 3: The Rainbow (Christina Rossetti) — Complete textbook answers written on the PDF itself, interactive rhyming words, compound words, anagrams, opposites with 'S', kitchen spices in mother tongue, and VIBGYOR color lab.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(4, 170, 109, 0.28);
+      --accent-green: #04AA6D;
+      --accent-emerald: #10b981;
+      --accent-teal: #14b8a6;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-purple: #8b5cf6;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 90px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(4, 170, 109, 0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+    }
+
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+
+    .breadcrumb-trail a { color: #04AA6D; text-decoration: none; font-weight: 700; }
+    .breadcrumb-trail a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #64748b; font-size: 0.75rem; }
+    .breadcrumb-current { color: var(--text-main); font-weight: 800; }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    .theme-toggle-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 14px; border-radius: 9999px;
+      font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; gap: 6px;
+    }
+    body.light-theme .theme-toggle-btn {
+      background: #e2e8f0; border-color: #cbd5e1; color: #0f172a;
+    }
+
+    .page-container {
+      position: relative; max-width: 1060px;
+      margin: 0 auto; padding: 24px 16px;
+      z-index: 1;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(12, 19, 40, 0.96) 0%, rgba(6, 12, 24, 0.96) 100%);
+      border: 1.5px solid var(--border-card);
+      border-radius: 24px; padding: 32px 24px;
+      text-align: center; margin-bottom: 24px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    }
+    body.light-theme .hero-banner {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border-color: #cbd5e1;
+    }
+
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(4, 170, 109, 0.15);
+      border: 1px solid rgba(4, 170, 109, 0.4);
+      color: #10b981; padding: 4px 14px; border-radius: 9999px;
+      font-size: 0.78rem; font-weight: 800; margin-bottom: 12px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+      font-weight: 900; line-height: 1.25; margin-bottom: 10px;
+      background: linear-gradient(135deg, #ffffff 30%, #38bdf8 70%, #10b981 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    body.light-theme .hero-title {
+      background: linear-gradient(135deg, #0f172a 30%, #0284c7 70%, #04AA6D 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted); font-size: 0.98rem; max-width: 760px;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Action Buttons Bar */
+    .cta-button-group {
+      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 12px;
+      font-size: 0.9rem; font-weight: 800;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .cta-btn:active { transform: scale(0.97); }
+
+    .cta-btn-primary {
+      background: #04AA6D; color: #ffffff;
+      box-shadow: 0 4px 16px rgba(4, 170, 109, 0.35);
+    }
+    .cta-btn-primary:hover { background: #039861; }
+
+    .cta-btn-secondary {
+      background: rgba(255, 255, 255, 0.08); color: var(--text-main);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    body.light-theme .cta-btn-secondary {
+      background: #e2e8f0; border-color: #cbd5e1; color: #0f172a;
+    }
+
+    /* Section Tabs */
+    .tabs-nav {
+      display: flex; gap: 8px; overflow-x: auto;
+      padding-bottom: 12px; margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    body.light-theme .tabs-nav { border-bottom-color: #cbd5e1; }
+
+    .tab-btn {
+      background: transparent; border: none;
+      color: var(--text-muted); padding: 8px 18px;
+      border-radius: 9999px; font-size: 0.88rem; font-weight: 700;
+      cursor: pointer; white-space: nowrap; transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: #04AA6D; color: #ffffff;
+      box-shadow: 0 4px 14px rgba(4, 170, 109, 0.3);
+    }
+
+    /* Cards Grid */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 16px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    body.light-theme .card-header { border-bottom-color: #e2e8f0; }
+
+    .card-title {
+      font-size: 1.15rem; font-weight: 800; color: var(--text-main);
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .q-number {
+      background: rgba(4, 170, 109, 0.2); color: #10b981;
+      padding: 2px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 800;
+    }
+
+    .question-box {
+      font-size: 1rem; font-weight: 700; color: var(--text-main);
+      margin-bottom: 12px; line-height: 1.6;
+    }
+
+    .answer-box {
+      background: rgba(4, 170, 109, 0.08);
+      border-left: 4px solid #04AA6D;
+      padding: 14px 16px; border-radius: 0 12px 12px 0;
+      margin-bottom: 12px; font-size: 0.95rem; font-weight: 600;
+    }
+
+    .explanation-step {
+      font-size: 0.85rem; color: var(--text-muted);
+      margin-bottom: 6px; display: flex; align-items: flex-start; gap: 6px;
+    }
+
+    /* Interactive Anagrams */
+    .anagram-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px; margin-top: 14px;
+    }
+
+    .anagram-tile {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 12px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    body.light-theme .anagram-tile { background: #f8fafc; border-color: #e2e8f0; }
+
+    .jumbled-code {
+      font-family: 'JetBrains Mono', monospace; font-size: 1rem;
+      font-weight: 800; color: #f59e0b; letter-spacing: 1px;
+    }
+
+    .unscrambled-val {
+      font-family: 'JetBrains Mono', monospace; font-size: 1rem;
+      font-weight: 900; color: #10b981;
+    }
+
+    /* Rhyming Words Grid */
+    .rhyme-table {
+      width: 100%; border-collapse: collapse; margin-top: 12px;
+    }
+    .rhyme-table th, .rhyme-table td {
+      padding: 10px 14px; text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    body.light-theme .rhyme-table th, body.light-theme .rhyme-table td {
+      border-bottom-color: #e2e8f0;
+    }
+    .rhyme-table th { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; }
+    .rhyme-starter { font-weight: 800; color: #38bdf8; }
+    .rhyme-clusters { font-weight: 700; color: #10b981; }
+
+    /* Color Mixing Circles */
+    .color-mix-row {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      padding: 12px 14px; background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px; margin-bottom: 10px;
+    }
+    body.light-theme .color-mix-row { background: #f1f5f9; }
+
+    .color-swatch {
+      width: 28px; height: 28px; border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      display: inline-block; vertical-align: middle;
+    }
+
+    /* Embedded PDF Frame */
+    .pdf-embed-wrapper {
+      width: 100%; height: 780px; border-radius: 18px;
+      overflow: hidden; border: 2px solid var(--border-card);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+      background: #000000;
+    }
+    .pdf-embed-wrapper iframe { width: 100%; height: 100%; border: none; }
+
+    /* Bottom Navigation Bar */
+    .bottom-nav {
+      position: fixed; bottom: 0; left: 0; width: 100%;
+      background: rgba(6, 12, 24, 0.95); backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex; justify-content: space-around; padding: 10px 0;
+      z-index: 100;
+    }
+    body.light-theme .bottom-nav {
+      background: rgba(255, 255, 255, 0.95); border-top-color: #cbd5e1;
+    }
+
+    .bottom-nav-item {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      color: var(--text-muted); text-decoration: none; font-size: 0.72rem; font-weight: 700;
+    }
+    .bottom-nav-item.active { color: #04AA6D; }
+
+    .confetti-btn {
+      background: linear-gradient(135deg, #04AA6D, #10b981);
+      color: #ffffff; border: none; padding: 6px 14px;
+      border-radius: 9999px; font-weight: 800; font-size: 0.76rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Breadcrumb Nav -->
+  <nav class="top-nav">
+    <div class="breadcrumb-trail">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=5">Class 5</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=5&subject=c5-santoor">English (Santoor)</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Unit 2: The Rainbow</span>
+    </div>
+
+    <div class="nav-actions">
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="badge-pill">✨ NCERT Class 5 Santoor (New 2026-27) • Chapter 3 Solved</div>
+      <h1 class="hero-title">The Rainbow (इंद्रधनुष)</h1>
+      <p class="hero-subtitle">
+        Christina Rossetti’s celebrated poem on the supreme beauty of clouds and rainbows arching over tree-tops.
+        All questions, rhyming words, compound words, anagrams, and color experiments solved directly on the textbook edition.
+      </p>
+
+      <div class="cta-button-group">
+        <a href="/pdf/Class 05/Santoor 5th NEW NCERT/eesa103_solved.pdf" download class="cta-btn cta-btn-primary">
+          📥 Download Solved PDF Edition
+        </a>
+        <a href="#pdf-viewer" class="cta-btn cta-btn-secondary" onclick="switchTab('pdf')">
+          📖 View Annotated PDF Directly
+        </a>
+        <button class="cta-btn cta-btn-secondary" onclick="triggerCelebration()">
+          🎉 Celebrate Mastery
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('solutions')">📝 Full Solutions</button>
+      <button class="tab-btn" onclick="switchTab('anagrams')">🔤 Anagrams & Rhymes</button>
+      <button class="tab-btn" onclick="switchTab('grammar')">🌿 Grammar & Opposites</button>
+      <button class="tab-btn" onclick="switchTab('colors')">🎨 VIBGYOR & Colors</button>
+      <button class="tab-btn" onclick="switchTab('pdf')">📑 Solved PDF Reader</button>
+    </div>
+
+    <!-- TAB 1: FULL TEXTBOOK SOLUTIONS -->
+    <div id="tab-solutions" class="tab-content">
+      <!-- Q1 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 28 • Q1</span>
+          <button class="confetti-btn" onclick="triggerCelebration()">Solved ✓</button>
+        </div>
+        <div class="question-box">1. Explain the meaning of the word ‘bow’ used in the poem.</div>
+        <div class="answer-box">
+          <strong>Final Answer:</strong> In the poem, <em>‘bow’</em> refers to the <strong>rainbow</strong> that arches across the sky after rainy showers.
+        </div>
+        <div class="explanation-step">
+          <span>•</span> <span>Step 1: Stanza 2 states: <em>"But the bow that bridges heaven, And overtops the trees..."</em></span>
+        </div>
+        <div class="explanation-step">
+          <span>•</span> <span>Step 2: Here, Christina Rossetti metaphorically describes the arching 7-colored rainbow as a majestic bridge across the sky.</span>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 28 • Q2</span>
+          <button class="confetti-btn" onclick="triggerCelebration()">Solved ✓</button>
+        </div>
+        <div class="question-box">2. Which bridge does the poet like more and why?</div>
+        <div class="answer-box">
+          <strong>Final Answer:</strong> The poet likes the <strong>rainbow bridge</strong> more because it overtops the trees and builds a road from earth to heaven, making it far prettier than human river bridges.
+        </div>
+        <div class="explanation-step">
+          <span>•</span> <span>Step 1: Human river bridges are pretty ("as pretty as you please"), but limited to crossing waters on ground level.</span>
+        </div>
+        <div class="explanation-step">
+          <span>•</span> <span>Step 2: The rainbow is a divine, natural bridge spanning celestial heights from earth into the sky.</span>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 28 • Q3</span>
+          <button class="confetti-btn" onclick="triggerCelebration()">Solved ✓</button>
+        </div>
+        <div class="question-box">3. The word ‘these’ is used for different things in stanzas one and two. What are the things for which ‘these’ has been used in each stanza?</div>
+        <div class="answer-box">
+          <strong>Final Answer:</strong> In stanza 1, <em>‘these’</em> refers to <strong>boats and ships</strong>. In stanza 2, <em>‘these’</em> refers to <strong>human-made river bridges</strong>.
+        </div>
+        <div class="explanation-step">
+          <span>•</span> <span>Stanza 1: Clouds sailing in the sky are prettier than <em>these</em> (boats and ships).</span>
+        </div>
+        <div class="explanation-step">
+          <span>•</span> <span>Stanza 2: The rainbow bridging heaven is prettier than <em>these</em> (bridges on rivers).</span>
+        </div>
+      </div>
+
+      <!-- Q4: True or False -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 28 • Q4 (TRUE OR FALSE)</span>
+        </div>
+        <div class="question-box">4. State whether the following statements are True or False:</div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li style="padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+            <strong>a. Ships sail on the river.</strong> → <span style="color: #ef4444; font-weight: 800;">[ FALSE ]</span> <em>(Ships sail on the seas)</em>
+          </li>
+          <li style="padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+            <strong>b. Boats sail on the sea.</strong> → <span style="color: #ef4444; font-weight: 800;">[ FALSE ]</span> <em>(Boats sail on the rivers)</em>
+          </li>
+          <li style="padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+            <strong>c. Bridges are built on the river.</strong> → <span style="color: #10b981; font-weight: 800;">[ TRUE ✓ ]</span> <em>("There are bridges on the rivers")</em>
+          </li>
+          <li style="padding: 10px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+            <strong>d. A road is built from earth to the sky.</strong> → <span style="color: #10b981; font-weight: 800;">[ TRUE ✓ ]</span> <em>(The rainbow metaphorically builds this road)</em>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Think and Discuss -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 28 • SECTION B</span>
+        </div>
+        <div class="question-box">B. Think and Discuss:</div>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
+          <div class="answer-box">
+            <strong>1. What are the ways in which you can cross a river?</strong><br>
+            By walking or driving across a bridge, taking a boat, ferry, or using an overhead cable ropeway.
+          </div>
+          <div class="answer-box">
+            <strong>2. Have you ever seen a rainbow in real life or in pictures? How did you feel?</strong><br>
+            Yes! Seeing a rainbow after fresh rainfall felt breathtaking, vibrant, and filled with wondrous joy.
+          </div>
+          <div class="answer-box">
+            <strong>3. If you could walk on a rainbow, where do you think it would take you?</strong><br>
+            It would lead straight into a magical cloud-top wonderland of stars and gentle breezes!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: ANAGRAMS & RHYMING WORDS -->
+    <div id="tab-anagrams" class="tab-content" style="display: none;">
+      <!-- Anagrams -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 29 • JUMBLED WORDS</span>
+          <span style="font-size: 0.8rem; color: #10b981; font-weight: 800;">9 Anagrams Solved</span>
+        </div>
+        <div class="question-box">Rearrange the letters of each word to form a meaningful word from the poem:</div>
+        <div class="anagram-grid">
+          <div class="anagram-tile"><span>1. <span class="jumbled-code">sial</span></span> <span class="unscrambled-val">S A I L</span></div>
+          <div class="anagram-tile"><span>2. <span class="jumbled-code">vierr</span></span> <span class="unscrambled-val">R I V E R</span></div>
+          <div class="anagram-tile"><span>3. <span class="jumbled-code">sae</span></span> <span class="unscrambled-val">S E A</span></div>
+          <div class="anagram-tile"><span>4. <span class="jumbled-code">oduscl</span></span> <span class="unscrambled-val">C L O U D S</span></div>
+          <div class="anagram-tile"><span>5. <span class="jumbled-code">risebgd</span></span> <span class="unscrambled-val">B R I D G E S</span></div>
+          <div class="anagram-tile"><span>6. <span class="jumbled-code">nhveea</span></span> <span class="unscrambled-val">H E A V E N</span></div>
+          <div class="anagram-tile"><span>7. <span class="jumbled-code">eoptvros</span></span> <span class="unscrambled-val">O V E R T O P S</span></div>
+          <div class="anagram-tile"><span>8. <span class="jumbled-code">owb</span></span> <span class="unscrambled-val">B O W</span></div>
+          <div class="anagram-tile"><span>9. <span class="jumbled-code">droa</span></span> <span class="unscrambled-val">R O A D</span></div>
+        </div>
+      </div>
+
+      <!-- Rhyming Words -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 30 • RHYMING WORDS</span>
+          <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 800;">50 Rhyming Words Catalog</span>
+        </div>
+        <div class="question-box">Give five rhyming words for each word from the poem:</div>
+        <table class="rhyme-table">
+          <thead>
+            <tr>
+              <th>Given Word</th>
+              <th>5 Rhyming Words</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="rhyme-starter">• Ship</td><td class="rhyme-clusters">trip, chip, dip, lip, flip</td></tr>
+            <tr><td class="rhyme-starter">• Tree</td><td class="rhyme-clusters">see, bee, free, knee, glee</td></tr>
+            <tr><td class="rhyme-starter">• Bow</td><td class="rhyme-clusters">low, row, glow, show, slow</td></tr>
+            <tr><td class="rhyme-starter">• Rain</td><td class="rhyme-clusters">train, pain, gain, chain, brain</td></tr>
+            <tr><td class="rhyme-starter">• Sun</td><td class="rhyme-clusters">run, fun, bun, gun, spun</td></tr>
+            <tr><td class="rhyme-starter">• Sea</td><td class="rhyme-clusters">tea, pea, flea, plea, key</td></tr>
+            <tr><td class="rhyme-starter">• Sail</td><td class="rhyme-clusters">tail, mail, pail, rail, nail</td></tr>
+            <tr><td class="rhyme-starter">• And</td><td class="rhyme-clusters">sand, hand, band, land, stand</td></tr>
+            <tr><td class="rhyme-starter">• Sky</td><td class="rhyme-clusters">high, fly, cry, try, spy</td></tr>
+            <tr><td class="rhyme-starter">• Far</td><td class="rhyme-clusters">car, star, jar, bar, tar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: GRAMMAR & COMPOUND WORDS -->
+    <div id="tab-grammar" class="tab-content" style="display: none;">
+      <!-- Compound Words -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 34 • COMPOUND WORDS</span>
+          <span style="font-size: 0.8rem; color: #10b981; font-weight: 800;">10 Completed</span>
+        </div>
+        <div class="question-box">Join a word with a 'friend word' to make compound words:</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 10px;">
+          <div class="anagram-tile"><span>1. rain + bow</span> <strong>rainbow</strong></div>
+          <div class="anagram-tile"><span>2. tea + cup</span> <strong style="color: #10b981;">teacup</strong></div>
+          <div class="anagram-tile"><span>3. wrist + watch</span> <strong style="color: #10b981;">wristwatch</strong></div>
+          <div class="anagram-tile"><span>4. arm + chair</span> <strong style="color: #10b981;">armchair</strong></div>
+          <div class="anagram-tile"><span>5. earth + worm</span> <strong>earthworm</strong></div>
+          <div class="anagram-tile"><span>6. sun + flower</span> <strong style="color: #10b981;">sunflower</strong></div>
+          <div class="anagram-tile"><span>7. table + cloth</span> <strong style="color: #10b981;">tablecloth</strong></div>
+          <div class="anagram-tile"><span>8. note + book</span> <strong>notebook</strong></div>
+          <div class="anagram-tile"><span>9. ear + ring</span> <strong style="color: #10b981;">earring</strong></div>
+          <div class="anagram-tile"><span>10. tooth + brush</span> <strong style="color: #10b981;">toothbrush</strong></div>
+        </div>
+      </div>
+
+      <!-- Noun & Verb Dual Use -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 35 • NOUN & VERB DUAL SENTENCES</span>
+        </div>
+        <div class="question-box">Create two sentences for each word: once as a Noun and once as a Verb:</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+          <div class="answer-box">
+            <strong>1. cut</strong><br>
+            [Noun]: He got a small <em>cut</em> on his finger.<br>
+            [Verb]: Please <em>cut</em> the birthday cake into equal pieces.
+          </div>
+          <div class="answer-box">
+            <strong>2. bat</strong><br>
+            [Noun]: Rohit bought a high-quality cricket <em>bat</em>.<br>
+            [Verb]: Our team decided to <em>bat</em> first after winning the toss.
+          </div>
+          <div class="answer-box">
+            <strong>3. picture</strong><br>
+            [Noun]: She hung a scenic <em>picture</em> of the mountains.<br>
+            [Verb]: Can you <em>picture</em> a sky without clouds?
+          </div>
+          <div class="answer-box">
+            <strong>4. cry</strong><br>
+            [Noun]: We heard a sudden <em>cry</em> for help in the garden.<br>
+            [Verb]: Little babies <em>cry</em> when they feel sleepy.
+          </div>
+          <div class="answer-box">
+            <strong>5. filter</strong><br>
+            [Noun]: Install a modern RO water <em>filter</em> at home.<br>
+            [Verb]: Dense pine trees <em>filter</em> carbon and dust from the air.
+          </div>
+        </div>
+      </div>
+
+      <!-- Opposites with 'S' -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 36 • ANTONYMS STARTING WITH 'S'</span>
+        </div>
+        <div class="question-box">Write opposites of words starting strictly with 'S':</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-top: 10px;">
+          <div class="anagram-tile"><span>a. large ×</span> <strong style="color: #10b981;">small</strong></div>
+          <div class="anagram-tile"><span>b. weak ×</span> <strong style="color: #10b981;">strong</strong></div>
+          <div class="anagram-tile"><span>c. fast ×</span> <strong style="color: #10b981;">slow</strong></div>
+          <div class="anagram-tile"><span>d. rough ×</span> <strong style="color: #10b981;">smooth</strong></div>
+          <div class="anagram-tile"><span>e. dull ×</span> <strong style="color: #10b981;">shiny / sharp</strong></div>
+          <div class="anagram-tile"><span>f. curved ×</span> <strong style="color: #10b981;">straight</strong></div>
+          <div class="anagram-tile"><span>g. finish ×</span> <strong style="color: #10b981;">start</strong></div>
+          <div class="anagram-tile"><span>h. addition ×</span> <strong style="color: #10b981;">subtraction</strong></div>
+          <div class="anagram-tile"><span>i. complicated ×</span> <strong style="color: #10b981;">simple</strong></div>
+          <div class="anagram-tile"><span>j. mild ×</span> <strong style="color: #10b981;">severe / strong</strong></div>
+          <div class="anagram-tile"><span>k. blunt ×</span> <strong style="color: #10b981;">sharp</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: VIBGYOR & COLOR COMBINATIONS -->
+    <div id="tab-colors" class="tab-content" style="display: none;">
+      <!-- VIBGYOR & Kitchen Spices -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 37 • KITCHEN SPICES IN MOTHER TONGUE</span>
+        </div>
+        <div class="question-box">Items found in Indian kitchens, their colours and names in mother tongue:</div>
+        <table class="rhyme-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Natural Colour</th>
+              <th>Mother Tongue Name (Hindi)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>• Clove</td><td style="color: #a87954; font-weight: 700;">Dark Brown / Black</td><td style="color: #10b981; font-weight: 800;">Laung (लौंग)</td></tr>
+            <tr><td>• Cinnamon</td><td style="color: #b45309; font-weight: 700;">Reddish Brown</td><td style="color: #10b981; font-weight: 800;">Dalchini (दालचीनी)</td></tr>
+            <tr><td>• Dry Chilli</td><td style="color: #ef4444; font-weight: 700;">Deep Red</td><td style="color: #10b981; font-weight: 800;">Sukhi Lal Mirch (लाल मिर्च)</td></tr>
+            <tr><td>• Garlic</td><td style="color: #f8fafc; font-weight: 700;">Creamy White</td><td style="color: #10b981; font-weight: 800;">Lahsun (लहसुन)</td></tr>
+            <tr><td>• Curry Leaves</td><td style="color: #10b981; font-weight: 700;">Dark Green</td><td style="color: #10b981; font-weight: 800;">Kadi Patta (कढ़ी पत्ता)</td></tr>
+            <tr><td>• Peppercorns</td><td style="color: #64748b; font-weight: 700;">Black</td><td style="color: #10b981; font-weight: 800;">Kali Mirch (काली मिर्च)</td></tr>
+            <tr><td>• Fennel Seeds</td><td style="color: #84cc16; font-weight: 700;">Light Green</td><td style="color: #10b981; font-weight: 800;">Saunf (सौंफ)</td></tr>
+            <tr><td>• Cumin Seeds</td><td style="color: #92400e; font-weight: 700;">Earthy Brown</td><td style="color: #10b981; font-weight: 800;">Jeera (जीरा)</td></tr>
+            <tr><td>• Mustard Seeds</td><td style="color: #475569; font-weight: 700;">Black / Dark Brown</td><td style="color: #10b981; font-weight: 800;">Rai / Sarson (राई / सरसों)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Color Combinations -->
+      <div class="card">
+        <div class="card-header">
+          <span class="q-number">PAGE 39 • COLOR MIXING LAB</span>
+        </div>
+        <div class="question-box">Chromatic combinations resulting from mixing primary & secondary pigments:</div>
+        
+        <div class="color-mix-row">
+          <span class="color-swatch" style="background: #ef4444;"></span> + 
+          <span class="color-swatch" style="background: #3b82f6;"></span> = 
+          <span class="color-swatch" style="background: #8b5cf6;"></span>
+          <strong>1. red + blue = <span style="color: #a855f7;">purple (p u r p l e)</span></strong>
+        </div>
+
+        <div class="color-mix-row">
+          <span class="color-swatch" style="background: #facc15;"></span> + 
+          <span class="color-swatch" style="background: #3b82f6;"></span> = 
+          <span class="color-swatch" style="background: #22c55e;"></span>
+          <strong>2. yellow + blue = <span style="color: #22c55e;">green (g r e e n)</span></strong>
+        </div>
+
+        <div class="color-mix-row">
+          <span class="color-swatch" style="background: #ef4444;"></span> + 
+          <span class="color-swatch" style="background: #facc15;"></span> = 
+          <span class="color-swatch" style="background: #f97316;"></span>
+          <strong>3. red + yellow = <span style="color: #f97316;">orange (o r a n g e)</span></strong>
+        </div>
+
+        <div class="color-mix-row">
+          <span class="color-swatch" style="background: #ef4444;"></span> + 
+          <span class="color-swatch" style="background: #ffffff; border: 1px solid #94a3b8;"></span> = 
+          <span class="color-swatch" style="background: #f472b6;"></span>
+          <strong>4. red + white = <span style="color: #ec4899;">pink (p i n k)</span></strong>
+        </div>
+
+        <div class="color-mix-row">
+          <span class="color-swatch" style="background: #ef4444;"></span> + 
+          <span class="color-swatch" style="background: #0f172a;"></span> = 
+          <span class="color-swatch" style="background: #881337;"></span>
+          <strong>5. red + black = <span style="color: #be123c;">maroon (m a r o o n)</span></strong>
+        </div>
+
+        <div class="color-mix-row">
+          <span class="color-swatch" style="background: #ef4444;"></span> + 
+          <span class="color-swatch" style="background: #facc15;"></span> + 
+          <span class="color-swatch" style="background: #3b82f6;"></span> = 
+          <span class="color-swatch" style="background: #78350f;"></span>
+          <strong>6. red + yellow + blue = <span style="color: #92400e;">brown (b r o w n)</span></strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: EMBEDDED SOLVED PDF VIEWER -->
+    <div id="tab-pdf" class="tab-content" style="display: none;">
+      <div class="card" id="pdf-viewer">
+        <div class="card-header">
+          <span class="q-number">100% SOLVED NCERT TEXTBOOK</span>
+          <a href="/pdf/Class 05/Santoor 5th NEW NCERT/eesa103_solved.pdf" download class="confetti-btn" style="text-decoration: none;">
+            Download Offline PDF 📥
+          </a>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+          All answers, blank spaces, compound tables, and anagrams are neatly annotated directly onto the original textbook layout.
+        </p>
+        <div class="pdf-embed-wrapper">
+          <iframe src="/pdf/Class 05/Santoor 5th NEW NCERT/eesa103_solved.pdf#toolbar=1&navpanes=0" title="Solved Chapter 3 The Rainbow PDF"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div class="bottom-nav">
+    <a href="/" class="bottom-nav-item">
+      <span>🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="/?class=5" class="bottom-nav-item">
+      <span>📚</span>
+      <span>Class 5</span>
+    </a>
+    <a href="/?class=5&subject=c5-santoor" class="bottom-nav-item">
+      <span>📖</span>
+      <span>Santoor</span>
+    </a>
+    <a href="/pdf/Class 05/Santoor 5th NEW NCERT/eesa103_solved.pdf" class="bottom-nav-item active">
+      <span>📑</span>
+      <span>Solved PDF</span>
+    </a>
+  </div>
+
+  <script>
+    // Tab Switcher
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+      const target = document.getElementById('tab-' + tabId);
+      if (target) {
+        target.style.display = 'block';
+      }
+
+      const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => 
+        b.getAttribute('onclick').includes(tabId)
+      );
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Theme Toggle Synchronized with localStorage
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+
+    function applyTheme(isLight) {
+      if (isLight) {
+        document.body.classList.add('light-theme');
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Light';
+        localStorage.setItem('nextsem_ncert_theme', 'light');
+      } else {
+        document.body.classList.remove('light-theme');
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Dark';
+        localStorage.setItem('nextsem_ncert_theme', 'dark');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('nextsem_ncert_theme');
+    applyTheme(savedTheme === 'light');
+
+    themeBtn.addEventListener('click', () => {
+      const isCurrentlyLight = document.body.classList.contains('light-theme');
+      applyTheme(!isCurrentlyLight);
+    });
+
+    // Celebration Confetti
+    function triggerCelebration() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 75,
+          spread: 80,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

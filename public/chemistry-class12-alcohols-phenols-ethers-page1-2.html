@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 12 Chemistry: Alcohols, Phenols and Ethers (Pages 1 & 2) | Nextsem Academy</title>
+  <meta name="description" content="NCERT Class 12 Chemistry Part II Unit 7 (Alcohols, Phenols and Ethers) - Comprehensive Mastery Notes and 20 Interactive Fill-in-the-Blanks from Pages 1 & 2.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .container {
+      position: relative; max-width: 1060px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(16, 185, 129, 0.12));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 30px; font-weight: 900; margin-bottom: 8px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; max-width: 760px; margin: 0 auto; }
+
+    /* Module Navigation Tabs */
+    .module-nav {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px;
+    }
+    .mod-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 10px 18px; border-radius: 12px; font-size: 14px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .mod-btn:hover, .mod-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    /* Studio Card */
+    .studio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px; margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      font-size: 21px; font-weight: 800; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px; color: var(--accent-sky);
+    }
+
+    /* Grid & Cards */
+    .feature-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 14px;
+    }
+
+    .concept-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px; padding: 18px; transition: all 0.2s;
+    }
+    .concept-card:hover {
+      background: rgba(255, 255, 255, 0.04); border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .badge-gold {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+    .badge-emerald {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+    .badge-purple {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+    .badge-sky {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+
+    .code-pill {
+      font-family: 'JetBrains Mono', monospace; font-size: 13px;
+      background: rgba(0,0,0,0.4); padding: 2px 8px; border-radius: 6px;
+      color: #38bdf8; border: 1px solid rgba(56,189,248,0.2);
+    }
+
+    /* Fill in the Blanks Styling */
+    .blank-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 20px; margin-bottom: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+    .blank-sentence {
+      font-size: 15px; font-weight: 700; line-height: 1.8; margin-bottom: 14px;
+    }
+    .blank-slot {
+      display: inline-block; min-width: 90px; text-align: center;
+      padding: 2px 10px; margin: 0 4px; border-bottom: 2px dashed var(--accent-sky);
+      color: var(--accent-gold); font-weight: 800; border-radius: 4px;
+      background: rgba(56, 189, 248, 0.08); transition: all 0.3s;
+    }
+    .blank-slot.filled-correct {
+      border-bottom: 2px solid #10b981; background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+    .blank-slot.filled-wrong {
+      border-bottom: 2px solid #f43f5e; background: rgba(244, 63, 94, 0.2);
+      color: #fb7185;
+    }
+    .blank-pills-row {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+    }
+    .blank-pill-btn {
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main); font-size: 13px; font-weight: 600; padding: 6px 14px;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s;
+    }
+    .blank-pill-btn:hover:not(.disabled) {
+      background: rgba(56, 189, 248, 0.15); border-color: var(--accent-sky); color: var(--accent-sky);
+    }
+    .blank-pill-btn.correct {
+      background: rgba(16, 185, 129, 0.25) !important; border-color: #10b981 !important; color: #34d399 !important; font-weight: 800;
+    }
+    .blank-pill-btn.wrong {
+      background: rgba(244, 63, 94, 0.25) !important; border-color: #f43f5e !important; color: #fb7185 !important;
+    }
+    .exp-box {
+      display: none; margin-top: 10px; padding: 10px 14px; background: rgba(0,0,0,0.4);
+      border-left: 3px solid var(--accent-sky); border-radius: 0 8px 8px 0; font-size: 13px; color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/?class=12&subject=c12-chemistry&book=part-2" class="nav-brand" title="Return to Class 12 Chemistry Part-II Chapters">
+      <span class="nav-badge">Class 12 Chemistry</span>
+      <span style="font-weight: 700; font-size: 15px;">Unit 7: Alcohols, Phenols & Ethers</span>
+    </a>
+    <div class="nav-actions">
+      <a href="/chemistry-class12-alcohols-phenols-ethers-page3-6.html?class=12&subject=c12-chemistry&book=part-2" class="nav-btn" style="color:#38bdf8; border-color:rgba(56,189,248,0.4);">Pages 3–6 Studio ➔</a>
+      <a href="/?class=12&subject=c12-chemistry&book=part-2" class="nav-btn">📚 Chapters</a>
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/" class="nav-btn">🏠 Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">🧪 NCERT Class 12 Chemistry (Part II) • Pages 1 & 2</div>
+      <h1 class="hero-title">Alcohols, Phenols & Ethers: Complete Mastery</h1>
+      <p class="hero-subtitle">Line-by-line foundational notes, classification taxonomy (Primary, Secondary, Tertiary, Allylic, Benzylic, Vinylic), and 20 interactive Fill-in-the-Blanks questions.</p>
+    </header>
+
+    <!-- Module Selector Tabs -->
+    <div class="module-nav">
+      <button class="mod-btn active" onclick="switchTab('intro', this)">🌟 1. Introduction & Uses</button>
+      <button class="mod-btn" onclick="switchTab('definitions', this)">🧪 2. Core Definitions</button>
+      <button class="mod-btn" onclick="switchTab('classification', this)">📐 3. Classification Studio</button>
+      <button class="mod-btn" onclick="switchTab('blanks', this)">📝 4. 20 Fill-in-the-Blanks Test</button>
+    </div>
+
+    <!-- 1. Introduction & Uses -->
+    <section id="tab_intro" class="studio-card">
+      <div class="section-title">🌟 Everyday Applications & Biological Importance</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">
+        Alcohols, phenols and ethers are the basic compounds for the formation of <strong>detergents, antiseptics and fragrances</strong>, respectively:
+      </p>
+
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-gold">Alcohols ➔ Detergents & Solvents</span>
+          <div style="font-weight:800; font-size:16px; margin-bottom:6px;">Ethanol (C₂H₅OH)</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • Ordinary spirit used for polishing wooden furniture is chiefly <strong>ethanol (C₂H₅OH)</strong>.<br>
+            • Industrial precursors for biodegradable surfactant detergents.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-emerald">Phenols ➔ Antiseptics & Disinfectants</span>
+          <div style="font-weight:800; font-size:16px; margin-bottom:6px;">Carbolic Acid / Phenol (C₆H₅OH)</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • Exhibits powerful antimicrobial & germicidal properties.<br>
+            • Primary active agent in household disinfectants, soaps, and pharmaceuticals.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-purple">Ethers ➔ Fragrances & Perfumes</span>
+          <div style="font-weight:800; font-size:16px; margin-bottom:6px;">Alkoxy & Aryloxy Derivatives</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • Pleasant aromatic qualities and stable non-polar solvents.<br>
+            • Used extensively in flavorings, perfumes, and anesthetic formulations.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; padding: 14px 18px; background: rgba(56,189,248,0.08); border-left: 3px solid var(--accent-sky); border-radius: 0 10px 10px 0; font-size: 13.5px;">
+        💡 <strong>Did You Know?</strong> The sugar we eat (sucrose), the cotton used for fabrics (cellulose), and the paper we use for writing are all made up of chemical compounds containing <strong>–OH (hydroxyl) groups</strong>!
+      </div>
+    </section>
+
+    <!-- 2. Core Definitions -->
+    <section id="tab_definitions" class="studio-card" style="display:none;">
+      <div class="section-title">🧪 Fundamental Chemical Definitions & Formulae</div>
+      
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-sky">Alcohol (R—OH)</span>
+          <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Aliphatic Hydroxyl Derivative</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">
+            Formed when a hydrogen atom in an <strong>aliphatic hydrocarbon</strong> is replaced by a <span class="code-pill">–OH</span> group.<br>
+            <em>Examples:</em> Methanol (<span class="code-pill">CH₃OH</span>), Ethanol (<span class="code-pill">CH₃CH₂OH</span>).
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-emerald">Phenol (Ar—OH)</span>
+          <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Aromatic Hydroxyl Derivative</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">
+            Formed when a hydrogen atom in an <strong>aromatic hydrocarbon</strong> is replaced by a <span class="code-pill">–OH</span> group directly attached to a benzene ring.<br>
+            <em>Example:</em> Phenol (<span class="code-pill">C₆H₅OH</span>).
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-gold">Ether (R—O—R′ / Ar—O—R)</span>
+          <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Alkoxy / Aryloxy Derivative</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">
+            Formed by substitution of H in a hydrocarbon by an <strong>alkoxy (R—O—)</strong> or <strong>aryloxy (Ar—O—)</strong> group, or by substituting –H of –OH in alcohol/phenol by alkyl/aryl.<br>
+            <em>Example:</em> Dimethyl ether (<span class="code-pill">CH₃OCH₃</span>).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Classification Studio -->
+    <section id="tab_classification" class="studio-card" style="display:none;">
+      <div class="section-title">📐 Structural Classification Taxonomy</div>
+      
+      <h3 style="font-size: 16px; color: var(--accent-gold); margin: 16px 0 10px;">A. By Number of –OH Groups (Mono, Di, Tri, Polyhydric)</h3>
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-sky">Monohydric</span>
+          <p style="font-size:13px; color:var(--text-muted);">Contains <strong>one –OH</strong> group.<br><em>e.g., Ethanol (CH₃CH₂OH), Phenol (C₆H₅OH)</em></p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-emerald">Dihydric (Glycols)</span>
+          <p style="font-size:13px; color:var(--text-muted);">Contains <strong>two –OH</strong> groups on different carbons.<br><em>e.g., Ethane-1,2-diol (CH₂OH—CH₂OH), Catechol</em></p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-purple">Trihydric (Glycerols)</span>
+          <p style="font-size:13px; color:var(--text-muted);">Contains <strong>three –OH</strong> groups.<br><em>e.g., Propane-1,2,3-triol (CH₂OH—CHOH—CH₂OH)</em></p>
+        </div>
+      </div>
+
+      <h3 style="font-size: 16px; color: var(--accent-sky); margin: 24px 0 10px;">B. By Carbon Hybridisation Attached to –OH</h3>
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-gold">Alkyl Alcohols [C(sp³)—OH]</span>
+          <p style="font-size:13px; color:var(--text-muted);">
+            • <strong>Primary (1°):</strong> R—CH₂—OH<br>
+            • <strong>Secondary (2°):</strong> R₂CH—OH<br>
+            • <strong>Tertiary (3°):</strong> R₃C—OH
+          </p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-emerald">Allylic Alcohols [C(sp³)—OH]</span>
+          <p style="font-size:13px; color:var(--text-muted);">
+            –OH attached to sp³ carbon adjacent to C=C double bond.<br>
+            <em>e.g., Prop-2-en-1-ol (CH₂=CH—CH₂OH)</em><br>
+            (Can be 1°, 2°, 3°).
+          </p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-purple">Benzylic Alcohols [C(sp³)—OH]</span>
+          <p style="font-size:13px; color:var(--text-muted);">
+            –OH attached to sp³ carbon adjacent to an aromatic ring.<br>
+            <em>e.g., Benzyl alcohol (C₆H₅—CH₂OH)</em><br>
+            (Can be 1°, 2°, 3°).
+          </p>
+        </div>
+        <div class="concept-card">
+          <span class="badge-rose">Vinylic Alcohols [C(sp²)—OH]</span>
+          <p style="font-size:13px; color:var(--text-muted);">
+            –OH attached directly to sp² carbon of double bond.<br>
+            <em>e.g., Vinyl alcohol (CH₂=CH—OH)</em>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 20 Fill-in-the-Blanks Test -->
+    <section id="tab_blanks" class="studio-card" style="display:none;">
+      <div class="section-title">📝 20 Master Fill-in-the-Blanks (NCERT Pages 1 & 2)</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:16px;">
+        Click the correct option pill to fill in the blank. Real-time feedback, slot highlights, and explanations will be revealed instantly:
+      </p>
+
+      <div style="background:rgba(15,23,42,0.8); border:1px solid var(--border-card); border-radius:12px; padding:12px 18px; display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; font-weight:700;">
+        <div>📊 Total Questions: <span style="color:var(--accent-sky);">20</span></div>
+        <div>⭐ Score: <span id="blanksScore" style="color:var(--accent-emerald);">0</span> / <span id="blanksAnswered">0</span></div>
+      </div>
+
+      <div id="blanksContainer"></div>
+    </section>
+  </main>
+
+  <script>
+    const blanksData = [
+      {
+        id: 1, topic: 'Everyday Uses',
+        before: "Alcohols, phenols and ethers are the basic compounds for the formation of ",
+        after: ", antiseptics, and fragrances, respectively.",
+        opts: ['detergents', 'fertilizers', 'polymers', 'paints'],
+        ans: 0,
+        exp: "Page 1 explicitly introduces the industrial triplet: Alcohols for detergents, Phenols for antiseptics, Ethers for fragrances."
+      },
+      {
+        id: 2, topic: 'Definitions',
+        before: "Alcohols are formed when a hydrogen atom in an ",
+        after: " hydrocarbon is replaced by a hydroxyl (–OH) group.",
+        opts: ['aromatic', 'aliphatic', 'heterocyclic', 'inorganic'],
+        ans: 1,
+        exp: "Aliphatic hydrocarbons (alkanes/alkenes/alkynes) yield aliphatic alcohols upon –OH substitution."
+      },
+      {
+        id: 3, topic: 'Definitions',
+        before: "Phenols are formed when a hydrogen atom in an ",
+        after: " hydrocarbon is replaced by an –OH group directly attached to the ring.",
+        opts: ['aliphatic', 'aromatic', 'alicyclic', 'acyclic'],
+        ans: 1,
+        exp: "Phenol (C₆H₅OH) contains a hydroxyl group directly bonded to a benzene ring."
+      },
+      {
+        id: 4, topic: 'Applications',
+        before: "Ordinary spirit used for polishing wooden furniture is chiefly ",
+        after: " (C₂H₅OH).",
+        opts: ['methanol', 'ethanol', 'propanol', 'glycerol'],
+        ans: 1,
+        exp: "Commercial spirit consists primarily of ethanol (C₂H₅OH)."
+      },
+      {
+        id: 5, topic: 'Applications',
+        before: "Cotton fabrics, paper, and sugar are all made up of chemical compounds containing ",
+        after: " functional groups.",
+        opts: ['hydroxyl (–OH)', 'carboxylic (–COOH)', 'amino (–NH₂)', 'carbonyl (>C=O)'],
+        ans: 0,
+        exp: "Cellulose and sucrose are polyhydroxy carbohydrate molecules rich in –OH groups."
+      },
+      {
+        id: 6, topic: 'Definitions',
+        before: "Substitution of a hydrogen atom in a hydrocarbon by an alkoxy (R–O–) or aryloxy (Ar–O–) group yields ",
+        after: ".",
+        opts: ['esters', 'ethers', 'aldehydes', 'ketones'],
+        ans: 1,
+        exp: "The general formula R–O–R' or Ar–O–R defines the ether functional class."
+      },
+      {
+        id: 7, topic: 'Examples',
+        before: "Dimethyl ether (CH₃OCH₃) is a classic example of an ",
+        after: ".",
+        opts: ['alcohol', 'phenol', 'ether', 'ester'],
+        ans: 2,
+        exp: "CH₃OCH₃ features an oxygen atom single-bonded between two methyl groups."
+      },
+      {
+        id: 8, topic: 'Definitions',
+        before: "Ethers can be visualised as compounds formed by substituting the H atom of –OH group of an alcohol or phenol by an ",
+        after: " group.",
+        opts: ['alkyl or aryl', 'hydroxyl', 'aldehyde', 'halide'],
+        ans: 0,
+        exp: "R–OH → R–O–R' or Ar–OH → Ar–O–R' represents ether formation."
+      },
+      {
+        id: 9, topic: 'Classification',
+        before: "Alcohols containing only one –OH group per molecule are termed ",
+        after: " alcohols.",
+        opts: ['monohydric', 'dihydric', 'trihydric', 'polyhydric'],
+        ans: 0,
+        exp: "Prefix 'mono-' denotes a single hydroxyl group (e.g. CH₃OH)."
+      },
+      {
+        id: 10, topic: 'Classification',
+        before: "Ethane-1,2-diol (glycol) contains two –OH groups and is classified as a ",
+        after: " alcohol.",
+        opts: ['monohydric', 'dihydric', 'trihydric', 'polyhydric'],
+        ans: 1,
+        exp: "Dihydric alcohols contain two hydroxyl groups on adjacent carbons (CH₂OH–CH₂OH)."
+      },
+      {
+        id: 11, topic: 'Classification',
+        before: "Propane-1,2,3-triol (commonly known as glycerol) is an example of a ",
+        after: " alcohol.",
+        opts: ['monohydric', 'dihydric', 'trihydric', 'polyhydric'],
+        ans: 2,
+        exp: "Glycerol has three –OH groups attached across a 3-carbon chain."
+      },
+      {
+        id: 12, topic: 'Hybridisation',
+        before: "In primary (1°) alcohols, the –OH group is attached to a primary carbon bonded to at most ",
+        after: " other carbon atom.",
+        opts: ['one', 'two', 'three', 'four'],
+        ans: 0,
+        exp: "R–CH₂–OH represents a primary alcohol."
+      },
+      {
+        id: 13, topic: 'Hybridisation',
+        before: "In secondary (2°) alcohols, the –OH group is attached to a carbon bonded to ",
+        after: " alkyl groups.",
+        opts: ['one', 'two', 'three', 'four'],
+        ans: 1,
+        exp: "R₂CH–OH represents a secondary alcohol structure."
+      },
+      {
+        id: 14, topic: 'Hybridisation',
+        before: "In tertiary (3°) alcohols, the –OH group is attached to a carbon bonded to ",
+        after: " other carbon atoms.",
+        opts: ['one', 'two', 'three', 'zero'],
+        ans: 2,
+        exp: "R₃C–OH represents a tertiary alcohol."
+      },
+      {
+        id: 15, topic: 'Allylic Alcohols',
+        before: "In allylic alcohols, the –OH group is attached to an sp³-hybridised carbon adjacent to a ",
+        after: " double bond.",
+        opts: ['carbon-carbon', 'carbon-oxygen', 'carbon-nitrogen', 'triple'],
+        ans: 0,
+        exp: "The unit –C=C–C(sp³)–OH defines an allylic alcohol."
+      },
+      {
+        id: 16, topic: 'Allylic Alcohols',
+        before: "Prop-2-en-1-ol (CH₂=CH–CH₂OH) is a classic example of a ",
+        after: " allylic alcohol.",
+        opts: ['primary (1°)', 'secondary (2°)', 'tertiary (3°)', 'vinylic'],
+        ans: 0,
+        exp: "The sp³ allylic carbon holds two hydrogens and one carbon, making it primary."
+      },
+      {
+        id: 17, topic: 'Benzylic Alcohols',
+        before: "In benzylic alcohols, the –OH group is attached to an sp³-hybridised carbon atom next to an ",
+        after: ".",
+        opts: ['aromatic ring', 'alkene double bond', 'alkyne triple bond', 'ether linkage'],
+        ans: 0,
+        exp: "C₆H₅–CH₂OH (benzyl alcohol) has an sp³ carbon directly attached to the aromatic ring."
+      },
+      {
+        id: 18, topic: 'Classification',
+        before: "Both allylic and benzylic alcohols may be further classified into ",
+        after: ".",
+        opts: ['primary, secondary or tertiary', 'monohydric or dihydric only', 'aliphatic or aromatic only', 'acids or bases'],
+        ans: 0,
+        exp: "Depending on alkyl substitution on the sp³ allylic/benzylic carbon."
+      },
+      {
+        id: 19, topic: 'Vinylic Alcohols',
+        before: "In vinylic alcohols, the –OH group is attached directly to an ",
+        after: "-hybridised carbon atom of a double bond.",
+        opts: ['sp²', 'sp³', 'sp', 'dsp²'],
+        ans: 0,
+        exp: "CH₂=CH–OH (vinyl alcohol) features direct bonding to an sp² carbon."
+      },
+      {
+        id: 20, topic: 'Phenols',
+        before: "In phenols, the –OH group is attached directly to an ",
+        after: "-hybridised carbon atom of an aromatic ring.",
+        opts: ['sp²', 'sp³', 'sp', 'dsp³'],
+        ans: 0,
+        exp: "All 6 carbon atoms of the benzene ring are sp² hybridised."
+      }
+    ];
+
+    let blanksScore = 0;
+    let blanksAnswered = 0;
+    const blanksAnsweredMap = {};
+
+    function renderBlanks() {
+      const container = document.getElementById('blanksContainer');
+      container.innerHTML = blanksData.map((d, idx) => `
+        <div class="blank-card" id="blank_card_${d.id}">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:11px; font-weight:800; color:var(--accent-gold);">Question ${idx + 1} of 20</span>
+            <span style="font-size:11px; font-weight:700; background:rgba(56,189,248,0.15); color:var(--accent-sky); padding:2px 8px; border-radius:6px;">${d.topic}</span>
+          </div>
+          <div class="blank-sentence">
+            ${d.before}<span class="blank-slot" id="slot_${d.id}">______</span>${d.after}
+          </div>
+          <div class="blank-pills-row">
+            ${d.opts.map((opt, optIdx) => `
+              <button class="blank-pill-btn" id="blank_pill_${d.id}_${optIdx}" onclick="checkBlank(${d.id}, ${optIdx}, ${d.ans})">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <div class="exp-box" id="blank_exp_${d.id}">
+            💡 <strong>NCERT Explanation:</strong> ${d.exp}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function checkBlank(bId, selectedIdx, correctIdx) {
+      if (blanksAnsweredMap[bId] !== undefined) return;
+      blanksAnsweredMap[bId] = selectedIdx;
+      blanksAnswered++;
+
+      const isCorrect = (selectedIdx === correctIdx);
+      if (isCorrect) blanksScore++;
+
+      const slot = document.getElementById(`slot_${bId}`);
+      const correctText = blanksData.find(b => b.id === bId).opts[correctIdx];
+      const selectedText = blanksData.find(b => b.id === bId).opts[selectedIdx];
+
+      slot.innerText = isCorrect ? correctText : selectedText;
+      slot.classList.add(isCorrect ? 'filled-correct' : 'filled-wrong');
+
+      document.getElementById(`blank_pill_${bId}_${correctIdx}`).classList.add('correct');
+      if (!isCorrect) {
+        document.getElementById(`blank_pill_${bId}_${selectedIdx}`).classList.add('wrong');
+      }
+
+      document.getElementById(`blank_card_${bId}`).querySelectorAll('.blank-pill-btn').forEach(b => b.classList.add('disabled'));
+      document.getElementById(`blank_exp_${bId}`).style.display = 'block';
+
+      document.getElementById('blanksScore').innerText = blanksScore;
+      document.getElementById('blanksAnswered').innerText = blanksAnswered;
+
+      if (isCorrect) confetti({ particleCount: 20, spread: 45, origin: { y: 0.85 } });
+      if (blanksAnswered === blanksData.length && blanksScore >= 16) {
+        setTimeout(() => confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 } }), 300);
+      }
+    }
+
+    function switchTab(tabName, btnEl) {
+      document.querySelectorAll('.mod-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      ['tab_intro', 'tab_definitions', 'tab_classification', 'tab_blanks'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById('tab_' + tabName);
+      if (activeSection) activeSection.style.display = 'block';
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    // Init
+    renderBlanks();
+  </script>
+</body>
+</html>

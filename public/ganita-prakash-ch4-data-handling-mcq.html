@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NCERT Class 6 Ganita Prakash Chapter 4: Data Handling & Presentation — 50 MCQs Mastery Test</title>
+  <meta name="description" content="Master NCERT Class 6 Ganita Prakash Chapter 4 (Data Handling and Presentation / आँकड़ों का प्रबंधन एवं प्रस्तुतीकरण) with 50 bilingual multiple choice questions, instant explanations, and performance tracking.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.85);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(59, 130, 246, 0.35);
+      
+      --brand-blue: #3b82f6;
+      --brand-blue-hover: #2563eb;
+      --brand-cyan: #06b6d4;
+      --brand-green: #04AA6D;
+      --brand-gold: #e5b842;
+      
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-correct-border: #10b981;
+      
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+      --color-wrong-border: #ef4444;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.9);
+      --border-card: #e2e8f0;
+      --border-glow: rgba(59, 130, 246, 0.4);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(4, 170, 109, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-blue);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-blue);
+      font-weight: 700;
+      background: rgba(59, 130, 246, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+      transform: translateY(-1px);
+    }
+
+    .hero-wrapper {
+      max-width: 1080px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4, #04AA6D, #e5b842);
+    }
+
+    .hero-header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-blue {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: var(--brand-blue);
+    }
+
+    .tag-badge-cyan {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: var(--brand-cyan);
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      font-weight: 500;
+    }
+
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .lang-switcher-group {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card-alt);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-card);
+      gap: 4px;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--brand-blue);
+      color: #ffffff;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+    }
+
+    .btn-primary-action {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary-action:hover {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      transform: translateY(-1px);
+    }
+
+    .sticky-hud-wrapper {
+      position: sticky;
+      top: 56px;
+      z-index: 90;
+      max-width: 1080px;
+      margin: 0 auto 20px;
+      padding: 0 16px;
+    }
+
+    .hud-card {
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 12px 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hud-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hud-stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .stat-val-highlight {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--brand-blue);
+    }
+
+    .progress-bar-container {
+      flex: 1;
+      min-width: 180px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body.light-theme .progress-bar-container {
+      background: #e2e8f0;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0%;
+    }
+
+    .topic-filter-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+
+    .topic-filter-btn {
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .topic-filter-btn:hover {
+      border-color: var(--brand-blue);
+      color: var(--text-main);
+    }
+
+    .topic-filter-btn.active {
+      background: rgba(59, 130, 246, 0.2);
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+      font-weight: 800;
+    }
+
+    .quiz-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .q-card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    .q-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .q-topic-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--brand-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .q-number-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      background: var(--bg-card-alt);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-card);
+    }
+
+    .q-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .q-text-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .q-text-hi {
+      font-family: var(--font-devanagari);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.08);
+      border-left: 3px solid #3b82f6;
+      padding: 8px 12px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      line-height: 1.5;
+    }
+
+    body.light-theme .q-text-hi {
+      color: #1e40af;
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--bg-card-alt);
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      background: var(--bg-card-hover);
+      border-color: var(--brand-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .opt-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-card);
+      color: var(--brand-blue);
+      font-weight: 800;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .opt-btn.opt-correct {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct-border) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.25) !important;
+    }
+
+    .opt-btn.opt-correct .opt-letter {
+      background: #10b981 !important;
+      color: #000000 !important;
+      border-color: #10b981 !important;
+    }
+
+    .opt-btn.opt-wrong {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong-border) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.25) !important;
+    }
+
+    .opt-btn.opt-wrong .opt-letter {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    .opt-btn.opt-dimmed {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .opt-status-icon {
+      font-size: 1rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .exp-box {
+      margin-top: 10px;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      line-height: 1.55;
+      animation: fadeIn 0.3s ease-out;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .exp-box.exp-correct {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #a7f3d0;
+    }
+
+    body.light-theme .exp-box.exp-correct {
+      color: #065f46;
+    }
+
+    .exp-box.exp-wrong {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fecaca;
+    }
+
+    body.light-theme .exp-box.exp-wrong {
+      color: #991b1b;
+    }
+
+    .exp-header {
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: scale(0.92);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    .modal-close-btn {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .matrix-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    .matrix-btn {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-muted);
+      font-weight: 800;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .matrix-btn:hover {
+      border-color: var(--brand-blue);
+      transform: scale(1.08);
+    }
+
+    .matrix-btn.correct {
+      background: #10b981 !important;
+      color: #000000 !important;
+      border-color: #10b981 !important;
+    }
+
+    .matrix-btn.wrong {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    .score-hero-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.2), rgba(0, 0, 0, 0.4));
+      border: 3px solid var(--brand-blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+    }
+
+    .score-circle-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--brand-blue);
+      line-height: 1;
+    }
+
+    .score-circle-total {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .stats-breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .stat-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stat-box-val {
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    .stat-box-lbl {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      font-weight: 700;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 1.55rem; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .lang-switcher-group { justify-content: center; }
+      .action-group { justify-content: center; }
+      .q-card { padding: 18px 16px; }
+      .options-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumb Navigation (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=6" class="breadcrumb-link">Class 6</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=6&subject=mathematics" class="breadcrumb-link">Ganita Prakash</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=6&subject=mathematics&chapter=4" class="breadcrumb-link">Chapter 4</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">50 MCQs Quiz</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="nav-btn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div class="hero-header-content">
+        <div class="badge-row">
+          <span class="tag-badge tag-badge-blue">📊 NCERT Grade 6 • Ganita Prakash Ch 4</span>
+          <span class="tag-badge tag-badge-cyan">⚡ 50 Master MCQs</span>
+          <span class="tag-badge tag-badge-blue">🌐 Bilingual EN + HI</span>
+        </div>
+        <h1 class="hero-title">
+          Data Handling and Presentation <span class="hero-title-highlight">| आँकड़ों का प्रबंधन एवं प्रस्तुतीकरण</span>
+        </h1>
+        <p class="hero-subtitle">
+          50 Comprehensive bilingual MCQs covering Raw Data, Tables, Tally Marks, Pictographs, Scales, and Bar Graph Interpretation.
+        </p>
+      </div>
+
+      <!-- Controls Toolbar -->
+      <div class="controls-bar">
+        <div class="lang-switcher-group">
+          <button class="lang-btn active" onclick="setLanguage('both')">🌐 Both (द्विभाषी)</button>
+          <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिन्दी</button>
+        </div>
+
+        <div class="action-group">
+          <button class="btn-action" onclick="openMatrixModal()">
+            <span>🎯 Question Matrix</span>
+          </button>
+          <button class="btn-action" onclick="resetQuiz()">
+            <span>🔄 Restart</span>
+          </button>
+          <button class="btn-action btn-primary-action" onclick="openScorecardModal()">
+            <span>🏆 View Scorecard</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky HUD Stats & Topic Filter -->
+  <div class="sticky-hud-wrapper">
+    <div class="hud-card">
+      <div class="hud-top-row">
+        <div class="hud-stat-pill">
+          <span>Score:</span>
+          <span id="hudScore" class="stat-val-highlight">0</span>
+          <span>/ 50</span>
+        </div>
+        <div class="hud-stat-pill">
+          <span>Answered:</span>
+          <strong id="hudAnswered" style="color: var(--text-main);">0</strong>
+          <span>/ 50</span>
+        </div>
+        <div class="progress-bar-container">
+          <div id="hudProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <div class="hud-stat-pill">
+          <span>Accuracy:</span>
+          <span id="hudAccuracy" style="font-weight: 800; color: var(--brand-cyan);">0%</span>
+        </div>
+      </div>
+
+      <!-- Topic Pills -->
+      <div class="topic-filter-row" id="topicFilterRow">
+        <button class="topic-filter-btn active" onclick="filterByTopic('all')">All 10 Topics (50)</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('1')">1. Data Collection</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('2')">2. Data Tables</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('3')">3. Tally Marks</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('4')">4. Pictographs Reading</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('5')">5. Pictograph Scale</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('6')">6. Bar Graphs</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('7')">7. Choosing Scale</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('8')">8. Interpreting Graphs</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('9')">9. Drawing Graphs</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('10')">10. Real Life Inferences</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Questions Container -->
+  <main class="quiz-container" id="quizContainer"></main>
+
+  <!-- Question Matrix Modal -->
+  <div class="modal-overlay" id="matrixModal" onclick="closeMatrixModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title">🎯 Question Matrix (1 to 50)</h3>
+        <button class="modal-close-btn" onclick="closeMatrixModal()">✕</button>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">Click any number to jump directly to that question.</p>
+      <div class="matrix-grid" id="matrixGrid"></div>
+    </div>
+  </div>
+
+  <!-- Scorecard Modal -->
+  <div class="modal-overlay" id="scoreModal" onclick="closeScoreModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title">🏆 Quiz Mastery Scorecard</h3>
+        <button class="modal-close-btn" onclick="closeScoreModal()">✕</button>
+      </div>
+
+      <div class="score-hero-circle">
+        <div class="score-circle-num" id="modalScoreVal">0</div>
+        <div class="score-circle-total">OUT OF 50</div>
+      </div>
+
+      <div style="text-align: center;">
+        <h4 id="modalGradeTitle" style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">Keep Practicing! 🚀</h4>
+        <p id="modalGradeMsg" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Complete all questions to see your final performance analysis.</p>
+      </div>
+
+      <div class="stats-breakdown-grid">
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalCorrectCount" style="color: var(--color-correct);">0</div>
+          <div class="stat-box-lbl">Correct</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalWrongCount" style="color: var(--color-wrong);">0</div>
+          <div class="stat-box-lbl">Incorrect</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalAccuracyVal" style="color: var(--brand-cyan);">0%</div>
+          <div class="stat-box-lbl">Accuracy</div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+        <button class="btn-action" onclick="closeScoreModal()">Continue Quiz</button>
+        <button class="btn-action btn-primary-action" onclick="resetQuiz(); closeScoreModal();">Retake Test</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const QUESTIONS = [
+      // Topic 1: What is Data & Collection
+      {
+        topic: 1,
+        topicName: "Topic 1: What is Data & Collection",
+        qEn: "Any collection of facts, numbers, measurements, or observations that convey information is called:",
+        qHi: "तथ्यों, संख्याओं, मापों या प्रेक्षणों का ऐसा संग्रह जो जानकारी प्रदान करता है, कहलाता है:",
+        optsEn: ["Equation", "Data", "Fraction", "Formula"],
+        optsHi: ["समीकरण", "आँकड़ा (Data)", "भिन्न", "सूत्र"],
+        correct: 1,
+        exp: "Data is a collection of facts, figures, and observations gathered for a specific purpose."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: What is Data & Collection",
+        qEn: "Initial data collected directly from original observations without organization is known as:",
+        qHi: "सीधे मूल प्रेक्षणों से प्राप्त अव्यवस्थित आँकड़ों को क्या कहा जाता है?",
+        optsEn: ["Secondary data", "Processed data", "Raw data", "Final data"],
+        optsHi: ["द्वितीयक आँकड़े", "संसाधित आँकड़े", "यथाप्राप्त आँकड़े (Raw data)", "अंतिम आँकड़े"],
+        correct: 2,
+        exp: "Raw data is the initial unorganized form of data collected in a survey."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: What is Data & Collection",
+        qEn: "Which of the following is NOT an example of numerical data?",
+        qHi: "निम्नलिखित में से कौन-सा संख्यात्मक आँकड़े का उदाहरण नहीं है?",
+        optsEn: ["Weights of 30 students in kilograms", "Scores of cricket team in 10 matches", "Monthly rainfall in mm", "Favourite colors of friends (Red, Blue, Green)"],
+        optsHi: ["30 विद्यार्थियों का किलोग्राम में भार", "10 मैचों में क्रिकेट टीम के रन", "मासिक वर्षा मिमी में", "मित्रों के पसंदीदा रंग (लाल, नीला, हरा)"],
+        correct: 3,
+        exp: "Favourite colors are categorical/descriptive data, whereas weights, scores, and rainfall are numerical measurements."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: What is Data & Collection",
+        qEn: "Why is data organized into systematic forms?",
+        qHi: "आँकड़ों को व्यवस्थित रूप में क्यों रखा जाता है?",
+        optsEn: ["To make it easily readable and ready for quick interpretation", "To hide the numbers", "To make calculations impossible", "To increase paper usage"],
+        optsHi: ["ताकि इसे आसानी से पढ़ा और शीघ्र निष्कर्ष निकाला जा सके", "संख्याओं को छुपाने के लिए", "गणना को असंभव बनाने के लिए", "कागज का उपयोग बढ़ाने के लिए"],
+        correct: 0,
+        exp: "Organizing data allows quick comparison, interpretation, and analysis."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: What is Data & Collection",
+        qEn: "A student notes the marks of 5 students: 45, 32, 48, 20, 39. The highest mark is:",
+        qHi: "एक विद्यार्थी 5 छात्रों के अंक लिखता है: 45, 32, 48, 20, 39। अधिकतम अंक क्या है?",
+        optsEn: ["45", "39", "48", "20"],
+        optsHi: ["45", "39", "48", "20"],
+        correct: 2,
+        exp: "The maximum value among 45, 32, 48, 20, 39 is 48."
+      },
+
+      // Topic 2: Organising Data into Tables
+      {
+        topic: 2,
+        topicName: "Topic 2: Organising Data into Tables",
+        qEn: "Arranging numbers from smallest to largest is called:",
+        qHi: "संख्याओं को सबसे छोटे से सबसे बड़े क्रम में सजाना कहलाता है:",
+        optsEn: ["Descending order", "Random order", "Ascending order", "Circular order"],
+        optsHi: ["अवरोही क्रम", "यादृच्छिक क्रम", "आरोही क्रम (Ascending order)", "वृत्ताकार क्रम"],
+        correct: 2,
+        exp: "Ascending order arranges data from lowest to highest value."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Organising Data into Tables",
+        qEn: "The difference between the maximum and minimum observations in a data set is called:",
+        qHi: "किसी आँकड़े के अधिकतम और न्यूनतम मान के अंतर को क्या कहते हैं?",
+        optsEn: ["Range", "Frequency", "Average", "Median"],
+        optsHi: ["परिसर (Range)", "बारंबारता", "औसत", "माध्यिका"],
+        correct: 0,
+        exp: "Range = Highest Observation - Lowest Observation."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Organising Data into Tables",
+        qEn: "In a class test, marks out of 10 are: 7, 9, 4, 7, 8, 7, 5. Which mark appeared most frequently?",
+        qHi: "एक कक्षा परीक्षा में 10 में से अंक हैं: 7, 9, 4, 7, 8, 7, 5। कौन-सा अंक सबसे अधिक बार आया?",
+        optsEn: ["9", "8", "7", "4"],
+        optsHi: ["9", "8", "7", "4"],
+        correct: 2,
+        exp: "The mark 7 appears 3 times, which is more than any other score."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Organising Data into Tables",
+        qEn: "A tabular representation of data helps us to:",
+        qHi: "आँकड़ों का सारणीबद्ध निरूपण हमें किसमें सहायता करता है?",
+        optsEn: ["Make confusing tables", "Find information quickly at a single glance", "Delete previous observations", "None of these"],
+        optsHi: ["भ्रामक सारणी बनाने में", "एक नज़र में तुरंत जानकारी प्राप्त करने में", "पुराने मान मिटाने में", "कोई नहीं"],
+        correct: 1,
+        exp: "Tables present data in structured rows and columns for rapid analysis."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Organising Data into Tables",
+        qEn: "If temperatures in a week are 32°C, 35°C, 30°C, 38°C, 31°C, 36°C, 34°C, what is the range?",
+        qHi: "यदि एक सप्ताह के तापमान 32°C, 35°C, 30°C, 38°C, 31°C, 36°C, 34°C हैं, तो परिसर (Range) क्या है?",
+        optsEn: ["6°C", "38°C", "30°C", "8°C (38°C - 30°C)"],
+        optsHi: ["6°C", "38°C", "30°C", "8°C (38°C - 30°C)"],
+        correct: 3,
+        exp: "Range = Max - Min = 38°C - 30°C = 8°C."
+      },
+
+      // Topic 3: Tally Marks & Frequency
+      {
+        topic: 3,
+        topicName: "Topic 3: Tally Marks & Frequency",
+        qEn: "The number of times a particular observation occurs in a data set is called its:",
+        qHi: "किसी आँकड़े में कोई विशिष्ट मान जितनी बार आता है, उसे उसकी क्या कहते हैं?",
+        optsEn: ["Frequency", "Range", "Scale", "Tally count"],
+        optsHi: ["बारंबारता (Frequency)", "परिसर", "पैमाना", "मिलान गिनती"],
+        correct: 0,
+        exp: "Frequency is the count of occurrences of a particular observation."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Tally Marks & Frequency",
+        qEn: "In tally marks, a bundle with four vertical lines crossed diagonally by a fifth line represents:",
+        qHi: "मिलान चिह्नों में चार सीधी रेखाओं को एक तिरछी रेखा द्वारा काटने पर बना समूह क्या दर्शाता है?",
+        optsEn: ["4", "10", "5", "6"],
+        optsHi: ["4", "10", "5", "6"],
+        correct: 2,
+        exp: "Tally marks group in bundles of 5 (four vertical lines and one cross slash)."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Tally Marks & Frequency",
+        qEn: "How is the number 13 represented using standard tally mark bundles?",
+        qHi: "संख्या 13 को मानक मिलान चिह्नों (Tally marks) में कैसे दर्शाया जाता है?",
+        optsEn: ["Three bundles of 5", "Two bundles of 5 and 3 single lines", "One bundle of 5 and 8 lines", "13 vertical strokes"],
+        optsHi: ["5 के तीन समूह", "5 के दो समूह और 3 एकल रेखाएँ", "5 का एक समूह और 8 रेखाएँ", "13 सीधी रेखाएँ"],
+        correct: 1,
+        exp: "13 = 5 + 5 + 3, which is 2 bundles of 5 plus 3 individual tally marks."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Tally Marks & Frequency",
+        qEn: "A die is rolled 20 times. Face '6' appears 4 times. What is the frequency of face '6'?",
+        qHi: "एक पासा 20 बार फेंका गया। अंक '6' चार बार आया। अंक '6' की बारंबारता क्या है?",
+        optsEn: ["20", "6", "4", "5"],
+        optsHi: ["20", "6", "4", "5"],
+        correct: 2,
+        exp: "Frequency is the exact number of times face '6' appeared, which is 4."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Tally Marks & Frequency",
+        qEn: "The sum of all frequencies in a frequency distribution table must equal:",
+        qHi: "बारंबारता बंटन सारणी में सभी बारंबारताओं का योग किसके बराबर होना चाहिए?",
+        optsEn: ["Total number of observations", "Highest score", "Zero", "100 always"],
+        optsHi: ["कुल प्रेक्षणों की संख्या के", "अधिकतम प्राप्तांक के", "शून्य के", "हमेशा 100 के"],
+        correct: 0,
+        exp: "Total frequency equals the total count of all data items surveyed."
+      },
+
+      // Topic 4: Pictographs Basics & Reading
+      {
+        topic: 4,
+        topicName: "Topic 4: Pictographs Basics & Reading",
+        qEn: "Representation of data using pictures, icons, or symbols is called a:",
+        qHi: "चित्रों, प्रतीकों या संकेतों द्वारा आँकड़ों का निरूपण कहलाता है:",
+        optsEn: ["Bar Graph", "Histogram", "Line Graph", "Pictograph"],
+        optsHi: ["दंड आलेख", "आयतचित्र", "रेखा आलेख", "चित्रालेख (Pictograph)"],
+        correct: 3,
+        exp: "A pictograph represents data through pictures or visual symbols."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Pictographs Basics & Reading",
+        qEn: "In a pictograph, if 1 🚜 represents 10 tractors, how many tractors are represented by 4 🚜 symbols?",
+        qHi: "एक चित्रालेख में यदि 1 🚜 = 10 ट्रैक्टर हैं, तो 4 🚜 प्रतीक कितने ट्रैक्टर दर्शाते हैं?",
+        optsEn: ["4", "40", "14", "400"],
+        optsHi: ["4", "40", "14", "400"],
+        correct: 1,
+        exp: "Total tractors = 4 x 10 = 40."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Pictographs Basics & Reading",
+        qEn: "If 1 📚 represents 5 books, how many book symbols are needed to represent 35 books?",
+        qHi: "यदि 1 📚 = 5 पुस्तकें हैं, तो 35 पुस्तकें दर्शाने के लिए कितने पुस्तक प्रतीकों की आवश्यकता होगी?",
+        optsEn: ["5", "35", "7 (35 ÷ 5)", "8"],
+        optsHi: ["5", "35", "7 (35 ÷ 5)", "8"],
+        correct: 2,
+        exp: "Number of symbols = 35 ÷ 5 = 7."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Pictographs Basics & Reading",
+        qEn: "In a book store pictograph, Monday has 6 📖 and Tuesday has 4 📖. If 1 📖 = 20 books, how many more books were sold on Monday than Tuesday?",
+        qHi: "सोमवार को 6 📖 और मंगलवार को 4 📖 पुस्तकें बिकीं। यदि 1 📖 = 20 पुस्तकें, तो सोमवार को मंगलवार से कितनी अधिक पुस्तकें बिकीं?",
+        optsEn: ["40 (2 x 20)", "2", "20", "60"],
+        optsHi: ["40 (2 x 20)", "2", "20", "60"],
+        correct: 0,
+        exp: "Difference = (6 - 4) x 20 = 2 x 20 = 40 books."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Pictographs Basics & Reading",
+        qEn: "The key or legend in a pictograph tells us:",
+        qHi: "चित्रालेख में दिया गया संकेत (Key/Legend) हमें क्या बताता है?",
+        optsEn: ["What quantity each single picture/symbol stands for", "The author's name", "The color of pencil to use", "The page number"],
+        optsHi: ["प्रत्येक चित्र/प्रतीक कितनी संख्या को दर्शाता है", "लेखक का नाम", "पेंसिल का रंग", "पृष्ठ संख्या"],
+        correct: 0,
+        exp: "The scale/key states the exact numerical value of one icon."
+      },
+
+      // Topic 5: Drawing Pictographs with Scale
+      {
+        topic: 5,
+        topicName: "Topic 5: Drawing Pictographs with Scale",
+        qEn: "Why is a scale used when drawing pictographs for large numbers (e.g. 500 cars)?",
+        qHi: "बड़ी संख्याओं (जैसे 500 कार) का चित्रालेख बनाते समय पैमाना क्यों लिया जाता है?",
+        optsEn: ["Drawing 500 individual cars is too difficult and space consuming", "Cars cannot be drawn", "It is illegal to draw cars", "None of these"],
+        optsHi: ["500 अलग-अलग कारें बनाना बहुत कठिन और स्थान घेरने वाला होगा", "कार नहीं बनाई जा सकती", "कार बनाना गैरकानूनी है", "कोई नहीं"],
+        correct: 0,
+        exp: "Using a scale where 1 icon = 50 or 100 cars simplifies drawing and viewing."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Drawing Pictographs with Scale",
+        qEn: "If 1 🍎 = 10 apples, what does half an apple (½ 🍎) symbol represent?",
+        qHi: "यदि 1 🍎 = 10 सेब हैं, तो आधा सेब (½ 🍎) प्रतीक क्या दर्शाता है?",
+        optsEn: ["10 apples", "1 apple", "5 apples (10 ÷ 2)", "0 apples"],
+        optsHi: ["10 सेब", "1 सेब", "5 सेब (10 ÷ 2)", "0 सेब"],
+        correct: 2,
+        exp: "Half symbol = ½ x 10 = 5 apples."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Drawing Pictographs with Scale",
+        qEn: "For data values 40, 80, 120, 160, which scale is the most convenient for drawing a pictograph?",
+        qHi: "आँकड़ों 40, 80, 120, 160 के लिए कौन-सा पैमाना सबसे उपयुक्त होगा?",
+        optsEn: ["1 icon = 1 unit", "1 icon = 40 units", "1 icon = 7 units", "1 icon = 1000 units"],
+        optsHi: ["1 प्रतीक = 1 इकाई", "1 प्रतीक = 40 इकाइयाँ", "1 प्रतीक = 7 इकाइयाँ", "1 प्रतीक = 1000 इकाइयाँ"],
+        correct: 1,
+        exp: "40 divides all numbers evenly (yielding 1, 2, 3, and 4 neat symbols)."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Drawing Pictographs with Scale",
+        qEn: "A school has 450 students. If 1 🧑 = 50 students, how many symbols are drawn?",
+        qHi: "एक विद्यालय में 450 छात्र हैं। यदि 1 🧑 = 50 छात्र, तो कितने प्रतीक बनेंगे?",
+        optsEn: ["9 (450 ÷ 50)", "45", "50", "10"],
+        optsHi: ["9 (450 ÷ 50)", "45", "50", "10"],
+        correct: 0,
+        exp: "450 ÷ 50 = 9 symbols."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Drawing Pictographs with Scale",
+        qEn: "What is a disadvantage of a pictograph when data contains odd fractional numbers (e.g. 37 students when 1 icon = 10)?",
+        qHi: "चित्रालेख की क्या कमी है जब आँकड़े विषम संख्या में हों (जैसे 1 प्रतीक = 10 होने पर 37 छात्र)?",
+        optsEn: ["It is difficult to accurately draw or read fractional parts of a symbol", "It cannot be printed", "Colors fade", "None"],
+        optsHi: ["प्रतीक के आंशिक भाग को सटीक रूप से बनाना और पढ़ना कठिन होता है", "इसे छापा नहीं जा सकता", "रंग उड़ जाता है", "कोई नहीं"],
+        correct: 0,
+        exp: "Drawing fractions like 7/10th of an icon is ambiguous and imprecise."
+      },
+
+      // Topic 6: Bar Graph Concept & Features
+      {
+        topic: 6,
+        topicName: "Topic 6: Bar Graph Concept & Features",
+        qEn: "A display of data using rectangular bars of uniform width with equal spacing between them is called a:",
+        qHi: "समान चौड़ाई और परस्पर समान दूरी पर स्थित आयताकार दंडों द्वारा आँकड़ों का निरूपण कहलाता है:",
+        optsEn: ["Bar graph (दंड आलेख)", "Pictograph", "Pie chart", "Tally column"],
+        optsHi: ["दंड आलेख (Bar graph)", "चित्रालेख", "वृत्त आलेख", "मिलान स्तंभ"],
+        correct: 0,
+        exp: "A bar graph uses rectangular bars whose heights or lengths are proportional to frequencies."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Bar Graph Concept & Features",
+        qEn: "In a standard vertical bar graph, the height of each bar is proportional to its:",
+        qHi: "एक मानक ऊर्ध्वाधर दंड आलेख में प्रत्येक दंड की ऊँचाई किसके समानुपाती होती है?",
+        optsEn: ["Color", "Frequency / Value", "Width", "Margin"],
+        optsHi: ["रंग", "बारंबारता / मान के", "चौड़ाई", "हाशिए"],
+        correct: 1,
+        exp: "The height of the bar directly represents the frequency or magnitude of that category."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Bar Graph Concept & Features",
+        qEn: "Which of the following is true for all bars in a standard bar graph?",
+        qHi: "मानक दंड आलेख के सभी दंडों के लिए निम्नलिखित में से क्या सत्य है?",
+        optsEn: ["All bars must have the same uniform width and equal spacing", "Bars must touch each other with zero gap", "Bars must be triangles", "Width must change with frequency"],
+        optsHi: ["सभी दंडों की चौड़ाई समान और उनके बीच की दूरी बराबर होनी चाहिए", "दंडों को बिना अंतर के चिपके होना चाहिए", "दंड त्रिभुजाकार होने चाहिए", "चौड़ाई बदलती रहनी चाहिए"],
+        correct: 0,
+        exp: "In bar graphs, width and gaps are kept uniform; only heights vary."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Bar Graph Concept & Features",
+        qEn: "The two perpendicular reference lines on which a bar graph is drawn are called:",
+        qHi: "दंड आलेख जिन दो लंबवत संदर्भ रेखाओं पर खींचा जाता है, उन्हें क्या कहते हैं?",
+        optsEn: ["Diagonals", "Chords", "Axes (Horizontal and Vertical axes)", "Tangents"],
+        optsHi: ["विकर्ण", "जीवाएँ", "अक्ष (क्षैतिज एवं ऊर्ध्वाधर अक्ष)", "स्पर्श रेखाएँ"],
+        correct: 2,
+        exp: "The horizontal axis (x-axis) and vertical axis (y-axis) are the coordinate axes."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Bar Graph Concept & Features",
+        qEn: "Can bar graphs be drawn horizontally (with horizontal bars)?",
+        qHi: "क्या दंड आलेख क्षैतिज दंडों (Horizontal bars) के रूप में भी बनाए जा सकते हैं?",
+        optsEn: ["Yes, bars can be drawn horizontally or vertically", "No, only vertical is allowed", "Only on Sundays", "Never in mathematics"],
+        optsHi: ["हाँ, दंड क्षैतिज या ऊर्ध्वाधर दोनों प्रकार से बनाए जा सकते हैं", "नहीं, केवल ऊर्ध्वाधर मान्य है", "केवल रविवार को", "गणित में कभी नहीं"],
+        correct: 0,
+        exp: "Bar graphs can be drawn both vertically and horizontally."
+      },
+
+      // Topic 7: Choosing Bar Graph Scale
+      {
+        topic: 7,
+        topicName: "Topic 7: Choosing Bar Graph Scale",
+        qEn: "If maximum score is 100 runs and minimum is 10 runs, what is a suitable scale for the vertical axis?",
+        qHi: "यदि अधिकतम स्कोर 100 रन और न्यूनतम 10 रन है, तो ऊर्ध्वाधर अक्ष के लिए उपयुक्त पैमाना क्या होगा?",
+        optsEn: ["1 unit length = 1000 runs", "1 unit length = 10 runs", "1 unit length = 0.1 run", "1 unit length = 500 runs"],
+        optsHi: ["1 इकाई लंबाई = 1000 रन", "1 इकाई लंबाई = 10 रन", "1 इकाई लंबाई = 0.1 रन", "1 इकाई लंबाई = 500 रन"],
+        correct: 1,
+        exp: "Scale of 1 unit = 10 runs gives a convenient 10-step height (10 to 100 runs)."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Choosing Bar Graph Scale",
+        qEn: "On a bar graph where 1 unit length = ₹200, what will be the height of the bar for an expenditure of ₹3400?",
+        qHi: "यदि 1 इकाई लंबाई = ₹200 है, तो ₹3400 के खर्च के लिए दंड की ऊँचाई कितनी इकाइयाँ होगी?",
+        optsEn: ["34 units", "200 units", "17 units (3400 ÷ 200)", "15 units"],
+        optsHi: ["34 इकाइयाँ", "200 इकाइयाँ", "17 इकाइयाँ (3400 ÷ 200)", "15 इकाइयाँ"],
+        correct: 2,
+        exp: "Height = 3400 ÷ 200 = 17 units."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Choosing Bar Graph Scale",
+        qEn: "If a bar of height 6 units represents 60 crore people, the scale chosen is:",
+        qHi: "यदि 6 इकाई ऊँचाई का दंड 60 करोड़ जनसंख्या दर्शाता है, तो चुना गया पैमाना है:",
+        optsEn: ["1 unit = 10 crore", "1 unit = 1 crore", "1 unit = 60 crore", "1 unit = 6 crore"],
+        optsHi: ["1 इकाई = 10 करोड़", "1 इकाई = 1 करोड़", "1 इकाई = 60 करोड़", "1 इकाई = 6 करोड़"],
+        correct: 0,
+        exp: "Scale = 60 crore ÷ 6 units = 10 crore per unit."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Choosing Bar Graph Scale",
+        qEn: "What happens if we choose a scale that is too small (e.g. 1 unit = 1 person for 5,000 people)?",
+        qHi: "यदि हम बहुत छोटा पैमाना चुन लें (जैसे 5000 लोगों के लिए 1 इकाई = 1 व्यक्ति), तो क्या होगा?",
+        optsEn: ["The graph will fit on a postage stamp", "The graph will become too large and cannot fit on normal paper", "The graph disappears", "Numbers multiply by zero"],
+        optsHi: ["आलेख डाक टिकट पर आ जाएगा", "आलेख इतना बड़ा हो जाएगा कि सामान्य कागज पर नहीं समा पाएगा", "आलेख गायब हो जाएगा", "संख्याएँ शून्य हो जाएँगी"],
+        correct: 1,
+        exp: "A bar of 5000 units would require an impossibly long sheet of paper."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Choosing Bar Graph Scale",
+        qEn: "When monthly family expenses range from ₹400 to ₹3600, which scale is most balanced for a standard notebook page?",
+        qHi: "जब मासिक खर्च ₹400 से ₹3600 तक हो, तो नोटबुक के एक पृष्ठ के लिए कौन-सा पैमाना सबसे संतुलित है?",
+        optsEn: ["1 unit = ₹200 or ₹400", "1 unit = ₹1", "1 unit = ₹50,000", "1 unit = ₹10,000"],
+        optsHi: ["1 इकाई = ₹200 या ₹400", "1 इकाई = ₹1", "1 इकाई = ₹50,000", "1 इकाई = ₹10,000"],
+        correct: 0,
+        exp: "1 unit = ₹200 gives 18 grid markings (up to ₹3600), fitting standard graph paper neatly."
+      },
+
+      // Topic 8: Interpreting Bar Graphs
+      {
+        topic: 8,
+        topicName: "Topic 8: Interpreting Bar Graphs",
+        qEn: "In a bar graph showing vehicle counts: Bicycle=15, Bike=25, Car=10, Bus=5. Which vehicle was used the most?",
+        qHi: "वाहनों के दंड आलेख में: साइकिल=15, बाइक=25, कार=10, बस=5। सबसे अधिक किस वाहन का उपयोग हुआ?",
+        optsEn: ["Car", "Bicycle", "Bike", "Bus"],
+        optsHi: ["कार", "साइकिल", "बाइक", "बस"],
+        correct: 2,
+        exp: "The tallest bar corresponds to Bike with 25 counts."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Interpreting Bar Graphs",
+        qEn: "In the vehicle graph (Bicycle=15, Bike=25, Car=10, Bus=5), what is the total number of vehicles observed?",
+        qHi: "वाहनों के आलेख में (साइकिल=15, बाइक=25, कार=10, बस=5), कुल कितने वाहन देखे गए?",
+        optsEn: ["55 (15 + 25 + 10 + 5)", "50", "45", "60"],
+        optsHi: ["55 (15 + 25 + 10 + 5)", "50", "45", "60"],
+        correct: 0,
+        exp: "Total vehicles = 15 + 25 + 10 + 5 = 55."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Interpreting Bar Graphs",
+        qEn: "On a student preference bar graph, Jalebi=6, Gulab Jamun=8, Gujia=4, Rasgulla=7. Which sweet is least preferred?",
+        qHi: "मिठाई पसंद आलेख में: जलेबी=6, गुलाब जामुन=8, गुजिया=4, रसगुल्ला=7। सबसे कम पसंद की जाने वाली मिठाई कौन-सी है?",
+        optsEn: ["Gujia (4 students)", "Jalebi", "Rasgulla", "Gulab Jamun"],
+        optsHi: ["गुजिया (4 छात्र)", "जलेबी", "रसगुल्ला", "गुलाब जामुन"],
+        correct: 0,
+        exp: "The shortest bar is Gujia with height 4."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Interpreting Bar Graphs",
+        qEn: "In a bar graph, how do we determine which category has the highest frequency?",
+        qHi: "दंड आलेख में हम कैसे पता लगाते हैं कि किस वर्ग की बारंबारता सर्वाधिक है?",
+        optsEn: ["Look for the darkest color", "Look for the tallest / longest bar", "Look for the leftmost bar", "Read the title only"],
+        optsHi: ["सबसे गहरा रंग देखकर", "सबसे ऊँचे / लंबे दंड को देखकर", "सबसे बाएँ दंड को देखकर", "केवल शीर्षक पढ़कर"],
+        correct: 1,
+        exp: "The tallest bar corresponds to the maximum frequency."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Interpreting Bar Graphs",
+        qEn: "If bar for City A is 12 cm and City B is 8 cm with scale 1 cm = 50 tickets, how many more tickets did City A sell than City B?",
+        qHi: "यदि 1 सेमी = 50 टिकट के पैमाने पर शहर A का दंड 12 सेमी और शहर B का 8 सेमी है, तो शहर A ने B से कितने अधिक टिकट बेचे?",
+        optsEn: ["4 tickets", "200 tickets (4 x 50)", "100 tickets", "600 tickets"],
+        optsHi: ["4 टिकट", "200 टिकट (4 x 50)", "100 टिकट", "600 टिकट"],
+        correct: 1,
+        exp: "Difference = (12 - 8) cm x 50 tickets/cm = 4 x 50 = 200 tickets."
+      },
+
+      // Topic 9: Drawing Bar Graphs from Tables
+      {
+        topic: 9,
+        topicName: "Topic 9: Drawing Bar Graphs from Tables",
+        qEn: "What is the first step in drawing a bar graph on graph paper?",
+        qHi: "ग्राफ पेपर पर दंड आलेख बनाने का पहला चरण क्या है?",
+        optsEn: ["Color the whole page", "Draw two mutually perpendicular axes (horizontal and vertical lines)", "Write the answer sheet", "Draw random circles"],
+        optsHi: ["पूरे पृष्ठ को रंगना", "दो परस्पर लंबवत अक्ष (क्षैतिज और ऊर्ध्वाधर रेखाएँ) खींचना", "उत्तर पुस्तिका लिखना", "वृत्त बनाना"],
+        correct: 1,
+        exp: "First draw two perpendicular lines intersecting at the origin."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Drawing Bar Graphs from Tables",
+        qEn: "Why is it important to write the title and label both axes on a bar graph?",
+        qHi: "दंड आलेख पर शीर्षक लिखना और दोनों अक्षों को नामांकित करना क्यों आवश्यक है?",
+        optsEn: ["So anyone reading the graph knows what data and units are being represented", "To fill empty space", "To make it heavier", "It is optional"],
+        optsHi: ["ताकि आलेख पढ़ने वाले को पता चले कि क्या आँकड़े और इकाइयाँ दर्शाई गई हैं", "खाली जगह भरने के लिए", "कागज भारी करने के लिए", "यह ऐच्छिक है"],
+        correct: 0,
+        exp: "Titles and axis labels give context and clarity to graphical presentations."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Drawing Bar Graphs from Tables",
+        qEn: "If the categories are named Food, Rent, Education, Transport, along which line are they usually written in a vertical bar graph?",
+        qHi: "ऊर्ध्वाधर दंड आलेख में भोजन, किराया, शिक्षा, परिवहन जैसे मदों को सामान्यतः किस रेखा पर लिखा जाता है?",
+        optsEn: ["Vertical axis", "Diagonal line", "Horizontal axis (x-axis)", "Top margin"],
+        optsHi: ["ऊर्ध्वाधर अक्ष", "विकर्ण रेखा", "क्षैतिज अक्ष (x-अक्ष)", "शीर्ष हाशिए"],
+        correct: 2,
+        exp: "In a vertical bar graph, categories are placed along the horizontal axis with uniform spacing."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Drawing Bar Graphs from Tables",
+        qEn: "If one student draws bars with varying widths (some thin, some fat), is the bar graph mathematically correct?",
+        qHi: "यदि कोई छात्र अलग-अलग चौड़ाई के दंड (कुछ पतले, कुछ मोटे) बना दे, तो क्या वह दंड आलेख गणितीय रूप से सही है?",
+        optsEn: ["Yes, width does not matter", "No, all bars must maintain identical uniform width", "Only if colored red", "None of these"],
+        optsHi: ["हाँ, चौड़ाई से कोई फर्क नहीं पड़ता", "नहीं, सभी दंडों की चौड़ाई एकसमान होनी चाहिए", "केवल लाल रंग होने पर", "कोई नहीं"],
+        correct: 1,
+        exp: "Standard rule: All bars must have equal width to prevent visual distortion."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Drawing Bar Graphs from Tables",
+        qEn: "If scale is 1 unit = 5 runs, a bar of height 8 units represents:",
+        qHi: "यदि पैमाना 1 इकाई = 5 रन है, तो 8 इकाई ऊँचाई का दंड कितने रन दर्शाता है?",
+        optsEn: ["13 runs", "40 runs (8 x 5)", "85 runs", "58 runs"],
+        optsHi: ["13 रन", "40 रन (8 x 5)", "85 रन", "58 रन"],
+        correct: 1,
+        exp: "Total runs = 8 units x 5 runs/unit = 40 runs."
+      },
+
+      // Topic 10: Inferences & Real Life Data
+      {
+        topic: 10,
+        topicName: "Topic 10: Inferences & Real Life Data",
+        qEn: "In Jasprit Bumrah's 30-match wicket table, if 4 wickets were taken in 5 matches, how many total wickets were taken in those 5 matches alone?",
+        qHi: "जसप्रीत बुमराह के 30 मैचों के आँकड़ों में यदि 5 मैचों में 4-4 विकेट लिए गए, तो केवल उन 5 मैचों में कुल कितने विकेट हुए?",
+        optsEn: ["9 wickets", "4 wickets", "20 wickets (4 x 5)", "5 wickets"],
+        optsHi: ["9 विकेट", "4 विकेट", "20 विकेट (4 x 5)", "5 विकेट"],
+        correct: 2,
+        exp: "Total wickets = 4 wickets/match x 5 matches = 20 wickets."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Inferences & Real Life Data",
+        qEn: "A bar graph shows India's population: 1951=36 crore, 2001=102 crore. What was the increase over 50 years?",
+        qHi: "भारत की जनसंख्या 1951 में 36 करोड़ और 2001 में 102 करोड़ थी। 50 वर्षों में कितनी वृद्धि हुई?",
+        optsEn: ["66 crore (102 - 36)", "138 crore", "50 crore", "70 crore"],
+        optsHi: ["66 करोड़ (102 - 36)", "138 करोड़", "50 करोड़", "70 करोड़"],
+        correct: 0,
+        exp: "Increase = 102 - 36 = 66 crore."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Inferences & Real Life Data",
+        qEn: "If family expenditure on Food is ₹3400 and Education is ₹800, which statement is correct?",
+        qHi: "यदि भोजन पर खर्च ₹3400 और शिक्षा पर ₹800 है, तो कौन-सा कथन सही है?",
+        optsEn: ["Food expenditure is more than 4 times Education", "Education is greater than Food", "Food and Education are equal", "Food is less than ₹1000"],
+        optsHi: ["भोजन पर खर्च शिक्षा से 4 गुना से अधिक है (3400 > 4 x 800 = 3200)", "शिक्षा भोजन से अधिक है", "दोनों बराबर हैं", "भोजन ₹1000 से कम है"],
+        correct: 0,
+        exp: "4 x ₹800 = ₹3200. ₹3400 > ₹3200, so Food is more than 4 times Education."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Inferences & Real Life Data",
+        qEn: "Which visual representation is best suited to display continuous temperature change hour-by-hour?",
+        qHi: "प्रति घंटे तापमान परिवर्तन को दर्शाने के लिए कौन-सा निरूपण सबसे उपयुक्त है?",
+        optsEn: ["Line graph or continuous bar graph", "Tally count on sand", "Single dot", "None"],
+        optsHi: ["रेखा आलेख या क्रमिक दंड आलेख", "रेत पर मिलान चिह्न", "एकल बिंदु", "कोई नहीं"],
+        correct: 0,
+        exp: "A line graph or continuous hourly bar chart clearly shows trends over time."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Inferences & Real Life Data",
+        qEn: "Drawing conclusions and making smart decisions based on analyzed data is called:",
+        qHi: "विश्लेषित आँकड़ों के आधार पर निष्कर्ष निकालना और सही निर्णय लेना कहलाता है:",
+        optsEn: ["Data inference and interpretation", "Data deletion", "Data guessing", "Data memorization"],
+        optsHi: ["आँकड़ों का निष्कर्ष एवं व्याख्या (Data inference)", "आँकड़ा मिटाना", "आँकड़ों का अनुमान", "आँकड़ा रटना"],
+        correct: 0,
+        exp: "Data handling empowers us to interpret trends and make informed real-life decisions."
+      }
+    ];
+
+    let currentLang = "both";
+    let selectedAnswers = {};
+    let currentTopic = "all";
+    let isLightMode = false;
+
+    // DOM Elements
+    const quizContainer = document.getElementById("quizContainer");
+    const hudScore = document.getElementById("hudScore");
+    const hudAnswered = document.getElementById("hudAnswered");
+    const hudProgressBar = document.getElementById("hudProgressBar");
+    const hudAccuracy = document.getElementById("hudAccuracy");
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Theme Toggle
+    themeToggleBtn.addEventListener("click", () => {
+      isLightMode = !isLightMode;
+      document.body.classList.toggle("light-theme", isLightMode);
+      themeIcon.innerText = isLightMode ? "🌙" : "☀️";
+    });
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll(".lang-btn").forEach((btn, idx) => {
+        const langs = ['both', 'en', 'hi'];
+        btn.classList.toggle("active", langs[idx] === lang);
+      });
+      renderQuiz();
+    }
+
+    function filterByTopic(topicId) {
+      currentTopic = topicId;
+      document.querySelectorAll(".topic-filter-btn").forEach(btn => {
+        btn.classList.remove("active");
+      });
+      event.target.classList.add("active");
+      renderQuiz();
+    }
+
+    function handleSelectOption(qIdx, optIdx) {
+      if (selectedAnswers[qIdx] !== undefined) return;
+      selectedAnswers[qIdx] = optIdx;
+      updateStats();
+      renderQuiz();
+
+      if (optIdx === QUESTIONS[qIdx].correct) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 35, spread: 55, origin: { y: 0.8 } });
+        }
+      }
+    }
+
+    function updateStats() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      hudScore.innerText = score;
+      hudAnswered.innerText = totalAnswered;
+      const pct = (totalAnswered / QUESTIONS.length) * 100;
+      hudProgressBar.style.width = `${pct}%`;
+
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+      hudAccuracy.innerText = `${accuracy}%`;
+
+      if (totalAnswered === QUESTIONS.length && score >= 40) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
+        }
+      }
+    }
+
+    function resetQuiz() {
+      if (confirm("Restart quiz and reset your score?")) {
+        selectedAnswers = {};
+        updateStats();
+        renderQuiz();
+      }
+    }
+
+    function renderQuiz() {
+      quizContainer.innerHTML = "";
+
+      const filtered = QUESTIONS.map((q, idx) => ({ ...q, originalIndex: idx }))
+        .filter(q => currentTopic === "all" || q.topic.toString() === currentTopic);
+
+      if (filtered.length === 0) {
+        quizContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted);">No questions found for this topic.</div>`;
+        return;
+      }
+
+      filtered.forEach((q) => {
+        const isAnswered = selectedAnswers[q.originalIndex] !== undefined;
+        const userAnswer = selectedAnswers[q.originalIndex];
+
+        const card = document.createElement("div");
+        card.className = "q-card";
+        card.id = `q-card-${q.originalIndex}`;
+
+        const headerHtml = `
+          <div class="q-header">
+            <span class="q-topic-tag">📊 ${q.topicName}</span>
+            <span class="q-number-pill">Question ${q.originalIndex + 1} of 50</span>
+          </div>
+        `;
+
+        let bodyHtml = '<div class="q-body">';
+        if (currentLang === "both") {
+          bodyHtml += `
+            <div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>
+            <div class="q-text-hi">🇮🇳 हिन्दी: ${q.qHi}</div>
+          `;
+        } else if (currentLang === "en") {
+          bodyHtml += `<div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>`;
+        } else {
+          bodyHtml += `<div class="q-text-hi" style="font-size: 1.05rem;">प्र${q.originalIndex + 1}. ${q.qHi}</div>`;
+        }
+        bodyHtml += '</div>';
+
+        let optionsHtml = '<div class="options-grid">';
+        q.optsEn.forEach((optEn, oIdx) => {
+          const optHi = q.optsHi[oIdx];
+          let optText = currentLang === "both" ? `${optEn} (${optHi})` : (currentLang === "en" ? optEn : optHi);
+
+          let optClass = "opt-btn";
+          let statusIcon = "";
+
+          if (isAnswered) {
+            if (oIdx === q.correct) {
+              optClass += " opt-correct";
+              statusIcon = '<span class="opt-status-icon">✓</span>';
+            } else if (oIdx === userAnswer && userAnswer !== q.correct) {
+              optClass += " opt-wrong";
+              statusIcon = '<span class="opt-status-icon">✗</span>';
+            } else {
+              optClass += " opt-dimmed";
+            }
+          }
+
+          optionsHtml += `
+            <button class="${optClass}" onclick="handleSelectOption(${q.originalIndex}, ${oIdx})" ${isAnswered ? 'disabled' : ''}>
+              <div class="opt-content">
+                <span class="opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+                <span>${optText}</span>
+              </div>
+              ${statusIcon}
+            </button>
+          `;
+        });
+        optionsHtml += '</div>';
+
+        let explanationHtml = "";
+        if (isAnswered) {
+          const isCorrect = userAnswer === q.correct;
+          explanationHtml = `
+            <div class="exp-box ${isCorrect ? 'exp-correct' : 'exp-wrong'}">
+              <div class="exp-header">
+                <span>${isCorrect ? '✓ Correct Answer!' : '✗ Incorrect!'}</span>
+              </div>
+              <div><strong>Concept & Explanation:</strong> ${q.exp}</div>
+            </div>
+          `;
+        }
+
+        card.innerHTML = headerHtml + bodyHtml + optionsHtml + explanationHtml;
+        quizContainer.appendChild(card);
+      });
+    }
+
+    // Modal Matrix
+    function openMatrixModal() {
+      const grid = document.getElementById("matrixGrid");
+      grid.innerHTML = "";
+
+      QUESTIONS.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "matrix-btn";
+        btn.innerText = idx + 1;
+
+        if (selectedAnswers[idx] !== undefined) {
+          if (selectedAnswers[idx] === q.correct) {
+            btn.classList.add("correct");
+          } else {
+            btn.classList.add("wrong");
+          }
+        }
+
+        btn.onclick = () => {
+          closeMatrixModal();
+          currentTopic = "all";
+          renderQuiz();
+          setTimeout(() => {
+            const el = document.getElementById(`q-card-${idx}`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        };
+
+        grid.appendChild(btn);
+      });
+
+      document.getElementById("matrixModal").classList.add("active");
+    }
+
+    function closeMatrixModal() {
+      document.getElementById("matrixModal").classList.remove("active");
+    }
+
+    // Modal Scorecard
+    function openScorecardModal() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      const wrong = totalAnswered - score;
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+
+      document.getElementById("modalScoreVal").innerText = score;
+      document.getElementById("modalCorrectCount").innerText = score;
+      document.getElementById("modalWrongCount").innerText = wrong;
+      document.getElementById("modalAccuracyVal").innerText = `${accuracy}%`;
+
+      const gradeTitle = document.getElementById("modalGradeTitle");
+      const gradeMsg = document.getElementById("modalGradeMsg");
+
+      if (score >= 45) {
+        gradeTitle.innerText = "Data Handling Maestro! 🏆🌟";
+        gradeMsg.innerText = "Outstanding mastery of NCERT Grade 6 Mathematics!";
+      } else if (score >= 35) {
+        gradeTitle.innerText = "Excellent Performance! 🎯";
+        gradeMsg.innerText = "Strong command over tables, tally marks & bar graphs.";
+      } else if (score >= 25) {
+        gradeTitle.innerText = "Good Effort! 📚";
+        gradeMsg.innerText = "Revise Pictograph scales and Bar Graph drawing for 100%.";
+      } else {
+        gradeTitle.innerText = "Keep Learning! 💡";
+        gradeMsg.innerText = "Review chapter notes and re-attempt for mastery.";
+      }
+
+      document.getElementById("scoreModal").classList.add("active");
+      if (score >= 35 && typeof confetti === 'function') {
+        confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("scoreModal").classList.remove("active");
+    }
+
+    // Initial render
+    renderQuiz();
+    updateStats();
+  </script>
+</body>
+</html>

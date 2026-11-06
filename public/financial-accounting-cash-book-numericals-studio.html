@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 11 Financial Accounting: Cash Book in T-Shape Format with Step Hints | NextSem</title>
+  <meta name="description" content="Master Single Column, Two Column (Cash & Bank with Contra entries), Bank Overdrafts, and Imprest Petty Cash Book with authentic T-Shape double-sided ledger format and progressive hints.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #0a122a;
+      --bg-card: #131d38;
+      --bg-card-hover: #1c2748;
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-accent: #2563eb;
+      
+      --brand-blue: #1e40af;
+      --brand-sapphire: #2563eb;
+      --brand-emerald: #15803d;
+      --brand-amber: #b45309;
+      --brand-indigo: #4338ca;
+      
+      --color-correct: #16a34a;
+      --color-correct-bg: rgba(22, 163, 74, 0.15);
+      --color-wrong: #dc2626;
+      --color-wrong-bg: rgba(220, 38, 38, 0.15);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #e2e8f0;
+      --border-accent: #1e40af;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+    }
+    body.light-theme .top-breadcrumb-bar {
+      background: #ffffff !important;
+      border-bottom-color: #e2e8f0 !important;
+      color: #475569 !important;
+    }
+    body.light-theme .top-breadcrumb-bar a {
+      color: #1d4ed8 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .sep {
+      color: #94a3b8 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .current {
+      color: #0f172a !important;
+    }
+    body.light-theme .quiz-header {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-bottom-color: #e2e8f0 !important;
+    }
+    body.light-theme .btn-nav {
+      background: #f1f5f9 !important;
+      border-color: #cbd5e1 !important;
+      color: #0f172a !important;
+    }
+    body.light-theme .btn-theme-toggle {
+      background: #f1f5f9 !important;
+      border-color: #cbd5e1 !important;
+      color: #0f172a !important;
+    }
+    body.light-theme .hud-card {
+      background: #ffffff !important;
+      border-color: #e2e8f0 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+    body.light-theme .q-card {
+      background: #ffffff !important;
+      border-color: #e2e8f0 !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+    }
+    body.light-theme .lang-pill {
+      background: #f1f5f9 !important;
+      border-color: #cbd5e1 !important;
+    }
+    body.light-theme .lang-btn {
+      color: #64748b !important;
+    }
+    body.light-theme .lang-btn.active {
+      background: #ffffff !important;
+      color: #1d4ed8 !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Hero Banner Styles */
+    .hero-banner {
+      background: linear-gradient(135deg, #1e40af 0%, #1e1b4b 100%);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+    .hero-badge-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+    .hero-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+      color: #ffffff !important;
+      line-height: 1.35;
+    }
+    .hero-desc {
+      font-size: 0.85rem;
+      color: #cbd5e1 !important;
+      max-width: 820px;
+      line-height: 1.55;
+    }
+
+    body.light-theme .hero-banner {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+      border: 1.5px solid #bfdbfe !important;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08) !important;
+    }
+    body.light-theme .hero-badge-tag {
+      background: #dbeafe !important;
+      color: #1d4ed8 !important;
+      border: 1px solid #bfdbfe !important;
+    }
+    body.light-theme .hero-title {
+      color: #1e3a8a !important;
+    }
+    body.light-theme .hero-desc {
+      color: #334155 !important;
+    }
+
+    .btn-theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #60a5fa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 1rem 1rem 3rem;
+      width: 100%;
+    }
+
+    /* Desktop Top Navbar Breadcrumb */
+    .top-breadcrumb-bar {
+      background: #0f172a;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #94a3b8;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .top-breadcrumb-bar a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+    .top-breadcrumb-bar a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .top-breadcrumb-bar .sep {
+      color: #64748b;
+      font-size: 0.75rem;
+    }
+    .top-breadcrumb-bar .current {
+      color: #f8fafc;
+      font-weight: 700;
+    }
+
+    /* Header Bar */
+    .quiz-header {
+      background: rgba(10, 18, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.75rem 1rem;
+    }
+    body.light-theme .quiz-header {
+      background: rgba(255, 255, 255, 0.95);
+    }
+    .quiz-header-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justifyContent: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Score HUD */
+    .score-hud {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 1.25rem 0;
+    }
+    .hud-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+    }
+    .hud-val {
+      font-size: 1.25rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+    }
+    .hud-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* Category Filter */
+    .type-filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 8px 0 12px;
+      margin-bottom: 12px;
+    }
+    .type-btn {
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .type-btn.active {
+      background: var(--brand-sapphire);
+      color: #ffffff;
+      border-color: var(--brand-sapphire);
+    }
+
+    /* Problem Card */
+    .num-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: all 0.2s ease;
+    }
+    .num-badge-row {
+      display: flex;
+      align-items: center;
+      justifyContent: space-between;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .num-type-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #93c5fd;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    .num-count {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    .num-title-en {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .num-question-en {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.55;
+      white-space: pre-line;
+    }
+    .num-question-hi {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      font-family: var(--font-devanagari);
+      margin-bottom: 16px;
+      line-height: 1.55;
+      white-space: pre-line;
+    }
+
+    /* Hints Bar & Container */
+    .hints-section {
+      background: rgba(251, 191, 36, 0.07);
+      border: 1px solid rgba(251, 191, 36, 0.25);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+    }
+    .hints-header {
+      display: flex;
+      align-items: center;
+      justifyContent: space-between;
+      margin-bottom: 8px;
+    }
+    .hints-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #fbbf24;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hint-step-buttons {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .btn-hint-step {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      color: #fbbf24;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-hint-step:hover, .btn-hint-step.active {
+      background: #fbbf24;
+      color: #0f172a;
+    }
+    .hint-content-box {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: var(--text-main);
+      background: rgba(0, 0, 0, 0.25);
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-top: 6px;
+      display: none;
+    }
+    .hint-content-box.show { display: block; }
+
+    /* Interactive Input & Check Area */
+    .calc-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .calc-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1.5px solid var(--border-card);
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 700;
+      width: 160px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .calc-input:focus {
+      border-color: var(--brand-sapphire);
+    }
+    .calc-unit {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .btn-submit-calc {
+      background: var(--brand-sapphire);
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-submit-calc:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+    .btn-toggle-solution {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Result Feedback Banner */
+    .result-banner {
+      display: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .result-banner.correct {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-correct-bg);
+      color: #4ade80;
+      border: 1px solid var(--color-correct);
+    }
+    .result-banner.wrong {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-wrong-bg);
+      color: #f87171;
+      border: 1px solid var(--color-wrong);
+    }
+
+    /* Solution Box */
+    .sol-box {
+      display: none;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 12px;
+      font-size: 0.88rem;
+    }
+    .sol-box.show { display: block; }
+    .sol-header {
+      font-weight: 800;
+      color: #60a5fa;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* T-ACCOUNT / T-SHAPE LEDGER STYLING */
+    .t-account-container {
+      background: #0b1329;
+      border: 2px solid #2563eb;
+      border-radius: 12px;
+      margin: 12px 0 16px;
+      overflow-x: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .t-account-header-bar {
+      background: linear-gradient(90deg, #1e40af 0%, #1e1b4b 100%);
+      color: #ffffff;
+      padding: 10px 16px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justifyContent: space-between;
+      border-bottom: 2px solid #2563eb;
+    }
+    .t-account-dr-cr-label {
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: rgba(255,255,255,0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    
+    .t-grid-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-width: 680px;
+    }
+    .t-side {
+      padding: 0;
+    }
+    .t-side.debit {
+      border-right: 2px solid #2563eb; /* Vertical line of the T-Account */
+    }
+    
+    .t-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+    .t-table th {
+      background: rgba(30, 58, 138, 0.4);
+      color: #93c5fd;
+      padding: 8px 6px;
+      text-align: left;
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .t-table td {
+      padding: 6px 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      vertical-align: middle;
+    }
+    .t-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .t-contra-tag {
+      background: rgba(234, 179, 8, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(234, 179, 8, 0.4);
+      font-weight: 800;
+      font-size: 0.7rem;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .t-balance-fig {
+      color: #4ade80;
+      font-weight: 800;
+      background: rgba(74, 222, 128, 0.1);
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .t-total-row td {
+      border-top: 2px solid #2563eb;
+      border-bottom: 3px double #2563eb; /* Standard accounting double underline */
+      font-weight: 900;
+      color: #fbbf24;
+      background: rgba(30, 58, 138, 0.3);
+      padding: 8px;
+    }
+
+    /* Language Switcher */
+    .lang-pill {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-card);
+      border-radius: 8px;
+      padding: 2px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .lang-btn.active {
+      background: var(--brand-sapphire);
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .score-hud { grid-template-columns: repeat(2, 1fr); }
+      .num-card { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Desktop Breadcrumb Navigation -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="sep">❯</span>
+    <a href="/#ncert-books">NCERT Books</a>
+    <span class="sep">❯</span>
+    <a href="/#ncert-books">Class 11</a>
+    <span class="sep">❯</span>
+    <a href="/#ncert-books">Financial Accounting</a>
+    <span class="sep">❯</span>
+    <span class="current">Special Purpose Books: Cash Book Studio (T-Shape Format)</span>
+  </nav>
+
+  <!-- Top Sticky Header -->
+  <header class="quiz-header">
+    <div class="quiz-header-inner">
+      <a href="/" class="btn-nav">← Back to App</a>
+      <div style="text-align: center;">
+        <div style="font-weight: 800; font-size: 0.95rem;">Class 11 Financial Accounting • Special Purpose Books</div>
+        <div style="font-size: 0.72rem; color: #60a5fa; font-weight: 700;">Cash Book Numericals Studio (T-Shape Format &amp; Step Hints)</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button type="button" class="btn-theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
+          <span id="themeIcon">🌙</span>
+          <span id="themeLabel">Dark</span>
+        </button>
+        <div class="lang-pill">
+          <button class="lang-btn active" id="btn-lang-both" onclick="setLang('both')">Both</button>
+          <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="btn-lang-hi" onclick="setLang('hi')">HI</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-badge-tag">
+        📊 Financial Accounting • Recording of Transactions II (keac104.pdf)
+      </div>
+      <h1 class="hero-title">Cash Book Calculation Studio in Authentic T-Shape Format</h1>
+      <p class="hero-desc">
+        Standard classroom and CBSE Board double-sided T-Account format: Left side (Receipts / Debit), Right side (Payments / Credit) with vertical T-divider, Contra entry markers (C), double underline balancing totals, and progressive hints for each calculation step.
+      </p>
+    </div>
+
+    <!-- Score HUD -->
+    <div class="score-hud">
+      <div class="hud-card">
+        <div class="hud-val" id="hud-total">8</div>
+        <div class="hud-label">Total Cash Books</div>
+      </div>
+      <div class="hud-card">
+        <div class="hud-val" id="hud-attempted" style="color: #60a5fa;">0</div>
+        <div class="hud-label">Attempted</div>
+      </div>
+      <div class="hud-card">
+        <div class="hud-val" id="hud-correct" style="color: #16a34a;">0</div>
+        <div class="hud-label">Balanced Correctly</div>
+      </div>
+      <div class="hud-card">
+        <div class="hud-val" id="hud-accuracy" style="color: #fbbf24;">0%</div>
+        <div class="hud-label">Accuracy</div>
+      </div>
+    </div>
+
+    <!-- Type Filter -->
+    <div class="type-filter-bar">
+      <button class="type-btn active" onclick="filterType('all')">All Problem Types (8)</button>
+      <button class="type-btn" onclick="filterType('single-column')">Simple Cash Book</button>
+      <button class="type-btn" onclick="filterType('two-column')">Two-Column (Cash &amp; Bank)</button>
+      <button class="type-btn" onclick="filterType('petty-cash')">Petty Cash (Imprest)</button>
+      <button class="type-btn" onclick="filterType('three-column')">Three-Column &amp; Discounts</button>
+    </div>
+
+    <!-- Numericals List -->
+    <div id="numericals-list"></div>
+
+  </main>
+
+  <script>
+    const questions = [{"id":1,"category":"Simple Cash Book (Single Column)","categoryId":"single-column","titleEn":"Simple Cash Book: Month-End Cash in Hand in T-Shape Format","titleHi":"सरल रोकड़ बही: T-आकार प्रारूप में अंतिम हस्तगत रोकड़","questionEn":"Enter the following transactions in a Simple Cash Book of Rajesh Traders for April 2026 and calculate the closing Cash in Hand (Balance c/d):\n• April 1: Commenced business with cash ₹50,000\n• April 4: Purchased goods for cash ₹18,000\n• April 8: Sold goods for cash ₹26,000\n• April 12: Paid wages ₹3,500\n• April 18: Paid rent ₹4,000\n• April 22: Received from Suresh ₹7,500\n• April 28: Paid to Mohan ₹6,000\n• April 30: Purchased stationery ₹1,200\n\nCalculate the closing balance of Cash in Hand as on 30th April.","questionHi":"राजेश ट्रेडर्स की अप्रैल 2026 के लिए सरल रोकड़ बही में निम्नलिखित लेन-देनों को दर्ज कीजिए और 30 अप्रैल को अंतिम हस्तगत रोकड़ (Balance c/d) की गणना कीजिए:\n• अप्रैल 1: नकद पूँजी से व्यापार प्रारंभ किया ₹50,000\n• अप्रैल 4: नकद माल खरीदा ₹18,000\n• अप्रैल 8: नकद माल बेचा ₹26,000\n• अप्रैल 12: मजदूरी दी ₹3,500\n• अप्रैल 18: किराया दिया ₹4,000\n• अप्रैल 22: सुरेश से प्राप्त हुए ₹7,500\n• अप्रैल 28: मोहन को भुगतान किया ₹6,000\n• अप्रैल 30: स्टेशनरी खरीदी ₹1,200","answer":50800,"unit":"₹","tolerance":0,"formula":"\\text{Closing Cash (Dr.)} = \\sum \\text{Receipts} - \\sum \\text{Payments} = 83,500 - 32,700 = ₹50,800","hints":[{"step":1,"titleEn":"Step 1 Hint: Identify Receipts vs Payments","titleHi":"चरण 1 संकेत: प्राप्तियों और भुगतानों को अलग करें","textEn":"Receipts (Debit Side) increase cash: Capital (₹50k), Cash Sales (₹26k), Suresh (₹7.5k). Payments (Credit Side) decrease cash: Purchases (₹18k), Wages (₹3.5k), Rent (₹4k), Mohan (₹6k), Stationery (₹1.2k).","textHi":"प्राप्तियाँ (डेबिट पक्ष): पूँजी (₹50k), नकद बिक्री (₹26k), सुरेश (₹7.5k)। भुगतान (क्रेडिट पक्ष): क्रय (₹18k), मजदूरी (₹3.5k), किराया (₹4k), मोहन (₹6k), स्टेशनरी (₹1.2k)।"},{"step":2,"titleEn":"Step 2 Hint: Compute Column Totals","titleHi":"चरण 2 संकेत: कॉलम का कुल योग निकालें","textEn":"Total Debit Receipts = 50,000 + 26,000 + 7,500 = ₹83,500. Total Credit Payments = 18,000 + 3,500 + 4,000 + 6,000 + 1,200 = ₹32,700.","textHi":"कुल डेबिट प्राप्तियाँ = 50,000 + 26,000 + 7,500 = ₹83,500। कुल क्रेडिट भुगतान = 18,000 + 3,500 + 4,000 + 6,000 + 1,200 = ₹32,700।"},{"step":3,"titleEn":"Step 3 Hint: Calculate Balancing Figure","titleHi":"चरण 3 संकेत: अंतिम शेष (Balance c/d) निकालें","textEn":"Subtract total payments from total receipts: Balance c/d = ₹83,500 - ₹32,700 = ₹50,800.","textHi":"प्राप्तियों में से भुगतान घटाएँ: ₹83,500 - ₹32,700 = ₹50,800।"}],"tAccount":{"accountTitle":"Simple Cash Book of M/s Rajesh Traders","isTwoColumn":false,"debitRows":[{"date":"2026 Apr 1","particular":"To Capital A/c","lf":"","amount":"₹50,000"},{"date":"2026 Apr 8","particular":"To Sales A/c","lf":"","amount":"₹26,000"},{"date":"2026 Apr 22","particular":"To Suresh A/c","lf":"","amount":"₹7,500"}],"creditRows":[{"date":"2026 Apr 4","particular":"By Purchases A/c","lf":"","amount":"₹18,000"},{"date":"2026 Apr 12","particular":"By Wages A/c","lf":"","amount":"₹3,500"},{"date":"2026 Apr 18","particular":"By Rent A/c","lf":"","amount":"₹4,000"},{"date":"2026 Apr 28","particular":"By Mohan A/c","lf":"","amount":"₹6,000"},{"date":"2026 Apr 30","particular":"By Stationery A/c","lf":"","amount":"₹1,200"},{"date":"2026 Apr 30","particular":"By Balance c/d (Cash in Hand)","lf":"","amount":"₹50,800","isBal":true}],"totalDebit":"₹83,500","totalCredit":"₹83,500"},"stepsEn":["Total Receipts (Debit Side) = ₹50,000 (Capital) + ₹26,000 (Sales) + ₹7,500 (Suresh) = ₹83,500.","Total Payments (Credit Side) = ₹18,000 + ₹3,500 + ₹4,000 + ₹6,000 + ₹1,200 = ₹32,700.","Closing Balance (Balance c/d) = Total Receipts - Total Payments = ₹83,500 - ₹32,700 = ₹50,800.","A Simple Cash Book always shows a Debit Balance (or zero) because a business cannot pay more physical cash than it possesses."],"stepsHi":["कुल प्राप्तियाँ (डेबिट पक्ष) = ₹50,000 + ₹26,000 + ₹7,500 = ₹83,500।","कुल भुगतान (क्रेडिट पक्ष) = ₹18,000 + ₹3,500 + ₹4,000 + ₹6,000 + ₹1,200 = ₹32,700।","अंतिम शेष (हस्तगत रोकड़) = ₹83,500 - ₹32,700 = ₹50,800।","सरल रोकड़ बही का शेष सदैव डेबिट (सकारात्मक) होता है।"]},{"id":2,"category":"Two-Column Cash Book (Cash & Bank)","categoryId":"two-column","titleEn":"Two-Column Cash Book: Closing Bank Balance in T-Shape Format","titleHi":"द्वि-स्तंभीय रोकड़ बही: T-आकार प्रारूप में बैंक शेष","questionEn":"M/s Royal Traders started May with:\n• May 1: Cash in hand ₹15,000; Cash at Bank ₹40,000\n• May 4: Deposited cash into bank ₹10,000 [Contra]\n• May 8: Received cheque from Anita ₹12,000 and deposited into bank on same day\n• May 12: Cash sales ₹14,000\n• May 16: Paid to creditor Bharat by cheque ₹18,000\n• May 20: Withdrew cash from bank for office use ₹6,000 [Contra]\n• May 25: Bank collected dividend on shares directly ₹3,500\n• May 28: Bank charges debited by bank ₹200\n• May 31: Withdrew cash from bank for personal use of proprietor ₹4,000\n\nCalculate the final **Closing Bank Balance (Balance c/d in Bank column)** as on 31st May.","questionHi":"मैसर्स रॉयल ट्रेडर्स ने मई माह की शुरुआत निम्न शेषों से की:\n• मई 1: हस्तगत रोकड़ ₹15,000; बैंक में रोकड़ ₹40,000\n• मई 4: बैंक में नकद जमा किए ₹10,000 [कंट्रा]\n• मई 8: अनिता से ₹12,000 का चेक मिला और उसी दिन बैंक में जमा कराया\n• मई 12: नकद बिक्री ₹14,000\n• मई 16: लेनदार भरत को चेक द्वारा भुगतान किया ₹18,000\n• मई 20: कार्यालय उपयोग के लिए बैंक से नकद निकाले ₹6,000 [कंट्रा]\n• मई 25: बैंक ने सीधे लाभांश एकत्र किया ₹3,500\n• मई 28: बैंक ने शुल्क लगाया ₹200\n• मई 31: स्वामी के निजी उपयोग हेतु बैंक से निकाले ₹4,000\n\n31 मई को **बैंक कॉलम का अंतिम शेष (Balance c/d)** ज्ञात कीजिए।","answer":37300,"unit":"₹ (Bank)","tolerance":0,"formula":"\\text{Bank Balance} = \\text{Total Bank Receipts} - \\text{Total Bank Payments} = 65,500 - 28,200 = ₹37,300","hints":[{"step":1,"titleEn":"Step 1 Hint: Identify Contra Entries Affecting Bank","titleHi":"चरण 1 संकेत: बैंक को प्रभावित करने वाली कंट्रा प्रविष्टियाँ","textEn":"May 4 (Deposited cash into bank ₹10k) enters Bank Dr. (increases bank). May 20 (Cash withdrawn from bank for office ₹6k) enters Bank Cr. (decreases bank).","textHi":"4 मई (बैंक में नकद जमा ₹10k) बैंक Dr. में आएगा। 20 मई (कार्यालय हेतु बैंक से निकासी ₹6k) बैंक Cr. में आएगा।"},{"step":2,"titleEn":"Step 2 Hint: Total Bank Receipts (Dr.)","titleHi":"चरण 2 संकेत: कुल बैंक प्राप्तियाँ (Dr.)","textEn":"Opening Bank (₹40k) + Cash deposit (₹10k) + Anita cheque (₹12k) + Dividend collected (₹3.5k) = ₹65,500.","textHi":"प्रारंभिक बैंक शेष (₹40k) + नकद जमा (₹10k) + चेक (₹12k) + लाभांश (₹3.5k) = ₹65,500।"},{"step":3,"titleEn":"Step 3 Hint: Total Bank Payments & Balance","titleHi":"चरण 3 संकेत: कुल बैंक भुगतान और अंतिम शेष","textEn":"Total Bank Payments = Bharat (₹18k) + Office cash contra (₹6k) + Bank charges (₹200) + Drawings (₹4k) = ₹28,200. Closing Bank = ₹65,500 - ₹28,200 = ₹37,300.","textHi":"कुल बैंक भुगतान = ₹18,000 + ₹6,000 + ₹200 + ₹4,000 = ₹28,200। अंतिम बैंक शेष = ₹65,500 - ₹28,200 = ₹37,300।"}],"tAccount":{"accountTitle":"Two-Column Cash Book (Cash & Bank) of M/s Royal Traders","isTwoColumn":true,"debitRows":[{"date":"May 1","particular":"To Balance b/d","lf":"","cash":"15,000","bank":"40,000"},{"date":"May 4","particular":"To Cash A/c","lf":"C","cash":"—","bank":"10,000"},{"date":"May 8","particular":"To Anita A/c","lf":"","cash":"—","bank":"12,000"},{"date":"May 12","particular":"To Sales A/c","lf":"","cash":"14,000","bank":"—"},{"date":"May 20","particular":"To Bank A/c","lf":"C","cash":"6,000","bank":"—"},{"date":"May 25","particular":"To Dividend A/c","lf":"","cash":"—","bank":"3,500"}],"creditRows":[{"date":"May 4","particular":"By Bank A/c","lf":"C","cash":"10,000","bank":"—"},{"date":"May 16","particular":"By Bharat A/c","lf":"","cash":"—","bank":"18,000"},{"date":"May 20","particular":"By Cash A/c","lf":"C","cash":"—","bank":"6,000"},{"date":"May 28","particular":"By Bank Charges A/c","lf":"","cash":"—","bank":"200"},{"date":"May 31","particular":"By Drawings A/c","lf":"","cash":"—","bank":"4,000"},{"date":"May 31","particular":"By Balance c/d (Closing)","lf":"","cash":"25,000","bank":"37,300","isBal":true}],"totalDebit":{"cash":"₹35,000","bank":"₹65,500"},"totalCredit":{"cash":"₹35,000","bank":"₹65,500"}},"stepsEn":["Bank Column Receipts (Dr.): Opening (₹40,000) + Contra Cash deposit (₹10,000) + Anita Cheque (₹12,000) + Dividend (₹3,500) = ₹65,500.","Bank Column Payments (Cr.): Bharat payment (₹18,000) + Contra Office withdrawal (₹6,000) + Bank charges (₹200) + Drawings (₹4,000) = ₹28,200.","Closing Bank Balance = ₹65,500 - ₹28,200 = ₹37,300 (Favourable Debit Balance).","Cash column closing balance is simultaneously ₹15,000 - 10,000 + 14,000 + 6,000 = ₹25,000."],"stepsHi":["बैंक कॉलम प्राप्तियाँ (Dr.) = ₹40,000 + ₹10,000 (कंट्रा) + ₹12,000 + ₹3,500 = ₹65,500।","बैंक कॉलम भुगतान (Cr.) = ₹18,000 + ₹6,000 (कंट्रा) + ₹200 + ₹4,000 (आहरण) = ₹28,200।","अंतिम बैंक शेष = ₹65,500 - ₹28,200 = ₹37,300।"]},{"id":3,"category":"Two-Column Cash Book (Bank Overdraft)","categoryId":"two-column","titleEn":"Cash Book with Bank Overdraft & Cheque Dishonour (T-Shape)","titleHi":"बैंक ओवरड्राफ्ट और चेक अनादरण (T-आकार रोकड़ बही)","questionEn":"On June 1, a business had Cash in Hand of ₹8,000 and a **Bank Overdraft (Cr. Balance)** of ₹22,000.\nDuring June, the following bank transactions took place:\n• June 5: Deposited cash into bank ₹15,000 [Contra]\n• June 10: Received cheque of ₹9,000 from Rohit and deposited immediately into bank\n• June 15: Issued cheque to supplier Verma ₹14,000\n• June 20: Rohit's cheque of ₹9,000 was dishonoured by bank, bank debited dishonour charges ₹100\n• June 25: Customer Direct deposit into bank account ₹11,000\n• June 30: Interest on overdraft debited by bank ₹600\n\nCalculate the final **Closing Bank Balance as on 30th June**. (Specify whether Overdraft or Favourable)","questionHi":"1 जून को व्यवसाय के पास ₹8,000 हस्तगत रोकड़ तथा ₹22,000 **बैंक ओवरड्राफ्ट (क्रेडिट शेष)** था।\nजून माह में निम्नलिखित बैंक लेन-देन हुए:\n• जून 5: बैंक में नकद जमा किए ₹15,000 [कंट्रा]\n• जून 10: रोहित से ₹9,000 का चेक मिला और तुरंत बैंक में जमा किया\n• जून 15: आपूर्तिकर्ता वर्मा को ₹14,000 का चेक जारी किया\n• जून 20: रोहित का ₹9,000 का चेक बैंक द्वारा अनादरित हो गया, बैंक ने ₹100 अनादरण शुल्क लिया\n• जून 25: ग्राहक ने बैंक खाते में सीधे जमा किए ₹11,000\n• जून 30: बैंक ने ओवरड्राफ्ट पर ब्याज लगाया ₹600\n\n30 जून को **अंतिम बैंक ओवरड्राफ्ट (क्रेडिट शेष)** की राशि ज्ञात कीजिए।","answer":-10700,"unit":"₹ (Overdraft)","tolerance":0,"formula":"\\text{Bank Balance} = (15000 + 9000 + 11000) - (22000 + 14000 + 9000 + 100 + 600) = 35000 - 45700 = -₹10,700","hints":[{"step":1,"titleEn":"Step 1 Hint: Handle Opening Overdraft & Dishonour","titleHi":"चरण 1 संकेत: प्रारंभिक अधिविकर्ष व अनादरण का समायोजन","textEn":"Opening Overdraft (₹22,000) is placed on the Credit side ('By Balance b/d'). Rohit's dishonoured cheque (₹9,000) must be credited to reverse the earlier debit entry.","textHi":"प्रारंभिक अधिविकर्ष (₹22,000) क्रेडिट पक्ष ('By Balance b/d') में आएगा। रोहित का चेक अनादरित होने पर क्रेडिट पक्ष में ₹9,000 लिखकर डेबिट का प्रभाव समाप्त किया जाएगा।"},{"step":2,"titleEn":"Step 2 Hint: Total Debit Deposits","titleHi":"चरण 2 संकेत: कुल डेबिट जमा राशियाँ","textEn":"Debit Bank column = ₹15,000 (Cash) + ₹9,000 (Rohit) + ₹11,000 (Direct Deposit) = ₹35,000.","textHi":"डेबिट बैंक कॉलम = ₹15,000 + ₹9,000 + ₹11,000 = ₹35,000।"},{"step":3,"titleEn":"Step 3 Hint: Calculate Net Overdraft (Cr. > Dr.)","titleHi":"चरण 3 संकेत: शुद्ध अधिविकर्ष की गणना (Cr. > Dr.)","textEn":"Total Credit side = 22,000 + 14,000 + 9,000 + 100 + 600 = ₹45,700. Since Credit > Debit, Closing Overdraft = ₹45,700 - ₹35,000 = ₹10,700 (entered as -10700).","textHi":"कुल क्रेडिट पक्ष = ₹45,700। चूँकि क्रेडिट > डेबिट, अतः अंतिम ओवरड्राफ्ट = ₹45,700 - ₹35,000 = ₹10,700 (-10700 दर्ज करें)।"}],"tAccount":{"accountTitle":"Two-Column Cash Book (Overdraft Scenario)","isTwoColumn":true,"debitRows":[{"date":"June 5","particular":"To Cash A/c (C)","lf":"C","cash":"—","bank":"15,000"},{"date":"June 10","particular":"To Rohit A/c","lf":"","cash":"—","bank":"9,000"},{"date":"June 25","particular":"To Customer A/c (Direct)","lf":"","cash":"—","bank":"11,000"},{"date":"June 30","particular":"To Balance c/d (Closing Overdraft)","lf":"","cash":"—","bank":"10,700","isBal":true}],"creditRows":[{"date":"June 1","particular":"By Balance b/d (Opening Overdraft)","lf":"","cash":"—","bank":"22,000"},{"date":"June 15","particular":"By Verma A/c","lf":"","cash":"—","bank":"14,000"},{"date":"June 20","particular":"By Rohit A/c (Dishonour)","lf":"","cash":"—","bank":"9,000"},{"date":"June 20","particular":"By Bank Charges A/c","lf":"","cash":"—","bank":"100"},{"date":"June 30","particular":"By Interest on Overdraft","lf":"","cash":"—","bank":"600"}],"totalDebit":{"cash":"—","bank":"₹45,700"},"totalCredit":{"cash":"—","bank":"₹45,700"}},"stepsEn":["Total Bank Receipts (Dr.) = ₹15,000 (Cash) + ₹9,000 (Rohit) + ₹11,000 (Direct Deposit) = ₹35,000.","Total Bank Payments & Debits (Cr.) = Opening Overdraft ₹22,000 + Verma Cheque ₹14,000 + Rohit Dishonoured Cheque Reversal ₹9,000 + Dishonour Charges ₹100 + Overdraft Interest ₹600 = ₹45,700.","Net Bank Balance = ₹35,000 - ₹45,700 = -₹10,700 (i.e., Overdraft of ₹10,700 on Credit side, entered as 'To Balance c/d ₹10,700' on Debit side to carry forward as By Balance b/d on Cr.)."],"stepsHi":["बैंक प्राप्तियाँ (Dr.) = ₹15,000 + ₹9,000 + ₹11,000 = ₹35,000।","बैंक भुगतान एवं नाम प्रविष्टियाँ (Cr.) = ₹22,000 (प्रारंभिक अधिविकर्ष) + ₹14,000 + ₹9,000 (अनादरण) + ₹100 + ₹600 = ₹45,700।","अंतिम बैंक अधिविकर्ष (ओवरड्राफ्ट) = ₹45,700 - ₹35,000 = ₹10,700 (ऋणात्मक शेष)।"]},{"id":4,"category":"Analytical Petty Cash Book (Imprest System)","categoryId":"petty-cash","titleEn":"Imprest Petty Cash Book: Reimbursement Amount in T-Shape Table","titleHi":"अग्रदाय प्रणाली लघु रोकड़ बही (T-आकार तालिका)","questionEn":"A Petty Cashier maintains a Petty Cash Book on the **Imprest System** with an established imprest amount of **₹10,000**.\nDuring July 2026, the petty cashier made the following payments:\n• July 2: Auto rickshaw conveyance ₹650\n• July 6: Courier and postage stamps ₹480\n• July 10: Printer cartridge and photocopy paper ₹1,350\n• July 14: Office tea and client snacks ₹820\n• July 18: Cartage on incoming parcel ₹540\n• July 22: Speed post charges ₹360\n• July 26: Sweeper wages and cleaning liquids ₹950\n• July 30: Taxi fare for office messenger ₹450\n\n(i) What is the total petty cash spent during July?\n(ii) What amount must the Head Cashier reimburse to the Petty Cashier on 1st August to restore the original imprest?","questionHi":"एक लघु रोकड़पाल **₹10,000** की अग्रदाय राशि पर अग्रदाय लघु रोकड़ बही रखता है।\nजुलाई 2026 में निम्नलिखित छोटे खर्चे किए गए:\n• जुलाई 2: ऑटो रिक्शा किराया ₹650\n• जुलाई 6: कूरियर और डाक टिकट ₹480\n• जुलाई 10: प्रिंटर कार्ट्रिज और फोटोकॉपी पेपर ₹1,350\n• जुलाई 14: चाय व जलपान ₹820\n• जुलाई 18: भाड़ा (गाड़ी भाड़ा) ₹540\n• जुलाई 22: स्पीड पोस्ट शुल्क ₹360\n• जुलाई 26: सफाई कर्मी का पारिश्रमिक ₹950\n• जुलाई 30: टैक्सी किराया ₹450\n\n1 अगस्त को मूल अग्रदाय राशि बहाल करने के लिए मुख्य रोकड़पाल द्वारा कितनी प्रतिपूर्ति राशि दी जाएगी?","answer":5600,"unit":"₹ (Reimbursement)","tolerance":0,"formula":"\\text{Total Expenses} = 650 + 480 + 1350 + 820 + 540 + 360 + 950 + 450 = ₹5,600 = \\text{Reimbursement Amount}","hints":[{"step":1,"titleEn":"Step 1 Hint: Sum All Petty Payments","titleHi":"चरण 1 संकेत: सभी छोटे खर्चों का योग करें","textEn":"Add up all 8 payment items: 650 + 480 + 1350 + 820 + 540 + 360 + 950 + 450 = ₹5,600.","textHi":"सभी 8 खर्चों को जोड़ें: 650 + 480 + 1350 + 820 + 540 + 360 + 950 + 450 = ₹5,600।"},{"step":2,"titleEn":"Step 2 Hint: Understand the Imprest Golden Rule","titleHi":"चरण 2 संकेत: अग्रदाय प्रणाली का स्वर्णिम नियम","textEn":"Under the Imprest System, the Head Cashier reimburses the EXACT amount spent during the period to restore the original ₹10,000 float.","textHi":"अग्रदाय प्रणाली में मुख्य रोकड़पाल केवल वास्तविक खर्च की गई राशि ही प्रतिपूर्ति के रूप में प्रदान करता है।"},{"step":3,"titleEn":"Step 3 Hint: Final Reimbursement Figure","titleHi":"चरण 3 संकेत: अंतिम प्रतिपूर्ति राशि","textEn":"Reimbursement Amount = Total Expenses Incurred = ₹5,600.","textHi":"प्रतिपूर्ति राशि = कुल किए गए व्यय = ₹5,600।"}],"tAccount":{"accountTitle":"Analytical Columnar Petty Cash Book (Imprest ₹10,000)","isPettyCash":true,"debitRows":[{"date":"2026 July 1","particular":"To Cash A/c (Initial Imprest Float)","amount":"₹10,000"}],"creditRows":[{"date":"July 2","particular":"By Conveyance (Auto)","amount":"₹650"},{"date":"July 6","particular":"By Postage & Stamps","amount":"₹480"},{"date":"July 10","particular":"By Printing & Stationery","amount":"₹1,350"},{"date":"July 14","particular":"By Tea & Refreshment","amount":"₹820"},{"date":"July 18","particular":"By Cartage & Freight","amount":"₹540"},{"date":"July 22","particular":"By Speed Post Charges","amount":"₹360"},{"date":"July 26","particular":"By Cleaning & Sundries","amount":"₹950"},{"date":"July 30","particular":"By Conveyance (Taxi)","amount":"₹450"},{"date":"July 31","particular":"By Balance c/d (Petty Cash in Hand)","amount":"₹4,400","isBal":true}],"totalDebit":"₹10,000","totalCredit":"₹10,000","reimbursement":"₹5,600 (Reimbursed on Aug 1)"},"stepsEn":["Total Petty Expenses incurred = 650 + 480 + 1350 + 820 + 540 + 360 + 950 + 450 = ₹5,600.","Closing balance in hand on July 31 = Opening Imprest (₹10,000) - Total Expenses (₹5,600) = ₹4,400.","Under the Imprest System, the Head Cashier reimburses the EXACT amount spent during the period: Reimbursement = ₹5,600.","On 1st August, after receiving the cheque of ₹5,600, the Petty Cashier's total balance is restored back to ₹4,400 + ₹5,600 = ₹10,000."],"stepsHi":["कुल लघु व्यय = 650 + 480 + 1350 + 820 + 540 + 360 + 950 + 450 = ₹5,600।","31 जुलाई को शेष रोकड़ = ₹10,000 - ₹5,600 = ₹4,400।","अग्रदाय प्रणाली के अनुसार, खर्च की गई वास्तविक राशि (₹5,600) ही प्रतिपूर्ति के रूप में प्रदान की जाती है।"]},{"id":5,"category":"Cheque in Hand & Subsequent Deposit","categoryId":"two-column","titleEn":"Handling 'Cheques in Hand' Deposited on Later Date (T-Shape)","titleHi":"'हस्तगत चेक' का बाद की तिथि में बैंक जमा (T-आकार)","questionEn":"Consider the following transaction sequence:\n• Sept 10: Received a cheque for ₹16,000 from customer Govind in full settlement of his debt of ₹16,500 (Discount Allowed ₹500). The cheque was NOT deposited on this day.\n• Sept 14: The cheque of ₹16,000 received from Govind is deposited into bank.\n\nWhat is the exact entry in the **Bank Column on Sept 14** in the Cash Book?","questionHi":"निम्नलिखित लेन-देन पर विचार कीजिए:\n• 10 सितंबर: ग्राहक गोविंद से ₹16,500 के पूर्ण भुगतान में ₹16,000 का चेक प्राप्त हुआ (बट्टा दिया ₹500)। यह चेक 10 सितंबर को बैंक में जमा नहीं किया गया।\n• 14 सितंबर: गोविंद से प्राप्त ₹16,000 का चेक बैंक में जमा किया गया।\n\n14 सितंबर को रोकड़ बही के **बैंक कॉलम (डेबिट पक्ष)** में कितनी राशि दर्ज की जाएगी?","answer":16000,"unit":"₹ (Dr. Bank)","tolerance":0,"formula":"\\text{Sept 14 Entry: To Cheques in Hand A/c in Bank Column (Dr.)} = ₹16,000","hints":[{"step":1,"titleEn":"Step 1 Hint: Check Day of Receipt (Sept 10)","titleHi":"चरण 1 संकेत: चेक प्राप्ति की तिथि (10 सितंबर)","textEn":"On Sept 10, because the cheque is kept in hand and not banked, it is recorded in Journal Proper (Cheques in Hand Dr. ₹16k). The Cash Book bank column is not affected on Sept 10.","textHi":"10 सितंबर को चेक बैंक में जमा न होने के कारण यह मुख्य जर्नल में 'Cheques in Hand Dr.' के रूप में दर्ज होता है।"},{"step":2,"titleEn":"Step 2 Hint: Record Banking on Sept 14","titleHi":"चरण 2 संकेत: 14 सितंबर को बैंक में जमा करना","textEn":"On Sept 14, when deposited, the Bank column is debited with 'To Cheques in Hand A/c' for the face value of the cheque.","textHi":"14 सितंबर को बैंक कॉलम के डेबिट पक्ष पर 'To Cheques in Hand A/c' लिखकर चेक की राशि ₹16,000 दर्ज होगी।"}],"tAccount":{"accountTitle":"Cash Book (Bank Column Extract)","isTwoColumn":true,"debitRows":[{"date":"Sept 14","particular":"To Cheques in Hand A/c","lf":"","cash":"—","bank":"16,000"}],"creditRows":[{"date":"Sept 10","particular":"(No Cash Book entry on Sept 10)","lf":"J.P.","cash":"—","bank":"—"}],"totalDebit":{"cash":"—","bank":"₹16,000"},"totalCredit":{"cash":"—","bank":"—"}},"stepsEn":["On Sept 10: When the cheque is received but not deposited on the same day, it is recorded in the Journal Proper as: Cheques in Hand A/c Dr. ₹16,000, Discount Allowed A/c Dr. ₹500 To Govind A/c ₹16,500 (NO entry in Cash Book on Sept 10, or entered in Cash column).","On Sept 14: When deposited into the bank, it is recorded on the DEBIT side of the Cash Book under the Bank column as 'To Cheques in Hand A/c' with ₹16,000.","The answer is ₹16,000."],"stepsHi":["10 सितंबर: चेक मिलने पर उसी दिन जमा न करने पर मुख्य जर्नल में प्रविष्टि होती है: Cheques in Hand A/c Dr.।","14 सितंबर: जब चेक बैंक में जमा किया जाता है, तो रोकड़ बही के डेबिट पक्ष पर 'To Cheques in Hand A/c' लिखकर बैंक कॉलम में ₹16,000 दर्ज किए जाते हैं।","सही उत्तर ₹16,000 है।"]},{"id":6,"category":"Cheque Endorsement to Creditor","categoryId":"two-column","titleEn":"Cheque Endorsed to Creditor: T-Shape Ledger Analysis","titleHi":"लेनदार को चेक का बेचान: T-आकार खाताबही विश्लेषण","questionEn":"On Oct 5, firm receives a cheque of ₹14,000 from debtor Sanjay (not deposited). On Oct 8, this same cheque of ₹14,000 is endorsed to creditor Naresh in settlement of his claim of ₹14,400 (Discount received ₹400).\nWhat is the net amount entered in the **Bank column of the Cash Book** across both days?","questionHi":"5 अक्टूबर को देनदार संजय से ₹14,000 का चेक मिला (बैंक में जमा नहीं किया गया)। 8 अक्टूबर को यही ₹14,000 का चेक लेनदार नरेश को ₹14,400 के निपटारे में बेचान (Endorse) कर दिया गया (बट्टा प्राप्त ₹400)।\nदोनों तिथियों में रोकड़ बही के **बैंक कॉलम** में कुल कितनी राशि दर्ज होगी?","answer":0,"unit":"₹ (Zero)","tolerance":0,"formula":"\\text{Bank Column Entry} = ₹0 \\text{ (Both receipt and endorsement bypass bank account; recorded via Journal Proper)}","hints":[{"step":1,"titleEn":"Step 1 Hint: Track Money Movement","titleHi":"चरण 1 संकेत: धनराशि के प्रवाह को देखें","textEn":"Did the money ever enter or leave the firm's bank account? Sanjay's cheque was directly handed over to Naresh without touching the bank account.","textHi":"क्या यह धनराशि कभी फर्म के बैंक खाते में गई या निकली? संजय का चेक सीधे नरेश को दे दिया गया, बैंक खाते का कोई उपयोग नहीं हुआ।"},{"step":2,"titleEn":"Step 2 Hint: Where is this recorded?","titleHi":"चरण 2 संकेत: इसका लेखा कहाँ होगा?","textEn":"Both receipt (Cheques in Hand) and endorsement (Creditor Dr. To Cheques in Hand) are non-cash transactions passed through Journal Proper. Cash Book bank column = ₹0.","textHi":"यह संपूर्ण प्रविष्टि मुख्य जर्नल (Journal Proper) में होगी, अतः रोकड़ बही के बैंक कॉलम में ₹0 आएगा।"}],"tAccount":{"accountTitle":"Cash Book Bank Column (Zero Impact)","isTwoColumn":true,"debitRows":[{"date":"Oct 5","particular":"No entry (Journal Proper)","lf":"","cash":"—","bank":"₹0"}],"creditRows":[{"date":"Oct 8","particular":"No entry (Journal Proper)","lf":"","cash":"—","bank":"₹0"}],"totalDebit":{"cash":"—","bank":"₹0"},"totalCredit":{"cash":"—","bank":"₹0"}},"stepsEn":["When a cheque is received and kept in hand, it does not affect the Bank account.","When that cheque is directly handed over (endorsed) to a creditor, the firm's bank account is NEVER touched.","Journal Entry on Oct 8: Naresh A/c Dr. ₹14,400 To Cheques in Hand A/c ₹14,000 To Discount Received A/c ₹400.","Therefore, ₹0 is recorded in the Bank column of the Cash Book."],"stepsHi":["जब चेक प्राप्त कर हस्तगत रखा जाता है और फिर सीधे किसी लेनदार को बेचान कर दिया जाता है, तो बैंक खाते से कोई लेन-देन नहीं होता।","यह प्रविष्टि मुख्य जर्नल (Journal Proper) में की जाती है।","अतः रोकड़ बही के बैंक कॉलम में ₹0 (शून्य) दर्ज होगा।"]},{"id":7,"category":"Split Cash & Bank Transactions","categoryId":"two-column","titleEn":"Split Cash Sales Deposited into Bank on Same Day (T-Format)","titleHi":"नकद बिक्री का उसी दिन आंशिक बैंक जमा (T-प्रारूप)","questionEn":"On Nov 15, total cash sales made by a retailer were ₹45,000. Out of this amount, the retailer retained ₹10,000 in the cash drawer for petty change and deposited the remaining ₹35,000 directly into the bank on the same afternoon.\nHow are the amounts distributed on the Debit side (Receipts) of the Two-Column Cash Book?","questionHi":"15 नवंबर को एक व्यापारी ने ₹45,000 की कुल नकद बिक्री की। इसमें से उसने ₹10,000 दैनिक खर्चों के लिए रोकड़ गल्ले में रखे और शेष ₹35,000 उसी दोपहर सीधे बैंक में जमा करा दिए।\nद्वि-स्तंभीय रोकड़ बही के डेबिट पक्ष पर यह राशि कैसे दर्ज होगी? बैंक कॉलम की राशि क्या है?","answer":35000,"unit":"₹ (Bank column)","tolerance":0,"formula":"\\text{Dr. Cash Column} = ₹10,000,\\quad \\text{Dr. Bank Column} = ₹35,000 \\implies \\text{Total} = ₹45,000","hints":[{"step":1,"titleEn":"Step 1 Hint: Same-Day Direct Banking Rule","titleHi":"चरण 1 संकेत: उसी दिन बैंक में जमा करने का नियम","textEn":"Because the money went directly to the bank from the sale on the same day, enter 'To Sales A/c' on the Debit side with ₹10,000 in the Cash column and ₹35,000 in the Bank column.","textHi":"उसी दिन बैंक में जमा होने के कारण 'To Sales A/c' लिखकर कैश कॉलम में ₹10,000 और बैंक कॉलम में ₹35,000 दर्ज होते हैं।"},{"step":2,"titleEn":"Step 2 Hint: Is this a Contra Entry?","titleHi":"चरण 2 संकेत: क्या यह कंट्रा प्रविष्टि है?","textEn":"No contra entry is required because the cash was not first taken home/stored and then deposited as a separate transaction.","textHi":"यह कंट्रा प्रविष्टि नहीं है क्योंकि यह सीधी बिक्री से बैंक में जमा है। बैंक कॉलम = ₹35,000।"}],"tAccount":{"accountTitle":"Two-Column Cash Book (Split Banking)","isTwoColumn":true,"debitRows":[{"date":"Nov 15","particular":"To Sales A/c (Cash Kept)","lf":"","cash":"10,000","bank":"—"},{"date":"Nov 15","particular":"To Sales A/c (Banked Direct)","lf":"","cash":"—","bank":"35,000"}],"creditRows":[],"totalDebit":{"cash":"₹10,000","bank":"₹35,000"},"totalCredit":{"cash":"—","bank":"—"}},"stepsEn":["When cash sales proceeds are partially banked on the exact same day, it is recorded directly as 'To Sales A/c' with ₹10,000 in the Cash column and ₹35,000 in the Bank column.","This is NOT treated as a Contra entry because the money went straight into the bank from sales without being recorded as a separate cash deposit later.","Bank column receives ₹35,000."],"stepsHi":["जब नकद बिक्री का कुछ हिस्सा उसी दिन बैंक में जमा कर दिया जाता है, तो 'To Sales A/c' लिखकर कैश कॉलम में ₹10,000 और बैंक कॉलम में ₹35,000 दर्ज किए जाते हैं।","बैंक कॉलम में ₹35,000 आएंगे।"]},{"id":8,"category":"Three-Column Cash Book (Discounts)","categoryId":"three-column","titleEn":"Treatment of Discount Columns in Cash Book (T-Format)","titleHi":"रोकड़ बही में बट्टा कॉलम का व्यवहार (T-प्रारूप)","questionEn":"During December, the Discount Allowed column on the Debit side of the Cash Book totaled ₹4,200, and the Discount Received column on the Credit side totaled ₹3,100.\nIs the difference of ₹1,100 balanced in the Cash Book, or what is the total posted to the 'Discount Allowed Account' in the General Ledger?","questionHi":"दिसंबर माह के दौरान रोकड़ बही के डेबिट पक्ष पर बट्टा दिया (Discount Allowed) कॉलम का कुल योग ₹4,200 था और क्रेडिट पक्ष पर बट्टा प्राप्त (Discount Received) कॉलम का कुल योग ₹3,100 था।\nखाताबही में 'बट्टा दिया खाता' (Discount Allowed A/c) में कुल कितनी राशि खतौनी (Post) की जाएगी?","answer":4200,"unit":"₹ (Dr. Discount Allowed)","tolerance":0,"formula":"\\text{Discount Allowed A/c Total (Dr.)} = ₹4,200;\\quad \\text{Discount columns are TOTALED, not balanced!}","hints":[{"step":1,"titleEn":"Step 1 Hint: Never Balance Discount Columns!","titleHi":"चरण 1 संकेत: बट्टा कॉलम का कभी शेष न निकालें!","textEn":"Discount Allowed is an Expense (Debit) and Discount Received is an Income (Credit). They represent two completely independent accounts in the ledger.","textHi":"बट्टा दिया (खर्च) और बट्टा प्राप्त (आय) दो स्वतंत्र खाते हैं, इसलिए इनका आपस में शेष नहीं निकाला जाता।"},{"step":2,"titleEn":"Step 2 Hint: Direct Posting to Ledger","titleHi":"चरण 2 संकेत: खाताबही में सीधा स्थानांतरण","textEn":"The total of the debit discount column (₹4,200) is posted directly as a lump sum to the Debit side of Discount Allowed A/c.","textHi":"डेबिट बट्टा कॉलम का कुल योग (₹4,200) सीधे Discount Allowed A/c के डेबिट पक्ष में खतौनी किया जाता है।"}],"tAccount":{"accountTitle":"Three-Column Cash Book (Discount Columns)","isThreeColumn":true,"debitRows":[{"date":"Dec 31","particular":"Total Discount Allowed for Month","lf":"Dr.","disc":"4,200","cash":"—","bank":"—"}],"creditRows":[{"date":"Dec 31","particular":"Total Discount Received for Month","lf":"Cr.","disc":"3,100","cash":"—","bank":"—"}],"totalDebit":{"disc":"₹4,200 (Totaled, NOT Balanced)"},"totalCredit":{"disc":"₹3,100 (Totaled, NOT Balanced)"}},"stepsEn":["Rule of Accounting: Discount columns in a Three-Column Cash Book are NOT balanced against each other because Discount Allowed is an Expense (Debit) and Discount Received is an Income (Credit).","The total of the Discount Allowed column (₹4,200) is posted directly to the DEBIT side of Discount Allowed A/c in the ledger.","The total of the Discount Received column (₹3,100) is posted directly to the CREDIT side of Discount Received A/c in the ledger.","Answer for Discount Allowed A/c = ₹4,200."],"stepsHi":["लेखांकन नियम: रोकड़ बही के बट्टा कॉलम का शेष (Balance) नहीं निकाला जाता, केवल कुल योग लगाया जाता है।","डेबिट बट्टा कॉलम का कुल योग ₹4,200 सीधे खाताबही में 'Discount Allowed A/c' के डेबिट पक्ष में खतौनी किया जाता है।","सही उत्तर ₹4,200 है।"]}];
+
+    let currentLang = 'both';
+    let currentTypeFilter = 'all';
+    let userAttempts = {};
+    let openHints = {};
+    let correctCount = 0;
+    let attempted = 0;
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-lang-' + lang).classList.add('active');
+      renderNumericals();
+    }
+
+    function filterType(typeId) {
+      currentTypeFilter = typeId;
+      document.querySelectorAll('.type-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderNumericals();
+    }
+
+    function toggleStepHint(qId, stepIndex) {
+      const key = qId + '-' + stepIndex;
+      openHints[key] = !openHints[key];
+      const box = document.getElementById('hintbox-' + key);
+      const btn = document.getElementById('hintbtn-' + key);
+      if (box && btn) {
+        if (openHints[key]) {
+          box.classList.add('show');
+          btn.classList.add('active');
+        } else {
+          box.classList.remove('show');
+          btn.classList.remove('active');
+        }
+      }
+    }
+
+    function renderTAccountHtml(t) {
+      if (!t) return '';
+
+      if (t.isTwoColumn) {
+        // Two Column Cash Book T-Format
+        let drRowsHtml = '';
+        t.debitRows.forEach(r => {
+          drRowsHtml += `
+            <tr>
+              <td>${r.date}</td>
+              <td>${r.particular}</td>
+              <td style="text-align:center;">${r.lf ? '<span class="t-contra-tag">' + r.lf + '</span>' : ''}</td>
+              <td style="text-align:right;">${r.cash}</td>
+              <td style="text-align:right;">${r.bank}</td>
+            </tr>
+          `;
+        });
+
+        let crRowsHtml = '';
+        t.creditRows.forEach(r => {
+          const balCls = r.isBal ? 't-balance-fig' : '';
+          crRowsHtml += `
+            <tr>
+              <td>${r.date}</td>
+              <td class="${balCls}">${r.particular}</td>
+              <td style="text-align:center;">${r.lf ? '<span class="t-contra-tag">' + r.lf + '</span>' : ''}</td>
+              <td style="text-align:right;" class="${balCls}">${r.cash}</td>
+              <td style="text-align:right;" class="${balCls}">${r.bank}</td>
+            </tr>
+          `;
+        });
+
+        return `
+          <div class="t-account-container">
+            <div class="t-account-header-bar">
+              <span class="t-account-dr-cr-label">Dr. (Receipts)</span>
+              <span>${t.accountTitle}</span>
+              <span class="t-account-dr-cr-label">Cr. (Payments)</span>
+            </div>
+            <div class="t-grid-split">
+              <!-- Left Side (Debit) -->
+              <div class="t-side debit">
+                <table class="t-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 18%;">Date</th>
+                      <th>Particulars</th>
+                      <th style="width: 8%; text-align:center;">L.F.</th>
+                      <th style="width: 18%; text-align:right;">Cash (₹)</th>
+                      <th style="width: 18%; text-align:right;">Bank (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${drRowsHtml}
+                  </tbody>
+                  <tfoot>
+                    <tr class="t-total-row">
+                      <td colspan="3">TOTAL (Dr.)</td>
+                      <td style="text-align:right;">${t.totalDebit.cash}</td>
+                      <td style="text-align:right;">${t.totalDebit.bank}</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+
+              <!-- Right Side (Credit) -->
+              <div class="t-side credit">
+                <table class="t-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 18%;">Date</th>
+                      <th>Particulars</th>
+                      <th style="width: 8%; text-align:center;">L.F.</th>
+                      <th style="width: 18%; text-align:right;">Cash (₹)</th>
+                      <th style="width: 18%; text-align:right;">Bank (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${crRowsHtml}
+                  </tbody>
+                  <tfoot>
+                    <tr class="t-total-row">
+                      <td colspan="3">TOTAL (Cr.)</td>
+                      <td style="text-align:right;">${t.totalCredit.cash}</td>
+                      <td style="text-align:right;">${t.totalCredit.bank}</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (t.isThreeColumn) {
+        // Three Column Cash Book Extract
+        let drRowsHtml = '';
+        t.debitRows.forEach(r => {
+          drRowsHtml += `<tr><td>${r.date}</td><td>${r.particular}</td><td style="text-align:right; color:#fbbf24;">${r.disc}</td></tr>`;
+        });
+        let crRowsHtml = '';
+        t.creditRows.forEach(r => {
+          crRowsHtml += `<tr><td>${r.date}</td><td>${r.particular}</td><td style="text-align:right; color:#fbbf24;">${r.disc}</td></tr>`;
+        });
+
+        return `
+          <div class="t-account-container">
+            <div class="t-account-header-bar">
+              <span class="t-account-dr-cr-label">Dr.</span>
+              <span>${t.accountTitle}</span>
+              <span class="t-account-dr-cr-label">Cr.</span>
+            </div>
+            <div class="t-grid-split">
+              <div class="t-side debit">
+                <table class="t-table">
+                  <thead><tr><th>Date</th><th>Particulars</th><th style="text-align:right;">Discount Allowed (₹)</th></tr></thead>
+                  <tbody>${drRowsHtml}</tbody>
+                  <tfoot><tr class="t-total-row"><td colspan="2">TOTAL (Dr.)</td><td style="text-align:right;">${t.totalDebit.disc}</td></tr></tfoot>
+                </table>
+              </div>
+              <div class="t-side credit">
+                <table class="t-table">
+                  <thead><tr><th>Date</th><th>Particulars</th><th style="text-align:right;">Discount Received (₹)</th></tr></thead>
+                  <tbody>${crRowsHtml}</tbody>
+                  <tfoot><tr class="t-total-row"><td colspan="2">TOTAL (Cr.)</td><td style="text-align:right;">${t.totalCredit.disc}</td></tr></tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // Single Column Cash Book / Petty Cash T-Format
+        let drRowsHtml = '';
+        t.debitRows.forEach(r => {
+          drRowsHtml += `<tr><td>${r.date}</td><td>${r.particular}</td><td style="text-align:right;">${r.amount}</td></tr>`;
+        });
+        let crRowsHtml = '';
+        t.creditRows.forEach(r => {
+          const balCls = r.isBal ? 't-balance-fig' : '';
+          crRowsHtml += `<tr><td>${r.date}</td><td class="${balCls}">${r.particular}</td><td style="text-align:right;" class="${balCls}">${r.amount}</td></tr>`;
+        });
+
+        return `
+          <div class="t-account-container">
+            <div class="t-account-header-bar">
+              <span class="t-account-dr-cr-label">Dr. (Receipts)</span>
+              <span>${t.accountTitle}</span>
+              <span class="t-account-dr-cr-label">Cr. (Payments)</span>
+            </div>
+            <div class="t-grid-split">
+              <div class="t-side debit">
+                <table class="t-table">
+                  <thead><tr><th style="width: 25%;">Date</th><th>Particulars</th><th style="width: 25%; text-align:right;">Amount (₹)</th></tr></thead>
+                  <tbody>${drRowsHtml}</tbody>
+                  <tfoot><tr class="t-total-row"><td colspan="2">TOTAL (Dr.)</td><td style="text-align:right;">${t.totalDebit}</td></tr></tfoot>
+                </table>
+              </div>
+              <div class="t-side credit">
+                <table class="t-table">
+                  <thead><tr><th style="width: 25%;">Date</th><th>Particulars</th><th style="width: 25%; text-align:right;">Amount (₹)</th></tr></thead>
+                  <tbody>${crRowsHtml}</tbody>
+                  <tfoot><tr class="t-total-row"><td colspan="2">TOTAL (Cr.)</td><td style="text-align:right;">${t.totalCredit}</td></tr></tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function renderNumericals() {
+      const listEl = document.getElementById('numericals-list');
+      listEl.innerHTML = '';
+
+      const filtered = questions.filter(q => currentTypeFilter === 'all' || q.categoryId === currentTypeFilter);
+
+      filtered.forEach((q, idx) => {
+        const card = document.createElement('div');
+        card.className = 'num-card';
+        card.id = 'numcard-' + q.id;
+
+        const attempt = userAttempts[q.id];
+
+        let titleHtml = '';
+        if (currentLang === 'both') {
+          titleHtml = '<div class="num-title-en">' + q.titleEn + '</div><div class="num-question-en">' + q.questionEn + '</div><div class="num-question-hi">' + q.questionHi + '</div>';
+        } else if (currentLang === 'en') {
+          titleHtml = '<div class="num-title-en">' + q.titleEn + '</div><div class="num-question-en">' + q.questionEn + '</div>';
+        } else {
+          titleHtml = '<div class="num-title-en">' + q.titleHi + '</div><div class="num-question-hi" style="color: var(--text-main); font-size: 0.95rem;">' + q.questionHi + '</div>';
+        }
+
+        // Generate Step Hints HTML
+        let hintsHtml = '';
+        if (q.hints && q.hints.length > 0) {
+          let hintBtns = '';
+          let hintBoxes = '';
+          q.hints.forEach((h, hIdx) => {
+            const hKey = q.id + '-' + h.step;
+            const isOpen = !!openHints[hKey];
+            
+            let btnLabel = 'Step ' + h.step + ' Hint';
+            let hText = '';
+            if (currentLang === 'both') {
+              hText = '<div><strong>' + h.titleEn + '</strong><p style="margin-top: 3px;">' + h.textEn + '</p><p style="margin-top: 6px; color: #cbd5e1; font-family: var(--font-devanagari);">' + h.textHi + '</p></div>';
+            } else if (currentLang === 'en') {
+              hText = '<div><strong>' + h.titleEn + '</strong><p style="margin-top: 3px;">' + h.textEn + '</p></div>';
+            } else {
+              hText = '<div><strong>' + h.titleHi + '</strong><p style="margin-top: 3px;">' + h.textHi + '</p></div>';
+            }
+
+            hintBtns += `<button class="btn-hint-step ${isOpen ? 'active' : ''}" id="hintbtn-${hKey}" onclick="toggleStepHint(${q.id}, ${h.step})">💡 ${btnLabel}</button>`;
+            hintBoxes += `<div class="hint-content-box ${isOpen ? 'show' : ''}" id="hintbox-${hKey}">${hText}</div>`;
+          });
+
+          hintsHtml = `
+            <div class="hints-section">
+              <div class="hints-header">
+                <span class="hints-title">💡 Guided Step Hints (Click to Reveal Step-by-Step)</span>
+                <div class="hint-step-buttons">${hintBtns}</div>
+              </div>
+              ${hintBoxes}
+            </div>
+          `;
+        }
+
+        let feedbackHtml = '';
+        if (attempt !== undefined) {
+          if (attempt.isCorrect) {
+            feedbackHtml = '<div class="result-banner correct" style="display: flex;">✅ Correct! Balanced perfectly: ' + q.unit + ' ' + q.answer.toLocaleString('en-IN') + '</div>';
+          } else {
+            feedbackHtml = '<div class="result-banner wrong" style="display: flex;">❌ Incorrect calculation (' + attempt.val + '). Check the hints above or T-Shape ledger below!</div>';
+          }
+        }
+
+        let stepsText = '';
+        if (currentLang === 'both' || currentLang === 'en') {
+          stepsText += '<p><strong>Accounting Breakdown & Rules:</strong></p><ul style="margin: 6px 0 10px 18px;">';
+          q.stepsEn.forEach(step => stepsText += '<li style="margin-bottom: 4px;">' + step + '</li>');
+          stepsText += '</ul>';
+        }
+        if (currentLang === 'both' || currentLang === 'hi') {
+          stepsText += '<p><strong>लेखांकन नियम एवं समाधान:</strong></p><ul style="margin: 6px 0 10px 18px; font-family: var(--font-devanagari);">';
+          q.stepsHi.forEach(step => stepsText += '<li style="margin-bottom: 4px;">' + step + '</li>');
+          stepsText += '</ul>';
+        }
+
+        const tShapeLedgerHtml = renderTAccountHtml(q.tAccount);
+
+        card.innerHTML = `
+          <div class="num-badge-row">
+            <span class="num-type-badge">${q.category}</span>
+            <span class="num-count">Problem ${idx + 1} / ${filtered.length}</span>
+          </div>
+          ${titleHtml}
+          ${hintsHtml}
+          
+          <div class="calc-row">
+            <input type="number" step="any" class="calc-input" id="input-${q.id}" placeholder="Enter ₹ Amount" value="${attempt ? attempt.val : ''}">
+            <span class="calc-unit">${q.unit}</span>
+            <button class="btn-submit-calc" onclick="checkAnswer(${q.id})">Balance &amp; Check</button>
+            <button class="btn-toggle-solution" onclick="toggleSolution(${q.id})">📊 View T-Shape Ledger</button>
+          </div>
+
+          ${feedbackHtml}
+
+          <div class="sol-box ${attempt ? 'show' : ''}" id="sol-${q.id}">
+            <div class="sol-header">📊 Authentic T-Shape Cash Book Ledger Solution</div>
+            ${tShapeLedgerHtml}
+            <div style="font-family: var(--font-mono); font-size: 0.84rem; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 8px; color: #fbbf24; margin-bottom: 8px;">
+              ${q.formula}
+            </div>
+            ${stepsText}
+          </div>
+        `;
+
+        listEl.appendChild(card);
+      });
+    }
+
+    function checkAnswer(qId) {
+      const inputEl = document.getElementById('input-' + qId);
+      if (!inputEl) return;
+      const userVal = parseFloat(inputEl.value.trim());
+      if (isNaN(userVal)) {
+        alert('Please enter a valid numeric amount in Rupees!');
+        return;
+      }
+
+      const q = questions.find(item => item.id === qId);
+      const isCorrect = Math.abs(userVal - q.answer) <= (q.tolerance || 0);
+
+      if (userAttempts[qId] === undefined) {
+        attempted++;
+      }
+      userAttempts[qId] = { val: userVal, isCorrect: isCorrect };
+
+      if (isCorrect) {
+        correctCount = Object.values(userAttempts).filter(a => a.isCorrect).length;
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 40, spread: 60, origin: { y: 0.8 } });
+        }
+      }
+
+      document.getElementById('hud-attempted').innerText = attempted;
+      document.getElementById('hud-correct').innerText = correctCount;
+      const acc = Math.round((correctCount / attempted) * 100);
+      document.getElementById('hud-accuracy').innerText = acc + '%';
+
+      renderNumericals();
+    }
+
+    // Theme Switcher
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function initTheme() {
+      const saved = localStorage.getItem('nextsem_theme') || 'dark';
+      if (saved === 'light') {
+        document.body.classList.add('light-theme');
+        if (themeIcon) themeIcon.textContent = '☀️';
+        if (themeLabel) themeLabel.textContent = 'Light';
+      } else {
+        document.body.classList.remove('light-theme');
+        if (themeIcon) themeIcon.textContent = '🌙';
+        if (themeLabel) themeLabel.textContent = 'Dark';
+      }
+    }
+
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+        if (themeIcon) themeIcon.textContent = isLight ? '☀️' : '🌙';
+        if (themeLabel) themeLabel.textContent = isLight ? 'Light' : 'Dark';
+      });
+    }
+
+    initTheme();
+
+    // Initial render
+    renderNumericals();
+  </script>
+</body>
+</html>

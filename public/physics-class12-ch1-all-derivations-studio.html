@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 12 Physics Chapter 1: All 14 Derivations Master Studio | Electric Charges & Fields (leph101.pdf)</title>
+  <meta name="description" content="Complete line-by-line mathematical derivations for CBSE Class 12 Physics Chapter 1 (Electric Charges and Fields - leph101.pdf). Covers Coulomb's Law, Dipole on Axial & Equatorial lines, Torque, Gauss's Law, Infinite Wire, Plane Sheet, and Spherical Shells with vector diagrams and exam rubrics.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-header: #f1f5f9;
+      --bg-box: #f8fafc;
+      --bg-formula: #e2e8f0;
+      --border-card: #cbd5e1;
+      --border-accent: #0284c7;
+      --accent-cyan: #0284c7;
+      --accent-emerald: #04AA6D;
+      --accent-gold: #c1a648;
+      --accent-gold-dark: #a8842c;
+      --accent-purple: #9333ea;
+      --accent-rose: #e11d48;
+      --text-main: #0a2240;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --shadow-card: 0 4px 20px rgba(10, 34, 64, 0.08);
+      --badge-bg: rgba(2, 132, 199, 0.1);
+      --badge-text: #0284c7;
+      --nav-bg: #ffffff;
+    }
+
+    body.dark {
+      --bg-page: #060c18;
+      --bg-card: #0c1830;
+      --bg-card-header: #112244;
+      --bg-box: #081226;
+      --bg-formula: #040812;
+      --border-card: rgba(255, 255, 255, 0.1);
+      --border-accent: #06b6d4;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-gold: #e5c158;
+      --accent-gold-dark: #c1a648;
+      --accent-purple: #c084fc;
+      --accent-rose: #f87171;
+      --text-main: #ffffff;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --shadow-card: 0 6px 28px rgba(0, 0, 0, 0.55);
+      --badge-bg: rgba(6, 182, 212, 0.15);
+      --badge-text: #38bdf8;
+      --nav-bg: #091224;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.75;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Breadcrumb Navigation Bar */
+    .top-breadcrumb-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border-card);
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .breadcrumb-trail a {
+      color: var(--accent-emerald);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-trail a:hover {
+      color: var(--accent-cyan);
+      text-decoration: underline;
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-muted);
+      font-weight: 400;
+      margin: 0 2px;
+    }
+
+    .breadcrumb-current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-btn {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border: 1px solid var(--border-card);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s;
+    }
+
+    .top-btn:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 100px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 20px;
+      padding: 30px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 5px;
+      background: linear-gradient(90deg, #0284c7, #04AA6D, #c1a648, #9333ea);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background: rgba(193, 166, 72, 0.15);
+      color: var(--accent-gold-dark);
+      border: 1px solid var(--accent-gold);
+      margin-bottom: 12px;
+    }
+
+    body.dark .hero-badge {
+      color: var(--accent-gold);
+    }
+
+    .hero-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin: 0 0 10px;
+      line-height: 1.25;
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      max-width: 900px;
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .stat-chip {
+      background: var(--bg-box);
+      border: 1px solid var(--border-card);
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stat-chip strong {
+      color: var(--accent-cyan);
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .official-btn {
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .official-btn-green {
+      background: rgba(4, 170, 109, 0.12);
+      border: 1px solid var(--accent-emerald);
+      color: var(--accent-emerald);
+    }
+
+    .official-btn-blue {
+      background: rgba(2, 132, 199, 0.12);
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .official-btn-gold {
+      background: rgba(193, 166, 72, 0.12);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold-dark);
+    }
+    body.dark .official-btn-gold { color: var(--accent-gold); }
+
+    .official-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Controls Bar & Filter Pills */
+    .controls-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 240px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border-card);
+      background: var(--bg-box);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-cyan);
+    }
+
+    .action-btn-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-control {
+      background: var(--bg-box);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-control:hover {
+      background: var(--badge-bg);
+      border-color: var(--accent-cyan);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-pill {
+      background: var(--bg-box);
+      border: 1px solid var(--border-card);
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-pill.active {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border-color: var(--accent-cyan);
+    }
+
+    /* Section Category Header */
+    .category-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 36px 0 18px;
+    }
+
+    .category-divider h2 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .category-line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--border-accent), transparent);
+    }
+
+    /* Derivation Card */
+    .derivation-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 18px;
+      margin-bottom: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .derivation-card:hover {
+      border-color: var(--border-accent);
+    }
+
+    .card-header-bar {
+      padding: 16px 20px;
+      background: var(--bg-card-header);
+      border-bottom: 1px solid var(--border-card);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .header-left {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .derivation-num-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      background: rgba(2, 132, 199, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(2, 132, 199, 0.3);
+    }
+
+    .derivation-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 0 0 6px;
+    }
+
+    .derivation-ncert-ref {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .marks-pill {
+      background: rgba(225, 29, 72, 0.1);
+      border: 1px solid rgba(225, 29, 72, 0.3);
+      color: var(--accent-rose);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .toggle-icon {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      transition: transform 0.25s ease;
+    }
+
+    .derivation-card.collapsed .toggle-icon {
+      transform: rotate(-90deg);
+    }
+
+    .card-body {
+      padding: 20px;
+      display: block;
+    }
+
+    .derivation-card.collapsed .card-body {
+      display: none;
+    }
+
+    /* Target Formula Box */
+    .target-formula-box {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(4, 170, 109, 0.08) 100%);
+      border: 1.5px dashed var(--accent-cyan);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .target-label {
+      font-size: 0.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent-cyan);
+    }
+
+    .target-math {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .copy-formula-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-secondary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-formula-btn:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+    }
+
+    .sub-section-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--accent-emerald);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 16px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .diagram-container {
+      background: var(--bg-box);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 14px 0;
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    .diagram-caption {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .step-item {
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 14px;
+    }
+
+    .step-badge {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(2, 132, 199, 0.15);
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      font-size: 0.75rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-text {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .math-block {
+      background: var(--bg-formula);
+      border-left: 3.5px solid var(--accent-cyan);
+      padding: 10px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 8px 0;
+      font-size: 1.05rem;
+      overflow-x: auto;
+    }
+
+    .examiner-box {
+      background: rgba(193, 166, 72, 0.08);
+      border: 1px solid rgba(193, 166, 72, 0.35);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-top: 14px;
+    }
+
+    .examiner-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-gold-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    body.dark .examiner-title { color: var(--accent-gold); }
+
+    .examiner-text {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Fixed Bottom Navigation Bar */
+    .bottom-nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--nav-bg);
+      border-top: 1px solid var(--border-card);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      z-index: 1000;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+
+    .nav-links-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link-btn {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .nav-link-btn:hover {
+      color: var(--accent-cyan);
+    }
+
+    .theme-toggle-btn {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .theme-toggle-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 1.65rem; }
+      .container { padding: 16px 12px 90px; }
+      .top-breadcrumb-bar { font-size: 0.78rem; padding: 8px 12px; }
+      .target-math { font-size: 1.05rem; }
+      .card-header-bar { padding: 14px 16px; }
+      .card-body { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Complete Interactive Breadcrumb Navigation -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb Navigation">
+    <div class="breadcrumb-trail">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=12">Class 12</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=12&subject=c12-physics&book=part-1">Physics Part-I</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=12&subject=c12-physics&book=part-1">Ch 1: Electric Charges &amp; Fields</a>
+      <span class="breadcrumb-separator">❯</span>
+      <span class="breadcrumb-current">All 14 Derivations</span>
+    </div>
+    <div class="top-actions">
+      <a href="https://ncert.nic.in/textbook/pdf/leph101.pdf" target="_blank" rel="noopener noreferrer" class="top-btn" title="Open Official NCERT leph101.pdf">
+        📥 NCERT PDF
+      </a>
+      <button class="top-btn" onclick="toggleTheme()" id="topThemeBtn" title="Toggle Dark/Light Mode">
+        🌙 Dark
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="hero-badge">NCERT Class 12 Physics Part-I • Unit 1 (leph101.pdf)</div>
+      <h1 class="hero-title">Electric Charges &amp; Fields — All 14 Derivations Master Studio</h1>
+      <p class="hero-desc">
+        Complete step-by-step mathematical proofs for all 14 derivations of NCERT Chapter 1. 
+        Includes Coulomb's vector law, electric dipole axial &amp; equatorial field proofs, torque, Gauss's Theorem, linear wire, infinite plane sheet, and charged spherical shell.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-chip">📐 Total Derivations: <strong>14 Proofs</strong></div>
+        <div class="stat-chip">🎯 Syllabus Match: <strong>100% NCERT leph101</strong></div>
+        <div class="stat-chip">⭐ Board Weightage: <strong>Up to 5 Marks</strong></div>
+        <div class="stat-chip">🔄 Dual Mode: <strong>Dark &amp; Light Synced</strong></div>
+      </div>
+
+      <div class="hero-links">
+        <a href="https://ncert.nic.in/textbook/pdf/leph101.pdf" target="_blank" rel="noopener noreferrer" class="official-btn official-btn-green">
+          📄 Official NCERT PDF (leph101.pdf)
+        </a>
+        <a href="https://ncert.nic.in/textbook.php?leph1=1-8" target="_blank" rel="noopener noreferrer" class="official-btn official-btn-blue">
+          🌐 NCERT Online Textbook Portal
+        </a>
+        <a href="https://drive.google.com/drive/folders/1CnGQZwM0BW9FacI0WnbWfq0VffMcnts4" target="_blank" rel="noopener noreferrer" class="official-btn official-btn-gold">
+          ☁️ Google Drive Textbook Cloud
+        </a>
+        <a href="/?class=12&subject=c12-physics&book=part-1" class="official-btn official-btn-blue">
+          🔙 Return to Chapter 1 Hub
+        </a>
+      </div>
+    </header>
+
+    <!-- Controls Panel -->
+    <section class="controls-panel">
+      <div class="search-row">
+        <input type="text" id="derivationSearch" class="search-input" placeholder="🔍 Search derivations (e.g. dipole, axial, equatorial, Gauss law, wire, plane sheet, shell)..." oninput="filterDerivations()">
+        <div class="action-btn-group">
+          <button class="btn-control" onclick="expandAll()">📂 Expand All</button>
+          <button class="btn-control" onclick="collapseAll()">📁 Collapse All</button>
+          <button class="btn-control" onclick="window.print()">🖨️ Print / PDF</button>
+        </div>
+      </div>
+
+      <div class="filter-pills">
+        <button class="filter-pill active" onclick="setFilter('all', this)">All (14)</button>
+        <button class="filter-pill" onclick="setFilter('part-a', this)">Part A: Coulomb &amp; Fields (1–2)</button>
+        <button class="filter-pill" onclick="setFilter('part-b', this)">Part B: Dipoles &amp; Torque (3–6)</button>
+        <button class="filter-pill" onclick="setFilter('part-c', this)">Part C: Gauss's Law &amp; Flux (7)</button>
+        <button class="filter-pill" onclick="setFilter('part-d', this)">Part D: Gauss Applications (8–11)</button>
+        <button class="filter-pill" onclick="setFilter('part-e', this)">Part E: Rings &amp; Extended (12–14)</button>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- PART A: COULOMB'S LAW & ELECTRIC FIELD -->
+    <!-- ========================================================================= -->
+    <div class="category-divider category-part-a">
+      <h2>Part A: Coulomb's Law &amp; Electric Field (Sections 1.5 – 1.7)</h2>
+      <div class="category-line"></div>
+    </div>
+
+    <!-- DERIVATION 1 -->
+    <article class="derivation-card" id="deriv1" data-cat="part-a">
+      <div class="card-header-bar" onclick="toggleCard('deriv1')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 1 • NCERT Sec 1.5</span>
+          <h3 class="derivation-title">Coulomb's Law in Vector Form &amp; Principle of Superposition</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 10–13</span> • <span>Target: \(\vec{F}_{12} = \frac{1}{4\pi\varepsilon_0}\frac{q_1 q_2}{r^2}\hat{r}_{12}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 3 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\vec{F}_{12} = \frac{1}{4\pi\varepsilon_0}\frac{q_1 q_2}{r_{12}^2} \hat{r}_{12} = -\vec{F}_{21}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('\\vec{F}_{12} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q_1 q_2}{r^2}\\hat{r}_{12}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Let charges \(q_1\) and \(q_2\) be located at position vectors \(\vec{r}_1\) and \(\vec{r}_2\) relative to origin \(O\). The displacement vector from \(q_1\) to \(q_2\) is \(\vec{r}_{21} = \vec{r}_2 - \vec{r}_1\), with unit vector \(\hat{r}_{21} = \frac{\vec{r}_{21}}{r_{21}}\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              The electrostatic force \(\vec{F}_{21}\) exerted on \(q_2\) by \(q_1\) is directed along the line joining them:
+              <div class="math-block">\(\vec{F}_{21} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{r_{21}^2} \hat{r}_{21} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{|\vec{r}_2 - \vec{r}_1|^3} (\vec{r}_2 - \vec{r}_1)\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Similarly, the force exerted on \(q_1\) by \(q_2\) is:
+              <div class="math-block">\(\vec{F}_{12} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{r_{12}^2} \hat{r}_{12} = -\vec{F}_{21} \quad (\text{since } \hat{r}_{12} = -\hat{r}_{21})\)</div>
+              This proves that electrostatic forces obey <strong>Newton's Third Law</strong> of motion.
+            </div>
+          </li>
+        </ol>
+
+        <div class="examiner-box">
+          <div class="examiner-title">💡 Superposition Principle for N Point Charges</div>
+          <p class="examiner-text">
+            The total force on charge \(q_1\) due to \(N-1\) other stationary charges is the vector sum of individual Coulomb forces:
+            \[\vec{F}_1 = \vec{F}_{12} + \vec{F}_{13} + \dots + \vec{F}_{1N} = \frac{q_1}{4\pi\varepsilon_0} \sum_{i=2}^N \frac{q_i}{|\vec{r}_1 - \vec{r}_i|^3} (\vec{r}_1 - \vec{r}_i)\]
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- DERIVATION 2 -->
+    <article class="derivation-card" id="deriv2" data-cat="part-a">
+      <div class="card-header-bar" onclick="toggleCard('deriv2')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 2 • NCERT Sec 1.7</span>
+          <h3 class="derivation-title">Electric Field due to an Isolated Point Charge</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 15–18</span> • <span>Target: \(\vec{E} = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\hat{r}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 2 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\vec{E}(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{r}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('\\vec{E} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q}{r^2}\\hat{r}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Place an infinitesimal positive test charge \(q_0\) at distance \(r\) from source charge \(q\) at origin \(O\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              By Coulomb's law, the force on test charge \(q_0\) is:
+              <div class="math-block">\(\vec{F} = \frac{1}{4\pi\varepsilon_0} \frac{q q_0}{r^2} \hat{r}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Electric field \(\vec{E}\) is defined as the force per unit test charge in the limit \(q_0 \to 0\):
+              <div class="math-block">\(\vec{E} = \lim_{q_0 \to 0} \frac{\vec{F}}{q_0} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{r}\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- ========================================================================= -->
+    <!-- PART B: ELECTRIC DIPOLES & TORQUE -->
+    <!-- ========================================================================= -->
+    <div class="category-divider category-part-b">
+      <h2>Part B: Field of an Electric Dipole &amp; Torque (Sections 1.10 – 1.11)</h2>
+      <div class="category-line"></div>
+    </div>
+
+    <!-- DERIVATION 3 -->
+    <article class="derivation-card" id="deriv3" data-cat="part-b">
+      <div class="card-header-bar" onclick="toggleCard('deriv3')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 3 • NCERT Sec 1.10.1 (a)</span>
+          <h3 class="derivation-title">Electric Field of Dipole on the Axial Line (End-On Position)</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 22–24</span> • <span>Target: \(\vec{E}_{\text{axial}} = \frac{1}{4\pi\varepsilon_0}\frac{2\vec{p}}{r^3}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\vec{E}_{\text{axial}} = \frac{1}{4\pi\varepsilon_0} \frac{2\vec{p} r}{(r^2 - a^2)^2} \xrightarrow{r \gg a} \frac{1}{4\pi\varepsilon_0} \frac{2\vec{p}}{r^3}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('\\vec{E}_{\\text{axial}} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{2\\vec{p}}{r^3}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📐 Diagram: Axial Line Field</div>
+        <div class="diagram-container">
+          <svg viewBox="0 0 650 120" width="100%" height="120" style="max-width:600px;">
+            <line x1="40" y1="60" x2="600" y2="60" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3"/>
+            <!-- Charge -q -->
+            <circle cx="120" cy="60" r="10" fill="#e11d48"/>
+            <text x="120" y="65" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">-q</text>
+            <!-- Center O -->
+            <circle cx="200" cy="60" r="4" fill="var(--accent-gold)"/>
+            <text x="200" y="80" text-anchor="middle" fill="var(--accent-gold)" font-size="11" font-weight="bold">O</text>
+            <!-- Charge +q -->
+            <circle cx="280" cy="60" r="10" fill="#0284c7"/>
+            <text x="280" y="65" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">+q</text>
+            <!-- Point P -->
+            <circle cx="460" cy="60" r="6" fill="#04AA6D"/>
+            <text x="460" y="45" text-anchor="middle" fill="var(--text-main)" font-size="12" font-weight="bold">P (Axial)</text>
+            <!-- E+ vector -->
+            <line x1="460" y1="60" x2="550" y2="60" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)"/>
+            <text x="505" y="50" fill="#0284c7" font-weight="bold" font-size="11">E₊ ➔</text>
+            <!-- E- vector -->
+            <line x1="460" y1="60" x2="410" y2="60" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arrow)"/>
+            <text x="430" y="80" fill="#e11d48" font-weight="bold" font-size="11">◀ E₋</text>
+          </svg>
+          <div class="diagram-caption">Figure 1.1: Axial electric field calculation at point \(P\) distance \(r\) from midpoint \(O\). Since \(P\) is closer to \(+q\), \(E_+ > E_-\).</div>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Consider an electric dipole consisting of charges \(-q\) and \(+q\) separated by distance \(2a\). Point \(P\) lies on the dipole axis at distance \(r\) from center \(O\).
+              <br>• Distance from \(+q\) to \(P = r - a\)
+              <br>• Distance from \(-q\) to \(P = r + a\)
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              Electric field due to \(+q\) (directed away from dipole):
+              <div class="math-block">\(\vec{E}_+ = \frac{1}{4\pi\varepsilon_0} \frac{q}{(r - a)^2} \hat{p}\)</div>
+              Electric field due to \(-q\) (directed toward dipole):
+              <div class="math-block">\(\vec{E}_- = -\frac{1}{4\pi\varepsilon_0} \frac{q}{(r + a)^2} \hat{p}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Net electric field \(\vec{E}_{\text{axial}} = \vec{E}_+ + \vec{E}_-\):
+              <div class="math-block">\(\vec{E}_{\text{axial}} = \frac{q}{4\pi\varepsilon_0} \left[ \frac{1}{(r - a)^2} - \frac{1}{(r + a)^2} \right] \hat{p} = \frac{q}{4\pi\varepsilon_0} \left[ \frac{(r + a)^2 - (r - a)^2}{(r^2 - a^2)^2} \right] \hat{p}\)</div>
+              Since \((r+a)^2 - (r-a)^2 = 4ar\):
+              <div class="math-block">\(\vec{E}_{\text{axial}} = \frac{q (4ar)}{4\pi\varepsilon_0 (r^2 - a^2)^2} \hat{p} = \frac{1}{4\pi\varepsilon_0} \frac{2(2qa) r}{(r^2 - a^2)^2} \hat{p}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">4</span>
+            <div class="step-text">
+              Substitute electric dipole moment \(\vec{p} = 2qa \hat{p}\):
+              <div class="math-block">\(\vec{E}_{\text{axial}} = \frac{1}{4\pi\varepsilon_0} \frac{2\vec{p} r}{(r^2 - a^2)^2}\)</div>
+              For a short dipole (\(r \gg a\)), neglect \(a^2\) in denominator:
+              <div class="math-block">\(\vec{E}_{\text{axial}} = \frac{1}{4\pi\varepsilon_0} \frac{2\vec{p}}{r^3}\)</div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="examiner-box">
+          <div class="examiner-title">💡 Direction Insight</div>
+          <p class="examiner-text">
+            On the axial line, the net electric field \(\vec{E}_{\text{axial}}\) is always in the <strong>same direction as the electric dipole moment \(\vec{p}\)</strong>.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- DERIVATION 4 -->
+    <article class="derivation-card" id="deriv4" data-cat="part-b">
+      <div class="card-header-bar" onclick="toggleCard('deriv4')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 4 • NCERT Sec 1.10.1 (b)</span>
+          <h3 class="derivation-title">Electric Field of Dipole on the Equatorial Line (Broadside-On Position)</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 24–25</span> • <span>Target: \(\vec{E}_{\text{eq}} = -\frac{1}{4\pi\varepsilon_0}\frac{\vec{p}}{r^3}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\vec{E}_{\text{eq}} = -\frac{1}{4\pi\varepsilon_0} \frac{\vec{p}}{(r^2 + a^2)^{3/2}} \xrightarrow{r \gg a} -\frac{1}{4\pi\varepsilon_0} \frac{\vec{p}}{r^3}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('\\vec{E}_{\\text{eq}} = -\\frac{1}{4\\pi\\varepsilon_0}\\frac{\\vec{p}}{r^3}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📐 Diagram: Equatorial Cancellation</div>
+        <div class="diagram-container">
+          <svg viewBox="0 0 500 180" width="100%" height="180" style="max-width:480px;">
+            <!-- Base Line -->
+            <line x1="120" y1="140" x2="360" y2="140" stroke="var(--text-muted)" stroke-width="2"/>
+            <circle cx="120" cy="140" r="10" fill="#e11d48"/>
+            <text x="120" y="145" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">-q</text>
+
+            <circle cx="240" cy="140" r="4" fill="var(--accent-gold)"/>
+            <text x="240" y="160" text-anchor="middle" fill="var(--accent-gold)" font-size="11" font-weight="bold">O</text>
+
+            <circle cx="360" cy="140" r="10" fill="#0284c7"/>
+            <text x="360" y="145" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">+q</text>
+
+            <!-- Point P on Equatorial Axis -->
+            <circle cx="240" cy="40" r="6" fill="#04AA6D"/>
+            <text x="240" y="25" text-anchor="middle" fill="var(--text-main)" font-size="12" font-weight="bold">P (Equatorial)</text>
+            <line x1="240" y1="140" x2="240" y2="40" stroke="var(--accent-gold)" stroke-width="1.5" stroke-dasharray="3"/>
+            <text x="225" y="90" fill="var(--accent-gold)" font-size="11" font-weight="bold">r</text>
+
+            <!-- Rays from charges to P -->
+            <line x1="120" y1="140" x2="240" y2="40" stroke="#e11d48" stroke-width="1.5"/>
+            <line x1="360" y1="140" x2="240" y2="40" stroke="#0284c7" stroke-width="1.5"/>
+
+            <!-- Resultant Field vector to the left -->
+            <line x1="240" y1="40" x2="160" y2="40" stroke="#04AA6D" stroke-width="3" marker-end="url(#arrow)"/>
+            <text x="200" y="32" fill="#04AA6D" font-weight="bold" font-size="11">◀ E_net</text>
+          </svg>
+          <div class="diagram-caption">Figure 1.2: Vertical sine components cancel by symmetry (\(E_+\sin\theta = E_-\sin\theta\)); horizontal cosine components add together in direction opposite to \(\vec{p}\).</div>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Point \(P\) lies on the equatorial bisector at distance \(r\) from center \(O\). Distance from each charge to \(P\) is identical by Pythagoras theorem:
+              <div class="math-block">\(d = \sqrt{r^2 + a^2}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              Magnitudes of electric fields due to \(+q\) and \(-q\) are equal:
+              <div class="math-block">\(E_+ = E_- = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2 + a^2}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              <strong>Resolving Components:</strong>
+              <br>• The components perpendicular to dipole axis (\(E_+\sin\theta\) and \(E_-\sin\theta\)) are equal and opposite, so they <strong>cancel out</strong>.
+              <br>• The components parallel to dipole axis add up in direction opposite to \(\hat{p}\):
+              <div class="math-block">\(E_{\text{net}} = E_+\cos\theta + E_-\cos\theta = 2 E_+ \cos\theta\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">4</span>
+            <div class="step-text">
+              From geometry, \(\cos\theta = \frac{a}{\sqrt{r^2 + a^2}}\):
+              <div class="math-block">\(E_{\text{net}} = 2 \left( \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2 + a^2} \right) \left( \frac{a}{\sqrt{r^2 + a^2}} \right) = \frac{1}{4\pi\varepsilon_0} \frac{2qa}{(r^2 + a^2)^{3/2}}\)</div>
+              Since \(\vec{p} = 2qa \hat{p}\) and the net field points opposite to \(\hat{p}\):
+              <div class="math-block">\(\vec{E}_{\text{eq}} = -\frac{1}{4\pi\varepsilon_0} \frac{\vec{p}}{(r^2 + a^2)^{3/2}} \xrightarrow{r \gg a} -\frac{1}{4\pi\varepsilon_0} \frac{\vec{p}}{r^3}\)</div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="examiner-box">
+          <div class="examiner-title">💡 The 2:1 Golden Ratio</div>
+          <p class="examiner-text">
+            For a short dipole at equal distances \(r\):
+            \[E_{\text{axial}} = 2 \cdot E_{\text{eq}}\]
+            Axial field is twice the equatorial field, and points in opposite directions relative to \(\vec{p}\).
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- DERIVATION 5 -->
+    <article class="derivation-card" id="deriv5" data-cat="part-b">
+      <div class="card-header-bar" onclick="toggleCard('deriv5')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 5 • NCERT Sec 1.10.1 Ext</span>
+          <h3 class="derivation-title">Electric Field of Dipole at Any General Point \((r, \theta)\)</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 General Formulation</span> • <span>Target: \(E = \frac{p}{4\pi\varepsilon_0 r^3}\sqrt{3\cos^2\theta + 1}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(E = \frac{p}{4\pi\varepsilon_0 r^3}\sqrt{3\cos^2\theta + 1} \quad \text{and} \quad \tan\alpha = \frac{1}{2}\tan\theta\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('E = \\frac{p}{4\\pi\\varepsilon_0 r^3}\\sqrt{3\\cos^2\\theta + 1}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Resolve dipole moment vector \(\vec{p}\) into two mutually perpendicular components:
+              <br>• \(p\cos\theta\) along radial direction \(\vec{r}\) (point \(P\) is on axial line of this component).
+              <br>• \(p\sin\theta\) perpendicular to \(\vec{r}\) (point \(P\) is on equatorial line of this component).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              Using the axial and equatorial results for short dipole:
+              <div class="math-block">\(E_r = \frac{1}{4\pi\varepsilon_0} \frac{2p\cos\theta}{r^3} \quad \text{and} \quad E_\theta = \frac{1}{4\pi\varepsilon_0} \frac{p\sin\theta}{r^3}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              The two components are mutually perpendicular. The resultant electric field magnitude:
+              <div class="math-block">\(E = \sqrt{E_r^2 + E_\theta^2} = \frac{p}{4\pi\varepsilon_0 r^3} \sqrt{(2\cos\theta)^2 + (\sin\theta)^2} = \frac{p}{4\pi\varepsilon_0 r^3}\sqrt{4\cos^2\theta + \sin^2\theta}\)</div>
+              Substitute \(\sin^2\theta = 1 - \cos^2\theta\):
+              <div class="math-block">\(E = \frac{p}{4\pi\varepsilon_0 r^3} \sqrt{3\cos^2\theta + 1}\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- DERIVATION 6 -->
+    <article class="derivation-card" id="deriv6" data-cat="part-b">
+      <div class="card-header-bar" onclick="toggleCard('deriv6')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 6 • NCERT Sec 1.11</span>
+          <h3 class="derivation-title">Torque on an Electric Dipole in a Uniform External Field</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 25–27</span> • <span>Target: \(\vec{\tau} = \vec{p} \times \vec{E}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 3 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\vec{\tau} = \vec{p} \times \vec{E} \implies \tau = p E \sin\theta\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('\\vec{\\tau} = \\vec{p} \\times \\vec{E}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              In a uniform field \(\vec{E}\), force on \(+q\) is \(\vec{F}_+ = +q\vec{E}\) and on \(-q\) is \(\vec{F}_- = -q\vec{E}\).
+              <br>Net Translational Force \(\vec{F}_{\text{net}} = +q\vec{E} - q\vec{E} = 0\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              Since the lines of action of the two equal and opposite forces do not coincide, they constitute a couple.
+              <br>Perpendicular distance between lines of action = \(2a\sin\theta\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Magnitude of torque = \(\text{Force} \times \text{Perpendicular arm}\):
+              <div class="math-block">\(\tau = q E (2a\sin\theta) = (2qa) E \sin\theta = p E \sin\theta\)</div>
+              In vector notation:
+              <div class="math-block">\(\vec{\tau} = \vec{p} \times \vec{E}\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- ========================================================================= -->
+    <!-- PART C: GAUSS'S LAW & FLUX -->
+    <!-- ========================================================================= -->
+    <div class="category-divider category-part-c">
+      <h2>Part C: Electric Flux &amp; Gauss's Law (Section 1.13)</h2>
+      <div class="category-line"></div>
+    </div>
+
+    <!-- DERIVATION 7 -->
+    <article class="derivation-card" id="deriv7" data-cat="part-c">
+      <div class="card-header-bar" onclick="toggleCard('deriv7')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 7 • NCERT Sec 1.13</span>
+          <h3 class="derivation-title">Gauss's Law Proof for a Point Charge inside a Closed Surface</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 29–33</span> • <span>Target: \(\Phi = \oint \vec{E}\cdot d\vec{A} = \frac{q_{\text{enc}}}{\varepsilon_0}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 3 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\Phi_E = \oint_S \vec{E} \cdot d\vec{A} = \frac{q_{\text{enc}}}{\varepsilon_0}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('\\Phi = \\oint \\vec{E} \\cdot d\\vec{A} = \\frac{q}{\\varepsilon_0}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Consider a single point charge \(q\) situated at the center of a spherical Gaussian surface of radius \(r\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              By symmetry, the electric field \(\vec{E}\) has the same magnitude at every point on the sphere and points radially outward:
+              <div class="math-block">\(\vec{E} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{r}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Area vector \(d\vec{A} = dA \hat{r}\). Since \(\vec{E} \parallel d\vec{A}\), \(\vec{E} \cdot d\vec{A} = E dA\):
+              <div class="math-block">\(\Phi = \oint \vec{E} \cdot d\vec{A} = \oint E dA = E \oint dA = \left( \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \right) (4\pi r^2) = \frac{q}{\varepsilon_0}\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- ========================================================================= -->
+    <!-- PART D: APPLICATIONS OF GAUSS'S LAW -->
+    <!-- ========================================================================= -->
+    <div class="category-divider category-part-d">
+      <h2>Part D: Applications of Gauss's Law (Section 1.14)</h2>
+      <div class="category-line"></div>
+    </div>
+
+    <!-- DERIVATION 8 -->
+    <article class="derivation-card" id="deriv8" data-cat="part-d">
+      <div class="card-header-bar" onclick="toggleCard('deriv8')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 8 • NCERT Sec 1.14.1</span>
+          <h3 class="derivation-title">Field due to an Infinitely Long Straight Uniformly Charged Wire</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 34–36</span> • <span>Target: \(E = \frac{\lambda}{2\pi\varepsilon_0 r}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\vec{E} = \frac{\lambda}{2\pi\varepsilon_0 r} \hat{n}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('E = \\frac{\\lambda}{2\\pi\\varepsilon_0 r}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Let an infinitely long straight wire have uniform linear charge density \(\lambda\). By cylindrical symmetry, electric field \(\vec{E}\) is directed radially outward.
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              <strong>Construct Gaussian Surface:</strong> Choose a coaxial cylinder of radius \(r\) and length \(l\).
+              <br>• Flux through flat end caps: \(\Phi_{\text{ends}} = 0\) (since \(\vec{E} \perp d\vec{A}\)).
+              <br>• Flux through curved surface: \(\vec{E} \parallel d\vec{A}\), magnitude \(E\) is constant.
+              <div class="math-block">\(\Phi_{\text{curved}} = E (2\pi r l)\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Total charge enclosed inside the cylinder: \(q_{\text{enc}} = \lambda l\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">4</span>
+            <div class="step-text">
+              Apply Gauss's Law:
+              <div class="math-block">\(\Phi = \frac{q_{\text{enc}}}{\varepsilon_0} \implies E (2\pi r l) = \frac{\lambda l}{\varepsilon_0} \implies E = \frac{\lambda}{2\pi\varepsilon_0 r}\)</div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="examiner-box">
+          <div class="examiner-title">💡 Graph: Distance Dependence</div>
+          <p class="examiner-text">
+            For line charge: \(E \propto \frac{1}{r}\) (falls slower than point charge \(1/r^2\)).
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- DERIVATION 9 -->
+    <article class="derivation-card" id="deriv9" data-cat="part-d">
+      <div class="card-header-bar" onclick="toggleCard('deriv9')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 9 • NCERT Sec 1.14.2</span>
+          <h3 class="derivation-title">Field due to a Uniformly Charged Infinite Plane Sheet</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 36–37</span> • <span>Target: \(E = \frac{\sigma}{2\varepsilon_0}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 3/5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(\vec{E} = \frac{\sigma}{2\varepsilon_0} \hat{n}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('E = \\frac{\\sigma}{2\\varepsilon_0}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Consider an infinite thin plane sheet with uniform surface charge density \(\sigma\). Field \(\vec{E}\) is directed normal to the plane on both sides.
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              <strong>Construct Gaussian Surface:</strong> Choose a cylinder (pillbox) of cross-sectional area \(A\) penetrating through the sheet.
+              <br>• Flux through curved side = \(0\) (since \(\vec{E} \perp d\vec{A}\)).
+              <br>• Flux through both flat end caps = \(E A + E A = 2 E A\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Total charge enclosed inside pillbox: \(q_{\text{enc}} = \sigma A\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">4</span>
+            <div class="step-text">
+              By Gauss's Law:
+              <div class="math-block">\(2 E A = \frac{\sigma A}{\varepsilon_0} \implies E = \frac{\sigma}{2\varepsilon_0}\)</div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="examiner-box">
+          <div class="examiner-title">💡 Distance Independence</div>
+          <p class="examiner-text">
+            Notice that \(E\) is completely independent of distance \(r\) from the sheet! The field remains uniform throughout space.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- DERIVATION 10 -->
+    <article class="derivation-card" id="deriv10" data-cat="part-d">
+      <div class="card-header-bar" onclick="toggleCard('deriv10')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 10 • NCERT Sec 1.14.2 Ext</span>
+          <h3 class="derivation-title">Field between Two Oppositely Charged Parallel Infinite Sheets</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 37–38</span> • <span>Target: \(E = \frac{\sigma}{\varepsilon_0}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 3 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(E_{\text{between}} = \frac{\sigma}{\varepsilon_0}, \quad E_{\text{outside}} = 0\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('E = \\frac{\\sigma}{\\varepsilon_0}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Two parallel infinite plane sheets with surface densities \(+\sigma\) and \(-\sigma\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              In Region I (left of \(+\sigma\)): \(E_I = \frac{\sigma}{2\varepsilon_0} - \frac{\sigma}{2\varepsilon_0} = 0\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              In Region III (right of \(-\sigma\)): \(E_{III} = \frac{\sigma}{2\varepsilon_0} - \frac{\sigma}{2\varepsilon_0} = 0\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">4</span>
+            <div class="step-text">
+              In Region II (between sheets, both fields point from \(+\) to \(-\)):
+              <div class="math-block">\(E_{II} = \frac{\sigma}{2\varepsilon_0} + \frac{\sigma}{2\varepsilon_0} = \frac{\sigma}{\varepsilon_0}\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- DERIVATION 11 -->
+    <article class="derivation-card" id="deriv11" data-cat="part-d">
+      <div class="card-header-bar" onclick="toggleCard('deriv11')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 11 • NCERT Sec 1.14.3</span>
+          <h3 class="derivation-title">Field due to a Uniformly Charged Thin Spherical Shell</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 38–40</span> • <span>Target: \(E = \frac{q}{4\pi\varepsilon_0 r^2} \text{ (outside)}, E = 0 \text{ (inside)}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(E(r) = \begin{cases} \frac{q}{4\pi\varepsilon_0 r^2} = \frac{\sigma R^2}{\varepsilon_0 r^2} & (r > R) \\ 0 & (r < R) \end{cases}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('E = \\frac{q}{4\\pi\\varepsilon_0 r^2} \\text{ (outside)}, E = 0 \\text{ (inside)}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              <strong>Case 1: Field Outside the Shell (\(r > R\)):</strong>
+              Construct a concentric spherical Gaussian surface of radius \(r > R\).
+              <div class="math-block">\(\Phi = \oint \vec{E} \cdot d\vec{A} = E (4\pi r^2)\)</div>
+              By Gauss's Law:
+              <div class="math-block">\(E (4\pi r^2) = \frac{q}{\varepsilon_0} \implies E = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              <strong>Case 2: Field Inside the Shell (\(r < R\)):</strong>
+              Construct a concentric spherical Gaussian surface of radius \(r < R\).
+              Since all charge resides on the outer surface, the enclosed charge is zero: \(q_{\text{enc}} = 0\).
+              <div class="math-block">\(E (4\pi r^2) = \frac{0}{\varepsilon_0} \implies E = 0\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- ========================================================================= -->
+    <!-- PART E: EXTENDED DERIVATIONS -->
+    <!-- ========================================================================= -->
+    <div class="category-divider category-part-e">
+      <h2>Part E: Charged Sphere &amp; Circular Ring (Extended Competency)</h2>
+      <div class="category-line"></div>
+    </div>
+
+    <!-- DERIVATION 12 -->
+    <article class="derivation-card" id="deriv12" data-cat="part-e">
+      <div class="card-header-bar" onclick="toggleCard('deriv12')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 12 • Solid Non-Conducting Sphere</span>
+          <h3 class="derivation-title">Field due to a Uniformly Charged Solid Sphere (Volume Density \(\rho\))</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Extended Syllabus</span> • <span>Target: \(E_{\text{in}} = \frac{\rho r}{3\varepsilon_0}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(E_{\text{inside}} = \frac{q r}{4\pi\varepsilon_0 R^3} = \frac{\rho r}{3\varepsilon_0} \quad (E \propto r)\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('E_{\\text{in}} = \\frac{\\rho r}{3\\varepsilon_0}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              For an insulating solid sphere with uniform volume charge density \(\rho = \frac{q}{\frac{4}{3}\pi R^3}\), inside Gaussian sphere of radius \(r < R\) encloses charge:
+              <div class="math-block">\(q_{\text{enc}} = \rho \left( \frac{4}{3}\pi r^3 \right) = q \left( \frac{r^3}{R^3} \right)\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              Applying Gauss's Law:
+              <div class="math-block">\(E (4\pi r^2) = \frac{q_{\text{enc}}}{\varepsilon_0} = \frac{q r^3}{\varepsilon_0 R^3} \implies E(r) = \frac{q r}{4\pi\varepsilon_0 R^3} = \frac{\rho r}{3\varepsilon_0}\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- DERIVATION 13 -->
+    <article class="derivation-card" id="deriv13" data-cat="part-e">
+      <div class="card-header-bar" onclick="toggleCard('deriv13')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 13 • Circular Ring Axis</span>
+          <h3 class="derivation-title">Electric Field on the Axis of a Uniformly Charged Circular Ring</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Continuous Charge Application</span> • <span>Target: \(E = \frac{q x}{4\pi\varepsilon_0 (x^2+R^2)^{3/2}}\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 5 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(E(x) = \frac{1}{4\pi\varepsilon_0} \frac{q x}{(x^2 + R^2)^{3/2}}\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('E(x) = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q x}{(x^2 + R^2)^{3/2}}')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Consider a ring of radius \(R\) with total charge \(q\). Point \(P\) lies on its axis at distance \(x\) from center \(O\).
+              Distance from any ring charge element \(dq\) to \(P\) is \(r = \sqrt{x^2 + R^2}\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              By symmetry, perpendicular components \(dE\sin\theta\) of diametrically opposite elements cancel out. Only axial components \(dE\cos\theta\) survive:
+              <div class="math-block">\(dE_x = dE \cos\theta = \left( \frac{1}{4\pi\varepsilon_0} \frac{dq}{x^2 + R^2} \right) \left( \frac{x}{\sqrt{x^2 + R^2}} \right) = \frac{x dq}{4\pi\varepsilon_0 (x^2 + R^2)^{3/2}}\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Integrating over the entire ring (\(\int dq = q\)):
+              <div class="math-block">\(E(x) = \frac{q x}{4\pi\varepsilon_0 (x^2 + R^2)^{3/2}}\)</div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="examiner-box">
+          <div class="examiner-title">💡 Maximum Field Position</div>
+          <p class="examiner-text">
+            Setting \(\frac{dE}{dx} = 0\) gives the point of maximum electric field at:
+            \[x = \pm \frac{R}{\sqrt{2}}\]
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- DERIVATION 14 -->
+    <article class="derivation-card" id="deriv14" data-cat="part-e">
+      <div class="card-header-bar" onclick="toggleCard('deriv14')">
+        <div class="header-left">
+          <span class="derivation-num-badge">Derivation 14 • Dipole Rotation</span>
+          <h3 class="derivation-title">Work Done in Rotating an Electric Dipole in Uniform Electric Field</h3>
+          <div class="derivation-ncert-ref">
+            <span>📖 Textbook Pages 26–27</span> • <span>Target: \(W = pE(\cos\theta_1 - \cos\theta_2)\)</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="marks-pill">CBSE 3 Marks</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="target-formula-box">
+          <div>
+            <span class="target-label">Core Master Formula:</span>
+            <div class="target-math">\(W = pE(\cos\theta_1 - \cos\theta_2)\)</div>
+          </div>
+          <button class="copy-formula-btn" onclick="copyText('W = pE(\\cos\\theta_1 - \\cos\\theta_2)')">📋 Copy LaTeX</button>
+        </div>
+
+        <div class="sub-section-title">📝 Step-by-Step Proof</div>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-badge">1</span>
+            <div class="step-text">
+              Restoring torque on dipole at angle \(\theta\): \(\tau = pE\sin\theta\).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">2</span>
+            <div class="step-text">
+              Work done in rotating dipole through \(d\theta\):
+              <div class="math-block">\(dW = \tau d\theta = pE\sin\theta d\theta\)</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-badge">3</span>
+            <div class="step-text">
+              Total work done from \(\theta_1\) to \(\theta_2\):
+              <div class="math-block">\(W = \int_{\theta_1}^{\theta_2} pE\sin\theta d\theta = pE [-\cos\theta]_{\theta_1}^{\theta_2} = pE(\cos\theta_1 - \cos\theta_2)\)</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- SVG Arrow Marker Definitions -->
+  <svg style="position:absolute; width:0; height:0;">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#04AA6D"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <!-- Bottom Navigation Bar with Theme Toggle -->
+  <footer class="bottom-nav-bar" aria-label="Bottom Navigation">
+    <div class="nav-links-group">
+      <a href="/" class="nav-link-btn">🏠 Home</a>
+      <a href="/?class=12&subject=c12-physics&book=part-1" class="nav-link-btn">⚛️ 12th Physics Hub</a>
+      <a href="https://ncert.nic.in/textbook/pdf/leph101.pdf" target="_blank" rel="noopener noreferrer" class="nav-link-btn">📄 Official leph101.pdf</a>
+      <a href="/privacy" class="nav-link-btn">Privacy</a>
+    </div>
+
+    <button class="theme-toggle-btn" onclick="toggleTheme()" id="bottomThemeBtn" title="Toggle Dark/Light Mode">
+      🌙 Dark Mode
+    </button>
+  </footer>
+
+  <script>
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem('nextsem_theme') || 'dark';
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        updateThemeButtons('🌙 Dark Mode', '☀️ Light');
+      } else {
+        document.body.classList.remove('dark');
+        updateThemeButtons('☀️ Light Mode', '🌙 Dark');
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.body.classList.toggle('dark');
+      const themeName = isDark ? 'dark' : 'light';
+      localStorage.setItem('nextsem_theme', themeName);
+      updateThemeButtons(isDark ? '🌙 Dark Mode' : '☀️ Light Mode', isDark ? '☀️ Light' : '🌙 Dark');
+    }
+
+    function updateThemeButtons(bottomText, topText) {
+      const bBtn = document.getElementById('bottomThemeBtn');
+      const tBtn = document.getElementById('topThemeBtn');
+      if (bBtn) bBtn.textContent = bottomText;
+      if (tBtn) tBtn.textContent = topText;
+    }
+
+    function toggleCard(cardId) {
+      const card = document.getElementById(cardId);
+      if (card) {
+        card.classList.toggle('collapsed');
+      }
+    }
+
+    function expandAll() {
+      document.querySelectorAll('.derivation-card').forEach(c => c.classList.remove('collapsed'));
+    }
+
+    function collapseAll() {
+      document.querySelectorAll('.derivation-card').forEach(c => c.classList.add('collapsed'));
+    }
+
+    function setFilter(cat, btn) {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.derivation-card');
+      const dividers = document.querySelectorAll('.category-divider');
+
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      dividers.forEach(div => {
+        if (cat === 'all' || div.classList.contains(`category-${cat}`)) {
+          div.style.display = 'flex';
+        } else {
+          div.style.display = 'none';
+        }
+      });
+    }
+
+    function filterDerivations() {
+      const query = document.getElementById('derivationSearch').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.derivation-card');
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (!query || text.includes(query)) {
+          card.style.display = 'block';
+          if (query) card.classList.remove('collapsed');
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Formula LaTeX copied to clipboard: ' + text);
+      }).catch(err => {
+        console.error('Copy failed:', err);
+      });
+    }
+
+    applySavedTheme();
+  </script>
+</body>
+</html>

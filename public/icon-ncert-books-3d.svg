@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Lighting Gradients -->
+    <linearGradient id="book1Cover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#04AA6D"/>
+    </linearGradient>
+    <linearGradient id="book1Spine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#038756"/>
+      <stop offset="100%" stop-color="#04AA6D"/>
+    </linearGradient>
+    <linearGradient id="book2Cover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="book2Spine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="book3Cover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="book3Spine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#c1a648"/>
+    </linearGradient>
+    <filter id="bookShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#bookShadow)">
+    <!-- ═══ BOTTOM BOOK (Gold Amber) ═══ -->
+    <g transform="translate(0, 36)">
+      <!-- Pages Base -->
+      <path d="M 46 112 L 152 112 L 164 122 L 58 122 Z" fill="#e2e8f0"/>
+      <path d="M 152 112 L 164 122 L 164 134 L 152 124 Z" fill="#cbd5e1"/>
+      <!-- Book Spine -->
+      <path d="M 36 114 C 36 110, 42 110, 48 114 L 48 136 C 42 132, 36 132, 36 136 Z" fill="url(#book3Spine)"/>
+      <!-- Book Bottom Cover -->
+      <path d="M 48 136 L 154 136 L 166 146 L 60 146 Z" fill="#92400e"/>
+      <!-- Gold Foil Stripe -->
+      <rect x="39" y="118" width="6" height="3" rx="1" fill="url(#goldRibbon)"/>
+      <rect x="39" y="128" width="6" height="3" rx="1" fill="url(#goldRibbon)"/>
+    </g>
+
+    <!-- ═══ MIDDLE BOOK (Sapphire Blue) ═══ -->
+    <g transform="translate(0, 18)">
+      <!-- Pages Base -->
+      <path d="M 44 90 L 150 90 L 162 100 L 56 100 Z" fill="#f1f5f9"/>
+      <path d="M 150 90 L 162 100 L 162 112 L 150 102 Z" fill="#cbd5e1"/>
+      <!-- Book Spine -->
+      <path d="M 34 92 C 34 88, 40 88, 46 92 L 46 114 C 40 110, 34 110, 34 114 Z" fill="url(#book2Spine)"/>
+      <!-- Book Top/Bottom Cover -->
+      <path d="M 46 92 L 152 92 L 164 102 L 58 102 Z" fill="url(#book2Cover)"/>
+      <!-- Foil Accents -->
+      <rect x="37" y="96" width="6" height="3" rx="1" fill="#93c5fd"/>
+      <rect x="37" y="106" width="6" height="3" rx="1" fill="#93c5fd"/>
+    </g>
+
+    <!-- ═══ TOP BOOK (Emerald Green Master) ═══ -->
+    <g transform="translate(0, 0)">
+      <!-- Pages Base -->
+      <path d="M 42 68 L 148 68 L 160 78 L 54 78 Z" fill="#ffffff"/>
+      <path d="M 148 68 L 160 78 L 160 90 L 148 80 Z" fill="#cbd5e1"/>
+      <line x1="149" y1="72" x2="159" y2="82" stroke="#94a3b8" stroke-width="0.8"/>
+      <line x1="149" y1="76" x2="159" y2="86" stroke="#94a3b8" stroke-width="0.8"/>
+
+      <!-- Book Spine -->
+      <path d="M 32 70 C 32 66, 38 66, 44 70 L 44 92 C 38 88, 32 88, 32 92 Z" fill="url(#book1Spine)"/>
+      
+      <!-- Top Cover (Isometric Face) -->
+      <path d="M 44 70 L 150 70 L 162 80 L 56 80 Z" fill="url(#book1Cover)"/>
+      
+      <!-- Subtle Cover Emblem -->
+      <circle cx="103" cy="75" r="3" fill="#ffffff" fill-opacity="0.6"/>
+      
+      <!-- Gold Spine Bands -->
+      <rect x="35" y="74" width="6" height="3" rx="1" fill="url(#goldRibbon)"/>
+      <rect x="35" y="84" width="6" height="3" rx="1" fill="url(#goldRibbon)"/>
+
+      <!-- Floating Ribbon Bookmark -->
+      <path d="M 140 70 L 140 102 L 145 97 L 150 102 L 150 70 Z" fill="url(#goldRibbon)"/>
+    </g>
+  </g>
+</svg>

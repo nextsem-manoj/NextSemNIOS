@@ -1,0 +1,155 @@
+{
+  "version": 2,
+  "name": "ncert-solutions-by-nextsem",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/santoor-class5-ch6-what-a-tank-worksheet",
+      "destination": "/santoor-class5-ch6-what-a-tank-worksheet.html"
+    },
+    {
+      "source": "/curiosity-class7-ch6-adolescence-worksheet",
+      "destination": "/curiosity-class7-ch6-adolescence-worksheet.html"
+    },
+    {
+      "source": "/ganita-class7-ch6-number-play-mcq",
+      "destination": "/ganita-class7-ch6-number-play-mcq.html"
+    },
+    {
+      "source": "/science-class9-ch3-tissues-in-action-difficult-mcq",
+      "destination": "/science-class9-ch3-tissues-in-action-difficult-mcq.html"
+    },
+    {
+      "source": "/class6-7-easy-mcq-practice",
+      "destination": "/class6-7-easy-mcq-practice.html"
+    },
+    {
+      "source": "/class6-7-english-comprehension-passage",
+      "destination": "/class6-7-english-comprehension-passage.html"
+    },
+    {
+      "source": "/english-class7-poorvi-unit1-learning-together-mcq",
+      "destination": "/english-class7-poorvi-unit1-learning-together-mcq.html"
+    },
+    {
+      "source": "/class7-social-science-ch2-understanding-weather-mcq",
+      "destination": "/class7-social-science-ch2-understanding-weather-mcq.html"
+    },
+    {
+      "source": "/science-class7-midterm-practice-paper-solutions",
+      "destination": "/science-class7-midterm-practice-paper-solutions.html"
+    },
+    {
+      "source": "/maths-class8-ch7-proportional-reasoning-page165-solutions",
+      "destination": "/maths-class8-ch7-proportional-reasoning-page165-solutions.html"
+    },
+    {
+      "source": "/maths-class6-ch6-perimeter-and-area-worksheet",
+      "destination": "/maths-class6-ch6-perimeter-and-area-worksheet.html"
+    },
+    {
+      "source": "/science-class6-ch6-materials-around-us-worksheet",
+      "destination": "/science-class6-ch6-materials-around-us-worksheet.html"
+    },
+    {
+      "source": "/maths-class5-ch6-dairy-farm-worksheet",
+      "destination": "/maths-class5-ch6-dairy-farm-worksheet.html"
+    },
+    {
+      "source": "/maths-class3-ch6-house-of-hundreds-worksheet",
+      "destination": "/maths-class3-ch6-house-of-hundreds-worksheet.html"
+    },
+    {
+      "source": "/maths-class2-ch6-festival-decoration-worksheet",
+      "destination": "/maths-class2-ch6-festival-decoration-worksheet.html"
+    },
+    {
+      "source": "/hindi-class7-ch1-maa-kah-ek-kahani-fill-in-the-blanks",
+      "destination": "/hindi-class7-ch1-maa-kah-ek-kahani-fill-in-the-blanks.html"
+    },
+    {
+      "source": "/hindi-class9-grammar-complete-mastery",
+      "destination": "/hindi-class9-grammar-complete-mastery.html"
+    },
+    {
+      "source": "/middle-school-doubt-diagnostic-studio",
+      "destination": "/middle-school-doubt-diagnostic-studio.html"
+    },
+    {
+      "source": "/doubt-studio",
+      "destination": "/middle-school-doubt-diagnostic-studio.html"
+    },
+    {
+      "source": "/merge",
+      "destination": "/merge.html"
+    },
+    {
+      "source": "/bilingual-pdf-merger",
+      "destination": "/bilingual-pdf-merger.html"
+    },
+    {
+      "source": "/kids-kg",
+      "destination": "/kids-kg.html"
+    },
+    {
+      "source": "/kids",
+      "destination": "/kids-kg.html"
+    },
+    {
+      "source": "/kids-foundational-worksheet",
+      "destination": "/kids-foundational-worksheet.html"
+    },
+    {
+      "source": "/kids-month",
+      "destination": "/kids-month.html"
+    },
+    {
+      "source": "/kids-1month-worksheets",
+      "destination": "/kids-1month-worksheets.html"
+    },
+    {
+      "source": "/class9",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/class9/:match*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/ts-grewal",
+      "destination": "/ts-grewal-class11.html"
+    },
+    {
+      "source": "/ts-grewal-class11",
+      "destination": "/ts-grewal-class11.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Purchases Book 5-Transactions Master Studio | Class 11 Accountancy</title>
+  <meta name="description" content="Master Class 11 Accountancy Purchases Book with 5 real-life transactions, GST calculations, trade discount deductions, exclusion filter rules, and live ledger postings.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📑</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .container {
+      position: relative; max-width: 1100px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(16, 185, 129, 0.12));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 36px 24px; text-align: center;
+      margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; max-width: 760px; margin: 0 auto; }
+
+    /* Module Navigation */
+    .module-nav {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px;
+    }
+    .mod-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 10px 18px; border-radius: 12px; font-size: 14px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .mod-btn:hover, .mod-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    /* Studio Card */
+    .studio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px; margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      font-size: 20px; font-weight: 800; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px; color: var(--accent-sky);
+    }
+
+    /* Transactions Explorer */
+    .tx-selector-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 20px;
+    }
+    .tx-btn {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px; padding: 12px; text-align: left; cursor: pointer; transition: all 0.2s;
+      color: inherit;
+    }
+    .tx-btn:hover, .tx-btn.active {
+      background: rgba(56, 189, 248, 0.15); border-color: var(--accent-sky);
+    }
+    .tx-date-badge { font-size: 11px; font-weight: 800; color: var(--accent-gold); margin-bottom: 4px; }
+    .tx-name { font-size: 13px; font-weight: 700; }
+
+    /* TX Detail Box */
+    .tx-detail-box {
+      background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px; padding: 20px; margin-bottom: 20px;
+    }
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800;
+      padding: 4px 12px; border-radius: 8px; margin-bottom: 12px;
+    }
+    .status-included { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+    .status-excluded { background: rgba(244, 63, 94, 0.2); color: #fb7185; border: 1px solid #f43f5e; }
+
+    /* Table Styles */
+    .table-container {
+      overflow-x: auto; margin-top: 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    table {
+      width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;
+    }
+    th, td {
+      padding: 12px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); vertical-align: top;
+    }
+    th {
+      background: rgba(15, 23, 42, 0.9); font-weight: 800; color: var(--accent-sky); position: sticky; top: 0;
+    }
+    tr:hover { background: rgba(255, 255, 255, 0.02); }
+    .amount-cell { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+    .total-row { background: rgba(16, 185, 129, 0.1); font-weight: 800; color: #34d399; }
+
+    /* Ledger T-Account */
+    .t-account {
+      background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px; padding: 18px; margin-bottom: 16px;
+    }
+    .t-title {
+      text-align: center; font-size: 15px; font-weight: 800; color: var(--accent-gold);
+      padding-bottom: 8px; border-bottom: 2px solid var(--accent-sky); margin-bottom: 12px;
+    }
+    .t-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .t-side { display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+    .t-entry {
+      display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(255, 255, 255, 0.06); padding-bottom: 4px;
+    }
+
+    /* Verification Box */
+    .verify-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(56, 189, 248, 0.15));
+      border: 1px solid var(--accent-emerald); border-radius: 14px; padding: 20px; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">NCERT Class 11</span>
+      <span style="font-weight: 700; font-size: 15px;">Purchases Book Studio</span>
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/docs/class11_accountancy_purchases_book_5_transactions_practice_solutions.md" class="nav-btn" target="_blank">📄 Full Notes MD</a>
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">💼 Financial Accounting • Subsidiary Books</div>
+      <h1 class="hero-title">Purchases Book: 5 Real-Life Transactions</h1>
+      <p class="hero-subtitle">Master Goods vs Asset classification, Cash exclusion rules, Trade Discount deductions, Multi-Column GST, and Ledger posting equilibrium.</p>
+    </header>
+
+    <!-- Module Selector Tabs -->
+    <div class="module-nav">
+      <button class="mod-btn active" onclick="switchTab('explorer', this)">🔍 1. Transaction Filter Station</button>
+      <button class="mod-btn" onclick="switchTab('pbook', this)">📑 2. Purchases Day Book</button>
+      <button class="mod-btn" onclick="switchTab('ledger', this)">🏛️ 3. Ledger Postings Studio</button>
+      <button class="mod-btn" onclick="switchTab('rules', this)">⚠️ 4. Core Golden Rules</button>
+    </div>
+
+    <!-- 1. Transaction Explorer & Filter Station -->
+    <section id="tab_explorer" class="studio-card">
+      <div class="section-title">🔍 Part 1: Interactive Transaction Inspector & Filter Analysis</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">
+        Click through the 5 real-life transactions of <strong>M/s Nextsem Infotech</strong> to analyze trade discount, GST, and routing logic:
+      </p>
+
+      <div class="tx-selector-grid">
+        <button class="tx-btn active" onclick="showTx(0, this)">
+          <div class="tx-date-badge">📅 April 04</div>
+          <div class="tx-name">M/s Modern Electronics (Credit Laptops)</div>
+        </button>
+        <button class="tx-btn" onclick="showTx(1, this)">
+          <div class="tx-date-badge">📅 April 09</div>
+          <div class="tx-name">M/s Canon Systems (Cash Printers)</div>
+        </button>
+        <button class="tx-btn" onclick="showTx(2, this)">
+          <div class="tx-date-badge">📅 April 15</div>
+          <div class="tx-name">M/s Pioneer Furniture (Credit Chairs)</div>
+        </button>
+        <button class="tx-btn" onclick="showTx(3, this)">
+          <div class="tx-date-badge">📅 April 21</div>
+          <div class="tx-name">M/s Galaxy Silicon (Inter-State SSDs)</div>
+        </button>
+        <button class="tx-btn" onclick="showTx(4, this)">
+          <div class="tx-date-badge">📅 April 28</div>
+          <div class="tx-name">M/s Delhi Digital (Webcams & Headsets)</div>
+        </button>
+      </div>
+
+      <div class="tx-detail-box" id="txDetailContent">
+        <!-- Injected via JS -->
+      </div>
+    </section>
+
+    <!-- 2. Purchases Book Table -->
+    <section id="tab_pbook" class="studio-card" style="display:none;">
+      <div class="section-title">📑 Part 2: Formatted Purchases Day Book (With GST & Freight)</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:14px;">
+        In the books of <strong>M/s Nextsem Infotech & Electronics, New Delhi</strong> for the month of April 2026:
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date (2026)</th>
+              <th>Inv No.</th>
+              <th>Name of Supplier / Particulars</th>
+              <th class="amount-cell">Cost / Purchases (₹)</th>
+              <th class="amount-cell">Input CGST 9% (₹)</th>
+              <th class="amount-cell">Input SGST 9% (₹)</th>
+              <th class="amount-cell">Input IGST 18% (₹)</th>
+              <th class="amount-cell">Freight (₹)</th>
+              <th class="amount-cell">Total Payable (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Apr 04</strong></td>
+              <td>401</td>
+              <td>
+                <strong>M/s Modern Electronics, Delhi</strong><br>
+                <span style="font-size:11px; color:var(--text-muted);">20 Laptops @ ₹30,000 + 15 Monitors @ ₹8,000 less 10% Trade Disc.</span>
+              </td>
+              <td class="amount-cell">6,48,000</td>
+              <td class="amount-cell">58,320</td>
+              <td class="amount-cell">58,320</td>
+              <td class="amount-cell">—</td>
+              <td class="amount-cell">—</td>
+              <td class="amount-cell" style="color:var(--accent-sky);">7,64,640</td>
+            </tr>
+            <tr>
+              <td><strong>Apr 21</strong></td>
+              <td>620</td>
+              <td>
+                <strong>M/s Galaxy Silicon Tech, Bengaluru</strong><br>
+                <span style="font-size:11px; color:var(--text-muted);">40 SSDs @ ₹4,000 + 50 Keyboards @ ₹2,000 less 15% TD + Freight</span>
+              </td>
+              <td class="amount-cell">2,21,000</td>
+              <td class="amount-cell">—</td>
+              <td class="amount-cell">—</td>
+              <td class="amount-cell">39,780</td>
+              <td class="amount-cell">2,000</td>
+              <td class="amount-cell" style="color:var(--accent-sky);">2,62,780</td>
+            </tr>
+            <tr>
+              <td><strong>Apr 28</strong></td>
+              <td>782</td>
+              <td>
+                <strong>M/s Delhi Digital Store, Delhi</strong><br>
+                <span style="font-size:11px; color:var(--text-muted);">30 Webcams @ ₹3,000 + 25 Headsets @ ₹2,000 less 20% TD</span>
+              </td>
+              <td class="amount-cell">1,12,000</td>
+              <td class="amount-cell">10,080</td>
+              <td class="amount-cell">10,080</td>
+              <td class="amount-cell">—</td>
+              <td class="amount-cell">—</td>
+              <td class="amount-cell" style="color:var(--accent-sky);">1,32,160</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3"><strong>Monthly Total $\rightarrow$ Transferred to Purchases A/c (Dr.)</strong></td>
+              <td class="amount-cell">₹9,81,000</td>
+              <td class="amount-cell">₹68,400</td>
+              <td class="amount-cell">₹68,400</td>
+              <td class="amount-cell">₹39,780</td>
+              <td class="amount-cell">₹2,000</td>
+              <td class="amount-cell" style="font-size:15px; color:#34d399;">₹11,59,580</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. Ledger Postings Studio -->
+    <section id="tab_ledger" class="studio-card" style="display:none;">
+      <div class="section-title">🏛️ Part 3: Live Ledger Postings (General & Creditors Ledger)</div>
+      
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+        <!-- General Ledger: Purchases A/c -->
+        <div class="t-account">
+          <div class="t-title">PURCHASES ACCOUNT (Dr.)</div>
+          <div class="t-grid">
+            <div class="t-side">
+              <span style="font-weight:700; color:var(--accent-emerald);">Debit (Dr.)</span>
+              <div class="t-entry">
+                <span>Apr 30: To Sundries as per P.Book</span>
+                <strong>₹9,81,000</strong>
+              </div>
+            </div>
+            <div class="t-side">
+              <span style="font-weight:700; color:var(--text-muted);">Credit (Cr.)</span>
+              <div class="t-entry"><span>(No Entries)</span><span>—</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- General Ledger: Tax A/cs Summary -->
+        <div class="t-account">
+          <div class="t-title">INPUT GST ACCOUNTS (Dr.)</div>
+          <div class="t-grid">
+            <div class="t-side">
+              <span style="font-weight:700; color:var(--accent-sky);">Debit (Dr.)</span>
+              <div class="t-entry"><span>Input CGST A/c</span><strong>₹68,400</strong></div>
+              <div class="t-entry"><span>Input SGST A/c</span><strong>₹68,400</strong></div>
+              <div class="t-entry"><span>Input IGST A/c</span><strong>₹39,780</strong></div>
+            </div>
+            <div class="t-side">
+              <span style="font-weight:700; color:var(--text-muted);">Credit (Cr.)</span>
+              <div class="t-entry"><span>(Asset Balances)</span><span>—</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creditors Ledger -->
+      <div style="margin-top:16px;">
+        <div style="font-weight:800; font-size:15px; margin-bottom:10px; color:var(--accent-gold);">Individual Suppliers' Accounts (Personal Accounts — Cr.):</div>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:14px;">
+          
+          <div class="t-account">
+            <div class="t-title" style="font-size:13px;">M/S MODERN ELECTRONICS</div>
+            <div class="t-side">
+              <div class="t-entry"><span>Apr 04: By Purchases</span><strong>₹6,48,000</strong></div>
+              <div class="t-entry"><span>Apr 04: By Input CGST</span><strong>₹58,320</strong></div>
+              <div class="t-entry"><span>Apr 04: By Input SGST</span><strong>₹58,320</strong></div>
+              <div class="t-entry" style="border-top:1px solid var(--accent-emerald); font-weight:800; color:#34d399; margin-top:4px;">
+                <span>Total Credit Balance</span><span>₹7,64,640</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-account">
+            <div class="t-title" style="font-size:13px;">M/S GALAXY SILICON TECH</div>
+            <div class="t-side">
+              <div class="t-entry"><span>Apr 21: By Purchases</span><strong>₹2,21,000</strong></div>
+              <div class="t-entry"><span>Apr 21: By Input IGST</span><strong>₹39,780</strong></div>
+              <div class="t-entry"><span>Apr 21: By Freight</span><strong>₹2,000</strong></div>
+              <div class="t-entry" style="border-top:1px solid var(--accent-emerald); font-weight:800; color:#34d399; margin-top:4px;">
+                <span>Total Credit Balance</span><span>₹2,62,780</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-account">
+            <div class="t-title" style="font-size:13px;">M/S DELHI DIGITAL STORE</div>
+            <div class="t-side">
+              <div class="t-entry"><span>Apr 28: By Purchases</span><strong>₹1,12,000</strong></div>
+              <div class="t-entry"><span>Apr 28: By Input CGST</span><strong>₹10,080</strong></div>
+              <div class="t-entry"><span>Apr 28: By Input SGST</span><strong>₹10,080</strong></div>
+              <div class="t-entry" style="border-top:1px solid var(--accent-emerald); font-weight:800; color:#34d399; margin-top:4px;">
+                <span>Total Credit Balance</span><span>₹1,32,160</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Verification Button -->
+      <div class="verify-box" style="margin-top:20px;">
+        <button class="nav-btn" onclick="verifyEquilibrium()" style="background:var(--accent-emerald); color:#000; font-weight:800; font-size:15px; margin:0 auto 10px; padding:10px 24px;">
+          ✨ Verify Double Entry Equilibrium
+        </button>
+        <div id="verifyResult" style="font-weight:700; font-size:14px; color:var(--text-main);">
+          Click to verify: Total Debits (₹11,59,580) = Total Credits (₹11,59,580)
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Core Golden Rules -->
+    <section id="tab_rules" class="studio-card" style="display:none;">
+      <div class="section-title">⚠️ Part 4: Purchases Book Golden Rules & Exam Traps</div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
+        <div style="background:rgba(16, 185, 129, 0.1); border:1px solid var(--accent-emerald); border-radius:12px; padding:16px;">
+          <div style="font-weight:800; color:#34d399; margin-bottom:6px;">✅ What is RECORDED:</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            ONLY <strong>Credit purchases of GOODS</strong> (merchandise meant for resale or core production).
+          </p>
+        </div>
+
+        <div style="background:rgba(244, 63, 94, 0.1); border:1px solid var(--accent-rose); border-radius:12px; padding:16px;">
+          <div style="font-weight:800; color:#fb7185; margin-bottom:6px;">❌ Cash Purchases EXCLUDED:</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            Any purchase paid immediately by Cash/Bank is recorded directly in the <strong>Cash Book</strong>.
+          </p>
+        </div>
+
+        <div style="background:rgba(168, 85, 247, 0.1); border:1px solid var(--accent-purple); border-radius:12px; padding:16px;">
+          <div style="font-weight:800; color:#c084fc; margin-bottom:6px;">❌ Asset Purchases EXCLUDED:</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            Credit purchase of capital assets (Furniture, Machinery, Computers for office use) goes to <strong>Journal Proper</strong>.
+          </p>
+        </div>
+
+        <div style="background:rgba(245, 158, 11, 0.1); border:1px solid var(--accent-gold); border-radius:12px; padding:16px;">
+          <div style="font-weight:800; color:#fcd34d; margin-bottom:6px;">💡 Trade Discount Rule:</div>
+          <p style="font-size:13px; color:var(--text-muted);">
+            Deducted immediately from gross invoice value. GST is applied <strong>only on the net discounted cost</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const txData = [
+      {
+        date: 'April 04, 2026',
+        supplier: 'M/s Modern Electronics, Nehru Place, Delhi',
+        inv: 'Invoice No. 401',
+        desc: 'Purchased on credit: 20 Laptops @ ₹30,000 each and 15 Desktop Monitors @ ₹8,000 each. Trade Discount @ 10%, CGST @ 9%, SGST @ 9%.',
+        status: 'INCLUDED',
+        statusClass: 'status-included',
+        statusText: '✅ INCLUDED in Purchases Book (Credit Purchase of Goods)',
+        calc: `
+          • Gross Value: (20 × ₹30,000) + (15 × ₹8,000) = ₹6,00,000 + ₹1,20,000 = <strong>₹7,20,000</strong><br>
+          • Less: 10% Trade Discount = <strong>(-) ₹72,000</strong><br>
+          • Net Cost (Taxable Value) = <strong>₹6,48,000</strong><br>
+          • Add: Input CGST @ 9% on ₹6,48,000 = <strong>₹58,320</strong><br>
+          • Add: Input SGST @ 9% on ₹6,48,000 = <strong>₹58,320</strong><br>
+          • Total Invoice Payable = <strong>₹7,64,640</strong>
+        `
+      },
+      {
+        date: 'April 09, 2026',
+        supplier: 'M/s Canon Systems, Delhi',
+        inv: 'Cash Memo No. 812',
+        desc: 'Purchased 5 Laser Printers @ ₹12,000 each for CASH.',
+        status: 'EXCLUDED',
+        statusClass: 'status-excluded',
+        statusText: '❌ EXCLUDED from Purchases Book $\\rightarrow$ Routed to Cash Book',
+        calc: `
+          • Reason: This is an immediate <strong>CASH transaction</strong>.<br>
+          • Accounting Routing: Entered directly in <strong>Cash Book (Payments Side)</strong> as:<br>
+          &nbsp;&nbsp;<em>"By Purchases A/c ₹60,000"</em>.<br>
+          • Purchases Book only records credit purchases.
+        `
+      },
+      {
+        date: 'April 15, 2026',
+        supplier: 'M/s Pioneer Furniture Mart, Noida (U.P.)',
+        inv: 'Invoice No. 915',
+        desc: 'Purchased on credit: 4 Executive Office Chairs @ ₹5,000 each & 2 Workstations @ ₹15,000 each. IGST @ 18%.',
+        status: 'EXCLUDED',
+        statusClass: 'status-excluded',
+        statusText: '❌ EXCLUDED from Purchases Book $\\rightarrow$ Routed to Journal Proper',
+        calc: `
+          • Reason: Office Chairs and Workstations are <strong>Capital Assets (Furniture)</strong> for office use, NOT goods for resale.<br>
+          • Accounting Routing: Recorded in <strong>Journal Proper</strong> as:<br>
+          &nbsp;&nbsp;<em>Furniture A/c Dr. ₹50,000</em><br>
+          &nbsp;&nbsp;<em>Input IGST A/c Dr. ₹9,000</em><br>
+          &nbsp;&nbsp;<em>To M/s Pioneer Furniture Mart ₹59,000</em>
+        `
+      },
+      {
+        date: 'April 21, 2026',
+        supplier: 'M/s Galaxy Silicon Tech, Bengaluru (Karnataka)',
+        inv: 'Invoice No. 620 (Inter-State)',
+        desc: 'Purchased on credit: 40 External SSDs @ ₹4,000 each & 50 Wireless Keyboards @ ₹2,000 each. Trade Discount @ 15%, IGST @ 18%, Freight charges paid ₹2,000.',
+        status: 'INCLUDED',
+        statusClass: 'status-included',
+        statusText: '✅ INCLUDED in Purchases Book (Inter-State Credit Purchase of Goods)',
+        calc: `
+          • Gross Value: (40 × ₹4,000) + (50 × ₹2,000) = ₹1,60,000 + ₹1,00,000 = <strong>₹2,60,000</strong><br>
+          • Less: 15% Trade Discount = <strong>(-) ₹39,000</strong><br>
+          • Net Cost (Taxable Value) = <strong>₹2,21,000</strong><br>
+          • Add: Input IGST @ 18% on ₹2,21,000 = <strong>₹39,780</strong><br>
+          • Add: Freight / Cartage = <strong>₹2,000</strong><br>
+          • Total Invoice Payable = <strong>₹2,62,780</strong>
+        `
+      },
+      {
+        date: 'April 28, 2026',
+        supplier: 'M/s Delhi Digital Store, Delhi',
+        inv: 'Invoice No. 782',
+        desc: 'Purchased on credit: 30 Webcams @ ₹3,000 each & 25 Gaming Headsets @ ₹2,000 each. Trade Discount @ 20%, CGST @ 9%, SGST @ 9%.',
+        status: 'INCLUDED',
+        statusClass: 'status-included',
+        statusText: '✅ INCLUDED in Purchases Book (Credit Purchase of Goods)',
+        calc: `
+          • Gross Value: (30 × ₹3,000) + (25 × ₹2,000) = ₹90,000 + ₹50,000 = <strong>₹1,40,000</strong><br>
+          • Less: 20% Trade Discount = <strong>(-) ₹28,000</strong><br>
+          • Net Cost (Taxable Value) = <strong>₹1,12,000</strong><br>
+          • Add: Input CGST @ 9% on ₹1,12,000 = <strong>₹10,080</strong><br>
+          • Add: Input SGST @ 9% on ₹1,12,000 = <strong>₹10,080</strong><br>
+          • Total Invoice Payable = <strong>₹1,32,160</strong>
+        `
+      }
+    ];
+
+    function showTx(idx, btnEl) {
+      document.querySelectorAll('.tx-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      const tx = txData[idx];
+      document.getElementById('txDetailContent').innerHTML = `
+        <div class="status-badge ${tx.statusClass}">${tx.statusText}</div>
+        <div style="font-size:16px; font-weight:800; margin-bottom:4px;">${tx.supplier}</div>
+        <div style="font-size:12px; color:var(--accent-gold); font-weight:700; margin-bottom:10px;">📅 Date: ${tx.date} | 📄 ${tx.inv}</div>
+        <p style="font-size:14px; margin-bottom:14px; line-height:1.6;">${tx.desc}</p>
+        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:14px; font-size:13px; line-height:1.7;">
+          <strong style="color:var(--accent-sky);">🧮 Numerical & Tax Breakdown:</strong><br>
+          ${tx.calc}
+        </div>
+      `;
+    }
+
+    function switchTab(tabName, btnEl) {
+      document.querySelectorAll('.mod-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      ['tab_explorer', 'tab_pbook', 'tab_ledger', 'tab_rules'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+
+      document.getElementById('tab_' + tabName).style.display = 'block';
+    }
+
+    function verifyEquilibrium() {
+      confetti({ particleCount: 60, spread: 70, origin: { y: 0.7 } });
+      document.getElementById('verifyResult').innerHTML = `
+        <div style="color:#34d399; font-size:16px; font-weight:800; margin-top:6px;">
+          🎉 Double Entry Verified Perfectly Balanced!
+        </div>
+        <div style="font-size:13px; color:var(--text-muted); margin-top:4px;">
+          Total Debits: ₹9,81,000 (Purchases) + ₹68,400 (CGST) + ₹68,400 (SGST) + ₹39,780 (IGST) + ₹2,000 (Freight) = <strong>₹11,59,580</strong><br>
+          Total Credits: ₹7,64,640 + ₹2,62,780 + ₹1,32,160 = <strong>₹11,59,580</strong>
+        </div>
+      `;
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    // Init
+    showTx(0, document.querySelector('.tx-btn'));
+  </script>
+</body>
+</html>

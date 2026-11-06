@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>कक्षा 9 विज्ञान (भौतिक विज्ञान) • इकाई मूल्यांकन: गति, बल तथा गति के नियम (हिंदी माध्यम 4-पृष्ठ टेस्ट पेपर एवं उत्तर कुंजी)</title>
+  <meta name="description" content="NCERT कक्षा 9 विज्ञान भौतिकी (गति, बल तथा गति के नियम) 4-पृष्ठ मुद्रण योग्य मूल्यांकन टेस्ट पेपर, विस्तृत आंकिक कार्यक्षेत्र, बड़े फॉन्ट आकार, ग्राफिकल विश्लेषण एवं संपूर्ण शिक्षक उत्तर कुंजी।">
+  <link rel="icon" type="image/svg+xml" href="/app-logo.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-page: #060c18;
+      --bg-card: #0c1527;
+      --bg-card-elevated: #111e38;
+      --border-color: rgba(255, 255, 255, 0.12);
+      --border-subtle: rgba(255, 255, 255, 0.07);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-sub: #cbd5e1;
+      --accent-emerald: #10b981;
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --font-hindi: 'Noto Sans Devanagari', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --base-font-size: 12px;
+    }
+
+    [data-theme="light"] {
+      --bg-page: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-elevated: #f8fafc;
+      --border-color: rgba(0, 0, 0, 0.15);
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-sub: #334155;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-hindi);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── शीर्ष वेब नेविगेशन बार (Screen only) ── */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 12, 24, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    [data-theme="light"] .top-nav {
+      background: rgba(255, 255, 255, 0.96);
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+    .brand-logo-emblem {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #0284c7 0%, #06b6d4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-family: var(--font-sans);
+    }
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.1;
+      font-family: var(--font-sans);
+    }
+    .brand-subtitle {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      font-family: var(--font-sans);
+    }
+
+    /* ब्रेडक्रम ट्रेल */
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+      font-family: var(--font-sans);
+    }
+    .breadcrumb-trail a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .breadcrumb-trail .sep { opacity: 0.4; }
+    .breadcrumb-trail .active { color: var(--text-main); font-weight: 700; }
+
+    /* टूलबार क्रियाएँ */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+      font-family: var(--font-sans);
+      text-decoration: none;
+    }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+    .btn-outline:hover, .btn-outline.active {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    .btn-cyan {
+      background: linear-gradient(135deg, #0284c7 0%, #06b6d4 100%);
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(6, 182, 212, 0.35);
+    }
+    .btn-cyan:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+    .btn-pdf {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: #ffffff;
+    }
+    .theme-toggle-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    /* ── पेपर कैनवास एवं A4 पृष्ठ (Print and Visual Presentation) ── */
+    .paper-canvas-wrap {
+      max-width: 980px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .a4-page {
+      background: #ffffff !important;
+      color: #000000 !important;
+      width: 100%;
+      min-height: 297mm;
+      padding: 9.5mm 12.5mm 8.5mm 12.5mm;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      font-size: var(--base-font-size);
+    }
+
+    /* मोड स्विचिंग: स्टूडेंट मोड बनाम शिक्षक मोड */
+    body.student-mode .solution-box,
+    body.student-mode .ans-tag {
+      display: none !important;
+    }
+    body.teacher-mode .student-write-area,
+    body.teacher-mode .solid-write-line,
+    body.teacher-mode .full-write-line {
+      display: none !important;
+    }
+    body.teacher-mode .solution-box,
+    body.teacher-mode .ans-tag {
+      display: block !important;
+    }
+
+    /* ── प्रिंट स्टाइल शीट ── */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print, .top-nav {
+        display: none !important;
+      }
+      .paper-canvas-wrap {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        gap: 0 !important;
+      }
+      .a4-page {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 9.5mm 12.5mm 8.5mm 12.5mm !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+      }
+      .a4-page:last-child {
+        page-break-after: avoid !important;
+      }
+    }
+  </style>
+</head>
+<body class="student-mode">
+
+  <!-- ── शीर्ष नेविगेशन बार (Screen Controls) ── -->
+  <header class="top-nav no-print">
+    <div style="display: flex; align-items: center; gap: 0.75rem; overflow: hidden;">
+      <a href="/" class="brand-group" title="NextSem Academy">
+        <div class="brand-logo-emblem">⚛</div>
+        <div>
+          <span class="brand-title">StudyGuide</span>
+          <span class="brand-subtitle">by Nextsem</span>
+        </div>
+      </a>
+
+      <div class="breadcrumb-trail">
+        <a href="/">Home</a>
+        <span class="sep">❯</span>
+        <a href="/?view=classes">Classes</a>
+        <span class="sep">❯</span>
+        <a href="/?class=9">Class 9</a>
+        <span class="sep">❯</span>
+        <a href="/?class=9&subject=c9-science">Science</a>
+        <span class="sep">❯</span>
+        <a href="/?class=9&subject=c9-science&chapter=6">Ch 6 & 7 (Motion & Force)</a>
+        <span class="sep">❯</span>
+        <span class="active">4-पृष्ठ हिंदी टेस्ट पेपर</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <!-- मोड स्विच -->
+      <button class="btn btn-outline active" onclick="setMode('student')" id="btn-mode-student" title="छात्र परीक्षा मोड">
+        📝 छात्र प्रश्न-पत्र
+      </button>
+      <button class="btn btn-outline" onclick="setMode('teacher')" id="btn-mode-teacher" title="शिक्षक संपूर्ण उत्तर कुंजी">
+        📖 शिक्षक उत्तर कुंजी
+      </button>
+
+      <!-- फॉन्ट आकार समायोजन -->
+      <button class="btn btn-outline" onclick="adjustFont(-1)" title="फॉन्ट छोटा करें">A-</button>
+      <button class="btn btn-outline" onclick="adjustFont(1)" title="फॉन्ट बड़ा करें">A+</button>
+
+      <!-- पीडीएफ डाउनलोड -->
+      <a href="/pdf/Test-Templates/Class_9_Science_Motion_and_Force_Test_Hindi.pdf" target="_blank" class="btn btn-pdf" title="4-पृष्ठ हिंदी प्रश्न-पत्र PDF डाउनलोड">
+        📥 प्रश्न-पत्र PDF
+      </a>
+      <a href="/pdf/Test-Templates/Class_9_Science_Motion_and_Force_Answer_Key_Hindi.pdf" target="_blank" class="btn btn-outline" style="border-color: #10b981; color: #10b981;" title="4-पृष्ठ शिक्षक उत्तर कुंजी PDF डाउनलोड">
+        📥 उत्तर कुंजी PDF
+      </a>
+      <a href="/pdf/Test-Templates/Class_9_Science_Motion_and_Force_Complete_Pack_Hindi.pdf" target="_blank" class="btn btn-cyan" title="8-पृष्ठ संपूर्ण पैक PDF">
+        📚 8-Page Complete Pack
+      </a>
+
+      <!-- प्रिंट -->
+      <button class="btn btn-outline" onclick="window.print()" title="4-पृष्ठ प्रिंट / सेव करें">
+        🖨️ Print
+      </button>
+
+      <button class="theme-toggle-btn" onclick="toggleTheme()" id="theme-btn" title="थीम बदलें">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- ── 4-पृष्ठ मुद्रण योग्य कैनवास ── -->
+  <main class="paper-canvas-wrap">
+    <iframe id="paper-frame" src="/pdf/Test-Templates/class9_science_motion_force_test_hindi.html" style="width: 100%; height: 1250px; border: 1.5px solid var(--border-color); border-radius: 8px; background: #ffffff;"></iframe>
+  </main>
+
+  <script>
+    function setMode(mode) {
+      const frame = document.getElementById('paper-frame');
+      const btnStudent = document.getElementById('btn-mode-student');
+      const btnTeacher = document.getElementById('btn-mode-teacher');
+
+      if (mode === 'student') {
+        frame.src = '/pdf/Test-Templates/class9_science_motion_force_test_hindi.html';
+        btnStudent.classList.add('active');
+        btnTeacher.classList.remove('active');
+      } else {
+        frame.src = '/pdf/Test-Templates/class9_science_motion_force_answer_key_hindi.html';
+        btnTeacher.classList.add('active');
+        btnStudent.classList.remove('active');
+      }
+    }
+
+    let curFontSize = 12;
+    function adjustFont(delta) {
+      curFontSize = Math.max(10, Math.min(16, curFontSize + delta));
+      const frame = document.getElementById('paper-frame');
+      try {
+        if (frame.contentDocument) {
+          frame.contentDocument.body.style.fontSize = curFontSize + 'px';
+        }
+      } catch(e) {}
+    }
+
+    function toggleTheme() {
+      const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      document.getElementById('theme-btn').textContent = next === 'dark' ? '🌙' : '☀️';
+    }
+  </script>
+</body>
+</html>

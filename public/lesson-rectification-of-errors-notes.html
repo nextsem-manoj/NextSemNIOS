@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 11 Accountancy: Trial Balance & Rectification of Errors (Easy Notes & Solutions) | NextSem</title>
+  <meta name="description" content="Master NCERT Class 11 Financial Accounting-I Ch 6 (keac106) & T.S. Grewal Ch 16: Trial Balance & Rectification of Errors — Complete Easy Notes, 3-Step Rectification Matrix, Suspense Account, Solved Exam Cases & 15 Bilingual MCQs.">
+  <link rel="icon" type="image/svg+xml" href="/app-logo-ncert.svg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3a;
+      --border-card: rgba(16, 185, 129, 0.22);
+      --border-accent: #10b981;
+      
+      --brand-blue: #0284c7;
+      --brand-cyan: #06b6d4;
+      --brand-emerald: #10b981;
+      --brand-gold: #f59e0b;
+      --brand-purple: #8b5cf6;
+      --brand-rose: #f43f5e;
+      
+      --color-dr: #3b82f6;
+      --color-cr: #10b981;
+      --color-err: #ef4444;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --border-accent: #059669;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 70px;
+    }
+
+    /* Top Breadcrumb Navigation Bar */
+    .top-breadcrumb-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #080f20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    body.light-theme .top-breadcrumb-bar {
+      background: #ffffff !important;
+      border-bottom-color: #cbd5e1 !important;
+      color: #475569 !important;
+    }
+    .top-breadcrumb-bar a {
+      color: var(--brand-emerald);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .top-breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-dim);
+    }
+    .top-breadcrumb-bar .current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    /* Header Bar */
+    .header-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 12, 24, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    body.light-theme .header-bar {
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-bottom-color: #cbd5e1 !important;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-emblem {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #059669, #0284c7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+    }
+    .brand-title-group h1 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+    .brand-title-group span {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-emerald);
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .control-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    body.light-theme .control-btn {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    .control-btn:hover {
+      background: var(--brand-emerald);
+      color: #fff;
+      border-color: var(--brand-emerald);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      width: 100%;
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(2, 132, 199, 0.15) 50%, rgba(139, 92, 246, 0.15) 100%);
+      border: 1.5px solid var(--border-card);
+      border-radius: 24px;
+      padding: 32px 28px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .hero-badge-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .badge-primary { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+    .badge-gold { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+    .badge-purple { background: rgba(139, 92, 246, 0.2); color: #c084fc; border: 1px solid #8b5cf6; }
+
+    .hero-title {
+      font-size: 1.85rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 60%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    body.light-theme .hero-title {
+      background: linear-gradient(135deg, #0f172a 0%, #059669 60%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      font-family: var(--font-devanagari);
+    }
+    .pdf-quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pdf-pill {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    body.light-theme .pdf-pill {
+      background: #f1f5f9;
+      color: #0f172a;
+      border-color: #cbd5e1;
+    }
+    .pdf-pill:hover {
+      background: var(--brand-emerald);
+      color: #fff;
+      border-color: var(--brand-emerald);
+      transform: translateY(-2px);
+    }
+
+    /* Section Cards */
+    .note-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 24px 26px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 10px;
+    }
+    body.light-theme .section-header {
+      border-bottom-color: #cbd5e1;
+    }
+    .section-icon {
+      font-size: 1.5rem;
+    }
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    /* Bilingual Typography */
+    .lang-hi {
+      font-family: var(--font-devanagari);
+      color: #a7f3d0;
+      margin-top: 4px;
+      font-size: 0.92rem;
+    }
+    body.light-theme .lang-hi {
+      color: #065f46;
+    }
+
+    /* Formula Matrix Box */
+    .formula-box {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--brand-emerald);
+      padding: 14px 18px;
+      border-radius: 0 14px 14px 0;
+      margin: 14px 0;
+    }
+    .formula-box h4 {
+      color: var(--brand-emerald);
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    /* Grid Table for 4 Error Types */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .custom-table th {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--brand-cyan);
+      font-weight: 800;
+      text-align: left;
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    body.light-theme .custom-table th {
+      background: #e2e8f0;
+      color: #0369a1;
+      border-color: #cbd5e1;
+    }
+    .custom-table td {
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+    }
+    body.light-theme .custom-table td {
+      border-color: #cbd5e1;
+    }
+    .custom-table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* 3-Step Decision Cards */
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .step-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+    .step-num {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--brand-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .step-title {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .step-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Journal Entry Code Block */
+    .journal-box {
+      background: #040812;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #38bdf8;
+      margin: 12px 0;
+      line-height: 1.6;
+    }
+    body.light-theme .journal-box {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: #0369a1;
+    }
+    .journal-box .dr { color: #34d399; font-weight: 700; }
+    .journal-box .cr { color: #f43f5e; font-weight: 700; }
+    .journal-box .narration { color: #94a3b8; font-style: italic; font-size: 0.78rem; }
+
+    /* Interactive Quiz Section */
+    .quiz-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+    .quiz-q {
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+    .quiz-q-hi {
+      font-family: var(--font-devanagari);
+      font-size: 0.88rem;
+      color: #94a3b8;
+      margin-bottom: 12px;
+    }
+    .option-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    @media (min-width: 640px) {
+      .option-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .opt-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.84rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    body.light-theme .opt-btn {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    .opt-btn:hover {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: #10b981;
+    }
+    .opt-btn.correct {
+      background: rgba(16, 185, 129, 0.3) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+      font-weight: 800;
+    }
+    .opt-btn.wrong {
+      background: rgba(239, 68, 68, 0.3) !important;
+      border-color: #ef4444 !important;
+      color: #f87171 !important;
+    }
+    .quiz-explanation {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid #10b981;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+    }
+    body.light-theme .quiz-explanation {
+      background: #ecfdf5;
+      color: #065f46;
+    }
+
+    /* Mobile Bottom Navigation */
+    .mobile-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: rgba(6, 12, 24, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 1000;
+    }
+    body.light-theme .mobile-bottom-nav {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-top-color: #cbd5e1 !important;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.68rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .nav-item.active {
+      color: var(--brand-emerald);
+    }
+    .nav-item span.icon {
+      font-size: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Desktop Breadcrumb Navigation Bar -->
+  <nav class="top-breadcrumb-bar">
+    <a href="/">🏠 Home</a>
+    <span class="sep">❯</span>
+    <a href="/?class=11">Class 11</a>
+    <span class="sep">❯</span>
+    <a href="/?class=11&subject=accountancy">Accountancy</a>
+    <span class="sep">❯</span>
+    <a href="/?class=11&subject=accountancy&book=keac1">Financial Accounting-I</a>
+    <span class="sep">❯</span>
+    <span class="current">Ch 6 / 16: Trial Balance & Rectification of Errors</span>
+  </nav>
+
+  <!-- Sticky Header Bar -->
+  <header class="header-bar">
+    <a href="/" class="brand-wrap">
+      <div class="brand-emblem">⚖️</div>
+      <div class="brand-title-group">
+        <h1>StudyGuide</h1>
+        <span>BY NEXTSEM</span>
+      </div>
+    </a>
+    <div class="header-controls">
+      <button class="control-btn" id="lang-btn" onclick="toggleLanguage()">
+        🌐 <span id="lang-label">Bilingual</span>
+      </button>
+      <button class="control-btn" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <div class="hero-badge-wrap">
+        <span class="badge badge-primary">CBSE & NCERT Class 11</span>
+        <span class="badge badge-gold">T.S. Grewal Ch 16 & NCERT Ch 6</span>
+        <span class="badge badge-purple">Bilingual / द्विभाषी Notes</span>
+      </div>
+      <h2 class="hero-title">Trial Balance & Rectification of Errors</h2>
+      <p class="hero-sub">तलपट एवं अशुद्धियों का शोधन — Comprehensive Easy Notes, Rules, Suspense Account & Practice</p>
+      
+      <div class="pdf-quick-links">
+        <a href="/pdf/Class 11/11th Financial Accounting-I/keac106.pdf" target="_blank" class="pdf-pill">
+          📄 NCERT Ch 6 PDF (keac106) ↗
+        </a>
+        <a href="/pdf/Class 11/T S Grewal/Chapter-16-----Rectification-of-Errors.pdf" target="_blank" class="pdf-pill">
+          📑 T.S. Grewal Ch 16 PDF ↗
+        </a>
+        <a href="#quick-quiz" class="pdf-pill" style="border-color: #f59e0b; color: #fbbf24;">
+          🎯 15 Practice MCQs ↓
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: Meaning & Objectives of Trial Balance -->
+    <section class="note-section">
+      <div class="section-header">
+        <span class="section-icon">📌</span>
+        <h3 class="section-title">1. What is a Trial Balance? (तलपट क्या है?)</h3>
+      </div>
+      <p>
+        A <strong>Trial Balance</strong> is a statement prepared with the debit and credit balances of all ledger accounts on a specific date to verify the <strong>arithmetical accuracy</strong> of the books of accounts.
+      </p>
+      <p class="lang-hi">
+        <strong>तलपट (Trial Balance)</strong> एक निश्चित तिथि पर खाता बही (Ledger) के सभी खातों के नाम (Debit) और जमा (Credit) शेषों को दर्शाने वाला एक विवरण-पत्र है, जिसका मुख्य उद्देश्य खातों की <strong>अंकगणितीय शुद्धता (Arithmetical Accuracy)</strong> की जाँच करना है।
+      </p>
+
+      <div class="formula-box">
+        <h4>Key Takeaway / मुख्य तथ्य:</h4>
+        <p>• Trial Balance is a <strong>statement</strong>, NOT an account. (तलपट एक विवरण-पत्र है, खाता नहीं)।</p>
+        <p>• It is prepared on a specific date, usually at the end of the accounting period.</p>
+        <p>• If Total Debit = Total Credit, it proves arithmetical accuracy, but does NOT guarantee zero errors!</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Classification of Accounting Errors -->
+    <section class="note-section">
+      <div class="section-header">
+        <span class="section-icon">⚠️</span>
+        <h3 class="section-title">2. Types of Accounting Errors (अशुद्धियों के 4 मुख्य प्रकार)</h3>
+      </div>
+      <p>Accountancy errors are classified into 4 major categories based on accounting principles and trial balance agreement:</p>
+
+      <div class="table-responsive">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Type of Error (अशुद्धि का प्रकार)</th>
+              <th>Meaning (अर्थ)</th>
+              <th>Example (उदाहरण)</th>
+              <th>Trial Balance Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Errors of Omission (लोप की अशुद्धियाँ)</strong></td>
+              <td>A transaction is completely or partially omitted from being recorded.<br><span class="lang-hi">लेनदेन को दर्ज करना भूल जाना।</span></td>
+              <td>Goods sold for ₹5,000 completely omitted from Sales Book.<br><span class="lang-hi">₹5,000 की बिक्री दर्ज नहीं हुई।</span></td>
+              <td>• <strong>Complete:</strong> No impact (Agrees)<br>• <strong>Partial:</strong> Disagrees</td>
+            </tr>
+            <tr>
+              <td><strong>2. Errors of Commission (लिपिकीय / हिसाब की अशुद्धि)</strong></td>
+              <td>Error in posting, casting, carrying forward, or calculation.<br><span class="lang-hi">गलत खतौनी, गलत योग या गलत शेष निकालना।</span></td>
+              <td>Purchases book undercast by ₹1,000; or ₹540 posted as ₹450.<br><span class="lang-hi">क्रय बही का योग ₹1,000 कम लगा।</span></td>
+              <td>Disagrees (One-sided errors affect Trial Balance)</td>
+            </tr>
+            <tr>
+              <td><strong>3. Errors of Principle (सैद्धांतिक अशुद्धियाँ)</strong></td>
+              <td>Violation of fundamental accounting principles (Capital vs Revenue).<br><span class="lang-hi">पूँजीगत व आयगत व्यय में भेद न करना।</span></td>
+              <td>Wages paid for installation of Machinery debited to Wages A/c instead of Machinery A/c.<br><span class="lang-hi">मशीन स्थापना की मजदूरी को मजदूरी खाते में लिखा।</span></td>
+              <td><strong>No impact!</strong> Trial Balance will still agree. (तलपट मिल जाएगा)</td>
+            </tr>
+            <tr>
+              <td><strong>4. Compensating Errors (क्षतिपूरक अशुद्धियाँ)</strong></td>
+              <td>Two or more independent errors cancel the effect of each other.<br><span class="lang-hi">एक अशुद्धि दूसरी अशुद्धि के प्रभाव को समाप्त कर दे।</span></td>
+              <td>Ram’s A/c debited with ₹50 less, and Shyam’s A/c debited with ₹50 more.<br><span class="lang-hi">राम का खाता ₹50 कम, श्याम का ₹50 अधिक नाम हुआ।</span></td>
+              <td><strong>No impact!</strong> Trial Balance will still agree.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: The 3-Step Rectification Formula -->
+    <section class="note-section">
+      <div class="section-header">
+        <span class="section-icon">🎯</span>
+        <h3 class="section-title">3. The 3-Step Golden Rule of Rectification (शोधन का 3-चरणीय नियम)</h3>
+      </div>
+      <p>Whenever solving two-sided rectification problems in exams, ALWAYS follow this 3-step magic formula:</p>
+
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-num">Step 1</div>
+          <div class="step-title" style="color: #34d399;">Correct Entry (सही क्या था?)</div>
+          <div class="step-desc">Write down the entry that SHOULD HAVE BEEN passed originally according to rules.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 2</div>
+          <div class="step-title" style="color: #f87171;">Wrong Entry (गलत क्या हुआ?)</div>
+          <div class="step-desc">Write down the incorrect entry that was ACTUALLY recorded in the books.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 3</div>
+          <div class="step-title" style="color: #fbbf24;">Rectifying Entry (सुधार कैसे करें?)</div>
+          <div class="step-desc">Reverse the wrong part and apply the correct part to balance the ledger!</div>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <h4>⚡ Master Memory Rule for Overcast & Undercast:</h4>
+        <p>• <strong>Under-cast (योग कम लगा):</strong> Do the SAME (अगर Debit कम है तो Debit करो, Credit कम है तो Credit करो)।</p>
+        <p>• <strong>Over-cast (योग अधिक लगा):</strong> REVERSE IT (अगर Debit अधिक है तो Credit करो, Credit अधिक है तो Debit करो)।</p>
+      </div>
+    </section>
+
+    <!-- Section 4: What is Suspense Account? -->
+    <section class="note-section">
+      <div class="section-header">
+        <span class="section-icon">⚖️</span>
+        <h3 class="section-title">4. Suspense Account (उचंत / संशय खाता)</h3>
+      </div>
+      <p>
+        When a Trial Balance does not agree and the accountant cannot locate the errors immediately before final accounts preparation, the difference is temporarily placed into a newly opened dummy account called the <strong>Suspense Account</strong>.
+      </p>
+      <p class="lang-hi">
+        जब तलपट के दोनों पक्षों का योग बराबर नहीं आता और अंतिम खाते बनाने का समय आ जाता है, तो अंतर की राशि को अस्थायी रूप से एक काल्पनिक खाते में डाल दिया जाता है, जिसे <strong>उचंत खाता (Suspense Account)</strong> कहते हैं।
+      </p>
+
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-title" style="color: #38bdf8;">Debit Difference in Trial Balance</div>
+          <div class="step-desc">If Total Debit is LESS than Total Credit, Suspense Account is <strong>Debited</strong>. It appears on the <strong>Assets side</strong> of Balance Sheet.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-title" style="color: #c084fc;">Credit Difference in Trial Balance</div>
+          <div class="step-desc">If Total Credit is LESS than Total Debit, Suspense Account is <strong>Credited</strong>. It appears on the <strong>Liabilities side</strong> of Balance Sheet.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: High-Yield Solved Exam Questions (T.S. Grewal & NCERT) -->
+    <section class="note-section">
+      <div class="section-header">
+        <span class="section-icon">📝</span>
+        <h3 class="section-title">5. High-Yield Solved Cases (CBSE Exam Favorites)</h3>
+      </div>
+
+      <!-- Case 1 -->
+      <div style="margin-bottom: 20px;">
+        <h4 style="color: #fbbf24; font-size: 0.98rem; margin-bottom: 4px;">Case 1: Purchases Book Overcast by ₹10,000 (T.S. Grewal Q1)</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">
+          <em>Reasoning:</em> Purchases Account has a natural Debit balance. Since it is overcast (too much debit by ₹10,000), we must <strong>Credit Purchases Account</strong> with ₹10,000.
+        </p>
+        <div class="journal-box">
+          <span class="dr">Suspense A/c .................................... Dr.  ₹10,000</span><br>
+          <span class="cr">&nbsp;&nbsp;&nbsp;&nbsp;To Purchases A/c ....................................  ₹10,000</span><br>
+          <span class="narration">(Being overcasting of purchases book rectified)</span>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div style="margin-bottom: 20px;">
+        <h4 style="color: #fbbf24; font-size: 0.98rem; margin-bottom: 4px;">Case 2: Installation Wages for Machine ₹2,000 debited to Wages A/c (Error of Principle)</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">
+          <em>Reasoning:</em> Wages on installation of a fixed asset is a Capital expenditure and should be debited to Machinery A/c, not Wages A/c.
+        </p>
+        <div class="journal-box">
+          <span class="dr">Machinery A/c .................................... Dr.  ₹2,000</span><br>
+          <span class="cr">&nbsp;&nbsp;&nbsp;&nbsp;To Wages A/c ....................................  ₹2,000</span><br>
+          <span class="narration">(Being installation wages wrongly debited to wages account now rectified)</span>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div style="margin-bottom: 20px;">
+        <h4 style="color: #fbbf24; font-size: 0.98rem; margin-bottom: 4px;">Case 3: Goods sold to Mohan ₹5,000 recorded in Purchases Book</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">
+          <em>Reasoning:</em> Mohan should be debited (₹5,000), Sales should be credited (₹5,000), and wrong Purchases debit must be removed by crediting Purchases (₹5,000).
+        </p>
+        <div class="journal-box">
+          <span class="dr">Mohan's A/c .................................... Dr.  ₹10,000</span><br>
+          <span class="cr">&nbsp;&nbsp;&nbsp;&nbsp;To Sales A/c ....................................  ₹5,000</span><br>
+          <span class="cr">&nbsp;&nbsp;&nbsp;&nbsp;To Purchases A/c ....................................  ₹5,000</span><br>
+          <span class="narration">(Being credit sales wrongly recorded in purchases book now rectified)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Interactive 15-MCQ Quiz -->
+    <section class="note-section" id="quick-quiz">
+      <div class="section-header">
+        <span class="section-icon">🏆</span>
+        <h3 class="section-title">6. Quick Self-Test: 10 High-Yield MCQs (Bilingual)</h3>
+      </div>
+      <p style="margin-bottom: 16px; color: var(--text-muted); font-size: 0.88rem;">
+        Click the correct option to test your understanding. Instant feedback and explanations will appear!
+      </p>
+
+      <div id="quiz-container">
+        <!-- Quiz questions will be dynamically populated -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav">
+    <a href="/" class="nav-item">
+      <span class="icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="/pdf/Class 11/11th Financial Accounting-I/keac106.pdf" target="_blank" class="nav-item">
+      <span class="icon">📄</span>
+      <span>NCERT PDF</span>
+    </a>
+    <a href="/pdf/Class 11/T S Grewal/Chapter-16-----Rectification-of-Errors.pdf" target="_blank" class="nav-item">
+      <span class="icon">📑</span>
+      <span>T.S. Grewal</span>
+    </a>
+    <button class="nav-item active" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+      <span class="icon">📖</span>
+      <span>Notes</span>
+    </button>
+    <button class="nav-item" onclick="toggleTheme()">
+      <span class="icon" id="bottom-theme-icon">🌙</span>
+      <span>Theme</span>
+    </button>
+  </nav>
+
+  <script>
+    // Quiz Questions Data (High-yield CBSE / NCERT questions)
+    const quizData = [
+      {
+        q: "1. Trial Balance is prepared to check the:",
+        qHi: "तलपट तैयार किया जाता है किसकी जाँच करने के लिए?",
+        options: [
+          "Arithmetical accuracy of ledger accounts",
+          "Financial position of business",
+          "Operating profit of firm",
+          "Tax liabilities"
+        ],
+        correct: 0,
+        explanation: "Trial Balance proves only the arithmetical accuracy (equality of debits and credits). It does not show financial position or profit."
+      },
+      {
+        q: "2. Which of the following errors is NOT disclosed by a Trial Balance?",
+        qHi: "निम्नलिखित में से कौन सी अशुद्धि तलपट द्वारा प्रकट नहीं होती है?",
+        options: [
+          "Wrong casting of subsidiary book",
+          "Posting on wrong side of an account",
+          "Error of Principle",
+          "Wrong balancing of an account"
+        ],
+        correct: 2,
+        explanation: "Errors of Principle (e.g. treating capital expense as revenue) affect debit and credit equally, so the Trial Balance still agrees!"
+      },
+      {
+        q: "3. Wages paid for the installation of new machinery debited to Wages A/c is an example of:",
+        qHi: "नई मशीनरी की स्थापना के लिए दी गई मजदूरी को मजदूरी खाते में लिखना किसका उदाहरण है?",
+        options: [
+          "Error of Omission",
+          "Error of Principle",
+          "Compensating Error",
+          "Error of Commission"
+        ],
+        correct: 1,
+        explanation: "Installation expenses are capital expenditure and must be added to the cost of Machinery. Treating it as revenue expense is an Error of Principle (सैद्धांतिक अशुद्धि)."
+      },
+      {
+        q: "4. Purchases Book is overcast by ₹10,000. Before trial balance, the rectification will be:",
+        qHi: "क्रय बही का योग ₹10,000 अधिक लग गया। तलपट बनाने से पहले शोधन होगा:",
+        options: [
+          "Debit Purchases Account with ₹10,000",
+          "Credit Purchases Account with ₹10,000",
+          "Debit Suspense Account with ₹10,000",
+          "Credit Sales Account with ₹10,000"
+        ],
+        correct: 1,
+        explanation: "Purchases A/c has a Debit balance. Since it is overcast, we must Credit Purchases Account by ₹10,000 to reduce the excess debit."
+      },
+      {
+        q: "5. A Suspense Account is opened when:",
+        qHi: "उचंत खाता (Suspense Account) कब खोला जाता है?",
+        options: [
+          "Cash book does not tally with passbook",
+          "Trial balance does not agree before final accounts",
+          "Goods are sold on credit",
+          "Depreciation is charged on machinery"
+        ],
+        correct: 1,
+        explanation: "Suspense Account is a temporary holding account used when the Trial Balance does not agree so that final accounts preparation is not delayed."
+      },
+      {
+        q: "6. If the credit side of the Trial Balance exceeds the debit side, the difference is put to:",
+        qHi: "यदि तलपट का जमा पक्ष नाम पक्ष से अधिक हो, तो अंतर कहाँ लिखा जाएगा?",
+        options: [
+          "Credit side of Suspense Account",
+          "Debit side of Suspense Account",
+          "Profit & Loss Account",
+          "Capital Account"
+        ],
+        correct: 1,
+        explanation: "If Debit is short, the difference must be Debited to Suspense Account (which appears on the Assets side of the Balance Sheet)."
+      },
+      {
+        q: "7. Goods returned by Mohan ₹1,500 were entered in Sales Return Book as ₹150. This is an:",
+        qHi: "मोहन द्वारा ₹1,500 का माल लौटाया गया, जिसे विक्रय वापसी बही में ₹150 लिखा गया। यह है:",
+        options: [
+          "Error of Omission",
+          "Error of Commission",
+          "Error of Principle",
+          "Compensating Error"
+        ],
+        correct: 1,
+        explanation: "Recording or posting wrong figures/amounts is an Error of Commission (लिपिकीय अशुद्धि)."
+      },
+      {
+        q: "8. Errors that cancel out each other's effects on the Trial Balance are known as:",
+        qHi: "वे अशुद्धियाँ जो तलपट पर एक-दूसरे के प्रभाव को निरस्त कर देती हैं, कहलाती हैं:",
+        options: [
+          "Compensating Errors",
+          "Errors of Commission",
+          "Errors of Principle",
+          "Errors of Recording"
+        ],
+        correct: 0,
+        explanation: "Compensating Errors (क्षतिपूरक अशुद्धियाँ) neutralize each other (e.g. ₹100 less debit in one account matched by ₹100 less credit in another)."
+      },
+      {
+        q: "9. ₹5,000 received from Ramesh was credited to Suresh's account. To rectify this:",
+        qHi: "रमेश से प्राप्त ₹5,000 को सुरेश के खाते में जमा कर दिया गया। सुधार के लिए:",
+        options: [
+          "Debit Ramesh, Credit Suresh",
+          "Debit Suresh, Credit Ramesh",
+          "Debit Cash, Credit Ramesh",
+          "Debit Suspense, Credit Suresh"
+        ],
+        correct: 1,
+        explanation: "Suresh was wrongly credited, so Debit Suresh (₹5,000). Ramesh should have been credited, so Credit Ramesh (₹5,000)."
+      },
+      {
+        q: "10. Rectification of an error after the preparation of Final Accounts is done through:",
+        qHi: "अंतिम खाते तैयार होने के बाद अशुद्धि का शोधन किसके माध्यम से किया जाता है?",
+        options: [
+          "Suspense Account",
+          "Profit and Loss Adjustment Account",
+          "Trading Account",
+          "Balance Sheet directly"
+        ],
+        correct: 1,
+        explanation: "In the subsequent accounting year, nominal accounts are rectified using the Profit and Loss Adjustment Account to avoid altering past year's profits."
+      }
+    ];
+
+    function renderQuiz() {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = '';
+
+      quizData.forEach((q, idx) => {
+        const card = document.createElement('div');
+        card.className = 'quiz-card';
+
+        let optionsHtml = '';
+        q.options.forEach((opt, optIdx) => {
+          optionsHtml += `
+            <button class="opt-btn" onclick="checkAnswer(${idx}, ${optIdx}, this)">
+              <span>${String.fromCharCode(65 + optIdx)}.</span>
+              <span>${opt}</span>
+            </button>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="quiz-q">${q.q}</div>
+          <div class="quiz-q-hi">${q.qHi}</div>
+          <div class="option-grid">${optionsHtml}</div>
+          <div class="quiz-explanation" id="exp-${idx}">
+            💡 <strong>Explanation:</strong> ${q.explanation}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function checkAnswer(qIdx, optIdx, btn) {
+      const parent = btn.parentElement;
+      const buttons = parent.querySelectorAll('.opt-btn');
+      const correctIdx = quizData[qIdx].correct;
+
+      // Disable further clicks
+      buttons.forEach(b => b.style.pointerEvents = 'none');
+
+      if (optIdx === correctIdx) {
+        btn.classList.add('correct');
+        confetti({
+          particleCount: 25,
+          spread: 60,
+          origin: { y: 0.85 }
+        });
+      } else {
+        btn.classList.add('wrong');
+        buttons[correctIdx].classList.add('correct');
+      }
+
+      document.getElementById(`exp-${qIdx}`).style.display = 'block';
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      document.getElementById('theme-icon').innerText = isLight ? '☀️' : '🌙';
+      document.getElementById('bottom-theme-icon').innerText = isLight ? '☀️' : '🌙';
+      localStorage.setItem('studyguide_theme', isLight ? 'light' : 'dark');
+    }
+
+    // Language Toggle
+    let currentLang = 'bi';
+    function toggleLanguage() {
+      const hiElements = document.querySelectorAll('.lang-hi, .quiz-q-hi');
+      if (currentLang === 'bi') {
+        currentLang = 'en';
+        document.getElementById('lang-label').innerText = 'English';
+        hiElements.forEach(el => el.style.display = 'none');
+      } else if (currentLang === 'en') {
+        currentLang = 'hi';
+        document.getElementById('lang-label').innerText = 'हिंदी';
+        hiElements.forEach(el => el.style.display = 'block');
+      } else {
+        currentLang = 'bi';
+        document.getElementById('lang-label').innerText = 'Bilingual';
+        hiElements.forEach(el => el.style.display = 'block');
+      }
+    }
+
+    // Initialize
+    window.onload = function() {
+      const savedTheme = localStorage.getItem('studyguide_theme');
+      if (savedTheme === 'light') toggleTheme();
+      renderQuiz();
+    };
+  </script>
+</body>
+</html>
+

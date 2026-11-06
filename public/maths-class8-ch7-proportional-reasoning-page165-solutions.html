@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 8 Maths Chapter 7: Proportional Reasoning - 1 (Page 165 Solved) — Ganita Prakash</title>
+  <meta name="description" content="Complete step-by-step NCERT solutions for Class 8 Mathematics (Ganita Prakash) Chapter 7: Proportional Reasoning - 1, Page 165 (hegp107.pdf). Filter coffee ratios, proportion tests (ad=bc), equivalent ratios, and missing terms.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(245, 158, 11, 0.25);
+      --accent-amber: #f59e0b;
+      --accent-gold: #c1a648;
+      --accent-emerald: #10b981;
+      --accent-green: #04AA6D;
+      --accent-sky: #38bdf8;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --input-bg: #070e1e;
+      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+      --answer-box-bg: rgba(245, 158, 11, 0.08);
+      --answer-box-border: #f59e0b;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --input-bg: #f8fafc;
+      --shadow-card: 0 4px 16px rgba(15, 23, 42, 0.08);
+      --answer-box-bg: #fefce8;
+      --answer-box-border: #d97706;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 90px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(245, 158, 11, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Sticky Navigation Bar */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+      flex-wrap: wrap; gap: 10px;
+    }
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+    .breadcrumb-trail a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .breadcrumb-trail a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #64748b; font-size: 0.75rem; }
+    .breadcrumb-current { color: var(--text-main); font-weight: 800; }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 5px;
+      transition: all 0.2s;
+    }
+    body.light-theme .btn-nav { background: #e2e8f0; border-color: #cbd5e1; }
+    .btn-nav:hover { background: rgba(245, 158, 11, 0.15); border-color: var(--accent-amber); }
+
+    .btn-master-toggle {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      color: #ffffff;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 2px 10px rgba(217, 119, 6, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-master-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+    }
+
+    /* Language Switcher */
+    .lang-toggle-bar {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 2px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #04AA6D;
+      color: #ffffff;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #161208 0%, #291a07 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.4);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(6, 18, 36, 0.4);
+    }
+    body.light-theme .hero-banner {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border-color: #f59e0b;
+    }
+
+    .badge-pill-row {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 14px;
+    }
+    .pill {
+      font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .pill-gold { background: rgba(245, 158, 11, 0.2); border: 1px solid #f59e0b; color: #fbbf24; }
+    .pill-sky { background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #7dd3fc; }
+    .pill-green { background: rgba(4, 170, 109, 0.2); border: 1px solid #04AA6D; color: #34d399; }
+    body.light-theme .pill-gold { color: #b45309; }
+    body.light-theme .pill-sky { color: #0369a1; }
+    body.light-theme .pill-green { color: #047857; }
+
+    .hero-title {
+      font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .hero-subtitle {
+      font-size: 1rem; color: #94a3b8; font-weight: 700; margin-bottom: 12px;
+    }
+    body.light-theme .hero-subtitle { color: #475569; }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 16px;
+      padding: 22px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s;
+    }
+    .card:hover {
+      border-color: var(--accent-amber);
+    }
+
+    .card-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap; gap: 10px;
+    }
+    body.light-theme .card-header { border-bottom-color: #e2e8f0; }
+
+    .card-title {
+      font-size: 1.15rem; font-weight: 900; color: var(--text-main);
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .card-tag {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--accent-amber);
+      color: var(--accent-amber);
+      font-size: 0.75rem; font-weight: 800; padding: 3px 10px; border-radius: 6px;
+    }
+
+    /* Tables */
+    .styled-table {
+      width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9rem;
+    }
+    .styled-table th, .styled-table td {
+      border: 1px solid rgba(255, 255, 255, 0.12); padding: 10px 14px; text-align: left;
+    }
+    body.light-theme .styled-table th, body.light-theme .styled-table td {
+      border-color: #cbd5e1;
+    }
+    .styled-table th { background: rgba(245, 158, 11, 0.12); color: #fbbf24; font-weight: 800; }
+    body.light-theme .styled-table th { background: #fef3c7; color: #b45309; }
+
+    /* Interactive Simulator */
+    .sim-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px dashed rgba(245, 158, 11, 0.4);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 14px 0;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    body.light-theme .sim-box { background: #f8fafc; }
+
+    .slider-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .slider-row label {
+      font-size: 0.85rem; font-weight: 800; min-width: 180px;
+    }
+    .slider-row input[type=range] {
+      flex: 1; accent-color: var(--accent-amber); cursor: pointer;
+    }
+    .slider-val {
+      font-family: 'JetBrains Mono', monospace; font-weight: 800; min-width: 70px; text-align: right; color: var(--accent-sky);
+    }
+
+    /* Collapsible Answer Box */
+    .answer-container {
+      margin-top: 14px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.12);
+      padding-top: 12px;
+    }
+    body.light-theme .answer-container { border-top-color: #e2e8f0; }
+
+    .toggle-answer-btn {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1.5px solid #f59e0b;
+      color: #fbbf24;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: all 0.2s;
+    }
+    body.light-theme .toggle-answer-btn { color: #b45309; }
+    .toggle-answer-btn:hover {
+      background: #f59e0b; color: #000000;
+    }
+
+    .answer-content {
+      display: none;
+      background: var(--answer-box-bg);
+      border: 1.5px solid var(--answer-box-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 12px;
+      animation: fadeIn 0.3s ease;
+    }
+    .answer-content.revealed {
+      display: block;
+    }
+
+    .math-formula {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-sky);
+      margin: 8px 0;
+      color: #7dd3fc;
+    }
+    body.light-theme .math-formula { background: #e0f2fe; color: #0284c7; }
+
+    /* Interactive Proportions Checker */
+    .prop-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 14px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;
+    }
+    body.light-theme .prop-row { background: #f8fafc; border-color: #e2e8f0; }
+    .prop-statement {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 800;
+    }
+    .prop-status-tag {
+      font-size: 0.78rem; font-weight: 900; padding: 4px 10px; border-radius: 6px;
+    }
+    .tag-true { background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #10b981; }
+    .tag-false { background: rgba(244, 63, 94, 0.2); border: 1px solid #f43f5e; color: #f43f5e; }
+
+    /* Print styles */
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; }
+      .bg-glow, .top-nav, .nav-actions, .toggle-answer-btn, .btn-master-toggle, .lang-toggle-bar, .sim-box { display: none !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      .card { border: 1px solid #94a3b8 !important; box-shadow: none !important; page-break-inside: avoid; margin-bottom: 12px !important; }
+      .hero-banner { background: #f8fafc !important; color: #000 !important; border: 1.5px solid #000 !important; }
+      body:not(.print-with-answers) .answer-content { display: none !important; }
+      body.print-with-answers .answer-content { display: block !important; border: 1px solid #000 !important; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-nav">
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?view=classes">Classes</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=8&subject=c8-maths">Class 8 Mathematics (गणित प्रकाश)</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=8&subject=c8-maths">Ch 7: Proportional Reasoning - 1</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Page 165 Solved</span>
+    </nav>
+    <div class="nav-actions">
+      <!-- Master Reveal / Hide All Answers -->
+      <button type="button" class="btn-master-toggle" id="masterToggleBtn" onclick="toggleAllAnswers()">
+        👁️ <span id="masterToggleText">Reveal All Solutions</span>
+      </button>
+
+      <!-- Language Toggle -->
+      <div class="lang-toggle-bar">
+        <button type="button" class="lang-btn active" onclick="setLanguage('bilingual')">द्विभाषी</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('english')">English</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('hindi')">हिंदी</button>
+      </div>
+
+      <!-- Print Options -->
+      <button type="button" class="btn-nav" onclick="printPaper(false)" title="Print blank worksheet">🖨️ Print Worksheet</button>
+      <button type="button" class="btn-nav" onclick="printPaper(true)" title="Print with step-by-step solutions">📄 Print with Solutions</button>
+      <button type="button" class="btn-nav" onclick="toggleTheme()" id="themeBtn">☀️ Light</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="badge-pill-row">
+        <span class="pill pill-gold">NCERT Class 8 Mathematics (गणित प्रकाश)</span>
+        <span class="pill pill-sky">Chapter 7: Proportional Reasoning - 1</span>
+        <span class="pill pill-green">Official Code: hegp107.pdf</span>
+        <span class="pill pill-gold">Page 165 Solved</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="lang-en">Chapter 7: Proportional Reasoning - 1</span>
+        <span class="lang-hi" style="display:block; font-size:1.15rem; margin-top:2px;">अध्याय 7: आनुपातिक तर्कणा - 1 (पेज 165 संपूर्ण हल)</span>
+      </h1>
+      <p class="hero-subtitle">
+        100% Authentic NCERT Textbook Solutions: Filter Coffee Concentration Problem, Table Classification &amp; "Figure it Out" Questions 1, 2, 3 with Mathematical Proofs.
+      </p>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 1: FILTER COFFEE CONCENTRATION PROBLEM & TABLE (PAGE 165) -->
+    <!-- ========================================================================= -->
+    <div class="card" id="part1-coffee">
+      <div class="card-header">
+        <div class="card-title">
+          <span>☕ Part 1: Filter Coffee Ratios &amp; Table</span>
+          <span class="lang-hi">(फ़िल्टर कॉफ़ी अनुपात एवं तालिका)</span>
+        </div>
+        <span class="card-tag">Page 165 • Concept Exploration</span>
+      </div>
+
+      <div style="font-size:0.92rem; line-height:1.7; margin-bottom:14px;">
+        <p><strong>📖 Context from Textbook (पाठ्यपुस्तक से संदर्भ):</strong></p>
+        <p>Manjunath mixes <strong>15 mL of coffee decoction with 35 mL of milk</strong> to make regular filter coffee in his coffee shop. The ratio of decoction to milk is <strong>15 : 35</strong> (or simplified as <strong>3 : 7</strong>).</p>
+        
+        <div style="margin:10px 0; padding-left:10px; border-left:3px solid var(--accent-amber);">
+          <p>• <strong>Stronger coffee:</strong> Manjunath mixes <strong>20 mL of decoction with 30 mL of milk</strong> (ratio 20 : 30 = 2 : 3).<br>
+          <em style="color:#fbbf24;">Question: Why is this coffee stronger?</em></p>
+          <p style="margin-top:6px;">• <strong>Lighter coffee:</strong> Manjunath mixes <strong>10 mL of decoction with 40 mL of milk</strong> (ratio 10 : 40 = 1 : 4).<br>
+          <em style="color:#fbbf24;">Question: Why is this coffee lighter?</em></p>
+        </div>
+      </div>
+
+      <!-- Live Interactive Coffee Simulator -->
+      <div class="sim-box">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <h4 style="font-size:0.9rem; color:var(--accent-amber); font-weight:800;">🧪 Interactive Coffee Strength Tester:</h4>
+          <span id="coffeeStrengthBadge" style="padding:4px 10px; border-radius:6px; font-weight:900; font-size:0.8rem; background:#04AA6D; color:#ffffff;">REGULAR COFFEE (3:7)</span>
+        </div>
+
+        <div class="slider-row">
+          <label>☕ Coffee Decoction (mL):</label>
+          <input type="range" id="decoctionSlider" min="5" max="300" value="15" step="5" oninput="updateCoffeeSim()">
+          <span class="slider-val" id="decoctionVal">15 mL</span>
+        </div>
+        <div class="slider-row">
+          <label>🥛 Milk (mL):</label>
+          <input type="range" id="milkSlider" min="10" max="600" value="35" step="5" oninput="updateCoffeeSim()">
+          <span class="slider-val" id="milkVal">35 mL</span>
+        </div>
+
+        <div style="display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:10px; padding:10px; background:rgba(0,0,0,0.3); border-radius:8px;">
+          <div>Ratio (Decoction : Milk) = <strong id="simRatioText" style="color:#38bdf8;">15 : 35 = 3 : 7</strong></div>
+          <div>Concentration = <strong id="simPercentText" style="color:#10b981;">30.0% Decoction</strong></div>
+        </div>
+      </div>
+
+      <!-- Textbook Table -->
+      <h4 style="font-size:0.95rem; font-weight:800; color:var(--accent-sky); margin:18px 0 8px;">
+        📊 Table Completion from Page 165:
+      </h4>
+      <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:8px;">
+        Write in the last column whether each coffee blend is <strong>Regular</strong>, <strong>Stronger</strong>, or <strong>Lighter</strong> than regular coffee (15 : 35 = 3 : 7 ≈ 0.4286).
+      </p>
+
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Coffee Decoction (in mL)</th>
+            <th>Milk (in mL)</th>
+            <th>Decoction : Milk Ratio (Simplified)</th>
+            <th>Decoction per mL Milk</th>
+            <th>Result (Regular / Strong / Light)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>300</strong></td>
+            <td><strong>600</strong></td>
+            <td>300 : 600 = 1 : 2</td>
+            <td>$$\frac{300}{600} = 0.500$$</td>
+            <td><span style="color:#f59e0b; font-weight:900;">Strong (तेज़ / कड़क)</span></td>
+          </tr>
+          <tr>
+            <td><strong>150</strong></td>
+            <td><strong>500</strong></td>
+            <td>150 : 500 = 3 : 10</td>
+            <td>$$\frac{150}{500} = 0.300$$</td>
+            <td><span style="color:#38bdf8; font-weight:900;">Light (हल्की)</span></td>
+          </tr>
+          <tr>
+            <td><strong>200</strong></td>
+            <td><strong>400</strong></td>
+            <td>200 : 400 = 1 : 2</td>
+            <td>$$\frac{200}{400} = 0.500$$</td>
+            <td><span style="color:#f59e0b; font-weight:900;">Strong (तेज़ / कड़क)</span></td>
+          </tr>
+          <tr>
+            <td><strong>24</strong></td>
+            <td><strong>56</strong></td>
+            <td>24 : 56 = 3 : 7</td>
+            <td>$$\frac{24}{56} = \frac{3}{7} \approx 0.429$$</td>
+            <td><span style="color:#10b981; font-weight:900;">Regular (नियमित / सामान्य)</span></td>
+          </tr>
+          <tr>
+            <td><strong>100</strong></td>
+            <td><strong>300</strong></td>
+            <td>100 : 300 = 1 : 3</td>
+            <td>$$\frac{100}{300} \approx 0.333$$</td>
+            <td><span style="color:#38bdf8; font-weight:900;">Light (हल्की)</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Collapsible Solution & Reason -->
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('coffee-reasons-ans')">👁️ Show Detailed Explanations</button>
+        <div class="answer-content" id="coffee-reasons-ans">
+          <h4 style="color:#fbbf24; margin-bottom:6px;">Scientific &amp; Mathematical Explanations:</h4>
+          
+          <p><strong>1. Why is 20 mL decoction + 30 mL milk coffee stronger?</strong><br>
+          In regular coffee, the ratio of decoction to milk is $\frac{15}{35} = \frac{3}{7} \approx 0.429$ (or $30\%$ decoction in total drink).<br>
+          In this coffee, the ratio is $\frac{20}{30} = \frac{2}{3} \approx 0.667$ (or $40\%$ decoction in total drink).<br>
+          Since $\frac{2}{3} > \frac{3}{7}$, there is more coffee decoction per unit of milk, making it taste <strong>stronger</strong>.</p>
+
+          <p style="margin-top:10px;"><strong>2. Why is 10 mL decoction + 40 mL milk coffee lighter?</strong><br>
+          Here, the ratio is $\frac{10}{40} = \frac{1}{4} = 0.250$ (or $20\%$ decoction in total drink).<br>
+          Since $\frac{1}{4} < \frac{3}{7}$ ($0.250 < 0.429$), there is less coffee decoction per unit of milk, making it taste <strong>lighter / milder</strong>.</p>
+
+          <p style="margin-top:10px;"><strong>3. Mathematical Criterion for the Table:</strong><br>
+          Compare each fraction $\frac{\text{Decoction}}{\text{Milk}}$ to the benchmark fraction $\frac{3}{7} \approx 0.4286$:
+          <ul style="padding-left:20px; margin-top:4px;">
+            <li>Row 1 ($300 : 600$): $\frac{300}{600} = \frac{1}{2} = 0.500 > \frac{3}{7} \implies$ <strong>Stronger</strong></li>
+            <li>Row 2 ($150 : 500$): $\frac{150}{500} = \frac{3}{10} = 0.300 < \frac{3}{7} \implies$ <strong>Lighter</strong></li>
+            <li>Row 3 ($200 : 400$): $\frac{200}{400} = \frac{1}{2} = 0.500 > \frac{3}{7} \implies$ <strong>Stronger</strong></li>
+            <li>Row 4 ($24 : 56$): Dividing both by 8 gives $\frac{3}{7}$, exactly equal to benchmark $\implies$ <strong>Regular</strong></li>
+            <li>Row 5 ($100 : 300$): $\frac{100}{300} = \frac{1}{3} \approx 0.333 < \frac{3}{7} \implies$ <strong>Lighter</strong></li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: FIGURE IT OUT — QUESTION 1 (PAGE 165) -->
+    <!-- ========================================================================= -->
+    <div class="card" id="q1-figure-it-out">
+      <div class="card-header">
+        <div class="card-title">
+          <span>🎯 Figure it Out — Question 1</span>
+        </div>
+        <span class="card-tag">Page 165 • True/False Proportion</span>
+      </div>
+
+      <p style="font-size:0.95rem; font-weight:800; margin-bottom:12px;">
+        <span class="lang-en">1. Circle the following statements of proportion that are true.</span>
+        <span class="lang-hi"><br>1. नीचे दिए गए समानुपात के कथनों में से जो सत्य हैं उन पर घेरा लगाइए:</span>
+      </p>
+
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <!-- (i) -->
+        <div class="prop-row">
+          <div class="prop-statement">(i) 4 : 7 :: 12 : 21</div>
+          <span class="prop-status-tag tag-true">✅ TRUE (सत्य)</span>
+        </div>
+        <!-- (ii) -->
+        <div class="prop-row">
+          <div class="prop-statement">(ii) 8 : 3 :: 24 : 6</div>
+          <span class="prop-status-tag tag-false">❌ FALSE (असत्य)</span>
+        </div>
+        <!-- (iii) -->
+        <div class="prop-row">
+          <div class="prop-statement">(iii) 7 : 12 :: 12 : 7</div>
+          <span class="prop-status-tag tag-false">❌ FALSE (असत्य)</span>
+        </div>
+        <!-- (iv) -->
+        <div class="prop-row">
+          <div class="prop-statement">(iv) 21 : 6 :: 35 : 10</div>
+          <span class="prop-status-tag tag-true">✅ TRUE (सत्य)</span>
+        </div>
+        <!-- (v) -->
+        <div class="prop-row">
+          <div class="prop-statement">(v) 12 : 18 :: 28 : 12</div>
+          <span class="prop-status-tag tag-false">❌ FALSE (असत्य)</span>
+        </div>
+        <!-- (vi) -->
+        <div class="prop-row">
+          <div class="prop-statement">(vi) 24 : 8 :: 9 : 3</div>
+          <span class="prop-status-tag tag-true">✅ TRUE (सत्य)</span>
+        </div>
+      </div>
+
+      <!-- Collapsible Proofs -->
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-proofs-ans')">👁️ Show Cross-Multiplication Proofs</button>
+        <div class="answer-content" id="q1-proofs-ans">
+          <h4 style="color:#fbbf24; margin-bottom:6px;">Proportion Rule:</h4>
+          <p>Four terms $a : b :: c : d$ are in proportion if and only if the product of extremes equals the product of means:</p>
+          <div class="math-formula">a \times d = b \times c \quad \text{or} \quad \frac{a}{b} = \frac{c}{d}</div>
+
+          <ol style="padding-left:20px; line-height:1.8; margin-top:8px;">
+            <li>
+              <strong>(i) $4 : 7 :: 12 : 21$:</strong><br>
+              Product of extremes = $4 \times 21 = 84$<br>
+              Product of means = $7 \times 12 = 84$<br>
+              Since $84 = 84$, this statement is <strong style="color:#10b981;">TRUE</strong>.
+            </li>
+            <li>
+              <strong>(ii) $8 : 3 :: 24 : 6$:</strong><br>
+              Product of extremes = $8 \times 6 = 48$<br>
+              Product of means = $3 \times 24 = 72$<br>
+              Since $48 \neq 72$, this statement is <strong style="color:#f43f5e;">FALSE</strong>.
+            </li>
+            <li>
+              <strong>(iii) $7 : 12 :: 12 : 7$:</strong><br>
+              Product of extremes = $7 \times 7 = 49$<br>
+              Product of means = $12 \times 12 = 144$<br>
+              Since $49 \neq 144$, this statement is <strong style="color:#f43f5e;">FALSE</strong>.
+            </li>
+            <li>
+              <strong>(iv) $21 : 6 :: 35 : 10$:</strong><br>
+              Product of extremes = $21 \times 10 = 210$<br>
+              Product of means = $6 \times 35 = 210$<br>
+              Since $210 = 210$, this statement is <strong style="color:#10b981;">TRUE</strong>. (Also $\frac{21}{6} = \frac{7}{2}$ and $\frac{35}{10} = \frac{7}{2}$).
+            </li>
+            <li>
+              <strong>(v) $12 : 18 :: 28 : 12$:</strong><br>
+              Product of extremes = $12 \times 12 = 144$<br>
+              Product of means = $18 \times 28 = 504$<br>
+              Since $144 \neq 504$, this statement is <strong style="color:#f43f5e;">FALSE</strong>.
+            </li>
+            <li>
+              <strong>(vi) $24 : 8 :: 9 : 3$:</strong><br>
+              Product of extremes = $24 \times 3 = 72$<br>
+              Product of means = $8 \times 9 = 72$<br>
+              Since $72 = 72$, this statement is <strong style="color:#10b981;">TRUE</strong>. (Both reduce to $3 : 1$).
+            </li>
+          </ol>
+          <p style="margin-top:10px; font-weight:800; color:#10b981;">
+            🎉 Official Textbook Conclusion: Statements (i), (iv), and (vi) are circled.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: FIGURE IT OUT — QUESTION 2 (PAGE 165) -->
+    <!-- ========================================================================= -->
+    <div class="card" id="q2-figure-it-out">
+      <div class="card-header">
+        <div class="card-title">
+          <span>🎯 Figure it Out — Question 2</span>
+        </div>
+        <span class="card-tag">Page 165 • Equivalent Ratios</span>
+      </div>
+
+      <p style="font-size:0.95rem; font-weight:800; margin-bottom:12px;">
+        <span class="lang-en">2. Give 3 ratios that are proportional to 4 : 9.</span>
+        <span class="lang-hi"><br>2. 4 : 9 के समानुपाती 3 अनुपात दीजिए:</span>
+      </p>
+
+      <div style="display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:12px; margin:16px 0; font-family:'JetBrains Mono', monospace; font-size:1.1rem; font-weight:800;">
+        <div style="background:rgba(255,255,255,0.05); padding:10px 20px; border-radius:10px; border:1px solid rgba(255,255,255,0.15);">
+          Ratio 1: <span style="color:#38bdf8;">8 : 18</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); padding:10px 20px; border-radius:10px; border:1px solid rgba(255,255,255,0.15);">
+          Ratio 2: <span style="color:#38bdf8;">12 : 27</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); padding:10px 20px; border-radius:10px; border:1px solid rgba(255,255,255,0.15);">
+          Ratio 3: <span style="color:#38bdf8;">16 : 36</span>
+        </div>
+      </div>
+
+      <!-- Collapsible Calculation -->
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q2-solution-ans')">👁️ Show Step-by-Step Derivation</button>
+        <div class="answer-content" id="q2-solution-ans">
+          <h4 style="color:#fbbf24; margin-bottom:6px;">Derivation Method:</h4>
+          <p>To find proportional ratios, multiply both terms of the ratio $\frac{4}{9}$ by the same non-zero integer $k$:</p>
+          <ul style="padding-left:20px; line-height:1.8; font-family:'JetBrains Mono', monospace;">
+            <li>For $k = 2$: $\frac{4 \times 2}{9 \times 2} = \frac{8}{18} \implies \mathbf{8 : 18}$</li>
+            <li>For $k = 3$: $\frac{4 \times 3}{9 \times 3} = \frac{12}{27} \implies \mathbf{12 : 27}$</li>
+            <li>For $k = 4$: $\frac{4 \times 4}{9 \times 4} = \frac{16}{36} \implies \mathbf{16 : 36}$</li>
+          </ul>
+          <p style="margin-top:8px;"><em>Other valid examples:</em> $20 : 45$ (for $k=5$), $40 : 90$ (for $k=10$), etc.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: FIGURE IT OUT — QUESTION 3 (PAGE 165) -->
+    <!-- ========================================================================= -->
+    <div class="card" id="q3-figure-it-out">
+      <div class="card-header">
+        <div class="card-title">
+          <span>🎯 Figure it Out — Question 3</span>
+        </div>
+        <span class="card-tag">Page 165 • Missing Term Proportions</span>
+      </div>
+
+      <p style="font-size:0.95rem; font-weight:800; margin-bottom:12px;">
+        <span class="lang-en">3. Fill in the missing numbers for these ratios that are proportional to 18 : 24.</span>
+        <span class="lang-hi"><br>3. 18 : 24 के समानुपाती इन अनुपातों के लिए लुप्त संख्याएँ भरिए:</span>
+      </p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin:16px 0; font-family:'JetBrains Mono', monospace;">
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; text-align:center;">
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:4px;">Part (i)</div>
+          <div style="font-size:1.1rem; font-weight:900;">3 : <span style="color:#10b981; border-bottom:2px solid #10b981; padding:0 4px;">4</span></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; text-align:center;">
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:4px;">Part (ii)</div>
+          <div style="font-size:1.1rem; font-weight:900;">12 : <span style="color:#10b981; border-bottom:2px solid #10b981; padding:0 4px;">16</span></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; text-align:center;">
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:4px;">Part (iii)</div>
+          <div style="font-size:1.1rem; font-weight:900;">20 : <span style="color:#10b981; border-bottom:2px solid #10b981; padding:0 4px;">80/3 (26⅔)</span></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px; text-align:center;">
+          <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:4px;">Part (iv)</div>
+          <div style="font-size:1.1rem; font-weight:900;">27 : <span style="color:#10b981; border-bottom:2px solid #10b981; padding:0 4px;">36</span></div>
+        </div>
+      </div>
+
+      <!-- Collapsible Detailed Calculations -->
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q3-solution-ans')">👁️ Show Detailed Calculations</button>
+        <div class="answer-content" id="q3-solution-ans">
+          <h4 style="color:#fbbf24; margin-bottom:6px;">Step-by-Step Mathematical Solutions:</h4>
+          
+          <p><strong>First, reduce the base ratio to its simplest form:</strong></p>
+          <div class="math-formula">
+            \frac{18}{24} = \frac{18 \div 6}{24 \div 6} = \frac{3}{4} \quad (\text{HCF of } 18 \text{ and } 24 \text{ is } 6)
+          </div>
+
+          <ol style="padding-left:20px; line-height:1.8; margin-top:8px;">
+            <li>
+              <strong>(i) $3 : \underline{\quad}$</strong><br>
+              Let the missing number be $x$.<br>
+              $$\frac{18}{24} = \frac{3}{x} \implies \frac{3}{4} = \frac{3}{x} \implies x = \mathbf{4}$$
+              Ratio is <strong>$3 : 4$</strong>.
+            </li>
+            <li>
+              <strong>(ii) $12 : \underline{\quad}$</strong><br>
+              Let the missing number be $y$.<br>
+              $$\frac{3}{4} = \frac{12}{y} \implies 3y = 4 \times 12 = 48 \implies y = \frac{48}{3} = \mathbf{16}$$
+              Ratio is <strong>$12 : 16$</strong>.
+            </li>
+            <li>
+              <strong>(iii) $20 : \underline{\quad}$</strong><br>
+              Let the missing number be $z$.<br>
+              $$\frac{3}{4} = \frac{20}{z} \implies 3z = 4 \times 20 = 80 \implies z = \mathbf{\frac{80}{3}} \approx 26.67 \text{ (or } 26\frac{2}{3}\text{)}$$
+              Ratio is <strong>$20 : \frac{80}{3}$</strong> (Matches the official textbook solution key).
+            </li>
+            <li>
+              <strong>(iv) $27 : \underline{\quad}$</strong><br>
+              Let the missing number be $w$.<br>
+              $$\frac{3}{4} = \frac{27}{w} \implies 3w = 4 \times 27 = 108 \implies w = \frac{108}{3} = \mathbf{36}$$
+              Ratio is <strong>$27 : 36$</strong>.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let answersVisible = false;
+
+    // Toggle individual answer
+    function toggleAnswer(id) {
+      const box = document.getElementById(id);
+      const btn = box.parentElement.querySelector('.toggle-answer-btn');
+      if (box.classList.contains('revealed')) {
+        box.classList.remove('revealed');
+        if (btn) btn.innerHTML = '👁️ Show Solution';
+      } else {
+        box.classList.add('revealed');
+        if (btn) btn.innerHTML = '🙈 Hide Solution';
+      }
+    }
+
+    // Toggle all answers across entire page
+    function toggleAllAnswers() {
+      answersVisible = !answersVisible;
+      const allAnswers = document.querySelectorAll('.answer-content');
+      const allButtons = document.querySelectorAll('.toggle-answer-btn');
+      const masterBtnText = document.getElementById('masterToggleText');
+
+      allAnswers.forEach(box => {
+        if (answersVisible) {
+          box.classList.add('revealed');
+        } else {
+          box.classList.remove('revealed');
+        }
+      });
+
+      allButtons.forEach(btn => {
+        btn.innerHTML = answersVisible ? '🙈 Hide Solution' : '👁️ Show Solution';
+      });
+
+      if (masterBtnText) {
+        masterBtnText.innerText = answersVisible ? 'Hide All Solutions' : 'Reveal All Solutions';
+      }
+
+      if (answersVisible && typeof confetti === 'function') {
+        confetti({ particleCount: 50, spread: 70, origin: { y: 0.6 } });
+      }
+    }
+
+    // Coffee Simulator Logic
+    function updateCoffeeSim() {
+      const dec = parseInt(document.getElementById('decoctionSlider').value, 10);
+      const milk = parseInt(document.getElementById('milkSlider').value, 10);
+
+      document.getElementById('decoctionVal').innerText = dec + ' mL';
+      document.getElementById('milkVal').innerText = milk + ' mL';
+
+      const ratio = dec / milk;
+      const benchmark = 15 / 35; // 3/7 = 0.42857
+      const total = dec + milk;
+      const percent = ((dec / total) * 100).toFixed(1);
+
+      document.getElementById('simRatioText').innerText = `${dec} : ${milk} (${(ratio).toFixed(3)})`;
+      document.getElementById('simPercentText').innerText = `${percent}% Decoction`;
+
+      const badge = document.getElementById('coffeeStrengthBadge');
+      if (Math.abs(ratio - benchmark) < 0.02) {
+        badge.innerText = 'REGULAR COFFEE (3:7)';
+        badge.style.background = '#04AA6D';
+        badge.style.color = '#ffffff';
+      } else if (ratio > benchmark) {
+        badge.innerText = 'STRONGER COFFEE ☕🔥';
+        badge.style.background = '#f59e0b';
+        badge.style.color = '#000000';
+      } else {
+        badge.innerText = 'LIGHTER COFFEE 🥛✨';
+        badge.style.background = '#38bdf8';
+        badge.style.color = '#000000';
+      }
+    }
+
+    // Language Toggle
+    function setLanguage(lang) {
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+
+      const enSpans = document.querySelectorAll('.lang-en');
+      const hiSpans = document.querySelectorAll('.lang-hi');
+
+      if (lang === 'english') {
+        buttons[1].classList.add('active');
+        enSpans.forEach(el => el.style.display = 'inline');
+        hiSpans.forEach(el => el.style.display = 'none');
+      } else if (lang === 'hindi') {
+        buttons[2].classList.add('active');
+        enSpans.forEach(el => el.style.display = 'none');
+        hiSpans.forEach(el => el.style.display = 'inline');
+      } else {
+        buttons[0].classList.add('active');
+        enSpans.forEach(el => el.style.display = 'inline');
+        hiSpans.forEach(el => el.style.display = 'inline');
+      }
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      const btn = document.getElementById('themeBtn');
+      if (btn) btn.innerText = isLight ? '🌙 Dark' : '☀️ Light';
+      localStorage.setItem('studyguide_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('studyguide_theme') === 'light') {
+      document.body.classList.add('light-theme');
+      const btn = document.getElementById('themeBtn');
+      if (btn) btn.innerText = '🌙 Dark';
+    }
+
+    function printPaper(withAnswers) {
+      if (withAnswers) {
+        document.body.classList.add('print-with-answers');
+      } else {
+        document.body.classList.remove('print-with-answers');
+      }
+      window.print();
+    }
+  </script>
+</body>
+</html>

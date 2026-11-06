@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#0c1322",
+        "on-background": "#dce2f7",
+        surface: "#0c1322",
+        "on-surface": "#dce2f7",
+        "surface-container-lowest": "#070e1d",
+        "surface-container-low": "#141b2b",
+        "surface-container": "#191f2f",
+        "surface-container-high": "#232a3a",
+        "surface-container-highest": "#2e3545",
+        "on-surface-variant": "#c7c4d7",
+        primary: "#c0c1ff",
+        "on-primary": "#1000a9",
+        "primary-container": "#8083ff",
+        "on-primary-container": "#0d0096",
+        "primary-fixed": "#e1e0ff",
+        "primary-fixed-dim": "#c0c1ff",
+        secondary: "#4edea3",
+        "on-secondary": "#003824",
+        "secondary-container": "#2f3aa3",
+        "on-secondary-container": "#a8afff",
+        outline: "#908fa0",
+        "outline-variant": "#464554",
+        error: "#ffb4ab",
+        tertiary: "#4edea3",
+        "tertiary-container": "#00885d"
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px"
+      },
+      spacing: {
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2.5rem",
+        gutter: "1rem",
+        margin: "1.25rem"
+      },
+      fontFamily: {
+        "body-md": ["Inter"],
+        "headline-lg": ["Space Grotesk", "Plus Jakarta Sans"],
+        "headline-md": ["Space Grotesk", "Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Space Grotesk", "Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "label-sm": ["JetBrains Mono", "Inter"],
+        "body-sm": ["Inter"],
+        "headline-sm": ["Space Grotesk", "Plus Jakarta Sans"],
+        "label-md": ["JetBrains Mono", "Inter"]
+      },
+      fontSize: {
+        "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}],
+        "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "700"}],
+        "headline-md": ["24px", {lineHeight: "30px", fontWeight: "600"}],
+        "headline-lg-mobile": ["26px", {lineHeight: "32px", fontWeight: "700"}],
+        "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}],
+        "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}],
+        "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}],
+        "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}],
+        "label-md": ["13px", {lineHeight: "18px", fontWeight: "500"}]
+      }
+    }
+  }
+};</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-[#0c1322] font-body-md text-[#dce2f7] flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-[#0c1322]/85 backdrop-blur-xl border-b border-[#1E293B] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><h1 class="text-headline-sm font-headline-sm text-[#F8FAFC]">Subjects</h1><div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">person</span></div></div></header><main class="flex flex-col relative w-full px-gutter pt-16 pb-24 bg-[#0c1322] flex-grow"><div class="flex flex-col w-full pb-8">
+<!-- Search & Filter Bar -->
+<div class="flex items-center gap-space-sm mb-space-md pt-space-xs">
+<div class="flex-1 flex items-center bg-[#141b2b] border border-[#243247] rounded-xl px-space-md py-space-sm gap-space-sm shadow-sm focus-within:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-[#908fa0]">search</span>
+<input class="bg-transparent text-[#dce2f7] placeholder:text-[#908fa0] w-full outline-none text-body-md font-body-md" placeholder="Search subjects, topics..." type="text"/>
+</div>
+<button class="w-11 h-11 flex items-center justify-center bg-[#141b2b] border border-[#243247] rounded-xl text-[#dce2f7] hover:bg-[#1a2238] transition-all shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Hero Daily Goal Banner (Delight feature) -->
+<div class="relative overflow-hidden bg-gradient-to-br from-[#2f3aa3] to-[#1c2269] text-white rounded-2xl p-space-lg mb-space-lg shadow-xl border border-indigo-500/20 flex flex-col justify-between">
+<div class="absolute -right-8 -bottom-8 w-36 h-36 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex justify-between items-start mb-space-md">
+<div>
+<span class="text-label-sm uppercase tracking-wider text-primary-fixed-dim font-label-sm">Class 12 • Science Track</span>
+<h2 class="text-headline-md font-headline-md mt-space-xs text-[#F8FAFC]">Daily Mastery Goal</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md border border-white/10">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<div class="relative z-10 flex items-center gap-space-md">
+<div class="flex-1">
+<div class="flex justify-between text-body-sm mb-space-xs text-[#c7c4d7]">
+<span>4 of 6 topics completed</span>
+<span class="font-headline-sm text-white">66%</span>
+</div>
+<div class="w-full h-2.5 bg-black/40 rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-secondary rounded-full transition-all duration-500 shadow-[0_0_12px_rgba(78,222,163,0.5)]" style="width: 66%;"></div>
+</div>
+</div>
+<button class="bg-secondary text-[#003824] px-space-md py-space-sm rounded-xl text-label-md font-headline-sm hover:opacity-90 active:scale-95 transition-all shadow-md flex items-center gap-space-xs shrink-0 font-semibold">
+<span>Resume</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="text-headline-sm font-headline-sm text-[#F8FAFC]">Enrolled Subjects</h3>
+<span class="text-label-sm text-primary font-headline-sm cursor-pointer hover:underline">View All (6)</span>
+</div>
+<!-- Subject Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Mathematics -->
+<a class="group relative bg-[#141b2b] border border-[#243247] rounded-2xl p-space-lg shadow-lg hover:border-primary/40 hover:bg-[#1a2238] transition-all flex flex-col justify-between gap-space-lg overflow-hidden" href="#" onclick="navigateToChapterBrowser('Mathematics')">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">functions</span>
+</div>
+<span class="text-label-sm px-space-sm py-space-xs rounded-full bg-emerald-950/70 border border-emerald-500/30 text-secondary font-headline-sm">82% Mastery</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-headline-sm font-headline-sm text-[#F8FAFC] mb-space-xs group-hover:text-primary transition-colors">Mathematics</h4>
+<p class="text-body-sm text-[#908fa0] mb-space-md font-body-sm">Calculus, Vectors &amp; 3D Geometry</p>
+<div class="space-y-space-xs">
+<div class="flex justify-between text-body-sm">
+<span class="text-[#908fa0]">Progress</span>
+<span class="font-headline-sm text-[#dce2f7]">24 / 30 Topics</span>
+</div>
+<div class="w-full h-2 bg-[#0c1322] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full shadow-[0_0_8px_rgba(192,193,255,0.4)]" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+</a>
+<!-- Physics -->
+<a class="group relative bg-[#141b2b] border border-[#243247] rounded-2xl p-space-lg shadow-lg hover:border-primary/40 hover:bg-[#1a2238] transition-all flex flex-col justify-between gap-space-lg overflow-hidden" href="#" onclick="navigateToChapterBrowser('Physics')">
+<div class="absolute top-0 right-0 w-24 h-24 bg-rose-500/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-12 h-12 rounded-xl bg-rose-500/20 border border-rose-500/30 text-rose-300 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<span class="text-label-sm px-space-sm py-space-xs rounded-full bg-[#1e293b] border border-[#334155] text-[#dce2f7] font-headline-sm">65% Mastery</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-headline-sm font-headline-sm text-[#F8FAFC] mb-space-xs group-hover:text-primary transition-colors">Physics</h4>
+<p class="text-body-sm text-[#908fa0] mb-space-md font-body-sm">Electromagnetism &amp; Optics</p>
+<div class="space-y-space-xs">
+<div class="flex justify-between text-body-sm">
+<span class="text-[#908fa0]">Progress</span>
+<span class="font-headline-sm text-[#dce2f7]">18 / 28 Topics</span>
+</div>
+<div class="w-full h-2 bg-[#0c1322] rounded-full overflow-hidden">
+<div class="h-full bg-rose-400 rounded-full shadow-[0_0_8px_rgba(251,113,133,0.4)]" style="width: 65%;"></div>
+</div>
+</div>
+</div>
+</a>
+<!-- Chemistry -->
+<a class="group relative bg-[#141b2b] border border-[#243247] rounded-2xl p-space-lg shadow-lg hover:border-primary/40 hover:bg-[#1a2238] transition-all flex flex-col justify-between gap-space-lg overflow-hidden" href="#" onclick="navigateToChapterBrowser('Chemistry')">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-12 h-12 rounded-xl bg-secondary/20 border border-secondary/30 text-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">science</span>
+</div>
+<span class="text-label-sm px-space-sm py-space-xs rounded-full bg-emerald-950/70 border border-emerald-500/30 text-secondary font-headline-sm">90% Mastery</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-headline-sm font-headline-sm text-[#F8FAFC] mb-space-xs group-hover:text-primary transition-colors">Chemistry</h4>
+<p class="text-body-sm text-[#908fa0] mb-space-md font-body-sm">Organic Chemistry &amp; Kinetics</p>
+<div class="space-y-space-xs">
+<div class="flex justify-between text-body-sm">
+<span class="text-[#908fa0]">Progress</span>
+<span class="font-headline-sm text-[#dce2f7]">27 / 30 Topics</span>
+</div>
+<div class="w-full h-2 bg-[#0c1322] rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full shadow-[0_0_8px_rgba(78,222,163,0.4)]" style="width: 90%;"></div>
+</div>
+</div>
+</div>
+</a>
+<!-- Biology -->
+<a class="group relative bg-[#141b2b] border border-[#243247] rounded-2xl p-space-lg shadow-lg hover:border-primary/40 hover:bg-[#1a2238] transition-all flex flex-col justify-between gap-space-lg overflow-hidden" href="#" onclick="navigateToChapterBrowser('Biology')">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<span class="text-label-sm px-space-sm py-space-xs rounded-full bg-[#1e293b] border border-[#334155] text-[#dce2f7] font-headline-sm">45% Mastery</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-headline-sm font-headline-sm text-[#F8FAFC] mb-space-xs group-hover:text-primary transition-colors">Biology</h4>
+<p class="text-body-sm text-[#908fa0] mb-space-md font-body-sm">Genetics, Evolution &amp; Ecology</p>
+<div class="space-y-space-xs">
+<div class="flex justify-between text-body-sm">
+<span class="text-[#908fa0]">Progress</span>
+<span class="font-headline-sm text-[#dce2f7]">12 / 26 Topics</span>
+</div>
+<div class="w-full h-2 bg-[#0c1322] rounded-full overflow-hidden">
+<div class="h-full bg-indigo-400 rounded-full shadow-[0_0_8px_rgba(129,140,248,0.4)]" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+</a>
+<!-- Computer Science -->
+<a class="group relative bg-[#141b2b] border border-[#243247] rounded-2xl p-space-lg shadow-lg hover:border-primary/40 hover:bg-[#1a2238] transition-all flex flex-col justify-between gap-space-lg overflow-hidden" href="#" onclick="navigateToChapterBrowser('Computer Science')">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+<span class="text-label-sm px-space-sm py-space-xs rounded-full bg-emerald-950/70 border border-emerald-500/30 text-secondary font-headline-sm">95% Mastery</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-headline-sm font-headline-sm text-[#F8FAFC] mb-space-xs group-hover:text-primary transition-colors">Computer Science</h4>
+<p class="text-body-sm text-[#908fa0] mb-space-md font-body-sm">Data Structures &amp; Python</p>
+<div class="space-y-space-xs">
+<div class="flex justify-between text-body-sm">
+<span class="text-[#908fa0]">Progress</span>
+<span class="font-headline-sm text-[#dce2f7]">19 / 20 Topics</span>
+</div>
+<div class="w-full h-2 bg-[#0c1322] rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full shadow-[0_0_8px_rgba(78,222,163,0.4)]" style="width: 95%;"></div>
+</div>
+</div>
+</div>
+</a>
+<!-- English -->
+<a class="group relative bg-[#141b2b] border border-[#243247] rounded-2xl p-space-lg shadow-lg hover:border-primary/40 hover:bg-[#1a2238] transition-all flex flex-col justify-between gap-space-lg overflow-hidden" href="#" onclick="navigateToChapterBrowser('English')">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="w-12 h-12 rounded-xl bg-[#232a3a] border border-[#334155] text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="text-label-sm px-space-sm py-space-xs rounded-full bg-[#1e293b] border border-[#334155] text-[#dce2f7] font-headline-sm">78% Mastery</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-headline-sm font-headline-sm text-[#F8FAFC] mb-space-xs group-hover:text-primary transition-colors">English</h4>
+<p class="text-body-sm text-[#908fa0] mb-space-md font-body-sm">Literature &amp; Advanced Grammar</p>
+<div class="space-y-space-xs">
+<div class="flex justify-between text-body-sm">
+<span class="text-[#908fa0]">Progress</span>
+<span class="font-headline-sm text-[#dce2f7]">14 / 18 Topics</span>
+</div>
+<div class="w-full h-2 bg-[#0c1322] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full shadow-[0_0_8px_rgba(192,193,255,0.4)]" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<!-- Delightful Study Tip Card -->
+<div class="mt-space-lg bg-[#141b2b] border border-[#243247] rounded-2xl p-space-lg flex items-center gap-space-md shadow-lg">
+<div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div>
+<h5 class="text-headline-sm font-headline-sm text-[#F8FAFC] mb-0.5">Quick Study Tip</h5>
+<p class="text-body-sm text-[#908fa0] font-body-sm">Consistent 20-minute daily review sessions yield better retention than 3-hour cramming blocks!</p>
+</div>
+</div>
+<script>
+    function navigateToChapterBrowser(subjectName) {
+      // Immediate tactile navigation simulation to Chapter & Topic Browser
+      const mainContainer = document.querySelector('main') || document.body;
+      mainContainer.style.opacity = '0';
+      mainContainer.style.transform = 'translateY(8px)';
+      mainContainer.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      
+      setTimeout(() => {
+        // Update header title if present
+        const titleEl = document.querySelector('header h1');
+        if(titleEl) titleEl.innerText = subjectName + ' Chapters';
+        
+        // Render mock Chapter Browser view instantly
+        mainContainer.innerHTML = `
+          <div class="flex flex-col w-full pb-8 animate-fadeIn">
+            <button onclick="location.reload()" class="flex items-center gap-space-xs text-primary font-headline-sm text-label-md mb-space-md w-fit">
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              <span>Back to Subjects</span>
+            </button>
+            <div class="bg-gradient-to-br from-[#2f3aa3] to-[#1c2269] text-[#dce2f7] rounded-2xl p-space-lg mb-space-lg shadow-md border border-indigo-500/20">
+              <span class="text-label-sm uppercase tracking-wider font-label-sm text-primary-fixed-dim">Interactive Browser</span>
+              <h2 class="text-headline-md font-headline-md text-[#F8FAFC] mt-space-xs">${subjectName} Curriculum</h2>
+              <p class="text-body-md mt-space-xs text-[#c7c4d7]">Select a chapter below to dive into topics, practice problems, and video notes.</p>
+            </div>
+            <div class="space-y-space-md">
+              <div class="bg-[#141b2b] border border-[#243247] rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/30 text-primary flex items-center justify-center font-headline-sm">01</div>
+                  <div>
+                    <h4 class="text-headline-sm font-headline-sm text-[#F8FAFC]">Chapter 1: Foundations & Core Concepts</h4>
+                    <p class="text-body-sm text-[#908fa0]">5 Topics • 2 Quizzes • 1 Lab</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[#908fa0]">chevron_right</span>
+              </div>
+              <div class="bg-[#141b2b] border border-[#243247] rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-xl bg-secondary/20 border border-secondary/30 text-secondary flex items-center justify-center font-headline-sm">02</div>
+                  <div>
+                    <h4 class="text-headline-sm font-headline-sm text-[#F8FAFC]">Chapter 2: Advanced Applications</h4>
+                    <p class="text-body-sm text-[#908fa0]">8 Topics • 3 Quizzes • 2 Labs</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[#908fa0]">chevron_right</span>
+              </div>
+              <div class="bg-[#141b2b] border border-[#243247] rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/30 text-primary flex items-center justify-center font-headline-sm">03</div>
+                  <div>
+                    <h4 class="text-headline-sm font-headline-sm text-[#F8FAFC]">Chapter 3: Problem Solving & Case Studies</h4>
+                    <p class="text-body-sm text-[#908fa0]">6 Topics • 1 Final Assessment</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[#908fa0]">chevron_right</span>
+              </div>
+            </div>
+          </div>
+        `;
+        mainContainer.style.opacity = '1';
+        mainContainer.style.transform = 'translateY(0)';
+      }, 150);
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#0c1322]/90 backdrop-blur-xl border-t border-[#1E293B] shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary bg-[#1E293B]"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-[#94A3B8] hover:text-[#F8FAFC] transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="text-label-sm font-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl transition-all text-primary bg-[#1E293B] border border-primary/20 shadow-sm" data-path="subjects" href="#"><span class="material-symbols-outlined text-[22px]">book</span><span class="text-label-sm font-label-sm">Subjects</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-[#94A3B8] hover:text-[#F8FAFC] transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="text-label-sm font-label-sm">Analytics</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-16 h-16 rounded-xl text-[#94A3B8] hover:text-[#F8FAFC] transition-all" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="text-label-sm font-label-sm">Profile</span></a></div></nav></body></html>

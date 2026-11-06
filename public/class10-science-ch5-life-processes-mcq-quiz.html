@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 10 Science Ch 5: Life Processes — 20 High-Yield MCQs | NextSem</title>
+  <meta name="description" content="Master NCERT Class 10 Science Chapter 5 (Life Processes / जैव प्रक्रम) with 20 High-Yield Competency MCQs, instant explanations, bilingual Hindi & English, and live accuracy tracking.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3a;
+      --border-card: rgba(16, 185, 129, 0.25);
+      --border-accent: #10b981;
+      
+      --brand-blue: #0284c7;
+      --brand-cyan: #06b6d4;
+      --brand-emerald: #10b981;
+      --brand-gold: #f59e0b;
+      --brand-purple: #8b5cf6;
+      
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --border-accent: #059669;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+    }
+    body.light-theme .top-breadcrumb-bar {
+      background: #ffffff !important;
+      border-bottom-color: #cbd5e1 !important;
+      color: #475569 !important;
+    }
+    body.light-theme .top-breadcrumb-bar a {
+      color: #059669 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .sep {
+      color: #94a3b8 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .current {
+      color: #0f172a !important;
+    }
+    body.light-theme .quiz-header {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-bottom-color: #cbd5e1 !important;
+    }
+    body.light-theme .hud-card {
+      background: #ffffff !important;
+      border-color: #cbd5e1 !important;
+    }
+    body.light-theme .opt-btn {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    body.light-theme .opt-btn:hover:not(.disabled) {
+      background: #f1f5f9;
+      border-color: #059669;
+    }
+    body.light-theme .exp-box {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: #14532d;
+    }
+    body.light-theme .exp-box strong {
+      color: #166534;
+    }
+    body.light-theme .q-topic {
+      background: rgba(16, 185, 129, 0.1);
+      color: #059669;
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+    body.light-theme .btn-lang.active {
+      background: #059669;
+      color: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.25s ease, color 0.25s ease;
+      line-height: 1.5;
+    }
+
+    /* Top Breadcrumb Bar */
+    .top-breadcrumb-bar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 24px;
+      background: #040813;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    .top-breadcrumb-bar a {
+      color: #34d399;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .top-breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-dim);
+    }
+    .top-breadcrumb-bar .current {
+      color: var(--text-muted);
+    }
+
+    /* Quiz Header */
+    .quiz-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(6, 12, 24, 0.94);
+      border-bottom: 1px solid var(--border-card);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+    }
+    .brand-title-wrap h1 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-ch {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .brand-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid var(--border-card);
+      gap: 2px;
+    }
+    .btn-lang {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-lang.active {
+      background: var(--brand-emerald);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+    }
+
+    /* Theme Toggle */
+    .btn-theme {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-theme:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Container */
+    .main-container {
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* HUD Bar */
+    .hud-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .hud-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 12px 16px;
+      text-align: center;
+      transition: transform 0.15s ease;
+    }
+    .hud-card .num {
+      font-size: 1.4rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      color: #34d399;
+    }
+    .hud-card .num.correct {
+      color: var(--color-correct);
+    }
+    .hud-card .lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+    }
+
+    /* Question Cards */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: border-color 0.2s ease;
+    }
+    .q-card:hover {
+      border-color: rgba(16, 185, 129, 0.45);
+    }
+
+    .q-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .q-topic {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    .q-num {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+    }
+
+    .q-title-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+    .q-title-hi {
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #a7f3d0;
+      font-family: var(--font-devanagari);
+      line-height: 1.5;
+      margin-top: 4px;
+    }
+
+    /* Options Grid */
+    .opt-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 640px) {
+      .opt-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .opt-btn {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: left;
+      color: var(--text-main);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: all 0.15s ease;
+      position: relative;
+    }
+    .opt-btn:hover:not(.disabled) {
+      background: rgba(16, 185, 129, 0.08);
+      border-color: var(--brand-emerald);
+      transform: translateY(-1px);
+    }
+    .opt-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      color: var(--text-muted);
+    }
+    .opt-text-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .opt-en {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .opt-hi {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      font-family: var(--font-devanagari);
+    }
+
+    /* Correct & Wrong States */
+    .opt-btn.correct {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct) !important;
+      color: #fff !important;
+    }
+    .opt-btn.correct .opt-key {
+      background: var(--color-correct);
+      color: #fff;
+    }
+    .opt-btn.wrong {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong) !important;
+      color: #fff !important;
+    }
+    .opt-btn.wrong .opt-key {
+      background: var(--color-wrong);
+      color: #fff;
+    }
+    .opt-btn.disabled {
+      cursor: default;
+    }
+
+    /* Explanation Box */
+    .exp-box {
+      display: none;
+      margin-top: 6px;
+      padding: 16px 18px;
+      border-radius: 12px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #e2e8f0;
+      animation: fadeIn 0.25s ease-out;
+    }
+    .exp-box.show {
+      display: block;
+    }
+    .exp-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #10b981;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Action Links Bar */
+    .action-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .action-btn.primary {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+    }
+    .action-btn.secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+    }
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 600px) {
+      .hud-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .quiz-header {
+        padding: 10px 16px;
+      }
+      .brand-title-wrap h1 {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Breadcrumbs -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="sep">›</span>
+    <a href="/?class=10">Class 10</a>
+    <span class="sep">›</span>
+    <a href="/?class=10&subject=Science">Science</a>
+    <span class="sep">›</span>
+    <a href="/?class=10&subject=Science&chapter=5">Unit 5 Life Processes</a>
+    <span class="sep">›</span>
+    <span class="current">20 High-Yield MCQs</span>
+  </nav>
+
+  <!-- Sticky Header -->
+  <header class="quiz-header">
+    <div class="brand-section">
+      <img src="/image-20.png" alt="NextSem Logo" class="brand-logo">
+      <div class="brand-title-wrap">
+        <h1>
+          <span>Life Processes (जैव प्रक्रम)</span>
+          <span class="badge-ch">Unit 5</span>
+        </h1>
+        <div class="brand-sub">20 High-Yield Competency MCQs • Class 10 Science</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="lang-switcher">
+        <button class="btn-lang active" onclick="setLang('both')" id="lang-both">Dual</button>
+        <button class="btn-lang" onclick="setLang('en')" id="lang-en">Eng</button>
+        <button class="btn-lang" onclick="setLang('hi')" id="lang-hi">हिन्दी</button>
+      </div>
+      <button class="btn-theme" id="themeToggleBtn">
+        <span id="themeIcon">🌙</span>
+        <span id="themeLabel">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- HUD Stats -->
+    <div class="hud-bar">
+      <div class="hud-card">
+        <div class="num" id="hud-total">20</div>
+        <div class="lbl">Total MCQs</div>
+      </div>
+      <div class="hud-card">
+        <div class="num" id="hud-attempted">0</div>
+        <div class="lbl">Attempted</div>
+      </div>
+      <div class="hud-card">
+        <div class="num correct" id="hud-correct">0</div>
+        <div class="lbl">Correct</div>
+      </div>
+      <div class="hud-card">
+        <div class="num" id="hud-accuracy">0%</div>
+        <div class="lbl">Accuracy</div>
+      </div>
+    </div>
+
+    <!-- Quick Link to PDF -->
+    <div class="action-links">
+      <a href="/pdf/Class 10/Science 10th/jesc105.pdf" target="_blank" class="action-btn primary">
+        <span>📄 Open Official NCERT PDF (jesc105.pdf)</span>
+      </a>
+      <a href="/?class=10&subject=Science" class="action-btn secondary">
+        <span>📚 All Class 10 Science Chapters</span>
+      </a>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="questions-list" style="display: flex; flex-direction: column; gap: 20px;"></div>
+
+  </main>
+
+  <script>
+    const questions = [
+      {
+        id: 1,
+        topic: "Criteria for Life & Molecular Movement",
+        questionEn: "Why is visible movement alone not considered a sufficient defining characteristic of being alive?",
+        questionHi: "केवल दिखाई देने वाली गति को ही सजीव होने का पर्याप्त निर्णायक लक्षण क्यों नहीं माना जाता?",
+        options: [
+          { key: "a", textEn: "Living plants and sleeping animals can be alive without visible macroscopic movement; invisible molecular movements are essential for life repair", textHi: "पौधे व सोते हुए जंतु बिना किसी दृश्य गति के भी जीवित रहते हैं; जीवन की संरचनाओं की मरम्मत के लिए अदृश्य आणविक गतियाँ आवश्यक हैं" },
+          { key: "b", textEn: "Viruses always exhibit active molecular motion outside cells", textHi: "विषाणु कोशिका के बाहर सदैव सक्रिय आणविक गति प्रदर्शित करते हैं" },
+          { key: "c", textEn: "All living organisms lose cellular order and molecular motion permanently when resting", textHi: "विश्राम करते समय सभी सजीव स्थायी रूप से कोशिकीय व्यवस्था खो देते हैं" },
+          { key: "d", textEn: "Molecular movements occur only in dead organisms", textHi: "आणविक गतियाँ केवल मृत जीवों में होती हैं" }
+        ],
+        correct: "a",
+        explanationEn: "Visible movements (like walking, running, or obvious growth) are not shown by all living organisms at all times (e.g. plants growing slowly, sleeping animals). Living organisms are ordered structures that constantly require invisible molecular movements to repair and maintain cellular organisation.",
+        explanationHi: "दृश्य गतियाँ (जैसे चलना, दौड़ना या पौधों की धीमी वृद्धि) हर समय दिखाई नहीं देतीं। सजीव सुव्यवस्थित संरचनाएं हैं जिनमें पर्यावरण के प्रभाव से होने वाली टूट-फूट की मरम्मत के लिए निरंतर अदृश्य आणविक गति का होना अनिवार्य है।"
+      },
+      {
+        id: 2,
+        topic: "Photosynthesis — Main Sequential Events",
+        questionEn: "Which of the following represents the correct sequence of major events occurring during photosynthesis in green plants?",
+        questionHi: "हरे पौधों में प्रकाश संश्लेषण के दौरान घटित होने वाली प्रमुख घटनाओं का सही क्रम कौन सा है?",
+        options: [
+          { key: "a", textEn: "Oxidation of carbon dioxide to carbohydrates → Release of oxygen → Absorption of light by guard cells", textHi: "कार्बन डाइऑक्साइड का कार्बोहाइड्रेट में ऑक्सीकरण → ऑक्सीजन का निकास → द्वार कोशिकाओं द्वारा प्रकाश अवशोषण" },
+          { key: "b", textEn: "Absorption of light energy by chlorophyll → Conversion to chemical energy and splitting of water (H₂O) into H₂ and O₂ → Reduction of CO₂ to carbohydrates", textHi: "क्लोरोफिल द्वारा प्रकाश ऊर्जा का अवशोषण → प्रकाश ऊर्जा का रासायनिक ऊर्जा में रूपांतरण तथा जल का H₂ व O₂ में अपघटन → CO₂ का कार्बोहाइड्रेट में अपचयन" },
+          { key: "c", textEn: "Splitting of carbon dioxide into carbon and oxygen → Synthesis of chlorophyll → Direct conversion of sunlight into ATP", textHi: "CO₂ का कार्बन व ऑक्सीजन में टूटना → क्लोरोफिल का निर्माण → सूर्य के प्रकाश का सीधे ATP में रूपांतरण" },
+          { key: "d", textEn: "Absorption of nitrogen by roots → Reduction of water to starch → Evaporation of glucose", textHi: "जड़ों द्वारा नाइट्रोजन का अवशोषण → जल का स्टार्च में अपचयन → ग्लूकोज का वाष्पीकरण" }
+        ],
+        correct: "b",
+        explanationEn: "According to NCERT Section 5.2.1, photosynthesis involves three key events: (1) Absorption of light energy by chlorophyll, (2) Conversion of light energy to chemical energy and splitting of water molecules into hydrogen and oxygen, and (3) Reduction of carbon dioxide to carbohydrates.",
+        explanationHi: "NCERT के अनुसार प्रकाश संश्लेषण के तीन मुख्य चरण हैं: (१) क्लोरोफिल द्वारा प्रकाश ऊर्जा का अवशोषण, (२) प्रकाश ऊर्जा का रासायनिक ऊर्जा में रूपांतरण तथा जल के अणुओं का हाइड्रोजन व ऑक्सीजन में अपघटन, और (३) कार्बन डाइऑक्साइड का कार्बोहाइड्रेट में अपचयन।"
+      },
+      {
+        id: 3,
+        topic: "Desert Plants Carbon Fixation Strategy",
+        questionEn: "How do desert plants perform photosynthesis to prevent excessive water loss during hot daytime hours?",
+        questionHi: "मरुद्भिद (रेगिस्तानी) पौधे दिन के समय अत्यधिक जल हानि रोकने के लिए प्रकाश संश्लेषण किस प्रकार करते हैं?",
+        options: [
+          { key: "a", textEn: "They absorb carbon dioxide through their roots exclusively", textHi: "वे केवल अपनी जड़ों के माध्यम से कार्बन डाइऑक्साइड अवशोषित करते हैं" },
+          { key: "b", textEn: "They do not require carbon dioxide or sunlight for carbohydrate synthesis", textHi: "उन्हें कार्बोहाइड्रेट निर्माण के लिए CO₂ या सूर्य के प्रकाश की आवश्यकता नहीं होती" },
+          { key: "c", textEn: "They take up CO₂ at night and prepare an intermediate acid, which is acted upon during the day by energy absorbed by chlorophyll", textHi: "वे रात्रि में CO₂ ग्रहण करके एक मध्यस्थ उत्पाद बनाते हैं, जिस पर दिन में क्लोरोफिल द्वारा अवशोषित ऊर्जा कार्य करती है" },
+          { key: "d", textEn: "They open their stomata only at noon when sunlight is at maximum intensity", textHi: "वे केवल दोपहर में अपने रंध्र खोलते हैं जब धूप सर्वाधिक तीव्र होती है" }
+        ],
+        correct: "c",
+        explanationEn: "In desert plants, stomata remain closed during the hot day to minimise transpiration. They take up CO₂ at night when stomata open, forming an intermediate organic compound (crassulacean acid). During the day, sunlight absorbed by chlorophyll provides energy to reduce this intermediate into carbohydrates.",
+        explanationHi: "रेगिस्तानी पौधे जल की अत्यधिक हानि से बचने के लिए दिन में रंध्र बंद रखते हैं। वे रात में रंध्र खोलकर CO₂ ग्रहण करते हैं और एक मध्यस्थ उत्पाद तैयार करते हैं, जिसे दिन के समय क्लोरोफिल द्वारा अवशोषित सौर ऊर्जा ग्लूकोज में बदल देती है।"
+      },
+      {
+        id: 4,
+        topic: "Stomatal Pores & Guard Cells",
+        questionEn: "The opening and closing of stomatal pores in plant leaves is regulated by:",
+        questionHi: "पौधों की पत्तियों में रंध्र छिद्रों का खुलना और बंद होना किसके द्वारा नियंत्रित होता है?",
+        options: [
+          { key: "a", textEn: "Changes in atmospheric nitrogen pressure", textHi: "वायुमंडलीय नाइट्रोजन के दबाव में परिवर्तन द्वारा" },
+          { key: "b", textEn: "Water flow into and out of guard cells, causing them to swell or shrink", textHi: "द्वार कोशिकाओं (गार्ड सेल्स) में जल के अंदर जाने व बाहर निकलने से उनके फूलने या सिकुड़ने द्वारा" },
+          { key: "c", textEn: "The upward movement of phloem sap", textHi: "फ्लोएम रस की ऊपर की ओर गति द्वारा" },
+          { key: "d", textEn: "Direct muscular contraction in epidermal cells", textHi: "त्वचीय कोशिकाओं में सीधे पेशीय संकुचन द्वारा" }
+        ],
+        correct: "b",
+        explanationEn: "The opening and closing of stomata is a function of guard cells. Guard cells swell when water flows into them, bending outward and opening the pore. When guard cells lose water, they shrink and the pore closes.",
+        explanationHi: "रंध्रों का खुलना और बंद होना द्वार कोशिकाओं (Guard cells) का कार्य है। जब द्वार कोशिकाओं में जल प्रवेश करता है, तो वे फूल जाती हैं और रंध्र खुल जाता है। जब जल बाहर निकलता है, तो वे सिकुड़ जाती हैं और रंध्र बंद हो जाता है।"
+      },
+      {
+        id: 5,
+        topic: "Potassium Hydroxide (KOH) in Photosynthesis Experiment",
+        questionEn: "In the bell-jar experiment (Activity 5.2) testing the necessity of CO₂ for photosynthesis, why is a watch-glass containing potassium hydroxide (KOH) placed beside the plant?",
+        questionHi: "प्रकाश संश्लेषण में CO₂ की अनिवार्यता दर्शाने वाले बेल-जार प्रयोग (क्रियाकलाप 5.2) में पौधे के पास पोटेशियम हाइड्रॉक्साइड (KOH) की वाच-ग्लास क्यों रखी जाती है?",
+        options: [
+          { key: "a", textEn: "To absorb all carbon dioxide from the surrounding air inside the bell jar", textHi: "बेल जार के अंदर की वायु से संपूर्ण कार्बन डाइऑक्साइड को अवशोषित करने के लिए" },
+          { key: "b", textEn: "To release extra oxygen for root respiration", textHi: "जड़ों के श्वसन के लिए अतिरिक्त ऑक्सीजन उत्पन्न करने के लिए" },
+          { key: "c", textEn: "To provide moisture and prevent the soil from drying out", textHi: "नमी प्रदान करने तथा मिट्टी को सूखने से बचाने के लिए" },
+          { key: "d", textEn: "To directly convert glucose into starch", textHi: "ग्लूकोज को सीधे स्टार्च में बदलने के लिए" }
+        ],
+        correct: "a",
+        explanationEn: "Potassium hydroxide (KOH) chemically reacts with and absorbs carbon dioxide (2KOH + CO₂ → K₂CO₃ + H₂O). This starves the enclosed plant of CO₂, proving that without CO₂, the leaves cannot synthesise starch.",
+        explanationHi: "पोटेशियम हाइड्रॉक्साइड (KOH) कार्बन डाइऑक्साइड को अवशोषित करने का कार्य करता है। यह जार के अंदर की सारी CO₂ सोख लेता है, जिससे यह सिद्ध होता है कि CO₂ के बिना पौधे स्टार्च नहीं बना सकते।"
+      },
+      {
+        id: 6,
+        topic: "Parasitic Nutritive Strategy",
+        questionEn: "Which of the following groups of organisms derive nutrition from host plants or animals without killing them (parasitic strategy)?",
+        questionHi: "निम्नलिखित में से जीवों का कौन सा समूह पोषी पौधों या जंतुओं को मारे बिना उनसे पोषण प्राप्त करता है (परजीवी पोषण युक्ति)?",
+        options: [
+          { key: "a", textEn: "Yeast, Bread moulds, Mushrooms", textHi: "यीस्ट, ब्रेड मोल्ड, मशरूम" },
+          { key: "b", textEn: "Cuscuta (Amar-bel), Ticks, Lice, Leeches and Tape-worms", textHi: "अमरबेल (कसकुटा), किलनी, जूँ, जोंक तथा फीताकृमि" },
+          { key: "c", textEn: "Cow, Lion, Amoeba", textHi: "गाय, शेर, अमीबा" },
+          { key: "d", textEn: "Green algae, Cyanobacteria, Grass", textHi: "हरी शैवाल, सायनोबैक्टीरिया, घास" }
+        ],
+        correct: "b",
+        explanationEn: "Organisms like Cuscuta (amar-bel), ticks, lice, leeches, and tapeworms use a parasitic nutritional strategy, absorbing readymade nutrients from their hosts without immediately killing them. (Yeast and bread moulds are saprotrophs).",
+        explanationHi: "अमरबेल (Cuscuta), किलनी, जूँ, जोंक और फीताकृमि परजीवी पोषण दर्शाते हैं, जो पोषी जीव को मारे बिना उससे सीधे पोषक तत्व प्राप्त करते हैं। (जबकि यीस्ट और ब्रेड मोल्ड मृतजीवी हैं)।"
+      },
+      {
+        id: 7,
+        topic: "Nutrition in Amoeba vs Paramoecium",
+        questionEn: "How does Paramoecium differ from Amoeba in the mechanism of capturing food?",
+        questionHi: "भोजन अंतर्ग्रहण की कार्यविधि में पैरामीशियम, अमीबा से किस प्रकार भिन्न है?",
+        options: [
+          { key: "a", textEn: "Paramoecium uses permanent teeth to chew ingested food", textHi: "पैरामीशियम भोजन चबाने के लिए स्थायी दाँतों का उपयोग करता है" },
+          { key: "b", textEn: "Amoeba uses temporary pseudopodia, while Paramoecium has a definite shape and moves food to a specific oral spot using cilia", textHi: "अमीबा अस्थायी पादाभों (स्यूडोपोडिया) का उपयोग करता है, जबकि पैरामीशियम का निश्चित आकार होता है और वह पक्ष्माभ (सीलिया) की गति से भोजन को एक विशिष्ट स्थान तक ले जाता है" },
+          { key: "c", textEn: "Amoeba absorbs food through stomata, whereas Paramoecium is an autotroph", textHi: "अमीबा रंध्रों द्वारा भोजन सोखता है, जबकि पैरामीशियम स्वपोषी है" },
+          { key: "d", textEn: "Both organisms feed using identical muscular tentacles", textHi: "दोनों जीव एक जैसी पेशीय स्पर्शिकाओं द्वारा भोजन पकड़ते हैं" }
+        ],
+        correct: "b",
+        explanationEn: "Amoeba takes in food at any surface point using temporary finger-like pseudopodia that fuse to form a food vacuole. Paramoecium has a fixed definite cell shape; cilia beating synchronously push the food particle to a specific oral groove/spot.",
+        explanationHi: "अमीबा किसी भी स्थान से पादाभ (Pseudopodia) बनाकर खाद्य रिक्तिका में भोजन ग्रहण करता है। पैरामीशियम का आकार निश्चित होता है और उसकी कोशिका की पूरी सतह पर मौजूद सीलिया की गति भोजन को एक निश्चित मुख बिंदु तक पहुँचाती है।"
+      },
+      {
+        id: 8,
+        topic: "Salivary Amylase Action in Mouth",
+        questionEn: "What is the specific enzymatic action of salivary amylase (ptyalin) present in human saliva?",
+        questionHi: "मानव लार में उपस्थित लार एमाइलेज (टायलिन) एंजाइम की विशिष्ट रासायनिक क्रिया क्या है?",
+        options: [
+          { key: "a", textEn: "Breaks down complex starch into simpler sugars (maltose)", textHi: "जटिल स्टार्च (मंड) को सरल शर्करा (माल्टोज) में तोड़ना" },
+          { key: "b", textEn: "Converts proteins directly into amino acids", textHi: "प्रोटीनों को सीधे अमीनो अम्लों में बदलना" },
+          { key: "c", textEn: "Emulsifies fats into glycerol and fatty acids", textHi: "वसा को ग्लिसरॉल और वसीय अम्लों में पायसीकृत करना" },
+          { key: "d", textEn: "Neutralises bile salts in the stomach", textHi: "आमाशय में पित्त लवणों को उदासीन करना" }
+        ],
+        correct: "a",
+        explanationEn: "Saliva secreted by salivary glands contains salivary amylase, which catalyses the hydrolytic breakdown of complex starch into simpler disaccharide sugars (maltose).",
+        explanationHi: "लार ग्रंथियों द्वारा स्रावित लार में लार एमाइलेज (Salivary amylase) होता है, जो स्टार्च (मंड) के जटिल अणुओं को खंडित करके सरल शर्करा (माल्टोज) में बदल देता है।"
+      },
+      {
+        id: 9,
+        topic: "Role of Hydrochloric Acid (HCl) in Stomach",
+        questionEn: "Which of the following functions is performed by hydrochloric acid (HCl) secreted by gastric glands in the human stomach?",
+        questionHi: "मानव आमाशय की जठर ग्रंथियों द्वारा स्रावित हाइड्रोक्लोरिक अम्ल (HCl) द्वारा कौन सा कार्य संपन्न किया जाता है?",
+        options: [
+          { key: "a", textEn: "It creates an alkaline medium required for trypsin action", textHi: "यह ट्रिप्सिन की क्रिया के लिए आवश्यक क्षारीय माध्यम तैयार करता है" },
+          { key: "b", textEn: "It creates an acidic medium that facilitates the action of protein-digesting enzyme pepsin and kills ingested microbes", textHi: "यह एक अम्लीय माध्यम बनाता है जो प्रोटीन पाचक एंजाइम पेप्सिन की क्रिया को सुगम बनाता है तथा रोगाणुओं को नष्ट करता है" },
+          { key: "c", textEn: "It converts fats directly into fatty acids and protects the stomach wall", textHi: "यह वसा को सीधे वसीय अम्ल में बदलता है तथा आमाशय की भित्ति की रक्षा करता है" },
+          { key: "d", textEn: "It synthesises glycogen directly from dietary fiber", textHi: "यह रेशेदार भोजन से सीधे ग्लाइकोजन का संश्लेषण करता है" }
+        ],
+        correct: "b",
+        explanationEn: "Gastric juice contains HCl, pepsin, and mucus. HCl creates an acidic environment (pH ~1.5 to 2.5) necessary for inactive pepsinogen to convert into active pepsin for protein digestion, and also kills bacteria ingested with food.",
+        explanationHi: "जठर रस में उपस्थित HCl एक अम्लीय माध्यम तैयार करता है, जो निष्क्रिय पेप्सिनोजेन को सक्रिय पेप्सिन में बदलकर प्रोटीन का पाचन संभव बनाता है तथा भोजन के साथ आए हानिकारक जीवाणुओं को नष्ट करता है।"
+      },
+      {
+        id: 10,
+        topic: "Small Intestine Length in Herbivores vs Carnivores",
+        questionEn: "Why do herbivorous animals like cows have a significantly longer small intestine compared to carnivores like tigers?",
+        questionHi: "गाय जैसे शाकाहारी जंतुओं की छोटी आंत (क्षुद्रांत्र), बाघ जैसे मांसाहारी जंतुओं की तुलना में काफी लंबी क्यों होती है?",
+        options: [
+          { key: "a", textEn: "Herbivores need extra length to digest tough cellulose with the help of symbiotic gut bacteria", textHi: "शाकाहारियों को भोजन में उपस्थित कठोर सेल्युलोज के पाचन के लिए अधिक लंबाई की आवश्यकता होती है" },
+          { key: "b", textEn: "Meat is harder to digest and requires a much longer passage", textHi: "मांस का पाचन अत्यंत कठिन होता है और इसके लिए अधिक लंबे मार्ग की आवश्यकता होती है" },
+          { key: "c", textEn: "Herbivores have no stomach or gastric glands", textHi: "शाकाहारियों में आमाशय या जठर ग्रंथियाँ नहीं होतीं" },
+          { key: "d", textEn: "Carnivores absorb water through their lungs instead of the intestine", textHi: "मांसाहारी आंत के बजाय अपने फेफड़ों द्वारा जल अवशोषित करते हैं" }
+        ],
+        correct: "a",
+        explanationEn: "Cellulose present in grass and plant cell walls is difficult to digest and requires a longer time and intestine for microbial fermentation. Meat is digested much more readily; hence carnivores have a shorter small intestine.",
+        explanationHi: "घास खाने वाले शाकाहारी जंतुओं को सेल्युलोज पचाने के लिए एक लंबी छोटी आंत की आवश्यकता होती है। मांस का पाचन अपेक्षाकृत सरल होता है, इसलिए बाघ जैसे मांसाहारियों की छोटी आंत छोटी होती है।"
+      },
+      {
+        id: 11,
+        topic: "Bile Juice & Pancreatic Enzymes",
+        questionEn: "What are the dual critical functions of bile juice secreted by the liver into the duodenum?",
+        questionHi: "यकृत द्वारा ग्रहणी (डुओडेनम) में स्रावित पित्त रस के दो प्रमुख महत्वपूर्ण कार्य क्या हैं?",
+        options: [
+          { key: "a", textEn: "Makes acidic food alkaline for pancreatic enzymes and emulsifies large fat globules into smaller droplets", textHi: "आमाशय से आए अम्लीय भोजन को अग्न्याशयी एंजाइमों के लिए क्षारीय बनाना तथा बड़े वसा गोलकों को छोटी गोलिकाओं में तोड़ना (पायसीकरण)" },
+          { key: "b", textEn: "Converts carbohydrates into starch and produces insulin", textHi: "कार्बोहाइड्रेट को स्टार्च में बदलना तथा इंसुलिन उत्पन्न करना" },
+          { key: "c", textEn: "Directly hydrolyses proteins into urea and uric acid", textHi: "प्रोटीनों को सीधे यूरिया और यूरिक अम्ल में तोड़ना" },
+          { key: "d", textEn: "Produces mucus to coat the large intestine", textHi: "बड़ी आंत को चिकना करने के लिए श्लेष्मा का निर्माण करना" }
+        ],
+        correct: "a",
+        explanationEn: "Acidic chyme from the stomach must be made alkaline for pancreatic enzymes (trypsin and lipase) to function. Bile juice accomplishes this alkaline transition. Furthermore, bile salts break large insoluble fat globules into tiny droplets (emulsification), drastically increasing enzyme surface area.",
+        explanationHi: "आमाशय से आने वाला भोजन अम्लीय होता है, जिसे अग्न्याशयी एंजाइमों (ट्रिप्सिन व लाइपेस) की क्रिया के लिए क्षारीय बनाना जरूरी होता है। पित्त रस भोजन को क्षारीय बनाता है तथा पित्त लवण वसा की बड़ी गोलिकाओं को छोटी गोलिकाओं में खंडित (पायसीकृत) करते हैं।"
+      },
+      {
+        id: 12,
+        topic: "Villi Function in Small Intestine",
+        questionEn: "The inner mucosal lining of the small intestine features millions of microscopic finger-like projections called villi. Their primary function is to:",
+        questionHi: "छोटी आंत की भीतरी परत में लाखों अंगुली जैसे प्रवर्ध होते हैं जिन्हें दीर्घरोम (विली) कहते हैं। इनका मुख्य कार्य क्या है?",
+        options: [
+          { key: "a", textEn: "Greatly increase the absorptive surface area and absorb nutrients directly into extensive blood capillaries and lymph vessels", textHi: "अवशोषण के पृष्ठीय क्षेत्रफल को अत्यधिक बढ़ाना तथा पोषक तत्वों को रक्त केशिकाओं व लसिका वाहिकाओं में अवशोषित करना" },
+          { key: "b", textEn: "Secrete strong hydrochloric acid to kill parasites", textHi: "परजीवियों को मारने के लिए तीव्र हाइड्रोक्लोरिक अम्ल स्रावित करना" },
+          { key: "c", textEn: "Store unabsorbed solid waste before defecation", textHi: "मल त्याग से पूर्व बिना पचे ठोस अपशिष्ट का संचय करना" },
+          { key: "d", textEn: "Slow down peristalsis by creating mechanical barriers", textHi: "यांत्रिक अवरोध उत्पन्न करके क्रमानुकुंचन गति को रोकना" }
+        ],
+        correct: "a",
+        explanationEn: "Villi increase the effective surface area for absorption several hundred-fold. They are richly supplied with blood capillaries that transport glucose and amino acids, and central lacteals (lymph vessels) that absorb digested fats.",
+        explanationHi: "दीर्घरोम (विली) आंत के अवशोषण सतही क्षेत्रफल को कई गुना बढ़ा देते हैं। इनमें रुधिर वाहिकाओं का विस्तृत जाल होता है, जो पचे हुए भोजन को अवशोषित कर शरीर की प्रत्येक कोशिका तक पहुँचाते हैं।"
+      },
+      {
+        id: 13,
+        topic: "Glycolysis — First Step of Respiration",
+        questionEn: "In all living organisms, the initial step of cellular respiration—the conversion of 6-carbon glucose into 3-carbon pyruvate—occurs in the:",
+        questionHi: "सभी सजीवों में कोशिकीय श्वसन का पहला चरण—६-कार्बन वाले ग्लूकोज का ३-कार्बन वाले पायरुवेट में टूटना—कहाँ घटित होता है?",
+        options: [
+          { key: "a", textEn: "Mitochondria", textHi: "माइटोकॉन्ड्रिया में" },
+          { key: "b", textEn: "Cytoplasm", textHi: "कोशिकाद्रव्य (साइटोप्लाज्म) में" },
+          { key: "c", textEn: "Nucleus", textHi: "केंद्रक में" },
+          { key: "d", textEn: "Chloroplast", textHi: "हरितलवक में" }
+        ],
+        correct: "b",
+        explanationEn: "In all organisms (aerobic and anaerobic), the breakdown of glucose (6-carbon) into two molecules of pyruvate (3-carbon) takes place in the cytoplasm without requiring oxygen (glycolysis).",
+        explanationHi: "सभी जीवों में श्वसन का पहला चरण—ग्लूकोज (६-कार्बन) का पायरुवेट (३-कार्बन) में विखंडन—कोशिकाद्रव्य (Cytoplasm) में संपन्न होता है, जिसमें ऑक्सीजन की आवश्यकता नहीं होती।"
+      },
+      {
+        id: 14,
+        topic: "Anaerobic Respiration in Human Muscles",
+        questionEn: "During strenuous physical activity or sudden sprinting, what substance accumulates in human muscle cells due to lack of sufficient oxygen, causing painful cramps?",
+        questionHi: "अत्यधिक शारीरिक व्यायाम या अचानक दौड़ने के दौरान ऑक्सीजन की कमी के कारण हमारी पेशी कोशिकाओं में किस पदार्थ का निर्माण होता है, जिससे दर्दनाक ऐंठन (क्रैम्प्स) होती है?",
+        options: [
+          { key: "a", textEn: "Ethanol and Carbon dioxide", textHi: "एथेनॉल तथा कार्बन डाइऑक्साइड" },
+          { key: "b", textEn: "Lactic acid (a 3-carbon molecule)", textHi: "लैक्टिक अम्ल (३-कार्बन अणु)" },
+          { key: "c", textEn: "Hydrochloric acid", textHi: "हाइड्रोक्लोरिक अम्ल" },
+          { key: "d", textEn: "Uric acid crystals", textHi: "यूरिक अम्ल क्रिस्टल" }
+        ],
+        correct: "b",
+        explanationEn: "When muscle cells experience a deficit of oxygen during vigorous exercise, pyruvate is routed through an alternate anaerobic pathway in the cytoplasm, forming lactic acid (3-carbon). Accumulation of lactic acid leads to muscle cramps.",
+        explanationHi: "तेज दौड़ते समय पेशी कोशिकाओं में ऑक्सीजन की कमी हो जाती है। इस स्थिति में पायरुवेट लैक्टिक अम्ल (३-कार्बन अणु) में परिवर्तित हो जाता है। पेशियों में लैक्टिक अम्ल का जमाव ही ऐंठन (Cramps) का कारण बनता है।"
+      },
+      {
+        id: 15,
+        topic: "ATP as Cellular Energy Currency",
+        questionEn: "During cellular respiration, energy released is stored in the terminal phosphate bonds of ATP. How much energy is released when this terminal bond is broken using water?",
+        questionHi: "कोशिकीय श्वसन में मुक्त ऊर्जा ATP के फॉस्फेट बंधों में संचित होती है। जल के उपयोग द्वारा ATP का अंतिम फॉस्फेट बंध टूटने पर कितनी ऊर्जा मुक्त होती है?",
+        options: [
+          { key: "a", textEn: "12.2 kJ/mol", textHi: "12.2 kJ/mol" },
+          { key: "b", textEn: "30.5 kJ/mol", textHi: "30.5 kJ/mol" },
+          { key: "c", textEn: "80.0 kJ/mol", textHi: "80.0 kJ/mol" },
+          { key: "d", textEn: "120.5 kJ/mol", textHi: "120.5 kJ/mol" }
+        ],
+        correct: "b",
+        explanationEn: "According to NCERT Chapter 5 'More to Know', breaking the terminal phosphate linkage in ATP using water releases energy equivalent to 30.5 kJ/mol, which fuels endothermic reactions in cells.",
+        explanationHi: "NCERT के अनुसार, जब जल का उपयोग करके ATP में अंतिम फॉस्फेट सहलग्नता टूटती है, तो 30.5 kJ/mol के तुल्य ऊर्जा विमुक्त होती है जो कोशिकीय अभिक्रियाओं का संचालन करती है।"
+      },
+      {
+        id: 16,
+        topic: "Human Alveoli & Gaseous Exchange",
+        questionEn: "Why are rings of cartilage present in the human trachea (windpipe)?",
+        questionHi: "मानव श्वासनली (ट्रेकिया) में उपास्थि के वलय (Rings of cartilage) क्यों उपस्थित होते हैं?",
+        options: [
+          { key: "a", textEn: "To ensure that the air passage does not collapse when there is less air in it", textHi: "यह सुनिश्चित करने के लिए कि वायु मार्ग में हवा कम होने पर भी वह पिचके (ध्वस्त) नहीं" },
+          { key: "b", textEn: "To filter dust particles and smoke from the air", textHi: "वायु से धूल कणों और धुएँ को छानने के लिए" },
+          { key: "c", textEn: "To secrete digestive enzymes into the oesophagus", textHi: "ग्रासनली में पाचक एंजाइम स्रावित करने के लिए" },
+          { key: "d", textEn: "To warm the blood flowing into the heart", textHi: "हृदय में जाने वाले रक्त को गर्म करने के लिए" }
+        ],
+        correct: "a",
+        explanationEn: "C-shaped cartilage rings provide structural rigidity to the trachea and bronchi, preventing the airway from collapsing during inspiration when intra-thoracic pressure drops.",
+        explanationHi: "कंठ और श्वासनली में उपास्थि (Cartilage) के वलय उपस्थित होते हैं। ये सुनिश्चित करते हैं कि वायु के न होने पर भी वायु-मार्ग निपतित (पिचक) न हो।"
+      },
+      {
+        id: 17,
+        topic: "Blood Pressure & Sphygmomanometer",
+        questionEn: "In a healthy adult human, what are the normal systolic and diastolic arterial blood pressures?",
+        questionHi: "एक स्वस्थ वयस्क मनुष्य में सामान्य प्रकुंचन (सिस्टोलिक) तथा अनुशिथिलन (डायस्टोलिक) रक्तदाब क्या होता है?",
+        options: [
+          { key: "a", textEn: "140 mm Hg systolic / 90 mm Hg diastolic", textHi: "140 mm Hg प्रकुंचन / 90 mm Hg अनुशिथिलन" },
+          { key: "b", textEn: "120 mm Hg systolic / 80 mm Hg diastolic", textHi: "120 mm Hg प्रकुंचन / 80 mm Hg अनुशिथिलन" },
+          { key: "c", textEn: "80 mm Hg systolic / 120 mm Hg diastolic", textHi: "80 mm Hg प्रकुंचन / 120 mm Hg अनुशिथिलन" },
+          { key: "d", textEn: "100 mm Hg systolic / 50 mm Hg diastolic", textHi: "100 mm Hg प्रकुंचन / 50 mm Hg अनुशिथिलन" }
+        ],
+        correct: "b",
+        explanationEn: "Normal systolic pressure (during ventricular contraction) is about 120 mm of Hg, and normal diastolic pressure (during ventricular relaxation) is about 80 mm of Hg. It is measured with a sphygmomanometer.",
+        explanationHi: "निलय संकुचन के दौरान धमनी में रक्तदाब प्रकुंचन दाब कहलाता है जो लगभग 120 mm Hg होता है, तथा निलय शिथिलन के दौरान अनुशिथिलन दाब लगभग 80 mm Hg होता है। इसे स्फाइग्मोमैनोमीटर से मापा जाता है।"
+      },
+      {
+        id: 18,
+        topic: "Double Circulation in Human Heart",
+        questionEn: "Why do the ventricles of the human heart have substantially thicker muscular walls than the atria?",
+        questionHi: "मानव हृदय के निलयों (Ventricles) की पेशीय भित्ति आलिंदों (Atria) की तुलना में अधिक मोटी क्यों होती है?",
+        options: [
+          { key: "a", textEn: "Ventricles have to pump blood with high pressure to distant organs (lungs and systemic body)", textHi: "निलयों को पूरे शरीर और फेफड़ों जैसे दूरस्थ अंगों में उच्च दाब के साथ रुधिर पंप करना होता है" },
+          { key: "b", textEn: "Ventricles store oxygen-rich gas bubbles permanently", textHi: "निलय स्थायी रूप से ऑक्सीजन युक्त गैस के बुलबुलों का संचय करते हैं" },
+          { key: "c", textEn: "Atria produce red blood cells and cannot have thick walls", textHi: "आलिंद लाल रक्त कोशिकाओं का निर्माण करते हैं इसलिए उनकी भित्ति मोटी नहीं हो सकती" },
+          { key: "d", textEn: "Ventricles lack valves to prevent backflow", textHi: "निलयों में उल्टे प्रवाह को रोकने के लिए कपाट (वाल्व) नहीं होते" }
+        ],
+        correct: "a",
+        explanationEn: "Atria only receive blood and push it down into adjacent ventricles under low pressure. Ventricles must generate high hydrostatic pressure to drive blood through pulmonary and systemic circulations throughout the body.",
+        explanationHi: "चूँकि निलय को रुधिर को विभिन्न अंगों (फेफड़ों तथा पूरे शरीर) में अधिक दबाव के साथ भेजना होता है, इसलिए निलय की पेशीय भित्ति आलिंद की तुलना में अधिक मोटी और मजबूत होती है।"
+      },
+      {
+        id: 19,
+        topic: "Transport in Plants — Transpiration vs Translocation",
+        questionEn: "Transport of water in xylem versus transport of soluble food in phloem differs in that:",
+        questionHi: "जाइलम में जल के परिवहन तथा फ्लोएम में भोजन के स्थानांतरण में मुख्य अंतर क्या है?",
+        options: [
+          { key: "a", textEn: "Xylem transport relies on physical forces (transpiration pull & root pressure) without expenditure of energy, while phloem translocation utilizes ATP energy to create osmotic pressure", textHi: "जाइलम में जल परिवहन भौतिक बलों (वाष्पोत्सर्जन खिंचाव व मूलदाब) पर निर्भर करता है, जबकि फ्लोएम में स्थानांतरण ATP से ऊर्जा प्राप्त कर परासरणी दाब द्वारा होता है" },
+          { key: "b", textEn: "Xylem only moves downward while phloem only moves upward", textHi: "जाइलम केवल नीचे की ओर तथा फ्लोएम केवल ऊपर की ओर गति करता है" },
+          { key: "c", textEn: "Phloem transport is completely passive requiring no living companion cells", textHi: "फ्लोएम परिवहन पूरी तरह निष्क्रिय होता है जिसमें सहचर कोशिकाओं की आवश्यकता नहीं होती" },
+          { key: "d", textEn: "Xylem utilizes ATP at every cell to push water against gravity", textHi: "जाइलम गुरुत्वाकर्षण के विरुद्ध जल को धकेलने के लिए प्रत्येक कोशिका में ATP का उपयोग करता है" }
+        ],
+        correct: "a",
+        explanationEn: "Water and mineral movement in xylem is driven by passive physical forces (root pressure at night, transpiration suction pull during the day). In contrast, translocation of sucrose in phloem actively expends ATP energy to increase osmotic pressure, moving sap bidirectionally.",
+        explanationHi: "जाइलम में जल का संवहन साधारण भौतिक बलों (वाष्पोत्सर्जन खिंचाव और मूलदाब) द्वारा बिना ऊर्जा खर्च के होता है, जबकि फ्लोएम में भोजन (सुक्रोज) का स्थानांतरण ATP से ऊर्जा लेकर परासरण दाब बढ़ाकर संपन्न होता है।"
+      },
+      {
+        id: 20,
+        topic: "Excretory System & Nephron Function",
+        questionEn: "In a healthy human adult, the initial volume of filtrate formed daily in both kidneys is about 180 Litres, yet the actual urine excreted is only 1 to 2 Litres per day. Why?",
+        questionHi: "एक स्वस्थ वयस्क मनुष्य में दोनों वृक्कों में प्रतिदिन लगभग १८० लीटर आरंभिक निस्यंद (फ़िल्ट्रेट) बनता है, फिर भी उत्सर्जित मूत्र केवल १ से २ लीटर ही क्यों होता है?",
+        options: [
+          { key: "a", textEn: "Remaining filtrate is converted into bile in the liver", textHi: "शेष निस्यंद यकृत में पित्त में बदल जाता है" },
+          { key: "b", textEn: "Nearly 99% of the water along with glucose, amino acids, and useful salts is selectively reabsorbed as the filtrate flows along the nephron tubules", textHi: "नेफ्रॉन नलिकाओं में बहते समय लगभग ९९% जल, ग्लूकोज, अमीनो अम्ल तथा उपयोगी लवणों का चयनात्मक पुनरावशोषण हो जाता है" },
+          { key: "c", textEn: "Excess liquid evaporates through skin pores during urination", textHi: "मूत्र त्याग के समय अतिरिक्त द्रव त्वचा के रोमछिद्रों से वाष्पित हो जाता है" },
+          { key: "d", textEn: "The urinary bladder permanently absorbs 178 Litres every 24 hours", textHi: "मूत्राशय २४ घंटे में १७८ लीटर द्रव को स्थायी रूप से सोख लेता है" }
+        ],
+        correct: "b",
+        explanationEn: "Most of the initial filtrate (~178-179 L) is selectively reabsorbed along the convoluted tubules and loop of Henle of the nephron back into surrounding peritubular capillaries, leaving only 1 to 2 litres of concentrated urine containing metabolic wastes.",
+        explanationHi: "आरंभिक निस्यंद का अधिकांश भाग (लगभग १७८-१७९ लीटर जल, ग्लूकोज, अमीनो अम्ल और लवण) वृक्क नलिकाओं (नेफ्रॉन) द्वारा पुनः रक्त में अवशोषित (Reabsorbed) कर लिया जाता है, जिससे केवल १ से २ लीटर सांद्र अपशिष्ट मूत्र के रूप में बाहर निकलता है।"
+      }
+    ];
+
+    let currentLang = 'both';
+    let userAnswers = {};
+    let attempted = 0;
+    let correctCount = 0;
+
+    function setLang(lang) {
+      currentLang = lang;
+      ['both', 'en', 'hi'].forEach(l => {
+        const btn = document.getElementById('lang-' + l);
+        if (btn) btn.classList.toggle('active', l === lang);
+      });
+      renderQuestions();
+    }
+
+    function renderQuestions() {
+      const listEl = document.getElementById('questions-list');
+      listEl.innerHTML = '';
+
+      questions.forEach((q, idx) => {
+        const card = document.createElement('div');
+        card.className = 'q-card';
+        card.id = `card-q-${q.id}`;
+
+        const isAnswered = userAnswers[q.id] !== undefined;
+        const selectedKey = userAnswers[q.id];
+
+        // Question Title
+        let titleHtml = '';
+        if (currentLang === 'both') {
+          titleHtml = `
+            <div>
+              <div class="q-title-en">${idx + 1}. ${q.questionEn}</div>
+              <div class="q-title-hi">${q.questionHi}</div>
+            </div>
+          `;
+        } else if (currentLang === 'en') {
+          titleHtml = `<div class="q-title-en">${idx + 1}. ${q.questionEn}</div>`;
+        } else {
+          titleHtml = `<div class="q-title-hi">${idx + 1}. ${q.questionHi}</div>`;
+        }
+
+        // Options
+        let optionsHtml = '';
+        q.options.forEach(opt => {
+          let btnClass = 'opt-btn';
+          if (isAnswered) {
+            btnClass += ' disabled';
+            if (opt.key === q.correct) {
+              btnClass += ' correct';
+            } else if (opt.key === selectedKey) {
+              btnClass += ' wrong';
+            }
+          }
+
+          let optContent = '';
+          if (currentLang === 'both') {
+            optContent = `
+              <div class="opt-text-wrap">
+                <span class="opt-en">${opt.textEn}</span>
+                <span class="opt-hi">${opt.textHi}</span>
+              </div>
+            `;
+          } else if (currentLang === 'en') {
+            optContent = `<div class="opt-text-wrap"><span class="opt-en">${opt.textEn}</span></div>`;
+          } else {
+            optContent = `<div class="opt-text-wrap"><span class="opt-hi">${opt.textHi}</span></div>`;
+          }
+
+          optionsHtml += `
+            <button class="${btnClass}" onclick="selectOption(${q.id}, '${opt.key}')">
+              <span class="opt-key">${opt.key}</span>
+              ${optContent}
+            </button>
+          `;
+        });
+
+        // Explanation
+        let expText = '';
+        if (currentLang === 'both') {
+          expText = `<p><strong>English:</strong> ${q.explanationEn}</p><p style="margin-top: 6px;"><strong>हिंदी:</strong> ${q.explanationHi}</p>`;
+        } else if (currentLang === 'en') {
+          expText = `<p>${q.explanationEn}</p>`;
+        } else {
+          expText = `<p>${q.explanationHi}</p>`;
+        }
+
+        const expHtml = `
+          <div class="exp-box ${isAnswered ? 'show' : ''}" id="exp-${q.id}">
+            <div class="exp-title">💡 Explanation &amp; Scientific Rationale</div>
+            ${expText}
+          </div>
+        `;
+
+        card.innerHTML = `
+          <div class="q-badge-row">
+            <span class="q-topic">${q.topic}</span>
+            <span class="q-num">Q ${idx + 1} / ${questions.length}</span>
+          </div>
+          ${titleHtml}
+          <div class="opt-grid">${optionsHtml}</div>
+          ${expHtml}
+        `;
+
+        listEl.appendChild(card);
+      });
+    }
+
+    function selectOption(qId, selectedKey) {
+      if (userAnswers[qId] !== undefined) return;
+      userAnswers[qId] = selectedKey;
+      attempted++;
+
+      const q = questions.find(item => item.id === qId);
+      if (selectedKey === q.correct) {
+        correctCount++;
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 30, spread: 55, origin: { y: 0.8 } });
+        }
+      }
+
+      document.getElementById('hud-attempted').innerText = attempted;
+      document.getElementById('hud-correct').innerText = correctCount;
+      const acc = Math.round((correctCount / attempted) * 100);
+      document.getElementById('hud-accuracy').innerText = acc + '%';
+
+      renderQuestions();
+    }
+
+    // Theme toggle & persistent sync
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      const isDarkPref = localStorage.getItem('nextsem_dark_mode');
+      if (savedTheme === 'light' || isDarkPref === 'false') {
+        document.body.classList.add('light-theme');
+        if (themeIcon) themeIcon.textContent = '☀️';
+        if (themeLabel) themeLabel.textContent = 'Light';
+      }
+    } catch (e) {}
+
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        if (themeIcon) themeIcon.textContent = isLight ? '☀️' : '🌙';
+        if (themeLabel) themeLabel.textContent = isLight ? 'Light' : 'Dark';
+        try {
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+          localStorage.setItem('nextsem_dark_mode', (!isLight).toString());
+        } catch (e) {}
+      });
+    }
+
+    // Initial render
+    renderQuestions();
+  </script>
+
+  <footer style="text-align: center; padding: 24px 16px; border-top: 1px solid var(--border-card); color: var(--text-muted); font-size: 0.85rem; margin-top: auto;">
+    <p>NCERT Class 10 Science Solutions &bull; Nextsem Academy &bull; Empowering Every Student Free</p>
+  </footer>
+</body>
+</html>

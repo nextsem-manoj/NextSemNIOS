@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Circles Mastery: Basics to All Theorems | Nextsem Academy</title>
+  <meta name="description" content="Master Circles geometry from fundamental definitions to all Class 9 and Class 10 NCERT theorems with interactive SVG visualizations, live angle sliders, and proofs.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭕</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .container {
+      position: relative; max-width: 1040px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(16, 185, 129, 0.12));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 36px 24px; text-align: center;
+      margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; max-width: 720px; margin: 0 auto; }
+
+    /* Interactive Studio Tabs */
+    .module-nav {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px;
+    }
+    .mod-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 10px 18px; border-radius: 12px; font-size: 14px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .mod-btn:hover, .mod-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    /* Studio Card */
+    .studio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px; margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      font-size: 20px; font-weight: 800; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px; color: var(--accent-sky);
+    }
+
+    /* Interactive SVG Studio */
+    .visualizer-box {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;
+    }
+    @media (max-width: 768px) {
+      .visualizer-box { grid-template-columns: 1fr; }
+    }
+
+    .svg-canvas-wrap {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px; padding: 16px; display: flex; justify-content: center; align-items: center;
+    }
+
+    .controls-panel {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+
+    .pill-group {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .pill-btn {
+      background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); font-size: 12px; font-weight: 700; padding: 6px 14px;
+      border-radius: 9999px; cursor: pointer; transition: all 0.2s;
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: var(--accent-sky); color: #000; border-color: var(--accent-sky);
+    }
+
+    .slider-wrap {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 14px;
+    }
+    .slider-wrap label {
+      display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 6px;
+    }
+    input[type=range] {
+      width: 100%; accent-color: var(--accent-sky); cursor: pointer;
+    }
+
+    .info-callout {
+      background: rgba(56, 189, 248, 0.1); border-left: 4px solid var(--accent-sky);
+      border-radius: 0 10px 10px 0; padding: 12px 16px; font-size: 13px; line-height: 1.6;
+    }
+
+    /* Theorems Grid */
+    .theorems-grid {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+    }
+
+    .thm-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px; padding: 18px 22px; transition: all 0.2s;
+    }
+    .thm-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+    .thm-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;
+    }
+    .thm-num {
+      font-size: 12px; font-weight: 800; padding: 2px 10px; border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .thm-title { font-size: 16px; font-weight: 800; color: var(--text-main); }
+    .thm-stmt { font-size: 14px; color: var(--text-main); margin-bottom: 8px; }
+    .thm-proof-box {
+      font-size: 13px; color: var(--text-muted); background: rgba(0, 0, 0, 0.3);
+      padding: 10px 14px; border-radius: 8px; border-left: 3px solid var(--accent-emerald); margin-top: 8px;
+    }
+
+    /* Calculator Studio */
+    .calc-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 16px;
+    }
+    .calc-input-box {
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .calc-input-box label { font-size: 12px; font-weight: 700; color: var(--text-muted); }
+    .calc-input-box input {
+      background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px; padding: 10px; color: var(--text-main); font-size: 15px; font-weight: 700;
+    }
+    .calc-result-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(56, 189, 248, 0.15));
+      border: 1px solid var(--accent-emerald); border-radius: 12px; padding: 16px; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">NCERT Maths Class 9 & 10</span>
+      <span style="font-weight: 700; font-size: 15px;">Circle Mastery Studio</span>
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/docs/maths_circle_geometry_basics_to_all_theorems_complete_mastery_guide.md" class="nav-btn" target="_blank">📄 Full Notes MD</a>
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">📐 NCERT Geometry Masterclass</div>
+      <h1 class="hero-title">Circles: From Basics to All Theorems</h1>
+      <p class="hero-subtitle">Comprehensive conceptual breakdown, interactive visual proofs, angle sliders, and all 16 foundational theorems.</p>
+    </header>
+
+    <!-- Module Selector Tabs -->
+    <div class="module-nav">
+      <button class="mod-btn active" onclick="switchTab('anatomy', this)">🎯 1. Circle Anatomy</button>
+      <button class="mod-btn" onclick="switchTab('theorems', this)">🏛️ 2. All 16 Theorems</button>
+      <button class="mod-btn" onclick="switchTab('angleStudio', this)">📐 3. Double Angle Studio</button>
+      <button class="mod-btn" onclick="switchTab('pythagoras', this)">🧮 4. Chord-Distance Solver</button>
+      <button class="mod-btn" onclick="switchTab('cyclic', this)">⭕ 5. Cyclic Quad Studio</button>
+    </div>
+
+    <!-- 1. Circle Anatomy & Core Elements -->
+    <section id="tab_anatomy" class="studio-card">
+      <div class="section-title">⭕ Part 1: Geometric Definition & Core Anatomy</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:20px;">
+        A <strong>circle</strong> is the locus of all points in a plane equidistant ($r$) from a fixed center point ($O$). Click elements below to highlight them on the live canvas:
+      </p>
+
+      <div class="visualizer-box">
+        <div class="svg-canvas-wrap">
+          <svg id="anatomySvg" width="280" height="280" viewBox="0 0 300 300">
+            <!-- Background circle -->
+            <circle cx="150" cy="150" r="100" fill="rgba(56, 189, 248, 0.05)" stroke="#38bdf8" stroke-width="2.5"/>
+            
+            <!-- Dynamic elements -->
+            <g id="el_center">
+              <circle cx="150" cy="150" r="5" fill="#f59e0b"/>
+              <text x="158" y="145" fill="#fcd34d" font-size="14" font-weight="bold">O (Center)</text>
+            </g>
+
+            <g id="el_radius" style="display:none;">
+              <line x1="150" y1="150" x2="250" y2="150" stroke="#10b981" stroke-width="3" stroke-dasharray="4"/>
+              <circle cx="250" cy="150" r="4" fill="#10b981"/>
+              <text x="190" y="142" fill="#34d399" font-size="13" font-weight="bold">r (Radius)</text>
+            </g>
+
+            <g id="el_diameter" style="display:none;">
+              <line x1="50" y1="150" x2="250" y2="150" stroke="#f43f5e" stroke-width="3"/>
+              <circle cx="50" cy="150" r="4" fill="#f43f5e"/>
+              <circle cx="250" cy="150" r="4" fill="#f43f5e"/>
+              <text x="110" y="140" fill="#fb7185" font-size="13" font-weight="bold">d = 2r (Diameter)</text>
+            </g>
+
+            <g id="el_chord" style="display:none;">
+              <line x1="80" y1="80" x2="220" y2="80" stroke="#a855f7" stroke-width="3"/>
+              <circle cx="80" cy="80" r="4" fill="#a855f7"/>
+              <circle cx="220" cy="80" r="4" fill="#a855f7"/>
+              <text x="120" y="70" fill="#c084fc" font-size="13" font-weight="bold">Chord AB</text>
+            </g>
+
+            <g id="el_secant" style="display:none;">
+              <line x1="20" y1="90" x2="280" y2="90" stroke="#ec4899" stroke-width="2.5" stroke-dasharray="6"/>
+              <text x="25" y="80" fill="#f472b6" font-size="12" font-weight="bold">Secant Line</text>
+            </g>
+
+            <g id="el_tangent" style="display:none;">
+              <line x1="40" y1="250" x2="260" y2="250" stroke="#f59e0b" stroke-width="3"/>
+              <line x1="150" y1="150" x2="150" y2="250" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3"/>
+              <circle cx="150" cy="250" r="5" fill="#f59e0b"/>
+              <text x="158" y="270" fill="#fcd34d" font-size="13" font-weight="bold">Tangent (OP ⊥ Tangent)</text>
+            </g>
+
+            <g id="el_sector" style="display:none;">
+              <path d="M 150 150 L 250 150 A 100 100 0 0 0 220.7 79.3 Z" fill="rgba(245, 158, 11, 0.25)" stroke="#f59e0b" stroke-width="2"/>
+              <text x="175" y="125" fill="#fcd34d" font-size="12" font-weight="bold">Sector</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="controls-panel">
+          <div style="font-weight:700; font-size:14px; margin-bottom:4px;">🔍 Select Element to Highlight:</div>
+          <div class="pill-group">
+            <button class="pill-btn active" onclick="showAnatomy('center', this)">Center (O)</button>
+            <button class="pill-btn" onclick="showAnatomy('radius', this)">Radius (r)</button>
+            <button class="pill-btn" onclick="showAnatomy('diameter', this)">Diameter (2r)</button>
+            <button class="pill-btn" onclick="showAnatomy('chord', this)">Chord (AB)</button>
+            <button class="pill-btn" onclick="showAnatomy('secant', this)">Secant Line</button>
+            <button class="pill-btn" onclick="showAnatomy('tangent', this)">Tangent & Contact</button>
+            <button class="pill-btn" onclick="showAnatomy('sector', this)">Sector (Slice)</button>
+          </div>
+
+          <div class="info-callout" id="anatomyDesc">
+            <strong>Center (O):</strong> The fixed central point in the plane from which all points on the circumference maintain a constant distance equal to the radius ($r$).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. All 16 Theorems Deck -->
+    <section id="tab_theorems" class="studio-card" style="display:none;">
+      <div class="section-title">🏛️ Part 2: Complete Catalog of Circle Theorems (Class 9 & 10)</div>
+      
+      <div class="theorems-grid">
+        <!-- Thm 1 -->
+        <div class="thm-card">
+          <div class="thm-header">
+            <span class="thm-num">Theorem 1</span>
+            <span style="font-size:12px; color:var(--accent-sky); font-weight:700;">SSS Congruence</span>
+          </div>
+          <div class="thm-title">Equal Chords Subtend Equal Angles at the Center</div>
+          <div class="thm-stmt">If two chords of a circle are equal in length ($AB = CD$), then they subtend equal angles at the center ($\angle AOB = \angle COD$).</div>
+          <div class="thm-proof-box"><strong>Proof:</strong> $\Delta AOB \cong \Delta COD$ by SSS ($OA=OC, OB=OD$ radii, $AB=CD$). Hence $\angle AOB = \angle COD$ (CPCTC).</div>
+        </div>
+
+        <!-- Thm 3 -->
+        <div class="thm-card">
+          <div class="thm-header">
+            <span class="thm-num">Theorem 3</span>
+            <span style="font-size:12px; color:var(--accent-sky); font-weight:700;">RHS Congruence</span>
+          </div>
+          <div class="thm-title">Perpendicular from Center to Chord Bisects the Chord</div>
+          <div class="thm-stmt">The perpendicular drawn from the center of a circle to a chord bisects the chord ($OM \perp AB \implies AM = MB = \frac{1}{2}AB$).</div>
+          <div class="thm-proof-box"><strong>Pythagorean Link:</strong> In right $\Delta OMA$: $r^2 = d^2 + (\text{chord}/2)^2$.</div>
+        </div>
+
+        <!-- Thm 8 -->
+        <div class="thm-card">
+          <div class="thm-header">
+            <span class="thm-num">Theorem 8 (Master Theorem)</span>
+            <span style="font-size:12px; color:var(--accent-gold); font-weight:700;">$\angle AOB = 2\angle APB$</span>
+          </div>
+          <div class="thm-title">Central Angle is Double the Inscribed Angle</div>
+          <div class="thm-stmt">The angle subtended by an arc at the center is double the angle subtended by it at any point on the remaining part of the circle.</div>
+          <div class="thm-proof-box"><strong>Corollary 1:</strong> Angle in a semicircle is a right angle ($90^\circ$).<br><strong>Corollary 2:</strong> Angles in the same segment of a circle are equal ($\angle APB = \angle AQB$).</div>
+        </div>
+
+        <!-- Thm 11 -->
+        <div class="thm-card">
+          <div class="thm-header">
+            <span class="thm-num">Theorem 11</span>
+            <span style="font-size:12px; color:var(--accent-purple); font-weight:700;">Cyclic Quadrilaterals</span>
+          </div>
+          <div class="thm-title">Opposite Angles of a Cyclic Quadrilateral are Supplementary</div>
+          <div class="thm-stmt">The sum of either pair of opposite angles of a cyclic quadrilateral is $180^\circ$ ($\angle A + \angle C = 180^\circ$ and $\angle B + \angle D = 180^\circ$).</div>
+          <div class="thm-proof-box"><strong>Exterior Angle Property:</strong> If one side is produced, Exterior Angle = Interior Opposite Angle.</div>
+        </div>
+
+        <!-- Thm 14 & 15 -->
+        <div class="thm-card">
+          <div class="thm-header">
+            <span class="thm-num">Theorems 14 & 15 (Tangents)</span>
+            <span style="font-size:12px; color:var(--accent-rose); font-weight:700;">Class 10 Core</span>
+          </div>
+          <div class="thm-title">Tangent Perpendicularity & External Tangents Equality</div>
+          <div class="thm-stmt">1. Radius through point of contact is perpendicular to tangent ($OP \perp XY$).<br>2. Lengths of two tangents drawn from an external point are equal ($PA = PB$).</div>
+          <div class="thm-proof-box"><strong>Proof:</strong> $\Delta OAP \cong \Delta OBP$ by RHS $\implies PA = PB$ and $OP$ bisects $\angle APB$.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Double Angle Interactive Studio (Theorem 8) -->
+    <section id="tab_angleStudio" class="studio-card" style="display:none;">
+      <div class="section-title">📐 Part 3: Live Double Angle Visualizer ($\angle AOB = 2\angle APB$)</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">
+        Drag the inscribed angle slider ($\angle APB$) and observe how the central angle ($\angle AOB$) always remains <strong>exactly double</strong>:
+      </p>
+
+      <div class="visualizer-box">
+        <div class="svg-canvas-wrap">
+          <svg id="doubleAngleSvg" width="280" height="280" viewBox="0 0 300 300">
+            <circle cx="150" cy="150" r="100" fill="none" stroke="#38bdf8" stroke-width="2"/>
+            <circle cx="150" cy="150" r="4" fill="#f59e0b"/>
+            <text x="156" y="146" fill="#fcd34d" font-size="12" font-weight="bold">O</text>
+
+            <!-- Triangle APB lines -->
+            <line id="line_PA" x1="150" y1="50" x2="79.3" y2="220.7" stroke="#a855f7" stroke-width="2.5"/>
+            <line id="line_PB" x1="150" y1="50" x2="220.7" y2="220.7" stroke="#a855f7" stroke-width="2.5"/>
+            
+            <!-- Central lines OA and OB -->
+            <line id="line_OA" x1="150" y1="150" x2="79.3" y2="220.7" stroke="#10b981" stroke-width="2.5" stroke-dasharray="3"/>
+            <line id="line_OB" x1="150" y1="150" x2="220.7" y2="220.7" stroke="#10b981" stroke-width="2.5" stroke-dasharray="3"/>
+
+            <!-- Points -->
+            <circle id="pt_P" cx="150" cy="50" r="5" fill="#a855f7"/>
+            <text x="145" y="40" fill="#c084fc" font-size="13" font-weight="bold">P</text>
+            <circle id="pt_A" cx="79.3" cy="220.7" r="5" fill="#10b981"/>
+            <text x="60" y="235" fill="#34d399" font-size="13" font-weight="bold">A</text>
+            <circle id="pt_B" cx="220.7" cy="220.7" r="5" fill="#10b981"/>
+            <text x="230" y="235" fill="#34d399" font-size="13" font-weight="bold">B</text>
+          </svg>
+        </div>
+
+        <div class="controls-panel">
+          <div class="slider-wrap">
+            <label>
+              <span>Inscribed Angle $\angle APB$:</span>
+              <span id="inscribedVal" style="color:var(--accent-purple); font-size:16px;">45°</span>
+            </label>
+            <input type="range" id="angleSlider" min="20" max="85" value="45" oninput="updateDoubleAngle(this.value)">
+          </div>
+
+          <div style="background:rgba(0,0,0,0.4); padding:16px; border-radius:12px; border:1px solid var(--border-card);">
+            <div style="font-size:13px; color:var(--text-muted); margin-bottom:4px;">Central Angle Subtended by Arc AB:</div>
+            <div id="centralVal" style="font-size:24px; font-weight:900; color:var(--accent-emerald);">∠AOB = 90° (2 × 45°)</div>
+          </div>
+
+          <div class="info-callout">
+            💡 <strong>Theorem 8 Property:</strong> As long as arc $AB$ is fixed, point $P$ can move anywhere along the major arc, and $\angle APB$ will remain constant and exactly half of $\angle AOB$.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Pythagorean Chord-Distance Calculator -->
+    <section id="tab_pythagoras" class="studio-card" style="display:none;">
+      <div class="section-title">🧮 Part 4: Theorem 3 Chord & Distance Solver ($r^2 = d^2 + (c/2)^2$)</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">
+        Solve any Class 9 textbook problem involving chord length, circle radius, and perpendicular distance from the center:
+      </p>
+
+      <div class="calc-grid">
+        <div class="calc-input-box">
+          <label>Circle Radius ($r$ in cm):</label>
+          <input type="number" id="calc_r" value="5" min="1" oninput="solvePythagoras()">
+        </div>
+        <div class="calc-input-box">
+          <label>Perpendicular Distance ($d$ in cm):</label>
+          <input type="number" id="calc_d" value="3" min="0" oninput="solvePythagoras()">
+        </div>
+      </div>
+
+      <div class="calc-result-box" id="calc_res">
+        <div style="font-size:13px; color:var(--text-muted); font-weight:700;">Calculated Full Chord Length ($AB$):</div>
+        <div style="font-size:26px; font-weight:900; color:var(--accent-emerald); margin:4px 0;" id="chordLen">8.00 cm</div>
+        <div style="font-size:12px; color:var(--text-main);" id="chordStep">Half chord $AM = \sqrt{5^2 - 3^2} = \sqrt{25 - 9} = 4\text{ cm} \implies AB = 8\text{ cm}$</div>
+      </div>
+    </section>
+
+    <!-- 5. Cyclic Quadrilateral Studio -->
+    <section id="tab_cyclic" class="studio-card" style="display:none;">
+      <div class="section-title">⭕ Part 5: Theorem 11 Cyclic Quadrilateral Live Verification</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">
+        Adjust Angle $A$ and Angle $B$ of cyclic quadrilateral $ABCD$. Observe that opposite angles are always supplementary ($180^\circ$):
+      </p>
+
+      <div class="calc-grid">
+        <div class="slider-wrap">
+          <label><span>Angle A:</span> <span id="angleA_val" style="color:var(--accent-sky);">70°</span></label>
+          <input type="range" id="sliderA" min="30" max="150" value="70" oninput="updateCyclic(this.value, null)">
+        </div>
+        <div class="slider-wrap">
+          <label><span>Angle B:</span> <span id="angleB_val" style="color:var(--accent-purple);">110°</span></label>
+          <input type="range" id="sliderB" min="30" max="150" value="110" oninput="updateCyclic(null, this.value)">
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:10px;">
+        <div class="calc-result-box">
+          <div style="font-size:12px; color:var(--text-muted);">Opposite Pair 1:</div>
+          <div style="font-size:18px; font-weight:800; color:var(--accent-sky); margin:4px 0;" id="pair1_txt">∠A (70°) + ∠C (110°) = 180°</div>
+        </div>
+        <div class="calc-result-box">
+          <div style="font-size:12px; color:var(--text-muted);">Opposite Pair 2:</div>
+          <div style="font-size:18px; font-weight:800; color:var(--accent-purple); margin:4px 0;" id="pair2_txt">∠B (110°) + ∠D (70°) = 180°</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const anatomyData = {
+      center: { el: 'el_center', desc: '<strong>Center (O):</strong> The fixed central point from which all boundary points are equidistant.' },
+      radius: { el: 'el_radius', desc: '<strong>Radius (r):</strong> A straight line segment connecting the center O to any point on the circumference.' },
+      diameter: { el: 'el_diameter', desc: '<strong>Diameter (d = 2r):</strong> The longest chord passing through the center, dividing the circle into two semicircles.' },
+      chord: { el: 'el_chord', desc: '<strong>Chord (AB):</strong> A line segment joining any two points on the circle boundary.' },
+      secant: { el: 'el_secant', desc: '<strong>Secant:</strong> An infinite line that passes through the circle, cutting it at two distinct points.' },
+      tangent: { el: 'el_tangent', desc: '<strong>Tangent:</strong> A line touching the circle at exactly one point (P). The radius through P is perpendicular to the tangent (OP ⊥ Tangent).' },
+      sector: { el: 'el_sector', desc: '<strong>Sector:</strong> The pizza-slice region bounded by two radii and the arc between them.' }
+    };
+
+    function showAnatomy(type, btnEl) {
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      ['el_radius', 'el_diameter', 'el_chord', 'el_secant', 'el_tangent', 'el_sector'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+
+      if (anatomyData[type].el !== 'el_center') {
+        document.getElementById(anatomyData[type].el).style.display = 'block';
+      }
+      document.getElementById('anatomyDesc').innerHTML = anatomyData[type].desc;
+    }
+
+    function switchTab(tabName, btnEl) {
+      document.querySelectorAll('.mod-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      ['tab_anatomy', 'tab_theorems', 'tab_angleStudio', 'tab_pythagoras', 'tab_cyclic'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+
+      document.getElementById('tab_' + tabName).style.display = 'block';
+    }
+
+    function updateDoubleAngle(angleDeg) {
+      const theta = parseFloat(angleDeg);
+      document.getElementById('inscribedVal').innerText = theta + '°';
+      const central = 2 * theta;
+      document.getElementById('centralVal').innerText = `∠AOB = ${central}° (2 × ${theta}°)`;
+
+      // Update SVG coordinates
+      const rad = (central * Math.PI) / 180;
+      const startAngle = Math.PI/2 - rad/2;
+      const endAngle = Math.PI/2 + rad/2;
+
+      const ax = 150 + 100 * Math.cos(startAngle);
+      const ay = 150 + 100 * Math.sin(startAngle);
+      const bx = 150 + 100 * Math.cos(endAngle);
+      const by = 150 + 100 * Math.sin(endAngle);
+
+      const ptA = document.getElementById('pt_A');
+      const ptB = document.getElementById('pt_B');
+      ptA.setAttribute('cx', ax); ptA.setAttribute('cy', ay);
+      ptB.setAttribute('cx', bx); ptB.setAttribute('cy', by);
+
+      document.getElementById('line_PA').setAttribute('x2', ax);
+      document.getElementById('line_PA').setAttribute('y2', ay);
+      document.getElementById('line_PB').setAttribute('x2', bx);
+      document.getElementById('line_PB').setAttribute('y2', by);
+
+      document.getElementById('line_OA').setAttribute('x2', ax);
+      document.getElementById('line_OA').setAttribute('y2', ay);
+      document.getElementById('line_OB').setAttribute('x2', bx);
+      document.getElementById('line_OB').setAttribute('y2', by);
+    }
+
+    function solvePythagoras() {
+      const r = parseFloat(document.getElementById('calc_r').value);
+      const d = parseFloat(document.getElementById('calc_d').value);
+      if (isNaN(r) || isNaN(d) || r <= 0 || d < 0) return;
+
+      if (d >= r) {
+        document.getElementById('chordLen').innerText = 'Invalid (d must be < r)';
+        document.getElementById('chordStep').innerText = 'Distance from center cannot exceed or equal radius for a proper chord.';
+        return;
+      }
+
+      const half = Math.sqrt(r*r - d*d);
+      const full = 2 * half;
+      document.getElementById('chordLen').innerText = full.toFixed(2) + ' cm';
+      document.getElementById('chordStep').innerHTML = `Half chord $AM = \\sqrt{${r}^2 - ${d}^2} = \\sqrt{${(r*r - d*d).toFixed(2)}} = ${half.toFixed(2)}\\text{ cm} \\implies AB = ${full.toFixed(2)}\\text{ cm}$`;
+    }
+
+    let curA = 70;
+    let curB = 110;
+    function updateCyclic(a, b) {
+      if (a !== null) curA = parseInt(a, 10);
+      if (b !== null) curB = parseInt(b, 10);
+
+      document.getElementById('angleA_val').innerText = curA + '°';
+      document.getElementById('angleB_val').innerText = curB + '°';
+
+      const curC = 180 - curA;
+      const curD = 180 - curB;
+
+      document.getElementById('pair1_txt').innerText = `∠A (${curA}°) + ∠C (${curC}°) = 180°`;
+      document.getElementById('pair2_txt').innerText = `∠B (${curB}°) + ∠D (${curD}°) = 180°`;
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    // Init
+    updateDoubleAngle(45);
+    solvePythagoras();
+    updateCyclic(70, 110);
+  </script>
+</body>
+</html>

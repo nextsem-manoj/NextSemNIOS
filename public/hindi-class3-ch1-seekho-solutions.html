@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सीखो (कविता) - कक्षा 3 हिंदी वीणा पाठ 1 | NCERT Solutions Nextsem</title>
+  <meta name="description" content="NCERT Class 3 Hindi Veena Chapter 1 'Seekho' by Shrinath Singh - Complete Interactive Solutions, Poem Recitation, Match the Following, and Riddle Answers.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(16, 185, 129, 0.25);
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-rose: #f43f5e;
+      --accent-purple: #a855f7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Devanagari', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(16, 185, 129, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(56, 189, 248, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(6, 12, 24, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .nav-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav-btn {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      color: #fff;
+      border-color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .container {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(245, 158, 11, 0.1));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      color: #cbd5e1;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .author-badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fcd34d;
+      font-size: 14px;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    /* Section Cards */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .section-icon {
+      font-size: 24px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .poem-box {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 24px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 2.2;
+      color: #f1f5f9;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .poem-highlight {
+      color: #34d399;
+      font-weight: 700;
+    }
+
+    .btn-audio {
+      background: linear-gradient(135deg, #10b981, #047857);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-audio:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Q&A Item */
+    .qa-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+      transition: all 0.2s;
+    }
+
+    .qa-item:hover {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .qa-question {
+      font-size: 16px;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .qa-answer {
+      font-size: 15px;
+      color: #e2e8f0;
+      line-height: 1.8;
+      padding-left: 26px;
+    }
+
+    .qa-answer strong {
+      color: #34d399;
+    }
+
+    /* Interactive Match The Following */
+    .match-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .match-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .match-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .match-left {
+      font-weight: 700;
+      color: #fcd34d;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .match-right {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #6ee7b7;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Interactive Riddle Card */
+    .riddle-card {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(236, 72, 153, 0.1));
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .riddle-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #f3e8ff;
+      font-weight: 500;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .riddle-btn {
+      background: linear-gradient(135deg, #a855f7, #9333ea);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .riddle-btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    .riddle-answer {
+      display: none;
+      margin-top: 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      padding: 12px 16px;
+      border-radius: 10px;
+      color: #34d399;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    /* Word Table */
+    .word-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .word-table th {
+      background: rgba(255, 255, 255, 0.08);
+      color: #38bdf8;
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    .word-table td {
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #e2e8f0;
+    }
+
+    .word-table tr:hover td {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Word Pill */
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .word-pill {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #a7f3d0;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">NCERT Study Guide</span>
+      <span style="font-weight: 700; font-size: 15px;">NextSem Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+      <a href="/docs/class3_hindi_veena_ch1_seekho_solutions.md" class="nav-btn" target="_blank">📄 Markdown Notes</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="hero-tag">🌟 कक्षा 3 हिंदी (वीणा भाग-1) • इकाई 1: हमारा पर्यावरण</div>
+      <h1 class="hero-title">पाठ 1: सीखो (आनंदमयी कविता)</h1>
+      <p class="hero-subtitle">प्रकृति के हर तत्व से अच्छाई और कर्मठता की प्रेरणा</p>
+      <div class="author-badge">✍️ कवि: श्रीनाथ सिंह</div>
+    </header>
+
+    <!-- Poem Card -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📖</div>
+        <div>
+          <h2 class="section-title">कविता पाठ (Poem Recitation)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">कविता को लय और ताल के साथ पढ़िए व सुनिए</p>
+        </div>
+      </div>
+
+      <div class="poem-box" id="poemBox">
+        फूलों से नित <span class="poem-highlight">हँसना</span> सीखो, भौंरों से नित <span class="poem-highlight">गाना</span>।<br>
+        तरु की झुकी डालियों से नित, सीखो <span class="poem-highlight">शीश झुकाना</span>।<br><br>
+        सीख हवा के झोंकों से लो, <span class="poem-highlight">कोमल भाव बहाना</span>।<br>
+        दूध तथा पानी से सीखो, <span class="poem-highlight">मिलना और मिलाना</span>।<br><br>
+        सूरज की किरणों से सीखो, <span class="poem-highlight">जगना और जगाना</span>।<br>
+        लता और पेड़ों से सीखो, <span class="poem-highlight">सबको गले लगाना</span>।<br><br>
+        दीपक से सीखो जितना, हो सके <span class="poem-highlight">अँधेरा हरना</span>।<br>
+        पृथ्वी से सीखो प्राणी की, <span class="poem-highlight">सच्ची सेवा करना</span>।<br><br>
+        जलधारा से सीखो आगे, <span class="poem-highlight">जीवन-पथ में बढ़ना</span>।<br>
+        और धुएँ से सीखो हरदम, <span class="poem-highlight">ऊँचे ही पर चढ़ना</span>।
+      </div>
+
+      <div style="text-align: center;">
+        <button class="btn-audio" onclick="playPoemAudio()">
+          <span>🔊</span> <span id="audioBtnText">कविता वाचन सुनें (Listen Audio)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Section 1: Page 2 - बातचीत के लिए -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">💬</div>
+        <div>
+          <h2 class="section-title">पृष्ठ 2: बातचीत के लिए (Picture Discussion)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">चित्र पर आधारित मौखिक व लिखित अभ्यास</p>
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>1.</span> आपको इस चित्र में क्या-क्या दिखाई दे रहा है?</div>
+        <div class="qa-answer">
+          इस चित्र में प्रातःकाल का मनमोहक दृश्य दिखाई दे रहा है—पहाड़ों के पीछे से उगता हुआ चमकता सूरज, आकाश में कतारबद्ध उड़ते हुए सफ़ेद पक्षी, मीठे फलों से लदे दो बड़े हरे-भरे पेड़, कल-कल बहती हुई नीले पानी की जलधारा (नदी), हरी घास, चट्टानें और रंग-बिरंगे सुंदर फूल।
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>2.</span> इनमें से कौन-कौन सी वस्तुएँ आप प्रतिदिन देखते हैं?</div>
+        <div class="qa-answer">
+          हम प्रतिदिन <strong>सूरज</strong>, <strong>पेड़-पौधे</strong>, <strong>रंग-बिरंगे फूल</strong>, <strong>उड़ते हुए पक्षी</strong>, <strong>हरी घास</strong> और <strong>पत्थर</strong> देखते हैं।
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>3.</span> उगते हुए सूरज को देखकर आपके मन में किस प्रकार के भाव आते हैं?</div>
+        <div class="qa-answer">
+          उगते सूरज को देखकर मन में <strong>नई उमंग, ताजगी, उत्साह और सकारात्मक ऊर्जा</strong> का संचार होता है। हमें प्रेरणा मिलती है कि नया दिन शुरू हो गया है, इसलिए आलस्य छोड़कर अपने काम में लग जाना चाहिए।
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>4.</span> रंग-बिरंगे फूलों को देखकर आपको कैसा लगता है?</div>
+        <div class="qa-answer">
+          रंग-बिरंगे फूलों को देखकर मन अत्यंत <strong>प्रसन्न और प्रफुल्लित</strong> हो जाता है। फूल हमें सदा मुस्कुराने और चारों ओर अपनी सुगंध व अच्छाई फैलाने की प्रेरणा देते हैं।
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Page 3 - कविता की बात (मिलान) -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🔗</div>
+        <div>
+          <h2 class="section-title">पृष्ठ 3: कविता की बात (किससे क्या सीखें - सही मिलान)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">प्राकृतिक तत्वों और उनसे मिलने वाली सीख का मिलान</p>
+        </div>
+      </div>
+
+      <div class="match-grid">
+        <div class="match-card">
+          <div class="match-left">☀️ सूरज (Sun)</div>
+          <div class="match-right">➔ जगना और जगाना</div>
+        </div>
+        <div class="match-card">
+          <div class="match-left">🌸 फूल (Flower)</div>
+          <div class="match-right">➔ हँसना</div>
+        </div>
+        <div class="match-card">
+          <div class="match-left">🪔 दीपक (Diya / Lamp)</div>
+          <div class="match-right">➔ अँधेरा दूर करना</div>
+        </div>
+        <div class="match-card">
+          <div class="match-left">🐝 भौंरा (Bumblebee)</div>
+          <div class="match-right">➔ गीत गाना</div>
+        </div>
+        <div class="match-card">
+          <div class="match-left">🌳 तरु की झुकी डालियाँ</div>
+          <div class="match-right">➔ शीश झुकाना (विनम्रता)</div>
+        </div>
+        <div class="match-card">
+          <div class="match-left">🌊 जलधारा (Water Stream)</div>
+          <div class="match-right">➔ जीवन में सदैव आगे बढ़ना</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Page 4 - पंक्तियों की पहचान -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📜</div>
+        <div>
+          <h2 class="section-title">पृष्ठ 4: भाव और कविता की पंक्तियाँ</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">दिए गए भाव के लिए कविता की सही पंक्ति की पहचान</p>
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>(क)</span> पेड़ों की झुकी डालियों से हमें यह सीखना है कि हमें हमेशा विनम्र रहना चाहिए।</div>
+        <div class="qa-answer">
+          👉 <strong>कविता की पंक्ति:</strong> <em>"तरु की झुकी डालियों से नित, सीखो शीश झुकाना।"</em>
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>(ख)</span> हवा के झोंकों से हमें सीखना है कि हम हमेशा कोमल भाव बहाते रहें और कर्मशील रहें।</div>
+        <div class="qa-answer">
+          👉 <strong>कविता की पंक्ति:</strong> <em>"सीख हवा के झोंकों से लो, कोमल भाव बहाना।"</em>
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>(ग)</span> नदी-नहर से हमें सीखना है कि जीवन आगे बढ़ने का नाम है और हमें आगे बढ़ते रहना चाहिए।</div>
+        <div class="qa-answer">
+          👉 <strong>कविता की पंक्ति:</strong> <em>"जलधारा से सीखो आगे, जीवन-पथ में बढ़ना।"</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Page 5 - कविता से आगे -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">💡</div>
+        <div>
+          <h2 class="section-title">पृष्ठ 5: कविता से आगे (चिंतन एवं विचार)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">गहन समझ व रचनात्मक उत्तर</p>
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>1.</span> हम सूरज से और क्या-क्या सीख सकते हैं? (कोई दो बातें)</div>
+        <div class="qa-answer">
+          <strong>(क) समय की पाबंदी और नियमबद्धता:</strong> सूरज हर रोज़ ठीक समय पर निकलता है और अस्त होता है। हमें भी अपना हर कार्य समय पर करना चाहिए।<br>
+          <strong>(ख) समानता व निस्वार्थ सेवा:</strong> सूरज बिना किसी भेदभाव के सभी जीवों को समान रूप से प्रकाश और ऊर्जा देता है।
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>2.</span> लता और पेड़ों से हम और क्या-क्या सीख सकते हैं? (कोई दो बातें)</div>
+        <div class="qa-answer">
+          <strong>(क) परोपकार करना:</strong> पेड़ स्वयं धूप सहते हैं और दूसरों को मीठे फल, शीतल छाया और प्राणवायु (ऑक्सीजन) देते हैं।<br>
+          <strong>(ख) धैर्य और अडिगता:</strong> आंधी-तूफान में भी पेड़ मजबूती से डटे रहते हैं और दूसरों को सहारा देते हैं।
+        </div>
+      </div>
+
+      <div class="qa-item">
+        <div class="qa-question"><span>3.</span> आप अपने सहपाठी की कौन-सी बात सीखना चाहते हैं?</div>
+        <div class="qa-answer">
+          मैं अपने सहपाठी से उसकी <strong>सुंदर लिखावट (Handwriting)</strong>, कक्षा में <strong>शांत रहकर ध्यानपूर्वक पढ़ाई करना</strong> और <strong>सभी साथियों की मदद करने की अच्छी आदत</strong> सीखना चाहता हूँ।
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Page 6 & 7 - भाषा की बात -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📚</div>
+        <div>
+          <h2 class="section-title">पृष्ठ 6 व 7: भाषा की बात (व्याकरण व शब्द-भंडार)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">शब्दार्थ, वाक्य रचना और वर्ण भेद</p>
+        </div>
+      </div>
+
+      <h3 style="color: #38bdf8; font-size: 16px; margin-bottom: 8px;">🗂️ कठिन शब्द और उनके अर्थ</h3>
+      <table class="word-table">
+        <thead>
+          <tr>
+            <th>शब्द</th>
+            <th>अर्थ</th>
+            <th>उदाहरण वाक्य</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>तरु</strong></td>
+            <td>पेड़ / वृक्ष</td>
+            <td>हमारे विद्यालय के मैदान में एक विशाल छायादार <strong>तरु</strong> है।</td>
+          </tr>
+          <tr>
+            <td><strong>शीश</strong></td>
+            <td>सिर / मस्तक</td>
+            <td>हमें अपने माता-पिता और गुरुजनों के आगे आदर से <strong>शीश</strong> झुकाना चाहिए।</td>
+          </tr>
+          <tr>
+            <td><strong>पृथ्वी</strong></td>
+            <td>धरती / भूमि</td>
+            <td><strong>पृथ्वी</strong> हमारी माता है, हमें इसे प्रदूषण से बचाना चाहिए।</td>
+          </tr>
+          <tr>
+            <td><strong>हरना</strong></td>
+            <td>दूर करना / मिटाना</td>
+            <td>दीपक जलकर चारों तरफ का अँधेरा <strong>हर</strong> लेता है।</td>
+          </tr>
+          <tr>
+            <td><strong>पथ</strong></td>
+            <td>रास्ता / मार्ग</td>
+            <td>हमें हमेशा सच्चाई और भलाई के <strong>पथ</strong> पर चलना चाहिए।</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: #38bdf8; font-size: 16px; margin-top: 24px; margin-bottom: 8px;">🔄 समान शब्द-युग्म (क्रिया ➔ प्रेरणार्थक रूप)</h3>
+      <div class="pill-group">
+        <span class="word-pill">हँसना ➔ हँसाना</span>
+        <span class="word-pill">खाना ➔ खिलाना</span>
+        <span class="word-pill">जगना ➔ जगाना</span>
+        <span class="word-pill">पढ़ना ➔ पढ़ाना</span>
+        <span class="word-pill">चलना ➔ चलाना</span>
+        <span class="word-pill">लिखना ➔ लिखाना</span>
+        <span class="word-pill">झुकना ➔ झुकाना</span>
+        <span class="word-pill">गिरना ➔ गिराना</span>
+      </div>
+
+      <h3 style="color: #38bdf8; font-size: 16px; margin-top: 24px; margin-bottom: 8px;">🔤 ‘स’ और ‘प’ वर्ण से शुरू होने वाले शब्द</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px;">
+        <div style="background: rgba(255, 255, 255, 0.03); padding: 12px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <strong style="color: #fcd34d;">'स' वर्ण वाले शब्द:</strong>
+          <div style="margin-top: 6px; color: #cbd5e1;">सीखो, सीख, सूरज, सबको, सेवा, सच्ची</div>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.03); padding: 12px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <strong style="color: #34d399;">'प' वर्ण वाले शब्द:</strong>
+          <div style="margin-top: 6px; color: #cbd5e1;">पानी, पेड़ों, पृथ्वी, प्राणी, पथ, पर</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Page 8 - बूझो तो जानें (पहेलियाँ) -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🧩</div>
+        <div>
+          <h2 class="section-title">पृष्ठ 8: बूझो तो जानें (इंटरैक्टिव पहेलियाँ)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">पहेली पढ़िए और बटन दबाकर उत्तर जानिए</p>
+        </div>
+      </div>
+
+      <div class="riddle-card">
+        <div class="riddle-text">
+          "एक फूल, एक फल है भाई।<br>
+          दोनों मिलकर बने मिठाई।"
+        </div>
+        <button class="riddle-btn" onclick="revealRiddle('riddle1', 'गुलाब जामुन 🍯 (गुलाब = फूल, जामुन = फल)')">उत्तर देखें 🔍</button>
+        <div class="riddle-answer" id="riddle1"></div>
+      </div>
+
+      <div class="riddle-card">
+        <div class="riddle-text">
+          "बिना बाल की पूँछ लिए वह भाग रहा है,<br>
+          सब सोते, वह रात-रात भर जाग रहा है।<br>
+          काट-काटकर कागज, कपड़े खुश होता है,<br>
+          और धरातल के नीचे घर में सोता है।"
+        </div>
+        <button class="riddle-btn" onclick="revealRiddle('riddle2', 'चूहा 🐭 (Mouse)')">उत्तर देखें 🔍</button>
+        <div class="riddle-answer" id="riddle2"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function revealRiddle(id, answer) {
+      const el = document.getElementById(id);
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+      } else {
+        el.innerHTML = '💡 सही उत्तर: ' + answer;
+        el.style.display = 'block';
+        confetti({
+          particleCount: 50,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      }
+    }
+
+    let isSpeaking = false;
+    function playPoemAudio() {
+      if ('speechSynthesis' in window) {
+        if (isSpeaking) {
+          window.speechSynthesis.cancel();
+          isSpeaking = false;
+          document.getElementById('audioBtnText').innerText = 'कविता वाचन सुनें (Listen Audio)';
+          return;
+        }
+
+        const text = `फूलों से नित हँसना सीखो, भौंरों से नित गाना।
+तरु की झुकी डालियों से नित, सीखो शीश झुकाना।
+सीख हवा के झोंकों से लो, कोमल भाव बहाना।
+दूध तथा पानी से सीखो, मिलना और मिलाना।
+सूरज की किरणों से सीखो, जगना और जगाना।
+लता और पेड़ों से सीखो, सबको गले लगाना।
+दीपक से सीखो जितना, हो सके अँधेरा हरना।
+पृथ्वी से सीखो प्राणी की, सच्ची सेवा करना।
+जलधारा से सीखो आगे, जीवन-पथ में बढ़ना।
+और धुएँ से सीखो हरदम, ऊँचे ही पर चढ़ना।`;
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'hi-IN';
+        utterance.rate = 0.85;
+
+        utterance.onend = function() {
+          isSpeaking = false;
+          document.getElementById('audioBtnText').innerText = 'कविता वाचन सुनें (Listen Audio)';
+        };
+
+        window.speechSynthesis.speak(utterance);
+        isSpeaking = true;
+        document.getElementById('audioBtnText').innerText = 'वाचन रोकें (Stop Audio)';
+      } else {
+        alert('आपके ब्राउज़र में स्पीच सपोर्ट उपलब्ध नहीं है।');
+      }
+    }
+  </script>
+</body>
+</html>

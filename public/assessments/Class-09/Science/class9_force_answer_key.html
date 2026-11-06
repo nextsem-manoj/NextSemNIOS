@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class 9 Science: Force & Motion Fundamentals - Master Answer Key</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 9.5mm 12mm 8.5mm 12mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Top Assessment Banner */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 5px;
+      padding: 6px 10px;
+      background: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 4px;
+      margin-bottom: 5px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .badge-icon {
+      width: 34px;
+      height: 34px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      line-height: 1.15;
+    }
+
+    .title-area p {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.2px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 5px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2px 7px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7.5px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 11px;
+      font-weight: 800;
+      color: #000000;
+    }
+
+    /* Section Header Banner */
+    .section-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3.5px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      margin-top: 2px;
+      border-radius: 3px;
+    }
+
+    .section-title {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .section-weight {
+      font-size: 9px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 1px 5px;
+      border-radius: 2px;
+    }
+
+    /* Section A: 2-Column Objective Layout */
+    .obj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+      row-gap: 5px;
+      margin-bottom: 6px;
+    }
+
+    .ans-card {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 4.5px 7px;
+      background: #ffffff;
+      font-size: 8.8px;
+      line-height: 1.25;
+    }
+
+    .ans-badge {
+      display: inline-block;
+      background: #000000;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 8px;
+      padding: 0 4px;
+      border-radius: 2px;
+      margin-right: 4px;
+    }
+
+    .ans-text {
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .ans-reason {
+      font-size: 8px;
+      color: #222222;
+      margin-top: 2px;
+      border-top: 1px dashed #666666;
+      padding-top: 2px;
+    }
+
+    /* Questions & Answer Boxes */
+    .sa-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5.5px;
+      margin-bottom: 6px;
+    }
+
+    .qa-box {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 5px 8px;
+      background: #ffffff;
+    }
+
+    .qa-head {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .ans-sol {
+      font-size: 8.5px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .rubric-tag {
+      font-size: 7.5px;
+      font-weight: 800;
+      color: #000000;
+      background: #f0f0f0;
+      border: 1px solid #000000;
+      padding: 0 4px;
+      border-radius: 2px;
+      float: right;
+    }
+
+    /* Numerical Split */
+    .num-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .sol-step-box {
+      border: 1.4px solid #000000;
+      border-radius: 3px;
+      padding: 4.5px 6px;
+      background: #ffffff;
+      font-size: 8.5px;
+      line-height: 1.35;
+    }
+
+    .sol-step-title {
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      border-bottom: 1.2px solid #000000;
+      padding-bottom: 1px;
+    }
+
+    /* Graph Section - Page 2 */
+    .graph-grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6.5px;
+      margin-bottom: 6px;
+    }
+
+    .graph-item {
+      border: 1.6px solid #000000;
+      border-radius: 4px;
+      padding: 4.5px 7px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .graph-prompt {
+      font-size: 8.8px;
+      font-weight: 700;
+      margin-bottom: 3.5px;
+      line-height: 1.25;
+    }
+
+    .graph-svg-container {
+      width: 100%;
+      height: 108px;
+      border: 1.4px solid #000000;
+      background: #ffffff;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3.5px;
+    }
+
+    .graph-question-strip {
+      font-size: 8.3px;
+      font-weight: 700;
+      border-top: 1.2px solid #000000;
+      padding-top: 2px;
+    }
+
+    /* Differentiation Table */
+    .diff-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.3px;
+      margin-top: 3.5px;
+    }
+
+    .diff-table th {
+      border: 1.5px solid #000000;
+      background: #000000;
+      color: #ffffff;
+      font-weight: 800;
+      padding: 2px 5px;
+      text-align: left;
+      font-size: 8.3px;
+    }
+
+    .diff-table td {
+      border: 1.5px solid #000000;
+      padding: 3px 5px;
+      vertical-align: top;
+      font-weight: 600;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1.5px solid #000000;
+      padding-top: 3px;
+      font-size: 8px;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .math {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ANSWER KEY ==================== -->
+  <div class="page" id="page1">
+    <div>
+      <!-- Header -->
+      <div class="test-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon">KEY</div>
+            <div class="title-area">
+              <h1>Master Answer Key &bull; Class IX Science: Force & Motion</h1>
+              <p>Step-by-Step Solutions &bull; Graph Marking Rubrics &bull; NCERT Marking Scheme (Max: 40 Marks)</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill">
+              <span>Paper Version</span>
+              <strong>SET A (STD)</strong>
+            </div>
+            <div class="meta-pill">
+              <span>Max Score</span>
+              <strong>40 / 40</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size: 8.5px; font-weight: 700; display: flex; justify-content: space-between; padding: 2px 0;">
+          <span>&bull; Strict step-wise marking applies. Award 0.5 mark for formula, 0.5 mark for correct units.</span>
+          <span>&bull; Full credit for conceptually correct equivalent scientific definitions.</span>
+        </div>
+      </div>
+
+      <!-- SECTION A ANSWERS -->
+      <div class="section-header">
+        <span class="section-title">Section A &bull; Objective & Conceptual Foundations (Model Solutions)</span>
+        <span class="section-weight">8 Marks (8 &times; 1M)</span>
+      </div>
+
+      <div class="obj-grid">
+        <!-- Q1 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q1</span> <span class="ans-text">Correct Option: (B) Newton (N = kg&middot;m/s<sup>2</sup>)</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">Force = mass &times; acceleration = 1 kg &times; 1 m/s<sup>2</sup> = 1 N.</div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q2</span> <span class="ans-text">Correct Option: (C) Both magnitude &amp; direction</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">A force changes motion only in a specified direction; hence it is a vector.</div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q3</span> <span class="ans-text">Correct Option: (B) 6 N towards East</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">Opposite forces subtract: F<sub>net</sub> = 15 N &minus; 9 N = 6 N along greater force (East).</div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q4</span> <span class="ans-text">Correct Option: (B) Spring balance</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">A spring balance measures pulling force using the elongation of a coiled spring.</div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q5</span> <span class="ans-text">Correct Option: (B) Law of Inertia</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">Objects resist any change to their state of rest or uniform motion (Inertia).</div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q6</span> <span class="ans-text">Correct Option: (C) Opposite to relative motion</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">Friction is a contact force that continuously opposes relative motion of surfaces.</div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q7</span> <span class="ans-text">Correct Option: (B) In forward direction</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">Action: foot pushes ground backward; Reaction: ground pushes foot forward.</div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="ans-card">
+          <div><span class="ans-badge">Q8</span> <span class="ans-text">Correct Option: (B) Becomes one-half</span> <span class="rubric-tag">1M</span></div>
+          <div class="ans-reason">Since a = F / m, acceleration is inversely proportional to mass (a &prop; 1/m).</div>
+        </div>
+      </div>
+
+      <!-- SECTION B ANSWERS -->
+      <div class="section-header">
+        <span class="section-title">Section B &bull; Force Measurement & Action-Reaction Pairs (Solutions)</span>
+        <span class="section-weight">6 Marks (2 &times; 3M)</span>
+      </div>
+
+      <div class="sa-container">
+        <!-- Q9 Solution -->
+        <div class="qa-box">
+          <div class="qa-head">
+            <span><strong>9. Spring Balance Working Principle &amp; Reading Solution:</strong></span>
+            <span class="rubric-tag">Total: 3M</span>
+          </div>
+          <div class="ans-sol">
+            <div><strong>(a) Device Name:</strong> <strong>Spring Balance</strong> (Dynamometer). <span class="rubric-tag">[1M]</span></div>
+            <div style="margin-top: 3px;">
+              <strong>(b) Scientific Principle:</strong> Operates on the principle of <strong>spring extension</strong> (Hooke's Law): the stretch (elongation) produced in a coiled spring is directly proportional to the magnitude of the gravitational/pulling force applied to it (<span class="math">F &prop; x</span>). <span class="rubric-tag">[1M]</span>
+            </div>
+            <div style="margin-top: 3px;">
+              <strong>(c) Force Calculation:</strong><br>
+              Given: <span class="math">m = 400 g = 0.4 kg</span>, &nbsp; <span class="math">g = 10 m/s<sup>2</sup></span>.<br>
+              Applied Force <span class="math">F = m &times; g = 0.4 kg &times; 10 m/s<sup>2</sup> = <strong>4.0 N</strong></span>. (Pointer registers 4 N on calibrated scale). <span class="rubric-tag">[1M]</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q10 Solution -->
+        <div class="qa-box">
+          <div class="qa-head">
+            <span><strong>10. Friction Definition &amp; Action-Reaction Pairs Solution:</strong></span>
+            <span class="rubric-tag">Total: 3M</span>
+          </div>
+          <div class="ans-sol">
+            <div>
+              <strong>(a) Definition of Friction &amp; Rolling Ball:</strong> The force of friction is a contact resistive force that acts parallel to the contacting surfaces and opposes the relative motion between them. A rolling football stops because the force of friction between the grass and the ball continuously exerts an unbalanced opposing force, bringing its velocity to zero. <span class="rubric-tag">[1.5M]</span>
+            </div>
+            <div style="margin-top: 3px;">
+              <strong>(b) Two Everyday Action-Reaction Force Pairs:</strong> <span class="rubric-tag">[1.5M]</span>
+              <ul style="margin-left: 16px; margin-top: 2px;">
+                <li><em>Pair 1 (Swimmer in water):</em> Swimmer's hands push water backward (Action), and water pushes swimmer forward (Reaction).</li>
+                <li><em>Pair 2 (Firing a rifle):</em> Gun exerts forward force on bullet (Action), bullet exerts equal backward recoil force on gun (Reaction).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION C ANSWERS -->
+      <div class="section-header">
+        <span class="section-title">Section C &bull; Foundational Formula Calculations (<span class="math">F = ma</span> Solutions)</span>
+        <span class="section-weight">6 Marks (2 &times; 3M)</span>
+      </div>
+
+      <div class="num-split">
+        <!-- Q11 Solution -->
+        <div class="sol-step-box">
+          <div class="sol-step-title">11. Force & Acceleration Solution</div>
+          <div style="margin-top: 3px;">
+            <strong>Step 1: Given:</strong> <span class="math">F<sub>1</sub> = 18 N, m = 3 kg</span><br>
+            Formula: <span class="math">a<sub>1</sub> = F<sub>1</sub> / m</span><br>
+            <span class="math">a<sub>1</sub> = 18 / 3 = <strong>6 m/s<sup>2</sup></strong></span> <span class="rubric-tag">[1.5M]</span>
+          </div>
+          <div style="margin-top: 5px; border-top: 1px dashed #666666; padding-top: 3px;">
+            <strong>Step 2: When force is increased:</strong><br>
+            <span class="math">F<sub>2</sub> = 30 N, m = 3 kg</span><br>
+            <span class="math">a<sub>2</sub> = F<sub>2</sub> / m = 30 / 3 = <strong>10 m/s<sup>2</sup></strong></span> <span class="rubric-tag">[1.5M]</span>
+          </div>
+        </div>
+
+        <!-- Q12 Solution -->
+        <div class="sol-step-box">
+          <div class="sol-step-title">12. Braking Force Solution</div>
+          <div style="margin-top: 3px;">
+            <strong>Step 1: Acceleration (Retardation):</strong><br>
+            Given: <span class="math">m = 200 kg, u = 20 m/s, v = 0 m/s, t = 4 s</span><br>
+            <span class="math">a = (v &minus; u) / t = (0 &minus; 20) / 4 = <strong>&minus;5 m/s<sup>2</sup></strong></span><br>
+            (Retardation magnitude = 5 m/s<sup>2</sup>) <span class="rubric-tag">[1.5M]</span>
+          </div>
+          <div style="margin-top: 4px; border-top: 1px dashed #666666; padding-top: 3px;">
+            <strong>Step 2: Braking Force:</strong><br>
+            <span class="math">F = m &times; a = 200 kg &times; (&minus;5 m/s<sup>2</sup>) = <strong>&minus;1000 N</strong></span><br>
+            Braking force magnitude = <strong>1000 N</strong> (acts opposite to direction of travel). <span class="rubric-tag">[1.5M]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 1 Bottom Metadata -->
+    <div class="page-footer">
+      <span>Class IX Science &bull; Master Answer Key</span>
+      <span>Confidential Evaluation Scheme &bull; Page 1 of 2</span>
+      <span>Continued on Page 2 &rarr;</span>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ANSWER KEY ==================== -->
+  <div class="page" id="page2">
+    <div>
+      <!-- Page 2 Header Strip -->
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.8px solid #000000; padding-bottom: 4px; margin-bottom: 6px;">
+        <span style="font-size: 10px; font-weight: 800; text-transform: uppercase;">Class IX Science Answer Key &bull; Page 2</span>
+        <span style="font-size: 9px; font-weight: 800;">Model Graphs &amp; Conceptual Rubrics</span>
+        <span style="font-size: 9px; font-weight: 800;">Max Marks for Page 2: 20 Marks</span>
+      </div>
+
+      <!-- SECTION D ANSWERS -->
+      <div class="section-header">
+        <span class="section-title">Section D &bull; Newton's First Law &amp; Inertia (Solutions)</span>
+        <span class="section-weight">6 Marks (2 &times; 3M)</span>
+      </div>
+
+      <div class="sa-container">
+        <!-- Q13 Solution -->
+        <div class="qa-box">
+          <div class="qa-head">
+            <span><strong>13. Newton's First Law &amp; Inertia Solution:</strong></span>
+            <span class="rubric-tag">Total: 3M</span>
+          </div>
+          <div class="ans-sol">
+            <div>
+              <strong>(a) Statement:</strong> An object remains in a state of rest or of uniform motion in a straight line unless compelled to change that state by an applied external unbalanced force. <span class="rubric-tag">[1M]</span>
+            </div>
+            <div style="margin-top: 3px;">
+              <strong>(b) Direct Measure of Inertia:</strong> <strong>Mass</strong> is the quantitative measure of the inertia of a body. <span class="rubric-tag">[1M]</span>
+            </div>
+            <div style="margin-top: 3px;">
+              <strong>(c) Cricket Ball vs Tennis Ball:</strong> A <strong>cricket ball</strong> has greater inertia because it has significantly greater mass than a tennis ball of the same size. Since inertia is directly proportional to mass (<span class="math">Inertia &prop; m</span>), a heavier body resists change in state more strongly. <span class="rubric-tag">[1M]</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q14 Solution -->
+        <div class="qa-box">
+          <div class="qa-head">
+            <span><strong>14. Scientific Reasons Based on Everyday Inertia:</strong></span>
+            <span class="rubric-tag">Total: 3M</span>
+          </div>
+          <div class="ans-sol">
+            <div>
+              <strong>(a) Leaning sideways on curve:</strong> Due to <strong>inertia of direction</strong>. The passenger's body tends to continue moving in its original straight-line path while the car's wheels turn inward. <span class="rubric-tag">[1M]</span>
+            </div>
+            <div style="margin-top: 3px;">
+              <strong>(b) Beating a carpet for dust:</strong> Due to <strong>inertia of rest</strong>. When beaten, the carpet suddenly moves with the stick, while the dust particles stay in their position of rest and fall off under gravity. <span class="rubric-tag">[1M]</span>
+            </div>
+            <div style="margin-top: 3px;">
+              <strong>(c) Tying luggage on bus roof:</strong> When the bus suddenly accelerates, stops, or turns, loose luggage tends to slide off or fall forward/backward due to <strong>inertia of rest / motion / direction</strong>. Tying prevents relative motion. <span class="rubric-tag">[1M]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION E MODEL GRAPHS -->
+      <div class="section-header">
+        <span class="section-title">Section E &bull; Student Graph Drawing Workshop (Model Graphs &amp; Key Properties)</span>
+        <span class="section-weight">10 Marks (4 &times; 2.5M)</span>
+      </div>
+
+      <div class="graph-grid-4">
+        <!-- Model Graph 1 -->
+        <div class="graph-item">
+          <div class="graph-prompt">
+            <strong>15. Position&ndash;Time (<span class="math">s&ndash;t</span>): UNIFORM MOTION</strong>
+            <span class="rubric-tag">2.5M</span>
+          </div>
+          <div class="graph-svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 170 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="ggrid1" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#e0e0e0" stroke-width="0.8"/>
+                </pattern>
+              </defs>
+              <rect x="22" y="10" width="138" height="75" fill="url(#ggrid1)"/>
+              <line x1="22" y1="85" x2="162" y2="85" stroke="#000000" stroke-width="2"/>
+              <line x1="22" y1="85" x2="22" y2="8" stroke="#000000" stroke-width="2"/>
+              <polygon points="162,82 168,85 162,88" fill="#000000"/>
+              <polygon points="19,8 22,2 25,8" fill="#000000"/>
+              <!-- Plotted Model Line: Straight slanted line -->
+              <line x1="22" y1="85" x2="140" y2="20" stroke="#000000" stroke-width="2.5"/>
+              <!-- Triangle showing slope -->
+              <polygon points="70,58 110,58 110,36" fill="none" stroke="#000000" stroke-width="1.2" stroke-dasharray="2,2"/>
+              <text x="114" y="50" font-size="6.5" font-weight="bold" fill="#000000">&Delta;s</text>
+              <text x="86" y="66" font-size="6.5" font-weight="bold" fill="#000000">&Delta;t</text>
+              <text x="14" y="93" font-size="8" font-weight="bold" fill="#000000">0</text>
+              <text x="75" y="96" font-size="7.5" font-weight="bold" fill="#000000">Time t (s) &rarr;</text>
+              <text x="2" y="48" font-size="7.5" font-weight="bold" fill="#000000" transform="rotate(-90 8,48)">Position s (m) &rarr;</text>
+            </svg>
+          </div>
+          <div class="graph-question-strip">
+            Slope = <strong>Speed (or Velocity)</strong> <span class="math">(v = &Delta;s / &Delta;t)</span>. Constant slope = constant speed.
+          </div>
+        </div>
+
+        <!-- Model Graph 2 -->
+        <div class="graph-item">
+          <div class="graph-prompt">
+            <strong>16. Position&ndash;Time (<span class="math">s&ndash;t</span>): NON-UNIFORM MOTION</strong>
+            <span class="rubric-tag">2.5M</span>
+          </div>
+          <div class="graph-svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 170 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="ggrid2" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#e0e0e0" stroke-width="0.8"/>
+                </pattern>
+              </defs>
+              <rect x="22" y="10" width="138" height="75" fill="url(#ggrid2)"/>
+              <line x1="22" y1="85" x2="162" y2="85" stroke="#000000" stroke-width="2"/>
+              <line x1="22" y1="85" x2="22" y2="8" stroke="#000000" stroke-width="2"/>
+              <polygon points="162,82 168,85 162,88" fill="#000000"/>
+              <polygon points="19,8 22,2 25,8" fill="#000000"/>
+              <!-- Plotted Model Curve: Parabolic bending upwards -->
+              <path d="M 22 85 Q 90 80 145 18" fill="none" stroke="#000000" stroke-width="2.5"/>
+              <text x="14" y="93" font-size="8" font-weight="bold" fill="#000000">0</text>
+              <text x="75" y="96" font-size="7.5" font-weight="bold" fill="#000000">Time t (s) &rarr;</text>
+              <text x="2" y="48" font-size="7.5" font-weight="bold" fill="#000000" transform="rotate(-90 8,48)">Position s (m) &rarr;</text>
+            </svg>
+          </div>
+          <div class="graph-question-strip">
+            Shape = <strong>Curved line (Parabolic)</strong>. Slope increases with time (Accelerating).
+          </div>
+        </div>
+
+        <!-- Model Graph 3 -->
+        <div class="graph-item">
+          <div class="graph-prompt">
+            <strong>17. Velocity&ndash;Time (<span class="math">v&ndash;t</span>): UNIFORM VELOCITY</strong>
+            <span class="rubric-tag">2.5M</span>
+          </div>
+          <div class="graph-svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 170 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="ggrid3" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#e0e0e0" stroke-width="0.8"/>
+                </pattern>
+                <pattern id="hatch" width="4" height="4" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                  <line x1="0" y1="0" x2="0" y2="4" stroke="#888888" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect x="22" y="10" width="138" height="75" fill="url(#ggrid3)"/>
+              <line x1="22" y1="85" x2="162" y2="85" stroke="#000000" stroke-width="2"/>
+              <line x1="22" y1="85" x2="22" y2="8" stroke="#000000" stroke-width="2"/>
+              <polygon points="162,82 168,85 162,88" fill="#000000"/>
+              <polygon points="19,8 22,2 25,8" fill="#000000"/>
+              <!-- Area shading under curve -->
+              <rect x="35" y="42" width="95" height="43" fill="url(#hatch)" stroke="#000000" stroke-width="1" stroke-dasharray="2,2"/>
+              <!-- Plotted Model Line: Horizontal parallel line -->
+              <line x1="22" y1="42" x2="150" y2="42" stroke="#000000" stroke-width="2.5"/>
+              <text x="48" y="65" font-size="7" font-weight="bold" fill="#000000">Area = Displacement (s)</text>
+              <text x="14" y="93" font-size="8" font-weight="bold" fill="#000000">0</text>
+              <text x="75" y="96" font-size="7.5" font-weight="bold" fill="#000000">Time t (s) &rarr;</text>
+              <text x="2" y="48" font-size="7.5" font-weight="bold" fill="#000000" transform="rotate(-90 8,48)">Velocity v (m/s) &rarr;</text>
+            </svg>
+          </div>
+          <div class="graph-question-strip">
+            Area under <span class="math">v&ndash;t</span> curve gives = <strong>Displacement / Distance</strong> <span class="math">(s = v &times; t)</span>.
+          </div>
+        </div>
+
+        <!-- Model Graph 4 -->
+        <div class="graph-item">
+          <div class="graph-prompt">
+            <strong>18. Velocity&ndash;Time (<span class="math">v&ndash;t</span>): UNIFORM ACCELERATION</strong>
+            <span class="rubric-tag">2.5M</span>
+          </div>
+          <div class="graph-svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 170 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="ggrid4" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#e0e0e0" stroke-width="0.8"/>
+                </pattern>
+              </defs>
+              <rect x="22" y="10" width="138" height="75" fill="url(#ggrid4)"/>
+              <line x1="22" y1="85" x2="162" y2="85" stroke="#000000" stroke-width="2"/>
+              <line x1="22" y1="85" x2="22" y2="8" stroke="#000000" stroke-width="2"/>
+              <polygon points="162,82 168,85 162,88" fill="#000000"/>
+              <polygon points="19,8 22,2 25,8" fill="#000000"/>
+              <!-- Plotted Model Line: Slanted straight line from origin -->
+              <line x1="22" y1="85" x2="140" y2="20" stroke="#000000" stroke-width="2.5"/>
+              <polygon points="65,60 105,60 105,38" fill="none" stroke="#000000" stroke-width="1.2" stroke-dasharray="2,2"/>
+              <text x="109" y="52" font-size="6.5" font-weight="bold" fill="#000000">&Delta;v</text>
+              <text x="80" y="68" font-size="6.5" font-weight="bold" fill="#000000">&Delta;t</text>
+              <text x="14" y="93" font-size="8" font-weight="bold" fill="#000000">0</text>
+              <text x="75" y="96" font-size="7.5" font-weight="bold" fill="#000000">Time t (s) &rarr;</text>
+              <text x="2" y="48" font-size="7.5" font-weight="bold" fill="#000000" transform="rotate(-90 8,48)">Velocity v (m/s) &rarr;</text>
+            </svg>
+          </div>
+          <div class="graph-question-strip">
+            Slope of this <span class="math">v&ndash;t</span> curve gives = <strong>Acceleration</strong> <span class="math">(a = &Delta;v / &Delta;t)</span>.
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION F ANSWERS -->
+      <div class="section-header">
+        <span class="section-title">Section F &bull; Uniform vs Non-Uniform Motion Analysis (Solutions)</span>
+        <span class="section-weight">4 Marks (1 &times; 4M)</span>
+      </div>
+
+      <div class="qa-box" style="margin-bottom: 4px;">
+        <div class="qa-head">
+          <span><strong>19. Comparative Distinction &amp; Cyclist Classification Solution:</strong></span>
+          <span class="rubric-tag">Total: 4M</span>
+        </div>
+        <div class="ans-sol">
+          <div><strong>(a) Distinction Table:</strong> <span class="rubric-tag">[2M]</span></div>
+          <table class="diff-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Characteristic</th>
+                <th style="width: 37.5%;">Uniform Motion</th>
+                <th style="width: 37.5%;">Non-Uniform Motion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Distance in equal intervals</strong></td>
+                <td>Covers <strong>equal</strong> distances in equal intervals of time.</td>
+                <td>Covers <strong>unequal</strong> distances in equal intervals of time.</td>
+              </tr>
+              <tr>
+                <td><strong>Acceleration (<span class="math">a</span>)</strong></td>
+                <td>Acceleration is always <strong>zero</strong> (<span class="math">a = 0</span>).</td>
+                <td>Acceleration is <strong>non-zero</strong> (<span class="math">a &ne; 0</span>; velocity changes).</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 4px;">
+            <strong>(b) Numerical Classification:</strong> <span class="rubric-tag">[2M]</span><br>
+            &bull; <strong>Type of Motion:</strong> <strong>Uniform Motion</strong> (since cyclist covers exactly 12 m in every 1-second interval). [1M]<br>
+            &bull; <strong>Speed of Cyclist:</strong> <span class="math">v = distance / time = 12 m / 1 s = <strong>12 m/s</strong> (or 43.2 km/h)</span>. [1M]
+          </div>
+        </div>
+      </div>
+
+      <!-- SCORING RUBRIC SUMMARY -->
+      <div style="border: 1.8px solid #000000; border-radius: 4px; padding: 4px 8px; background: #ffffff;">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 8.5px; font-weight: 700;">
+          <span style="font-weight: 800; text-transform: uppercase;">Final Score Breakdown:</span>
+          <span>Sec A: 8M &bull; Sec B: 6M &bull; Sec C: 6M &bull; Sec D: 6M &bull; Sec E: 10M &bull; Sec F: 4M</span>
+          <span style="background: #000000; color: #ffffff; padding: 2px 7px; border-radius: 3px; font-weight: 800;">TOTAL: 40 MARKS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2 Bottom Metadata -->
+    <div class="page-footer">
+      <span>Class IX Science &bull; Master Answer Key</span>
+      <span>Official Teacher Reference Document &bull; Total: 40 Marks</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </div>
+
+</body>
+</html>

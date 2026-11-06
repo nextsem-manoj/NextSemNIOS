@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 12 Chemistry: Alcohols, Phenols & Ethers (Pages 3 to 6) | Nextsem Academy</title>
+  <meta name="description" content="NCERT Class 12 Chemistry Part II Unit 7 (Alcohols, Phenols and Ethers) - Comprehensive Mastery Notes, Nomenclature Tables, 3D Geometry, and 25 Interactive Fill-in-the-Blanks from Pages 3 to 6.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .container {
+      position: relative; max-width: 1080px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(168, 85, 247, 0.14));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 30px; font-weight: 900; margin-bottom: 8px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; max-width: 800px; margin: 0 auto; }
+
+    /* Module Navigation Tabs */
+    .module-nav {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px;
+    }
+    .mod-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 10px 18px; border-radius: 12px; font-size: 14px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+    }
+    .mod-btn:hover, .mod-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    /* Studio Card */
+    .studio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px; margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      font-size: 21px; font-weight: 800; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px; color: var(--accent-sky);
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 14px;
+    }
+
+    .concept-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px; padding: 18px; transition: all 0.2s;
+    }
+    .concept-card:hover {
+      background: rgba(255, 255, 255, 0.04); border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .badge-gold {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+    .badge-emerald {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+    .badge-purple {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+    .badge-sky {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+    .badge-rose {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3);
+      display: inline-block; margin-bottom: 8px;
+    }
+
+    .code-pill {
+      font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
+      background: rgba(0,0,0,0.4); padding: 2px 8px; border-radius: 6px;
+      color: #38bdf8; border: 1px solid rgba(56,189,248,0.2);
+    }
+
+    /* Custom Table */
+    .ncert-table {
+      width: 100%; border-collapse: collapse; font-size: 13px;
+      background: rgba(15,23,42,0.6); border-radius: 10px; overflow: hidden; margin-top: 10px;
+    }
+    .ncert-table th {
+      background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 10px 12px; text-align: left;
+      border-bottom: 2px solid rgba(56, 189, 248, 0.4); font-weight: 800;
+    }
+    .ncert-table td {
+      padding: 9px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .ncert-table tr:hover { background: rgba(255, 255, 255, 0.02); }
+
+    /* Fill in the Blanks Styling */
+    .blank-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 20px; margin-bottom: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+    .blank-sentence {
+      font-size: 15px; font-weight: 700; line-height: 1.8; margin-bottom: 14px;
+    }
+    .blank-slot {
+      display: inline-block; min-width: 90px; text-align: center;
+      padding: 2px 10px; margin: 0 4px; border-bottom: 2px dashed var(--accent-sky);
+      color: var(--accent-gold); font-weight: 800; border-radius: 4px;
+      background: rgba(56, 189, 248, 0.08); transition: all 0.3s;
+    }
+    .blank-slot.filled-correct {
+      border-bottom: 2px solid #10b981; background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+    .blank-slot.filled-wrong {
+      border-bottom: 2px solid #f43f5e; background: rgba(244, 63, 94, 0.2);
+      color: #fb7185;
+    }
+    .blank-pills-row {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+    }
+    .blank-pill-btn {
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main); font-size: 13px; font-weight: 600; padding: 6px 14px;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s;
+    }
+    .blank-pill-btn:hover:not(.disabled) {
+      background: rgba(56, 189, 248, 0.15); border-color: var(--accent-sky); color: var(--accent-sky);
+    }
+    .blank-pill-btn.correct {
+      background: rgba(16, 185, 129, 0.25) !important; border-color: #10b981 !important; color: #34d399 !important; font-weight: 800;
+    }
+    .blank-pill-btn.wrong {
+      background: rgba(244, 63, 94, 0.25) !important; border-color: #f43f5e !important; color: #fb7185 !important;
+    }
+    .exp-box {
+      display: none; margin-top: 10px; padding: 10px 14px; background: rgba(0,0,0,0.4);
+      border-left: 3px solid var(--accent-sky); border-radius: 0 8px 8px 0; font-size: 13px; color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/?class=12&subject=c12-chemistry&book=part-2" class="nav-brand" title="Return to Class 12 Chemistry Part-II Chapters">
+      <span class="nav-badge">Class 12 Chemistry</span>
+      <span style="font-weight: 700; font-size: 15px;">Unit 7: Nomenclature &amp; Structures (Pages 3–6)</span>
+    </a>
+    <div class="nav-actions">
+      <a href="/chemistry-class12-alcohols-phenols-ethers-page1-2.html?class=12&subject=c12-chemistry&book=part-2" class="nav-btn" style="color:#10b981; border-color:rgba(16,185,129,0.4);">⏮️ Pages 1 &amp; 2</a>
+      <a href="/?class=12&subject=c12-chemistry&book=part-2" class="nav-btn">📚 Chapters</a>
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/" class="nav-btn">🏠 Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">🧪 NCERT Chemistry Class 12 • Pages 3 to 6 (Pages 195–198)</div>
+      <h1 class="hero-title">Nomenclature, Ethers & Functional Group 3D Geometry</h1>
+      <p class="hero-subtitle">Comprehensive IUPAC & common nomenclature of Alcohols, Phenols (Cresols, Catechol, Resorcinol, Quinol), Ethers (Anisole, Phenetole), and 3D Bond Geometry analysis with 25 Fill-in-the-Blanks questions.</p>
+    </header>
+
+    <!-- Module Selector Tabs -->
+    <div class="module-nav">
+      <button class="mod-btn active" onclick="switchTab('ethers_vinylic', this)">🌟 1. Ethers & Vinylic Types</button>
+      <button class="mod-btn" onclick="switchTab('nomenclature', this)">🏷️ 2. IUPAC Nomenclature</button>
+      <button class="mod-btn" onclick="switchTab('geometry', this)">🔬 3. 3D Structure & Geometry</button>
+      <button class="mod-btn" onclick="switchTab('blanks', this)">📝 4. 25 Fill-in-the-Blanks Test</button>
+    </div>
+
+    <!-- 1. Ethers & Vinylic -->
+    <section id="tab_ethers_vinylic" class="studio-card">
+      <div class="section-title">🌟 Ethers Classification & Vinylic Alcohols (Page 3 / Text Page 195)</div>
+      
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-gold">Symmetrical / Simple Ethers</span>
+          <div style="font-weight:800; font-size:15px; margin-bottom:6px;">Identical Groups (R—O—R)</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            Both alkyl or aryl groups attached to oxygen are the <strong>same</strong>.<br>
+            • Diethyl ether: <span class="code-pill">C₂H₅—O—C₂H₅</span> (Ethoxyethane)<br>
+            • Dimethyl ether: <span class="code-pill">CH₃—O—CH₃</span> (Methoxymethane)
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-emerald">Unsymmetrical / Mixed Ethers</span>
+          <div style="font-weight:800; font-size:15px; margin-bottom:6px;">Different Groups (R—O—R′ / Ar—O—R)</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            The two alkyl/aryl groups attached to oxygen are <strong>different</strong>.<br>
+            • Ethyl methyl ether: <span class="code-pill">C₂H₅—O—CH₃</span><br>
+            • Anisole (Methyl phenyl ether): <span class="code-pill">C₆H₅—O—CH₃</span><br>
+            • Phenetole (Ethyl phenyl ether): <span class="code-pill">C₆H₅—O—C₂H₅</span>
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-purple">Vinylic Alcohols [C(sp²)—OH]</span>
+          <div style="font-weight:800; font-size:15px; margin-bottom:6px;">Direct Double Bond Attachment</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            –OH group is bonded directly to an <strong>sp²-hybridised vinylic carbon</strong> of a C=C double bond.<br>
+            • Vinyl alcohol: <span class="code-pill">CH₂=CH—OH</span> (Ethenol)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Nomenclature -->
+    <section id="tab_nomenclature" class="studio-card" style="display:none;">
+      <div class="section-title">🏷️ NCERT Nomenclature Master Tables (Pages 4 & 5 / Text Pages 196–197)</div>
+
+      <h3 style="font-size: 16px; color: var(--accent-gold); margin: 18px 0 10px;">📋 Table 7.1: Alcohols (Common vs. IUPAC)</h3>
+      <div style="overflow-x: auto;">
+        <table class="ncert-table">
+          <thead>
+            <tr>
+              <th>Chemical Formula</th>
+              <th>Common Name</th>
+              <th>IUPAC Name</th>
+              <th>Classification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code-pill">CH₃—OH</span></td>
+              <td>Methyl alcohol</td>
+              <td style="color: #34d399; font-weight: 700;">Methanol</td>
+              <td>Primary (1°)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">CH₃—CH₂—CH₂—OH</span></td>
+              <td>n-Propyl alcohol</td>
+              <td style="color: #34d399; font-weight: 700;">Propan-1-ol</td>
+              <td>Primary (1°)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">CH₃—CH(OH)—CH₃</span></td>
+              <td>Isopropyl alcohol</td>
+              <td style="color: #38bdf8; font-weight: 700;">Propan-2-ol</td>
+              <td>Secondary (2°)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">(CH₃)₂CH—CH₂—OH</span></td>
+              <td>Isobutyl alcohol</td>
+              <td style="color: #34d399; font-weight: 700;">2-Methylpropan-1-ol</td>
+              <td>Primary (1°)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">(CH₃)₃C—OH</span></td>
+              <td>tert-Butyl alcohol</td>
+              <td style="color: #fcd34d; font-weight: 700;">2-Methylpropan-2-ol</td>
+              <td>Tertiary (3°)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">HO—CH₂—CH₂—OH</span></td>
+              <td>Ethylene glycol</td>
+              <td style="color: #c084fc; font-weight: 700;">Ethane-1,2-diol</td>
+              <td>Dihydric</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">CH₂OH—CHOH—CH₂OH</span></td>
+              <td>Glycerol</td>
+              <td style="color: #c084fc; font-weight: 700;">Propane-1,2,3-triol</td>
+              <td>Trihydric</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size: 16px; color: var(--accent-sky); margin: 28px 0 10px;">📋 Phenols & Substituted Benzenediols</h3>
+      <div style="overflow-x: auto;">
+        <table class="ncert-table">
+          <thead>
+            <tr>
+              <th>Structure</th>
+              <th>Common Name</th>
+              <th>IUPAC Name</th>
+              <th>Substitution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code-pill">C₆H₄(OH)(CH₃) [1,2-]</span></td>
+              <td><strong>o-Cresol</strong></td>
+              <td style="color: #34d399; font-weight: 700;">2-Methylphenol</td>
+              <td>ortho- (1,2-)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₆H₄(OH)(CH₃) [1,3-]</span></td>
+              <td><strong>m-Cresol</strong></td>
+              <td style="color: #34d399; font-weight: 700;">3-Methylphenol</td>
+              <td>meta- (1,3-)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₆H₄(OH)(CH₃) [1,4-]</span></td>
+              <td><strong>p-Cresol</strong></td>
+              <td style="color: #34d399; font-weight: 700;">4-Methylphenol</td>
+              <td>para- (1,4-)</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₆H₄(OH)₂ [1,2-]</span></td>
+              <td><strong>Catechol</strong></td>
+              <td style="color: #c084fc; font-weight: 700;">Benzene-1,2-diol</td>
+              <td>Dihydric Phenol</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₆H₄(OH)₂ [1,3-]</span></td>
+              <td><strong>Resorcinol</strong></td>
+              <td style="color: #c084fc; font-weight: 700;">Benzene-1,3-diol</td>
+              <td>Dihydric Phenol</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₆H₄(OH)₂ [1,4-]</span></td>
+              <td><strong>Hydroquinone / Quinol</strong></td>
+              <td style="color: #c084fc; font-weight: 700;">Benzene-1,4-diol</td>
+              <td>Dihydric Phenol</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size: 16px; color: var(--accent-emerald); margin: 28px 0 10px;">📋 Table 7.2: Ethers (Alkoxyalkanes)</h3>
+      <div style="overflow-x: auto;">
+        <table class="ncert-table">
+          <thead>
+            <tr>
+              <th>Formula</th>
+              <th>Common Name</th>
+              <th>IUPAC Name</th>
+              <th>Parent Hydrocarbon</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="code-pill">CH₃—O—CH₃</span></td>
+              <td>Dimethyl ether</td>
+              <td style="color: #34d399; font-weight: 700;">Methoxymethane</td>
+              <td>Methane</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₂H₅—O—C₂H₅</span></td>
+              <td>Diethyl ether</td>
+              <td style="color: #34d399; font-weight: 700;">Ethoxyethane</td>
+              <td>Ethane</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">CH₃—O—CH₂CH₂CH₃</span></td>
+              <td>Methyl n-propyl ether</td>
+              <td style="color: #38bdf8; font-weight: 700;">1-Methoxypropane</td>
+              <td>Propane</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₆H₅—O—CH₃</span></td>
+              <td>Methyl phenyl ether (Anisole)</td>
+              <td style="color: #fcd34d; font-weight: 700;">Methoxybenzene (Anisole)</td>
+              <td>Benzene</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">C₆H₅—O—CH₂CH₃</span></td>
+              <td>Ethyl phenyl ether (Phenetole)</td>
+              <td style="color: #fcd34d; font-weight: 700;">Ethoxybenzene (Phenetole)</td>
+              <td>Benzene</td>
+            </tr>
+            <tr>
+              <td><span class="code-pill">(CH₃)₂CH—O—CH₃</span></td>
+              <td>Methyl isopropyl ether</td>
+              <td style="color: #38bdf8; font-weight: 700;">2-Methoxypropane</td>
+              <td>Propane</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. Geometry -->
+    <section id="tab_geometry" class="studio-card" style="display:none;">
+      <div class="section-title">🔬 3D Structure & Bond Geometry Comparison (Pages 6 & 7 / Text Pages 198–199)</div>
+
+      <div class="feature-grid">
+        <div class="concept-card">
+          <span class="badge-sky">Methanol (Alcohol)</span>
+          <div style="font-weight:800; font-size:15px; margin-bottom:8px;">CH₃—OH</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • <strong>C—O—H Angle:</strong> <span style="color:#38bdf8; font-weight:800;">108.9°</span> (&lt; 109.5°)<br>
+            • <strong>C—O Length:</strong> 142 pm<br>
+            • <strong>O—H Length:</strong> 96 pm<br>
+            • 💡 <em>Reason:</em> Repulsion between the two unshared lone electron pairs on Oxygen compresses the angle.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-emerald">Phenol</span>
+          <div style="font-weight:800; font-size:15px; margin-bottom:8px;">C₆H₅—OH</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • <strong>C—O—H Angle:</strong> <span style="color:#34d399; font-weight:800;">109°</span><br>
+            • <strong>C—O Length:</strong> <span style="color:#fcd34d; font-weight:800;">136 pm (Shorter!)</span><br>
+            • <strong>O—H Length:</strong> 96 pm<br>
+            • 💡 <em>Reason:</em> (1) Partial double bond character via resonance with ring; (2) sp² carbon has higher s-character.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <span class="badge-purple">Methoxymethane (Ether)</span>
+          <div style="font-weight:800; font-size:15px; margin-bottom:8px;">CH₃—O—CH₃</div>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            • <strong>C—O—C Angle:</strong> <span style="color:#c084fc; font-weight:800;">111.7°</span> (&gt; 109.5°)<br>
+            • <strong>C—O Length:</strong> 141 pm<br>
+            • 💡 <em>Reason:</em> Strong steric repulsion between the two bulky methyl (–CH₃) groups widens the angle!
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; padding: 14px 18px; background: rgba(16,185,129,0.08); border-left: 3px solid var(--accent-emerald); border-radius: 0 10px 10px 0; font-size: 13.5px; line-height: 1.7;">
+        ⭐ <strong>Exam-Winning Insight:</strong> Why is the C—O bond in Phenol (136 pm) significantly shorter than in Methanol (142 pm)?<br>
+        1. <strong>Conjugation:</strong> The unshared electron pair on oxygen conjugates with the benzene ring $\pi$-system, creating <em>partial double bond character</em>.<br>
+        2. <strong>Hybridisation:</strong> In phenol, oxygen is bonded to an <em>sp² carbon</em> (33.3% s-character), which is more electronegative than the <em>sp³ carbon</em> (25% s-character) in methanol.
+      </div>
+    </section>
+
+    <!-- 4. 25 Fill-in-the-Blanks Test -->
+    <section id="tab_blanks" class="studio-card" style="display:none;">
+      <div class="section-title">📝 25 Master Fill-in-the-Blanks Test (Pages 3 to 6)</div>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:16px;">
+        Click the correct option pill for each question. Instant feedback, slot animations, and official NCERT explanations will be shown:
+      </p>
+
+      <div style="background:rgba(15,23,42,0.8); border:1px solid var(--border-card); border-radius:12px; padding:12px 18px; display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; font-weight:700;">
+        <div>📊 Total Questions: <span style="color:var(--accent-sky);">25</span></div>
+        <div>⭐ Score: <span id="blanksScore" style="color:var(--accent-emerald);">0</span> / <span id="blanksAnswered">0</span></div>
+      </div>
+
+      <div id="blanksContainer"></div>
+    </section>
+  </main>
+
+  <script>
+    const blanksData = [
+      {
+        id: 1, topic: 'Ethers Classification',
+        before: "Ethers are classified as ",
+        after: " if both alkyl or aryl groups attached to the oxygen atom are identical.",
+        opts: ['symmetrical', 'unsymmetrical', 'mixed', 'polyhydric'],
+        ans: 0,
+        exp: "When R = R' in R—O—R', it is a symmetrical (simple) ether (e.g., C₂H₅OC₂H₅)."
+      },
+      {
+        id: 2, topic: 'Ethers Classification',
+        before: "Diethyl ether (C₂H₅OC₂H₅) is a symmetrical ether, whereas ethyl methyl ether (C₂H₅OCH₃) is an ",
+        after: " ether.",
+        opts: ['symmetrical', 'unsymmetrical', 'cyclic', 'aromatic'],
+        ans: 1,
+        exp: "Ethyl methyl ether has two different alkyl groups attached to oxygen (mixed/unsymmetrical)."
+      },
+      {
+        id: 3, topic: 'Vinylic Alcohols',
+        before: "In vinylic alcohols, the –OH group is attached directly to an ",
+        after: "-hybridised carbon atom of a double bond.",
+        opts: ['sp²', 'sp³', 'sp', 'dsp²'],
+        ans: 0,
+        exp: "CH₂=CH—OH (vinyl alcohol) features an –OH directly on an sp² carbon."
+      },
+      {
+        id: 4, topic: 'IUPAC Alcohols',
+        before: "According to the IUPAC system, the name of an alcohol is derived by substituting the terminal 'e' of the parent alkane with the suffix ",
+        after: ".",
+        opts: ['ol', 'al', 'oic', 'one'],
+        ans: 0,
+        exp: "Alkane - 'e' + 'ol' = Alkanol (e.g., Methane → Methanol)."
+      },
+      {
+        id: 5, topic: 'Polyhydric Nomenclature',
+        before: "When naming polyhydric alcohols in IUPAC nomenclature, the terminal 'e' of the parent alkane is ",
+        after: " before adding '-diol' or '-triol'.",
+        opts: ['retained', 'removed', 'replaced with yl', 'doubled'],
+        ans: 0,
+        exp: "In polyhydric alcohols, 'e' of alkane is retained, e.g., Ethane-1,2-diol (not Ethan-1,2-diol)."
+      },
+      {
+        id: 6, topic: 'Glycol Nomenclature',
+        before: "The IUPAC name of ethylene glycol (HO—CH₂—CH₂—OH) is ",
+        after: ".",
+        opts: ['ethane-1,2-diol', 'ethan-1,2-diol', '1,2-dihydroxyethane', 'ethanol'],
+        ans: 0,
+        exp: "HO—CH₂—CH₂—OH is named Ethane-1,2-diol."
+      },
+      {
+        id: 7, topic: 'Glycerol Nomenclature',
+        before: "The IUPAC name of glycerol is ",
+        after: ".",
+        opts: ['propane-1,2,3-triol', 'propan-1,2,3-triol', 'glycerin', '1,2,3-trihydroxypropane'],
+        ans: 0,
+        exp: "CH₂OH—CHOH—CH₂OH is named Propane-1,2,3-triol."
+      },
+      {
+        id: 8, topic: 'Alcohols Nomenclature',
+        before: "Isopropyl alcohol [CH₃—CH(OH)—CH₃] has the IUPAC name ",
+        after: ".",
+        opts: ['propan-2-ol', 'propan-1-ol', '2-methylpropanol', 'propanol'],
+        ans: 0,
+        exp: "A 3-carbon chain with –OH at position 2 is Propan-2-ol."
+      },
+      {
+        id: 9, topic: 'Alcohols Nomenclature',
+        before: "The IUPAC name of tert-butyl alcohol [(CH₃)₃COH] is ",
+        after: ".",
+        opts: ['2-methylpropan-2-ol', 'butan-2-ol', '2-methylbutan-2-ol', 'butan-1-ol'],
+        ans: 0,
+        exp: "The longest chain has 3 carbons with methyl and –OH at C-2: 2-Methylpropan-2-ol."
+      },
+      {
+        id: 10, topic: 'Cyclic Alcohols',
+        before: "In cyclic alcohols, the ring carbon to which the –OH group is attached is always designated as position number ",
+        after: ".",
+        opts: ['1', '2', '3', '0'],
+        ans: 0,
+        exp: "The carbon with –OH is designated C-1 in cyclic systems (e.g., 2-Methylcyclopentanol)."
+      },
+      {
+        id: 11, topic: 'Phenol Nomenclature',
+        before: "The common and accepted IUPAC name for the simplest monohydroxy benzene derivative is ",
+        after: ".",
+        opts: ['phenol', 'benzenol', 'hydroxybenzene', 'carbolic ether'],
+        ans: 0,
+        exp: "'Phenol' is both the common name and an official accepted IUPAC name."
+      },
+      {
+        id: 12, topic: 'Cresols',
+        before: "The IUPAC name of o-cresol [2-methylphenol] corresponds to ",
+        after: "-disubstituted benzene.",
+        opts: ['1,2', '1,3', '1,4', '1,1'],
+        ans: 0,
+        exp: "Ortho- (o-) represents a 1,2-disubstituted relationship."
+      },
+      {
+        id: 13, topic: 'Cresols',
+        before: "The IUPAC name of p-cresol is ",
+        after: ".",
+        opts: ['4-methylphenol', '2-methylphenol', '3-methylphenol', 'methylphenol'],
+        ans: 0,
+        exp: "Para- (p-) represents a 1,4-disubstitution (4-Methylphenol)."
+      },
+      {
+        id: 14, topic: 'Benzenediols',
+        before: "Benzene-1,2-diol is commonly known as ",
+        after: ".",
+        opts: ['catechol', 'resorcinol', 'hydroquinone', 'pyrogallol'],
+        ans: 0,
+        exp: "1,2-Benzenediol is commonly named Catechol."
+      },
+      {
+        id: 15, topic: 'Benzenediols',
+        before: "Benzene-1,3-diol is commonly known as ",
+        after: ".",
+        opts: ['resorcinol', 'catechol', 'hydroquinone', 'quinol'],
+        ans: 0,
+        exp: "1,3-Benzenediol is commonly named Resorcinol."
+      },
+      {
+        id: 16, topic: 'Benzenediols',
+        before: "Benzene-1,4-diol is commonly known as ",
+        after: " (or quinol).",
+        opts: ['hydroquinone', 'catechol', 'resorcinol', 'cresol'],
+        ans: 0,
+        exp: "1,4-Benzenediol is commonly named Hydroquinone or Quinol."
+      },
+      {
+        id: 17, topic: 'Ethers Nomenclature',
+        before: "Common names of ethers are formulated by listing the alkyl/aryl groups in ",
+        after: " order followed by the word 'ether'.",
+        opts: ['alphabetical', 'increasing molecular weight', 'decreasing carbon count', 'random'],
+        ans: 0,
+        exp: "e.g., Ethyl methyl ether (E before M)."
+      },
+      {
+        id: 18, topic: 'IUPAC Ethers',
+        before: "In the IUPAC system, ethers are systematically named as ",
+        after: ".",
+        opts: ['alkoxyalkanes', 'alkyl ethers', 'alkanols', 'alkanoates'],
+        ans: 0,
+        exp: "The smaller group forms the alkoxy substituent on the parent alkane."
+      },
+      {
+        id: 19, topic: 'Anisole',
+        before: "The IUPAC name of anisole (C₆H₅OCH₃) is ",
+        after: ".",
+        opts: ['methoxybenzene', 'ethoxybenzene', 'phenoxyethane', 'methyl phenyl ether'],
+        ans: 0,
+        exp: "Anisole is systematically Methoxybenzene."
+      },
+      {
+        id: 20, topic: 'Phenetole',
+        before: "The IUPAC name of phenetole (C₆H₅OCH₂CH₃) is ",
+        after: ".",
+        opts: ['ethoxybenzene', 'methoxybenzene', 'ethyl phenyl ether', 'phenoxypropane'],
+        ans: 0,
+        exp: "Phenetole is systematically Ethoxybenzene."
+      },
+      {
+        id: 21, topic: 'Bonding in Alcohols',
+        before: "In alcohols, the oxygen of the –OH group is attached to carbon by a ",
+        after: " bond formed by the overlap of sp³ orbitals.",
+        opts: ['sigma (σ)', 'pi (π)', 'coordinate', 'hydrogen'],
+        ans: 0,
+        exp: "A single covalent sigma (σ) bond connects the sp³ carbon to sp³ oxygen."
+      },
+      {
+        id: 22, topic: 'Bond Angle in Methanol',
+        before: "The C—O—H bond angle in methanol is ",
+        after: " degrees, which is slightly less than the tetrahedral angle (109.5°).",
+        opts: ['108.9', '111.7', '120.0', '104.5'],
+        ans: 0,
+        exp: "Methanol C—O—H angle is 108.9° due to lone pair-lone pair repulsion on Oxygen."
+      },
+      {
+        id: 23, topic: 'Bond Length Comparison',
+        before: "The C—O bond length in phenol is ",
+        after: " pm, which is shorter than that in methanol (142 pm).",
+        opts: ['136', '142', '141', '154'],
+        ans: 0,
+        exp: "Phenolic C—O bond length is 136 pm compared to 142 pm in methanol."
+      },
+      {
+        id: 24, topic: 'Phenol Resonance',
+        before: "The shorter C—O bond in phenol is attributed to partial double bond character and the ",
+        after: " hybridisation of the aromatic ring carbon.",
+        opts: ['sp²', 'sp³', 'sp', 'dsp²'],
+        ans: 0,
+        exp: "Conjugation of oxygen's lone pair with the ring and sp² carbon causes bond shortening."
+      },
+      {
+        id: 25, topic: 'Bond Angle in Ethers',
+        before: "The C—O—C bond angle in methoxymethane is ",
+        after: " degrees, which is greater than the tetrahedral angle due to repulsion between bulky alkyl groups.",
+        opts: ['111.7', '108.9', '109.5', '104.5'],
+        ans: 0,
+        exp: "Steric repulsion between the two methyl groups widens the angle to 111.7°."
+      }
+    ];
+
+    let blanksScore = 0;
+    let blanksAnswered = 0;
+    const blanksAnsweredMap = {};
+
+    function renderBlanks() {
+      const container = document.getElementById('blanksContainer');
+      container.innerHTML = blanksData.map((d, idx) => `
+        <div class="blank-card" id="blank_card_${d.id}">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:11px; font-weight:800; color:var(--accent-gold);">Question ${idx + 1} of 25</span>
+            <span style="font-size:11px; font-weight:700; background:rgba(56,189,248,0.15); color:var(--accent-sky); padding:2px 8px; border-radius:6px;">${d.topic}</span>
+          </div>
+          <div class="blank-sentence">
+            ${d.before}<span class="blank-slot" id="slot_${d.id}">______</span>${d.after}
+          </div>
+          <div class="blank-pills-row">
+            ${d.opts.map((opt, optIdx) => `
+              <button class="blank-pill-btn" id="blank_pill_${d.id}_${optIdx}" onclick="checkBlank(${d.id}, ${optIdx}, ${d.ans})">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <div class="exp-box" id="blank_exp_${d.id}">
+            💡 <strong>NCERT Examination Note:</strong> ${d.exp}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function checkBlank(bId, selectedIdx, correctIdx) {
+      if (blanksAnsweredMap[bId] !== undefined) return;
+      blanksAnsweredMap[bId] = selectedIdx;
+      blanksAnswered++;
+
+      const isCorrect = (selectedIdx === correctIdx);
+      if (isCorrect) blanksScore++;
+
+      const slot = document.getElementById(`slot_${bId}`);
+      const correctText = blanksData.find(b => b.id === bId).opts[correctIdx];
+      const selectedText = blanksData.find(b => b.id === bId).opts[selectedIdx];
+
+      slot.innerText = isCorrect ? correctText : selectedText;
+      slot.classList.add(isCorrect ? 'filled-correct' : 'filled-wrong');
+
+      document.getElementById(`blank_pill_${bId}_${correctIdx}`).classList.add('correct');
+      if (!isCorrect) {
+        document.getElementById(`blank_pill_${bId}_${selectedIdx}`).classList.add('wrong');
+      }
+
+      document.getElementById(`blank_card_${bId}`).querySelectorAll('.blank-pill-btn').forEach(b => b.classList.add('disabled'));
+      document.getElementById(`blank_exp_${bId}`).style.display = 'block';
+
+      document.getElementById('blanksScore').innerText = blanksScore;
+      document.getElementById('blanksAnswered').innerText = blanksAnswered;
+
+      if (isCorrect) confetti({ particleCount: 20, spread: 45, origin: { y: 0.85 } });
+      if (blanksAnswered === blanksData.length && blanksScore >= 20) {
+        setTimeout(() => confetti({ particleCount: 140, spread: 95, origin: { y: 0.6 } }), 300);
+      }
+    }
+
+    function switchTab(tabName, btnEl) {
+      document.querySelectorAll('.mod-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
+      ['tab_ethers_vinylic', 'tab_nomenclature', 'tab_geometry', 'tab_blanks'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById('tab_' + tabName);
+      if (activeSection) activeSection.style.display = 'block';
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    // Init
+    renderBlanks();
+  </script>
+</body>
+</html>

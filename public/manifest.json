@@ -1,0 +1,32 @@
+{
+  "short_name": "StudyGuide",
+  "name": "StudyGuide by Nextsem — NCERT & NIOS Solutions Hub",
+  "description": "100% Free NCERT & NIOS Books, Chapter Notes, and Step-by-Step Exercise Solutions.",
+  "icons": [
+    {
+      "src": "/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/app-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "id": "/",
+  "background_color": "#17181c",
+  "theme_color": "#04AA6D",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["education", "books"]
+}

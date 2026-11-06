@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "page": 28,
+    "topic": "Sole Proprietorship: Meaning & Features",
+    "category": "Sole Proprietorship",
+    "q": "Which form of business organisation refers to a business owned, managed, and controlled by an individual who is the recipient of all profits and bearer of all risks?",
+    "options": [
+      "(A) Sole Proprietorship",
+      "(B) Partnership",
+      "(C) Joint Hindu Family Business",
+      "(D) Cooperative Society"
+    ],
+    "correct": 0,
+    "exp": "NCERT Chapter 2 (Page 28) defines Sole Proprietorship as a popular form of business organisation where a single individual owns, manages, and controls the enterprise, taking all profits and bearing all losses.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 28"
+  },
+  {
+    "id": 2,
+    "page": 29,
+    "topic": "Sole Proprietorship: Unlimited Liability",
+    "category": "Sole Proprietorship",
+    "q": "If a sole proprietorship firm's assets are insufficient to pay off its business debts, the creditors have the legal right to claim repayment from the owner's personal property. This feature is known as:",
+    "options": [
+      "(A) Limited Liability",
+      "(B) Joint Liability",
+      "(C) Unlimited Liability",
+      "(D) Several Liability"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 29 highlights 'Unlimited Liability': Sole proprietors have unlimited liability. In case business assets are inadequate to settle claims, the owner's personal property (house, savings) can be utilized to satisfy business obligations.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 29"
+  },
+  {
+    "id": 3,
+    "page": 30,
+    "topic": "Sole Proprietorship: Lack of Business Continuity",
+    "category": "Sole Proprietorship",
+    "q": "In the eyes of the law, a sole proprietorship has no separate legal existence distinct from its owner. Consequently, death, insanity, imprisonment, or insolvency of the proprietor usually leads to:",
+    "options": [
+      "(A) Automatic continuation under state administrators",
+      "(B) Closure or dissolution of the business",
+      "(C) Transfer of business to a public company",
+      "(D) Conversion into a statutory corporation"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 30 explains 'Lack of Business Continuity': Since the owner and business are one and the same entity, personal misfortune like death, insanity, or insolvency of the owner directly affects business operations and often results in closure.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 30"
+  },
+  {
+    "id": 4,
+    "page": 31,
+    "topic": "Joint Hindu Family Business: Karta & Coparceners",
+    "category": "Joint Hindu Family Business",
+    "q": "In a Joint Hindu Family Business governed by Hindu Law, what is the nature of the liability of the 'Karta' versus the other family members ('Coparceners')?",
+    "options": [
+      "(A) Both Karta and Coparceners have limited liability",
+      "(B) Karta has unlimited liability, while Coparceners have liability limited to their share in ancestral property",
+      "(C) Both Karta and Coparceners have unlimited liability",
+      "(D) Karta has limited liability, while Coparceners have unlimited liability"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 31 states: The liability of the Karta (the eldest male/female head) is unlimited, whereas the liability of all other members (coparceners) is strictly limited to their respective shares in the ancestral coparcenary property.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 31"
+  },
+  {
+    "id": 5,
+    "page": 32,
+    "topic": "Joint Hindu Family Business: Dayabhaga vs Mitakshara",
+    "category": "Joint Hindu Family Business",
+    "q": "Which system of Hindu Law prevalent in West Bengal permits both male and female family members to be coparceners in the ancestral family property?",
+    "options": [
+      "(A) Mitakshara System",
+      "(B) Dayabhaga System",
+      "(C) Aliyasantana System",
+      "(D) Marumakkathayam System"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 32 notes: Under the Dayabhaga system (prevailing in West Bengal and parts of Assam), both male and female members can become coparceners. Under Mitakshara (rest of India), traditionally only male members held ancestral rights by birth.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 32"
+  },
+  {
+    "id": 6,
+    "page": 33,
+    "topic": "Partnership: Definition & Mutual Agency",
+    "category": "Partnership",
+    "q": "According to the Indian Partnership Act, 1932, partnership is the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all. This fundamental principle is known as:",
+    "options": [
+      "(A) Limited liability",
+      "(B) Mutual agency",
+      "(C) Perpetual succession",
+      "(D) Ultra vires"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 33 explains 'Mutual Agency': Every partner is both an agent and a principal. A partner's acts bind all other partners, and they are in turn bound by the lawful acts of other partners in conducting business.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 33"
+  },
+  {
+    "id": 7,
+    "page": 34,
+    "topic": "Partnership: Maximum Number of Partners",
+    "category": "Partnership",
+    "q": "According to the Companies (Miscellaneous) Rules, 2014, what is the maximum number of partners permitted in a partnership firm?",
+    "options": [
+      "(A) 10",
+      "(B) 20",
+      "(C) 50",
+      "(D) 100"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 34 notes: Under Section 464 of Companies Act, 2013 and Rule 10 of Companies (Miscellaneous) Rules, 2014, the maximum number of partners in a partnership firm is currently set at 50.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 34"
+  },
+  {
+    "id": 8,
+    "page": 35,
+    "topic": "Types of Partners: Sleeping / Dormant Partner",
+    "category": "Partnership",
+    "q": "A partner who contributes capital, shares profits and losses, and bears unlimited liability, but DOES NOT take active part in the daily management of the firm's business, is called a:",
+    "options": [
+      "(A) Active Partner",
+      "(B) Sleeping or Dormant Partner",
+      "(C) Nominal Partner",
+      "(D) Secret Partner"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 35 (Table 2.2) defines a 'Sleeping or Dormant Partner' as one who contributes capital and shares profits/losses with unlimited liability, but remains inactive in day-to-day managerial operations.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 35"
+  },
+  {
+    "id": 9,
+    "page": 36,
+    "topic": "Types of Partners: Partner by Estoppel",
+    "category": "Partnership",
+    "q": "A person who is not a partner in a firm, but by their own conduct, words, or representation leads outside parties to believe that they are a partner, is termed a:",
+    "options": [
+      "(A) Secret Partner",
+      "(B) Partner by Estoppel",
+      "(C) Partner in Profits Only",
+      "(D) Sub-partner"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 36 defines 'Partner by Estoppel': A person is held liable as a partner by estoppel if, through their own conduct or initiative, they give an impression to others that they are a partner, becoming personally liable for debts incurred by the firm on that belief.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 36"
+  },
+  {
+    "id": 10,
+    "page": 36,
+    "topic": "Position of a Minor in Partnership",
+    "category": "Partnership",
+    "q": "Under Section 30 of the Indian Partnership Act, 1932, which of the following statements correctly describes the legal status of a 'Minor' admitted to a partnership?",
+    "options": [
+      "(A) A minor can become a full partner with unlimited personal liability",
+      "(B) A minor cannot be admitted into a partnership under any circumstances",
+      "(C) A minor can be admitted only to the benefits of an existing partnership with the mutual consent of all partners, and their liability is strictly limited to their share in the firm",
+      "(D) A minor must contribute at least 51% of the firm's capital"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 36 explains that a minor cannot enter into a contract, but with the unanimous consent of all partners, can be admitted to the benefits of an existing partnership. The minor's liability is limited to their capital share; personal assets cannot be touched.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 36"
+  },
+  {
+    "id": 11,
+    "page": 37,
+    "topic": "Limited Liability Partnership (LLP)",
+    "category": "Partnership",
+    "q": "In India, a Limited Liability Partnership (LLP) is formed and registered under which dedicated statute?",
+    "options": [
+      "(A) Indian Partnership Act, 1932",
+      "(B) Companies Act, 2013",
+      "(C) Limited Liability Partnership Act, 2008",
+      "(D) Societies Registration Act, 1860"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 37 highlights the 'Limited Liability Partnership Act, 2008'. An LLP combines the organizational flexibility of a partnership with the limited liability benefits of a joint stock company.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 37"
+  },
+  {
+    "id": 12,
+    "page": 38,
+    "topic": "Partnership Deed & Registration Consequences",
+    "category": "Partnership",
+    "q": "Registration of a partnership firm is optional under the Indian Partnership Act, 1932. However, an UNREGISTERED partnership firm suffers which major legal disability?",
+    "options": [
+      "(A) It cannot open a bank account",
+      "(B) It cannot file a legal suit in a court of law against third parties or against fellow partners",
+      "(C) Its partners are exempted from paying government taxes",
+      "(D) It cannot sell products to the general public"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 38 lists consequences of non-registration: An unregistered firm cannot file a lawsuit against third parties or against other partners to enforce contractual rights, though third parties can still sue the firm.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 38"
+  },
+  {
+    "id": 13,
+    "page": 39,
+    "topic": "Cooperative Society: Democratic Principle",
+    "category": "Cooperative Society",
+    "q": "In a Cooperative Society, voting rights are governed by which foundational democratic principle?",
+    "options": [
+      "(A) One share, one vote",
+      "(B) One member, one vote",
+      "(C) Proportional voting based on capital contribution",
+      "(D) Votes determined by the state registrar"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 39 emphasizes 'Democratic Control': The principle of 'one member, one vote' governs cooperative societies, ensuring equal voting rights regardless of the amount of capital contributed by any individual member.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 39"
+  },
+  {
+    "id": 14,
+    "page": 40,
+    "topic": "Cooperative Society: Minimum Membership Requirement",
+    "category": "Cooperative Society",
+    "q": "Under the Cooperative Societies Act, 1912, what is the minimum number of adult individuals required to form a cooperative society?",
+    "options": [
+      "(A) 2",
+      "(B) 7",
+      "(C) 10",
+      "(D) 20"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 40 states: To form a cooperative society, at least 10 adult persons who share common economic goals must join together voluntarily and apply for registration.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 40"
+  },
+  {
+    "id": 15,
+    "page": 41,
+    "topic": "Types of Cooperative Societies: Consumer Cooperatives",
+    "category": "Cooperative Society",
+    "q": "Which type of cooperative society is formed by consumers to eliminate middlemen, purchase consumer goods directly from manufacturers in bulk, and supply quality goods at reasonable prices?",
+    "options": [
+      "(A) Consumer Cooperative Societies",
+      "(B) Producer Cooperative Societies",
+      "(C) Marketing Cooperative Societies",
+      "(D) Credit Cooperative Societies"
+    ],
+    "correct": 0,
+    "exp": "NCERT Page 41 defines Consumer Cooperative Societies as associations formed by consumers desiring to procure good quality household items directly from producers, eliminating wholesaler and retailer margins.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 41"
+  },
+  {
+    "id": 16,
+    "page": 42,
+    "topic": "Types of Cooperative Societies: Marketing Cooperatives",
+    "category": "Cooperative Society",
+    "q": "Small farmers or artisans who wish to pool their outputs to secure better bargaining power, competitive selling prices, transportation, and warehousing against exploitative middlemen form a:",
+    "options": [
+      "(A) Cooperative Housing Society",
+      "(B) Marketing Cooperative Society",
+      "(C) Credit Cooperative Society",
+      "(D) Consumer Cooperative Society"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 42 defines Marketing Cooperative Societies as enterprises formed by small producers to secure favorable market prices, warehousing, and transportation for their goods.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 42"
+  },
+  {
+    "id": 17,
+    "page": 43,
+    "topic": "Joint Stock Company: Artificial Person & Separate Entity",
+    "category": "Joint Stock Company",
+    "q": "A Joint Stock Company is an artificial person created by law. Which of the following features signifies that the company continues to exist despite the death, retirement, or insolvency of all its members?",
+    "options": [
+      "(A) Limited Liability",
+      "(B) Perpetual Succession",
+      "(C) Common Seal",
+      "(D) Separation of Ownership and Management"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 43 defines 'Perpetual Succession': A company is created by law and can only be dissolved by law. The coming and going of members (shareholders) does not affect its perpetual existence.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 43"
+  },
+  {
+    "id": 18,
+    "page": 44,
+    "topic": "Joint Stock Company: Common Seal",
+    "category": "Joint Stock Company",
+    "q": "Since a company is an artificial person that cannot sign physical documents itself, its official signature used on legal contracts was traditionally represented by the:",
+    "options": [
+      "(A) Managing Director's fingerprint",
+      "(B) Common Seal",
+      "(C) Registrar's stamp",
+      "(D) Share Certificate"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 44 notes: The Common Seal acts as the official signature of the corporate entity. (Under the Companies Amendment Act 2015, the common seal was made optional, replaced by signatures of two directors or a director and company secretary).",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 44"
+  },
+  {
+    "id": 19,
+    "page": 45,
+    "topic": "Private Company: Minimum & Maximum Members",
+    "category": "Joint Stock Company",
+    "q": "According to the Companies Act, 2013, what are the minimum and maximum membership limits for a 'Private Company'?",
+    "options": [
+      "(A) Minimum 2, Maximum 50",
+      "(B) Minimum 2, Maximum 200 (excluding employee members)",
+      "(C) Minimum 7, Maximum Unlimited",
+      "(D) Minimum 1, Maximum 100"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 45 explains: Under Section 2(68) of Companies Act, 2013, a private company requires at least 2 members and restricts its maximum number of members to 200 (excluding present and past employee members).",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 45"
+  },
+  {
+    "id": 20,
+    "page": 46,
+    "topic": "Public Company: Characteristics",
+    "category": "Joint Stock Company",
+    "q": "Which of the following is a mandatory legal characteristic of a 'Public Limited Company'?",
+    "options": [
+      "(A) It restricts the right of its members to transfer shares",
+      "(B) It must have a minimum of 7 members, with no statutory limit on maximum members",
+      "(C) It cannot issue shares or debentures to the general public",
+      "(D) It cannot appoint more than 2 directors"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 46 defines a Public Company: It requires at least 7 members, has no upper limit on maximum members, allows free transferability of shares, and can invite the public to subscribe to its securities.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 46"
+  },
+  {
+    "id": 21,
+    "page": 47,
+    "topic": "One Person Company (OPC)",
+    "category": "Joint Stock Company",
+    "q": "Under the Companies Act, 2013, which new corporate form was introduced that allows a single individual to incorporate a private company with limited liability?",
+    "options": [
+      "(A) Sole Trading Firm",
+      "(B) One Person Company (OPC)",
+      "(C) Micro Industrial Society",
+      "(D) Private Proprietorship Union"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 47 highlights the 'One Person Company (OPC)': Introduced in Companies Act, 2013 (Section 2(62)), an OPC enables an entrepreneur to enjoy corporate personality and limited liability with only one shareholder/director.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 47"
+  },
+  {
+    "id": 22,
+    "page": 48,
+    "topic": "Choice of Form: Cost & Ease of Formation",
+    "category": "Choice of Business Organisation",
+    "q": "In terms of legal procedures, minimum expenditure, and simplicity of establishment, which form of business organisation is the easiest and least expensive to start?",
+    "options": [
+      "(A) Joint Stock Company",
+      "(B) Cooperative Society",
+      "(C) Sole Proprietorship",
+      "(D) Statutory Corporation"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 48 states: Sole proprietorship is the simplest and least costly form to organize, as it requires minimal legal formalities and government registration compared to companies or cooperatives.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 48"
+  },
+  {
+    "id": 23,
+    "page": 49,
+    "topic": "Choice of Form: Capital Requirements",
+    "category": "Choice of Business Organisation",
+    "q": "When an entrepreneur plans to set up a very large-scale manufacturing enterprise (e.g. steel plant or automobile factory) requiring massive capital investment, which form of business organisation is most suitable?",
+    "options": [
+      "(A) Sole Proprietorship",
+      "(B) Partnership",
+      "(C) Joint Stock Company",
+      "(D) Joint Hindu Family Business"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 49 explains: A Joint Stock Company is the most suitable form when huge capital resources are required, as it can issue shares and debentures to thousands of investors and financial institutions.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 49"
+  },
+  {
+    "id": 24,
+    "page": 50,
+    "topic": "Choice of Form: Continuity of Business",
+    "category": "Choice of Business Organisation",
+    "q": "If an enterprise demands high institutional continuity and stability undisturbed by the death, insolvency, or withdrawal of individual owners, the entrepreneur should choose a:",
+    "options": [
+      "(A) Sole Proprietorship",
+      "(B) Partnership at will",
+      "(C) Joint Stock Company",
+      "(D) Particular Partnership"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 50 notes: Companies and cooperative societies enjoy legal perpetual succession, making them ideal when long-term uninterrupted continuity is required.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 50"
+  },
+  {
+    "id": 25,
+    "page": 51,
+    "topic": "Choice of Form: Summary Comparison",
+    "category": "Choice of Business Organisation",
+    "q": "Which form of business organisation offers the optimal combination of direct personal incentive, absolute secrecy of operational affairs, and quickness in managerial decision-making?",
+    "options": [
+      "(A) Sole Proprietorship",
+      "(B) Public Limited Company",
+      "(C) Cooperative Society",
+      "(D) Statutory Corporation"
+    ],
+    "correct": 0,
+    "exp": "NCERT Page 51 (Table 2.4) compares all forms: Sole proprietorship excels in prompt decision-making, direct profit incentive, and complete confidentiality of trade secrets.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 2, Page 51"
+  }
+]

@@ -1,0 +1,3850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Class 9 Ganita Manjari Chapters 4 & 5 Master MCQs (Graphical, Numerical & Conceptual) | NextSem Academy</title>
+  <meta name="description" content="CBSE Class 9 Mathematics Official 30 Master MCQs based strictly on Ganita Manjari Part 1: Chapter 4 (Exploring Algebraic Identities - iemh104) and Chapter 5 (I’m Up and Down, and Round and Round / Circles - iemh105) featuring interactive SVGs, step-by-step marking rubrics, and print exam format." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-page: #070d19;
+      --bg-card: #0d172b;
+      --bg-card-elevated: #13223e;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-sub: #cbd5e1;
+      --accent-emerald: #10b981;
+      --accent-emerald-light: #34d399;
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-purple: #a855f7;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --header-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    [data-theme="light"] {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-elevated: #f1f5f9;
+      --border-color: rgba(0, 0, 0, 0.1);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-sub: #334155;
+      --header-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 13, 25, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: var(--header-shadow);
+    }
+    [data-theme="light"] .top-nav { background: rgba(255, 255, 255, 0.94); }
+    .brand-group { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; color: inherit; }
+    .brand-logo-emblem {
+      width: 42px; height: 42px; border-radius: 10px;
+      background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 900; font-size: 1.3rem;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-title {
+      font-size: 1.18rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1;
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .brand-subtitle { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+    .breadcrumb-trail { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--text-muted); overflow-x: auto; white-space: nowrap; }
+    .breadcrumb-trail a { color: var(--text-muted); text-decoration: none; transition: color 0.15s ease; font-weight: 500; }
+    .breadcrumb-trail a:hover { color: var(--accent-emerald); }
+    .breadcrumb-trail .active { color: var(--text-main); font-weight: 700; }
+    .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 700; border-radius: 8px;
+      cursor: pointer; border: 1px solid transparent; transition: all 0.2s ease; text-decoration: none;
+    }
+    .btn-emerald {
+      background: linear-gradient(135deg, #10b981, #059669); color: white;
+      box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
+    }
+    .btn-emerald:hover { background: linear-gradient(135deg, #059669, #047857); transform: translateY(-1px); }
+    .btn-outline { background: transparent; border-color: var(--border-color); color: var(--text-main); }
+    .btn-outline:hover { background: var(--bg-card-elevated); border-color: var(--accent-emerald); }
+    .theme-toggle-btn {
+      width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--border-color);
+      background: var(--bg-card-elevated); color: var(--text-main); font-size: 1.1rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;
+    }
+    .theme-toggle-btn:hover { border-color: var(--accent-emerald); transform: rotate(15deg); }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 1.5rem 1.25rem 6rem; }
+    
+    .paper-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.08) 50%, rgba(59, 130, 246, 0.06) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 16px;
+      padding: 1.8rem; margin-bottom: 2rem; position: relative; overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+    .paper-banner::before {
+      content: ''; position: absolute; top: -50%; right: -20%; width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .exam-badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.85rem; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.65rem;
+      border-radius: 6px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .badge-cbse { background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald-light); border: 1px solid rgba(16, 185, 129, 0.4); }
+    .badge-marks { background: rgba(6, 182, 212, 0.2); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.4); }
+    .badge-time { background: rgba(245, 158, 11, 0.2); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .badge-ch { background: rgba(168, 85, 247, 0.2); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.4); }
+    .paper-title { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 0.6rem; color: var(--text-main); }
+    .paper-subtitle { font-size: 0.95rem; color: var(--text-sub); line-height: 1.6; max-width: 860px; margin-bottom: 1.25rem; }
+    .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border-color); }
+    .meta-item { display: flex; flex-direction: column; }
+    .meta-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); font-weight: 700; }
+    .meta-value { font-size: 0.88rem; font-weight: 700; color: var(--text-main); }
+
+    /* Filter & Controls Panel */
+    .controls-panel {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px;
+      padding: 1rem 1.25rem; margin-bottom: 1.75rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .filter-tabs { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .filter-btn {
+      background: var(--bg-card-elevated); border: 1px solid var(--border-color); color: var(--text-muted);
+      font-size: 0.82rem; font-weight: 700; padding: 0.4rem 0.85rem; border-radius: 8px; cursor: pointer; transition: all 0.15s ease;
+    }
+    .filter-btn:hover { color: var(--text-main); border-color: var(--accent-emerald); }
+    .filter-btn.active {
+      background: rgba(16, 185, 129, 0.18); border-color: var(--accent-emerald); color: var(--accent-emerald-light);
+    }
+    .exam-quick-stats { display: flex; align-items: center; gap: 1.25rem; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; }
+
+    /* Question Cards */
+    .q-card {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px;
+      padding: 1.5rem; margin-bottom: 1.5rem; position: relative; transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .q-card:hover { border-color: rgba(16, 185, 129, 0.35); box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .q-top-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.75rem; }
+    .q-num-badge { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .q-num-idx { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 900; background: var(--bg-card-elevated); color: var(--accent-cyan); border: 1px solid var(--border-color); padding: 0.25rem 0.7rem; border-radius: 6px; }
+    .q-cat-tag { font-size: 0.72rem; font-weight: 800; padding: 0.25rem 0.6rem; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .cat-graphical { background: rgba(6, 182, 212, 0.15); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.35); }
+    .cat-numerical { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.35); }
+    .cat-conceptual { background: rgba(168, 85, 247, 0.15); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); }
+    
+    .q-meta-badges { display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; }
+    .q-ch-tag { font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.55rem; border-radius: 5px; }
+    .q-ch-tag.ch4 { background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3); }
+    .q-ch-tag.ch5 { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .q-diff-tag { font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: 5px; }
+    .diff-hard { background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.3); }
+    .diff-med { background: rgba(245, 158, 11, 0.15); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .q-marks-pill { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.55rem; border-radius: 5px; background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald-light); border: 1px solid rgba(16, 185, 129, 0.3); }
+
+    .q-book-ref { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.85rem; }
+    .ref-icon { color: var(--accent-emerald); font-size: 0.85rem; }
+
+    .q-body { font-size: 1rem; font-weight: 500; color: var(--text-main); margin-bottom: 1.15rem; line-height: 1.7; }
+    .math-tex { font-family: var(--font-mono); background: var(--bg-card-elevated); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; border: 1px solid rgba(255,255,255,0.08); }
+
+    .diagram-wrap {
+      background: var(--bg-page); border: 1px solid var(--border-color); border-radius: 12px;
+      padding: 1rem; margin: 1rem 0 1.35rem; display: flex; flex-direction: column; align-items: center;
+    }
+    .svg-container { width: 100%; max-width: 540px; display: flex; justify-content: center; }
+    .diagram-caption { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-top: 0.6rem; text-align: center; }
+
+    .options-grid { display: grid; gap: 0.65rem; margin-bottom: 1.15rem; }
+    .options-grid.one-col { grid-template-columns: 1fr; }
+    .options-grid.two-cols { grid-template-columns: 1fr; }
+    @media (min-width: 680px) { .options-grid.two-cols { grid-template-columns: 1fr 1fr; } }
+    
+    .opt-label {
+      display: flex; align-items: center; gap: 0.85rem; padding: 0.85rem 1.1rem; border-radius: 10px;
+      background: var(--bg-card-elevated); border: 1px solid var(--border-color); cursor: pointer;
+      font-size: 0.92rem; font-weight: 500; transition: all 0.15s ease; user-select: none;
+    }
+    .opt-label:hover { border-color: var(--accent-emerald); background: rgba(16, 185, 129, 0.08); }
+    .opt-label.selected { border-color: var(--accent-cyan); background: rgba(6, 182, 212, 0.12); font-weight: 700; }
+    .opt-label.correct { border-color: #10b981 !important; background: rgba(16, 185, 129, 0.22) !important; color: #34d399 !important; font-weight: 700; }
+    .opt-label.wrong { border-color: #f43f5e !important; background: rgba(244, 63, 94, 0.22) !important; color: #fda4af !important; }
+    .opt-key {
+      display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px;
+      border-radius: 7px; background: var(--bg-card); border: 1px solid var(--border-color);
+      font-weight: 800; font-size: 0.82rem; color: var(--text-sub); font-family: var(--font-mono); flex-shrink: 0;
+    }
+    .opt-label.selected .opt-key { background: var(--accent-cyan); color: #070d19; border-color: var(--accent-cyan); }
+    .opt-label.correct .opt-key { background: #10b981; color: white; border-color: #10b981; }
+    .opt-label.wrong .opt-key { background: #f43f5e; color: white; border-color: #f43f5e; }
+    .opt-text { flex: 1; }
+
+    .q-action-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;
+      margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .toggle-sol-btn {
+      background: transparent; border: 1px solid var(--border-color); color: var(--text-muted);
+      font-size: 0.82rem; font-weight: 700; padding: 0.4rem 0.85rem; border-radius: 6px; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.4rem; transition: all 0.15s ease;
+    }
+    .toggle-sol-btn:hover { border-color: var(--accent-emerald); color: var(--accent-emerald-light); }
+    .rubric-check-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--text-muted); }
+    .rubric-select {
+      background: var(--bg-card-elevated); border: 1px solid var(--border-color); color: var(--text-main);
+      padding: 0.3rem 0.6rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.82rem;
+    }
+
+    .solution-box { margin-top: 1.15rem; border-top: 1px dashed var(--border-color); padding-top: 1.15rem; display: none; }
+    .solution-box.open { display: block; animation: fadeIn 0.25s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .sol-header {
+      font-size: 0.84rem; font-weight: 800; color: var(--accent-emerald-light); text-transform: uppercase;
+      letter-spacing: 0.05em; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .step-list { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 0.85rem; }
+    .step-item {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 0.85rem;
+      background: var(--bg-page); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.65rem 0.95rem; font-size: 0.92rem;
+    }
+    .step-badge {
+      font-size: 0.72rem; font-weight: 800; font-family: var(--font-mono); background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-cyan); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.15rem 0.45rem; border-radius: 4px; flex-shrink: 0;
+    }
+    .step-text { flex: 1; color: var(--text-sub); }
+    .step-marks {
+      font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; color: var(--accent-amber);
+      background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.2rem 0.5rem; border-radius: 5px; white-space: nowrap;
+    }
+    .final-ans-box {
+      background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.65rem 0.95rem; border-radius: 8px; font-size: 0.88rem; color: #a7f3d0; margin-bottom: 0.5rem;
+    }
+    .competency-callout {
+      background: rgba(168, 85, 247, 0.1); border-left: 3px solid var(--accent-purple);
+      padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; font-size: 0.82rem; color: #e9d5ff;
+    }
+
+    /* Sticky Bottom Exam Status Bar */
+    .submit-bar {
+      position: sticky; bottom: 1rem; z-index: 90; background: rgba(13, 23, 43, 0.96);
+      backdrop-filter: blur(14px); border: 1px solid var(--accent-emerald); border-radius: 14px;
+      padding: 0.85rem 1.4rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5); margin-top: 2rem;
+    }
+    [data-theme="light"] .submit-bar { background: rgba(255, 255, 255, 0.97); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+    .score-summary { display: flex; align-items: center; gap: 1.5rem; }
+    .score-stat { display: flex; flex-direction: column; }
+    .score-stat-val { font-size: 1.35rem; font-weight: 900; font-family: var(--font-mono); line-height: 1.1; color: var(--accent-emerald-light); }
+    .score-stat-lbl { font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted); }
+
+    /* Modal for Exam Summary */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.78); backdrop-filter: blur(8px);
+      z-index: 1000; display: none; align-items: center; justify-content: center; padding: 1.5rem;
+    }
+    .modal-overlay.active { display: flex; animation: fadeIn 0.25s ease; }
+    .modal-box {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px;
+      max-width: 540px; width: 100%; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.6); text-align: center; position: relative;
+    }
+    .modal-score-circle {
+      width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+      border: 3px solid var(--accent-emerald); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1.25rem;
+    }
+    .circle-val { font-size: 2.2rem; font-weight: 900; font-family: var(--font-mono); color: var(--accent-emerald-light); line-height: 1; }
+    .circle-denom { font-size: 0.8rem; color: var(--text-muted); font-weight: 700; }
+
+    /* Print Stylesheet */
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; font-family: 'Times New Roman', serif !important; font-size: 10.5pt !important; line-height: 1.4 !important; }
+      .top-nav, .controls-panel, .submit-bar, .toggle-sol-btn, .rubric-check-row, .theme-toggle-btn, .btn, .modal-overlay { display: none !important; }
+      .school-print-header { display: block !important; margin-bottom: 1.25rem; border-bottom: 2px solid #000; padding-bottom: 0.75rem; text-align: center; }
+      .paper-banner { display: none !important; }
+      .container { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+      .q-card { border: 1px solid #ccc !important; background: #fff !important; color: #000 !important; box-shadow: none !important; margin-bottom: 1rem !important; padding: 0.75rem !important; page-break-inside: avoid; }
+      .q-body { color: #000 !important; }
+      .opt-label { border: 1px solid #aaa !important; background: #fff !important; color: #000 !important; padding: 0.35rem 0.5rem !important; }
+      .opt-key { border: 1px solid #000 !important; color: #000 !important; background: #fff !important; }
+      .q-num-idx, .q-cat-tag, .q-ch-tag, .q-diff-tag, .q-marks-pill { border: 1px solid #666 !important; background: none !important; color: #000 !important; }
+      body:not(.print-with-solutions) .solution-box { display: none !important; }
+      body.print-with-solutions .solution-box { display: block !important; border-top: 1px solid #888 !important; background: #fdfdfd !important; color: #000 !important; padding-top: 0.5rem !important; }
+      .step-item { border: 1px solid #ddd !important; background: #fff !important; color: #000 !important; }
+      .step-marks { border: 1px solid #000 !important; color: #000 !important; background: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar with Desktop Breadcrumbs -->
+  <nav class="top-nav" aria-label="Global Navigation">
+    <div style="display: flex; align-items: center; gap: 1.5rem;">
+      <a href="/" class="brand-group" title="NextSem Academy NCERT Solutions">
+        <div class="brand-logo-emblem">Σ</div>
+        <div class="brand-text">
+          <span class="brand-title">Study Guide</span>
+          <span class="brand-subtitle">NextSem Academy</span>
+        </div>
+      </a>
+
+      <!-- Desktop Breadcrumbs -->
+      <div class="breadcrumb-trail">
+        <a href="/">Home</a>
+        <span>❯</span>
+        <a href="/?view=classes">NCERT Books</a>
+        <span>❯</span>
+        <a href="/?class=9">Class 9</a>
+        <span>❯</span>
+        <a href="/?class=9&subject=c9-maths">Ganita Manjari</a>
+        <span>❯</span>
+        <span class="active">Ch 4 & 5 Master MCQs</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline" onclick="togglePrintMode()" title="Print Question Paper">
+        <span>🖨️ Print Paper</span>
+      </button>
+      <button class="btn btn-emerald" onclick="toggleAllSolutions()" id="btn-toggle-all-solutions">
+        <span>👁️ Show All Solutions</span>
+      </button>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle Dark / Light Mode">
+        🌙
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Print Header (Visible only when printed) -->
+    <header class="school-print-header" style="display: none;">
+      <h2 style="font-size: 15pt; font-weight: bold; margin-bottom: 2px;">NEXTSEM ACADEMY MODEL EXAMINATION • 2026-27</h2>
+      <p style="font-size: 11pt; margin-bottom: 2px;">CBSE CLASS IX MATHEMATICS (GANITA MANJARI PART 1) • UNIT ASSESSMENT</p>
+      <p style="font-size: 9.5pt; margin-bottom: 8px;"><strong>Syllabus:</strong> Chapter 4 (Exploring Algebraic Identities) & Chapter 5 (I’m Up and Down, and Round and Round - Circles)</p>
+      <div style="display: flex; justify-content: space-between; font-size: 9.5pt; border-top: 1px solid #000; padding-top: 4px;">
+        <span>Candidate Name: __________________________</span>
+        <span>Roll No: ________</span>
+        <span>Max Marks: 30</span>
+        <span>Time: 60 Mins</span>
+      </div>
+    </header>
+
+    <!-- Digital Interactive Banner -->
+    <section class="paper-banner">
+      <div class="exam-badge-row">
+        <span class="badge badge-cbse">CBSE Class 9 • Ganita Manjari</span>
+        <span class="badge badge-marks">Total Marks: 30</span>
+        <span class="badge badge-time">Time: 60 Minutes</span>
+        <span class="badge badge-ch">Ch 4: Algebraic Identities (iemh104)</span>
+        <span class="badge badge-ch">Ch 5: Circles & Symmetries (iemh105)</span>
+      </div>
+      <h1 class="paper-title">Class 9 Ganita Manjari: Chapters 4 & 5 Master MCQ Challenge</h1>
+      <p class="paper-subtitle">
+        30 High-Yield Medium-to-Hard MCQs constructed strictly from official NCERT Ganita Manjari Grade 9 Part 1 textbooks (<code>iemh104.pdf</code> and <code>iemh105.pdf</code>).
+        Comprises 10 Graphical Questions with authentic SVG models, 10 Numerical Problem-Solving Questions, and 10 Conceptual/Proof-Based Reasoning Questions with CBSE Step-by-Step Marking Rubrics.
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Question Distribution</span>
+          <span class="meta-value">30 MCQs (10 Graphical + 10 Numerical + 10 Conceptual)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Difficulty Spectrum</span>
+          <span class="meta-value">Medium to Hard (NEP Higher Order Thinking Skills)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Original PDF Sources</span>
+          <span class="meta-value">
+            <a href="/pdf/Class%2009/Ganita%20Manjari-9th/iemh104.pdf" target="_blank" style="color: #10b981; text-decoration: underline;">iemh104.pdf (Ch 4)</a> &amp;
+            <a href="/pdf/Class%2009/Ganita%20Manjari-9th/iemh105.pdf" target="_blank" style="color: #06b6d4; text-decoration: underline;">iemh105.pdf (Ch 5)</a>
+          </span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Assessment Mode</span>
+          <span class="meta-value">Interactive Self-Check + Printable Paper</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls and Filter Tabs -->
+    <div class="controls-panel">
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterCategory('all', this)">🌟 All (30)</button>
+        <button class="filter-btn" onclick="filterCategory('graphical', this)">📐 Graphical (10)</button>
+        <button class="filter-btn" onclick="filterCategory('numerical', this)">🔢 Numerical (10)</button>
+        <button class="filter-btn" onclick="filterCategory('conceptual', this)">💡 Conceptual (10)</button>
+        <button class="filter-btn" onclick="filterChapter('ch4', this)">📘 Ch 4: Identities</button>
+        <button class="filter-btn" onclick="filterChapter('ch5', this)">🟢 Ch 5: Circles</button>
+      </div>
+
+      <div class="exam-quick-stats">
+        <div>Attempted: <span id="stat-attempted" style="color: var(--accent-cyan);">0</span> / 30</div>
+        <div>Score: <span id="stat-score" style="color: var(--accent-emerald-light);">0</span> / 30</div>
+      </div>
+    </div>
+
+    <!-- Questions Container -->
+    <main id="questions-list">
+      
+    <article class="q-card" id="q-1" data-category="graphical" data-chapter="ch4" data-qid="1">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q1</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.5 (Fig. 4.8, Page 78)</span>
+      </div>
+
+      <p class="q-body">Observe the algebra tiles model below constructed from $x^2$ square tiles ($x \times x$), $x$ rectangular tiles ($x \times 1$), and unit square tiles ($1 \times 1$). The layout forms a composite large rectangle of dimensions $(2x + 3)$ by $(3x + 1)$. What is the total count of tiles of each type used, and what is the expanded polynomial expression for the total area?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 270" width="100%" height="240" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <!-- Title & Dimensions -->
+      <text x="230" y="22" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle" font-family="sans-serif">Algebra Tiles Area Model: (2x + 3) × (3x + 1)</text>
+      <!-- Horizontal Dimension (Top) -->
+      <line x1="70" y1="36" x2="390" y2="36" stroke="#94a3b8" stroke-dasharray="3,3" stroke-width="1.5" />
+      <text x="230" y="48" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">Width = 3x + 1 (3 x-blocks + 1 unit)</text>
+      <!-- Vertical Dimension (Left) -->
+      <line x1="50" y1="58" x2="50" y2="248" stroke="#94a3b8" stroke-dasharray="3,3" stroke-width="1.5" />
+      <text x="40" y="156" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="middle" transform="rotate(-90 40 156)" font-family="sans-serif">Height = 2x + 3</text>
+      
+      <!-- 6 x^2 tiles (each 80x60) -->
+      <g fill="#047857" stroke="#34d399" stroke-width="1.5">
+        <rect x="70" y="58" width="80" height="60" rx="3" /><text x="110" y="93" fill="#ecfdf5" font-size="13" font-weight="bold" text-anchor="middle">x²</text>
+        <rect x="154" y="58" width="80" height="60" rx="3" /><text x="194" y="93" fill="#ecfdf5" font-size="13" font-weight="bold" text-anchor="middle">x²</text>
+        <rect x="238" y="58" width="80" height="60" rx="3" /><text x="278" y="93" fill="#ecfdf5" font-size="13" font-weight="bold" text-anchor="middle">x²</text>
+        <rect x="70" y="122" width="80" height="60" rx="3" /><text x="110" y="157" fill="#ecfdf5" font-size="13" font-weight="bold" text-anchor="middle">x²</text>
+        <rect x="154" y="122" width="80" height="60" rx="3" /><text x="194" y="157" fill="#ecfdf5" font-size="13" font-weight="bold" text-anchor="middle">x²</text>
+        <rect x="238" y="122" width="80" height="60" rx="3" /><text x="278" y="157" fill="#ecfdf5" font-size="13" font-weight="bold" text-anchor="middle">x²</text>
+      </g>
+      <!-- 2 x tiles on top-right (each 30x60) -->
+      <g fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.5">
+        <rect x="322" y="58" width="30" height="60" rx="3" /><text x="337" y="93" fill="#eff6ff" font-size="11" font-weight="bold" text-anchor="middle">x</text>
+        <rect x="322" y="122" width="30" height="60" rx="3" /><text x="337" y="157" fill="#eff6ff" font-size="11" font-weight="bold" text-anchor="middle">x</text>
+      </g>
+      <!-- 9 x tiles on bottom (each 80x18) -->
+      <g fill="#1e3a8a" stroke="#93c5fd" stroke-width="1.5">
+        <rect x="70" y="186" width="80" height="18" rx="2" /><text x="110" y="200" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="154" y="186" width="80" height="18" rx="2" /><text x="194" y="200" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="238" y="186" width="80" height="18" rx="2" /><text x="278" y="200" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="70" y="207" width="80" height="18" rx="2" /><text x="110" y="221" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="154" y="207" width="80" height="18" rx="2" /><text x="194" y="221" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="238" y="207" width="80" height="18" rx="2" /><text x="278" y="221" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="70" y="228" width="80" height="18" rx="2" /><text x="110" y="242" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="154" y="228" width="80" height="18" rx="2" /><text x="194" y="242" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+        <rect x="238" y="228" width="80" height="18" rx="2" /><text x="278" y="242" fill="#eff6ff" font-size="10" text-anchor="middle">x</text>
+      </g>
+      <!-- 3 unit tiles bottom-right (each 30x18) -->
+      <g fill="#b45309" stroke="#fcd34d" stroke-width="1.5">
+        <rect x="322" y="186" width="30" height="18" rx="2" /><text x="337" y="200" fill="#fef3c7" font-size="10" font-weight="bold" text-anchor="middle">1</text>
+        <rect x="322" y="207" width="30" height="18" rx="2" /><text x="337" y="221" fill="#fef3c7" font-size="10" font-weight="bold" text-anchor="middle">1</text>
+        <rect x="322" y="228" width="30" height="18" rx="2" /><text x="337" y="242" fill="#fef3c7" font-size="10" font-weight="bold" text-anchor="middle">1</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 4.8: Multi-tile geometric decomposition of (2x + 3)(3x + 1)</div>
+      </div>
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(1, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">6 tiles of x², 11 tiles of x, 3 tiles of 1; Total Area = 6x² + 11x + 3</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(1, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">5 tiles of x², 9 tiles of x, 4 tiles of 1; Total Area = 5x² + 9x + 4</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(1, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">6 tiles of x², 5 tiles of x, 3 tiles of 1; Total Area = 6x² + 5x + 3</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(1, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">6 tiles of x², 12 tiles of x, 4 tiles of 1; Total Area = 6x² + 12x + 4</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(1)" id="btn-sol-1">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-1" onchange="updateCustomMarks(1, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-1">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Multiply dimensions algebraically: (2x + 3)(3x + 1) = 2x(3x + 1) + 3(3x + 1) = 6x² + 2x + 9x + 3 = 6x² + 11x + 3.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Count individual geometric tiles: 2 rows × 3 columns = 6 green square tiles of area x²; (2 × 1) + (3 × 3) = 2 + 9 = 11 blue rectangular tiles of area x; 3 × 1 = 3 yellow unit tiles of area 1.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>6 tiles of x², 11 tiles of x, 3 tiles of 1; Total Area = 6x² + 11x + 3</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> NEP 2020 Visual & Concrete-to-Abstract Algebraic Modeling.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-2" data-category="graphical" data-chapter="ch4" data-qid="2">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q2</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.3 (Fig. 4.3, Page 73)</span>
+      </div>
+
+      <p class="q-body">Fig. 4.3 in Ganita Manjari demonstrates the geometric dissection proof of the identity $a^2 - b^2 = (a+b)(a-b)$. Starting with a square of side $a$ and cutting out a smaller corner square of side $b$, the remaining L-shaped region is sliced and rearranged into a single rectangle. What are the exact dimensions of this resulting rectangle?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 210" width="100%" height="190" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <!-- Title -->
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Geometric Dissection: a² - b² = (a + b)(a - b)</text>
+      <!-- Stage 1: Square with corner cut -->
+      <rect x="40" y="45" width="120" height="120" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
+      <rect x="120" y="45" width="40" height="40" fill="#0f172a" stroke="#f43f5e" stroke-dasharray="3,3" stroke-width="1.5" />
+      <line x1="40" y1="85" x2="120" y2="85" stroke="#fcd34d" stroke-dasharray="3,3" stroke-width="1.5" />
+      <text x="80" y="130" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Region I: a(a-b)</text>
+      <text x="80" y="70" fill="#fef08a" font-size="10" font-weight="bold" text-anchor="middle">Region II: b(a-b)</text>
+      <text x="140" y="68" fill="#f87171" font-size="11" font-weight="bold" text-anchor="middle">b² (cut)</text>
+      
+      <!-- Arrow -->
+      <path d="M 185 105 L 225 105 M 215 98 L 225 105 L 215 112" stroke="#10b981" stroke-width="2.5" fill="none" />
+      <text x="205" y="92" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle">Rearrange</text>
+      
+      <!-- Stage 2: Rearranged single rectangle -->
+      <g transform="translate(250, 65)">
+        <rect x="0" y="0" width="110" height="70" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
+        <text x="55" y="40" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">Region I: a × (a-b)</text>
+        <rect x="110" y="0" width="45" height="70" fill="#d97706" stroke="#fbbf24" stroke-width="1.5" />
+        <text x="132" y="40" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle">II: b×(a-b)</text>
+        <!-- Dimension Labels -->
+        <text x="77" y="-8" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Length = a + b</text>
+        <text x="175" y="38" fill="#fbbf24" font-size="11" font-weight="bold">Width = a - b</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 4.3: Cutting b² from a² and rearranging into rectangle (a + b) × (a - b)</div>
+      </div>
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(2, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">Length = (a + b), Breadth = (a - b)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(2, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Length = (a² - b²), Breadth = 1</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(2, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Length = (a - b), Breadth = (a - 2b)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(2, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Length = (a + 2b), Breadth = (a - b)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(2)" id="btn-sol-2">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-2" onchange="updateCustomMarks(2, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-2">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Starting with a square of area a² and removing a square of area b² leaves the L-shaped region of area a² - b².</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">This remaining shape decomposes into two rectangular strips: a × (a - b) and b × (a - b). Aligning them along the common edge of length (a - b) forms a single rectangle of length (a + b) and breadth (a - b). Hence, Area = (a + b)(a - b).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>Length = (a + b), Breadth = (a - b)</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Authentic NCERT Geometrical Dissection & Constructivist Proof.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-3" data-category="graphical" data-chapter="ch4" data-qid="3">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q3</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.7 (Fig. 4.9, Page 83)</span>
+      </div>
+
+      <p class="q-body">A 3D geometric model is constructed to visualise the algebraic identity $(a + b)^3$ as depicted in Fig. 4.9 of Ganita Manjari. A solid cube of edge length $(a + b)$ is partitioned into smaller rectangular prisms and cubes. What is the total count of individual 3-dimensional solid blocks, and what are their specific algebraic volume components?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 220" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="22" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">3D Decomposition of Cube: (a + b)³</text>
+      <!-- Isometric cube representation -->
+      <g transform="translate(130, 40)">
+        <!-- Front large face: a x a -->
+        <rect x="0" y="50" width="90" height="90" fill="#047857" stroke="#34d399" stroke-width="1.5" opacity="0.9"/>
+        <text x="45" y="100" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">a³ block</text>
+        <!-- Front strip: b x a -->
+        <rect x="90" y="50" width="35" height="90" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.5" opacity="0.85"/>
+        <text x="107" y="100" fill="#eff6ff" font-size="10" text-anchor="middle">a²b</text>
+        <!-- Bottom strip: a x b -->
+        <rect x="0" y="140" width="90" height="35" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.5" opacity="0.85"/>
+        <text x="45" y="162" fill="#eff6ff" font-size="10" text-anchor="middle">a²b</text>
+        <!-- Corner small block: b x b -->
+        <rect x="90" y="140" width="35" height="35" fill="#d97706" stroke="#fcd34d" stroke-width="1.5" opacity="0.9"/>
+        <text x="107" y="162" fill="#fef3c7" font-size="10" text-anchor="middle">ab²</text>
+        <!-- Top isometric projections -->
+        <polygon points="0,50 35,20 125,20 90,50" fill="#059669" stroke="#34d399" stroke-width="1.5" opacity="0.75" />
+        <polygon points="90,50 125,20 160,20 125,50" fill="#2563eb" stroke="#60a5fa" stroke-width="1.5" opacity="0.75" />
+        <!-- Side projections -->
+        <polygon points="125,50 160,20 160,110 125,140" fill="#1e40af" stroke="#60a5fa" stroke-width="1.5" opacity="0.75" />
+        <polygon points="125,140 160,110 160,145 125,175" fill="#b45309" stroke="#fcd34d" stroke-width="1.5" opacity="0.75" />
+      </g>
+      <!-- Legend box on right -->
+      <g transform="translate(320, 50)" font-family="sans-serif" font-size="11">
+        <rect x="0" y="0" width="125" height="135" fill="#0f172a" stroke="#334155" rx="6" />
+        <text x="10" y="20" fill="#38bdf8" font-weight="bold">8 Solid Blocks:</text>
+        <circle cx="18" cy="40" r="5" fill="#047857" /><text x="30" y="44" fill="#cbd5e1">1 of a³</text>
+        <circle cx="18" cy="65" r="5" fill="#d97706" /><text x="30" y="69" fill="#cbd5e1">1 of b³</text>
+        <circle cx="18" cy="90" r="5" fill="#1d4ed8" /><text x="30" y="94" fill="#cbd5e1">3 of a²b</text>
+        <circle cx="18" cy="115" r="5" fill="#9333ea" /><text x="30" y="119" fill="#cbd5e1">3 of ab²</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 4.9: 8-block isometric volumetric partitioning of (a + b)³</div>
+      </div>
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(3, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">8 blocks: 1 of a³, 1 of b³, 3 of a²b, 3 of ab²</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(3, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">6 blocks: 2 of a³, 2 of b³, 2 of a²b²</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(3, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">8 blocks: 2 of a³, 2 of b³, 2 of a²b, 2 of ab²</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(3, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">4 blocks: 1 of a³, 1 of b³, 1 of 3a²b, 1 of 3ab²</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(3)" id="btn-sol-3">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-3" onchange="updateCustomMarks(3, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-3">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Expanding the cubic binomial identity: (a + b)³ = a³ + 3a²b + 3ab² + b³.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">The solid cube of side (a + b) decomposes into 1 cube of size a×a×a, 1 cube of size b×b×b, 3 square prisms of size a×a×b, and 3 square prisms of size a×b×b. Total solid components = 1 + 1 + 3 + 3 = 8 blocks.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>8 blocks: 1 of a³, 1 of b³, 3 of a²b, 3 of ab²</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> CBSE 3D Spatial Geometry & Higher-Degree Algebraic Identifications.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-4" data-category="graphical" data-chapter="ch4" data-qid="4">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q4</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-med">Medium</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.4 (Fig. 4.4, Page 75)</span>
+      </div>
+
+      <p class="q-body">In Fig. 4.4 of Ganita Manjari, a square of side $(a + b + c)$ is partitioned into 9 rectangular sub-regions. Three of these sub-regions are the squares of areas $a^2, b^2,$ and $c^2$. If the shaded region consists of all 6 remaining non-square rectangles, what is the exact algebraic expression for the shaded area?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 210" width="100%" height="190" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Square of Side (a + b + c): Shaded Rectangular Regions</text>
+      <g transform="translate(115, 35)">
+        <!-- Outer square 180x180 (a=80, b=60, c=40) -->
+        <!-- Row 1 -->
+        <rect x="0" y="0" width="80" height="80" fill="#0f172a" stroke="#334155" stroke-width="1.5" /><text x="40" y="45" fill="#64748b" font-size="12" text-anchor="middle">a² (unshaded)</text>
+        <rect x="80" y="0" width="60" height="80" fill="#059669" stroke="#34d399" stroke-width="1.5" /><text x="110" y="45" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">ab</text>
+        <rect x="140" y="0" width="40" height="80" fill="#059669" stroke="#34d399" stroke-width="1.5" /><text x="160" y="45" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">ca</text>
+        <!-- Row 2 -->
+        <rect x="0" y="80" width="80" height="60" fill="#059669" stroke="#34d399" stroke-width="1.5" /><text x="40" y="115" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">ab</text>
+        <rect x="80" y="80" width="60" height="60" fill="#0f172a" stroke="#334155" stroke-width="1.5" /><text x="110" y="115" fill="#64748b" font-size="12" text-anchor="middle">b² (unshaded)</text>
+        <rect x="140" y="80" width="40" height="60" fill="#059669" stroke="#34d399" stroke-width="1.5" /><text x="160" y="115" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">bc</text>
+        <!-- Row 3 -->
+        <rect x="0" y="140" width="80" height="40" fill="#059669" stroke="#34d399" stroke-width="1.5" /><text x="40" y="165" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">ca</text>
+        <rect x="80" y="140" width="60" height="40" fill="#059669" stroke="#34d399" stroke-width="1.5" /><text x="110" y="165" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">bc</text>
+        <rect x="140" y="140" width="40" height="40" fill="#0f172a" stroke="#334155" stroke-width="1.5" /><text x="160" y="165" fill="#64748b" font-size="10" text-anchor="middle">c² (unshaded)</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 4.4: The 6 shaded off-diagonal rectangles in (a + b + c)²</div>
+      </div>
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(4, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">2(ab + bc + ca)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(4, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">ab + bc + ca</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(4, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">3(ab + bc + ca)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(4, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">a² + b² + c² - ab - bc - ca</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(4)" id="btn-sol-4">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-4" onchange="updateCustomMarks(4, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-4">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Total area of the partitioned square is (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Subtracting the three unshaded diagonal squares (a² + b² + c²), the remaining 6 rectangular shaded compartments sum to ab + ab + bc + bc + ca + ca = 2(ab + bc + ca).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>2(ab + bc + ca)</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Algebraic-Geometric Isomorphism & Identity Dissection.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-5" data-category="graphical" data-chapter="ch5" data-qid="5">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q5</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.3 (Fig. 5.6, Page 97)</span>
+      </div>
+
+      <p class="q-body">The diagram below shows an obtuse-angled triangle $\triangle ABC$ with $\angle ABC = 120^\circ$ inscribed in a circle with circumcentre $O$. As proved in Theorem 1 of Ganita Manjari, the circumcentre $O$ lies strictly outside $\triangle ABC$. What is the measure of the central angle $\angle AOC$ subtended by the minor arc $AC$ that does NOT contain vertex $B$?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 220" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Obtuse Triangle Circumcircle & Exterior Circumcentre O</text>
+      <g transform="translate(190, 110)">
+        <!-- Circle radius 90 -->
+        <circle cx="0" cy="0" r="90" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+        <!-- Circumcentre O -->
+        <circle cx="0" cy="0" r="3.5" fill="#f43f5e" />
+        <text x="-12" y="-6" fill="#f87171" font-size="12" font-weight="bold">O (centre)</text>
+        <!-- Triangle ABC with B obtuse at top -->
+        <!-- A at (-78, 45) -> 150 deg, C at (78, 45) -> 30 deg, B at (0, -90) -> -90 deg -->
+        <polygon points="-78,45 0,-90 78,45" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="2" />
+        <circle cx="-78" cy="45" r="3" fill="#ffffff" /><text x="-94" y="52" fill="#ffffff" font-size="12" font-weight="bold">A</text>
+        <circle cx="0" cy="-90" r="3" fill="#ffffff" /><text x="0" y="-98" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">B (120°)</text>
+        <circle cx="78" cy="45" r="3" fill="#ffffff" /><text x="86" y="52" fill="#ffffff" font-size="12" font-weight="bold">C</text>
+        
+        <!-- Radii OA and OC -->
+        <line x1="0" y1="0" x2="-78" y2="45" stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5" />
+        <line x1="0" y1="0" x2="78" y2="45" stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5" />
+        <!-- Angle arc at O -->
+        <path d="M -25,14 A 30 30 0 0 0 25,14" fill="none" stroke="#f59e0b" stroke-width="2" />
+        <text x="0" y="32" fill="#fcd34d" font-size="11" font-weight="bold" text-anchor="middle">∠AOC = ?</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 5.6: Circumcentre O lies strictly outside obtuse-angled triangle ABC</div>
+      </div>
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(5, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">120°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(5, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">240°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(5, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">60°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(5, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">90°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(5)" id="btn-sol-5">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-5" onchange="updateCustomMarks(5, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-5">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Theorem 9 (Angle subtended by an arc at the centre is double the angle at the circumference): Arc ABC containing vertex B subtends central angle reflex ∠AOC = 2 × ∠ABC = 2 × 120° = 240°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">The complete angle around centre O is 360°. Therefore, the minor angle ∠AOC subtended by minor arc AC (not containing B) is 360° - 240° = 120°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>120°</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Rigorous application of Theorem 9 with reflex central angles & obtuse circumcentres.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-6" data-category="graphical" data-chapter="ch5" data-qid="6">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q6</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.7 (Fig. 5.21 & Theorem 9, Page 104)</span>
+      </div>
+
+      <p class="q-body">In the given circle with centre $O$, chord $BC$ subtends a central angle $\angle BOC = 130^\circ$. Point $A$ is situated on the major arc, and point $D$ is situated on the minor arc $BC$. Calculate the measure of angle $\angle BDC$.</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 220" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Angles Subtended on Major vs Minor Arcs</text>
+      <g transform="translate(230, 115)">
+        <circle cx="0" cy="0" r="85" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="3" fill="#f43f5e" /><text x="-6" y="-8" fill="#f87171" font-size="11">O</text>
+        
+        <!-- Points: B at (-55, 65), C at (55, 65), A at (0, -85), D at (0, 85) -->
+        <!-- Central angle BOC = 130 deg -->
+        <line x1="0" y1="0" x2="-55" y2="65" stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5" />
+        <line x1="0" y1="0" x2="55" y2="65" stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5" />
+        <text x="0" y="45" fill="#fcd34d" font-size="11" font-weight="bold" text-anchor="middle">130°</text>
+        
+        <!-- Major arc point A -->
+        <line x1="0" y1="-85" x2="-55" y2="65" stroke="#34d399" stroke-width="1.5" />
+        <line x1="0" y1="-85" x2="55" y2="65" stroke="#34d399" stroke-width="1.5" />
+        <circle cx="0" cy="-85" r="3" fill="#ffffff" /><text x="0" y="-93" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">A</text>
+        
+        <!-- Minor arc point D -->
+        <line x1="0" y1="85" x2="-55" y2="65" stroke="#c084fc" stroke-width="1.5" />
+        <line x1="0" y1="85" x2="55" y2="65" stroke="#c084fc" stroke-width="1.5" />
+        <circle cx="0" cy="85" r="3" fill="#ffffff" /><text x="0" y="102" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">D</text>
+        <text x="-68" y="72" fill="#ffffff" font-size="12" font-weight="bold">B</text>
+        <text x="62" y="72" fill="#ffffff" font-size="12" font-weight="bold">C</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 5.21: Inscribed angles ∠BAC on major arc and ∠BDC on minor arc</div>
+      </div>
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(6, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">115°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(6, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">65°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(6, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">130°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(6, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">50°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(6)" id="btn-sol-6">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-6" onchange="updateCustomMarks(6, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-6">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Theorem 9, the angle subtended by minor arc BC at the circumference point A on the major arc is ∠BAC = ½ ∠BOC = ½(130°) = 65°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Points A, B, D, C lie on the circle, forming a cyclic quadrilateral ABDC. By Theorem 11, the sum of opposite angles is 180°: ∠BAC + ∠BDC = 180° ⇒ ∠BDC = 180° - 65° = 115°. (Alternatively, reflex ∠BOC = 360° - 130° = 230° ⇒ ∠BDC = ½(230°) = 115°).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>115°</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Cyclic Quadrilateral & Central Arc Angle Relationship.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-7" data-category="graphical" data-chapter="ch5" data-qid="7">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q7</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.6 (Exercise 18, Page 116)</span>
+      </div>
+
+      <p class="q-body">The figure below shows a circle with centre $O$ having two parallel chords $AB = 24\text{ cm}$ and $CD = 10\text{ cm}$ located on the same side of the centre. The perpendicular from $O$ intersects $AB$ at $M$ and $CD$ at $N$. If the distance between the chords is $MN = 7\text{ cm}$, find the radius $r$ of the circle.</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 220" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Two Parallel Chords on the Same Side of the Centre</text>
+      <g transform="translate(230, 110)">
+        <circle cx="0" cy="0" r="90" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="3" fill="#f43f5e" /><text x="-12" y="4" fill="#f87171" font-size="11">O</text>
+        
+        <!-- Perpendicular axis downwards -->
+        <line x1="0" y1="0" x2="0" y2="85" stroke="#94a3b8" stroke-dasharray="2,2" stroke-width="1.5" />
+        
+        <!-- Chord AB (length 24, half 12, at y=35) -->
+        <line x1="-83" y1="35" x2="83" y2="35" stroke="#34d399" stroke-width="2.5" />
+        <circle cx="0" cy="35" r="2.5" fill="#34d399" /><text x="6" y="32" fill="#34d399" font-size="10">M</text>
+        <text x="-95" y="39" fill="#ffffff" font-size="11" font-weight="bold">A</text>
+        <text x="89" y="39" fill="#ffffff" font-size="11" font-weight="bold">B (24 cm)</text>
+        
+        <!-- Chord CD (length 10, half 5, at y=84, distance 7 from AB) -->
+        <line x1="-35" y1="84" x2="35" y2="84" stroke="#f59e0b" stroke-width="2.5" />
+        <circle cx="0" cy="84" r="2.5" fill="#f59e0b" /><text x="6" y="82" fill="#f59e0b" font-size="10">N</text>
+        <text x="-48" y="88" fill="#ffffff" font-size="11" font-weight="bold">C</text>
+        <text x="40" y="88" fill="#ffffff" font-size="11" font-weight="bold">D (10 cm)</text>
+        
+        <!-- Distance bracket MN = 7 -->
+        <text x="-16" y="62" fill="#e2e8f0" font-size="10" font-weight="bold">7 cm</text>
+        <!-- Radius OA -->
+        <line x1="0" y1="0" x2="-83" y2="35" stroke="#60a5fa" stroke-dasharray="3,3" stroke-width="1.5" />
+        <text x="-45" y="14" fill="#93c5fd" font-size="10">r</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 5.16: Parallel chords AB and CD on same side with distance MN = 7 cm</div>
+      </div>
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(7, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">13 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(7, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">15 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(7, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">12 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(7, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">17 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(7)" id="btn-sol-7">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-7" onchange="updateCustomMarks(7, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-7">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Theorem 5, the perpendicular from the centre bisects the chord: AM = 12 cm, CN = 5 cm. Let distance OM = d cm. Then ON = (d + 7) cm.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">By Baudhāyana-Pythagoras theorem: In △OMA, r² = d² + 12² = d² + 144. In △ONC, r² = (d + 7)² + 5² = d² + 14d + 49 + 25 = d² + 14d + 74. Equating both gives d² + 144 = d² + 14d + 74 ⇒ 14d = 70 ⇒ d = 5 cm. Therefore, r = √(5² + 12²) = √(25 + 144) = √169 = 13 cm.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>13 cm</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Baudhāyana-Pythagoras Theorem & System of Quadratic Chords.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-8" data-category="graphical" data-chapter="ch5" data-qid="8">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q8</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.8 (Exercise 21 & Theorem 11, Page 116)</span>
+      </div>
+
+      <p class="q-body">In the cyclic quadrilateral $ABCD$ shown below, side $CD$ is produced to point $E$. The exterior angle is $\angle ADE = 82^\circ$, and $\angle BAC = 38^\circ$. What is the measure of $\angle BCA$?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 220" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Exterior Angle of Cyclic Quadrilateral ABCD</text>
+      <g transform="translate(210, 115)">
+        <circle cx="0" cy="0" r="85" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+        <!-- Points A, B, C, D -->
+        <!-- A at (-60, -60), B at (60, -60), C at (80, 25), D at (-75, 40) -->
+        <polygon points="-60,-60 60,-60 80,25 -75,40" fill="rgba(6, 182, 212, 0.12)" stroke="#06b6d4" stroke-width="2" />
+        <!-- Extension line CD produced past D to E -->
+        <line x1="80" y1="25" x2="-140" y2="45" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,3" />
+        <!-- Diagonal AC -->
+        <line x1="-60" y1="-60" x2="80" y2="25" stroke="#a855f7" stroke-width="1.5" />
+        
+        <circle cx="-60" cy="-60" r="3" fill="#ffffff" /><text x="-75" y="-65" fill="#ffffff" font-size="12" font-weight="bold">A</text>
+        <circle cx="60" cy="-60" r="3" fill="#ffffff" /><text x="68" y="-65" fill="#ffffff" font-size="12" font-weight="bold">B</text>
+        <circle cx="80" cy="25" r="3" fill="#ffffff" /><text x="90" y="30" fill="#ffffff" font-size="12" font-weight="bold">C</text>
+        <circle cx="-75" cy="40" r="3" fill="#ffffff" /><text x="-70" y="55" fill="#ffffff" font-size="12" font-weight="bold">D</text>
+        <circle cx="-140" cy="45" r="3" fill="#fcd34d" /><text x="-145" y="38" fill="#fcd34d" font-size="12" font-weight="bold">E</text>
+        
+        <!-- Exterior angle marker -->
+        <text x="-105" y="28" fill="#f59e0b" font-size="11" font-weight="bold">82°</text>
+        <!-- Angle BAC marker -->
+        <text x="-40" y="-45" fill="#c084fc" font-size="10" font-weight="bold">38°</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 5.28: Exterior angle ∠ADE = 82° and ∠BAC = 38°</div>
+      </div>
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(8, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">60°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(8, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">82°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(8, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">44°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(8, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">52°</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(8)" id="btn-sol-8">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-8" onchange="updateCustomMarks(8, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-8">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Exercise 21 (Exterior angle theorem of cyclic quadrilaterals), the exterior angle at any vertex equals the interior opposite angle: ∠ABC = ∠ADE = 82°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">In △ABC, the sum of angles is 180°: ∠BAC + ∠ABC + ∠BCA = 180° ⇒ 38° + 82° + ∠BCA = 180° ⇒ 120° + ∠BCA = 180° ⇒ ∠BCA = 60°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>60°</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Exterior Angle Invariance in Concyclic Cyclic Quadrilaterals.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-9" data-category="graphical" data-chapter="ch5" data-qid="9">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q9</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.6 (Exercise 23, Page 116)</span>
+      </div>
+
+      <p class="q-body">Look at the diagram below illustrating Exercise 23 from Ganita Manjari. Point $P$ is an interior point inside a circle with centre $O$ ($P \neq O$). Chord $AB$ passes through $P$ and is perpendicular to $OP$ ($AB \perp OP$). Chord $CD$ is another arbitrary chord passing through $P$ not perpendicular to $OP$. Which inequality strictly holds between their lengths?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 220" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Shortest Chord Through an Interior Point P</text>
+      <g transform="translate(230, 115)">
+        <circle cx="0" cy="0" r="85" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="3" fill="#f43f5e" /><text x="-12" y="-4" fill="#f87171" font-size="11">O</text>
+        
+        <!-- Interior Point P at (35, 0) -->
+        <circle cx="35" cy="0" r="3" fill="#f59e0b" /><text x="38" y="-8" fill="#fcd34d" font-size="11" font-weight="bold">P</text>
+        <line x1="0" y1="0" x2="35" y2="0" stroke="#f59e0b" stroke-width="2" />
+        
+        <!-- Chord AB perp to OP (vertical through x=35, y from -77 to 77) -->
+        <line x1="35" y1="-77" x2="35" y2="77" stroke="#10b981" stroke-width="2.5" />
+        <circle cx="35" cy="-77" r="2.5" fill="#10b981" /><text x="40" y="-72" fill="#34d399" font-size="11" font-weight="bold">A</text>
+        <circle cx="35" cy="77" r="2.5" fill="#10b981" /><text x="40" y="75" fill="#34d399" font-size="11" font-weight="bold">B (AB ⊥ OP)</text>
+        
+        <!-- Arbitrary chord CD through P at angle 35 deg -->
+        <line x1="-50" y1="-65" x2="78" y2="35" stroke="#ec4899" stroke-width="2" stroke-dasharray="4,2" />
+        <text x="-65" y="-60" fill="#f472b6" font-size="11">C</text>
+        <text x="84" y="42" fill="#f472b6" font-size="11">D</text>
+        <!-- Perpendicular OM to CD -->
+        <line x1="0" y1="0" x2="15" y2="-21" stroke="#ec4899" stroke-width="1.5" />
+        <text x="16" y="-24" fill="#f472b6" font-size="10">M</text>
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Figure 5.14: Chord AB ⊥ OP is strictly shorter than any other chord CD through P</div>
+      </div>
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(9, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">Length of AB < Length of CD (AB is the strictly shortest chord through P)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(9, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Length of AB > Length of CD (AB is the longest chord through P)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(9, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Length of AB = Length of CD</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(9, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">The relationship depends on the radius of the circle</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(9)" id="btn-sol-9">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-9" onchange="updateCustomMarks(9, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-9">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Let M be the foot of the perpendicular from centre O to chord CD. In right △OMP, the hypotenuse is OP, which implies OM < OP (since the hypotenuse is the strictly longest side).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">By Theorem 8, the length of a chord decreases as its distance from the centre increases: Chord Length = 2√(r² - d²). Since distance to AB is OP, and distance to CD is OM, we have OM < OP ⇒ r² - OM² > r² - OP² ⇒ CD > AB. Hence, AB is the strictly shortest chord passing through P.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>Length of AB < Length of CD (AB is the strictly shortest chord through P)</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Theorem 8 & Geometric Optimization via Distance-Chord Reciprocity.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-10" data-category="graphical" data-chapter="ch5" data-qid="10">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q10</span>
+          <span class="q-cat-tag cat-graphical">📐 Graphical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.6 (Exercise 16, Page 116)</span>
+      </div>
+
+      <p class="q-body">The figure below illustrates Exercise 16 from Ganita Manjari: several chords of the same fixed length $L = 16\text{ cm}$ are drawn in a circle of radius $R = 10\text{ cm}$. As the chords rotate around the circle, their midpoints trace a locus curve. What geometric curve is traced by these midpoints, and what is its exact dimension?</p>
+
+      
+      <div class="diagram-wrap">
+        <div class="svg-container">
+          <svg viewBox="0 0 460 220" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" style="background:#070f1e; border-radius:8px;">
+      <text x="230" y="20" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Locus of Midpoints of Congruent Chords (Length = 16 cm, R = 10 cm)</text>
+      <g transform="translate(230, 115)">
+        <!-- Outer circle radius 80 (represents 10 cm) -->
+        <circle cx="0" cy="0" r="80" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="3" fill="#f43f5e" /><text x="-12" y="-4" fill="#f87171" font-size="10">O</text>
+        
+        <!-- Chords of length 16 cm (subtends distance d = 6 cm -> radius 48) -->
+        <!-- Inner circle locus radius 48 (represents 6 cm) -->
+        <circle cx="0" cy="0" r="48" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2" stroke-dasharray="3,3" />
+        <text x="0" y="8" fill="#34d399" font-size="10" font-weight="bold" text-anchor="middle">Locus: r = 6 cm</text>
+        
+        <!-- Chords tangent to locus -->
+        <line x1="-64" y1="48" x2="64" y2="48" stroke="#f59e0b" stroke-width="1.5" />
+        <circle cx="0" cy="48" r="2.5" fill="#f59e0b" />
+        <line x1="48" y1="-64" x2="48" y2="64" stroke="#f59e0b" stroke-width="1.5" />
+        <circle cx="48" cy="0" r="2.5" fill="#f59e0b" />
+        <line x1="-48" y1="-64" x2="-48" y2="64" stroke="#f59e0b" stroke-width="1.5" />
+        <circle cx="-48" cy="0" r="2.5" fill="#f59e0b" />
+        <line x1="-64" y1="-48" x2="64" y2="-48" stroke="#f59e0b" stroke-width="1.5" />
+        <circle cx="0" cy="-48" r="2.5" fill="#f59e0b" />
+      </g>
+    </svg>
+        </div>
+        <div class="diagram-caption">Exercise 16: The midpoints of all congruent chords trace a concentric circle</div>
+      </div>
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(10, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">A concentric circle of radius 6 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(10, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">A concentric circle of radius 8 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(10, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">An ellipse of major axis 16 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(10, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">A circle of diameter 16 cm passing through the centre</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(10)" id="btn-sol-10">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-10" onchange="updateCustomMarks(10, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-10">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Theorem 5, the line joining the centre to the midpoint of a chord is perpendicular to the chord. In the right triangle formed by the radius R = 10 cm, half-chord L/2 = 8 cm, and distance d: d = √(R² - (L/2)²) = √(10² - 8²) = √(100 - 64) = √36 = 6 cm.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">By Theorem 6, all chords of equal length 16 cm are at the exact same perpendicular distance of 6 cm from the centre. The set of all points at constant distance 6 cm from centre O is a concentric circle of radius 6 cm.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>A concentric circle of radius 6 cm</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Geometric Locus & Theorem 6 Congruent Chord Equidistance.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-11" data-category="numerical" data-chapter="ch4" data-qid="11">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q11</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.1 (Example 1 & Think and Reflect, Page 69)</span>
+      </div>
+
+      <p class="q-body">Example 1 in Ganita Manjari discovers that for any three consecutive squares $(n-1)^2, n^2, (n+1)^2$, the quantity $P(n) = (n-1)^2 + (n+1)^2 - 2n^2$ is constant. Furthermore, for four consecutive squares $(n-1)^2, n^2, (n+1)^2, (n+2)^2$, let $Q(n) = (n-1)^2 + (n+2)^2 - n^2 - (n+1)^2$. Evaluate the exact numerical values of $P(999)$ and $Q(999)$.</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(11, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">P(999) = 2 and Q(999) = 4</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(11, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">P(999) = 0 and Q(999) = 2</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(11, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">P(999) = 2 and Q(999) = 6</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(11, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">P(999) = 1998 and Q(999) = 3996</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(11)" id="btn-sol-11">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-11" onchange="updateCustomMarks(11, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-11">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Expand P(n): (n - 1)² + (n + 1)² - 2n² = (n² - 2n + 1) + (n² + 2n + 1) - 2n² = 2n² + 2 - 2n² = 2. This is an algebraic identity independent of n, so P(999) = 2.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Expand Q(n): (n - 1)² + (n + 2)² - [n² + (n + 1)²] = (n² - 2n + 1 + n² + 4n + 4) - (n² + n² + 2n + 1) = (2n² + 2n + 5) - (2n² + 2n + 1) = 4. Hence Q(999) = 4.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>P(999) = 2 and Q(999) = 4</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Algebraic Proof of Numerical Invariants & Induction Patterns.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-12" data-category="numerical" data-chapter="ch4" data-qid="12">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q12</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.7 (Exercise 8, Page 90)</span>
+      </div>
+
+      <p class="q-body">In Exercise 8 of Ganita Manjari, a real number plus its reciprocal equals $\frac{10}{3}$ (with $x > 1$). Using algebraic identities, calculate the exact value of $x^3 + \frac{1}{x^3}$.</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(12, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">730 / 27</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(12, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">1000 / 27</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(12, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">820 / 27</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(12, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">640 / 27</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(12)" id="btn-sol-12">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-12" onchange="updateCustomMarks(12, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-12">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Given x + 1/x = 10/3. Using the algebraic identity (a + b)³ = a³ + b³ + 3ab(a + b), we have: (x + 1/x)³ = x³ + 1/x³ + 3(x)(1/x)(x + 1/x).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Substitute known values: (10/3)³ = x³ + 1/x³ + 3(10/3) ⇒ 1000/27 = x³ + 1/x³ + 10. Subtracting 10 = 270/27 yields x³ + 1/x³ = (1000 - 270) / 27 = 730/27.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>730 / 27</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Polynomial Expansion of Inverses & Fractional Arithmetic.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-13" data-category="numerical" data-chapter="ch4" data-qid="13">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q13</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.7 (Exercise 11, Page 90)</span>
+      </div>
+
+      <p class="q-body">If $a + b + c = 5$ and $ab + bc + ca = 10$, evaluate the exact numerical value of $a^3 + b^3 + c^3 - 3abc$ (Exercise 11 of Ganita Manjari).</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(13, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">-25</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(13, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">25</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(13, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">-50</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(13, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">0</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(13)" id="btn-sol-13">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-13" onchange="updateCustomMarks(13, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-13">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">First compute a² + b² + c² using (a + b + c)² = a² + b² + c² + 2(ab + bc + ca): 5² = a² + b² + c² + 2(10) ⇒ a² + b² + c² = 25 - 20 = 5.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Now apply the identity a³ + b³ + c³ - 3abc = (a + b + c)[(a² + b² + c²) - (ab + bc + ca)] = 5 × [5 - 10] = 5 × (-5) = -25.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>-25</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Multi-variable Cubic Identity & Symmetric Polynomial Reductions.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-14" data-category="numerical" data-chapter="ch4" data-qid="14">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q14</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-med">Medium</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.7 (Exercise 13(i), Page 90)</span>
+      </div>
+
+      <p class="q-body">If $x + y = -4$, calculate the numerical value of the expression $x^3 + y^3 - 12xy + 64$ (Exercise 13(i) of Ganita Manjari).</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(14, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">0</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(14, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">-64</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(14, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">64</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(14, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">-12</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(14)" id="btn-sol-14">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-14" onchange="updateCustomMarks(14, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-14">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Rewrite the given condition as x + y + 4 = 0. Notice that 64 = 4³ and -12xy = -3(x)(y)(4).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">By the foundational identity: if A + B + C = 0, then A³ + B³ + C³ - 3ABC = 0. Here with A = x, B = y, C = 4, the condition x + y + 4 = 0 guarantees x³ + y³ + 4³ - 3(x)(y)(4) = 0.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>0</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Conditional Cubic Identity A³ + B³ + C³ = 3ABC.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-15" data-category="numerical" data-chapter="ch4" data-qid="15">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q15</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.6 (Exercise 10, Page 90)</span>
+      </div>
+
+      <p class="q-body">In Exercise 10 of Ganita Manjari, both $(x - 2)$ and $(x - \frac{1}{2})$ are factors of the quadratic polynomial $p(x) = px^2 + 5x + r$. Find the values of $p$ and $r$, and compute $(p - r)$.</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(15, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">p = -2, r = -2, and p - r = 0</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(15, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">p = 2, r = -2, and p - r = 4</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(15, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">p = -5, r = -5, and p - r = 0</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(15, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">p = 4, r = 4, and p - r = 0</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(15)" id="btn-sol-15">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-15" onchange="updateCustomMarks(15, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-15">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By the Factor Theorem: p(2) = 0 ⇒ p(2)² + 5(2) + r = 0 ⇒ 4p + r = -10 (Equation 1). Also p(½) = 0 ⇒ p(¼) + 5(½) + r = 0 ⇒ p + 4r = -10 (Equation 2).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Equating 4p + r = p + 4r ⇒ 3p = 3r ⇒ p = r. Substituting into Eq 1: 4p + p = -10 ⇒ 5p = -10 ⇒ p = -2, so r = -2. Therefore, p - r = -2 - (-2) = 0.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>p = -2, r = -2, and p - r = 0</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Factor Theorem Proof of Symmetry in Reciprocal Roots.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-16" data-category="numerical" data-chapter="ch4" data-qid="16">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q16</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.8 (Example 16 & Exercise 4, Page 87-89)</span>
+      </div>
+
+      <p class="q-body">Simplify the rational expression $\frac{4x^2 + 4x + 1}{4x^2 - 1} \times \frac{2x - 1}{2x + 1}$ and state the exact set of real values of $x$ for which the expression is undefined.</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(16, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">Simplified value = 1; Undefined for x ∈ {-½, ½}</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(16, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Simplified value = (2x+1)/(2x-1); Undefined for x = ½ only</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(16, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Simplified value = 2x + 1; Undefined for x = -½ only</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(16, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Simplified value = 0; Undefined for all x ∈ ℝ</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(16)" id="btn-sol-16">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-16" onchange="updateCustomMarks(16, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-16">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Factorise polynomials using identities: 4x² + 4x + 1 = (2x + 1)² and 4x² - 1 = (2x - 1)(2x + 1). The product becomes [(2x + 1)² / {(2x - 1)(2x + 1)}] × [(2x - 1) / (2x + 1)] = 1.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">A rational expression is undefined where any denominator vanishes: 4x² - 1 = 0 ⇒ x = ±½, and 2x + 1 = 0 ⇒ x = -½. The union of excluded domain points is x ∈ {-½, ½}.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>Simplified value = 1; Undefined for x ∈ {-½, ½}</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Rational Function Simplification & Domain Exclusions.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-17" data-category="numerical" data-chapter="ch5" data-qid="17">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q17</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.6 (Theorem 6 & Baudhāyana-Pythagoras, Page 101)</span>
+      </div>
+
+      <p class="q-body">In a circle of radius $10\text{ cm}$, two parallel chords have lengths $12\text{ cm}$ and $16\text{ cm}$. If the two chords lie on OPPOSITE sides of the centre $O$, what is the exact perpendicular distance between them?</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(17, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">14 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(17, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">2 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(17, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">10 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(17, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">16 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(17)" id="btn-sol-17">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-17" onchange="updateCustomMarks(17, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-17">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Theorem 5, the perpendiculars bisect the chords into segments of 6 cm and 8 cm. By Baudhāyana-Pythagoras theorem: distance to 12 cm chord is d₁ = √(10² - 6²) = √(100 - 36) = √64 = 8 cm.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Distance to 16 cm chord is d₂ = √(10² - 8²) = √(100 - 64) = √36 = 6 cm. Since the chords are on opposite sides of the centre, total distance between them is d₁ + d₂ = 8 + 6 = 14 cm. (Note: on the same side, the distance would be 8 - 6 = 2 cm).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>14 cm</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Baudhāyana-Pythagoras Theorem for Chord Distances.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-18" data-category="numerical" data-chapter="ch5" data-qid="18">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q18</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.8 (Exercise 10, Page 115)</span>
+      </div>
+
+      <p class="q-body">In Exercise 10 of Ganita Manjari, a cyclic quadrilateral $ABCD$ has consecutive side lengths $AB = 5$, $BC = 12$, $CD = 12$, and $DA = 5$ units, with $\angle ABC = 90^\circ$. Calculate its exact area and the diameter of its circumcircle.</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(18, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">Area = 60 sq units, Circumcircle Diameter = 13 units</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(18, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Area = 65 sq units, Circumcircle Diameter = 12 units</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(18, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Area = 120 sq units, Circumcircle Diameter = 13 units</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(18, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Area = 50 sq units, Circumcircle Diameter = 10 units</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(18)" id="btn-sol-18">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-18" onchange="updateCustomMarks(18, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-18">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">In right △ABC (∠B = 90°), hypotenuse AC = √(5² + 12²) = √169 = 13. By Thales theorem (angle in semicircle is 90°), AC is the diameter of the circumcircle = 13 units.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Since ABCD is cyclic, opposite angle ∠ADC = 180° - 90° = 90°. Right △ADC has legs 5 and 12, hypotenuse 13. Total Area = Area(△ABC) + Area(△ADC) = ½(5 × 12) + ½(5 × 12) = 30 + 30 = 60 sq units.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>Area = 60 sq units, Circumcircle Diameter = 13 units</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Cyclic Quadrilateral Partitioning & Circumdiameter Determination.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-19" data-category="numerical" data-chapter="ch5" data-qid="19">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q19</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.6 (Exercise 19, Page 116)</span>
+      </div>
+
+      <p class="q-body">A regular hexagon is inscribed in a circle of radius $r = 14\text{ cm}$ (Exercise 19 of Ganita Manjari). Calculate the perimeter of the regular hexagon and the exact perpendicular distance of each of its sides from the centre.</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(19, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">Perimeter = 84 cm, Distance = 7√3 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(19, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Perimeter = 56 cm, Distance = 7 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(19, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Perimeter = 84 cm, Distance = 14 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(19, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Perimeter = 42 cm, Distance = 7√2 cm</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(19)" id="btn-sol-19">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-19" onchange="updateCustomMarks(19, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-19">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">A regular hexagon partitions the circle into 6 congruent equilateral triangles with vertices at the centre. Side length of hexagon = radius = 14 cm. Perimeter = 6 × 14 = 84 cm.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">The perpendicular from the centre bisects the side into 7 cm. In the 30°-60°-90° triangle: distance d = √(r² - (s/2)²) = √(14² - 7²) = √(196 - 49) = √147 = 7√3 cm.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>Perimeter = 84 cm, Distance = 7√3 cm</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Equilateral Partitioning of Inscribed Regular Polygons.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-20" data-category="numerical" data-chapter="ch5" data-qid="20">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q20</span>
+          <span class="q-cat-tag cat-numerical">🔢 Numerical</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.8 (Exercise 8, Page 115)</span>
+      </div>
+
+      <p class="q-body">Quadrilateral $PQRS$ is inscribed in a circle (Exercise 8 of Ganita Manjari). The angles are given as $\angle P = (2x + 10)^\circ$, $\angle R = (3x - 20)^\circ$, $\angle Q = (y + 25)^\circ$, and $\angle S = (2y - 10)^\circ$. Find the values of $x$, $y$, and the measure of the largest angle of $PQRS$.</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(20, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">x = 38°, y = 55°; Largest angle = 100° (∠S)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(20, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">x = 34°, y = 50°; Largest angle = 94° (∠R)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(20, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">x = 38°, y = 55°; Largest angle = 94° (∠R)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(20, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">x = 40°, y = 60°; Largest angle = 110° (∠S)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(20)" id="btn-sol-20">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-20" onchange="updateCustomMarks(20, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-20">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Theorem 11, opposite angles in a cyclic quadrilateral are supplementary: ∠P + ∠R = 180° ⇒ (2x + 10) + (3x - 20) = 180 ⇒ 5x - 10 = 180 ⇒ 5x = 190 ⇒ x = 38°. Thus ∠P = 86°, ∠R = 94°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Similarly for Q and S: ∠Q + ∠S = 180° ⇒ (y + 25) + (2y - 10) = 180 ⇒ 3y + 15 = 180 ⇒ 3y = 165 ⇒ y = 55°. Thus ∠Q = 80°, ∠S = 100°. The largest angle is ∠S = 100°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>x = 38°, y = 55°; Largest angle = 100° (∠S)</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Algebraic Angle Solutions in Cyclic Quadrilaterals.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-21" data-category="conceptual" data-chapter="ch4" data-qid="21">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q21</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.7 (Exercise 12, Page 90)</span>
+      </div>
+
+      <p class="q-body">In Exercise 12 of Ganita Manjari, students are asked to factorise $n^3 - n$ and prove it is always divisible by 6 for every positive integer $n \ge 2$. Which of the following deductive arguments constitutes the complete and mathematically rigorous proof?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(21, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">n³ - n = (n-1)n(n+1) is the product of three consecutive integers. In any three consecutive integers, at least one is a multiple of 2 and exactly one is a multiple of 3. Since gcd(2, 3) = 1, their product must be divisible by 2 × 3 = 6.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(21, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">n³ - n is divisible by 6 because testing n=2 gives 8-2=6, which is divisible by 6, and testing n=3 gives 27-3=24=6×4.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(21, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">n³ - n = n(n² - 1), and since n² - 1 is always a multiple of 6 for odd numbers, the entire expression is divisible by 6.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(21, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">n³ - n is always an even number, and every even number ending in 6 is divisible by 6.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(21)" id="btn-sol-21">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-21" onchange="updateCustomMarks(21, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-21">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Factorise completely: n³ - n = n(n² - 1) = (n - 1)n(n + 1). The factors (n - 1), n, (n + 1) represent three consecutive integers.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Among any 3 consecutive integers, at least one is even (divisible by 2) and exactly one is divisible by 3. Since 2 and 3 are co-prime (gcd(2,3) = 1), their product must be divisible by 2 × 3 = 6 for all positive integers n.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>n³ - n = (n-1)n(n+1) is the product of three consecutive integers. In any three consecutive integers, at least one is a multiple of 2 and exactly one is a multiple of 3. Since gcd(2, 3) = 1, their product must be divisible by 2 × 3 = 6.</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Algebraic Factorisation & Number Theoretic Induction.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-22" data-category="conceptual" data-chapter="ch4" data-qid="22">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q22</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-med">Medium</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.1 & Chapter Summary (Page 69, 90)</span>
+      </div>
+
+      <p class="q-body">According to the Chapter Summary of Ganita Manjari Chapter 4, what is the fundamental conceptual difference between an "Algebraic Identity" and a "Conditional Algebraic Equation"?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(22, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">An identity is an equality that holds true for ALL real values of the variables, whereas a conditional equation holds true only for specific values (the roots).</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(22, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">An identity only contains addition and subtraction, whereas an equation contains multiplication and division.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(22, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">An identity has degree 2, whereas an equation has degree 1.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(22, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">An identity can only be verified graphically, whereas an equation can only be solved numerically.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(22)" id="btn-sol-22">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-22" onchange="updateCustomMarks(22, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-22">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">NCERT Ganita Manjari definition: "Identities are equations that are true for all values of the variables." For example, (x + y)² = x² + 2xy + y² holds for every real x and y.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">A conditional equation (such as x² - 5x + 6 = 0) is true only for specific isolated solution points (here x = 2 and x = 3).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>An identity is an equality that holds true for ALL real values of the variables, whereas a conditional equation holds true only for specific values (the roots).</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Epistemology of Algebra: Universal Quantification vs Conditional Solvability.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-23" data-category="conceptual" data-chapter="ch4" data-qid="23">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q23</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.8 (Rational Expressions Note, Page 87-89)</span>
+      </div>
+
+      <p class="q-body">Section 4.8 of Ganita Manjari explicitly notes: "provided such a factor exists and it is not equal to zero." When simplifying the rational algebraic expression $f(x) = \frac{x^2 - x - 6}{x - 3}$ to $g(x) = x + 2$, why is the claim "$f(x) = g(x)$ for all real numbers $x$" strictly FALSE?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(23, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">Because at x = 3, f(3) is undefined (0/0 indeterminate form) with domain ℝ \ {3}, whereas g(x) is defined for all of ℝ.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(23, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Because f(x) has degree 2 whereas g(x) has degree 1, so their outputs differ for negative numbers.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(23, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Because division by a binomial is not defined in school algebra.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(23, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Because the graph of f(x) is a parabola whereas g(x) is a line.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(23)" id="btn-sol-23">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-23" onchange="updateCustomMarks(23, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-23">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Factorise numerator: x² - x - 6 = (x - 3)(x + 2). Thus f(x) = [(x - 3)(x + 2)] / (x - 3). Division by zero is undefined, so f(x) requires x ≠ 3.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Function equality requires identical domains. Domain of f(x) is ℝ \ {3} (exhibiting a hole/removable discontinuity at (3, 5)), whereas Domain of g(x) = x + 2 is all of ℝ. Hence f(x) = g(x) only on ℝ \ {3}.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>Because at x = 3, f(3) is undefined (0/0 indeterminate form) with domain ℝ \ {3}, whereas g(x) is defined for all of ℝ.</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Domain Restrictions & Removable Discontinuities in Rational Functions.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-24" data-category="conceptual" data-chapter="ch4" data-qid="24">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q24</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch4">Ch 4</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §4.6 (Exercise 6(ii), Page 89)</span>
+      </div>
+
+      <p class="q-body">In Exercise 6(ii) of Ganita Manjari, the volume of a cuboid is given by $V(s) = 3ps^2 - 15ps + 12p$ cubic units (where $s$ is a variable representing a linear dimension and $p$ is a positive parameter). Which set represents the three possible irreducible linear dimensions (length, breadth, height) of the cuboid?</p>
+
+      
+
+      <div class="options-grid two-cols">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(24, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">3p, (s - 1), and (s - 4)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(24, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">3ps, (s - 5), and 12</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(24, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">p, (3s - 3), and (s - 12)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(24, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">3, (ps - 4), and (s - 1)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(24)" id="btn-sol-24">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-24" onchange="updateCustomMarks(24, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-24">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Factor out the greatest common monomial factor: V(s) = 3p(s² - 5s + 4).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Factorise the quadratic factor by splitting the middle term: s² - 5s + 4 = s² - 4s - s + 4 = (s - 1)(s - 4). Thus V(s) = 3p × (s - 1) × (s - 4). The three possible linear dimensions are 3p, (s - 1), and (s - 4).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>3p, (s - 1), and (s - 4)</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Factorisation of Polynomials into 3D Physical Dimensions.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-25" data-category="conceptual" data-chapter="ch5" data-qid="25">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q25</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.2 (Symmetries of a Circle, Page 95-96)</span>
+      </div>
+
+      <p class="q-body">In Section 5.2 "Symmetries of a Circle", Ganita Manjari explores the reflectional and rotational symmetries of a circle. Which of the following statements is mathematically INCORRECT?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(25, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">A circle has exactly 360 lines of reflective symmetry corresponding to each degree around its centre.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(25, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Any straight line passing through the centre of a circle is an axis of reflective symmetry.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(25, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">A circle possesses rotational symmetry of order infinity about its centre.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(25, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Every diameter of a circle divides it into two symmetrical congruent semicircles.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(25)" id="btn-sol-25">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-25" onchange="updateCustomMarks(25, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-25">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">A circle has infinitely many lines of reflection symmetry because ANY straight line passing through its centre is an axis of symmetry.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Statement A is therefore false (and the correct answer), as restricting reflection axes to 360 finite integer degree intervals is incorrect.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>A circle has exactly 360 lines of reflective symmetry corresponding to each degree around its centre.</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Continuous Symmetries of the Euclidean Circle.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-26" data-category="conceptual" data-chapter="ch5" data-qid="26">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q26</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.3 (Theorem 1, Page 96-97)</span>
+      </div>
+
+      <p class="q-body">Theorem 1 in Ganita Manjari states: "There is a unique circle passing through three non-collinear points." Why is it mathematically impossible for any circle to pass through three distinct COLLINEAR points $A, B, C$?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(26, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">Because the perpendicular bisector of segment AB and the perpendicular bisector of segment BC are parallel lines that never intersect to determine a centre.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(26, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Because three collinear points do not form a closed polygon.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(26, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Because the radius of such a circle would be negative.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(26, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Because a chord cannot contain more than two points of a circle.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(26)" id="btn-sol-26">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-26" onchange="updateCustomMarks(26, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-26">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">The centre of any circle passing through A and B must lie on the perpendicular bisector of segment AB. Similarly, to pass through B and C, it must lie on the perpendicular bisector of BC.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">If A, B, C lie on a single straight line L, the perpendicular bisectors of AB and BC are both perpendicular to line L, making them two parallel lines. Parallel lines never intersect, so no point equidistant from A, B, and C can exist.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>Because the perpendicular bisector of segment AB and the perpendicular bisector of segment BC are parallel lines that never intersect to determine a centre.</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Geometric Proof of Non-Collinear Uniqueness of Circumcircles.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-27" data-category="conceptual" data-chapter="ch5" data-qid="27">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q27</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.8 (Exercise 14, Page 115)</span>
+      </div>
+
+      <p class="q-body">In Exercise 14 of Ganita Manjari, students are asked to show that a rectangle is the ONLY parallelogram that can be inscribed in a circle. What is the fundamental deductive step establishing this theorem?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(27, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">In any parallelogram, opposite angles are equal (∠A = ∠C). In any cyclic quadrilateral, opposite angles are supplementary (∠A + ∠C = 180°). Hence 2∠A = 180° ⇒ ∠A = 90°, which forces all angles to be 90°, making it a rectangle.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(27, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">Because a parallelogram cannot have chords of equal length.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(27, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Because the diagonals of a parallelogram are never perpendicular.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(27, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Because the circumcentre of a parallelogram always lies outside its boundary.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(27)" id="btn-sol-27">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-27" onchange="updateCustomMarks(27, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-27">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Let ABCD be a parallelogram inscribed in a circle. In any parallelogram, opposite angles are equal: ∠A = ∠C.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Since ABCD is inscribed in a circle, it is a cyclic quadrilateral, so by Theorem 11 opposite angles sum to 180°: ∠A + ∠C = 180°. Substituting ∠C = ∠A gives 2∠A = 180° ⇒ ∠A = 90°. A parallelogram with a right angle is a rectangle.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>In any parallelogram, opposite angles are equal (∠A = ∠C). In any cyclic quadrilateral, opposite angles are supplementary (∠A + ∠C = 180°). Hence 2∠A = 180° ⇒ ∠A = 90°, which forces all angles to be 90°, making it a rectangle.</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Classification of Inscribed Quadrilaterals.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-28" data-category="conceptual" data-chapter="ch5" data-qid="28">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q28</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-hard">Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.8 (Theorem 10 & Fig. 5.27 B, Page 108-109)</span>
+      </div>
+
+      <p class="q-body">Theorem 10 of Ganita Manjari proves concyclicity: "If a line segment $AB$ subtends equal angles at two points $C$ and $D$ on the same side of $AB$, the four points $A, B, C, D$ are concyclic." In the proof by contradiction, if point $D$ were assumed to lie strictly INSIDE the circle passing through $A, B, C$, and ray $AD$ meets the circle at $E$, what exact geometric contradiction arises?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(28, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">In △BDE, ∠ADB is an exterior angle, so ∠ADB = ∠AEB + ∠DBE > ∠AEB = ∠ACB. This contradicts the given hypothesis that ∠ADB = ∠ACB.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(28, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">The sum of angles of △BDE exceeds 180°.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(28, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">Point E must coincide with the centre of the circle.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(28, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Ray AD cannot intersect a circle at more than one point.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(28)" id="btn-sol-28">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-28" onchange="updateCustomMarks(28, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-28">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">Points A, B, C, E lie on the circle, so by Theorem 9 corollary, angles in the same segment subtended by chord AB are equal: ∠AEB = ∠ACB.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">In △BDE, ∠ADB is an exterior angle at vertex D. By the Exterior Angle Theorem, an exterior angle strictly exceeds each interior opposite angle: ∠ADB = ∠AEB + ∠DBE > ∠AEB = ∠ACB. This contradicts the given condition ∠ADB = ∠ACB. Hence D cannot lie inside.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>In △BDE, ∠ADB is an exterior angle, so ∠ADB = ∠AEB + ∠DBE > ∠AEB = ∠ACB. This contradicts the given hypothesis that ∠ADB = ∠ACB.</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Proof by Contradiction & Exterior Angle Inequality in Concyclicity.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-29" data-category="conceptual" data-chapter="ch5" data-qid="29">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q29</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.6.1 (Theorem 8 & Fig. 5.16, Page 102)</span>
+      </div>
+
+      <p class="q-body">Theorem 8 in Ganita Manjari states the comparison between two unequal chords $AB$ and $DE$ in a circle with centre $C$. If chord $AB$ is longer than chord $DE$ ($AB > DE$), what is the relationship between their respective perpendicular distances $d_1$ and $d_2$ from the centre $C$?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(29, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">d₁ < d₂ (the longer chord is strictly closer to the centre)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(29, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">d₁ > d₂ (the longer chord is strictly farther from the centre)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(29, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">d₁ = d₂ (all chords in a circle have the same distance)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(29, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">d₁ + d₂ = r (the sum of their distances equals the radius)</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(29)" id="btn-sol-29">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-29" onchange="updateCustomMarks(29, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-29">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">By Baudhāyana-Pythagoras theorem: (AB/2)² + d₁² = r² and (DE/2)² + d₂² = r².</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">Since AB > DE, we have (AB/2)² > (DE/2)². Subtracting from r² reverses the inequality: r² - (AB/2)² < r² - (DE/2)² ⇒ d₁² < d₂² ⇒ d₁ < d₂. Thus, the longer chord is strictly closer to the centre.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>d₁ < d₂ (the longer chord is strictly closer to the centre)</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Theorem 8 Monotonic Inverse Relationship Between Distance & Chord Length.
+        </div>
+        
+      </div>
+    </article>
+    \n
+    <article class="q-card" id="q-30" data-category="conceptual" data-chapter="ch5" data-qid="30">
+      <div class="q-top-row">
+        <div class="q-num-badge">
+          <span class="q-num-idx">Q30</span>
+          <span class="q-cat-tag cat-conceptual">💡 Conceptual</span>
+        </div>
+        <div class="q-meta-badges">
+          <span class="q-ch-tag ch5">Ch 5</span>
+          <span class="q-diff-tag diff-med">Medium-Hard</span>
+          <span class="q-marks-pill">1 Mark</span>
+        </div>
+      </div>
+
+      <div class="q-book-ref">
+        <span class="ref-icon">📖</span>
+        <span class="ref-text"><strong>Source:</strong> Ganita Manjari Part 1 §5.7 & §5.8 (Fig. 5.30 & Exercise 24, Page 116)</span>
+      </div>
+
+      <p class="q-body">Fig. 5.30 in Ganita Manjari demonstrates why the angle inscribed in a semicircle is $90^\circ$ (Thales' Theorem). Diameter $AB$ passes through centre $O$, and $C$ is any point on the semicircle. Radii $OA, OB, OC$ are joined. In $\triangle AOC$, $OA = OC \implies \angle OAC = \angle OCA = a$. In $\triangle BOC$, $OB = OC \implies \angle OBC = \angle OCB = b$. What is the final algebraic deduction proving $\angle ACB = 90^\circ$?</p>
+
+      
+
+      <div class="options-grid one-col">
+        
+        <div class="opt-label" data-key="A" data-correct="true" onclick="selectOption(30, 'A')">
+          <span class="opt-key">A</span>
+          <span class="opt-text">In △ABC, the sum of angles is a + b + (a + b) = 180° ⇒ 2(a + b) = 180° ⇒ a + b = 90°, and since ∠ACB = a + b, ∠ACB = 90°.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="B" data-correct="false" onclick="selectOption(30, 'B')">
+          <span class="opt-key">B</span>
+          <span class="opt-text">The central angle is 360°, so half of it is 180°.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="C" data-correct="false" onclick="selectOption(30, 'C')">
+          <span class="opt-key">C</span>
+          <span class="opt-text">a² + b² = c², so by converse Pythagoras theorem the angle must be 90°.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+        <div class="opt-label" data-key="D" data-correct="false" onclick="selectOption(30, 'D')">
+          <span class="opt-key">D</span>
+          <span class="opt-text">Triangles △AOC and △BOC are equilateral triangles.</span>
+          <span class="opt-status-icon"></span>
+        </div>
+        
+      </div>
+
+      <div class="q-action-row">
+        <button class="toggle-sol-btn" onclick="toggleSolution(30)" id="btn-sol-30">
+          <span>👁️ Show Marking Scheme</span>
+        </button>
+        <div class="rubric-check-row">
+          <span>Self-Evaluation:</span>
+          <select class="rubric-select" id="rubric-30" onchange="updateCustomMarks(30, this.value)">
+            <option value="unattempted">Not Attempted</option>
+            <option value="correct">Full (1.0 / 1.0)</option>
+            <option value="half">Partial (0.5 / 1.0)</option>
+            <option value="zero">Incorrect (0.0 / 1.0)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="solution-box" id="sol-30">
+        <div class="sol-header">
+          <span>🎯 CBSE / NEP Step-by-Step Marking Scheme</span>
+        </div>
+        <div class="step-list">
+          
+          <div class="step-item">
+            <span class="step-badge">Step 1</span>
+            <div class="step-text">In △ABC, the three interior angles are ∠A = a, ∠B = b, and ∠C = a + b (by the isosceles triangle properties formed by the radii OA = OB = OC = r).</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+          <div class="step-item">
+            <span class="step-badge">Step 2</span>
+            <div class="step-text">The angle sum of △ABC is ∠A + ∠B + ∠C = 180° ⇒ a + b + (a + b) = 180° ⇒ 2a + 2b = 180° ⇒ 2(a + b) = 180° ⇒ a + b = 90°. Since ∠ACB = a + b, it directly follows that ∠ACB = 90°.</div>
+            <span class="step-marks">½ Mark</span>
+          </div>
+          
+        </div>
+        <div class="final-ans-box">
+          <strong>Correct Answer:</strong> Option A — <em>In △ABC, the sum of angles is a + b + (a + b) = 180° ⇒ 2(a + b) = 180° ⇒ a + b = 90°, and since ∠ACB = a + b, ∠ACB = 90°.</em>
+        </div>
+        
+        <div class="competency-callout">
+          <strong>💡 NEP Competency:</strong> Authentic NCERT Thales Theorem Angle in Semicircle Derivation.
+        </div>
+        
+      </div>
+    </article>
+    
+    </main>
+
+    <!-- Sticky Bottom Exam Bar -->
+    <div class="submit-bar">
+      <div class="score-summary">
+        <div class="score-stat">
+          <span class="score-stat-val" id="bar-score">0 / 30</span>
+          <span class="score-stat-lbl">Live Score</span>
+        </div>
+        <div class="score-stat">
+          <span class="score-stat-val" id="bar-attempted">0</span>
+          <span class="score-stat-lbl">Attempted</span>
+        </div>
+        <div class="score-stat">
+          <span class="score-stat-val" id="bar-accuracy">0%</span>
+          <span class="score-stat-lbl">Accuracy</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0.6rem;">
+        <button class="btn btn-outline" onclick="resetExam()">
+          <span>🔄 Reset</span>
+        </button>
+        <button class="btn btn-emerald" onclick="openExamSummaryModal()">
+          <span>🏁 Finish Test</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Summary Modal -->
+  <div class="modal-overlay" id="summary-modal" onclick="closeExamSummaryModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-score-circle">
+        <span class="circle-val" id="modal-score-val">0</span>
+        <span class="circle-denom">OUT OF 30</span>
+      </div>
+      <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem;" id="modal-title">Assessment Completed!</h3>
+      <p style="color: var(--text-sub); font-size: 0.95rem; margin-bottom: 1.25rem;" id="modal-desc">
+        Here is your performance summary across Chapter 4 (Algebraic Identities) and Chapter 5 (Circles).
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; background: var(--bg-card-elevated); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-color);">
+        <div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #34d399;" id="m-correct">0</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Correct</div>
+        </div>
+        <div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #fb7185;" id="m-incorrect">0</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Incorrect</div>
+        </div>
+        <div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: #67e8f9;" id="m-unattempted">30</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Skipped</div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: center;">
+        <button class="btn btn-outline" onclick="closeExamSummaryModal()">Review Answers</button>
+        <button class="btn btn-emerald" onclick="window.print()">Print Report</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const userAnswers = {};
+    const totalQuestions = 30;
+    let allSolutionsVisible = false;
+
+    // Theme toggle
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      document.getElementById('theme-btn').textContent = next === 'light' ? '☀️' : '🌙';
+      localStorage.setItem('nextsem_theme', next);
+    }
+    const savedTheme = localStorage.getItem('nextsem_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('theme-btn').textContent = savedTheme === 'light' ? '☀️' : '🌙';
+
+    // Option selection
+    function selectOption(qId, selectedKey) {
+      const card = document.getElementById('q-' + qId);
+      if (!card) return;
+      
+      const optionLabels = card.querySelectorAll('.opt-label');
+      let isCorrect = false;
+
+      optionLabels.forEach(opt => {
+        const key = opt.getAttribute('data-key');
+        const correct = opt.getAttribute('data-correct') === 'true';
+
+        opt.classList.remove('selected', 'correct', 'wrong');
+
+        if (key === selectedKey) {
+          opt.classList.add('selected');
+          if (correct) {
+            opt.classList.add('correct');
+            isCorrect = true;
+          } else {
+            opt.classList.add('wrong');
+          }
+        }
+        if (correct && key !== selectedKey && !isCorrect) {
+          opt.classList.add('correct');
+        }
+      });
+
+      userAnswers[qId] = { selectedKey, isCorrect };
+
+      const rubric = document.getElementById('rubric-' + qId);
+      if (rubric) {
+        rubric.value = isCorrect ? 'correct' : 'zero';
+      }
+
+      if (isCorrect && typeof confetti === 'function') {
+        confetti({ particleCount: 45, spread: 60, origin: { y: 0.8 } });
+      }
+
+      updateExamStats();
+    }
+
+    function updateCustomMarks(qId, val) {
+      if (!userAnswers[qId]) userAnswers[qId] = {};
+      userAnswers[qId].isCorrect = (val === 'correct');
+      userAnswers[qId].custom = val;
+      updateExamStats();
+    }
+
+    function toggleSolution(qId) {
+      const sol = document.getElementById('sol-' + qId);
+      const btn = document.getElementById('btn-sol-' + qId);
+      if (!sol) return;
+      const isOpen = sol.classList.contains('open');
+      if (isOpen) {
+        sol.classList.remove('open');
+        btn.innerHTML = '<span>👁️ Show Marking Scheme</span>';
+      } else {
+        sol.classList.add('open');
+        btn.innerHTML = '<span>✕ Hide Marking Scheme</span>';
+      }
+    }
+
+    function toggleAllSolutions() {
+      allSolutionsVisible = !allSolutionsVisible;
+      const solBoxes = document.querySelectorAll('.solution-box');
+      const toggleBtns = document.querySelectorAll('.toggle-sol-btn');
+      const mainBtn = document.getElementById('btn-toggle-all-solutions');
+
+      solBoxes.forEach(box => {
+        if (allSolutionsVisible) box.classList.add('open');
+        else box.classList.remove('open');
+      });
+
+      toggleBtns.forEach(btn => {
+        btn.innerHTML = allSolutionsVisible ? '<span>✕ Hide Marking Scheme</span>' : '<span>👁️ Show Marking Scheme</span>';
+      });
+
+      mainBtn.innerHTML = allSolutionsVisible ? '<span>✕ Hide All Solutions</span>' : '<span>👁️ Show All Solutions</span>';
+    }
+
+    function updateExamStats() {
+      const attemptedCount = Object.keys(userAnswers).length;
+      let correctCount = 0;
+      Object.values(userAnswers).forEach(ans => {
+        if (ans.isCorrect) correctCount++;
+      });
+
+      const accuracy = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
+
+      document.getElementById('stat-attempted').textContent = attemptedCount;
+      document.getElementById('stat-score').textContent = correctCount;
+      document.getElementById('bar-score').textContent = correctCount + ' / ' + totalQuestions;
+      document.getElementById('bar-attempted').textContent = attemptedCount + ' / ' + totalQuestions;
+      document.getElementById('bar-accuracy').textContent = accuracy + '%';
+    }
+
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.q-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterChapter(ch, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.q-card');
+      cards.forEach(card => {
+        if (card.getAttribute('data-chapter') === ch) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function resetExam() {
+      if (!confirm('Are you sure you want to reset your exam progress?')) return;
+      for (const k in userAnswers) delete userAnswers[k];
+      document.querySelectorAll('.opt-label').forEach(l => l.classList.remove('selected', 'correct', 'wrong'));
+      document.querySelectorAll('.rubric-select').forEach(r => r.value = 'unattempted');
+      updateExamStats();
+    }
+
+    function openExamSummaryModal() {
+      const attemptedCount = Object.keys(userAnswers).length;
+      let correctCount = 0;
+      Object.values(userAnswers).forEach(ans => {
+        if (ans.isCorrect) correctCount++;
+      });
+      const incorrectCount = attemptedCount - correctCount;
+      const unattempted = totalQuestions - attemptedCount;
+
+      document.getElementById('modal-score-val').textContent = correctCount;
+      document.getElementById('m-correct').textContent = correctCount;
+      document.getElementById('m-incorrect').textContent = incorrectCount;
+      document.getElementById('m-unattempted').textContent = unattempted;
+
+      const pct = Math.round((correctCount / totalQuestions) * 100);
+      if (pct >= 80 && typeof confetti === 'function') {
+        confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+      }
+
+      document.getElementById('summary-modal').classList.add('active');
+    }
+
+    function closeExamSummaryModal(e) {
+      if (e && e.target && e.target.id !== 'summary-modal') return;
+      document.getElementById('summary-modal').classList.remove('active');
+    }
+
+    function togglePrintMode() {
+      const includeSolutions = confirm("Would you like to print with the step-by-step marking schemes and solutions included?\n\nClick [OK] to print WITH solutions.\nClick [Cancel] to print BLANK Question Paper.");
+      if (includeSolutions) {
+        document.body.classList.add('print-with-solutions');
+      } else {
+        document.body.classList.remove('print-with-solutions');
+      }
+      window.print();
+    }
+  </script>
+</body>
+</html>
+  

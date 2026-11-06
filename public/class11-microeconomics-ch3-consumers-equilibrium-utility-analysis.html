@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 11 Microeconomics Chapter 3: Consumer's Equilibrium – Utility Analysis (English & हिंदी) | Notes & Solved Numericals Studio</title>
+  <meta name="description" content="Class 11 Microeconomics Chapter 3 Consumer's Equilibrium Utility Analysis in English and Hindi (हिंदी माध्यम): Complete topic-wise notes, TU vs MU relationship, Law of DMU, 1-commodity & 2-commodity equilibrium equations, and solved numericals.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX for Scientific & Mathematical Equations rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-color: rgba(6, 182, 212, 0.25);
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-green-link: #04AA6D;
+      --formula-bg: #090e1f;
+      --formula-border: #1e293b;
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    body.light-theme, body.light-mode {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-color: #cbd5e1;
+      --accent-cyan: #0284c7;
+      --accent-blue: #1d4ed8;
+      --accent-emerald: #059669;
+      --accent-gold: #d97706;
+      --accent-purple: #7c3aed;
+      --accent-rose: #e11d48;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-green-link: #04AA6D;
+      --formula-bg: #f8fafc;
+      --formula-border: #e2e8f0;
+      --shadow-card: 0 4px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      padding-bottom: 80px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Brand Navbar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(12, 19, 40, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 16px;
+    }
+    body.light-theme .top-nav, body.light-mode .top-nav {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom-color: #e2e8f0;
+    }
+
+    .top-nav-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo-img {
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--accent-cyan);
+    }
+
+    /* Language Toggle Pill */
+    .lang-switch-box {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px solid var(--border-color);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+    }
+    body.light-theme .lang-switch-box, body.light-mode .lang-switch-box {
+      background: #e2e8f0;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    body.light-theme .lang-btn.active, body.light-mode .lang-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    /* Desktop Full Breadcrumb Trail */
+    .top-breadcrumb-bar {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 10px 16px 0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+    }
+    .top-breadcrumb-bar a {
+      color: var(--text-green-link);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* Hero Header */
+    .hero-banner {
+      background: linear-gradient(135deg, #0c1a36 0%, #1e1b4b 50%, #0c1328 100%);
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      margin-top: 0.75rem;
+      margin-bottom: 1.75rem;
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    body.light-theme .hero-banner, body.light-mode .hero-banner {
+      background: linear-gradient(135deg, #1e3a8a 0%, #4338ca 60%, #312e81 100%);
+      border-color: #6366f1;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(6, 182, 212, 0.2);
+      color: #67e8f9;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      margin-bottom: 10px;
+    }
+    body.light-theme .hero-tag, body.light-mode .hero-tag {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #ffffff !important;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-desc {
+      font-size: 0.92rem;
+      color: #e2e8f0;
+      line-height: 1.6;
+      max-width: 820px;
+    }
+
+    /* Quick Jump Navigation Pill Bar */
+    .jump-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 0 12px;
+      margin-bottom: 1.5rem;
+      scrollbar-width: thin;
+    }
+    .jump-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .jump-pill:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    /* Topic Module Card */
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s ease;
+    }
+    .module-card:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .module-num {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+      color: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .module-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .module-subtitle {
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Content Typography */
+    h3.sub-heading {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 18px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p.content-p {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    .concept-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+    .concept-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .concept-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--accent-cyan);
+      font-weight: 900;
+      font-size: 0.85rem;
+    }
+
+    /* Formula Box */
+    .formula-box {
+      background: var(--formula-bg);
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .formula-header {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .formula-math {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      letter-spacing: 0.02em;
+    }
+    body.light-theme .formula-math, body.light-mode .formula-math {
+      color: #0284c7;
+    }
+    .formula-notes {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Comparison Table */
+    .custom-table-wrapper {
+      overflow-x: auto;
+      margin: 14px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    .custom-table th {
+      background: rgba(6, 182, 212, 0.12);
+      color: var(--text-main);
+      font-weight: 800;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+    body.light-theme .custom-table th, body.light-mode .custom-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .custom-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+    .custom-table tr:last-child td {
+      border-bottom: none;
+    }
+    .custom-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    body.light-theme .custom-table tr:hover td, body.light-mode .custom-table tr:hover td {
+      background: #f8fafc;
+    }
+
+    /* Solved Numericals Studio Cards */
+    .numerical-card {
+      background: var(--bg-card);
+      border: 1.5px solid rgba(16, 185, 129, 0.35);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+    body.light-theme .numerical-card, body.light-mode .numerical-card {
+      border-color: #86efac;
+      background: #ffffff;
+    }
+
+    .pyq-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-gold);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      margin-bottom: 8px;
+    }
+    body.light-theme .pyq-badge, body.light-mode .pyq-badge {
+      background: #fef3c7;
+      color: #b45309;
+      border-color: #fcd34d;
+    }
+
+    .numerical-question {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+
+    .given-data-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      font-size: 0.84rem;
+      border: 1px solid var(--border-color);
+    }
+    body.light-theme .given-data-grid, body.light-mode .given-data-grid {
+      background: #f8fafc;
+    }
+
+    .step-box {
+      margin-top: 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent-emerald);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .step-item {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.55;
+    }
+
+    .final-answer-badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.18);
+      border: 1.5px solid var(--accent-emerald);
+      color: #34d399;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    body.light-theme .final-answer-badge, body.light-mode .final-answer-badge {
+      background: #ecfdf5;
+      color: #065f46;
+      border-color: #10b981;
+    }
+
+    /* Interactive Quiz & Fill-in-the-Blanks */
+    .interactive-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    .interactive-row {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    body.light-theme .interactive-row, body.light-mode .interactive-row {
+      background: #f8fafc;
+    }
+
+    .q-text {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .blank-input {
+      background: var(--bg-body);
+      border: 1.5px solid var(--border-color);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 7px 12px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 320px;
+      outline: none;
+      transition: all 0.15s ease;
+    }
+    .blank-input:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+    }
+    .blank-input.correct {
+      border-color: var(--accent-emerald) !important;
+      background: rgba(16, 185, 129, 0.1) !important;
+    }
+    .blank-input.incorrect {
+      border-color: var(--accent-rose) !important;
+      background: rgba(244, 63, 94, 0.1) !important;
+    }
+
+    .btn-action-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-check {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border: none;
+      padding: 7px 16px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .btn-check:hover {
+      background: var(--accent-blue);
+      transform: translateY(-1px);
+    }
+
+    .btn-hint {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn-hint:hover {
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    .hint-drawer {
+      display: none;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 3px solid var(--accent-gold);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      color: var(--accent-gold);
+    }
+
+    .feedback-msg {
+      margin-top: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+    .feedback-msg.correct {
+      color: var(--accent-emerald);
+    }
+    .feedback-msg.incorrect {
+      color: var(--accent-rose);
+    }
+
+    .answer-badge {
+      display: inline-block;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+
+    /* Score HUD */
+    .score-hud {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+      border: 1.5px solid var(--accent-cyan);
+      border-radius: 12px;
+      padding: 12px 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 800;
+      font-size: 0.92rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Theme Switcher Button */
+    .btn-theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-theme-toggle:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: #4f46e5;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: #4338ca;
+    }
+
+    /* Bilingual Switching Classes */
+    body.lang-hindi .en-text {
+      display: none !important;
+    }
+    body.lang-english .hi-text {
+      display: none !important;
+    }
+
+    .katex {
+      font-size: 1.05em !important;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.4rem;
+      }
+      .module-card {
+        padding: 16px;
+      }
+      .formula-math {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="lang-english">
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="/" class="brand-box">
+        <img src="/image-20.png" alt="NextSem Academy Logo" class="brand-logo-img">
+        <div>
+          <div style="font-weight: 900; font-size: 0.95rem; line-height: 1.1;">STUDY GUIDE</div>
+          <div style="font-size: 0.68rem; font-weight: 800; color: var(--accent-cyan); letter-spacing: 0.05em;">NEXTSEM ACADEMY</div>
+        </div>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <!-- Bilingual Toggle Buttons -->
+        <div class="lang-switch-box">
+          <button id="btnEn" class="lang-btn active" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button id="btnHi" class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिंदी</button>
+        </div>
+
+        <button id="themeToggleBtn" class="btn-theme-toggle" title="Toggle Light / Dark Mode">
+          <span id="themeIcon">☀️</span>
+          <span id="themeLabel">Light</span>
+        </button>
+        <a href="/?class=11" class="btn-primary">
+          <span class="en-text">📊 Class 11 Portal</span>
+          <span class="hi-text">📊 कक्षा ११ पोर्टल</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Complete Desktop Breadcrumb Navigation Trail -->
+  <div class="top-breadcrumb-bar">
+    <a href="/">Home</a>
+    <span class="sep">❯</span>
+    <a href="/?class=11"><span class="en-text">Class 11</span><span class="hi-text">कक्षा ११</span></a>
+    <span class="sep">❯</span>
+    <a href="/?class=11"><span class="en-text">Microeconomics</span><span class="hi-text">व्यष्टि अर्थशास्त्र</span></a>
+    <span class="sep">❯</span>
+    <span style="color: var(--text-main);">
+      <span class="en-text">Chapter 3: Consumer's Equilibrium – Utility Analysis</span>
+      <span class="hi-text">अध्याय ३: उपभोक्ता का संतुलन — उपयोगिता विश्लेषण</span>
+    </span>
+  </div>
+
+  <main class="container">
+
+    <!-- Hero Header Banner -->
+    <header class="hero-banner">
+      <div class="hero-tag">
+        <span class="en-text">📈 Class 11 Microeconomics • Chapter 3 (Cardinal Utility Analysis)</span>
+        <span class="hi-text">📈 कक्षा ११ व्यष्टि अर्थशास्त्र • अध्याय ३ (गणनावाचक उपयोगिता विश्लेषण)</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="en-text">Consumer's Equilibrium — Utility Analysis</span>
+        <span class="hi-text">उपभोक्ता का संतुलन — उपयोगिता विश्लेषण</span>
+      </h1>
+      <p class="hero-desc">
+        <span class="en-text">
+          Complete topic-by-topic breakdown from the textbook PDF: Concept of Utility, Total & Marginal Utility ($TU$ vs $MU$) relationship, Law of Diminishing Marginal Utility (DMU), Marginal Utility of Money ($MU_M$), and Consumer's Equilibrium in 1-Commodity and 2-Commodities cases with solved CBSE numericals.
+        </span>
+        <span class="hi-text">
+          पाठ्यपुस्तक का पूर्ण विषयवार सार: उपयोगिता की अवधारणा, कुल उपयोगिता व सीमांत उपयोगिता ($TU$ व $MU$) में संबंध, ह्रासमान सीमांत उपयोगिता नियम (DMU), मुद्रा की सीमांत उपयोगिता ($MU_M$), तथा १-वस्तु एवं २-वस्तुओं की स्थिति में उपभोक्ता संतुलन व हल सहित संख्यात्मक प्रश्न।
+        </span>
+      </p>
+    </header>
+
+    <!-- Quick Jump Navigation Bar -->
+    <div class="jump-nav">
+      <a href="#topic1" class="jump-pill">
+        <span class="en-text">👤 Topic 1: Consumer & Utility</span>
+        <span class="hi-text">👤 विषय १: उपभोक्ता व उपयोगिता</span>
+      </a>
+      <a href="#topic2" class="jump-pill">
+        <span class="en-text">📊 Topic 2: TU & MU Relationship</span>
+        <span class="hi-text">📊 विषय २: TU एवं MU संबंध</span>
+      </a>
+      <a href="#topic3" class="jump-pill">
+        <span class="en-text">📉 Topic 3: Law of DMU</span>
+        <span class="hi-text">📉 विषय ३: ह्रासमान सीमांत उपयोगिता नियम</span>
+      </a>
+      <a href="#topic4" class="jump-pill">
+        <span class="en-text">⚖️ Topic 4: One Commodity Equilibrium</span>
+        <span class="hi-text">⚖️ विषय ४: एक वस्तु में संतुलन</span>
+      </a>
+      <a href="#topic5" class="jump-pill">
+        <span class="en-text">🛒 Topic 5: Two Commodities Case</span>
+        <span class="hi-text">🛒 विषय ५: दो वस्तुओं में संतुलन</span>
+      </a>
+      <a href="#solved-numericals" class="jump-pill" style="border-color: #10b981; color: #10b981;">
+        <span class="en-text">🧮 Solved Board Numericals</span>
+        <span class="hi-text">🧮 हल सहित संख्यात्मक प्रश्न</span>
+      </a>
+      <a href="#interactive-practice" class="jump-pill" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+        <span class="en-text">🎯 Mastery Check</span>
+        <span class="hi-text">🎯 अभ्यास व प्रश्नोत्तरी</span>
+      </a>
+    </div>
+
+    <!-- ==========================================
+         TOPIC 1: WHO IS A CONSUMER & CONCEPT OF UTILITY
+         ========================================== -->
+    <section id="topic1" class="module-card">
+      <div class="module-header">
+        <div class="module-num">1</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Foundation Concept</span>
+            <span class="hi-text">मूलभूत अवधारणा</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Who is a Consumer & What is Utility?</span>
+            <span class="hi-text">उपभोक्ता कौन है तथा उपयोगिता क्या है?</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <p class="content-p">
+          <strong>1. Who is a Consumer?</strong><br>
+          A consumer is an <strong>economic agent</strong> who uses goods and services for the direct satisfaction of his/her wants. Consumer behaviour refers to the way in which consumers spend their income to maximize their total satisfaction (utility).
+        </p>
+
+        <p class="content-p">
+          <strong>2. Meaning of Utility:</strong><br>
+          <strong>Utility</strong> refers to the <em>'satisfaction derived from the consumption of a commodity'</em>, or the <strong>'want-satisfying power of a commodity'</strong>.
+        </p>
+
+        <h3 class="sub-heading">🔑 Key Features of Utility</h3>
+        <ul class="concept-list">
+          <li><strong>Function of Intensity of Want:</strong> Higher the urgency/desire, higher is the utility derived. *(e.g., A fan gives high utility during summer, but very little in winter).*</li>
+          <li><strong>Subjective in Nature:</strong> Utility varies from person to person *(e.g., A cup of tea gives high satisfaction to a tea drinker, but zero satisfaction to someone who dislikes tea).*</li>
+          <li><strong>Not always related to Usefulness:</strong> A commodity can provide utility even if it is not healthy or useful *(e.g., Alcohol provides utility to a drunkard, even though it harms health).*</li>
+        </ul>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <p class="content-p">
+          <strong>१. उपभोक्ता कौन है? (Who is a Consumer?)</strong><br>
+          उपभोक्ता वह <strong>आर्थिक एजेंट</strong> (व्यक्ति अथवा परिवार) है जो अपनी आवश्यकताओं की प्रत्यक्ष संतुष्टि के लिए वस्तुओं और सेवाओं का उपभोग करता है। उपभोक्ता व्यवहार का अर्थ उस रीति से है जिसमें उपभोक्ता अपनी सीमित आय को विभिन्न वस्तुओं पर इस प्रकार व्यय करता है जिससे उसे <strong>अधिकतम संतुष्टि</strong> प्राप्त हो सके।
+        </p>
+
+        <p class="content-p">
+          <strong>२. उपयोगिता का अर्थ (Meaning of Utility):</strong><br>
+          <strong>उपयोगिता</strong> का अर्थ किसी वस्तु के उपभोग से प्राप्त होने वाली <em>संतुष्टि</em> से है, अथवा इसे <strong>'किसी वस्तु की आवश्यकता को संतुष्ट करने की शक्ति'</strong> कहा जाता है।
+        </p>
+
+        <h3 class="sub-heading">🔑 उपयोगिता की प्रमुख विशेषताएँ (Features of Utility)</h3>
+        <ul class="concept-list">
+          <li><strong>आवश्यकता की तीव्रता पर निर्भर:</strong> आवश्यकता जितनी अधिक तीव्र होगी, वस्तु से प्राप्त होने वाली उपयोगिता उतनी ही अधिक होगी *(जैसे: गर्मियों में पंखे से अधिक उपयोगिता मिलती है, जबकि सर्दियों में नहीं)*।</li>
+          <li><strong>आत्मगत / व्यक्तिगत धारणा (Subjective):</strong> उपयोगिता व्यक्ति-दर-व्यक्ति भिन्न होती है *(जैसे: चाय पीने वाले को चाय से उपयोगिता मिलती है, जबकि चाय ना पीने वाले को शून्य)*।</li>
+          <li><strong>लाभप्रदता से अनिवार्य संबंध नहीं:</strong> किसी वस्तु से उपयोगिता मिल सकती है भले ही वह स्वास्थ्य के लिए हानिकारक हो *(जैसे: शराबी के लिए शराब उपयोगिता रखती है, यद्यपि यह लाभदायक नहीं है)*।</li>
+        </ul>
+      </div>
+
+      <h3 class="sub-heading">
+        <span class="en-text">📐 Cardinal vs. Ordinal Measurement of Utility</span>
+        <span class="hi-text">📐 गणनावाचक बनाम क्रमवाचक दृष्टिकोण</span>
+      </h3>
+      <div class="custom-table-wrapper">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th><span class="en-text">Basis</span><span class="hi-text">आधार</span></th>
+              <th><span class="en-text">Marshallian View (Cardinal Measurement)</span><span class="hi-text">मार्शल का गणनावाचक दृष्टिकोण (Cardinal)</span></th>
+              <th><span class="en-text">Hicksian View (Ordinal Measurement)</span><span class="hi-text">हिक्स का क्रमवाचक दृष्टिकोण (Ordinal)</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong><span class="en-text">Economist</span><span class="hi-text">प्रतिपादक</span></strong></td>
+              <td>Alfred Marshall (अल्फ्रेड मार्शल)</td>
+              <td>J.R. Hicks (जे.आर. हिक्स)</td>
+            </tr>
+            <tr>
+              <td><strong><span class="en-text">Measurement</span><span class="hi-text">माप</span></strong></td>
+              <td><span class="en-text">Utility can be measured in exact numerical units ($1, 2, 3, 4\dots$)</span><span class="hi-text">उपयोगिता को निश्चित संख्याओं ($1, 2, 3\dots$) में मापा जा सकता है।</span></td>
+              <td><span class="en-text">Utility cannot be measured in numbers; it can only be <strong>ranked</strong> (High / Low)</span><span class="hi-text">संख्याओं में नहीं मापा जा सकता; केवल <strong>प्राथमिकता क्रम (Rank)</strong> दिया जा सकता है (अधिक / कम)।</span></td>
+            </tr>
+            <tr>
+              <td><strong><span class="en-text">Unit</span><span class="hi-text">इकाई</span></strong></td>
+              <td><strong>Utils / यूटिल्स</strong> <span class="en-text">(e.g., A cup of tea gives $10\text{ utils}$)</span><span class="hi-text">(उदा. १ कप चाय = १० यूटिल्स)</span></td>
+              <td><span class="en-text">No numerical unit (Only preference ranking)</span><span class="hi-text">कोई इकाई नहीं (उदा. चाय कॉफी से अधिक पसंद है)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 2: TOTAL UTILITY (TU) AND MARGINAL UTILITY (MU)
+         ========================================== -->
+    <section id="topic2" class="module-card">
+      <div class="module-header">
+        <div class="module-num">2</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Utility Measures</span>
+            <span class="hi-text">उपयोगिता की धारणाएँ</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Concepts of Total Utility ($TU$) and Marginal Utility ($MU$)</span>
+            <span class="hi-text">कुल उपयोगिता ($TU$) एवं सीमांत उपयोगिता ($MU$)</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <p class="content-p">
+          <strong>Total Utility ($TU$):</strong> It is the sum total of utility derived from the consumption of all the units of a commodity.
+        </p>
+        <div class="formula-box">
+          <div class="formula-header">📐 Total Utility Formula</div>
+          <div class="formula-math">$$TU_n = MU_1 + MU_2 + \dots + MU_n = \sum MU$$</div>
+        </div>
+
+        <p class="content-p">
+          <strong>Marginal Utility ($MU$):</strong> It refers to the additional utility on account of the consumption of an additional unit of a commodity.
+        </p>
+        <div class="formula-box">
+          <div class="formula-header">📐 Marginal Utility Formula</div>
+          <div class="formula-math">$$MU_n = TU_n - TU_{n-1} \quad \text{or} \quad MU = \frac{\Delta TU}{\Delta Q}$$</div>
+        </div>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <p class="content-p">
+          <strong>कुल उपयोगिता (Total Utility - $TU$):</strong> किसी वस्तु की सभी उपलब्ध इकाइयों के उपभोग से प्राप्त होने वाली उपयोगिताओं का कुल योग कुल उपयोगिता कहलाता है।
+        </p>
+        <div class="formula-box">
+          <div class="formula-header">📐 कुल उपयोगिता का सूत्र</div>
+          <div class="formula-math">$$TU_n = MU_1 + MU_2 + \dots + MU_n = \sum MU$$</div>
+        </div>
+
+        <p class="content-p">
+          <strong>सीमांत उपयोगिता (Marginal Utility - $MU$):</strong> किसी वस्तु की एक अतिरिक्त इकाई का उपभोग करने से कुल उपयोगिता में होने वाली वृद्धि को सीमांत उपयोगिता कहते हैं।
+        </p>
+        <div class="formula-box">
+          <div class="formula-header">📐 सीमांत उपयोगिता का सूत्र</div>
+          <div class="formula-math">$$MU_n = TU_n - TU_{n-1} \quad \text{अथवा} \quad MU = \frac{\Delta TU}{\Delta Q}$$</div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">
+        <span class="en-text">📊 Master Table: Relationship between $TU$ and $MU$</span>
+        <span class="hi-text">📊 मुख्य तालिका: कुल उपयोगिता ($TU$) तथा सीमांत उपयोगिता ($MU$) में संबंध</span>
+      </h3>
+      <div class="custom-table-wrapper">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th><span class="en-text">Quantity Consumed (Units)</span><span class="hi-text">उपभोग की इकाइयाँ</span></th>
+              <th><span class="en-text">Total Utility ($TU$)</span><span class="hi-text">कुल उपयोगिता ($TU$)</span></th>
+              <th><span class="en-text">Marginal Utility ($MU$)</span><span class="hi-text">सीमांत उपयोगिता ($MU$)</span></th>
+              <th><span class="en-text">Economic Phase &amp; Observation</span><span class="hi-text">आर्थिक अवस्था व निष्कर्ष</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$0$</td>
+              <td>$0$</td>
+              <td>—</td>
+              <td><span class="en-text">No consumption</span><span class="hi-text">शून्य उपभोग</span></td>
+            </tr>
+            <tr>
+              <td>$1$</td>
+              <td>$8$</td>
+              <td>$8 - 0 = \mathbf{8}$</td>
+              <td><span class="en-text">$MU > 0 \implies TU$ increases at a diminishing rate</span><span class="hi-text">$MU > 0 \implies TU$ घटती दर से बढ़ती है</span></td>
+            </tr>
+            <tr>
+              <td>$2$</td>
+              <td>$14$</td>
+              <td>$14 - 8 = \mathbf{6}$</td>
+              <td><span class="en-text">$MU > 0 \implies TU$ increases</span><span class="hi-text">$MU > 0 \implies TU$ बढ़ रही है</span></td>
+            </tr>
+            <tr>
+              <td>$3$</td>
+              <td>$18$</td>
+              <td>$18 - 14 = \mathbf{4}$</td>
+              <td><span class="en-text">$MU > 0 \implies TU$ increases</span><span class="hi-text">$MU > 0 \implies TU$ बढ़ रही है</span></td>
+            </tr>
+            <tr>
+              <td>$4$</td>
+              <td>$20$</td>
+              <td>$20 - 18 = \mathbf{2}$</td>
+              <td><span class="en-text">$MU > 0 \implies TU$ increases</span><span class="hi-text">$MU > 0 \implies TU$ बढ़ रही है</span></td>
+            </tr>
+            <tr>
+              <td>$5$</td>
+              <td><strong>$20$ (<span class="en-text">Maximum</span><span class="hi-text">अधिकतम</span>)</strong></td>
+              <td>$20 - 20 = \mathbf{0}$</td>
+              <td><strong><span class="en-text">Point of Saturation / Satiety ($MU = 0$, $TU$ is Maximum)</span><span class="hi-text">पूर्ण तृप्ति का बिंदु (Saturation Point: $MU = 0$, $TU$ अधिकतम व स्थिर)</span></strong></td>
+            </tr>
+            <tr>
+              <td>$6$</td>
+              <td>$18$ (<span class="en-text">Declines</span><span class="hi-text">घटती है</span>)</td>
+              <td>$18 - 20 = \mathbf{-2}$</td>
+              <td><strong><span class="en-text">$MU < 0$ (Negative) $\implies TU$ starts Falling</span><span class="hi-text">$MU < 0$ (ऋणात्मक) $\implies TU$ गिरने लगती है</span></strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="formula-box">
+        <div class="formula-header">
+          <span class="en-text">🧠 The 3 Golden Rules of $TU$ and $MU$</span>
+          <span class="hi-text">🧠 $TU$ एवं $MU$ के ३ स्वर्णिम नियम</span>
+        </div>
+        <div class="formula-notes">
+          <div class="en-text">
+            1. <strong>As long as $MU$ is positive ($MU > 0$):</strong> $TU$ increases (at a diminishing rate).<br>
+            2. <strong>When $MU$ is zero ($MU = 0$):</strong> $TU$ is at its <strong>maximum and constant</strong> (Point of Satiety).<br>
+            3. <strong>When $MU$ is negative ($MU < 0$):</strong> $TU$ starts <strong>diminishing / falling</strong>.<br>
+            4. <strong>Slope:</strong> $MU$ is the slope of the $TU$ curve. The $MU$ curve slopes downwards from left to right.
+          </div>
+          <div class="hi-text">
+            १. <strong>जब तक $MU$ धनात्मक है ($MU > 0$):</strong> कुल उपयोगिता ($TU$) बढ़ती है (घटती दर से)।<br>
+            २. <strong>जब $MU$ शून्य होता है ($MU = 0$):</strong> कुल उपयोगिता ($TU$) <strong>अधिकतम एवं स्थिर</strong> होती है (तृप्ति का बिंदु)।<br>
+            ३. <strong>जब $MU$ ऋणात्मक हो जाता है ($MU < 0$):</strong> कुल उपयोगिता ($TU$) <strong>घटने लगती है</strong>।<br>
+            ४. <strong>ढाल:</strong> सीमांत उपयोगिता ($MU$), कुल उपयोगिता ($TU$) वक्र का ढाल होती है। $MU$ वक्र बाएं से दाएं नीचे की ओर गिरता है।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 3: LAW OF DIMINISHING MARGINAL UTILITY (DMU)
+         ========================================== -->
+    <section id="topic3" class="module-card">
+      <div class="module-header">
+        <div class="module-num">3</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Fundamental Psychological Law</span>
+            <span class="hi-text">आधारभूत मनोवैज्ञानिक नियम</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Law of Diminishing Marginal Utility (DMU)</span>
+            <span class="hi-text">ह्रासमान सीमांत उपयोगिता नियम (Law of DMU)</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="en-text">
+        <p class="content-p">
+          <strong>Statement of the Law:</strong><br>
+          <em>"As more and more standard units of a commodity are continuously consumed, marginal utility derived from every additional unit must decline."</em>
+        </p>
+
+        <h3 class="sub-heading">🤔 Why Does the Law Operate?</h3>
+        <p class="content-p">
+          Psychologically, the <strong>intensity of desire</strong> for a commodity tends to decrease as more units are consumed. Since human wants can be satisfied, each additional unit yields less satisfaction.
+        </p>
+
+        <h3 class="sub-heading">📌 Two Basic Assumptions of the Law</h3>
+        <ul class="concept-list">
+          <li><strong>Standard Units:</strong> Only standard units of the commodity are consumed *(e.g., A cup of tea, NOT a spoon of tea; a glass of water, NOT a drop of water).*</li>
+          <li><strong>Continuous Consumption:</strong> Consumption must be continuous without long time intervals *(e.g., One cup now and another tomorrow will not exhibit diminishing utility).*</li>
+        </ul>
+
+        <h3 class="sub-heading">⚠️ Exceptions to the Law</h3>
+        <ul class="concept-list">
+          <li><strong>Addictions / Alcohol:</strong> In the case of a drunkard, consumption of more units may initially increase craving.</li>
+          <li><strong>Hobbies &amp; Rare Collections:</strong> A collector of rare coins, stamps, or books feels greater joy with every new item added.</li>
+          <li><strong>Acquisition of Money:</strong> A miser always desires more money with each rupee earned.</li>
+        </ul>
+      </div>
+
+      <div class="hi-text">
+        <p class="content-p">
+          <strong>नियम का कथन (Statement):</strong><br>
+          <em>"जैसे-जैसे किसी वस्तु की मानक इकाइयों का निरंतर उपभोग किया जाता है, वैसे-वैसे प्रत्येक अगली इकाई से मिलने वाली सीमांत उपयोगिता ($MU$) घटती जाती है।"</em>
+        </p>
+
+        <h3 class="sub-heading">🤔 यह नियम क्यों लागू होता है?</h3>
+        <p class="content-p">
+          मनोवैज्ञानिक रूप से, किसी वस्तु के उपभोग के साथ-साथ उसकी <strong>तीव्रता घटती जाती है</strong>। क्योंकि किसी विशिष्ट आवश्यकता को संतुष्ट किया जा सकता है, इसलिए प्रत्येक अगली इकाई पहले से कम संतुष्टि देती है।
+        </p>
+
+        <h3 class="sub-heading">📌 नियम की दो अनिवार्य मान्यताएँ (Assumptions)</h3>
+        <ul class="concept-list">
+          <li><strong>मानक इकाइयाँ (Standard Units):</strong> उपभोग की जाने वाली इकाइयाँ उपयुक्त आकार की होनी चाहिए *(उदा. चाय का कप, चम्मच नहीं; पानी का गिलास, बूंद नहीं)*।</li>
+          <li><strong>निरंतर उपभोग (Continuous Consumption):</strong> उपभोग में समय का बड़ा अंतराल नहीं होना चाहिए *(उदा. १ कप सुबह और १ कप शाम को पीने पर यह नियम तुरंत लागू नहीं होगा)*।</li>
+        </ul>
+
+        <h3 class="sub-heading">⚠️ नियम के अपवाद (Exceptions)</h3>
+        <ul class="concept-list">
+          <li><strong>शराब / नशा:</strong> शराबी के मामले में शराब की प्रत्येक अगली घूंट अधिक तृष्णा पैदा कर सकती है।</li>
+          <li><strong>दुर्लभ वस्तु संग्रह (Hobbies):</strong> दुर्लभ सिक्के, डाक टिकट या पुरानी पुस्तकें एकत्र करने वाले को प्रत्येक नई वस्तु से अधिक आनंद मिलता है।</li>
+          <li><strong>कंजूस व्यक्ति का धन:</strong> कंजूस व्यक्ति के लिए प्रत्येक अतिरिक्त रुपये की उपयोगिता घटती नहीं है।</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 4: CONSUMER'S EQUILIBRIUM: ONE COMMODITY CASE
+         ========================================== -->
+    <section id="topic4" class="module-card">
+      <div class="module-header">
+        <div class="module-num">4</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Equilibrium Analysis</span>
+            <span class="hi-text">संतुलन विश्लेषण</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Consumer's Equilibrium: One Commodity Case</span>
+            <span class="hi-text">उपभोक्ता संतुलन: एक वस्तु की स्थिति (One Commodity Case)</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="en-text">
+        <p class="content-p">
+          <strong>Meaning:</strong> A consumer is in equilibrium when, given his income and market price, he buys that quantity of a commodity which maximizes his total satisfaction, and has no incentive to reallocate his expenditure.
+        </p>
+
+        <h3 class="sub-heading">💰 What is Marginal Utility of Money ($MU_M$)?</h3>
+        <p class="content-p">
+          $MU_M$ refers to the <strong>'worth of a rupee'</strong> to the consumer. It is the utility he derives from a standard basket of goods that can be purchased with ₹1. In cardinal analysis, **$MU_M$ is assumed to remain constant**.
+        </p>
+      </div>
+
+      <div class="hi-text">
+        <p class="content-p">
+          <strong>अर्थ:</strong> उपभोक्ता संतुलन उस स्थिति को दर्शाता है जिसमें उपभोक्ता अपनी दी गई आय व बाजार कीमतों से <strong>अधिकतम संतुष्टि</strong> प्राप्त करता है तथा अपने व्यय में कोई परिवर्तन नहीं करना चाहता।
+        </p>
+
+        <h3 class="sub-heading">💰 मुद्रा की सीमांत उपयोगिता ($MU_M$) क्या है?</h3>
+        <p class="content-p">
+          $MU_M$ का अर्थ उपभोक्ता के लिए <strong>'एक रुपये के मूल्य'</strong> से है। यह वह उपयोगिता है जो उपभोक्ता ₹१ खर्च करके प्राप्त करने की अपेक्षा रखता है। मार्शल के विश्लेषण में **$MU_M$ को स्थिर (Constant)** माना जाता है।
+        </p>
+      </div>
+
+      <div class="formula-box">
+        <div class="formula-header">
+          <span class="en-text">⚖️ Equilibrium Condition (One Commodity $X$)</span>
+          <span class="hi-text">⚖️ संतुलन की शर्त (एक वस्तु $X$)</span>
+        </div>
+        <div class="formula-math">$$MU_X \text{ (in ₹)} = P_X \quad \Longleftrightarrow \quad \frac{MU_X \text{ (in utils)}}{P_X} = MU_M$$</div>
+        <div class="formula-notes">
+          <span class="en-text">$$\text{Satisfaction Gained (Margin)} = \text{Sacrifice Made (Price Paid)}$$</span>
+          <span class="hi-text">$$\text{प्राप्त संतुष्टि (सीमांत उपयोगिता)} = \text{किया गया त्याग (कीमत)}$$</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">
+        <span class="en-text">🔄 Disequilibrium &amp; Restoring Adjustment</span>
+        <span class="hi-text">🔄 असंतुलन की स्थिति एवं समायोजन</span>
+      </h3>
+      <div class="custom-table-wrapper">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th><span class="en-text">Situation</span><span class="hi-text">स्थिति</span></th>
+              <th><span class="en-text">Economic Meaning</span><span class="hi-text">आर्थिक अर्थ</span></th>
+              <th><span class="en-text">Consumer Reaction</span><span class="hi-text">उपभोक्ता की प्रतिक्रिया</span></th>
+              <th><span class="en-text">Final Outcome</span><span class="hi-text">अंतिम परिणाम</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>$MU_X > P_X$ (<span class="en-text">or</span><span class="hi-text">अथवा</span> $\frac{MU_X}{P_X} > MU_M$)</strong></td>
+              <td><span class="en-text">Gain in utility is greater than sacrifice in price</span><span class="hi-text">संतुष्टि का लाभ चुकाई गई कीमत (त्याग) से अधिक है</span></td>
+              <td><span class="en-text">Consumer <strong>buys more</strong> of Good $X$</span><span class="hi-text">उपभोक्ता वस्तु $X$ का <strong>अधिक उपभोग</strong> करेगा</span></td>
+              <td><span class="en-text">By Law of DMU, $MU_X$ falls until $\mathbf{MU_X = P_X}$</span><span class="hi-text">DMU नियम से $MU_X$ घटकर पुनः $\mathbf{MU_X = P_X}$ हो जाएगी</span></td>
+            </tr>
+            <tr>
+              <td><strong>$MU_X < P_X$ (<span class="en-text">or</span><span class="hi-text">अथवा</span> $\frac{MU_X}{P_X} < MU_M$)</strong></td>
+              <td><span class="en-text">Gain in utility is less than sacrifice in price</span><span class="hi-text">संतुष्टि का लाभ चुकाई गई कीमत से कम है</span></td>
+              <td><span class="en-text">Consumer <strong>buys less</strong> of Good $X$</span><span class="hi-text">उपभोक्ता वस्तु $X$ का <strong>कम उपभोग</strong> करेगा</span></td>
+              <td><span class="en-text">$MU_X$ rises until $\mathbf{MU_X = P_X}$</span><span class="hi-text">$MU_X$ बढ़कर पुनः $\mathbf{MU_X = P_X}$ पर संतुलन लाएगी</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 5: CONSUMER'S EQUILIBRIUM: TWO COMMODITIES CASE
+         ========================================== -->
+    <section id="topic5" class="module-card">
+      <div class="module-header">
+        <div class="module-num">5</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Multi-Commodity Analysis</span>
+            <span class="hi-text">बहु-वस्तु विश्लेषण</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Two Commodities Case: Law of Equi-Marginal Utility</span>
+            <span class="hi-text">दो वस्तुओं की स्थिति: सम-सीमांत उपयोगिता नियम</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="en-text">
+        <p class="content-p">
+          When a consumer spends his income on two goods, $X$ and $Y$, he strikes equilibrium in accordance with the <strong>Law of Equi-Marginal Utility</strong> (also called <em>Gossen's Second Law</em>).
+        </p>
+      </div>
+      <div class="hi-text">
+        <p class="content-p">
+          जब कोई उपभोक्ता अपनी आय दो वस्तुओं ($X$ और $Y$) पर खर्च करता है, तो वह <strong>सम-सीमांत उपयोगिता नियम (Law of Equi-Marginal Utility / गोसेन का द्वितीय नियम)</strong> के अनुसार संतुलन प्राप्त करता है।
+        </p>
+      </div>
+
+      <div class="formula-box">
+        <div class="formula-header">
+          <span class="en-text">⚖️ Equilibrium Condition (Two Goods $X$ and $Y$)</span>
+          <span class="hi-text">⚖️ संतुलन की शर्त (दो वस्तुएँ $X$ तथा $Y$)</span>
+        </div>
+        <div class="formula-math">$$\frac{MU_X}{P_X} = \frac{MU_Y}{P_Y} = MU_M$$</div>
+        <div class="formula-notes">
+          <span class="en-text">Rupee worth of satisfaction derived from Good $X$ = Rupee worth of satisfaction derived from Good $Y$ = Worth of ₹1 ($MU_M$).</span>
+          <span class="hi-text">वस्तु $X$ पर खर्च किए गए अंतिम रुपये की सीमांत उपयोगिता = वस्तु $Y$ पर खर्च किए गए अंतिम रुपये की सीमांत उपयोगिता = मुद्रा की सीमांत उपयोगिता ($MU_M$)।</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">
+        <span class="en-text">🔄 Adjustment When $\frac{MU_X}{P_X} \neq \frac{MU_Y}{P_Y}$</span>
+        <span class="hi-text">🔄 असंतुलन की स्थिति में समायोजन प्रक्रिया</span>
+      </h3>
+      <ul class="concept-list">
+        <li>
+          <strong><span class="en-text">When $\frac{MU_X}{P_X} > \frac{MU_Y}{P_Y}$ :</span><span class="hi-text">जब $\frac{MU_X}{P_X} > \frac{MU_Y}{P_Y}$ हो :</span></strong>
+          <span class="en-text">The consumer gets more utility per rupee from Good $X$ than Good $Y$. Hence, he consumes **more of $X$ and less of $Y$**. As a result, $MU_X$ falls and $MU_Y$ rises until equality $\frac{MU_X}{P_X} = \frac{MU_Y}{P_Y}$ is restored.</span>
+          <span class="hi-text">उपभोक्ता को $X$ पर खर्च रुपये से $Y$ की तुलना में अधिक संतुष्टि मिलती है। अतः वह <strong>$X$ की अधिक तथा $Y$ की कम इकाइयाँ खरीदेगा</strong>, जिससे $MU_X$ गिरेगी और $MU_Y$ बढ़ेगी जब तक कि दोनों बराबर न हो जाएं।</span>
+        </li>
+        <li>
+          <strong><span class="en-text">When $\frac{MU_X}{P_X} < \frac{MU_Y}{P_Y}$ :</span><span class="hi-text">जब $\frac{MU_X}{P_X} < \frac{MU_Y}{P_Y}$ हो :</span></strong>
+          <span class="en-text">The consumer gets more utility per rupee from Good $Y$. Hence, he consumes **more of $Y$ and less of $X$** until balance is restored.</span>
+          <span class="hi-text">उपभोक्ता <strong>$Y$ की अधिक तथा $X$ की कम इकाइयाँ खरीदेगा</strong> जब तक कि $\frac{MU_X}{P_X} = \frac{MU_Y}{P_Y}$ न हो जाए।</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: SOLVED TEXTBOOK & BOARD NUMERICALS
+         ========================================== -->
+    <section id="solved-numericals" class="module-card" style="border-color: rgba(16, 185, 129, 0.45);">
+      <div class="module-header">
+        <div class="module-num" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">🧮</div>
+        <div>
+          <div class="module-subtitle" style="color: #10b981;">
+            <span class="en-text">Calculation Studio</span>
+            <span class="hi-text">संख्यात्मक हल स्टूडियो</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Solved CBSE Board Numericals &amp; Schedule Analysis</span>
+            <span class="hi-text">हल सहित परीक्षा उपयोगी संख्यात्मक प्रश्न (Numericals)</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Problem 1 -->
+      <div class="numerical-card">
+        <div class="pyq-badge">
+          <span class="en-text">Textbook Example 1 • 3 Marks • TU &amp; MU Schedule</span>
+          <span class="hi-text">पाठ्यपुस्तक उदाहरण १ • ३ अंक • तालिका से MU ज्ञात करना</span>
+        </div>
+        <div class="numerical-question">
+          <span class="en-text">Q1. Derive the Marginal Utility ($MU$) schedule from the following Total Utility ($TU$) schedule:</span>
+          <span class="hi-text">प्र. १. निम्नलिखित कुल उपयोगिता ($TU$) तालिका से सीमांत उपयोगिता ($MU$) अनुसूची ज्ञात कीजिए:</span>
+        </div>
+        <div class="given-data-grid">
+          <div>• Units / इकाइयाँ: 0, 1, 2, 3, 4, 5</div>
+          <div>• $TU$ (utils / यूटिल्स): 0, 15, 28, 40, 51, 61</div>
+        </div>
+        <div class="step-box">
+          <div class="step-item"><strong><span class="en-text">Formula / सूत्र:</span><span class="hi-text">सूत्र:</span></strong> $MU_n = TU_n - TU_{n-1}$</div>
+          <div class="step-item"><strong>Unit 1:</strong> $MU_1 = 15 - 0 = \mathbf{15\text{ utils}}$</div>
+          <div class="step-item"><strong>Unit 2:</strong> $MU_2 = 28 - 15 = \mathbf{13\text{ utils}}$</div>
+          <div class="step-item"><strong>Unit 3:</strong> $MU_3 = 40 - 28 = \mathbf{12\text{ utils}}$</div>
+          <div class="step-item"><strong>Unit 4:</strong> $MU_4 = 51 - 40 = \mathbf{11\text{ utils}}$</div>
+          <div class="step-item"><strong>Unit 5:</strong> $MU_5 = 61 - 51 = \mathbf{10\text{ utils}}$</div>
+        </div>
+        <div class="final-answer-badge">
+          <span class="en-text">✓ Derived $MU$ Schedule: $15, 13, 12, 11, 10\text{ utils}$. Notice that $MU$ is continuously falling (Law of DMU).</span>
+          <span class="hi-text">✓ प्राप्त $MU$ अनुसूची: १५, १३, १२, ११, १० यूटिल्स (ह्रासमान सीमांत उपयोगिता नियम सिद्ध होता है)।</span>
+        </div>
+      </div>
+
+      <!-- Problem 2 -->
+      <div class="numerical-card">
+        <div class="pyq-badge">
+          <span class="en-text">Textbook Example 4 • 3 Marks • 1-Commodity Equilibrium</span>
+          <span class="hi-text">पाठ्यपुस्तक उदाहरण ४ • ३ अंक • १-वस्तु संतुलन</span>
+        </div>
+        <div class="numerical-question">
+          <span class="en-text">Q2. Let the price of a commodity be $P_X = ₹10$ and the $MU$ in terms of money for 5 units be: $14, 12, 10, 8, 6$. How many units should a consumer purchase to be in equilibrium?</span>
+          <span class="hi-text">प्र. २. मान लीजिए किसी वस्तु की कीमत $P_X = ₹10$ है तथा ५ इकाइयों की मुद्रा रूपी सीमांत उपयोगिता क्रमशः १४, १२, १०, ८, ६ रुपये है। संतुलन हेतु उपभोक्ता को कितनी इकाइयाँ खरीदनी चाहिए?</span>
+        </div>
+        <div class="given-data-grid">
+          <div>• Price / कीमत: $P_X = ₹10$</div>
+          <div>• $MU_X \text{ (in ₹)}$: U1=14, U2=12, U3=10, U4=8, U5=6</div>
+          <div>• Condition / शर्त: $MU_X = P_X$</div>
+        </div>
+        <div class="step-box">
+          <div class="step-item"><strong>Step 1:</strong> At Unit 1 &amp; 2: $MU_X > P_X$ ($₹14 > ₹10$ and $₹12 > ₹10$) $\implies$ <span class="en-text">Consumer continues buying</span><span class="hi-text">उपभोक्ता उपभोग जारी रखेगा</span>.</div>
+          <div class="step-item"><strong>Step 2:</strong> At Unit 3: $MU_X = ₹10$ and $P_X = ₹10 \implies \mathbf{MU_X = P_X}$ (<span class="en-text">Equilibrium</span><span class="hi-text">संतुलन बिंदु</span>).</div>
+          <div class="step-item"><strong>Step 3:</strong> At Unit 4 &amp; 5: $MU_X < P_X$ ($₹8 < ₹10$ and $₹6 < ₹10$) $\implies$ <span class="en-text">Will not buy</span><span class="hi-text">उपभोग नहीं करेगा</span>.</div>
+        </div>
+        <div class="final-answer-badge">
+          <span class="en-text">✓ Answer: The consumer should purchase exactly **3 units** to be in equilibrium.</span>
+          <span class="hi-text">✓ उत्तर: उपभोक्ता को ठीक **३ इकाइयाँ** खरीदनी चाहिए।</span>
+        </div>
+      </div>
+
+      <!-- Problem 3 -->
+      <div class="numerical-card">
+        <div class="pyq-badge">
+          <span class="en-text">Textbook Example 8 • 3 Marks • 2-Commodities Equilibrium</span>
+          <span class="hi-text">पाठ्यपुस्तक उदाहरण ८ • ३ अंक • २-वस्तु संतुलन गणना</span>
+        </div>
+        <div class="numerical-question">
+          <span class="en-text">Q3. A consumer consumes two goods $X$ and $Y$ whose prices are $P_X = ₹6$ and $P_Y = ₹8$ per unit respectively. If $MU_Y = 24\text{ utils}$ at the point of consumer's equilibrium, calculate $MU_X$.</span>
+          <span class="hi-text">प्र. ३. एक उपभोक्ता दो वस्तुओं $X$ और $Y$ का उपभोग करता है जिनकी कीमतें क्रमशः $P_X = ₹6$ तथा $P_Y = ₹8$ हैं। यदि संतुलन बिंदु पर $MU_Y = 24\text{ utils}$ है, तो $MU_X$ का मान ज्ञात कीजिए।</span>
+        </div>
+        <div class="given-data-grid">
+          <div>• $P_X = ₹6$, $P_Y = ₹8$</div>
+          <div>• $MU_Y = 24\text{ utils}$</div>
+          <div>• To find / ज्ञात करना है: $MU_X$</div>
+        </div>
+        <div class="step-box">
+          <div class="step-item"><strong><span class="en-text">Step 1 (Equilibrium Equation):</span><span class="hi-text">चरण १ (संतुलन समीकरण):</span></strong> $$\frac{MU_X}{P_X} = \frac{MU_Y}{P_Y}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 2 (Substitute values):</span><span class="hi-text">चरण २ (मान रखने पर):</span></strong> $$\frac{MU_X}{6} = \frac{24}{8}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 3 (Solve):</span><span class="hi-text">चरण ३ (हल करने पर):</span></strong> $$\frac{MU_X}{6} = 3 \implies MU_X = 3 \times 6 = \mathbf{18\text{ utils}}$$</div>
+        </div>
+        <div class="final-answer-badge">
+          <span class="en-text">✓ Answer: $MU_X = 18\text{ utils}$ at consumer's equilibrium.</span>
+          <span class="hi-text">✓ उत्तर: संतुलन बिंदु पर वस्तु $X$ की सीमांत उपयोगिता $MU_X = 18\text{ utils}$ होगी।</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: INTERACTIVE MASTERY CHECK
+         ========================================== -->
+    <section id="interactive-practice" class="interactive-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <div style="font-size: 0.8rem; font-weight: 800; color: var(--accent-gold); text-transform: uppercase;">
+            <span class="en-text">Self-Assessment Check</span>
+            <span class="hi-text">स्वयं मूल्यांकन प्रश्नोत्तरी</span>
+          </div>
+          <h2 style="font-size: 1.25rem; font-weight: 900; color: var(--text-main); margin: 0;">
+            <span class="en-text">Microeconomics Utility Quiz &amp; Blanks</span>
+            <span class="hi-text">उपयोगिता विश्लेषण अभ्यास व रिक्त स्थान</span>
+          </h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button onclick="checkAllBlanks()" class="btn-check">
+            <span class="en-text">Check All</span>
+            <span class="hi-text">सभी जांचें</span>
+          </button>
+          <button onclick="resetAllBlanks()" class="btn-hint">
+            <span class="en-text">Reset</span>
+            <span class="hi-text">रीसेट</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="scoreDisplay" class="score-hud">
+        <span class="en-text">📊 Ready to test your understanding: Type your answers below.</span>
+        <span class="hi-text">📊 अभ्यास हेतु तैयार: नीचे उत्तर लिखें और जांचें।</span>
+        <span>Accuracy: --%</span>
+      </div>
+
+      <!-- Blank 1 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">1. When Marginal Utility is zero ($MU = 0$), Total Utility ($TU$) is at its __________.</span>
+          <span class="hi-text">१. जब सीमांत उपयोगिता शून्य ($MU = 0$) होती है, तब कुल उपयोगिता ($TU$) __________ होती है।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="1" data-answers="maximum,max,maximum and constant,highest,अधिकतम,स्थिर" data-display-answer="Maximum (अधिकतम / तृप्ति बिंदु)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint1')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint1" class="hint-drawer">
+          <span class="en-text">💡 Represents the point of saturation/satiety where additional units give no more utility.</span>
+          <span class="hi-text">💡 यह पूर्ण तृप्ति (Saturation) का बिंदु होता है।</span>
+        </div>
+        <div id="fb-1" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 2 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">2. The Law of Diminishing Marginal Utility is also known as the Fundamental __________ Law.</span>
+          <span class="hi-text">२. ह्रासमान सीमांत उपयोगिता नियम को आधारभूत __________ नियम भी कहा जाता है।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="2" data-answers="psychological,psychological law,satisfaction,fundamental psychological law,मनोवैज्ञानिक,संतुष्टि" data-display-answer="Psychological (मनोवैज्ञानिक नियम)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint2')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint2" class="hint-drawer">
+          <span class="en-text">💡 Named because it is based on human psychological reaction to continuous consumption.</span>
+          <span class="hi-text">💡 क्योंकि यह निरंतर उपभोग पर मानव मनोविज्ञान पर आधारित है।</span>
+        </div>
+        <div id="fb-2" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 3 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">3. In a single commodity case, consumer equilibrium is struck when $MU_X / P_X$ equals __________.</span>
+          <span class="hi-text">३. एक वस्तु की स्थिति में उपभोक्ता संतुलन तब होता है जब $MU_X / P_X$ बराबर हो __________ के।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="3" data-answers="mum,mu of money,marginal utility of money,mu_m,मुद्रा की सीमांत उपयोगिता" data-display-answer="MU_M (Marginal Utility of Money / मुद्रा की सीमांत उपयोगिता)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint3')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint3" class="hint-drawer">
+          <span class="en-text">💡 Represents the rupee worth of satisfaction specified by the consumer.</span>
+          <span class="hi-text">💡 यह उपभोक्ता द्वारा निर्धारित ₹१ के मूल्य की उपयोगिता को दर्शाता है।</span>
+        </div>
+        <div id="fb-3" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 4 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">4. If $TU$ from consuming 2 units is 14 utils and from 3 units is 18 utils, the $MU$ of the 3rd unit is __________ utils.</span>
+          <span class="hi-text">४. यदि २ इकाइयों से कुल उपयोगिता १४ यूटिल्स तथा ३ इकाइयों से १८ यूटिल्स है, तो तीसरी इकाई की $MU$ __________ यूटिल्स होगी।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="4" data-answers="4,4 utils,4utils,४" data-display-answer="4 utils (४ यूटिल्स)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint4')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint4" class="hint-drawer">
+          <span class="en-text">💡 Formula: $MU_3 = TU_3 - TU_2 = 18 - 14$.</span>
+          <span class="hi-text">💡 सूत्र: $MU_3 = TU_3 - TU_2 = 18 - 14 = 4$.</span>
+        </div>
+        <div id="fb-4" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 5 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">5. When a consumer consumes beyond the point of saturation, Marginal Utility becomes __________ (positive / negative / zero).</span>
+          <span class="hi-text">५. पूर्ण तृप्ति के बिंदु के बाद उपभोग जारी रखने पर सीमांत उपयोगिता ($MU$) __________ हो जाती है।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="5" data-answers="negative,-ve,ऋणात्मक,negative utility" data-display-answer="Negative (ऋणात्मक)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint5')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint5" class="hint-drawer">
+          <span class="en-text">💡 Leads to dissatisfaction (disutility) and causes total utility to fall.</span>
+          <span class="hi-text">💡 इससे असंतुष्टि (Disutility) होती है और कुल उपयोगिता गिरने लगती है।</span>
+        </div>
+        <div id="fb-5" class="feedback-msg"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Initialize KaTeX Auto-render
+    function renderMath() {
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError: false
+        });
+      }
+    }
+    document.addEventListener("DOMContentLoaded", renderMath);
+
+    // Language Switcher Logic
+    function setLanguage(lang) {
+      if (lang === 'hi') {
+        document.body.classList.remove('lang-english');
+        document.body.classList.add('lang-hindi');
+        document.getElementById('btnHi').classList.add('active');
+        document.getElementById('btnEn').classList.remove('active');
+        localStorage.setItem('nextsem_lang', 'hi');
+      } else {
+        document.body.classList.remove('lang-hindi');
+        document.body.classList.add('lang-english');
+        document.getElementById('btnEn').classList.add('active');
+        document.getElementById('btnHi').classList.remove('active');
+        localStorage.setItem('nextsem_lang', 'en');
+      }
+      renderMath();
+    }
+
+    // Initialize Language from localStorage
+    const savedLang = localStorage.getItem('nextsem_lang') || 'en';
+    setLanguage(savedLang);
+
+    // Theme Management
+    function initTheme() {
+      const savedTheme = localStorage.getItem('nextsem_theme') || 'dark';
+      const isLight = savedTheme === 'light';
+      if (isLight) {
+        document.body.classList.add('light-theme');
+        document.body.classList.add('light-mode');
+        document.getElementById('themeIcon').textContent = '🌙';
+        document.getElementById('themeLabel').textContent = 'Dark';
+      } else {
+        document.body.classList.remove('light-theme');
+        document.body.classList.remove('light-mode');
+        document.getElementById('themeIcon').textContent = '☀️';
+        document.getElementById('themeLabel').textContent = 'Light';
+      }
+    }
+
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      document.body.classList.toggle('light-mode', isLight);
+      const newTheme = isLight ? 'light' : 'dark';
+      localStorage.setItem('nextsem_theme', newTheme);
+      document.getElementById('themeIcon').textContent = isLight ? '🌙' : '☀️';
+      document.getElementById('themeLabel').textContent = isLight ? 'Dark' : 'Light';
+    }
+
+    document.getElementById('themeToggleBtn').addEventListener('click', toggleTheme);
+    initTheme();
+
+    // Fill in the blanks logic
+    function normalizeStr(str) {
+      return (str || '').toLowerCase().trim().replace(/[\s\-_]+/g, ' ');
+    }
+
+    function checkBlank(btn) {
+      const row = btn.closest('.interactive-row');
+      const input = row.querySelector('.blank-input');
+      const id = input.getAttribute('data-id');
+      const userVal = normalizeStr(input.value);
+      const acceptedAnswers = input.getAttribute('data-answers').split(',').map(normalizeStr);
+      const displayAnswer = input.getAttribute('data-display-answer');
+      const fb = document.getElementById('fb-' + id);
+
+      if (!userVal) {
+        fb.innerHTML = '⚠️ <span style="color: var(--accent-gold);">Please type an answer before checking / उत्तर लिखें।</span>';
+        return;
+      }
+
+      const isMatch = acceptedAnswers.some(ans => userVal.includes(ans) || ans.includes(userVal));
+
+      if (isMatch) {
+        input.classList.remove('incorrect');
+        input.classList.add('correct');
+        fb.className = 'feedback-msg correct';
+        fb.innerHTML = '✓ <strong>Correct! / सही उत्तर!</strong> <span style="margin-left: 6px;">Answer: <span class="answer-badge">' + displayAnswer + '</span></span>';
+      } else {
+        input.classList.remove('correct');
+        input.classList.add('incorrect');
+        fb.className = 'feedback-msg incorrect';
+        fb.innerHTML = '✗ <strong>Not quite / पुनः प्रयास करें।</strong> <span style="margin-left: 6px;">Correct Answer: <span class="answer-badge">' + displayAnswer + '</span></span>';
+      }
+
+      updateScore();
+    }
+
+    function toggleHint(hintId) {
+      const el = document.getElementById(hintId);
+      if (el) {
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    function checkAllBlanks() {
+      document.querySelectorAll('.btn-check').forEach(btn => btn.click());
+    }
+
+    function resetAllBlanks() {
+      document.querySelectorAll('.blank-input').forEach(input => {
+        input.value = '';
+        input.classList.remove('correct', 'incorrect');
+      });
+      document.querySelectorAll('.feedback-msg').forEach(fb => {
+        fb.innerHTML = '';
+        fb.className = 'feedback-msg';
+      });
+      document.querySelectorAll('.hint-drawer').forEach(hd => {
+        hd.style.display = 'none';
+      });
+      updateScore();
+    }
+
+    function updateScore() {
+      const inputs = document.querySelectorAll('.blank-input');
+      const correctInputs = document.querySelectorAll('.blank-input.correct');
+      const total = inputs.length;
+      const correct = correctInputs.length;
+      const pct = Math.round((correct / total) * 100);
+      const display = document.getElementById('scoreDisplay');
+      if (display) {
+        display.innerHTML = `<span>📊 Correct / सही: ${correct} / ${total}</span><span>Accuracy / सटीकता: ${pct}%</span>`;
+      }
+    }
+  </script>
+</body>
+</html>

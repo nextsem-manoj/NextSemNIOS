@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 7 Maths (Ganita Prakash) Ch 6: Number Play — 20 High-Yield Exam MCQs</title>
+  <meta name="description" content="Master 20 exam-focused MCQs from NCERT Class 7 Ganita Prakash Part I Chapter 6: Number Play (संख्याओं का खेल). Bilingual English & Hindi with instant answer reveal and step-by-step solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #060c18;
+      --card-bg: #0c1328;
+      --card-border: rgba(56, 189, 248, 0.2);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-emerald: #10b981;
+      --accent-cyan: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-red: #ef4444;
+      --header-surface: rgba(6, 12, 24, 0.95);
+      --font-body: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: rgba(14, 165, 233, 0.25);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-emerald: #059669;
+      --accent-cyan: #0284c7;
+      --accent-gold: #d97706;
+      --accent-red: #dc2626;
+      --header-surface: rgba(255, 255, 255, 0.95);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    /* Top Breadcrumb Bar */
+    .top-breadcrumb-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb-trail a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .breadcrumb-trail a:hover {
+      text-decoration: underline;
+      color: var(--accent-emerald);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    .breadcrumb-current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill-btn {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .pill-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    .pill-btn.active {
+      background: var(--accent-cyan);
+      color: #060c18;
+      border-color: var(--accent-cyan);
+    }
+
+    /* Container */
+    .main-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(12, 19, 40, 0.95) 0%, rgba(16, 24, 52, 0.85) 100%);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-primary {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    .badge-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .badge-gold {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-gold);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .hero-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    /* Score & Filter Bar */
+    .control-dashboard {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .score-meter-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .score-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(56, 189, 248, 0.2) 100%);
+      border: 2px solid var(--accent-emerald);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .score-details {
+      flex: 1;
+    }
+
+    .score-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .progress-bar-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-emerald));
+      border-radius: 9999px;
+      transition: width 0.4s ease;
+    }
+
+    .filter-tabs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .filter-btn:hover {
+      color: var(--text-main);
+      border-color: var(--accent-cyan);
+    }
+
+    .filter-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+    }
+
+    /* MCQ Question Cards */
+    .mcq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mcq-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px 20px;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .mcq-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .mcq-card.answered-correct {
+      border-color: var(--accent-emerald);
+      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(16, 185, 129, 0.04) 100%);
+    }
+
+    .mcq-card.answered-wrong {
+      border-color: var(--accent-red);
+      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(239, 68, 68, 0.04) 100%);
+    }
+
+    .mcq-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .mcq-qnum-badge {
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+    }
+
+    .mcq-topic-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      background: rgba(245, 158, 11, 0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .mcq-question-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+
+    .mcq-question-text-hi {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    /* Options List */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1.5px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .option-btn:hover:not(:disabled) {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: var(--accent-cyan);
+      transform: translateX(3px);
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-content {
+      flex: 1;
+    }
+
+    .opt-en {
+      display: block;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .opt-hi {
+      display: block;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* State: Selected Correct */
+    .option-btn.opt-correct {
+      background: rgba(16, 185, 129, 0.16) !important;
+      border-color: var(--accent-emerald) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+    }
+
+    .option-btn.opt-correct .opt-letter {
+      background: var(--accent-emerald);
+      color: #060c18;
+    }
+
+    /* State: Selected Incorrect */
+    .option-btn.opt-wrong {
+      background: rgba(239, 68, 68, 0.16) !important;
+      border-color: var(--accent-red) !important;
+      color: #ffffff !important;
+      animation: shake 0.4s ease;
+    }
+
+    .option-btn.opt-wrong .opt-letter {
+      background: var(--accent-red);
+      color: #ffffff;
+    }
+
+    /* State: Revealed Correct Answer */
+    .option-btn.opt-revealed-correct {
+      background: rgba(16, 185, 129, 0.12) !important;
+      border: 2px dashed var(--accent-emerald) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25);
+    }
+
+    .option-btn.opt-revealed-correct .opt-letter {
+      background: var(--accent-emerald);
+      color: #060c18;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    /* Solution Drawer */
+    .solution-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      display: none;
+    }
+
+    .solution-box.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .solution-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .solution-text {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    .solution-text code {
+      font-family: var(--font-mono);
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--accent-gold);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bottom Sticky Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--card-border);
+      padding: 12px 16px;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .bottom-stats {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .bottom-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Printable Styling */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding-bottom: 0;
+      }
+      .top-breadcrumb-bar, .control-dashboard, .bottom-bar, .pill-btn, .filter-tabs {
+        display: none !important;
+      }
+      .mcq-card {
+        border: 1px solid #cccccc !important;
+        background: #ffffff !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 16px;
+      }
+      .option-btn {
+        border: 1px solid #dddddd !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .solution-box {
+        display: block !important;
+        background: #f0fdf4 !important;
+        border: 1px solid #86efac !important;
+        color: #000000 !important;
+      }
+    }
+
+    /* Language Display Controls */
+    body.lang-en-only .opt-hi,
+    body.lang-en-only .mcq-question-text-hi {
+      display: none !important;
+    }
+
+    body.lang-hi-only .opt-en,
+    body.lang-hi-only .mcq-question-text:not(.mcq-question-text-hi) {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Complete Navbar Breadcrumbs -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb Navigation">
+    <div class="breadcrumb-trail">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=7">Class 7</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=7&subject=c7-maths">Ganita Prakash (Part I)</a>
+      <span class="breadcrumb-separator">❯</span>
+      <span class="breadcrumb-current">Ch 6: Number Play (20 Exam MCQs)</span>
+    </div>
+
+    <div class="top-actions">
+      <!-- Language Switcher -->
+      <button id="lang-toggle-btn" class="pill-btn" onclick="cycleLanguage()" title="Switch Language">
+        🌐 <span id="lang-label">Bilingual (English / हिंदी)</span>
+      </button>
+
+      <!-- Theme Switcher -->
+      <button id="theme-toggle-btn" class="pill-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        🌙 <span id="theme-label">Dark</span>
+      </button>
+
+      <!-- View PDF -->
+      <a href="/pdf/Class 07/7th_Ganita Prakash Part I/gegp106.pdf" target="_blank" rel="noopener noreferrer" class="pill-btn" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+        📖 Open Chapter PDF
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+
+    <!-- Hero Card -->
+    <header class="hero-card">
+      <div class="hero-badge-row">
+        <span class="badge-tag badge-primary">NCERT Grade 7 Mathematics</span>
+        <span class="badge-tag badge-emerald">Ganita Prakash Part I</span>
+        <span class="badge-tag badge-gold">20 High-Yield Exam MCQs</span>
+      </div>
+      <h1 class="hero-title">Chapter 6: Number Play (संख्याओं का खेल)</h1>
+      <p class="hero-subtitle">
+        Master essential CBSE &amp; NCERT exam questions: Parity rules (सम व विषम), Lo Shu &amp; Khajuraho Chautīsā Yantra Magic Squares (34), Indian Virahāṅka–Fibonacci Sequence (विरहाङ्क संख्याएँ), and Cryptarithms (अंक पहेलियाँ).
+      </p>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button class="pill-btn active" onclick="window.print()">
+          🖨️ Print Exam Worksheet (A4 / A5)
+        </button>
+        <button class="pill-btn" onclick="resetAllMcqs()">
+          🔄 Reset All Answers
+        </button>
+      </div>
+    </header>
+
+    <!-- Score Dashboard & Topic Filters -->
+    <section class="control-dashboard">
+      <div class="score-meter-wrap">
+        <div class="score-circle">
+          <span id="score-val">0</span>
+          <span style="font-size: 0.65rem; opacity: 0.7;">/ 20</span>
+        </div>
+        <div class="score-details">
+          <div class="score-label">
+            <span>Exam Mastery Progress</span>
+            <span id="score-pct">0% Complete</span>
+          </div>
+          <div class="progress-bar-track">
+            <div id="score-bar" class="progress-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterQuestions('all', this)">All (20)</button>
+        <button class="filter-btn" onclick="filterQuestions('parity', this)">Parity (Q1–Q10)</button>
+        <button class="filter-btn" onclick="filterQuestions('magic', this)">Magic Squares (Q11–Q15)</button>
+        <button class="filter-btn" onclick="filterQuestions('virahanka', this)">Virahāṅka (Q16–Q19)</button>
+        <button class="filter-btn" onclick="filterQuestions('crypto', this)">Cryptarithm (Q20)</button>
+      </div>
+    </section>
+
+    <!-- 20 Interactive MCQs Container -->
+    <div id="mcq-container" class="mcq-list">
+      <!-- MCQs injected via JavaScript -->
+    </div>
+
+  </main>
+
+  <!-- Sticky Bottom Bar -->
+  <footer class="bottom-bar">
+    <div class="bottom-stats">
+      <span id="bottom-score-text">Answered: 0 / 20 • Score: 0 / 20</span>
+    </div>
+    <div class="bottom-actions">
+      <button class="pill-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        ⬆️ Top
+      </button>
+      <button class="pill-btn" onclick="toggleTheme()">
+        <span id="bottom-theme-icon">🌙 Mode</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Question Data & Interactive Engine -->
+  <script>
+    const MCQ_DATA = [
+      {
+        id: 1,
+        category: 'parity',
+        topic: 'Numbers Tell us Things',
+        qEn: 'In the queue game "Numbers Tell us Things", each person calls out the number of people in front of them who are taller than them. If a person calls out "0", what does it definitely mean?',
+        qHi: '"संख्याएँ हमें कुछ बताती हैं" खेल में, प्रत्येक बच्चा अपने आगे खड़े उन बच्चों की संख्या बोलता है जो उससे लंबे हैं। यदि कोई बच्चा "0" बोलता है, तो इसका निश्चित रूप से क्या अर्थ है?',
+        options: [
+          { en: 'They are the shortest person in the whole group.', hi: 'वे पूरे समूह में सबसे छोटे व्यक्ति हैं।' },
+          { en: 'No one standing in front of them is taller than them (or they are the first person).', hi: 'उनके आगे खड़ा कोई भी व्यक्ति उनसे लंबा नहीं है (या वे पंक्ति में पहले व्यक्ति हैं)।' },
+          { en: 'They are strictly taller than all people behind them as well.', hi: 'वे अपने पीछे खड़े सभी लोगों से भी निश्चित रूप से लंबे हैं।' },
+          { en: 'There are exactly 0 people standing behind them in line.', hi: 'पंक्ति में उनके पीछे ठीक 0 लोग खड़े हैं।' }
+        ],
+        correct: 1,
+        expEn: 'The rule is strictly relative to the front: a child says "0" if nobody in front is taller than them, or if they are standing first. Someone taller could still be behind them.',
+        expHi: 'यह नियम केवल आगे खड़े व्यक्तियों पर लागू होता है: यदि आगे कोई उनसे लंबा न हो (या वे पहले स्थान पर हों) तो वे "0" बोलेंगे। उनके पीछे कोई उनसे लंबा हो सकता है।'
+      },
+      {
+        id: 2,
+        category: 'parity',
+        topic: 'Numbers Tell us Things',
+        qEn: 'In a group of 8 children lined up one behind another, what is the MAXIMUM possible number any single child could call out using the tallness rule?',
+        qHi: 'एक दूसरे के पीछे खड़े 8 बच्चों के समूह में, लंबाई के नियम का पालन करते हुए कोई एक बच्चा अधिकतम कौन सी संख्या बोल सकता है?',
+        options: [
+          { en: '8', hi: '8' },
+          { en: '7', hi: '7' },
+          { en: '6', hi: '6' },
+          { en: '1', hi: '1' }
+        ],
+        correct: 1,
+        expEn: 'The 8th (last) child has at most 7 people standing in front of them. If all 7 are taller, the maximum possible number is 7.',
+        expHi: '8वें (अंतिम) बच्चे के आगे अधिकतम 7 बच्चे खड़े हो सकते हैं। यदि वे सातों उससे लंबे हों, तो अधिकतम संख्या 7 ही हो सकती है।'
+      },
+      {
+        id: 3,
+        category: 'parity',
+        topic: 'Parity Rules',
+        qEn: 'Kishor has only odd number cards. He wants to pick 5 cards to put into 5 boxes so that their sum equals 30. Why is this mathematically impossible?',
+        qHi: 'किशोर के पास केवल विषम संख्याओं वाले कार्ड हैं। वह 5 कार्ड चुनकर 5 बक्सों में इस प्रकार रखना चाहता है कि उनका योग 30 हो जाए। यह गणितीय रूप से असंभव क्यों है?',
+        options: [
+          { en: 'Because 30 is not divisible by 5.', hi: 'क्योंकि 30 संख्या 5 से विभाज्य नहीं है।' },
+          { en: 'Because the sum of an odd number (5) of odd numbers is ALWAYS ODD, whereas 30 is EVEN.', hi: 'क्योंकि विषम संख्या (5) में विषम संख्याओं का योग सदैव विषम (ODD) होता है, जबकि 30 सम (EVEN) है।' },
+          { en: 'Because odd numbers cannot be added together.', hi: 'क्योंकि विषम संख्याओं को आपस में जोड़ा नहीं जा सकता।' },
+          { en: 'Because all cards must be negative numbers.', hi: 'क्योंकि सभी कार्ड ऋणात्मक संख्या होने चाहिए।' }
+        ],
+        correct: 1,
+        expEn: 'Sum of 5 odd numbers = (Odd + Odd) + (Odd + Odd) + Odd = Even + Even + Odd = ODD. An odd sum can NEVER equal the even number 30!',
+        expHi: '5 विषम संख्याओं का योग = (विषम + विषम) + (विषम + विषम) + विषम = सम + सम + विषम = विषम। अतः विषम संख्याओं का योग कभी भी सम संख्या 30 नहीं हो सकता!'
+      },
+      {
+        id: 4,
+        category: 'parity',
+        topic: 'Consecutive Numbers',
+        qEn: 'Martin and Maria are siblings born exactly 1 year apart. Maria exclaims that the sum of their current ages is 112. Why is Maria mistaken?',
+        qHi: 'मार्टिन और मारिया ठीक 1 वर्ष के अंतर पर जन्मे भाई-बहन हैं। मारिया कहती है कि उनकी वर्तमान आयु का योग 112 है। मारिया का दावा गलत क्यों है?',
+        options: [
+          { en: 'Their ages must both be even numbers.', hi: 'उनकी दोनों की आयु सम संख्या होनी चाहिए।' },
+          { en: 'Two consecutive integers always consist of one even and one odd number, whose sum is ALWAYS ODD (never 112).', hi: 'दो क्रमागत पूर्णांकों में सदैव एक सम और एक विषम संख्या होती है, जिनका योग सदैव विषम (ODD) होता है (112 कभी नहीं हो सकता)।' },
+          { en: '112 is too large for human ages.', hi: '112 मानवीय आयु के लिए बहुत बड़ी संख्या है।' },
+          { en: 'Their ages cannot be added.', hi: 'उनकी आयु को जोड़ा नहीं जा सकता।' }
+        ],
+        correct: 1,
+        expEn: 'Consecutive ages are n and n+1. One is even and one is odd. Even + Odd = ODD. Since 112 is even, their ages can never sum to 112.',
+        expHi: 'क्रमागत आयु n और n+1 होती है। इनमें एक सम और एक विषम संख्या होगी। सम + विषम = विषम। चूँकि 112 एक सम संख्या है, उनका योग 112 होना असंभव है।'
+      },
+      {
+        id: 5,
+        category: 'parity',
+        topic: 'Coin Piggy Bank Parity',
+        qEn: 'Lakpa has an odd number of ₹1 coins, an odd number of ₹5 coins, and an even number of ₹10 coins. He calculated a total of ₹205. Did he make a calculation mistake?',
+        qHi: 'लाक्पा की गुल्लक में ₹1 के विषम सिक्के, ₹5 के विषम सिक्के और ₹10 के सम सिक्के हैं। उसने कुल ₹205 गिने। क्या उसने कोई गणना त्रुटि की?',
+        options: [
+          { en: 'No mistake, ₹205 is an odd number.', hi: 'कोई गलती नहीं, ₹205 एक विषम संख्या है।' },
+          { en: 'Yes, because (Odd × ₹1) + (Odd × ₹5) + (Even × ₹10) = Odd + Odd + Even = EVEN, whereas ₹205 is ODD!', hi: 'हाँ गलती की, क्योंकि (विषम × ₹1) + (विषम × ₹5) + (सम × ₹10) = विषम + विषम + सम = सम (EVEN), जबकि ₹205 विषम है!' },
+          { en: 'No, because ₹10 coins do not affect parity.', hi: 'नहीं, क्योंकि ₹10 के सिक्के समता को प्रभावित नहीं करते।' },
+          { en: 'Cannot be determined without coin count.', hi: 'सिक्कों की सटीक संख्या जाने बिना तय नहीं किया जा सकता।' }
+        ],
+        correct: 1,
+        expEn: 'Odd × 1 = Odd; Odd × 5 = Odd; Even × 10 = Even. Total = Odd + Odd + Even = Even + Even = EVEN. Since ₹205 is odd, Lakpa made a mistake!',
+        expHi: 'विषम × 1 = विषम; विषम × 5 = विषम; सम × 10 = सम। कुल योग = विषम + विषम + सम = सम। चूँकि ₹205 विषम है, लाक्पा ने निश्चित रूप से गलती की है!'
+      },
+      {
+        id: 6,
+        category: 'parity',
+        topic: 'Grid Parity',
+        qEn: 'Without computing the full product, what is the parity of the total number of small squares in a 27 × 13 grid and a 42 × 78 grid respectively?',
+        qHi: 'बिना पूरा गुणा किए बताइए कि 27 × 13 ग्रिड और 42 × 78 ग्रिड में छोटे वर्गों की कुल संख्या की समता (parity) क्रमशः क्या होगी?',
+        options: [
+          { en: 'Even, Odd', hi: 'सम, विषम' },
+          { en: 'Odd, Even', hi: 'विषम, सम' },
+          { en: 'Odd, Odd', hi: 'विषम, विषम' },
+          { en: 'Even, Even', hi: 'सम, सम' }
+        ],
+        correct: 1,
+        expEn: 'Squares = Length × Width. Odd × Odd = Odd (27 × 13 = Odd). Even × Even = Even (42 × 78 = Even).',
+        expHi: 'वर्गों की संख्या = पंक्तियाँ × स्तंभ। विषम × विषम = विषम (27 × 13 = विषम)। सम × सम = सम (42 × 78 = सम)।'
+      },
+      {
+        id: 7,
+        category: 'parity',
+        topic: 'Algebraic Expressions',
+        qEn: 'Which of the following algebraic expressions ALWAYS yields an ODD number for every positive integer m?',
+        qHi: 'निम्नलिखित में से कौन सा बीजगणितीय व्यंजक प्रत्येक धनात्मक पूर्णांक m के लिए सदैव एक विषम संख्या देता है?',
+        options: [
+          { en: '6m + 2', hi: '6m + 2' },
+          { en: '4m - 1', hi: '4m - 1' },
+          { en: '3m + 4', hi: '3m + 4' },
+          { en: '100m', hi: '100m' }
+        ],
+        correct: 1,
+        expEn: '4m is always even (multiple of 4). Even minus 1 (Odd) is ALWAYS ODD. (6m+2 and 100m are always even; 3m+4 varies).',
+        expHi: '4m सदैव सम संख्या होगी। सम संख्या में से 1 (विषम) घटाने पर सदैव विषम संख्या प्राप्त होती है।'
+      },
+      {
+        id: 8,
+        category: 'parity',
+        topic: 'Sum of 1 to 100',
+        qEn: 'What is the parity of the sum of all natural numbers from 1 to 100 (1 + 2 + 3 + ... + 100)?',
+        qHi: '1 से 100 तक की सभी प्राकृतिक संख्याओं के योग (1 + 2 + 3 + ... + 100) की समता क्या है?',
+        options: [
+          { en: 'Odd, because 1 is odd.', hi: 'विषम, क्योंकि 1 एक विषम संख्या है।' },
+          { en: 'Even, because there are 50 odd numbers whose sum is even, plus 50 even numbers.', hi: 'सम, क्योंकि इसमें 50 विषम संख्याएँ हैं जिनका योग सम होगा, और 50 सम संख्याओं का योग भी सम होगा।' },
+          { en: 'Odd, because 100 is even.', hi: 'विषम, क्योंकि 100 सम है।' },
+          { en: 'Zero parity.', hi: 'शून्य समता।' }
+        ],
+        correct: 1,
+        expEn: 'Sum S = (100 × 101) / 2 = 50 × 101 = 5050, which ends in 0 and is EVEN! Also, there are 50 (an even count of) odd numbers, giving an even sum.',
+        expHi: 'योग S = (100 × 101) / 2 = 50 × 101 = 5050, जो एक सम संख्या (EVEN) है। साथ ही 50 विषम संख्याओं का योग भी सम होता है।'
+      },
+      {
+        id: 9,
+        category: 'parity',
+        topic: 'Light Bulb Toggles',
+        qEn: 'A light bulb is initially turned ON. Dorjee toggles its switch 77 times. What will be the final state of the light bulb?',
+        qHi: 'एक बिजली का बल्ब प्रारंभ में चालू (ON) है। दोरजी इसके स्विच को 77 बार दबाता (toggle) है। बल्ब की अंतिम स्थिति क्या होगी?',
+        options: [
+          { en: 'ON', hi: 'चालू (ON)' },
+          { en: 'OFF', hi: 'बंद (OFF)' },
+          { en: 'Flickering', hi: 'टिमटिमाता हुआ' },
+          { en: 'Burnt out', hi: 'फ्यूज हो जाएगा' }
+        ],
+        correct: 1,
+        expEn: 'Starts ON. 1 toggle -> OFF, 2 toggles -> ON, 3 toggles -> OFF. Any ODD number of toggles reverses the state. 77 is odd, so it ends up OFF.',
+        expHi: 'प्रारंभिक अवस्था = ON। 1 बार दबाने पर = OFF, 2 बार पर = ON। विषम बार दबाने पर अवस्था उलट जाती है। 77 विषम संख्या है, अतः बल्ब बंद (OFF) होगा।'
+      },
+      {
+        id: 10,
+        category: 'parity',
+        topic: 'Encyclopaedia Loose Pages',
+        qEn: 'Liswini finds 50 loose sheets from an encyclopaedia. Each sheet has consecutive numbers on front and back (e.g. 1 & 2, 3 & 4). Can the sum of page numbers of all 50 sheets be 6000?',
+        qHi: 'लिसविनी को एक विश्वकोश से 50 ढीले पन्ने मिलते हैं। प्रत्येक पन्ने पर आगे-पीछे 2 क्रमागत पृष्ठ संख्याएँ हैं (जैसे 1 व 2, 3 व 4)। क्या इन 50 पन्नों की पृष्ठ संख्याओं का योग 6000 हो सकता है?',
+        options: [
+          { en: 'No, because each page number is odd.', hi: 'नहीं, क्योंकि प्रत्येक पृष्ठ संख्या विषम है।' },
+          { en: 'Yes, parity-wise it is possible because each sheet sums to an odd number (2k-1 + 2k = 4k-1), and the sum of 50 odd numbers is EVEN (matching 6000).', hi: 'हाँ, समता की दृष्टि से यह संभव है क्योंकि प्रत्येक पन्ने का योग विषम है (2k-1 + 2k = 4k-1), और 50 विषम संख्याओं का योग सम (EVEN) होता है (जो 6000 से मेल खाता है)।' },
+          { en: 'No, because 6000 cannot be divided by 50.', hi: 'नहीं, क्योंकि 6000 को 50 से विभाजित नहीं किया जा सकता।' },
+          { en: 'Yes, but only if all pages are prime numbers.', hi: 'हाँ, लेकिन केवल तभी जब सभी पृष्ठ अभाज्य संख्याएँ हों।' }
+        ],
+        correct: 1,
+        expEn: 'Each sheet has pages (2k-1) and 2k, whose sum is 4k-1 (always Odd). Sum of 50 (an even number of) odd numbers is ALWAYS EVEN. Since 6000 is even, parity allows it!',
+        expHi: 'प्रत्येक पन्ने पर (2k-1) और 2k पृष्ठ होंगे, जिनका योग 4k-1 (सदैव विषम) होगा। 50 विषम संख्याओं का योग सदैव सम (Even) होता है। चूँकि 6000 सम है, अतः समता की दृष्टि से यह संभव है।'
+      },
+      {
+        id: 11,
+        category: 'magic',
+        topic: '3x3 Magic Square',
+        qEn: 'In a 3 × 3 magic square filled with distinct numbers from 1 to 9, what MUST be the magic sum of every row, column, and diagonal?',
+        qHi: '1 से 9 तक की विभिन्न संख्याओं से भरे एक 3 × 3 जादुई वर्ग में प्रत्येक पंक्ति, स्तंभ और विकर्ण का जादुई योग (Magic Sum) क्या होना चाहिए?',
+        options: [
+          { en: '45', hi: '45' },
+          { en: '15', hi: '15' },
+          { en: '18', hi: '18' },
+          { en: '9', hi: '9' }
+        ],
+        correct: 1,
+        expEn: 'Sum of all numbers 1 to 9 is (9 × 10) / 2 = 45. Since there are 3 rows with equal sums, each row must equal 45 / 3 = 15.',
+        expHi: '1 से 9 तक की संख्याओं का कुल योग = 45 होता है। जादुई वर्ग की तीनों पंक्तियों का योग बराबर होता है, इसलिए प्रत्येक पंक्ति का योग 45 ÷ 3 = 15 होना चाहिए।'
+      },
+      {
+        id: 12,
+        category: 'magic',
+        topic: 'Center Cell of 3x3 Magic Square',
+        qEn: 'In a 3 × 3 magic square using numbers 1 to 9, which number MUST occupy the center cell?',
+        qHi: '1 से 9 तक की संख्याओं से बने 3 × 3 जादुई वर्ग के केंद्र (बीच के खाने) में कौन सी संख्या आनी ही चाहिए?',
+        options: [
+          { en: '1', hi: '1' },
+          { en: '9', hi: '9' },
+          { en: '5', hi: '5' },
+          { en: 'Any even number', hi: 'कोई भी सम संख्या' }
+        ],
+        correct: 2,
+        expEn: 'The center cell is part of 4 lines (1 row, 1 col, 2 diagonals). Magic sum = 3 × (center number). Since magic sum = 15, center = 15 / 3 = 5.',
+        expHi: 'केंद्र का खाना 4 रेखाओं (1 पंक्ति, 1 स्तंभ, 2 विकर्ण) में शामिल होता है। जादुई योग = 3 × (केंद्रीय संख्या)। चूँकि योग 15 है, केंद्रीय संख्या = 15 ÷ 3 = 5 होगी।'
+      },
+      {
+        id: 13,
+        category: 'magic',
+        topic: 'Corners of 3x3 Magic Square',
+        qEn: 'Why can the numbers 1 and 9 NEVER be placed in the corner cells of a 3 × 3 magic square (numbers 1 to 9)?',
+        qHi: '1 से 9 की संख्याओं वाले 3 × 3 जादुई वर्ग के कोनों (corners) में 1 और 9 कभी क्यों नहीं आ सकते?',
+        options: [
+          { en: 'Because 1 and 9 are odd numbers.', hi: 'क्योंकि 1 और 9 विषम संख्याएँ हैं।' },
+          { en: 'A corner cell requires THREE distinct pairs adding to 15, but for 1 only two pairs exist (1+5+9 and 1+6+8), so 1 & 9 must be on middle edge cells!', hi: 'कोने के खाने के लिए 15 योग बनाने वाले 3 अलग जोड़ों की आवश्यकता होती है, लेकिन 1 के लिए केवल 2 जोड़े (1+5+9 और 1+6+8) ही संभव हैं, अतः 1 व 9 को बीच के किनारों पर आना होगा!' },
+          { en: 'Corners can only contain prime numbers.', hi: 'कोनों में केवल अभाज्य संख्याएँ आ सकती हैं।' },
+          { en: 'Because 1 + 9 = 10 which is not divisible by 3.', hi: 'क्योंकि 1 + 9 = 10 जो 3 से विभाज्य नहीं है।' }
+        ],
+        correct: 1,
+        expEn: 'Each corner cell belongs to 3 lines (1 row, 1 col, 1 diagonal). Thus it needs 3 pairs summing with it to 15. For 1, only two combinations exist: 1+5+9 and 1+6+8. So 1 and 9 must be in edge positions. The 4 corners MUST be even numbers: 2, 4, 6, 8.',
+        expHi: 'प्रत्येक कोने का खाना 3 रेखाओं का हिस्सा होता है। अतः उसके साथ 15 बनाने वाले 3 जोड़े चाहिए। 1 के लिए केवल 2 जोड़े ही संभव हैं (1+5+9 और 1+6+8)। अतः 1 व 9 कोनों में नहीं आ सकते; चारों कोनों में सम संख्याएँ (2, 4, 6, 8) ही आती हैं।'
+      },
+      {
+        id: 14,
+        category: 'magic',
+        topic: 'Chautīsā Yantra at Khajuraho',
+        qEn: 'The first-ever recorded 4 × 4 magic square is the 10th-century "Chautīsā Yantra" at the Parshvanatha temple in Khajuraho, India. What is its magic sum?',
+        qHi: 'विश्व का सबसे पहला 4 × 4 जादुई वर्ग 10वीं शताब्दी का "चौंतीसा यंत्र" है जो खजुराहो के पार्श्वनाथ मंदिर में उत्कीर्ण है। इसका जादुई योग कितना है?',
+        options: [
+          { en: '30', hi: '30' },
+          { en: '34', hi: '34' },
+          { en: '36', hi: '36' },
+          { en: '40', hi: '40' }
+        ],
+        correct: 1,
+        expEn: 'Chautīs (चौंतीस) means 34 in Hindi. Every row, column, diagonal, and 2×2 sub-grid in this ancient Indian masterpiece adds up to 34!',
+        expHi: 'हिंदी में चौंतीस का अर्थ 34 होता है। इस प्राचीन भारतीय गणितीय चमत्कार में प्रत्येक पंक्ति, स्तंभ, विकर्ण और 2×2 उप-वर्गों का योग 34 होता है!'
+      },
+      {
+        id: 15,
+        category: 'magic',
+        topic: 'Lo Shu Turtle Shell Square',
+        qEn: 'What is the name and legendary origin of the oldest recorded 3 × 3 magic square in history (dating back over 2000 years)?',
+        qHi: 'इतिहास में 2000 वर्ष से भी अधिक पुराने सबसे प्राचीन 3 × 3 जादुई वर्ग का नाम और उसकी पौराणिक उत्पत्ति क्या है?',
+        options: [
+          { en: 'Albrecht Dürer Square from Germany', hi: 'जर्मनी का अल्ब्रेक्ट ड्यूरर वर्ग' },
+          { en: 'Lo Shu Square from ancient China, seen on the back of a divine turtle from the Lo River', hi: 'प्राचीन चीन का लो शू (Lo Shu) वर्ग, जो लो नदी के एक दिव्य कछुए की पीठ पर अंकित देखा गया था' },
+          { en: 'Kubera Yantra from South India', hi: 'दक्षिण भारत का कुबेर यंत्र' },
+          { en: 'Pythagorean Grid from ancient Greece', hi: 'प्राचीन ग्रीस का पाइथागोरस ग्रिड' }
+        ],
+        correct: 1,
+        expEn: 'Sec 6.3 notes the Lo Shu Square from ancient China (2000+ years ago), where legend tells of a turtle emerging from the Lo River with a 3×3 pattern of numbers on its shell adding to 15.',
+        expHi: 'पाठ्यपुस्तक के अनुसार, प्राचीन चीन में 2000 वर्ष पूर्व लो नदी की बाढ़ के समय एक कछुए की पीठ पर 3×3 संख्याओं का जादुई वर्ग मिला था जिसे लो शू वर्ग कहा जाता है।'
+      },
+      {
+        id: 16,
+        category: 'virahanka',
+        topic: 'Indian Origin of Fibonacci Numbers',
+        qEn: 'The sequence 1, 2, 3, 5, 8, 13, 21, 34... was discovered in India around 700 CE in the context of poetic meter (prosody) by which scholar, over 500 years before Fibonacci?',
+        qHi: 'अनुक्रम 1, 2, 3, 5, 8, 13, 21, 34... की खोज भारत में लगभग 700 ईस्वी में छंदशास्त्र (काव्य ताल) के संदर्भ में किस विद्वान ने फिबोनाची से 500 वर्ष पूर्व की थी?',
+        options: [
+          { en: 'Aryabhata', hi: 'आर्यभट्ट' },
+          { en: 'Virahāṅka', hi: 'विरहाङ्क (Virahāṅka)' },
+          { en: 'Brahmagupta', hi: 'ब्रह्मगुप्त' },
+          { en: 'Bhaskara II', hi: 'भास्कराचार्य द्वितीय' }
+        ],
+        correct: 1,
+        expEn: 'Prakrit scholar Virahāṅka (c. 700 CE) explicitly wrote the formation rule for counting poetic beats of short and long syllables, inspired by Pingala (c. 300 BCE). Leonardo Fibonacci wrote about it in 1202 CE.',
+        expHi: 'प्राकृत विद्वान विरहाङ्क (लगभग 700 ईस्वी) ने लघु और गुरु मात्राओं की ताल गिनने के नियम के रूप में इस अनुक्रम की रचना की थी। फिबोनाची ने इसके 500 वर्ष बाद 1202 ईस्वी में इसे लिखा।'
+      },
+      {
+        id: 17,
+        category: 'virahanka',
+        topic: 'Virahāṅka Continuation',
+        qEn: 'Two consecutive numbers in the Virahāṅka sequence are 987 and 1597. What is the NEXT number in the sequence?',
+        qHi: 'विरहाङ्क अनुक्रम में दो क्रमागत संख्याएँ 987 और 1597 हैं। अनुक्रम में अगली संख्या क्या होगी?',
+        options: [
+          { en: '2584', hi: '2584' },
+          { en: '2484', hi: '2484' },
+          { en: '2574', hi: '2574' },
+          { en: '2604', hi: '2604' }
+        ],
+        correct: 0,
+        expEn: 'Each number in the Virahāṅka-Fibonacci sequence is the sum of the two preceding numbers: 987 + 1597 = 2584.',
+        expHi: 'विरहाङ्क अनुक्रम में प्रत्येक पद अपने पिछले दो पदों का योग होता है: 987 + 1597 = 2584।'
+      },
+      {
+        id: 18,
+        category: 'virahanka',
+        topic: 'Staircase Problem',
+        qEn: 'Angaan wants to climb an 8-step staircase. He can take either 1 step or 2 steps at a time. In how many different ways can he reach the 8th step?',
+        qHi: 'अंगान 8 सीढ़ियों वाली एक सीढ़ी चढ़ना चाहता है। वह एक बार में या तो 1 कदम या 2 कदम चढ़ सकता है। वह 8वीं सीढ़ी तक कितने अलग तरीकों से पहुँच सकता है?',
+        options: [
+          { en: '16', hi: '16' },
+          { en: '21', hi: '21' },
+          { en: '34', hi: '34' },
+          { en: '55', hi: '55' }
+        ],
+        correct: 2,
+        expEn: 'The number of ways to climb steps corresponds to the Virahāṅka sequence: Step 1 = 1, Step 2 = 2, Step 3 = 3, Step 4 = 5, Step 5 = 8, Step 6 = 13, Step 7 = 21, Step 8 = 34 ways!',
+        expHi: 'सीढ़ी चढ़ने के तरीकों की संख्या विरहाङ्क अनुक्रम का अनुसरण करती है: 1 सीढ़ी = 1, 2 सीढ़ी = 2, 3 सीढ़ी = 3, 4 = 5, 5 = 8, 6 = 13, 7 = 21, 8 सीढ़ी = 34 तरीके!'
+      },
+      {
+        id: 19,
+        category: 'virahanka',
+        topic: 'Parity of 20th Virahāṅka Term',
+        qEn: 'What is the parity of the 20th term of the Virahāṅka sequence (1, 2, 3, 5, 8, 13, 21, 34, 55, 89...)?',
+        qHi: 'विरहाङ्क अनुक्रम (1, 2, 3, 5, 8, 13, 21, 34, 55, 89...) के 20वें पद की समता (Parity) क्या है?',
+        options: [
+          { en: 'Odd', hi: 'विषम (Odd)' },
+          { en: 'Even', hi: 'सम (Even)' },
+          { en: 'Zero', hi: 'शून्य' },
+          { en: 'Cannot be determined without computing all 20 terms.', hi: 'सभी 20 पदों की गणना किए बिना तय नहीं किया जा सकता।' }
+        ],
+        correct: 1,
+        expEn: 'The sequence parities follow the cycle: Odd, Even, Odd, Odd, Even, Odd, Odd, Even... Even terms occur at positions 2, 5, 8, 11, 14, 17, 20 (position 3k+2). Since 20 = 3(6) + 2, the 20th term is guaranteed to be EVEN (T20 = 10,946).',
+        expHi: 'समता का क्रम है: विषम, सम, विषम, विषम, सम, विषम... सम पद 2, 5, 8, 11, 14, 17, 20वें स्थान (3k+2) पर आते हैं। चूँकि 20 = 3(6) + 2 है, अतः 20वाँ पद निश्चित रूप से सम (EVEN) होगा।'
+      },
+      {
+        id: 20,
+        category: 'crypto',
+        topic: 'Cryptarithm / Alphametics',
+        qEn: 'Solve the cryptarithm addition puzzle UT + TA = TAT, where each letter stands for a distinct single digit (0–9). What are the values of U, T, and A?',
+        qHi: 'अंक पहेली UT + TA = TAT को हल कीजिए, जहाँ प्रत्येक अक्षर 0 से 9 के बीच एक अद्वितीय अंक दर्शाता है। U, T और A के मान क्या होंगे?',
+        options: [
+          { en: 'U = 9, T = 1, A = 0', hi: 'U = 9, T = 1, A = 0' },
+          { en: 'U = 8, T = 2, A = 1', hi: 'U = 8, T = 2, A = 1' },
+          { en: 'U = 5, T = 3, A = 0', hi: 'U = 5, T = 3, A = 0' },
+          { en: 'U = 7, T = 1, A = 2', hi: 'U = 7, T = 1, A = 2' }
+        ],
+        correct: 0,
+        expEn: '(10U + T) + (10T + A) = 100T + 10A + T => 10U = 90T + 9A = 9(10T + A). Since 10U is divisible by 10, A must be 0. Then 10U = 90T => U = 9T. Single digits mean T = 1 and U = 9. Check: 91 + 10 = 101 (TAT)!',
+        expHi: '(10U + T) + (10T + A) = 100T + 10A + T => 10U = 90T + 9A = 9(10T + A)। चूँकि बायाँ पक्ष 10 का गुणज है, अतः A = 0 होना चाहिए। तब 10U = 90T => U = 9T। एक अंक होने से T = 1 और U = 9। जाँच: 91 + 10 = 101 (TAT)!'
+      }
+    ];
+
+    // State
+    let userAnswers = {};
+    let currentFilter = 'all';
+    let currentLang = 'bilingual'; // 'bilingual', 'en', 'hi'
+    let currentTheme = localStorage.getItem('nextsem_theme') || 'dark';
+
+    // Init Theme
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeButtonUI();
+
+    function toggleTheme() {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('nextsem_theme', currentTheme);
+      updateThemeButtonUI();
+    }
+
+    function updateThemeButtonUI() {
+      const isDark = currentTheme === 'dark';
+      const label = isDark ? 'Dark' : 'Light';
+      const icon = isDark ? '🌙' : '☀️';
+      document.getElementById('theme-label').textContent = label;
+      document.getElementById('theme-toggle-btn').innerHTML = `${icon} <span id="theme-label">${label}</span>`;
+      document.getElementById('bottom-theme-icon').textContent = `${icon} ${label}`;
+    }
+
+    function cycleLanguage() {
+      if (currentLang === 'bilingual') {
+        currentLang = 'en';
+        document.body.className = 'lang-en-only';
+        document.getElementById('lang-label').textContent = 'English Only';
+      } else if (currentLang === 'en') {
+        currentLang = 'hi';
+        document.body.className = 'lang-hi-only';
+        document.getElementById('lang-label').textContent = 'हिंदी केवल';
+      } else {
+        currentLang = 'bilingual';
+        document.body.className = '';
+        document.getElementById('lang-label').textContent = 'Bilingual (English / हिंदी)';
+      }
+    }
+
+    // Render MCQs
+    function renderMcqs() {
+      const container = document.getElementById('mcq-container');
+      container.innerHTML = '';
+
+      MCQ_DATA.forEach((q, idx) => {
+        const isVisible = currentFilter === 'all' || q.category === currentFilter;
+        if (!isVisible) return;
+
+        const card = document.createElement('article');
+        card.className = 'mcq-card';
+        card.id = `mcq-card-${q.id}`;
+
+        const answered = userAnswers[q.id];
+        if (answered !== undefined) {
+          if (answered === q.correct) {
+            card.classList.add('answered-correct');
+          } else {
+            card.classList.add('answered-wrong');
+          }
+        }
+
+        const letters = ['A', 'B', 'C', 'D'];
+
+        let optionsHtml = q.options.map((opt, optIdx) => {
+          let extraClasses = '';
+          if (answered !== undefined) {
+            if (optIdx === q.correct) {
+              extraClasses = (answered === q.correct) ? 'opt-correct' : 'opt-revealed-correct';
+            } else if (optIdx === answered) {
+              extraClasses = 'opt-wrong';
+            }
+          }
+
+          const disabledAttr = answered !== undefined ? 'disabled' : '';
+
+          return `
+            <button 
+              type="button" 
+              class="option-btn ${extraClasses}" 
+              onclick="handleOptionClick(${q.id}, ${optIdx})"
+              ${disabledAttr}
+            >
+              <span class="opt-letter">${letters[optIdx]}</span>
+              <div class="opt-content">
+                <span class="opt-en">${opt.en}</span>
+                <span class="opt-hi">${opt.hi}</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+
+        const solutionShown = answered !== undefined ? 'show' : '';
+
+        card.innerHTML = `
+          <div class="mcq-header">
+            <span class="mcq-qnum-badge">Q${q.id} / 20</span>
+            <span class="mcq-topic-tag">${q.topic}</span>
+          </div>
+          <div class="mcq-question-text">${q.qEn}</div>
+          <div class="mcq-question-text-hi">${q.qHi}</div>
+          <div class="options-grid">
+            ${optionsHtml}
+          </div>
+          <div class="solution-box ${solutionShown}" id="sol-${q.id}">
+            <div class="solution-title">
+              <span>💡 Step-by-Step Textbook Explanation (NCERT Ganita Prakash):</span>
+            </div>
+            <div class="solution-text">
+              <p style="margin-bottom: 4px;"><strong>English:</strong> ${q.expEn}</p>
+              <p style="color: var(--accent-cyan);"><strong>हिंदी:</strong> ${q.expHi}</p>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      updateScoreDashboard();
+    }
+
+    // Handle Option Click
+    function handleOptionClick(qid, selectedIndex) {
+      if (userAnswers[qid] !== undefined) return; // already answered
+
+      userAnswers[qid] = selectedIndex;
+      const question = MCQ_DATA.find(q => q.id === qid);
+      const isCorrect = (selectedIndex === question.correct);
+
+      if (isCorrect) {
+        triggerConfettiMini();
+      }
+
+      // Re-render to update UI with animations & show solution
+      renderMcqs();
+
+      // Check if all 20 questions are completed with 100%
+      const answeredCount = Object.keys(userAnswers).length;
+      if (answeredCount === 20) {
+        let correctCount = 0;
+        MCQ_DATA.forEach(q => {
+          if (userAnswers[q.id] === q.correct) correctCount++;
+        });
+        if (correctCount >= 16) {
+          triggerGrandConfetti();
+        }
+      }
+    }
+
+    function updateScoreDashboard() {
+      let correctCount = 0;
+      let totalAnswered = 0;
+
+      MCQ_DATA.forEach(q => {
+        if (userAnswers[q.id] !== undefined) {
+          totalAnswered++;
+          if (userAnswers[q.id] === q.correct) {
+            correctCount++;
+          }
+        }
+      });
+
+      const pct = Math.round((correctCount / 20) * 100);
+      document.getElementById('score-val').textContent = correctCount;
+      document.getElementById('score-pct').textContent = `${pct}% (${totalAnswered}/20 Answered)`;
+      document.getElementById('score-bar').style.width = `${pct}%`;
+      document.getElementById('bottom-score-text').textContent = `Answered: ${totalAnswered} / 20 • Score: ${correctCount} / 20 (${pct}%)`;
+    }
+
+    function filterQuestions(category, btn) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderMcqs();
+    }
+
+    function resetAllMcqs() {
+      if (confirm('Are you sure you want to reset all answers and try again?')) {
+        userAnswers = {};
+        renderMcqs();
+      }
+    }
+
+    // Confetti Effects
+    function triggerConfettiMini() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 25,
+          spread: 50,
+          origin: { y: 0.8 },
+          colors: ['#10b981', '#38bdf8', '#f59e0b']
+        });
+      }
+    }
+
+    function triggerGrandConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 120,
+          spread: 100,
+          origin: { y: 0.5 },
+          colors: ['#10b981', '#38bdf8', '#f59e0b', '#ec4899']
+        });
+      }
+    }
+
+    // Initial Load
+    renderMcqs();
+  </script>
+</body>
+</html>

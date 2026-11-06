@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>KVS Class 11 Accountancy Exam (2023-24): Solutions & Parallel-Solving Hints</title>
+  <meta name="description" content="Complete solved paper for KVS Lucknow Region Class 11 Accountancy (80 Marks) with interactive hint reveals, step-by-step accounting equations, cash book, journal, and depreciation accounts.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .container {
+      position: relative; max-width: 1040px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(16, 185, 129, 0.12));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 30px; font-weight: 900; margin-bottom: 8px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px;
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 8px 16px; border-radius: 10px; font-size: 13px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px;
+      margin-bottom: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .q-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
+    }
+    .q-badge {
+      font-size: 12px; font-weight: 800; padding: 2px 10px; border-radius: 6px;
+      background: rgba(56, 189, 248, 0.15); color: var(--accent-sky); border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .marks-badge {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .q-text {
+      font-size: 15px; font-weight: 700; margin-bottom: 14px; line-height: 1.6;
+    }
+
+    /* Action Buttons */
+    .action-row {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;
+    }
+    .hint-btn {
+      background: rgba(245, 158, 11, 0.15); border: 1px solid var(--accent-gold);
+      color: #fcd34d; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 700;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .hint-btn:hover { background: rgba(245, 158, 11, 0.3); }
+
+    .sol-btn {
+      background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-emerald);
+      color: #34d399; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 700;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .sol-btn:hover { background: rgba(16, 185, 129, 0.3); }
+
+    /* Drawer Boxes */
+    .hint-box {
+      display: none; background: rgba(245, 158, 11, 0.08); border-left: 3px solid var(--accent-gold);
+      border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 13px; line-height: 1.6;
+      margin-bottom: 10px; color: #fef08a;
+    }
+
+    .sol-box {
+      display: none; background: rgba(0, 0, 0, 0.4); border-left: 3px solid var(--accent-emerald);
+      border-radius: 0 8px 8px 0; padding: 14px 18px; font-size: 13px; line-height: 1.7;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">KVS Lucknow 2023-24</span>
+      <span style="font-weight: 700; font-size: 15px;">Class 11 Accountancy Solved</span>
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/docs/kvs_lucknow_class11_accountancy_examination_complete_solutions_hints.md" class="nav-btn" target="_blank">📄 Full Solution MD</a>
+      <a href="/accountancy-purchases-book-5-transactions-studio.html" class="nav-btn">📑 Purchases Book</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">🎯 Cumulative Exam Paper • 80 Marks</div>
+      <h1 class="hero-title">KVS Class 11 Accountancy: Full Solved Paper</h1>
+      <p class="hero-subtitle">Solve in parallel using interactive strategic hints, or reveal complete step-by-step solutions with accounting tables & ledger accounts.</p>
+    </header>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="tab-btn active" onclick="filterSec('all', this)">All Questions (34)</button>
+      <button class="tab-btn" onclick="filterSec('secA', this)">Section A: 1-Mark (Q1-Q20)</button>
+      <button class="tab-btn" onclick="filterSec('secB', this)">Section B: 3-Marks (Q21-Q26)</button>
+      <button class="tab-btn" onclick="filterSec('secC', this)">Section C: 4-Marks (Q27-Q29)</button>
+      <button class="tab-btn" onclick="filterSec('secD', this)">Section D: 6-Marks (Q30-Q34)</button>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="questionsList"></div>
+  </main>
+
+  <script>
+    const examData = [
+      // Q1
+      {
+        id: 1, sec: 'secA', marks: '1 Mark',
+        q: '1. Which one is the advantage of accounting?<br>(a) Replacement of Memory<br>(b) Shows the present value of business<br>(c) Accounting does not record price level changes.<br>(d) Accounting is not fully exact.',
+        hint: 'Differentiate between a BENEFIT (overcoming human memory limits) versus LIMITATIONS (historical cost bias & lack of exactness).',
+        sol: '<strong>Correct Option: (a) Replacement of Memory</strong><br>Human memory cannot retain thousands of transactions. Accounting systematically stores every transaction. (c) and (d) are limitations, while (b) is inaccurate as historical cost is used.'
+      },
+      // Q2
+      {
+        id: 2, sec: 'secA', marks: '1 Mark',
+        q: '2. Assertion (A): Accounting records only the transactions of financial nature.<br>Reason (R): Goods taken from the business by the proprietor for his personal use is not of financial nature and hence will not be recorded.',
+        hint: 'Can goods taken for personal use (Drawings) be measured in monetary terms? Is it recorded in journal entries?',
+        sol: '<strong>Correct Option: (c) (A) is true, but (R) is false.</strong><br>Assertion is true. Reason is false because goods taken for personal use (Drawings) have a measurable financial value and are recorded as <code>Drawings A/c Dr. to Purchases A/c</code>.'
+      },
+      // Q3
+      {
+        id: 3, sec: 'secA', marks: '1 Mark',
+        q: '3. Expenditure of revenue nature that gives benefit for more than one accounting period is characterized as:<br>(a) Deferred Revenue Expenditure (b) Capital expenditure (c) Revenue Expenditure (d) None of these<br><em>OR</em><br>Any expenditure, the full benefit of which is received during one accounting period is termed as:<br>(a) Current Liability (b) Current Asset (c) Capital Expenditure (d) Revenue Expenditure',
+        hint: 'Think of massive advertisement expenses whose benefits last 3-5 years vs routine expenses exhausted in 12 months.',
+        sol: '<strong>Main Answer: (a) Deferred Revenue Expenditure</strong><br><strong>OR Answer: (d) Revenue Expenditure</strong>'
+      },
+      // Q4
+      {
+        id: 4, sec: 'secA', marks: '1 Mark',
+        q: '4. The person, firm or institution who does not pay the price in Cash for the goods purchased or the services received is called:<br>(a) Proprietor (b) Debtors (c) Creditor (d) All of these<br><em>OR</em><br>Current Liabilities do not include:<br>(a) Bills Payable (b) Creditors (c) Outstanding Exp. (d) Debentures',
+        hint: 'A customer who owes money on credit sales vs a long-term borrowing instrument of a company.',
+        sol: '<strong>Main Answer: (b) Debtors</strong><br><strong>OR Answer: (d) Debentures</strong> (Debentures are Non-Current / Long-Term Liabilities).'
+      },
+      // Q5
+      {
+        id: 5, sec: 'secA', marks: '1 Mark',
+        q: '5. The primary qualities that make accounting information useful for decision-making are:<br>(a) Relevance and free from bias (b) Reliability and comparability (c) Comparability and consistency (d) None of the above',
+        hint: 'The four fundamental qualitative characteristics are Reliability, Relevance, Understandability, and Comparability.',
+        sol: '<strong>Correct Option: (b) Reliability and comparability</strong>'
+      },
+      // Q6
+      {
+        id: 6, sec: 'secA', marks: '1 Mark',
+        q: '6. Omission of paise and showing the round figures in the financial statement is based on:<br>(a) Conservatism convention (b) Consistency concept (c) Materiality Concept (d) Money measurement concept<br><em>OR</em><br>The owner of the firm records his medical expenses in the firm\'s income statement. Indicate the principle that is violated:<br>(a) Cost concept (b) Prudence (c) Full disclosure (d) Entity concept',
+        hint: 'Insignificant trivial figures vs separate existence of the owner from the enterprise.',
+        sol: '<strong>Main Answer: (c) Materiality Concept</strong><br><strong>OR Answer: (d) Entity concept (Business Entity Concept)</strong>'
+      },
+      // Q7
+      {
+        id: 7, sec: 'secA', marks: '1 Mark',
+        q: '7. Assertion (A): Accounting Standards are mandatory for Sole Proprietorship Firms, Partnership Firms and Companies.<br>Reason (R): They ensure uniformity in the preparation and presentation of financial statements.',
+        hint: 'Under statutory law, are AS mandatory for tiny sole proprietorships or strictly binding on corporate bodies?',
+        sol: '<strong>Correct Option: (d) (A) is false, but (R) is true.</strong><br>Mandatory AS compliance is strictly enforced on corporate enterprises, while small sole proprietorships have wide exemptions. Reason (R) is universally true.'
+      },
+      // Q8
+      {
+        id: 8, sec: 'secA', marks: '1 Mark',
+        q: '8. At the time of goods sold, output CGST/SGST/IGST account is credited because it is a:<br>(a) Revenue/income (b) Assets (c) Accrued income (d) Liability<br><em>OR</em><br>On inter-state sale of goods, which account is credited?<br>(a) Output CGST A/c (b) Output IGST A/c (c) Input IGST A/c (d) Output SGST A/c',
+        hint: 'Tax collected from customers must be paid to the government (obligation) vs Inter-State GST.',
+        sol: '<strong>Main Answer: (d) Liability</strong><br><strong>OR Answer: (b) Output IGST A/c</strong>'
+      },
+      // Q9 & Q10
+      {
+        id: 9, sec: 'secA', marks: '1 Mark',
+        q: '9. Case Study (Mr. Radha Mohan - Furniture Dealer):<br>Total of Sales Book for January 2022 will be:<br>(a) Rs.9,04,000 (b) Rs.9,49,000 (c) Rs.9,51,000 (d) Rs.9,06,000',
+        hint: 'Include only credit sales of furniture: Jan 5 (₹4,50,000 less 10% TD = ₹4,05,000) + Jan 10 (₹6,80,000 less 20% TD = ₹5,44,000). Exclude sales return & printer.',
+        sol: '<strong>Correct Option: (b) Rs.9,49,000</strong><br>Calculation: ₹4,05,000 + ₹5,44,000 = ₹9,49,000.'
+      },
+      {
+        id: 10, sec: 'secA', marks: '1 Mark',
+        q: '10. Total of Sales Book is posted to:<br>(a) Debit of Sales A/c (b) Credit of Sales A/c (c) Debit of Customer’s A/c (d) Credit of Customer’s A/c',
+        hint: 'Sales is revenue $\rightarrow$ Credit all incomes.',
+        sol: '<strong>Correct Option: (b) Credit of Sales A/c</strong>'
+      },
+      // Q11
+      {
+        id: 11, sec: 'secA', marks: '1 Mark',
+        q: '11. Which accounting equation is incorrect out of the following:<br>(a) Liabilities = Assets - Capital (b) Assets = Liabilities - Capital (c) Capital = Assets - Liabilities (d) Assets = Liabilities + Capital',
+        hint: 'Fundamental balance sheet formula: Assets = Liabilities + Capital.',
+        sol: '<strong>Correct Option: (b) Assets = Liabilities - Capital (Incorrect)</strong>'
+      },
+      // Q12
+      {
+        id: 12, sec: 'secA', marks: '1 Mark',
+        q: '12. Voucher is prepared for:<br>(a) Cash and Credit purchases (b) Cash and Credit sales (c) Cash received and paid (d) All of these',
+        hint: 'Are accounting vouchers prepared for all financial transactions?',
+        sol: '<strong>Correct Option: (d) All of these</strong>'
+      },
+      // Q13
+      {
+        id: 13, sec: 'secA', marks: '1 Mark',
+        q: '13. Insurance Premium of Rs.12,000 paid for one year on 1st August 2022. Unexpired insurance on 31st March 2023 will be:<br>(a) Rs.4,000 (b) Rs.8,000 (c) Rs.6,000 (d) Rs.7,000',
+        hint: 'Unexpired months = 1 April 2023 to 31 July 2023 (4 months).',
+        sol: '<strong>Correct Option: (a) Rs.4,000</strong><br>Calculation: (4 / 12) × ₹12,000 = ₹4,000.'
+      },
+      // Q14
+      {
+        id: 14, sec: 'secA', marks: '1 Mark',
+        q: '14. Received Rs. 7,500 from Ritika in full settlement of Rs.8,000. Posting will be made in Ritika’s A/c:<br>(a) Rs.7,500 on Debit side (b) Rs.7,500 on Credit side (c) Rs.8,000 on Debit side (d) Rs.8,000 on Credit side',
+        hint: 'To close Ritika\'s debtor account completely, she must be credited with the full debt amount.',
+        sol: '<strong>Correct Option: (d) Rs.8,000 on Credit side</strong><br>(By Cash A/c ₹7,500 + By Discount Allowed A/c ₹500).'
+      },
+      // Q15
+      {
+        id: 15, sec: 'secA', marks: '1 Mark',
+        q: '15. Imprest amount Rs.5,000. Amount of reimbursement if expenses were: wages=Rs.1,450, Tiffin=Rs.1,050, small Repairs=Rs.500, General expenses=Rs.400.<br>(a) Rs.1,600 (b) Rs.3,400 (c) Rs.3,050 (d) Rs.3,000<br><em>OR</em><br>When a firm maintains a cash book, it need not maintain:<br>(a) Journal Proper (b) Purchase Book (c) Sales Book (d) Bank and Cash A/c in the ledger',
+        hint: 'Sum all expenses incurred during the month.',
+        sol: '<strong>Main Answer: (b) Rs.3,400</strong> (1450 + 1050 + 500 + 400)<br><strong>OR Answer: (d) Bank and Cash A/c in the ledger</strong>'
+      },
+      // Q16
+      {
+        id: 16, sec: 'secA', marks: '1 Mark',
+        q: '16. Goods sold for cash Rs.25,000 plus 12% IGST. Sales A/c will be credited by:<br>(a) Rs.22,000 (b) Rs.25,000 (c) Rs.28,000 (d) None of these',
+        hint: 'Sales A/c records only the net price of goods, while IGST goes to Output IGST A/c.',
+        sol: '<strong>Correct Option: (b) Rs.25,000</strong>'
+      },
+      // Q17
+      {
+        id: 17, sec: 'secA', marks: '1 Mark',
+        q: '17. Debit balance of pass book means:<br>(a) Positive i.e. Favourable Balance (b) Negative i.e. Unfavourable Balance (c) Either Positive or Negative (d) None of the above',
+        hint: 'Bank Pass Book debit means customer has overdrawn funds.',
+        sol: '<strong>Correct Option: (b) Negative i.e. Unfavourable Balance (Bank Overdraft)</strong>'
+      },
+      // Q18
+      {
+        id: 18, sec: 'secA', marks: '1 Mark',
+        q: '18. Dr. Balance as per Cash Book Rs.40,000; Cheques deposited Rs.25,000 but only Rs.16,000 credited by bank.<br>(a) Rs.56,000 (b) Rs.24,000 (c) Rs.49,000 (d) Rs.31,000<br><em>OR</em><br>A BRS is prepared to ascertain causes of difference between:<br>(a) Cash column of CB with Pass Book (b) Bank column of CB with Pass Book (c) Cash column with Bank column (d) Cheque Book with Pass Book',
+        hint: 'Subtract cheques deposited but not credited (₹9,000) from Cash Book balance.',
+        sol: '<strong>Main Answer: (d) Rs.31,000</strong> (₹40,000 - ₹9,000)<br><strong>OR Answer: (b) The balance as shown by the bank column of Cash Book with the balance of the Pass Book.</strong>'
+      },
+      // Q19
+      {
+        id: 19, sec: 'secA', marks: '1 Mark',
+        q: '19. Asset purchased for Rs.5,00,000. WDV depreciation @ 20% p.a. Value of asset at end of three years?<br>(a) Rs.3,50,000 (b) Rs.2,56,000 (c) Rs.4,00,000 (d) Rs.3,20,000<br><em>OR</em><br>The term amortisation is used to write off:<br>(a) Fixed Assets (b) Intangible Assets (c) Tangible Assets (d) Wasting Assets',
+        hint: 'Calculate 20% on reduced balance year by year.',
+        sol: '<strong>Main Answer: (b) Rs.2,56,000</strong><br>Yr 1: 5L - 1L = 4L<br>Yr 2: 4L - 80k = 3.2L<br>Yr 3: 3.2L - 64k = <strong>2.56L</strong><br><strong>OR Answer: (b) Intangible Assets</strong>'
+      },
+      // Q20
+      {
+        id: 20, sec: 'secA', marks: '1 Mark',
+        q: '20. Profit on sale of fixed asset is used to create:<br>(a) Specific Reserve (b) General Reserve (c) Capital Reserve (d) None of the above',
+        hint: 'Capital profits are transferred to which reserve?',
+        sol: '<strong>Correct Option: (c) Capital Reserve</strong>'
+      },
+
+      // Section B: 3 Marks
+      {
+        id: 21, sec: 'secB', marks: '3 Marks',
+        q: '21. Give the rules of debit and credit of the three types of accounts.',
+        hint: 'Recall Personal, Real, and Nominal accounts golden rules.',
+        sol: '<strong>1. Personal Accounts:</strong> Debit the Receiver, Credit the Giver.<br><strong>2. Real Accounts:</strong> Debit what comes in, Credit what goes out.<br><strong>3. Nominal Accounts:</strong> Debit all expenses and losses, Credit all incomes and gains.'
+      },
+      {
+        id: 22, sec: 'secB', marks: '3 Marks',
+        q: '22. Explain the meaning of any three: (i) Assets (ii) Debtors (iii) Goods (iv) Capital',
+        hint: 'Define each term with a clear business example.',
+        sol: '<strong>(i) Assets:</strong> Economic resources owned by the business (e.g. Cash, Machinery).<br><strong>(ii) Debtors:</strong> Persons who owe money for credit sales of goods/services.<br><strong>(iii) Goods:</strong> Products in which the business regularly trades for resale.<br><strong>(iv) Capital:</strong> Investment by the owner in the business (Assets - Liabilities).'
+      },
+      {
+        id: 24, sec: 'secB', marks: '3 Marks',
+        q: '24. Record transactions in Sales Book of M/s Kumar & Sons, Delhi (March 2023):<br>Mar 1: Sold to Gupta & Verma: 30 shirts @ ₹400, 20 Trousers @ ₹600 less 10% TD.<br>Mar 4: Sold old furniture to Sehgal & Co for ₹8,000.<br>Mar 5: Sold 50 shirts to Jain & Sons @ ₹400.<br>Mar 7: Sold to Mathur & Jain: 100 shirts @ ₹400, 10 overcoats @ ₹1,000 less 10% TD.',
+        hint: 'Exclude March 4 (furniture = asset). Deduct Trade Discount on March 1 and March 7.',
+        sol: '<strong>Sales Book:</strong><br>• Mar 1 (Gupta & Verma): ₹24,000 - 10% (₹2,400) = <strong>₹21,600</strong><br>• Mar 5 (Jain & Sons): 50 × ₹400 = <strong>₹20,000</strong><br>• Mar 7 (Mathur & Jain): ₹50,000 - 10% (₹5,000) = <strong>₹45,000</strong><br><strong>Total Sales Book = ₹86,600</strong> (Mar 4 old furniture excluded).'
+      },
+
+      {
+        id: 28, sec: 'secC', marks: '4 Marks',
+        q: '28. Mohit Accounting Equation Transactions:<br>(a) Started business with cash ₹1,50,000<br>(b) Purchased Machinery on credit ₹40,000<br>(c) Purchased goods for cash ₹20,000<br>(d) Purchased car for personal use ₹80,000<br>(e) Paid to creditors in full settlement ₹38,000<br>(f) Sold goods for cash costing ₹5,000 for ₹4,500<br>(g) Paid Rent ₹1,000<br>(h) Commission received in advance ₹2,000.',
+        hint: 'Apply the fundamental equation: Assets (Cash + Stock + Machinery) = Liabilities (Creditors + Adv. Commission) + Capital. Personal car = Drawings (Deduct Cash & Capital). Full settlement of ₹40,000 creditors by paying ₹38,000 gives ₹2,000 Discount Received (Added to Capital). Sale at ₹500 loss reduces Stock by ₹5,000, adds ₹4,500 to Cash, and deducts ₹500 from Capital.',
+        sol: `<div style="overflow-x: auto; margin-top: 10px;">
+          <h4 style="color: var(--accent-sky); margin-bottom: 10px;">📊 Accounting Equation of Mohit (NCERT / CBSE Tabular Format)</h4>
+          <table style="width: 100%; border-collapse: collapse; font-size: 12px; text-align: right; background: rgba(15,23,42,0.6); border-radius: 8px; overflow: hidden;">
+            <thead>
+              <tr style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border-bottom: 2px solid rgba(56, 189, 248, 0.4);">
+                <th style="padding: 8px 6px; text-align: center;">S.No.</th>
+                <th style="padding: 8px 6px; text-align: left;">Transactions</th>
+                <th style="padding: 8px 6px;">Cash (₹)</th>
+                <th style="padding: 8px 6px;">Stock (₹)</th>
+                <th style="padding: 8px 6px;">Machinery (₹)</th>
+                <th style="padding: 8px 4px; text-align: center;">=</th>
+                <th style="padding: 8px 6px;">Creditors (₹)</th>
+                <th style="padding: 8px 6px;">Adv. Comm. (₹)</th>
+                <th style="padding: 8px 4px; text-align: center;">+</th>
+                <th style="padding: 8px 6px;">Capital (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(a)</td>
+                <td style="padding: 6px; text-align: left;">Started business with cash</td>
+                <td style="padding: 6px; color: #34d399;">+1,50,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px; color: #34d399;">+1,50,000</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.08); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td></td>
+                <td style="text-align: left; color: #38bdf8;">New Equation</td>
+                <td>1,50,000</td>
+                <td>0</td>
+                <td>0</td>
+                <td style="text-align: center;">=</td>
+                <td>0</td>
+                <td>0</td>
+                <td style="text-align: center;">+</td>
+                <td>1,50,000</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(b)</td>
+                <td style="padding: 6px; text-align: left;">Purchased Machinery on credit</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; color: #34d399;">+40,000</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px; color: #f59e0b;">+40,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px;">0</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.08); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td></td>
+                <td style="text-align: left; color: #38bdf8;">New Equation</td>
+                <td>1,50,000</td>
+                <td>0</td>
+                <td>40,000</td>
+                <td style="text-align: center;">=</td>
+                <td>40,000</td>
+                <td>0</td>
+                <td style="text-align: center;">+</td>
+                <td>1,50,000</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(c)</td>
+                <td style="padding: 6px; text-align: left;">Purchased goods for cash</td>
+                <td style="padding: 6px; color: #f87171;">-20,000</td>
+                <td style="padding: 6px; color: #34d399;">+20,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px;">0</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.08); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td></td>
+                <td style="text-align: left; color: #38bdf8;">New Equation</td>
+                <td>1,30,000</td>
+                <td>20,000</td>
+                <td>40,000</td>
+                <td style="text-align: center;">=</td>
+                <td>40,000</td>
+                <td>0</td>
+                <td style="text-align: center;">+</td>
+                <td>1,50,000</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(d)</td>
+                <td style="padding: 6px; text-align: left;">Car for personal use (Drawings)</td>
+                <td style="padding: 6px; color: #f87171;">-80,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px; color: #f87171;">-80,000</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.08); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td></td>
+                <td style="text-align: left; color: #38bdf8;">New Equation</td>
+                <td>50,000</td>
+                <td>20,000</td>
+                <td>40,000</td>
+                <td style="text-align: center;">=</td>
+                <td>40,000</td>
+                <td>0</td>
+                <td style="text-align: center;">+</td>
+                <td>70,000</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(e)</td>
+                <td style="padding: 6px; text-align: left;">Paid creditors in full settlement</td>
+                <td style="padding: 6px; color: #f87171;">-38,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px; color: #f87171;">-40,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px; color: #34d399;">+2,000</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.08); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td></td>
+                <td style="text-align: left; color: #38bdf8;">New Equation</td>
+                <td>12,000</td>
+                <td>20,000</td>
+                <td>40,000</td>
+                <td style="text-align: center;">=</td>
+                <td>0</td>
+                <td>0</td>
+                <td style="text-align: center;">+</td>
+                <td>72,000</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(f)</td>
+                <td style="padding: 6px; text-align: left;">Sold goods costing ₹5k for ₹4.5k</td>
+                <td style="padding: 6px; color: #34d399;">+4,500</td>
+                <td style="padding: 6px; color: #f87171;">-5,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px; color: #f87171;">-500</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.08); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td></td>
+                <td style="text-align: left; color: #38bdf8;">New Equation</td>
+                <td>16,500</td>
+                <td>15,000</td>
+                <td>40,000</td>
+                <td style="text-align: center;">=</td>
+                <td>0</td>
+                <td>0</td>
+                <td style="text-align: center;">+</td>
+                <td>71,500</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(g)</td>
+                <td style="padding: 6px; text-align: left;">Paid Rent</td>
+                <td style="padding: 6px; color: #f87171;">-1,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px; color: #f87171;">-1,000</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.08); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <td></td>
+                <td style="text-align: left; color: #38bdf8;">New Equation</td>
+                <td>15,500</td>
+                <td>15,000</td>
+                <td>40,000</td>
+                <td style="text-align: center;">=</td>
+                <td>0</td>
+                <td>0</td>
+                <td style="text-align: center;">+</td>
+                <td>70,500</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">(h)</td>
+                <td style="padding: 6px; text-align: left;">Commission received in advance</td>
+                <td style="padding: 6px; color: #34d399;">+2,000</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; text-align: center;">=</td>
+                <td style="padding: 6px;">0</td>
+                <td style="padding: 6px; color: #f59e0b;">+2,000</td>
+                <td style="padding: 6px; text-align: center;">+</td>
+                <td style="padding: 6px;">0</td>
+              </tr>
+              <tr style="background: rgba(16,185,129,0.2); font-weight: 800; color: #34d399; border-top: 2px solid #10b981;">
+                <td style="text-align: center;">★</td>
+                <td style="text-align: left;">FINAL EQUATION</td>
+                <td>₹17,500</td>
+                <td>₹15,000</td>
+                <td>₹40,000</td>
+                <td style="text-align: center;">=</td>
+                <td>₹0</td>
+                <td>₹2,000</td>
+                <td style="text-align: center;">+</td>
+                <td>₹70,500</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 12px; padding: 10px; background: rgba(0,0,0,0.3); border-radius: 8px; font-size: 13px;">
+            <strong>⚖️ Balance Sheet Summary:</strong><br>
+            • <strong>Total Assets</strong> = Cash (₹17,500) + Stock (₹15,000) + Machinery (₹40,000) = <span style="color: #34d399; font-weight: 800;">₹72,500</span><br>
+            • <strong>Total Liabilities & Capital</strong> = Creditors (₹0) + Adv. Commission (₹2,000) + Capital (₹70,500) = <span style="color: #34d399; font-weight: 800;">₹72,500</span>
+          </div>
+        </div>`
+      },
+      {
+        id: 29, sec: 'secC', marks: '4 Marks',
+        q: '29. Prepare Two-Column Cash Book (Cash & Bank columns) from the following information (June 2022):<br>• Jun 01: Cash in hand ₹2,800; Cash at bank ₹7,000<br>• Jun 10: Received cheque from Ravi and immediately deposited into bank ₹4,950<br>• Jun 15: Cash sales ₹6,000<br>• Jun 18: Paid into bank ₹3,000<br>• Jun 20: Paid rent ₹700<br>• Jun 25: Bank Charges ₹100<br>• Jun 30: Withdrawn from bank for personal use ₹1,500<br>• Jun 30: Purchased goods on credit from Vinay ₹4,000',
+        hint: '• June 18: "Paid into bank ₹3,000" is a Contra Entry (C) — Dr. Bank, Cr. Cash.<br>• June 30: "Purchased goods on credit from Vinay ₹4,000" is a CREDIT transaction and must be EXCLUDED from Cash Book (recorded in Purchases Book).',
+        sol: `<div style="overflow-x: auto; margin-top: 10px;">
+          <h4 style="color: var(--accent-sky); margin-bottom: 10px;">📑 Two-Column Cash Book (Cash & Bank Columns) — CBSE Standard Format</h4>
+          <table style="width: 100%; border-collapse: collapse; font-size: 12px; background: rgba(15,23,42,0.6); border-radius: 8px; overflow: hidden;">
+            <thead>
+              <tr style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-bottom: 2px solid rgba(16, 185, 129, 0.4);">
+                <th colspan="5" style="padding: 8px; text-align: center; border-right: 2px solid rgba(255,255,255,0.2);">Dr. (RECEIPTS SIDE)</th>
+                <th colspan="5" style="padding: 8px; text-align: center;">Cr. (PAYMENTS SIDE)</th>
+              </tr>
+              <tr style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <th style="padding: 6px; text-align: center;">Date (2022)</th>
+                <th style="padding: 6px; text-align: left;">Particulars (Receipts)</th>
+                <th style="padding: 6px; text-align: center;">L.F.</th>
+                <th style="padding: 6px; text-align: right;">Cash (₹)</th>
+                <th style="padding: 6px; text-align: right; border-right: 2px solid rgba(255,255,255,0.2);">Bank (₹)</th>
+                <th style="padding: 6px; text-align: center;">Date (2022)</th>
+                <th style="padding: 6px; text-align: left;">Particulars (Payments)</th>
+                <th style="padding: 6px; text-align: center;">L.F.</th>
+                <th style="padding: 6px; text-align: right;">Cash (₹)</th>
+                <th style="padding: 6px; text-align: right;">Bank (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">Jun 01</td>
+                <td style="padding: 6px;">To Balance b/d</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right; color: #34d399;">2,800</td>
+                <td style="padding: 6px; text-align: right; color: #34d399; border-right: 2px solid rgba(255,255,255,0.2);">7,000</td>
+                <td style="padding: 6px; text-align: center;">Jun 18</td>
+                <td style="padding: 6px;">By Bank A/c</td>
+                <td style="padding: 6px; text-align: center; color: #f59e0b; font-weight: bold;">(C)</td>
+                <td style="padding: 6px; text-align: right; color: #f87171;">3,000</td>
+                <td style="padding: 6px; text-align: right;">—</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">Jun 10</td>
+                <td style="padding: 6px;">To Ravi (Cheque deposited)</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right;">—</td>
+                <td style="padding: 6px; text-align: right; color: #34d399; border-right: 2px solid rgba(255,255,255,0.2);">4,950</td>
+                <td style="padding: 6px; text-align: center;">Jun 20</td>
+                <td style="padding: 6px;">By Rent A/c</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right; color: #f87171;">700</td>
+                <td style="padding: 6px; text-align: right;">—</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">Jun 15</td>
+                <td style="padding: 6px;">To Sales A/c</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right; color: #34d399;">6,000</td>
+                <td style="padding: 6px; text-align: right; border-right: 2px solid rgba(255,255,255,0.2);">—</td>
+                <td style="padding: 6px; text-align: center;">Jun 25</td>
+                <td style="padding: 6px;">By Bank Charges A/c</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right;">—</td>
+                <td style="padding: 6px; text-align: right; color: #f87171;">100</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;">Jun 18</td>
+                <td style="padding: 6px;">To Cash A/c</td>
+                <td style="padding: 6px; text-align: center; color: #f59e0b; font-weight: bold;">(C)</td>
+                <td style="padding: 6px; text-align: right;">—</td>
+                <td style="padding: 6px; text-align: right; color: #34d399; border-right: 2px solid rgba(255,255,255,0.2);">3,000</td>
+                <td style="padding: 6px; text-align: center;">Jun 30</td>
+                <td style="padding: 6px;">By Drawings A/c</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right;">—</td>
+                <td style="padding: 6px; text-align: right; color: #f87171;">1,500</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px;"></td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right;"></td>
+                <td style="padding: 6px; text-align: right; border-right: 2px solid rgba(255,255,255,0.2);"></td>
+                <td style="padding: 6px; text-align: center;">Jun 30</td>
+                <td style="padding: 6px; font-weight: bold; color: #38bdf8;">By Balance c/d (Closing)</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right; font-weight: bold; color: #38bdf8;">5,100</td>
+                <td style="padding: 6px; text-align: right; font-weight: bold; color: #38bdf8;">13,350</td>
+              </tr>
+              <tr style="background: rgba(16,185,129,0.15); font-weight: 800; border-top: 2px solid #10b981; border-bottom: 2px solid #10b981;">
+                <td style="padding: 8px; text-align: center;"></td>
+                <td style="padding: 8px; color: #34d399;">TOTAL</td>
+                <td style="padding: 8px; text-align: center;"></td>
+                <td style="padding: 8px; text-align: right; color: #34d399;">₹8,800</td>
+                <td style="padding: 8px; text-align: right; color: #34d399; border-right: 2px solid rgba(255,255,255,0.2);">₹14,950</td>
+                <td style="padding: 8px; text-align: center;"></td>
+                <td style="padding: 8px; color: #34d399;">TOTAL</td>
+                <td style="padding: 8px; text-align: center;"></td>
+                <td style="padding: 8px; text-align: right; color: #34d399;">₹8,800</td>
+                <td style="padding: 8px; text-align: right; color: #34d399;">₹14,950</td>
+              </tr>
+              <tr style="background: rgba(56,189,248,0.06); font-weight: 700;">
+                <td style="padding: 6px; text-align: center; color: #38bdf8;">Jul 01</td>
+                <td style="padding: 6px; color: #38bdf8;">To Balance b/d (Opening)</td>
+                <td style="padding: 6px; text-align: center;"></td>
+                <td style="padding: 6px; text-align: right; color: #38bdf8;">₹5,100</td>
+                <td style="padding: 6px; text-align: right; color: #38bdf8; border-right: 2px solid rgba(255,255,255,0.2);">₹13,350</td>
+                <td colspan="5" style="padding: 6px;"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 12px; padding: 12px; background: rgba(0,0,0,0.4); border-left: 3px solid #f59e0b; border-radius: 0 8px 8px 0; font-size: 13px; line-height: 1.6;">
+            <strong>📌 Important CBSE Examination Notes:</strong><br>
+            1. <strong>Contra Entry (C) on June 18:</strong> Cash of ₹3,000 was deposited into the bank. It is debited in the Bank column and credited in the Cash column with '(C)' written in the L.F. column.<br>
+            2. <strong>Exclusion of Transaction on June 30:</strong> "Purchased goods on credit from Vinay ₹4,000" is a credit purchase. It is not recorded in the Cash Book; it is entered in the <em>Purchases Book</em>.<br>
+            3. <strong>Closing Cash & Bank Balances:</strong> Cash in hand = <strong>₹5,100</strong>; Cash at bank = <strong>₹13,350</strong>.
+          </div>
+        </div>`
+      },
+
+      // Section D: 6 Marks
+      {
+        id: 32, sec: 'secD', marks: '6 Marks',
+        q: '32. Prepare Journal Entries:<br>(a) Drawings from bank ₹10,000<br>(b) Goods burnt by fire ₹50,000<br>(c) Machinery ₹1,50,000 + Installation ₹2,000<br>(d) Dep on Building (5% on 2L) & Furniture (8% on 5k)<br>(e) Prepaid salary ₹2,000<br>(f) Kapil insolvent ₹20,000.',
+        hint: 'Capitalize installation into Machinery A/c. Charge Bad Debts for insolvent debtor.',
+        sol: '<strong>1. Drawings A/c Dr. 10,000 To Bank A/c 10,000</strong><br><strong>2. Loss by Fire A/c Dr. 50,000 To Purchases A/c 50,000</strong><br><strong>3. Machinery A/c Dr. 1,52,000 To Cash A/c 1,52,000</strong><br><strong>4. Depreciation A/c Dr. 10,400 To Building A/c 10,000 To Furniture A/c 400</strong><br><strong>5. Prepaid Salary A/c Dr. 2,000 To Salary A/c 2,000</strong><br><strong>6. Bad Debts A/c Dr. 20,000 To Kapil A/c 20,000</strong>'
+      },
+      {
+        id: 33, sec: 'secD', marks: '6 Marks',
+        q: '33. Bank Reconciliation Statement of Ramesh as on 31st October 2022 (Overdraft as per Pass Book Rs.16,500).',
+        hint: 'Start with Overdraft as per Pass Book (-₹16,500). Add items debited in PB but not in CB; deduct items credited in PB.',
+        sol: '<strong>BRS Calculation:</strong><br>• Overdraft as per Pass Book: (-) ₹16,500<br>• Add Interest on Overdraft not in CB: (+) ₹1,250<br>• Add Bank Charges not in CB: (+) ₹35<br>• Add Cheques issued not presented: (+) ₹11,500<br>• Less Cheques deposited not collected: (-) ₹2,500<br>• Less Interest on investment in PB: (-) ₹1,800<br><strong>Result: Overdraft as per Cash Book = ₹8,015 (Cr. Balance)</strong>.'
+      },
+      {
+        id: 34, sec: 'secD', marks: '6 Marks',
+        q: '34. Machinery Account for 3 Years (WDV Method @ 10% p.a.). M1 bought 1 Apr 2020 for ₹40,000; M2 bought 1 Oct 2020 for ₹20,000; M1 sold 1 Oct 2022 for ₹12,000 and M3 bought for ₹64,000.',
+        hint: 'Dep on M1 before sale on 1 Oct 2022 is for 6 months (₹1,620). Book value on sale date = ₹30,780. Loss on sale = ₹18,780.',
+        sol: '<strong>Machinery Account Results:</strong><br>• <strong>Loss on Sale of M1 (1 Oct 2022):</strong> WDV ₹30,780 - Sale ₹12,000 = <strong>₹18,780</strong><br>• <strong>Closing Machinery Balance on 31 March 2023:</strong> M2 (₹15,390) + M3 (₹60,800) = <strong>₹76,190</strong>.'
+      }
+    ];
+
+    function renderQuestions(filter = 'all') {
+      const container = document.getElementById('questionsList');
+      const filtered = filter === 'all' ? examData : examData.filter(d => d.sec === filter);
+
+      container.innerHTML = filtered.map(d => `
+        <div class="q-card" id="qcard_${d.id}">
+          <div class="q-header">
+            <span class="q-badge">Question ${d.id}</span>
+            <span class="marks-badge">${d.marks}</span>
+          </div>
+          <div class="q-text">${d.q}</div>
+          <div class="action-row">
+            <button class="hint-btn" onclick="toggleBox('hint_${d.id}')">💡 Reveal Strategic Hint</button>
+            <button class="sol-btn" onclick="toggleBox('sol_${d.id}')">🎯 Reveal Step-by-Step Solution</button>
+          </div>
+          <div class="hint-box" id="hint_${d.id}">
+            <strong>💡 Strategic Hint:</strong> ${d.hint}
+          </div>
+          <div class="sol-box" id="sol_${d.id}">
+            <strong>🎯 Solution:</strong><br>${d.sol}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleBox(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function filterSec(secName, btnEl) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+      renderQuestions(secName);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    renderQuestions('all');
+  </script>
+</body>
+</html>

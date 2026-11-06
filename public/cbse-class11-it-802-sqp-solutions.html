@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBSE Class 11 Information Technology (802) SQP 2024-25 Solved MCQs</title>
+<style>
+/* Low CSS - Minimal, Ultra-Fast, Responsive, Clean (<5KB) */
+:root {
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success: #16a34a;
+  --success-bg: #f0fdf4;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --badge-bg: #eff6ff;
+  --radius: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+body { background: var(--bg); color: var(--text); line-height: 1.5; padding: 16px; font-size: 15px; }
+.container { max-width: 860px; margin: 0 auto; }
+header { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.badge { display: inline-block; background: var(--badge-bg); color: var(--primary); font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 9999px; margin-bottom: 6px; }
+h1 { font-size: 1.35rem; color: #0f172a; margin-bottom: 6px; }
+.meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; position: sticky; top: 10px; z-index: 50; background: var(--bg); padding: 8px 0; border-bottom: 1px solid var(--border); }
+.btn { background: var(--primary); color: #fff; border: none; padding: 7px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; }
+.btn:hover { background: var(--primary-hover); }
+.btn-outline { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { background: #f1f5f9; }
+.score-badge { margin-left: auto; align-self: center; font-size: 13px; font-weight: 600; background: #e0f2fe; color: #0369a1; padding: 6px 14px; border-radius: 9999px; }
+.section-title { font-size: 1.15rem; font-weight: 700; margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--border); color: #0f172a; }
+.q-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.q-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.q-num { font-weight: 700; color: var(--primary); font-size: 13px; }
+.q-text { font-size: 14.5px; font-weight: 500; color: #1e293b; margin-bottom: 12px; }
+.options { display: flex; flex-direction: column; gap: 7px; margin-bottom: 10px; }
+.opt-label { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: all 0.15s ease; font-size: 14px; background: #fafafa; }
+.opt-label:hover { background: #f1f5f9; border-color: #cbd5e1; }
+.opt-label input { accent-color: var(--primary); }
+.opt-label.correct { background: var(--success-bg) !important; border-color: var(--success) !important; color: #15803d; font-weight: 600; }
+.opt-label.wrong { background: var(--danger-bg) !important; border-color: var(--danger) !important; color: #b91c1c; }
+.reveal-btn { background: none; border: 1px dashed var(--border); color: var(--primary); padding: 5px 11px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.reveal-btn:hover { background: #eff6ff; }
+.answer-box { display: none; margin-top: 10px; padding: 11px; border-radius: 6px; background: #f8fafc; border-left: 3px solid var(--primary); font-size: 13px; }
+.answer-box.active { display: block; }
+.code-block { background: #1e293b; color: #f8fafc; padding: 10px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12.5px; overflow-x: auto; margin-top: 6px; line-height: 1.4; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">CBSE Official Sample Paper 2024-25</div>
+    <h1>Information Technology (Subject Code 802) - Class XI</h1>
+    <div class="meta">
+      <span>⏱️ Time: 3 Hours</span>
+      <span>🎯 Max Marks: 60</span>
+      <span>📑 Session: 2024-2025</span>
+      <span>⚡ Low CSS • Interactive Self-Scoring MCQs & Hidden Answers</span>
+    </div>
+  </header>
+
+  <div class="controls">
+    <button class="btn" onclick="toggleAll(true)">Show All Answers</button>
+    <button class="btn-outline btn" onclick="toggleAll(false)">Hide All Answers</button>
+    <button class="btn-outline btn" onclick="resetQuiz()">Reset Quiz</button>
+    <div class="score-badge" id="scoreBox">Score: 0 / 0</div>
+  </div>
+
+  <h2 class="section-title">SECTION A: Objective Type Questions (30 Marks)</h2>
+  <div id="section-a-list"></div>
+
+  <h2 class="section-title">SECTION B: Subjective Type Questions (30 Marks)</h2>
+  <div id="section-b-list"></div>
+</div>
+
+<script>
+const secA = [
+  // Q1 Employability Skills
+  {
+    id: 'q1_1',
+    group: 'Q1 (i) - Employability Skills',
+    question: 'Reading and listening to someone are examples of __________ information.',
+    options: ['Receiving / Receptive', 'Transmitting', 'Encoding', 'Distorting'],
+    correct: 0,
+    ansText: '<b>Answer: Receiving / Receptive</b><br>Explanation: In communication, reading and listening are receptive skills used to receive information, whereas speaking and writing are expressive skills.'
+  },
+  {
+    id: 'q1_2',
+    group: 'Q1 (ii) - Employability Skills',
+    question: 'Do you think people living in hill stations can skip taking bath for many days?',
+    options: [
+      'No, irrespective of the climate, one should take a bath regularly.',
+      'Not taking bath for many days is acceptable for people staying in cold climate.',
+      'If you wipe yourself with a wet cloth, that is enough.',
+      'Only bath once a month in winter.'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: (a) No, irrespective of the climate, one should take a bath regularly.</b><br>Explanation: Personal hygiene requires regular bathing regardless of temperature to prevent accumulation of dead skin, dirt, and bacteria.'
+  },
+  {
+    id: 'q1_3',
+    group: 'Q1 (iii) - Employability Skills',
+    question: 'Networking helps you to make dependable and trusted friends with whom you can:',
+    options: [
+      'Share expertise and skills',
+      'Seek and provide support in difficult times',
+      'Inform and be informed about new opportunities',
+      'All of the above'
+    ],
+    correct: 3,
+    ansText: '<b>Answer: (d) All of the above</b><br>Explanation: Professional networking encompasses knowledge exchange, mutual emotional and professional support, and discovery of career opportunities.'
+  },
+  {
+    id: 'q1_4',
+    group: 'Q1 (iv) - Employability Skills',
+    question: 'Which shortcut key is used to create a new document?',
+    options: ['Ctrl + c', 'Ctrl + n', 'Ctrl + m', 'Ctrl + d'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Ctrl + n</b><br>Explanation: Ctrl + N is the universal shortcut in LibreOffice Writer, MS Word, and other office suites to open a new blank document.'
+  },
+  {
+    id: 'q1_5',
+    group: 'Q1 (v) - Employability Skills',
+    question: 'State true or false: Independence means one’s ability to work alone and have the confidence to make one’s own decisions.',
+    options: ['True', 'False'],
+    correct: 0,
+    ansText: '<b>Answer: True</b><br>Explanation: Working independently entails self-motivation, self-regulation, and the confidence to take initiative without constant supervision.'
+  },
+  {
+    id: 'q1_6',
+    group: 'Q1 (vi) - Employability Skills',
+    question: 'Who is responsible for the success of green economy in the country?',
+    options: ['Government', 'Social Workers', 'Individual citizens', 'All of the above'],
+    correct: 3,
+    ansText: '<b>Answer: (d) All of the above</b><br>Explanation: Transitioning to a green economy requires policy framework from government, community outreach from social workers, and sustainable consumption by individual citizens.'
+  },
+
+  // Q2 Computer Organization
+  {
+    id: 'q2_1',
+    group: 'Q2 (i) - Computer Organization',
+    question: '__________ are the physical components of a computer like a motherboard, memory devices, monitor, keyboard etc.',
+    options: ['Hardware', 'Software', 'Firmware', 'Operating System'],
+    correct: 0,
+    ansText: '<b>Answer: Hardware</b><br>Explanation: Hardware refers to the tangible, physical equipment and circuitry of a computer system.'
+  },
+  {
+    id: 'q2_2',
+    group: 'Q2 (ii) - Computer Organization',
+    question: 'It is a non-volatile primary memory.',
+    options: ['ROM', 'RAM', 'Both (a) & (b)', 'None of the above'],
+    correct: 0,
+    ansText: '<b>Answer: (a) ROM</b><br>Explanation: ROM (Read-Only Memory) retains its contents permanently even when power is turned off (non-volatile primary memory).'
+  },
+  {
+    id: 'q2_3',
+    group: 'Q2 (iii) - Computer Organization',
+    question: 'All the data stored in C drive of a computer is basically stored in _________.',
+    options: ['Pen drive', 'Hard Disk', 'CD', 'Both (a) & (c)'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Hard Disk</b><br>Explanation: The C drive is the default primary partition on the internal storage drive (Hard Disk / SSD).'
+  },
+  {
+    id: 'q2_4',
+    group: 'Q2 (iv) - Computer Organization',
+    question: '1024 bytes = _____ Kilobyte (KB) ; 1024 KB = _____ Megabyte (MB)',
+    options: ['2, 2', '1, 1', '0, 0', '3, 3'],
+    correct: 1,
+    ansText: '<b>Answer: (b) 1, 1</b><br>Explanation: 1 KB = 1024 Bytes, 1 MB = 1024 KB, 1 GB = 1024 MB in binary storage hierarchy.'
+  },
+  {
+    id: 'q2_5',
+    group: 'Q2 (v) - Computer Organization',
+    question: 'If the keyboard is not responding, try the following:',
+    options: ['Check Connections', 'Check for any Damage', 'Change Batteries', 'All of the above'],
+    correct: 3,
+    ansText: '<b>Answer: (d) All of the above</b><br>Explanation: Standard troubleshooting steps for keyboard issues include verifying cable/wireless connection, inspecting physical damage, and replacing discharged batteries.'
+  },
+  {
+    id: 'q2_6',
+    group: 'Q2 (vi) - Computer Organization',
+    question: '_________ are the special programs that help computer systems to work more smoothly, efficiently and effectively.',
+    options: ['Utility software', 'Malware', 'Games', 'Compilers'],
+    correct: 0,
+    ansText: '<b>Answer: Utility software (or System Utilities)</b><br>Explanation: Utility software (antivirus, disk defragmenter, backup tools) assists in maintenance, optimization, and smooth functioning of system resources.'
+  },
+  {
+    id: 'q2_7',
+    group: 'Q2 (vii) - Computer Organization',
+    question: 'Which of the following is NOT a feature/characteristic of a computer?',
+    options: ['Speed', 'Accuracy', 'Command', 'Memory'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Command</b><br>Explanation: Core characteristics of computers are Speed, Accuracy, Diligence, Versatility, and Storage (Memory). A computer lacks independent feeling or self-command.'
+  },
+
+  // Q3 Networking and Internet
+  {
+    id: 'q3_1',
+    group: 'Q3 (i) - Networking and Internet',
+    question: 'The full form of ARPANET is:',
+    options: [
+      'Advanced Research Projects Agency NET',
+      'Advanced Research Power Agency NET',
+      'Advanced Research Projects Agent NET',
+      'All Research Projects Agency Network'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: (a) Advanced Research Projects Agency NET</b><br>Explanation: ARPANET was funded by DARPA of the United States and became the foundation of modern internet.'
+  },
+  {
+    id: 'q3_2',
+    group: 'Q3 (ii) - Networking and Internet',
+    question: 'The term ____________ refers to malicious software (programs) designed with the intention to affect the normal functionality by causing harm to the system, or with the intention of getting unauthorized access...',
+    options: ['Virus', 'Malware', 'Worm', 'Trojan Horse'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Malware</b><br>Explanation: Malware (short for Malicious Software) is the comprehensive umbrella term encompassing viruses, worms, trojans, ransomware, and spyware.'
+  },
+  {
+    id: 'q3_3',
+    group: 'Q3 (iii) - Networking and Internet',
+    question: '_______ refers to raising knowledge and awareness about technology such as desktop computers, smartphones, tablets, and other electronic gadgets.',
+    options: ['Digital Literacy', 'Cyber Crime', 'Phishing', 'E-waste'],
+    correct: 0,
+    ansText: '<b>Answer: Digital Literacy (Technology Awareness)</b><br>Explanation: Digital literacy empowers individuals to navigate, evaluate, and create information safely using digital technologies.'
+  },
+  {
+    id: 'q3_4',
+    group: 'Q3 (iv) - Networking and Internet',
+    question: 'All the devices are connected to the central controller called hub.',
+    options: ['Star topology', 'Ring topology', 'Mesh topology', 'Tree topology'],
+    correct: 0,
+    ansText: '<b>Answer: (a) Star topology</b><br>Explanation: In a Star topology, every host node is linked directly via point-to-point connection to a central network hub or switch.'
+  },
+  {
+    id: 'q3_5',
+    group: 'Q3 (v) - Networking and Internet',
+    question: 'A ___________ is used to restore the input signal to its original form, so that it can travel a larger distance. It is also known as a digital regenerator.',
+    options: ['Repeater', 'Router', 'Bridge', 'Gateway'],
+    correct: 0,
+    ansText: '<b>Answer: Repeater</b><br>Explanation: A repeater operates at the physical layer to regenerate and boost attenuated signals before retransmitting them.'
+  },
+  {
+    id: 'q3_6',
+    group: 'Q3 (vi) - Networking and Internet',
+    question: 'The act of secretly or stealthily listening to the private conversation or communications of others without their consent:',
+    options: ['Denial of service', 'Phishing', 'Eavesdropping', 'Spoofing'],
+    correct: 2,
+    ansText: '<b>Answer: (c) Eavesdropping</b><br>Explanation: Eavesdropping is unauthorized real-time interception of private communications, phone calls, or unencrypted network traffic.'
+  },
+  {
+    id: 'q3_7',
+    group: 'Q3 (vii) - Networking and Internet',
+    question: 'Harassment or bullying inflicted through the use of electronic or communication devices such as computer, mobile phone, laptop, etc.',
+    options: ['Cyber bullying', 'Cyber stalking', 'Identity theft', 'Ransomware'],
+    correct: 0,
+    ansText: '<b>Answer: (a) Cyber bullying</b><br>Explanation: Cyberbullying is the repeated, deliberate harassment, humiliation, or threatening of a person using digital platforms.'
+  },
+
+  // Q4 Office Automation Tools
+  {
+    id: 'q4_1',
+    group: 'Q4 (i) - Office Automation Tools',
+    question: 'Rearrange the steps to sort data in ascending order:<br>1. Select the cells you want to sort.<br>2. Select the column and sort order (Ascending/Descending).<br>3. Click on OK.<br>4. Click on Sort option in Data menu.',
+    options: ['1, 2, 3, 4', '1, 3, 4, 2', '1, 4, 2, 3', '1, 2, 4, 3'],
+    correct: 2,
+    ansText: '<b>Answer: (c) 1, 4, 2, 3</b><br>Explanation: Select cells (1) -> Data > Sort (4) -> Configure column and sort order (2) -> Click OK (3).'
+  },
+  {
+    id: 'q4_2',
+    group: 'Q4 (ii) - Office Automation Tools',
+    question: 'The type of filter that can be applied in a spreadsheet:',
+    options: ['Auto Filter', 'Standard Filter', 'Advance Filter', 'All of the above'],
+    correct: 3,
+    ansText: '<b>Answer: (d) All of the above</b><br>Explanation: LibreOffice Calc supports AutoFilter, Standard Filter, and Advanced Filter.'
+  },
+  {
+    id: 'q4_3',
+    group: 'Q4 (iii) - Office Automation Tools',
+    question: 'A macro is a recording of each and every command and action you perform to :',
+    options: ['Process a task', 'Complete a task', 'Save a task', 'None of the above'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Complete a task</b><br>Explanation: Macros automate recurring workflows by recording keystrokes and instructions needed to complete a task.'
+  },
+  {
+    id: 'q4_4',
+    group: 'Q4 (iv) - Office Automation Tools',
+    question: 'Calc has a set of _____________ called functions.',
+    options: ['Formulas', 'Predefined formulas', 'Absolute reference', 'Absolute address'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Predefined formulas</b><br>Explanation: Functions are built-in, predefined formulas (e.g. SUM, AVERAGE) that execute calculations using specified arguments.'
+  },
+  {
+    id: 'q4_5',
+    group: 'Q4 (v) - Office Automation Tools',
+    question: '_________ is the main editing view for creating slides.',
+    options: ['Slide sorter', 'Normal view', 'Slide master', 'Slide view'],
+    correct: 1,
+    ansText: '<b>Answer: (b) Normal view</b><br>Explanation: Normal View is the principal workspace where you design, type text, add media, and format individual slides.'
+  },
+  {
+    id: 'q4_6',
+    group: 'Q4 (vi) - Office Automation Tools',
+    question: 'State true or false: Windows tab consists of commands that work on a window, like, open and close a window.',
+    options: ['True', 'False'],
+    correct: 0,
+    ansText: '<b>Answer: True</b><br>Explanation: The Window menu controls open document windows, split panes, and window arrangements.'
+  },
+
+  // Q5 RDBMS
+  {
+    id: 'q5_1',
+    group: 'Q5 (i) - RDBMS',
+    question: 'DBMS allow us to:',
+    options: [
+      'Store data in a structured way',
+      'Query the database (ask questions about the data)',
+      'Sort and manipulate the data in the database',
+      'All of the above'
+    ],
+    correct: 3,
+    ansText: '<b>Answer: (d) All of the above</b><br>Explanation: Database Management Systems handle organized data storage, rapid querying, sorting, and manipulation.'
+  },
+  {
+    id: 'q5_2',
+    group: 'Q5 (ii) - RDBMS',
+    question: 'Which of the following is NOT a benefit of using a DBMS?',
+    options: [
+      'Redundancy can be controlled',
+      'Inconsistency can be avoided',
+      'Data cannot be shared',
+      'Security restrictions can be applied'
+    ],
+    correct: 2,
+    ansText: '<b>Answer: (c) Data cannot be shared</b><br>Explanation: Easy and concurrent data sharing is a key advantage of DBMS. Stating that data cannot be shared is false.'
+  },
+  {
+    id: 'q5_3',
+    group: 'Q5 (iii) - RDBMS',
+    question: 'State True or False: A key of a table which is not selected as the primary key is called its candidate key.',
+    options: ['True', 'False'],
+    correct: 1,
+    ansText: '<b>Answer: False</b><br>Explanation: All eligible unique identifier keys are Candidate Keys. The ones that are NOT chosen as Primary Key are specifically known as <b>Alternate Keys</b>.'
+  },
+  {
+    id: 'q5_4',
+    group: 'Q5 (iv) - RDBMS',
+    question: '_______________ constraint makes sure that duplicate values in the specified column are not accepted.',
+    options: ['UNIQUE', 'DEFAULT', 'CHECK', 'NOT NULL'],
+    correct: 0,
+    ansText: '<b>Answer: UNIQUE (or PRIMARY KEY)</b><br>Explanation: The UNIQUE constraint guarantees distinctness across all records in that attribute.'
+  },
+  {
+    id: 'q5_5',
+    group: 'Q5 (v) - RDBMS',
+    question: 'The ____________ statement can be used to see the structure of a table as indicated in the Create Statement.',
+    options: ['DESCRIBE / DESC', 'SELECT', 'SHOW TABLES', 'ALTER TABLE'],
+    correct: 0,
+    ansText: '<b>Answer: DESCRIBE (or DESC / SHOW COLUMNS FROM)</b><br>Explanation: DESCRIBE table_name displays column names, data types, nullability, keys, and defaults.'
+  },
+  {
+    id: 'q5_6',
+    group: 'Q5 (vi) - RDBMS',
+    question: 'State true or false : AND Operator is used with WHERE clause and returns true if both the conditions are true.',
+    options: ['True', 'False'],
+    correct: 0,
+    ansText: '<b>Answer: True</b><br>Explanation: Logical AND filters rows where all combined Boolean criteria evaluate to True.'
+  },
+
+  // Q6 Fundamentals of Java
+  {
+    id: 'q6_1',
+    group: 'Q6 (i) - Fundamentals of Java',
+    question: 'GUI stands for?',
+    options: [
+      'Graphical User Interface',
+      'General User Interface',
+      'Global User Interaction',
+      'Guided User Instruction'
+    ],
+    correct: 0,
+    ansText: '<b>Answer: Graphical User Interface</b><br>Explanation: GUI allows visual human-computer interaction using windows, icons, buttons, and mouse pointers.'
+  },
+  {
+    id: 'q6_2',
+    group: 'Q6 (ii) - Fundamentals of Java',
+    question: '___________ act as a background for other controls in a GUI form.',
+    options: ['Form / Panel', 'Label', 'Button', 'Text Field'],
+    correct: 0,
+    ansText: '<b>Answer: Form (or Panel / JFrame)</b><br>Explanation: Top-level containers like Forms and Panels host and group visual UI controls.'
+  },
+  {
+    id: 'q6_3',
+    group: 'Q6 (iii) - Fundamentals of Java',
+    question: '___________ sets the text to be displayed in the Title bar of the form window.',
+    options: ['title property (setTitle())', 'text property', 'caption property', 'name property'],
+    correct: 0,
+    ansText: '<b>Answer: title property (setTitle() method)</b><br>Explanation: In Java Swing, the title property or frame.setTitle(...) sets the title bar string.'
+  },
+  {
+    id: 'q6_4',
+    group: 'Q6 (iv) - Fundamentals of Java',
+    question: 'State true or false : Object Oriented Programming follows top to bottom approach in program design and emphasizes on safety and security of data.',
+    options: ['True', 'False'],
+    correct: 1,
+    ansText: '<b>Answer: False</b><br>Explanation: Object Oriented Programming follows a <b>bottom-up</b> approach. Procedural programming follows a top-down approach.'
+  },
+  {
+    id: 'q6_5',
+    group: 'Q6 (v) - Fundamentals of Java',
+    question: 'The characteristics of a variable are:',
+    options: [
+      'It has a name.',
+      'It is capable of storing values.',
+      'It provides temporary storage.',
+      'All of the above'
+    ],
+    correct: 3,
+    ansText: '<b>Answer: (d) All of the above</b><br>Explanation: Variables are named memory locations storing values during program execution.'
+  },
+  {
+    id: 'q6_6',
+    group: 'Q6 (vi) - Fundamentals of Java',
+    question: 'State true or false : Variable names are case sensitive in Java.',
+    options: ['True', 'False'],
+    correct: 0,
+    ansText: '<b>Answer: True</b><br>Explanation: Java is strictly case sensitive (myVar and myvar represent two completely different identifiers).'
+  }
+];
+
+const secB = [
+  {
+    qnum: 'Q7 [2 Marks]',
+    title: 'Advantages and Disadvantages of Verbal Communication',
+    content: '<b>Advantages:</b><br>1. Quick and immediate feedback between speaker and listener.<br>2. Easier to clarify doubts on the spot.<br><br><b>Disadvantages:</b><br>1. Leaves no permanent written record unless recorded.<br>2. Misunderstandings can occur due to poor pronunciation, accent differences, or background noise.'
+  },
+  {
+    qnum: 'Q8 [2 Marks]',
+    title: 'Importance of Personal Hygiene',
+    content: '1. <b>Health & Disease Prevention:</b> Prevents infection and spread of germs/bacteria.<br>2. <b>Social Confidence:</b> Enhances self-esteem, creates a positive professional impression, and promotes overall mental wellbeing.'
+  },
+  {
+    qnum: 'Q9 [2 Marks]',
+    title: 'Advantage of using Header or Footer in a Word Processor',
+    content: '1. Displays repetitive document metadata automatically on every page (document title, author, date, page numbers).<br>2. Gives documents a neat, professional, and consistent structure.'
+  },
+  {
+    qnum: 'Q10 [2 Marks]',
+    title: 'Aspects to Keep in Mind While Understanding Customer Needs',
+    content: '1. Active listening to the customer requirements and expectations.<br>2. Understanding budget, preferences, pain points, and product usability.'
+  },
+  {
+    qnum: 'Q11 [2 Marks]',
+    title: 'Role of Government in Green Economy',
+    content: '1. Formulate environmental policies, renewable energy subsidies, and pollution regulations.<br>2. Invest in green infrastructure, waste management, and public awareness campaigns.'
+  },
+  {
+    qnum: 'Q12 [2 Marks]',
+    title: 'Difference between Hardware and Software',
+    content: '<b>Hardware:</b> Tangible physical components (CPU, RAM, Hard Disk, Keyboard). Cannot function without software.<br><b>Software:</b> Intangible set of programs/instructions (Operating System, LibreOffice, Browser). Controls hardware operations.'
+  },
+  {
+    qnum: 'Q13 [2 Marks]',
+    title: 'Generic / Country-Specific Domain Names',
+    content: '1. <b>.com</b> - Commercial organizations (Generic TLD)<br>2. <b>.edu</b> - Educational institutions (Generic TLD)<br>3. <b>.au</b> - Australia (Country-code TLD)<br>4. <b>.nz</b> - New Zealand (Country-code TLD)'
+  },
+  {
+    qnum: 'Q14 [2 Marks]',
+    title: 'Steps to Wrap Text in a Spreadsheet',
+    content: '1. Select the cell(s) containing long text.<br>2. Right-click and choose <b>Format Cells</b> (or go to Format menu > Cells).<br>3. Under the <b>Alignment</b> tab, check the <b>Wrap text automatically</b> box and click OK.'
+  },
+  {
+    qnum: 'Q15 [2 Marks]',
+    title: 'Steps for Inserting a Hyperlink to a Video in a Presentation',
+    content: '1. Select the text, shape, or image you want to link.<br>2. Go to the <b>Insert</b> menu and click on <b>Hyperlink</b> (Ctrl + K).<br>3. Select Document/Path or Web URL, browse to the video file, and click Apply/OK.'
+  },
+  {
+    qnum: 'Q16 [2 Marks]',
+    title: 'Difference between ComboBox and ListBox',
+    content: '<b>ComboBox:</b> A compact drop-down control showing one item at a time; user can type a custom entry (editable) or choose from list.<br><b>ListBox:</b> Displays multiple visible choices simultaneously in a scrollable box; typically restricts user to selecting only existing entries.'
+  },
+  {
+    qnum: 'Q17 [3 Marks]',
+    title: 'Slide Show Settings vs Custom Animation vs Slide Transition',
+    content: '1. <b>Slide Show Settings:</b> Configures overall presentation playback (range of slides, loop continuously, display monitor).<br>2. <b>Custom Animation:</b> Visual effects applied to individual slide elements (entrance, emphasis, exit of text or pictures).<br>3. <b>Slide Transition:</b> Visual transition effect that plays when moving from one slide to the next during show.'
+  },
+  {
+    qnum: 'Q18 [3 Marks]',
+    title: 'Three Features of MySQL',
+    content: '1. <b>Open Source & Free:</b> Highly cost-effective and community-supported.<br>2. <b>High Performance & Scalability:</b> Capable of handling massive databases rapidly.<br>3. <b>Data Security & Multi-user Support:</b> Robust permission management and concurrent user handling.'
+  },
+  {
+    qnum: 'Q19 [3 Marks]',
+    title: 'What is a ButtonGroup and which control is used with it?',
+    content: '<b>ButtonGroup:</b> A logical group container that creates mutually exclusive selection among buttons.<br><b>Associated Control:</b> <b>JRadioButton</b> is standardly added to a ButtonGroup so only one radio button in the group can be selected at a time.'
+  },
+  {
+    qnum: 'Q20 [4 Marks]',
+    title: 'Purpose of Presentation Views',
+    content: '<b>a. Slide Sorter:</b> Displays thumbnail view of all slides for easy reordering, copying, or applying transitions.<br><b>b. Slide Show:</b> Full-screen presentation mode used to deliver the presentation to an audience.<br><b>c. Notes Page:</b> Displays slide along with presenter notes below it.<br><b>d. Handout Page:</b> Formats slides for printing handouts (2, 3, 4, 6 or 9 slides per printed sheet) for the audience.'
+  },
+  {
+    qnum: 'Q21 [4 Marks]',
+    title: 'Four Protective Measures While Accessing Internet',
+    content: '1. Use strong, unique passwords with two-factor authentication (2FA).<br>2. Install and regularly update antivirus and firewall software.<br>3. Never click suspicious links or download unverified attachments (avoid phishing).<br>4. Only transact on HTTPS encrypted websites and avoid sensitive banking on public Wi-Fi.'
+  },
+  {
+    qnum: 'Q22 [4 Marks]',
+    title: 'Primary Key vs Candidate Key vs Alternate Key vs Foreign Key',
+    content: '1. <b>Candidate Key:</b> Any set of attributes that can uniquely identify a tuple in a relation.<br>2. <b>Primary Key:</b> The chosen candidate key that uniquely identifies each record and cannot be NULL.<br>3. <b>Alternate Key:</b> Candidate keys that were NOT chosen as the primary key.<br>4. <b>Foreign Key:</b> An attribute in one table that references the primary key of another table to establish relationships.'
+  },
+  {
+    qnum: 'Q23 [4 Marks]',
+    title: 'SQL Queries on Table GYM (PrCode, PrName, UnitPrice, Manufacturer)',
+    content: '<div class="code-block">-- a) Display the names of all the products in the store<br>SELECT PrName FROM GYM;<br><br>-- b) Display names and unit price of all products<br>SELECT PrName, UnitPrice FROM GYM;<br><br>-- c) Display names of all products by manufacturer \'Fit Express\'<br>SELECT PrName FROM GYM WHERE Manufacturer = \'Fit Express\';<br><br>-- d) Display all rows sorted in descending order of unit price<br>SELECT * FROM GYM ORDER BY UnitPrice DESC;</div>'
+  },
+  {
+    qnum: 'Q24 [4 Marks]',
+    title: 'Steps to Create a New Form in NetBeans / Java GUI',
+    content: '1. Open your Java project in NetBeans IDE.<br>2. Right-click the package under Source Packages.<br>3. Select <b>New &gt; JFrame Form</b>.<br>4. Enter Form Name and verify Package location.<br>5. Click <b>Finish</b> to load the GUI Builder palette and designer canvas.'
+  }
+];
+
+let userScore = 0;
+let answeredCount = 0;
+const answeredMap = {};
+
+function renderSecA() {
+  const container = document.getElementById('section-a-list');
+  let html = '';
+  secA.forEach((item, index) => {
+    html += `
+    <div class="q-card" id="card_${item.id}">
+      <div class="q-header">
+        <span class="q-num">${item.group}</span>
+        <span style="font-size:12px;color:var(--muted);">1 Mark</span>
+      </div>
+      <div class="q-text">${item.question}</div>
+      <div class="options">
+        ${item.options.map((opt, optIdx) => `
+          <label class="opt-label" id="label_${item.id}_${optIdx}">
+            <input type="radio" name="rad_${item.id}" onchange="checkOpt('${item.id}', ${optIdx}, ${item.correct})">
+            <span><b>${String.fromCharCode(65 + optIdx)}.</b> ${opt}</span>
+          </label>
+        `).join('')}
+      </div>
+      <button class="reveal-btn" onclick="toggleAns('${item.id}')">👁️ Toggle Answer & Explanation</button>
+      <div class="answer-box" id="ans_${item.id}">${item.ansText}</div>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+function renderSecB() {
+  const container = document.getElementById('section-b-list');
+  let html = '';
+  secB.forEach((item, idx) => {
+    const boxId = 'secb_' + idx;
+    html += `
+    <div class="q-card">
+      <div class="q-header">
+        <span class="q-num">${item.qnum}</span>
+      </div>
+      <div class="q-text"><b>${item.title}</b></div>
+      <button class="reveal-btn" onclick="toggleAns('${boxId}')">👁️ Reveal Model Answer</button>
+      <div class="answer-box" id="ans_${boxId}">${item.content}</div>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+function checkOpt(qid, chosenIdx, correctIdx) {
+  if (answeredMap[qid]) return;
+  answeredMap[qid] = true;
+  answeredCount++;
+  
+  const chosenLabel = document.getElementById('label_' + qid + '_' + chosenIdx);
+  const correctLabel = document.getElementById('label_' + qid + '_' + correctIdx);
+  
+  if (chosenIdx === correctIdx) {
+    userScore++;
+    chosenLabel.classList.add('correct');
+  } else {
+    chosenLabel.classList.add('wrong');
+    correctLabel.classList.add('correct');
+  }
+  
+  document.getElementById('ans_' + qid).classList.add('active');
+  updateScore();
+}
+
+function updateScore() {
+  document.getElementById('scoreBox').innerText = 'Score: ' + userScore + ' / ' + answeredCount + ' (Total ' + secA.length + ')';
+}
+
+function toggleAns(id) {
+  const el = document.getElementById('ans_' + id);
+  if (el) el.classList.toggle('active');
+}
+
+function toggleAll(show) {
+  document.querySelectorAll('.answer-box').forEach(el => {
+    if (show) el.classList.add('active');
+    else el.classList.remove('active');
+  });
+}
+
+function resetQuiz() {
+  userScore = 0;
+  answeredCount = 0;
+  for (let k in answeredMap) delete answeredMap[k];
+  updateScore();
+  renderSecA();
+}
+
+renderSecA();
+renderSecB();
+updateScore();
+</script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nextsem Splash & Logo Animation Experience</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Fira+Code:wght@500;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #060913;
+      color: #ffffff;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Background Glows */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 50% 40%, rgba(4, 170, 109, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Floating Grid Lines */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .main-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 780px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Top Mode Pill */
+    .mode-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(4, 170, 109, 0.12);
+      border: 1px solid rgba(4, 170, 109, 0.35);
+      color: #34d399;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      box-shadow: 0 0 16px rgba(4, 170, 109, 0.2);
+    }
+
+    .badge-pulsing-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #04AA6D;
+      box-shadow: 0 0 8px #04AA6D;
+      animation: pulseDot 1.5s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    /* Animation Arena Card */
+    .animation-card {
+      background: rgba(12, 19, 40, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 28px;
+      padding: 50px 30px;
+      width: 100%;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(4, 170, 109, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stage-container {
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0 20px;
+      position: relative;
+    }
+
+    /* SVG Letters Sequence */
+    .letter-item {
+      opacity: 0;
+      transform: translateY(-12px) scale(0.9);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .letter-item.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Final Locked Emblem */
+    .locked-badge-wrap {
+      display: none;
+      animation: lockEmblem 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @keyframes lockEmblem {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-8deg);
+      }
+      70% {
+        transform: scale(1.08) rotate(2deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    /* Glow Shockwave Ring */
+    .shockwave {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 36px;
+      border: 2px solid #04AA6D;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .shockwave.fire {
+      animation: ringExpand 0.8s ease-out forwards;
+    }
+
+    @keyframes ringExpand {
+      0% {
+        transform: scale(0.7);
+        opacity: 0.9;
+        box-shadow: 0 0 30px #04AA6D;
+      }
+      100% {
+        transform: scale(1.6);
+        opacity: 0;
+        box-shadow: 0 0 60px rgba(4, 170, 109, 0);
+      }
+    }
+
+    /* Tagline Reveal */
+    .tagline-container {
+      margin-top: 15px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tagline-container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tagline-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+
+    .tagline-sub {
+      color: #94a3b8;
+      font-size: 0.92rem;
+      font-family: 'Fira Code', monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Controls Row */
+    .controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 14px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      border: none;
+      outline: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #04AA6D 0%, #0284c7 100%);
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(4, 170, 109, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(4, 170, 109, 0.55);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e2e8f0;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Video Comparison Modal / Section */
+    .video-section {
+      margin-top: 40px;
+      width: 100%;
+      background: rgba(10, 15, 29, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: left;
+    }
+
+    .video-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .video-header h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .video-box {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #000;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-bg"></div>
+  <div class="bg-grid"></div>
+
+  <main class="main-container">
+
+    <!-- Top Mode Pill -->
+    <div class="mode-badge">
+      <span class="badge-pulsing-dot"></span>
+      <span>Official Nextsem Animation & Sound Engine</span>
+    </div>
+
+    <!-- Main Animation Arena Card -->
+    <section class="animation-card">
+      <div class="stage-container" id="stage">
+        
+        <!-- Shockwave Ring Effect -->
+        <div id="shockwave" class="shockwave"></div>
+
+        <!-- 1. FULL NEXTSEM LETTER-BY-LETTER TRACING SEQUENCE -->
+        <svg id="sequenceSvg" viewBox="0 0 540 130" style="width: 100%; max-width: 500px; height: auto; filter: drop-shadow(0 0 20px rgba(4, 170, 109, 0.4));">
+          <!-- N -->
+          <g id="let-1" class="letter-item">
+            <path d="M 20 115 V 15 L 75 115 V 15" fill="none" stroke="#04AA6D" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+          <!-- e -->
+          <g id="let-2" class="letter-item" transform="translate(100, 0)">
+            <path d="M 15 78 H 60 C 60 48, 15 48, 15 78 C 15 115, 60 115, 65 98" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+          </g>
+          <!-- x -->
+          <g id="let-3" class="letter-item" transform="translate(175, 0)">
+            <path d="M 15 50 L 60 115 M 60 50 L 15 115" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+          </g>
+          <!-- t -->
+          <g id="let-4" class="letter-item" transform="translate(250, 0)">
+            <path d="M 15 62 H 60 M 37 35 V 102 C 37 115, 55 115, 62 110" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+          </g>
+          <!-- s -->
+          <g id="let-5" class="letter-item" transform="translate(325, 0)">
+            <path d="M 55 62 C 55 50, 15 50, 15 66 C 15 84, 55 84, 55 100 C 55 115, 15 115, 15 102" fill="none" stroke="#04AA6D" stroke-width="16" stroke-linecap="round" />
+          </g>
+          <!-- e -->
+          <g id="let-6" class="letter-item" transform="translate(400, 0)">
+            <path d="M 15 78 H 60 C 60 48, 15 48, 15 78 C 15 115, 60 115, 65 98" fill="none" stroke="#04AA6D" stroke-width="16" stroke-linecap="round" />
+          </g>
+          <!-- m -->
+          <g id="let-7" class="letter-item" transform="translate(475, 0)">
+            <path d="M 10 115 V 50 M 10 70 C 10 50, 42 50, 42 70 V 115 M 42 70 C 42 50, 74 50, 74 70 V 115" fill="none" stroke="#04AA6D" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+        </svg>
+
+        <!-- 2. FINAL LOCKED EMERALD-WHITE NS EMBLEM -->
+        <div id="lockedBadge" class="locked-badge-wrap">
+          <div style="
+            width: 130px;
+            height: 130px;
+            border-radius: 32px;
+            background: #0c1328;
+            border: 3.5px solid #04AA6D;
+            box-shadow: 0 0 35px rgba(4, 170, 109, 0.6), inset 0 0 20px rgba(4, 170, 109, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+          ">
+            <svg viewBox="0 0 160 110" style="width: 105px; height: auto; overflow: visible;">
+              <!-- BOLD N (Emerald Green with Drop Glow) -->
+              <path d="M 15 95 V 15 L 65 95 V 15" fill="none" stroke="#04AA6D" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 10px #04AA6D);"/>
+              <!-- BOLD S (Crisp Pure White) -->
+              <path d="M 145 32 C 145 15, 95 15, 95 38 C 95 60, 145 60, 145 82 C 145 95, 95 95, 95 82" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tagline Reveal -->
+      <div id="tagline" class="tagline-container">
+        <h2 class="tagline-title">
+          NCERT Solutions <span style="color: #e5b842; font-size: 1.1rem;">by Nextsem</span>
+        </h2>
+        <div style="font-size: 1.05rem; font-weight: 800; color: #38bdf8; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px;">
+          NEP 2020 • CBSE 2025–26
+        </div>
+        <p class="tagline-sub" style="margin-top: 8px;">⚡ Rationalized Textbooks & Step-by-Step Solutions</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="controls-row">
+        <button class="btn-action btn-primary" onclick="runSplashSequence()">
+          <span>↻ Replay Splash</span>
+        </button>
+
+        <button id="soundToggleBtn" class="btn-action btn-secondary" onclick="toggleSound()">
+          <span id="soundIcon">🔊</span>
+          <span id="soundText">Sound: ON</span>
+        </button>
+
+        <a href="/" class="btn-action btn-secondary" style="border-color: #38bdf8; color: #38bdf8;">
+          <span>Launch NCERT Portal →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Original MP4 Video Preview Section -->
+    <section class="video-section">
+      <div class="video-header">
+        <h3>
+          <span>🎥 Original Rendered Splash MP4 Video</span>
+          <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 3px 8px; border-radius: 6px;">nextsem-splash-animation.mp4</span>
+        </h3>
+        <span style="font-size: 0.8rem; color: #94a3b8;">1080p Web Video</span>
+      </div>
+
+      <div class="video-box">
+        <video controls autoplay loop muted playsinline poster="/logo/logo-exact.png">
+          <source src="/logo/nextsem-splash-animation.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let soundEnabled = true;
+    let audioCtx = null;
+
+    function playTone(freq, duration = 0.25, type = 'sine') {
+      if (!soundEnabled) return;
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.2, audioCtx.currentTime + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        console.warn('AudioContext not allowed yet:', e);
+      }
+    }
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      document.getElementById('soundIcon').innerText = soundEnabled ? '🔊' : '🔇';
+      document.getElementById('soundText').innerText = soundEnabled ? 'Sound: ON' : 'Sound: MUTED';
+    }
+
+    function runSplashSequence() {
+      const seqSvg = document.getElementById('sequenceSvg');
+      const lockedBadge = document.getElementById('lockedBadge');
+      const shockwave = document.getElementById('shockwave');
+      const tagline = document.getElementById('tagline');
+
+      // Reset
+      seqSvg.style.display = 'block';
+      lockedBadge.style.display = 'none';
+      tagline.classList.remove('show');
+      shockwave.classList.remove('fire');
+
+      for (let i = 1; i <= 7; i++) {
+        const el = document.getElementById('let-' + i);
+        if (el) el.classList.remove('active');
+      }
+
+      // Step-by-step notes (E-minor scale frequencies for musical arpeggio)
+      const freqs = [329.63, 392.00, 440.00, 493.88, 587.33, 659.25, 783.99];
+      const stepDelay = 150;
+
+      for (let i = 1; i <= 7; i++) {
+        setTimeout(() => {
+          const el = document.getElementById('let-' + i);
+          if (el) el.classList.add('active');
+          playTone(freqs[i - 1], 0.28, 'sine');
+        }, stepDelay * i);
+      }
+
+      // Step 8: Collapse into locked NS badge with shockwave & chord chime
+      setTimeout(() => {
+        seqSvg.style.display = 'none';
+        lockedBadge.style.display = 'block';
+        shockwave.classList.add('fire');
+
+        // Play resolution chord
+        playTone(523.25, 0.8, 'triangle');
+        setTimeout(() => playTone(659.25, 0.8, 'sine'), 50);
+        setTimeout(() => playTone(1046.50, 1.2, 'sine'), 100);
+
+        // Show tagline
+        setTimeout(() => {
+          tagline.classList.add('show');
+        }, 300);
+
+      }, stepDelay * 8.5);
+    }
+
+    // Run automatically after first user interaction or load
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(runSplashSequence, 400);
+    });
+  </script>
+
+</body>
+</html>

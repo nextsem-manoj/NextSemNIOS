@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 7 Science Mid-Term Practice Paper (2026-27) — Solved with Interactive Hidden Answers</title>
+  <meta name="description" content="Directorate of Education, GNCT of Delhi Class 7 Science Mid-Term Examination Practice Paper 2026-27 fully solved with interactive hidden answers, bilingual Hindi/English explanations, circuit diagrams, and printable A4 test paper.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(56, 189, 248, 0.25);
+      --accent-teal: #14b8a6;
+      --accent-emerald: #10b981;
+      --accent-green: #04AA6D;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --input-bg: #070e1e;
+      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+      --answer-box-bg: rgba(16, 185, 129, 0.08);
+      --answer-box-border: #10b981;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --input-bg: #f1f5f9;
+      --shadow-card: 0 4px 16px rgba(15, 23, 42, 0.08);
+      --answer-box-bg: #ecfdf5;
+      --answer-box-border: #059669;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 90px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 85%, rgba(20, 184, 166, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Sticky Navigation Bar */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+      flex-wrap: wrap; gap: 10px;
+    }
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+    .breadcrumb-trail a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .breadcrumb-trail a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #64748b; font-size: 0.75rem; }
+    .breadcrumb-current { color: var(--text-main); font-weight: 800; }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 5px;
+      transition: all 0.2s;
+    }
+    body.light-theme .btn-nav { background: #e2e8f0; border-color: #cbd5e1; }
+    .btn-nav:hover { background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky); }
+
+    .btn-master-toggle {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 2px 10px rgba(2, 132, 199, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-master-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+    }
+
+    /* Language Switcher */
+    .lang-toggle-bar {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 2px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #04AA6D;
+      color: #ffffff;
+    }
+
+    /* Container */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header Paper Card */
+    .paper-header {
+      background: linear-gradient(135deg, #091a32 0%, #0c264d 100%);
+      border: 1.5px solid rgba(193, 166, 72, 0.4);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(6, 18, 36, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    body.light-theme .paper-header {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+      border-color: #38bdf8;
+    }
+
+    .badge-pill-row {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 14px;
+    }
+    .pill {
+      font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .pill-gold { background: rgba(245, 158, 11, 0.2); border: 1px solid #f59e0b; color: #fbbf24; }
+    .pill-sky { background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #7dd3fc; }
+    .pill-green { background: rgba(4, 170, 109, 0.2); border: 1px solid #04AA6D; color: #34d399; }
+    body.light-theme .pill-gold { color: #b45309; }
+    body.light-theme .pill-sky { color: #0369a1; }
+    body.light-theme .pill-green { color: #047857; }
+
+    .paper-title {
+      font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .paper-subtitle {
+      font-size: 1rem; color: #94a3b8; font-weight: 700; margin-bottom: 12px;
+    }
+    body.light-theme .paper-subtitle { color: #475569; }
+
+    .meta-grid {
+      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 12px;
+      padding-top: 14px; border-top: 1px dashed rgba(255, 255, 255, 0.15);
+      font-size: 0.88rem; font-weight: 800; color: #cbd5e1;
+    }
+    body.light-theme .meta-grid { color: #334155; border-top-color: #cbd5e1; }
+
+    /* Instructions Box */
+    .instructions-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      font-size: 0.86rem;
+    }
+    .instructions-card h3 {
+      font-size: 0.95rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;
+    }
+    .instructions-card ol {
+      padding-left: 20px; color: var(--text-muted);
+    }
+    .instructions-card ol li {
+      margin-bottom: 4px;
+    }
+
+    /* Section Banner */
+    .section-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
+      border: 1.5px solid var(--accent-sky);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin: 28px 0 16px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .section-title {
+      font-size: 1.15rem; font-weight: 900; color: var(--text-main); display: flex; align-items: center; gap: 8px;
+    }
+    .section-badge {
+      background: var(--accent-sky); color: #060c18; padding: 4px 10px; border-radius: 8px;
+      font-size: 0.78rem; font-weight: 900;
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s;
+    }
+    .q-card:hover {
+      border-color: var(--accent-sky);
+    }
+
+    .q-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 12px; margin-bottom: 12px;
+    }
+    .q-number {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--accent-sky);
+      color: var(--accent-sky);
+      font-weight: 900;
+      font-size: 0.84rem;
+      padding: 3px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .q-marks {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .q-text {
+      font-size: 0.96rem; font-weight: 700; color: var(--text-main); margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    /* Options Grid for MCQs */
+    .options-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px; margin-bottom: 16px;
+    }
+    .opt-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.2s;
+    }
+    body.light-theme .opt-btn { background: #f8fafc; border-color: #cbd5e1; }
+    .opt-btn:hover { border-color: var(--accent-sky); background: rgba(56, 189, 248, 0.08); }
+    .opt-btn.correct { border-color: #10b981; background: rgba(16, 185, 129, 0.2) !important; color: #10b981 !important; }
+    .opt-btn.wrong { border-color: #f43f5e; background: rgba(244, 63, 94, 0.2) !important; color: #f43f5e !important; }
+
+    /* Collapsible Answer Box */
+    .answer-container {
+      margin-top: 14px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.12);
+      padding-top: 12px;
+    }
+    body.light-theme .answer-container { border-top-color: #e2e8f0; }
+
+    .toggle-answer-btn {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1.5px solid #10b981;
+      color: #10b981;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: all 0.2s;
+    }
+    .toggle-answer-btn:hover {
+      background: #10b981; color: #041c14;
+    }
+
+    .answer-content {
+      display: none;
+      background: var(--answer-box-bg);
+      border: 1.5px solid var(--answer-box-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 12px;
+      animation: fadeIn 0.3s ease;
+    }
+    .answer-content.revealed {
+      display: block;
+    }
+
+    .answer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 8px; font-size: 0.85rem; font-weight: 800; color: #10b981;
+    }
+    .answer-body {
+      font-size: 0.92rem; color: var(--text-main); line-height: 1.6;
+    }
+    .answer-body strong { color: #38bdf8; }
+    body.light-theme .answer-body strong { color: #0284c7; }
+
+    .marking-points {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 10px;
+      font-size: 0.84rem;
+      color: #cbd5e1;
+    }
+    body.light-theme .marking-points { background: #f1f5f9; color: #334155; }
+
+    /* OR Alternative Box */
+    .or-divider {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      margin: 18px 0; font-weight: 900; color: var(--accent-gold); font-size: 0.9rem;
+    }
+    .or-divider::before, .or-divider::after {
+      content: ""; flex: 1; height: 1px; background: rgba(245, 158, 11, 0.4);
+    }
+
+    /* Subpart question */
+    .subpart-box {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--accent-teal);
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* SVG Circuit Diagram Box */
+    .diagram-container {
+      background: #030813;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      margin: 14px 0;
+    }
+    body.light-theme .diagram-container { background: #f8fafc; border-color: #cbd5e1; }
+
+    /* Tables */
+    .custom-table {
+      width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.88rem;
+    }
+    .custom-table th, .custom-table td {
+      border: 1px solid rgba(255, 255, 255, 0.15); padding: 8px 12px; text-align: left;
+    }
+    body.light-theme .custom-table th, body.light-theme .custom-table td {
+      border-color: #cbd5e1;
+    }
+    .custom-table th { background: rgba(56, 189, 248, 0.15); color: var(--accent-sky); font-weight: 800; }
+    body.light-theme .custom-table th { background: #e0f2fe; color: #0284c7; }
+
+    /* Print view formatting */
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; }
+      .bg-glow, .top-nav, .nav-actions, .toggle-answer-btn, .btn-master-toggle, .lang-toggle-bar { display: none !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      .q-card { border: 1px solid #94a3b8 !important; box-shadow: none !important; page-break-inside: avoid; margin-bottom: 12px !important; }
+      .paper-header { background: #f8fafc !important; color: #000 !important; border: 1.5px solid #000 !important; }
+      .section-banner { background: #f1f5f9 !important; border: 1px solid #000 !important; color: #000 !important; }
+      /* In print mode, hide answers unless print-with-answers is enabled */
+      body:not(.print-with-answers) .answer-content { display: none !important; }
+      body.print-with-answers .answer-content { display: block !important; border: 1px solid #000 !important; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Navigation Header -->
+  <header class="top-nav">
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?view=classes">Classes</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=7&subject=c7-science">Class 7 Science</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">DOE Mid-Term Practice Paper (2026-27)</span>
+    </nav>
+    <div class="nav-actions">
+      <!-- Master Reveal / Hide All Answers -->
+      <button type="button" class="btn-nav" onclick="resetTest()" title="Clear choices and hide all answers">🔄 Reset Test</button>
+      <button type="button" class="btn-master-toggle" id="masterToggleBtn" onclick="toggleAllAnswers()">
+        👁️ <span id="masterToggleText">Reveal All Answers</span>
+      </button>
+
+      <!-- Language Toggle -->
+      <div class="lang-toggle-bar">
+        <button type="button" class="lang-btn active" onclick="setLanguage('bilingual')">द्विभाषी</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('english')">English</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('hindi')">हिंदी</button>
+      </div>
+
+      <!-- Print Options -->
+      <button type="button" class="btn-nav" onclick="printPaper(false)" title="Print blank question paper for students">🖨️ Print Test</button>
+      <button type="button" class="btn-nav" onclick="printPaper(true)" title="Print paper with complete marking scheme solutions">📄 Print with Solutions</button>
+      <button type="button" class="btn-nav" onclick="toggleTheme()" id="themeBtn">☀️ Light</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Paper Header Banner -->
+    <div class="paper-header">
+      <div class="badge-pill-row">
+        <span class="pill pill-gold">🏛️ Directorate of Education, GNCT of Delhi</span>
+        <span class="pill pill-sky">Session: 2026-27</span>
+        <span class="pill pill-green">Official Practice Paper</span>
+      </div>
+      <h1 class="paper-title">
+        <span class="lang-en">Mid Term Examination Practice Paper</span>
+        <span class="lang-hi" style="display:block; font-size:1.15rem; margin-top:2px;">मध्यावधि परीक्षा अभ्यास प्रश्न पत्र</span>
+      </h1>
+      <p class="paper-subtitle">
+        Class: VII (7th) • Subject: SCIENCE (Code: 086)
+      </p>
+
+      <div class="meta-grid">
+        <div>⏳ <strong>Duration:</strong> 2.30 Hours (2 घंटे 30 मिनट)</div>
+        <div>🎯 <strong>Maximum Marks:</strong> 60</div>
+        <div>📚 <strong>Sections:</strong> A, B, C, D and E (15 Questions)</div>
+      </div>
+    </div>
+
+    <!-- Hidden Answers Test Mode Indicator -->
+    <div style="background: rgba(16, 185, 129, 0.12); border: 1.5px solid #10b981; border-radius: 12px; padding: 12px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.2rem;">🔒</span>
+        <div>
+          <strong style="color: #10b981; font-size: 0.92rem;">Self-Assessment Mode Active (All Answers Hidden)</strong>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin: 2px 0 0;">Attempt each question first. No answers or checkmarks are shown until you choose an option or click "👁️ Show Answer".</p>
+        </div>
+      </div>
+      <button type="button" onclick="resetTest()" style="background: #10b981; color: #041c14; border: none; font-weight: 800; font-size: 0.78rem; padding: 6px 12px; border-radius: 6px; cursor: pointer;">
+        🔄 Reset Choices
+      </button>
+    </div>
+
+    <!-- Instructions Box -->
+    <div class="instructions-card">
+      <h3>📋 General Instructions (सामान्य निर्देश):</h3>
+      <ol>
+        <li>All questions are compulsory (सभी प्रश्न अनिवार्य हैं).</li>
+        <li>This question paper consists of Section A, B, C, D and E with marks indicated against each question.</li>
+        <li><strong>Section A (Q1, I–XII):</strong> Multiple-Choice Questions (1 mark each = 12 marks).</li>
+        <li><strong>Section B (Q2–5):</strong> Very Short Answer Questions (2 marks each = 8 marks).</li>
+        <li><strong>Section C (Q6–8):</strong> Short Answer Questions (3 marks each = 9 marks).</li>
+        <li><strong>Section D (Q9–11):</strong> Long Answer Questions (5 marks each = 15 marks).</li>
+        <li><strong>Section E (Q12–15):</strong> Case-based / Source-based Questions with 3 subparts (4 marks each = 16 marks).</li>
+        <li>Internal choice is provided in some questions. Attempt only one choice.</li>
+      </ol>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- SECTION A: MCQs (Q.1, I to XII) - 12 Marks -->
+    <!-- ================================================================= -->
+    <div class="section-banner">
+      <div class="section-title">
+        <span>Section A</span> • <span class="lang-en">Multiple Choice Questions</span><span class="lang-hi"> (बहुविकल्पीय प्रश्न)</span>
+      </div>
+      <span class="section-badge">Q.1 (I–XII) • 12 × 1 = 12 Marks</span>
+    </div>
+
+    <!-- Q1 - I -->
+    <div class="q-card" id="q1-1">
+      <div class="q-header">
+        <span class="q-number">Q.1 (I)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">The yellow colour of turmeric powder turns red in:</span>
+        <span class="lang-hi"><br>हल्दी के चूर्ण का पीला रंग किस विलयन में लाल हो जाता है?</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-1-ans')">A) Acidic solutions (अम्लीय विलयन)</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-1-ans')">B) Basic solutions (क्षारकीय विलयन)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-1-ans')">C) Both acidic and basic solutions (दोनों)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-1-ans')">D) Neutral solutions (उदासीन विलयन)</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-1-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-1-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (B) Basic solutions</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation (व्याख्या):</strong> Turmeric is a natural indicator. It remains yellow in neutral and acidic solutions, but turns reddish-brown in basic/alkaline solutions (such as soap solution or lime water).</p>
+            <p class="lang-hi" style="margin-top:4px;">हल्दी एक प्राकृतिक सूचक है। यह अम्लीय और उदासीन माध्यम में पीली रहती है, परंतु क्षारकीय माध्यम (जैसे साबुन का घोल या चूने का पानी) के संपर्क में आने पर लाल हो जाती है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - II -->
+    <div class="q-card" id="q1-2">
+      <div class="q-header">
+        <span class="q-number">Q.1 (II)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">The motion of a simple pendulum is periodic in nature because:</span>
+        <span class="lang-hi"><br>एक सरल लोलक की गति आवर्ती (periodic) होती है, क्योंकि:</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-2-ans')">A) It never repeats its path.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-2-ans')">B) It moves only in a straight line.</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-2-ans')">C) It repeats its path after a fixed interval of time.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-2-ans')">D) It stops moving after some time.</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-2-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-2-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (C)</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> A motion that repeats itself at regular intervals of time is called periodic motion. A simple pendulum oscillates to and fro repeatedly in a fixed time period.</p>
+            <p class="lang-hi" style="margin-top:4px;">वह गति जो एक निश्चित समय अंतराल के बाद स्वयं को दोहराती है, आवर्ती गति कहलाती है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - III -->
+    <div class="q-card" id="q1-3">
+      <div class="q-header">
+        <span class="q-number">Q.1 (III)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">During a science seminar at school, two students are discussing body changes during adolescence. Which of the following statement is correct?</span>
+        <span class="lang-hi"><br>किशोरावस्था के दौरान शरीर में होने वाले परिवर्तनों के संबंध में कौन सा कथन सही है?</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-3-ans')">A) All adolescents grow exactly at the same rate.</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-3-ans')">B) Physical changes vary from person to person.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-3-ans')">C) Girls do not grow taller during adolescence.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-3-ans')">D) Boys and girls experience identical changes.</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-3-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-3-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (B)</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> The timing, pace, and extent of physical growth during puberty vary widely between individuals depending on genetics, nutrition, and hormones.</p>
+            <p class="lang-hi" style="margin-top:4px;">शारीरिक परिवर्तन की दर और समय प्रत्येक व्यक्ति में भिन्न होता है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - IV -->
+    <div class="q-card" id="q1-4">
+      <div class="q-header">
+        <span class="q-number">Q.1 (IV)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">The digested food in human beings is primarily absorbed through the walls of:</span>
+        <span class="lang-hi"><br>मानव शरीर में पचे हुए भोजन का अधिकांश अवशोषण किसकी भित्तियों द्वारा होता है?</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-4-ans')">A) Stomach (आमाशय)</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-4-ans')">B) Small intestine (क्षुद्रांत्र / छोटी आंत)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-4-ans')">C) Large intestine (बृहदांत्र / बड़ी आंत)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-4-ans')">D) Pancreas (अग्न्याशय)</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-4-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-4-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (B) Small intestine</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> The inner wall of the small intestine is lined with millions of tiny finger-like projections called villi, which provide an immense surface area for absorbing digested nutrients directly into blood capillaries.</p>
+            <p class="lang-hi" style="margin-top:4px;">क्षुद्रांत्र (छोटी आंत) की आंतरिक भित्ति पर उपस्थित रसांकुर (विली) पचे हुए भोजन के अवशोषण के लिए पृष्ठ क्षेत्रफल बढ़ा देते हैं।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - V -->
+    <div class="q-card" id="q1-5">
+      <div class="q-header">
+        <span class="q-number">Q.1 (V)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">During a class room activity, a student tests a liquid with blue litmus paper and the paper turns red. The liquid is most likely:</span>
+        <span class="lang-hi"><br>एक छात्र नीले लिटमस पत्र से द्रव का परीक्षण करता है और वह लाल हो जाता है। द्रव संभवतः है:</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-5-ans')">A) Acidic (अम्लीय)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-5-ans')">B) Basic (क्षारकीय)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-5-ans')">C) Neutral (उदासीन)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-5-ans')">D) Pure water (शुद्ध जल)</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-5-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-5-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (A) Acidic</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> Acids turn blue litmus paper red. Bases turn red litmus paper blue. Neutral substances cause no color change on litmus.</p>
+            <p class="lang-hi" style="margin-top:4px;">अम्ल नीले लिटमस पत्र को लाल कर देते हैं।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - VI -->
+    <div class="q-card" id="q1-6">
+      <div class="q-header">
+        <span class="q-number">Q.1 (VI)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">During a school health camp, students are advised to consume foods like spinach that are rich in iron:</span>
+        <span class="lang-hi"><br>स्वास्थ्य शिविर में छात्रों को पालक जैसे आयरन युक्त खाद्य पदार्थों के सेवन की सलाह क्यों दी जाती है?</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-6-ans')">A) To prevent anaemia and help in blood formation</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-6-ans')">B) To increase height instantly</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-6-ans')">C) To improve eyesight</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-6-ans')">D) To strengthen teeth only</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-6-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-6-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (A)</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> Iron is an essential mineral required for the synthesis of haemoglobin in red blood cells. A deficiency of iron causes anaemia.</p>
+            <p class="lang-hi" style="margin-top:4px;">आयरन रक्त में हीमोग्लोबिन के निर्माण के लिए आवश्यक है तथा एनीमिया (रक्ताल्पता) से बचाव करता है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - VII -->
+    <div class="q-card" id="q1-7">
+      <div class="q-header">
+        <span class="q-number">Q.1 (VII)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">The SI unit of time is:</span>
+        <span class="lang-hi"><br>समय का अंतर्राष्ट्रीय मात्रक (SI unit) क्या है?</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-7-ans')">A) Minute (मिनट)</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-7-ans')">B) Second (सेकंड)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-7-ans')">C) Hour (घंटा)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-7-ans')">D) Millisecond (मिलीसेकंड)</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-7-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-7-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (B) Second</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> The standard international (SI) fundamental unit for measuring time is the <strong>second</strong>, denoted by the symbol <code>s</code>.</p>
+            <p class="lang-hi" style="margin-top:4px;">समय का मूल SI मात्रक सेकंड (s) है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - VIII -->
+    <div class="q-card" id="q1-8">
+      <div class="q-header">
+        <span class="q-number">Q.1 (VIII)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">Which of the following is required to break down glucose and release energy during aerobic respiration?</span>
+        <span class="lang-hi"><br>श्वसन के दौरान ग्लूकोज को तोड़कर ऊर्जा मुक्त करने के लिए किसकी आवश्यकता होती है?</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-8-ans')">A) Carbon dioxide</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-8-ans')">B) Oxygen (ऑक्सीजन)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-8-ans')">C) Water</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-8-ans')">D) Sunlight</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-8-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-8-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (B) Oxygen</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> In aerobic cellular respiration, glucose reacts with oxygen inside cells to produce carbon dioxide, water, and energy (ATP):<br>
+            <code>Glucose + Oxygen → Carbon Dioxide + Water + Energy</code></p>
+            <p class="lang-hi" style="margin-top:4px;">वायवीय श्वसन में ग्लूकोज के विखंडन और ऊर्जा उत्पादन हेतु ऑक्सीजन अनिवार्य है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - IX -->
+    <div class="q-card" id="q1-9">
+      <div class="q-header">
+        <span class="q-number">Q.1 (IX)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">Choose the correct statement regarding electric circuit:</span>
+        <span class="lang-hi"><br>विद्युत परिपथ के संदर्भ में सही कथन चुनिए:</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-9-ans')">A) Electric current can flow through a circuit even if there is a gap.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-9-ans')">B) Current always flows from negative to positive terminal.</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-9-ans')">C) The representation of an electrical circuit using symbols is called circuit diagram.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-9-ans')">D) A switch is the source of electric current in a circuit.</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-9-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-9-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (C)</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> Representing an electric circuit with standard graphical symbols is known as a <strong>circuit diagram</strong>. (A is wrong: open circuit doesn't conduct; B is wrong: conventional current flows + to -; D is wrong: cell/battery is the source).</p>
+            <p class="lang-hi" style="margin-top:4px;">विद्युत प्रतीकों की सहायता से परिपथ का आरेखीय निरूपण 'परिपथ आरेख' कहलाता है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - X -->
+    <div class="q-card" id="q1-10">
+      <div class="q-header">
+        <span class="q-number">Q.1 (X)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">After an ant bite, it is always advised to apply moist baking soda to the affected area because:</span>
+        <span class="lang-hi"><br>चींटी के काटने पर प्रभावित स्थान पर नम बेकिंग सोडा लगाने की सलाह दी जाती है, क्योंकि:</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-10-ans')">A) Baking soda is acidic in nature.</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-10-ans')">B) Baking soda is basic and helps neutralise the acidic effect.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-10-ans')">C) It reacts with the bite to produce strong acids.</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-10-ans')">D) Baking soda cools the skin only.</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-10-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-10-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (B)</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> An ant injects <strong>formic acid (methanoic acid)</strong> into the skin when it bites. Moist baking soda (sodium hydrogen carbonate) is a mild base that neutralises the acid and provides quick relief.</p>
+            <p class="lang-hi" style="margin-top:4px;">चींटी के डंक में फॉर्मिक अम्ल होता है। बेकिंग सोडा एक दुर्बल क्षारक है जो अम्ल को उदासीन कर देता है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - XI -->
+    <div class="q-card" id="q1-11">
+      <div class="q-header">
+        <span class="q-number">Q.1 (XI)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">Which of the following process of heat transfer does not require a medium?</span>
+        <span class="lang-hi"><br>ऊष्मा स्थानांतरण की किस विधि में किसी माध्यम की आवश्यकता नहीं होती है?</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-11-ans')">A) Conduction (चालन)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-11-ans')">B) Convection (संवहन)</button>
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-11-ans')">C) Radiation (विकिरण)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-11-ans')">D) Both conduction and convection</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-11-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-11-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (C) Radiation</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> Radiation transfers heat in the form of electromagnetic infrared waves and does not require any material medium. Solar heat reaches Earth across the vacuum of space by radiation.</p>
+            <p class="lang-hi" style="margin-top:4px;">विकिरण विधि में ऊष्मा बिना किसी माध्यम के (निर्वात में भी) स्थानांतरित हो सकती है, जैसे सूर्य से पृथ्वी तक ऊष्मा का पहुँचना।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q1 - XII -->
+    <div class="q-card" id="q1-12">
+      <div class="q-header">
+        <span class="q-number">Q.1 (XII)</span>
+        <span class="q-marks">1 Mark</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">If an object is moving along a straight line with a constant speed, the object is said to be:</span>
+        <span class="lang-hi"><br>यदि कोई वस्तु एक सीधी रेखा के अनुदिश नियत चाल से गति कर रही है, तो उसकी गति कहलाती है:</span>
+      </p>
+      <div class="options-grid">
+        <button type="button" class="opt-btn" data-correct="true" onclick="checkMcq(this, 'q1-12-ans')">A) In uniform linear motion (एकसमान रैखिक गति में)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-12-ans')">B) In non-uniform linear motion (असमान गति में)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-12-ans')">C) In oscillatory motion (दोलन गति में)</button>
+        <button type="button" class="opt-btn" data-correct="false" onclick="checkMcq(this, 'q1-12-ans')">D) At rest (विरामावस्था में)</button>
+      </div>
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q1-12-ans')">👁️ Show Answer</button>
+        <div class="answer-content" id="q1-12-ans">
+          <div class="answer-header">
+            <span>✅ Correct Answer: Option (A) In uniform linear motion</span>
+            <span>1 Mark</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>Explanation:</strong> When an object moves along a straight line covering equal distances in equal intervals of time at constant speed, its motion is uniform linear motion.</p>
+            <p class="lang-hi" style="margin-top:4px;">सरल रेखा में नियत चाल से चलने वाली वस्तु की गति एकसमान रैखिक गति कहलाती है।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- SECTION B: Very Short Answer Questions (Q2 to Q5) - 8 Marks -->
+    <!-- ================================================================= -->
+    <div class="section-banner">
+      <div class="section-title">
+        <span>Section B</span> • <span class="lang-en">Very Short Answer Questions</span><span class="lang-hi"> (अति लघु उत्तरीय प्रश्न)</span>
+      </div>
+      <span class="section-badge">Q.2–Q.5 • 4 × 2 = 8 Marks</span>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="q-card" id="q2">
+      <div class="q-header">
+        <span class="q-number">Q.2 (Attempt either A or B)</span>
+        <span class="q-marks">2 Marks</span>
+      </div>
+      
+      <!-- Option A -->
+      <div class="subpart-box">
+        <p class="q-text">
+          <strong>(A)</strong> <span class="lang-en">Define neutralisation reaction. What should a farmer do to reduce the basic nature of soil in his field and improve plant growth?</span>
+          <span class="lang-hi"><br>उदासीनीकरण अभिक्रिया को परिभाषित कीजिए। एक किसान को अपने खेत की मिट्टी की क्षारीय प्रकृति को कम करने और पौधों की वृद्धि में सुधार करने के लिए क्या करना चाहिए?</span>
+        </p>
+      </div>
+
+      <div class="or-divider">OR / अथवा</div>
+
+      <!-- Option B -->
+      <div class="subpart-box">
+        <p class="q-text">
+          <strong>(B)</strong> <span class="lang-en">Differentiate between natural and synthetic indicators. Give one example of each.</span>
+          <span class="lang-hi"><br>प्राकृतिक और संश्लेषित (कृत्रिम) सूचकों में अंतर स्पष्ट कीजिए। प्रत्येक का एक उदाहरण दीजिए।</span>
+        </p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q2-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q2-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>2 Marks</span>
+          </div>
+          <div class="answer-body">
+            <h4 style="color:var(--accent-teal); margin-bottom:4px;">Solution for Choice (A):</h4>
+            <p><strong>1. Neutralisation Reaction:</strong> The chemical reaction between an acid and a base to produce salt and water with the evolution of heat is called a neutralisation reaction.</p>
+            <p><code>Acid + Base → Salt + Water + Heat</code></p>
+            <p><strong>2. Farmer's Soil Treatment:</strong> If the soil is too basic (alkaline), the farmer should add <strong>organic matter (compost or manure)</strong> to the soil. Organic matter releases natural organic acids as it decays, which neutralise the basic nature of the soil and restore optimal pH for plant growth.</p>
+            
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark for defining neutralisation reaction + 1 Mark for mentioning organic matter/manure and acid release.
+            </div>
+
+            <hr style="margin:12px 0; border:0; border-top:1px dashed rgba(255,255,255,0.2);">
+
+            <h4 style="color:var(--accent-gold); margin-bottom:4px;">Solution for Choice (B) [OR]:</h4>
+            <table class="custom-table">
+              <tr>
+                <th>Natural Indicators (प्राकृतिक सूचक)</th>
+                <th>Synthetic Indicators (संश्लेषित सूचक)</th>
+              </tr>
+              <tr>
+                <td>Indicators extracted directly from natural plant sources.</td>
+                <td>Man-made chemical substances synthesized in laboratories.</td>
+              </tr>
+              <tr>
+                <td><strong>Examples:</strong> Litmus (from lichens), Turmeric powder, China rose (Gudhal) petals.</td>
+                <td><strong>Examples:</strong> Phenolphthalein, Methyl orange.</td>
+              </tr>
+            </table>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark for correct distinction + 1 Mark for correct examples (0.5 mark each).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="q-card" id="q3">
+      <div class="q-header">
+        <span class="q-number">Q.3</span>
+        <span class="q-marks">2 Marks</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">Describe the importance of ‘switch’ in an electric circuit. Draw the symbol of an electric switch in “OFF” position.</span>
+        <span class="lang-hi"><br>विद्युत परिपथ में 'स्विच' के महत्व का वर्णन कीजिए। "OFF" (खुली) स्थिति में विद्युत स्विच का प्रतीक बनाइए।</span>
+      </p>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q3-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q3-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>2 Marks</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>1. Importance of a Switch (1 Mark):</strong> A switch is a simple electrical control device used to either <strong>close (complete)</strong> or <strong>open (break)</strong> an electrical circuit. When the switch is in the "ON" position, it completes the path for electric current to flow through the appliances. When in the "OFF" position, it safely interrupts current flow without disconnecting the main power source or battery.</p>
+
+            <p style="margin-top:10px;"><strong>2. Symbol in "OFF" (Open) Position (1 Mark):</strong></p>
+            <div class="diagram-container">
+              <svg width="220" height="70" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg">
+                <!-- Terminal Left -->
+                <line x1="20" y1="35" x2="70" y2="35" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="75" cy="35" r="5" fill="#060c18" stroke="#38bdf8" stroke-width="3"/>
+                <!-- Switch Lever Open (Slanted UP) -->
+                <line x1="75" y1="32" x2="135" y2="12" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+                <!-- Terminal Right -->
+                <circle cx="145" cy="35" r="5" fill="#060c18" stroke="#38bdf8" stroke-width="3"/>
+                <line x1="150" y1="35" x2="200" y2="35" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+                <!-- Text Label -->
+                <text x="110" y="58" fill="#94a3b8" font-size="12" font-family="sans-serif" font-weight="bold" text-anchor="middle">Switch in OFF (Open) Position</text>
+              </svg>
+            </div>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark for explaining function (open/close circuit) + 1 Mark for neat symbol showing open gap.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="q-card" id="q4">
+      <div class="q-header">
+        <span class="q-number">Q.4 (Attempt either A or B)</span>
+        <span class="q-marks">2 Marks</span>
+      </div>
+
+      <!-- Option A -->
+      <div class="subpart-box">
+        <p class="q-text">
+          <strong>(A)</strong> <span class="lang-en">Describe secondary sexual characteristics. What causes the development of secondary sexual characteristics during adolescence?</span>
+          <span class="lang-hi"><br>गौण लैंगिक लक्षणों का वर्णन कीजिए। किशोरावस्था में गौण लैंगिक लक्षणों के विकास का क्या कारण है?</span>
+        </p>
+      </div>
+
+      <div class="or-divider">OR / अथवा</div>
+
+      <!-- Option B -->
+      <div class="subpart-box">
+        <p class="q-text">
+          <strong>(B)</strong> <span class="lang-en">Why is adolescence considered a transition period between childhood and adulthood?</span>
+          <span class="lang-hi"><br>किशोरावस्था को बाल्यावस्था और प्रौढ़ावस्था के बीच का संक्रमण काल (transition period) क्यों माना जाता है?</span>
+        </p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q4-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q4-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>2 Marks</span>
+          </div>
+          <div class="answer-body">
+            <h4 style="color:var(--accent-teal); margin-bottom:4px;">Solution for Choice (A):</h4>
+            <p><strong>1. Description (1 Mark):</strong> Features that distinguish males from females, which develop during puberty but are not directly involved in reproduction, are called <strong>secondary sexual characteristics</strong>.</p>
+            <ul style="padding-left:20px; margin:4px 0 8px;">
+              <li>In boys: Growth of facial hair (moustache, beard), chest hair, deepening of voice (enlarged Adam's apple).</li>
+              <li>In girls: Development of breasts/mammary glands, broadening of hips, high-pitched voice.</li>
+            </ul>
+            <p><strong>2. Cause (1 Mark):</strong> Their development is stimulated and controlled by <strong>sex hormones</strong> released into the bloodstream: <strong>testosterone</strong> produced by testes in males and <strong>estrogen</strong> produced by ovaries in females, both regulated by the pituitary gland.</p>
+
+            <hr style="margin:12px 0; border:0; border-top:1px dashed rgba(255,255,255,0.2);">
+
+            <h4 style="color:var(--accent-gold); margin-bottom:4px;">Solution for Choice (B) [OR]:</h4>
+            <p><strong>Why Adolescence is a Transition Period (2 Marks):</strong></p>
+            <ol style="padding-left:20px; margin:4px 0;">
+              <li><strong>Physical & Reproductive Maturation:</strong> The individual is no longer a child physically, undergoing rapid skeletal growth and attaining reproductive maturity.</li>
+              <li><strong>Cognitive & Emotional Transformation:</strong> Adolescents develop abstract and independent thinking, experience emotional fluctuations, and prepare socially and mentally for adult responsibilities while still moving out of childhood dependency.</li>
+            </ol>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark for physical/reproductive change + 1 Mark for emotional/mental transition toward adulthood.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="q-card" id="q5">
+      <div class="q-header">
+        <span class="q-number">Q.5</span>
+        <span class="q-marks">2 Marks</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">Ravi, a 13-year-old, avoids games and exercise. He often feels tired and irritable.</span>
+        <span class="lang-hi"><br>13 वर्षीय रवि खेलकूद और व्यायाम से बचता है। वह प्रायः थका हुआ और चिड़चिड़ा महसूस करता है।</span>
+      </p>
+      <div class="subpart-box">
+        <p><strong>a.</strong> <span class="lang-en">What problems is Ravi facing due to lack of exercise?</span><span class="lang-hi"><br>व्यायाम न करने के कारण रवि को किन समस्याओं का सामना करना पड़ रहा है?</span></p>
+      </div>
+      <div class="subpart-box">
+        <p><strong>b.</strong> <span class="lang-en">Suggest two benefits he will gain if he starts exercising regularly.</span><span class="lang-hi"><br>नियमित व्यायाम शुरू करने पर उसे मिलने वाले किन्हीं दो लाभों का सुझाव दीजिए।</span></p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q5-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q5-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>2 Marks</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>a. Problems faced by Ravi (1 Mark):</strong></p>
+            <p>Due to physical inactivity, Ravi is experiencing poor blood circulation, weakened muscular and bone strength, reduced metabolic rate leading to physical lethargy/chronic fatigue, and mood instability (irritability/anxiety) along with risk of childhood obesity.</p>
+            
+            <p style="margin-top:10px;"><strong>b. Two Benefits of Regular Exercise (1 Mark - 0.5 each):</strong></p>
+            <ol style="padding-left:20px;">
+              <li><strong>Enhanced Physical Stamina & Fitness:</strong> Strengthens cardiac muscles, improves lung capacity, boosts stamina, and strengthens bones and joints.</li>
+              <li><strong>Mental Wellbeing & Stress Relief:</strong> Exercise stimulates the release of "endorphins" (mood-boosting neurotransmitters), which relieve mental stress, eliminate irritability, and promote deep, restful sleep.</li>
+            </ol>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark for identifying fatigue/irritability/muscle weakness + 1 Mark for two valid benefits (0.5 + 0.5).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- SECTION C: Short Answer Questions (Q6 to Q8) - 9 Marks -->
+    <!-- ================================================================= -->
+    <div class="section-banner">
+      <div class="section-title">
+        <span>Section C</span> • <span class="lang-en">Short Answer Questions</span><span class="lang-hi"> (लघु उत्तरीय प्रश्न)</span>
+      </div>
+      <span class="section-badge">Q.6–Q.8 • 3 × 3 = 9 Marks</span>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="q-card" id="q6">
+      <div class="q-header">
+        <span class="q-number">Q.6 (Attempt either A or B)</span>
+        <span class="q-marks">3 Marks</span>
+      </div>
+
+      <!-- Option A -->
+      <div class="subpart-box">
+        <p class="q-text"><strong>(A) Give reasons (कारण बताइए):</strong></p>
+        <p>(i) Rubber gloves are worn by electricians during repairing of domestic electric circuit.<br>
+           (ii) Electric wires are made of copper but covered with plastic.<br>
+           (iii) The bulb does not glow when a wire of an electric circuit got broken.</p>
+      </div>
+
+      <div class="or-divider">OR / अथवा</div>
+
+      <!-- Option B -->
+      <div class="subpart-box">
+        <p class="q-text"><strong>(B) Classify the following material as conductor or insulator of electricity:</strong></p>
+        <p>(i) Wooden stick &nbsp;&nbsp;&nbsp;&nbsp; (ii) Copper wire &nbsp;&nbsp;&nbsp;&nbsp; (iii) Steel spoon<br>
+           (iv) Plastic ruler &nbsp;&nbsp;&nbsp;&nbsp; (v) Rubber band &nbsp;&nbsp;&nbsp;&nbsp; (vi) Iron nail</p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q6-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q6-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>3 Marks</span>
+          </div>
+          <div class="answer-body">
+            <h4 style="color:var(--accent-teal); margin-bottom:4px;">Solution for Choice (A):</h4>
+            <ol style="padding-left:20px; line-height:1.6;">
+              <li><strong>(i) Rubber Gloves (1 Mark):</strong> Rubber is an electrical <strong>insulator</strong> (poor conductor). Wearing rubber gloves prevents current from entering or passing through the human body, protecting the electrician from lethal electric shocks.</li>
+              <li><strong>(ii) Copper Wire Covered with Plastic (1 Mark):</strong> Copper is an excellent <strong>conductor</strong> of electricity with very low electrical resistance, allowing current to flow efficiently. Plastic is an <strong>insulator</strong>, used as an outer protective coating to prevent accidental contact, short circuits, and electric shocks.</li>
+              <li><strong>(iii) Bulb Not Glowing when Wire is Broken (1 Mark):</strong> Electric current requires an unbroken, continuous closed loop to flow. When the wire breaks, the circuit becomes an <strong>open circuit</strong>; current flow stops immediately, and without current, the bulb filament cannot heat up or glow.</li>
+            </ol>
+
+            <hr style="margin:12px 0; border:0; border-top:1px dashed rgba(255,255,255,0.2);">
+
+            <h4 style="color:var(--accent-gold); margin-bottom:4px;">Solution for Choice (B) [OR]:</h4>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:8px;">
+              <div style="background:rgba(56,189,248,0.1); border:1px solid #38bdf8; border-radius:8px; padding:10px;">
+                <h5 style="color:#38bdf8; margin-bottom:6px;">⚡ Conductors (विद्युत चालक):</h5>
+                <ul style="padding-left:18px;">
+                  <li>(ii) Copper wire (तांबे का तार)</li>
+                  <li>(iii) Steel spoon (स्टील का चम्मच)</li>
+                  <li>(vi) Iron nail (लोहे की कील)</li>
+                </ul>
+              </div>
+              <div style="background:rgba(245,158,11,0.1); border:1px solid #f59e0b; border-radius:8px; padding:10px;">
+                <h5 style="color:#fbbf24; margin-bottom:6px;">🛡️ Insulators (विद्युतरोधी):</h5>
+                <ul style="padding-left:18px;">
+                  <li>(i) Wooden stick (लकड़ी की छड़ी)</li>
+                  <li>(iv) Plastic ruler (प्लास्टिक का पैमाना)</li>
+                  <li>(v) Rubber band (रबर बैंड)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 0.5 Mark for each correctly classified item (6 × 0.5 = 3 Marks).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="q-card" id="q7">
+      <div class="q-header">
+        <span class="q-number">Q.7</span>
+        <span class="q-marks">3 Marks</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">How breathing is different from respiration? Describe the importance of gills as specialised structure in most of the aquatic animals like fishes.</span>
+        <span class="lang-hi"><br>साँस लेना (श्वासोच्छ्वास) कोशिकीय श्वसन से किस प्रकार भिन्न है? मछलियों जैसे अधिकांश जलीय जीवों में विशिष्ट संरचना के रूप में क्लोम (गिल्स) के महत्व का वर्णन कीजिए।</span>
+      </p>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q7-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q7-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>3 Marks</span>
+          </div>
+          <div class="answer-body">
+            <h4 style="color:var(--accent-teal); margin-bottom:4px;">1. Difference between Breathing and Cellular Respiration (1.5 Marks):</h4>
+            <table class="custom-table">
+              <tr>
+                <th>Feature</th>
+                <th>Breathing (साँस लेना)</th>
+                <th>Cellular Respiration (श्वसन)</th>
+              </tr>
+              <tr>
+                <td><strong>Definition</strong></td>
+                <td>Physical process of taking in $O_2$-rich air and giving out $CO_2$-rich air.</td>
+                <td>Biochemical process of breaking down glucose to release energy (ATP).</td>
+              </tr>
+              <tr>
+                <td><strong>Location</strong></td>
+                <td>Occurs in respiratory organs (lungs, gills, trachea).</td>
+                <td>Occurs inside living cells (cytoplasm & mitochondria).</td>
+              </tr>
+              <tr>
+                <td><strong>Energy</strong></td>
+                <td>No energy is released (energy is utilized).</td>
+                <td>Energy is released in the form of ATP molecules.</td>
+              </tr>
+            </table>
+
+            <h4 style="color:var(--accent-gold); margin:12px 0 4px;">2. Importance of Gills in Fishes (1.5 Marks):</h4>
+            <ol style="padding-left:20px;">
+              <li><strong>Extraction of Dissolved Oxygen:</strong> Gills are comb-like projections located on the sides of a fish's head that extract dissolved oxygen from water, which human lungs cannot do.</li>
+              <li><strong>Rich Blood Capillary Network:</strong> Gills possess feathery lamellae covered with an extensive network of thin blood vessels. As water enters through the mouth and flows over the gills, oxygen diffuses directly into the blood, and carbon dioxide diffuses out into the water.</li>
+            </ol>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1.5 Marks for 2–3 valid differences + 1.5 Marks for explaining gills function and blood vessel supply.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="q-card" id="q8">
+      <div class="q-header">
+        <span class="q-number">Q.8 (Attempt either A or B)</span>
+        <span class="q-marks">3 Marks</span>
+      </div>
+
+      <!-- Option A -->
+      <div class="subpart-box">
+        <p class="q-text">
+          <strong>(A)</strong> <span class="lang-en">Describe the time period of a simple pendulum. A simple pendulum takes 20 seconds to complete 10 oscillations. Calculate its time period.</span>
+          <span class="lang-hi"><br>एक सरल लोलक के आवर्तकाल का वर्णन कीजिए। एक सरल लोलक 10 दोलन पूरे करने में 20 सेकंड का समय लेता है। इसका आवर्तकाल परिकलित कीजिए।</span>
+        </p>
+      </div>
+
+      <div class="or-divider">OR / अथवा</div>
+
+      <!-- Option B -->
+      <div class="subpart-box">
+        <p class="q-text">
+          <strong>(B)</strong> <span class="lang-en">A train covers a distance of 300 km in 6 hours. Calculate its speed in km/hr. Calculate the distance covered by the train in 12 hours if it continues to move with the same speed.</span>
+          <span class="lang-hi"><br>एक रेलगाड़ी 6 घंटे में 300 किमी की दूरी तय करती है। इसकी चाल किमी/घंटा में ज्ञात कीजिए। यदि वह उसी चाल से चलती रहे, तो 12 घंटे में कितनी दूरी तय करेगी?</span>
+        </p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q8-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q8-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>3 Marks</span>
+          </div>
+          <div class="answer-body">
+            <h4 style="color:var(--accent-teal); margin-bottom:4px;">Solution for Choice (A):</h4>
+            <p><strong>1. Definition of Time Period (1 Mark):</strong> The time taken by a simple pendulum to complete <strong>one complete oscillation</strong> (from mean position to one extreme, to the other extreme, and back to mean) is defined as its <strong>time period ($T$)</strong>.</p>
+            <p style="margin-top:8px;"><strong>2. Calculation (2 Marks):</strong></p>
+            <ul style="padding-left:20px; font-family:'JetBrains Mono', monospace; line-height:1.7;">
+              <li>Total time taken ($t$) = 20 seconds</li>
+              <li>Total number of oscillations ($n$) = 10</li>
+              <li>$\text{Time Period } (T) = \frac{\text{Total Time Taken}}{\text{Number of Oscillations}} = \frac{20\text{ s}}{10} = \mathbf{2\text{ seconds}}$</li>
+            </ul>
+            <p style="margin-top:6px;"><strong>Result:</strong> The time period of the simple pendulum is <strong>2 seconds (2 s)</strong>.</p>
+
+            <hr style="margin:12px 0; border:0; border-top:1px dashed rgba(255,255,255,0.2);">
+
+            <h4 style="color:var(--accent-gold); margin-bottom:4px;">Solution for Choice (B) [OR]:</h4>
+            <p><strong>Step 1: Calculate Speed of the Train (1.5 Marks):</strong></p>
+            <ul style="padding-left:20px; font-family:'JetBrains Mono', monospace; line-height:1.7;">
+              <li>Distance ($D_1$) = 300 km</li>
+              <li>Time ($t_1$) = 6 hours</li>
+              <li>$\text{Speed } (S) = \frac{\text{Distance}}{\text{Time}} = \frac{300\text{ km}}{6\text{ h}} = \mathbf{50\text{ km/h}}$</li>
+            </ul>
+            
+            <p style="margin-top:8px;"><strong>Step 2: Calculate Distance Covered in 12 Hours (1.5 Marks):</strong></p>
+            <ul style="padding-left:20px; font-family:'JetBrains Mono', monospace; line-height:1.7;">
+              <li>Speed ($S$) = 50 km/h (constant)</li>
+              <li>Time ($t_2$) = 12 hours</li>
+              <li>$\text{Distance } (D_2) = \text{Speed} \times \text{Time} = 50\text{ km/h} \times 12\text{ h} = \mathbf{600\text{ km}}$</li>
+            </ul>
+            <p style="margin-top:6px;"><strong>Result:</strong> Speed = <strong>50 km/h</strong>, Distance in 12 hours = <strong>600 km</strong>.</p>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1.5 Marks for speed formula, steps & answer + 1.5 Marks for distance formula, steps & answer.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- SECTION D: Long Answer Questions (Q9 to Q11) - 15 Marks -->
+    <!-- ================================================================= -->
+    <div class="section-banner">
+      <div class="section-title">
+        <span>Section D</span> • <span class="lang-en">Long Answer Questions</span><span class="lang-hi"> (दीर्घ उत्तरीय प्रश्न)</span>
+      </div>
+      <span class="section-badge">Q.9–Q.11 • 3 × 5 = 15 Marks</span>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="q-card" id="q9">
+      <div class="q-header">
+        <span class="q-number">Q.9</span>
+        <span class="q-marks">5 Marks (1 × 5)</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">Complete the given sentences (Choose from the options given):</span>
+        <span class="lang-hi"><br>दिए गए वाक्यों को कोष्ठक में दिए गए विकल्पों में से चुनकर पूरा कीजिए:</span>
+      </p>
+
+      <div style="font-size:0.92rem; line-height:1.8; margin-bottom:14px; padding-left:10px;">
+        <p>i. Distilled water is <strong>_______________</strong> (basic / neutral) in nature because it shows no change with litmus paper.</p>
+        <p>ii. Orange juice is <strong>_______________</strong> (acidic / basic) in nature due to the presence of citric acid.</p>
+        <p>iii. The substance commonly used as olfactory indicator is <strong>_______________</strong> (red rose / onion).</p>
+        <p>iv. Acids are generally <strong>_______________</strong> (sour / bitter) in taste.</p>
+        <p>v. Washing powder solution and <strong>_______________</strong> (lime water / lemon juice) turns red litmus paper to blue and hence are basic in nature.</p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q9-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q9-ans">
+          <div class="answer-header">
+            <span>Model Solution & Explanations</span>
+            <span>5 Marks</span>
+          </div>
+          <div class="answer-body">
+            <ol style="padding-left:20px; line-height:1.8;">
+              <li>i. Distilled water is <strong style="color:#10b981;">neutral</strong> (उदासीन) in nature because it shows no change with litmus paper.</li>
+              <li>ii. Orange juice is <strong style="color:#10b981;">acidic</strong> (अम्लीय) in nature due to the presence of citric acid.</li>
+              <li>iii. The substance commonly used as olfactory indicator is <strong style="color:#10b981;">onion</strong> (प्याज - गंधीय सूचक).</li>
+              <li>iv. Acids are generally <strong style="color:#10b981;">sour</strong> (खट्टा) in taste.</li>
+              <li>v. Washing powder solution and <strong style="color:#10b981;">lime water</strong> (चूने का पानी) turn red litmus paper to blue and hence are basic in nature.</li>
+            </ol>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark for each correct fill-in (5 × 1 = 5 Marks).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="q-card" id="q10">
+      <div class="q-header">
+        <span class="q-number">Q.10</span>
+        <span class="q-marks">5 Marks (1 × 5)</span>
+      </div>
+      <p class="q-text">
+        <span class="lang-en">Match the Columns (स्तंभ मिलान कीजिए):</span>
+      </p>
+
+      <table class="custom-table" style="margin-bottom:16px;">
+        <tr>
+          <th style="width:45%;">Column A</th>
+          <th>Column B</th>
+        </tr>
+        <tr>
+          <td>1. Land breeze (थल समीर)</td>
+          <td>A. Feeling warmth from fire (आग से ऊष्मा का अनुभव)</td>
+        </tr>
+        <tr>
+          <td>2. Conduction (चालन)</td>
+          <td>B. Movement of cooler air from land to sea during night. (रात में स्थल से समुद्र की ओर ठंडी हवा चलना)</td>
+        </tr>
+        <tr>
+          <td>3. Convection (संवहन)</td>
+          <td>C. Heat transfer through direct contact (प्रत्यक्ष संपर्क द्वारा ऊष्मा स्थानांतरण)</td>
+        </tr>
+        <tr>
+          <td>4. Condensation (संघनन)</td>
+          <td>D. Rising of hot air balloon (गर्म हवा के गुब्बारे का ऊपर उठना)</td>
+        </tr>
+        <tr>
+          <td>5. Radiation (विकिरण)</td>
+          <td>E. Cloud Formation (बादलों का निर्माण)</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>F. Movement of cooler air from sea to land during day. (समुद्र समीर - अतिरिक्त विकल्प)</td>
+        </tr>
+      </table>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q10-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q10-ans">
+          <div class="answer-header">
+            <span>Model Solution & Matching Rationale</span>
+            <span>5 Marks</span>
+          </div>
+          <div class="answer-body">
+            <table class="custom-table">
+              <tr>
+                <th>Column A</th>
+                <th>Correct Match (Column B)</th>
+                <th>Scientific Reason</th>
+              </tr>
+              <tr>
+                <td><strong>1. Land breeze</strong></td>
+                <td><strong style="color:#10b981;">B. Movement of cooler air from land to sea during night.</strong></td>
+                <td>At night, land cools faster than sea; cooler air moves from land toward the warmer sea.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Conduction</strong></td>
+                <td><strong style="color:#10b981;">C. Heat transfer through direct contact</strong></td>
+                <td>In solids, heat transfers from hotter molecule to cooler adjacent molecule through direct contact.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Convection</strong></td>
+                <td><strong style="color:#10b981;">D. Rising of hot air balloon</strong></td>
+                <td>Heated air expands, becomes less dense and rises upward; cooler surrounding air takes its place.</td>
+              </tr>
+              <tr>
+                <td><strong>4. Condensation</strong></td>
+                <td><strong style="color:#10b981;">E. Cloud Formation</strong></td>
+                <td>Rising water vapour cools and condenses into tiny liquid water droplets that group together as clouds.</td>
+              </tr>
+              <tr>
+                <td><strong>5. Radiation</strong></td>
+                <td><strong style="color:#10b981;">A. Feeling warmth from fire</strong></td>
+                <td>Heat waves travel directly through space without requiring or warming the intervening air medium.</td>
+              </tr>
+            </table>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;"><em>*Note: Option (F) represents "Sea breeze" and is a distractor.</em></p>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark for each correct match (5 × 1 = 5 Marks).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="q-card" id="q11">
+      <div class="q-header">
+        <span class="q-number">Q.11 (Attempt either I or II)</span>
+        <span class="q-marks">5 Marks (3 + 2)</span>
+      </div>
+
+      <!-- Option I -->
+      <div class="subpart-box">
+        <p class="q-text"><strong>(I) Human Digestive System:</strong></p>
+        <p><strong>a)</strong> <span class="lang-en">Differentiate between digestion and absorption? Why does the inner wall of the small intestine have many small finger-like projections?</span> (3 Marks)<br>
+        <span class="lang-hi">पाचन और अवशोषण में अंतर स्पष्ट कीजिए? क्षुद्रांत्र की भीतरी भित्ति पर अनेक अंगुलीनुमा प्रवर्ध (रसांकुर) क्यों होते हैं?</span></p>
+        <p style="margin-top:6px;"><strong>b)</strong> <span class="lang-en">Which organ of human digestive system produces bile? Describe any one important function of bile.</span> (2 Marks)<br>
+        <span class="lang-hi">मानव पाचन तंत्र का कौन सा अंग पित्त रस (bile) का निर्माण करता है? पित्त रस का एक महत्वपूर्ण कार्य बताइए।</span></p>
+      </div>
+
+      <div class="or-divider">OR / अथवा</div>
+
+      <!-- Option II -->
+      <div class="subpart-box">
+        <p class="q-text"><strong>(II) Respiratory System:</strong></p>
+        <p><strong>a)</strong> <span class="lang-en">How does the movement of ribs and diaphragm facilitate the movement of air during inhalation and exhalation?</span> (3 Marks)<br>
+        <span class="lang-hi">अंतःश्वसन (inhalation) और उच्छ्वसन (exhalation) के दौरान पसलियों और डायाफ्राम की गति किस प्रकार वायु के आवागमन में सहायता करती है?</span></p>
+        <p style="margin-top:6px;"><strong>b)</strong> <span class="lang-en">Explain the role of alveoli in efficient exchange of gases in lungs?</span> (2 Marks)<br>
+        <span class="lang-hi">फेफड़ों में गैसों के कुशल विनिमय में कूपिकाओं (alveoli) की भूमिका समझाइए।</span></p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q11-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q11-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>5 Marks</span>
+          </div>
+          <div class="answer-body">
+            <h4 style="color:var(--accent-teal); margin-bottom:4px;">Solution for Choice (I):</h4>
+            <p><strong>Part (a) [3 Marks]:</strong></p>
+            <ul style="padding-left:20px; line-height:1.6;">
+              <li><strong>Digestion:</strong> The breakdown of complex, insoluble food components into simpler, soluble substances by enzymes and mechanical action.</li>
+              <li><strong>Absorption:</strong> The process by which digested nutrients pass through the intestinal mucosa into the blood vessels and lymph.</li>
+              <li><strong>Why finger-like projections (villi) exist:</strong> Millions of villi <strong>greatly expand the effective surface area</strong> for rapid nutrient absorption. Each villus has a thin epithelial layer and a dense capillary bed close to the surface for swift diffusion of nutrients into circulation.</li>
+            </ul>
+
+            <p style="margin-top:10px;"><strong>Part (b) [2 Marks]:</strong></p>
+            <ul style="padding-left:20px; line-height:1.6;">
+              <li><strong>Organ producing bile (1 Mark):</strong> The <strong>Liver</strong> (यकृत) produces bile (which is stored in the gall bladder).</li>
+              <li><strong>Function of bile (1 Mark):</strong>
+                <ol style="padding-left:20px;">
+                  <li><strong>Emulsification of fats:</strong> Bile breaks down large fat globules into tiny droplets, increasing surface area for lipase to act upon.</li>
+                  <li><strong>Alkaline medium:</strong> It neutralises acidic chyme coming from the stomach, enabling pancreatic and intestinal enzymes to function.</li>
+                </ol>
+              </li>
+            </ul>
+
+            <hr style="margin:12px 0; border:0; border-top:1px dashed rgba(255,255,255,0.2);">
+
+            <h4 style="color:var(--accent-gold); margin-bottom:4px;">Solution for Choice (II) [OR]:</h4>
+            <p><strong>Part (a) Mechanism of Inhalation & Exhalation [3 Marks]:</strong></p>
+            <table class="custom-table">
+              <tr>
+                <th>Process</th>
+                <th>Movement of Ribs</th>
+                <th>Movement of Diaphragm</th>
+                <th>Volume & Pressure Effect</th>
+              </tr>
+              <tr>
+                <td><strong>Inhalation (अंतःश्वसन)</strong></td>
+                <td>Move <strong>upwards and outwards</strong></td>
+                <td>Contracts and <strong>flattens / moves downwards</strong></td>
+                <td>Chest cavity volume <strong>increases</strong>; internal pressure drops below atmospheric pressure, and outside air rushes in.</td>
+              </tr>
+              <tr>
+                <td><strong>Exhalation (उच्छ्वसन)</strong></td>
+                <td>Move <strong>downwards and inwards</strong></td>
+                <td>Relaxes and moves <strong>upwards</strong> into dome shape</td>
+                <td>Chest cavity volume <strong>decreases</strong>; internal pressure rises, forcing air out of lungs.</td>
+              </tr>
+            </table>
+
+            <p style="margin-top:10px;"><strong>Part (b) Role of Alveoli [2 Marks]:</strong></p>
+            <ol style="padding-left:20px; line-height:1.6;">
+              <li><strong>Tremendous Surface Area:</strong> Millions of tiny thin-walled spherical air sacs provide a huge surface area for gaseous diffusion.</li>
+              <li><strong>Thin Membrane & Capillary Proximity:</strong> Alveolar walls and capillary walls are only one cell thick. Oxygen quickly diffuses into red blood cells, while carbon dioxide diffuses from blood into alveoli to be exhaled.</li>
+            </ol>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 3 Marks for Part (a) + 2 Marks for Part (b) = 5 Marks.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- SECTION E: Case-Based Questions (Q12 to Q15) - 16 Marks -->
+    <!-- ================================================================= -->
+    <div class="section-banner">
+      <div class="section-title">
+        <span>Section E</span> • <span class="lang-en">Case-Based / Source-Based Questions</span><span class="lang-hi"> (केस आधारित प्रश्न)</span>
+      </div>
+      <span class="section-badge">Q.12–Q.15 • 4 × 4 = 16 Marks</span>
+    </div>
+
+    <!-- Question 12 (Electric Circuit Case Study) -->
+    <div class="q-card" id="q12">
+      <div class="q-header">
+        <span class="q-number">Q.12</span>
+        <span class="q-marks">4 Marks</span>
+      </div>
+      <div class="instructions-card" style="background:rgba(56,189,248,0.06); border-color:#38bdf8;">
+        <p style="font-size:0.92rem; color:var(--text-main);">
+          <strong>📖 Case Passage:</strong> During a science activity session, a student was asked to draw a circuit diagram containing a combination of two cells, a switch, and an electric bulb. Instead of drawing actual realistic pictures of devices, the teacher instructed him to use standard electrical symbols while making the circuit diagram.
+        </p>
+      </div>
+
+      <div class="subpart-box">
+        <p><strong>(a)</strong> <span class="lang-en">What is the electric symbol of an electric bulb?</span> (1 Mark)<br>
+        <span class="lang-hi">विद्युत बल्ब का विद्युत प्रतीक क्या है?</span></p>
+      </div>
+      <div class="subpart-box">
+        <p><strong>(b)</strong> <span class="lang-en">What is a combination of two or more cells called?</span> (1 Mark)<br>
+        <span class="lang-hi">दो या दो से अधिक विद्युत सेलों के संयोजन को क्या कहते हैं?</span></p>
+      </div>
+
+      <p style="font-weight:800; color:var(--accent-gold); margin:8px 0;">Attempt either (c) or (d):</p>
+      <div class="subpart-box">
+        <p><strong>(c)</strong> <span class="lang-en">Draw the circuit diagram mentioned in the passage (two cells in series, switch, and bulb).</span> (2 Marks)<br>
+        <span class="lang-hi">गद्यांश में उल्लिखित परिपथ आरेख बनाइए (दो सेल, एक स्विच और बल्ब)।</span></p>
+      </div>
+      <div class="or-divider">OR / अथवा</div>
+      <div class="subpart-box">
+        <p><strong>(d)</strong> <span class="lang-en">If a circuit diagram shows a cell, an ON switch, and a bulb, but the connecting wires are made of plastic threads, will the bulb glow? Why?</span> (2 Marks)<br>
+        <span class="lang-hi">यदि किसी परिपथ में सेल, चालू स्विच और बल्ब है, परंतु जोड़ने वाले तार प्लास्टिक के धागों के बने हैं, तो क्या बल्ब जलेगा? क्यों?</span></p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q12-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q12-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>4 Marks</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>(a) Electric Symbol of a Bulb (1 Mark):</strong></p>
+            <p>A circle containing a looped filament inside: <code>-( ∿ )-</code> or <code>-( ⊗ )-</code>.</p>
+
+            <p style="margin-top:10px;"><strong>(b) Combination of Cells (1 Mark):</strong></p>
+            <p>A combination of two or more electric cells connected together in series is called a <strong>Battery (बैटरी)</strong>.</p>
+
+            <p style="margin-top:10px;"><strong>Choice (c) Complete Circuit Diagram (2 Marks):</strong></p>
+            <div class="diagram-container">
+              <svg width="340" height="150" viewBox="0 0 340 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circuit Loop Rectangle -->
+                <rect x="30" y="20" width="280" height="110" fill="none" stroke="#38bdf8" stroke-width="2.5" rx="8"/>
+                <!-- Battery on Top -->
+                <rect x="130" y="10" width="80" height="20" fill="#060c18"/>
+                <!-- Cell 1 -->
+                <line x1="140" y1="12" x2="140" y2="28" stroke="#00e676" stroke-width="3"/> <!-- Long + -->
+                <line x1="150" y1="16" x2="150" y2="24" stroke="#f43f5e" stroke-width="5"/> <!-- Short - -->
+                <!-- Wire connector -->
+                <line x1="150" y1="20" x2="170" y2="20" stroke="#38bdf8" stroke-width="2"/>
+                <!-- Cell 2 -->
+                <line x1="170" y1="12" x2="170" y2="28" stroke="#00e676" stroke-width="3"/> <!-- Long + -->
+                <line x1="180" y1="16" x2="180" y2="24" stroke="#f43f5e" stroke-width="5"/> <!-- Short - -->
+                <text x="160" y="8" fill="#fef08a" font-size="11" font-weight="bold" text-anchor="middle">2-Cell Battery (+ | i | i -)</text>
+
+                <!-- Switch on Right -->
+                <rect x="300" y="55" width="20" height="40" fill="#060c18"/>
+                <circle cx="310" cy="65" r="4" fill="#38bdf8"/>
+                <line x1="310" y1="65" x2="310" y2="85" stroke="#04AA6D" stroke-width="2.5"/>
+                <circle cx="310" cy="85" r="4" fill="#38bdf8"/>
+                <text x="312" y="110" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">Switch</text>
+
+                <!-- Bulb on Bottom -->
+                <rect x="140" y="120" width="60" height="20" fill="#060c18"/>
+                <circle cx="170" cy="130" r="14" fill="#060c18" stroke="#fbbf24" stroke-width="2"/>
+                <path d="M 163 134 Q 170 120 177 134" fill="none" stroke="#fbbf24" stroke-width="2"/>
+                <text x="170" y="148" fill="#fbbf24" font-size="11" font-weight="bold" text-anchor="middle">Bulb</text>
+              </svg>
+            </div>
+
+            <p style="margin-top:10px;"><strong>OR Choice (d) Explanation (2 Marks):</strong></p>
+            <p><strong>No, the bulb will NOT glow.</strong><br>
+            <strong>Reason:</strong> Plastic is an electrical <strong>insulator</strong> and does not have free mobile electrons to conduct electric charges. Using plastic threads creates a broken/non-conducting path (open circuit), preventing current from flowing through the bulb filament.</p>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark (a) + 1 Mark (b) + 2 Marks for diagram (c) OR explanation with insulator reason (d).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 13 (Adolescent Nutrition Case Study) -->
+    <div class="q-card" id="q13">
+      <div class="q-header">
+        <span class="q-number">Q.13</span>
+        <span class="q-marks">4 Marks</span>
+      </div>
+      <div class="instructions-card" style="background:rgba(245,158,11,0.06); border-color:#f59e0b;">
+        <p style="font-size:0.92rem; color:var(--text-main);">
+          <strong>📖 Case Passage:</strong> Rajan, a 12-year-old student, prefers eating fast food like chips, burgers, and carbonated soft drinks for lunch every day. He tells his mother that since he is growing rapidly and playing sports, he only needs quick calories and doesn't need to eat traditional home food like chapati, dal, rice, milk, salad, and green vegetables.
+        </p>
+      </div>
+
+      <div class="subpart-box">
+        <p><strong>(a)</strong> <span class="lang-en">Why is the use of fast food not recommended as a regular meal for adolescents?</span> (1 Mark)<br>
+        <span class="lang-hi">किशोरों के लिए नियमित भोजन के रूप में फास्ट फूड की सिफारिश क्यों नहीं की जाती है?</span></p>
+      </div>
+      <div class="subpart-box">
+        <p><strong>(b)</strong> <span class="lang-en">Adolescence is a stage of rapid growth. Therefore, which nutrient is most critical for building new muscles and repairing body tissues?</span> (1 Mark)<br>
+        <span class="lang-hi">किशोरावस्था तीव्र वृद्धि का चरण है। नई मांसपेशियों के निर्माण और ऊतकों की मरम्मत के लिए कौन सा पोषक तत्व सबसे महत्वपूर्ण है?</span></p>
+      </div>
+
+      <p style="font-weight:800; color:var(--accent-gold); margin:8px 0;">Attempt either (c) or (d):</p>
+      <div class="subpart-box">
+        <p><strong>(c)</strong> <span class="lang-en">Write any two ways by which adolescents can manage physical, emotional, and behavioural changes effectively.</span> (2 Marks)<br>
+        <span class="lang-hi">किशोर शारीरिक, भावनात्मक और व्यवहार संबंधी परिवर्तनों का प्रभावी ढंग से प्रबंधन किन दो तरीकों से कर सकते हैं?</span></p>
+      </div>
+      <div class="or-divider">OR / अथवा</div>
+      <div class="subpart-box">
+        <p><strong>(d)</strong> <span class="lang-en">Why is a balanced diet so important during adolescence?</span> (2 Marks)<br>
+        <span class="lang-hi">किशोरावस्था के दौरान संतुलित आहार क्यों इतना महत्वपूर्ण है?</span></p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q13-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q13-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>4 Marks</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>(a) Why Fast Food is Not Recommended (1 Mark):</strong> Fast food contains excessive refined sugars, unhealthy trans-fats, and high sodium with almost zero dietary fibre, vitamins (A, B, C, D), and vital minerals (calcium, iron). Regular consumption leads to malnutrition, lethargy, childhood obesity, and stunted growth.</p>
+
+            <p style="margin-top:10px;"><strong>(b) Critical Nutrient for Muscle Building (1 Mark):</strong> <strong>Proteins (प्रोटीन)</strong> — the primary building blocks of body tissues and enzymes.</p>
+
+            <p style="margin-top:10px;"><strong>Choice (c) Managing Changes Effectively (2 Marks - 1 mark each):</strong></p>
+            <ol style="padding-left:20px; line-height:1.6;">
+              <li><strong>Open Communication & Counselling:</strong> Sharing feelings, concerns, and doubts openly with parents, teachers, or trusted mentors helps prevent confusion, anxiety, and depression.</li>
+              <li><strong>Physical Sports & Creative Hobbies:</strong> Channeling emotional energy through outdoor sports, yoga, regular exercise, music, or art keeps the mind positive and stabilizes mood swings.</li>
+            </ol>
+
+            <p style="margin-top:10px;"><strong>OR Choice (d) Importance of Balanced Diet (2 Marks):</strong></p>
+            <p>Adolescence is the period of the fastest physical, mental, and reproductive growth spurt after infancy. A balanced diet provides:
+            <ul style="padding-left:20px; line-height:1.6;">
+              <li><strong>Carbohydrates & Fats:</strong> Sustained energy for daily sports and study.</li>
+              <li><strong>Proteins:</strong> Muscular expansion and cellular repair.</li>
+              <li><strong>Calcium & Phosphorus:</strong> Bone lengthening and bone density growth.</li>
+              <li><strong>Iron:</strong> Haemoglobin synthesis for blood expansion and preventing anaemia.</li>
+            </ul>
+            </p>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark (a) + 1 Mark (b) + 2 Marks for two coping ways (c) OR explaining nutrient importance during growth spurt (d).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 14 (Groundwater Case Study) -->
+    <div class="q-card" id="q14">
+      <div class="q-header">
+        <span class="q-number">Q.14</span>
+        <span class="q-marks">4 Marks</span>
+      </div>
+      <div class="instructions-card" style="background:rgba(20,184,166,0.06); border-color:#14b8a6;">
+        <p style="font-size:0.92rem; color:var(--text-main);">
+          <strong>📖 Case Passage:</strong> A remote village has a very deep community well for drinking water. Even during a minor drought, when a local river dries up, the well continues to provide clean and clear cold water. The village elder explains that the well draws water from a vast underground reservoir stored in layers of permeable rock, sand, and soil.
+        </p>
+      </div>
+
+      <div class="subpart-box">
+        <p><strong>(a)</strong> <span class="lang-en">What is the process of surface water seeping through soil and rocks known as?</span> (1 Mark)<br>
+        <span class="lang-hi">सतही जल के मिट्टी और चट्टानों से रिसकर भूमि के नीचे जाने की प्रक्रिया को क्या कहते हैं?</span></p>
+      </div>
+      <div class="subpart-box">
+        <p><strong>(b)</strong> <span class="lang-en">Name the freshwater found trapped beneath the earth's surface in the spaces of soil and rock.</span> (1 Mark)<br>
+        <span class="lang-hi">पृथ्वी की सतह के नीचे मिट्टी और चट्टानों के रिक्त स्थानों में मौजूद मीठे जल को क्या कहते हैं?</span></p>
+      </div>
+
+      <p style="font-weight:800; color:var(--accent-gold); margin:8px 0;">Attempt either (c) or (d):</p>
+      <div class="subpart-box">
+        <p><strong>(c)</strong> <span class="lang-en">Why does water drawn from very deep aquifers usually look clean and clear compared to muddy surface puddles?</span> (2 Marks)<br>
+        <span class="lang-hi">गहरे जलभृतों (aquifers) से निकाला गया जल कीचड़ भरे सतही पोखरों की तुलना में आमतौर पर स्वच्छ और पारदर्शी क्यों दिखाई देता है?</span></p>
+      </div>
+      <div class="or-divider">OR / अथवा</div>
+      <div class="subpart-box">
+        <p><strong>(d)</strong> <span class="lang-en">Describe any two ways that can be used to replenish depleted groundwater, especially in urban areas.</span> (2 Marks)<br>
+        <span class="lang-hi">विशेष रूप से शहरी क्षेत्रों में घटते भूजल को पुनः भरने (रिचार्ज करने) के किन्हीं दो उपायों का वर्णन कीजिए।</span></p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q14-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q14-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>4 Marks</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>(a) Seepage Process (1 Mark):</strong> The process of water seeping into the ground is called <strong>Infiltration (अंतःस्यंदन)</strong>.</p>
+
+            <p style="margin-top:10px;"><strong>(b) Name of Trapped Water (1 Mark):</strong> <strong>Groundwater (भौमजल / भूजल)</strong> (and the saturated rock layer holding it is an <strong>Aquifer / जलभृत</strong>).</p>
+
+            <p style="margin-top:10px;"><strong>Choice (c) Why Deep Groundwater is Clean (2 Marks):</strong></p>
+            <p>As rainwater seeps down through hundreds of feet of soil, silt, fine sand, and porous rock layers, these subterranean layers act as <strong>natural mechanical filters</strong>. Suspended silt, mud, organic debris, and most microorganisms are filtered out and retained by sand particles, leaving deep groundwater crystal clear.</p>
+
+            <p style="margin-top:10px;"><strong>OR Choice (d) Two Ways to Replenish Urban Groundwater (2 Marks - 1 mark each):</strong></p>
+            <ol style="padding-left:20px; line-height:1.6;">
+              <li><strong>Rooftop Rainwater Harvesting (छत वर्षा जल संचयन):</strong> Channelling rainwater from rooftops through drainpipes into underground percolation pits, recharge trenches, or deep borewells instead of allowing it to flow into municipal storm drains.</li>
+              <li><strong>Permeable Pavements & Green Belts:</strong> Creating unpaved earthen road medians, urban parks, recharge ponds, and installing porous concrete/paver blocks on footpaths and parking lots to maximize natural rainwater infiltration into the soil.</li>
+            </ol>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark (a) + 1 Mark (b) + 2 Marks for natural filtration reason (c) OR two urban rainwater recharge techniques (d).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 15 (Motion & Instruments Case Study) -->
+    <div class="q-card" id="q15">
+      <div class="q-header">
+        <span class="q-number">Q.15</span>
+        <span class="q-marks">4 Marks</span>
+      </div>
+      <div class="instructions-card" style="background:rgba(99,102,241,0.06); border-color:#6366f1;">
+        <p style="font-size:0.92rem; color:var(--text-main);">
+          <strong>📖 Case Passage:</strong> Ajay is sitting in the front seat of his father’s car during a highway road trip. He looks at the dashboard instrument panel and watches a needle fluctuating around the number 60. Right below it, a digital counter displays the total distance the car has travelled since it was manufactured.
+        </p>
+      </div>
+
+      <div class="subpart-box">
+        <p><strong>(a)</strong> <span class="lang-en">Which instrument measures and displays the speed of a vehicle in km/hr?</span> (1 Mark)<br>
+        <span class="lang-hi">कौन सा उपकरण वाहन की चाल को किमी/घंटा में मापता और प्रदर्शित करता है?</span></p>
+      </div>
+      <div class="subpart-box">
+        <p><strong>(b)</strong> <span class="lang-en">If the vehicle's odometer reading is 3850 km at the beginning of a journey and 4120 km at the end, calculate the total distance travelled during the trip.</span> (1 Mark)<br>
+        <span class="lang-hi">यदि यात्रा के प्रारंभ में ओडोमीटर का पाठ्यांक 3850 किमी और अंत में 4120 किमी है, तो यात्रा के दौरान तय की गई कुल दूरी परिकलित कीजिए।</span></p>
+      </div>
+
+      <p style="font-weight:800; color:var(--accent-gold); margin:8px 0;">Attempt either (c) or (d):</p>
+      <div class="subpart-box">
+        <p><strong>(c)</strong> <span class="lang-en">Write any one example each of uniform and non-uniform motion from day-to-day life.</span> (2 Marks)<br>
+        <span class="lang-hi">दैनिक जीवन से एकसमान गति और असमान गति का एक-एक उदाहरण लिखिए।</span></p>
+      </div>
+      <div class="or-divider">OR / अथवा</div>
+      <div class="subpart-box">
+        <p><strong>(d)</strong> <span class="lang-en">Distinguish between uniform and non-uniform motion using the example of Ajay’s car moving on a straight highway with no traffic and when his car is moving in city traffic.</span> (2 Marks)<br>
+        <span class="lang-hi">अजय की कार के सीधे राजमार्ग (बिना ट्रैफिक) पर चलने और शहर के ट्रैफिक में चलने के उदाहरण का उपयोग करते हुए एकसमान और असमान गति में अंतर स्पष्ट कीजिए।</span></p>
+      </div>
+
+      <div class="answer-container">
+        <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('q15-ans')">👁️ Show Complete Solution</button>
+        <div class="answer-content" id="q15-ans">
+          <div class="answer-header">
+            <span>Model Solution & Marking Scheme</span>
+            <span>4 Marks</span>
+          </div>
+          <div class="answer-body">
+            <p><strong>(a) Instrument Measuring Speed (1 Mark):</strong> <strong>Speedometer (चालमापी)</strong>.</p>
+
+            <p style="margin-top:10px;"><strong>(b) Distance Calculation (1 Mark):</strong></p>
+            <ul style="padding-left:20px; font-family:'JetBrains Mono', monospace; line-height:1.7;">
+              <li>Initial Odometer Reading ($R_1$) = 3850 km</li>
+              <li>Final Odometer Reading ($R_2$) = 4120 km</li>
+              <li>$\text{Distance Travelled} = R_2 - R_1 = 4120\text{ km} - 3850\text{ km} = \mathbf{270\text{ km}}$</li>
+            </ul>
+            <p><strong>Answer:</strong> The total distance travelled is <strong>270 km</strong>.</p>
+
+            <p style="margin-top:10px;"><strong>Choice (c) Real-Life Examples (2 Marks - 1 mark each):</strong></p>
+            <ul style="padding-left:20px; line-height:1.6;">
+              <li><strong>Uniform Motion Example:</strong> The motion of the tip of the minute hand of a clock, or the rotation of the Earth on its axis at constant speed.</li>
+              <li><strong>Non-Uniform Motion Example:</strong> A school bus navigating crowded traffic with frequent stops, starts, and turns, or a jogger running in a crowded park.</li>
+            </ul>
+
+            <p style="margin-top:10px;"><strong>OR Choice (d) Highway vs. City Traffic Distinction (2 Marks):</strong></p>
+            <table class="custom-table">
+              <tr>
+                <th>Driving Scenario</th>
+                <th>Type of Motion</th>
+                <th>Scientific Distinction</th>
+              </tr>
+              <tr>
+                <td><strong>Straight highway with no traffic</strong></td>
+                <td><strong>Uniform Motion (एकसमान गति)</strong></td>
+                <td>The car maintains a constant speed (e.g. 60 km/h) in a straight line, covering equal distances in equal intervals of time with zero acceleration.</td>
+              </tr>
+              <tr>
+                <td><strong>City traffic</strong></td>
+                <td><strong>Non-Uniform Motion (असमान गति)</strong></td>
+                <td>The car frequently accelerates, brakes, turns, and stops at traffic lights, covering unequal distances in equal intervals of time.</td>
+              </tr>
+            </table>
+            <div class="marking-points">
+              🎯 <strong>Marking Breakdown:</strong> 1 Mark (a) + 1 Mark (b) + 2 Marks for valid real-life examples (c) OR clear scenario comparison table (d).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Global state
+    let answersVisible = false;
+
+    // Toggle individual answer
+    function toggleAnswer(ansId) {
+      const box = document.getElementById(ansId);
+      const btn = box.parentElement.querySelector('.toggle-answer-btn');
+      if (box.classList.contains('revealed')) {
+        box.classList.remove('revealed');
+        if (btn) btn.innerHTML = '👁️ Show Answer';
+      } else {
+        box.classList.add('revealed');
+        if (btn) btn.innerHTML = '🙈 Hide Answer';
+      }
+    }
+
+    // Toggle all answers across entire paper
+    function toggleAllAnswers() {
+      answersVisible = !answersVisible;
+      const allAnswers = document.querySelectorAll('.answer-content');
+      const allButtons = document.querySelectorAll('.toggle-answer-btn');
+      const masterBtnText = document.getElementById('masterToggleText');
+
+      allAnswers.forEach(box => {
+        if (answersVisible) {
+          box.classList.add('revealed');
+        } else {
+          box.classList.remove('revealed');
+        }
+      });
+
+      allButtons.forEach(btn => {
+        btn.innerHTML = answersVisible ? '🙈 Hide Answer' : '👁️ Show Answer';
+      });
+
+      if (masterBtnText) {
+        masterBtnText.innerText = answersVisible ? 'Hide All Answers' : 'Reveal All Answers';
+      }
+
+      if (answersVisible && typeof confetti === 'function') {
+        confetti({
+          particleCount: 50,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    // Interactive MCQ checking (Answers remain hidden until user clicks "Show Answer")
+    function checkMcq(button, ansId) {
+      const isCorrect = button.getAttribute('data-correct') === 'true';
+      const parentGrid = button.parentElement;
+      const allBtns = parentGrid.querySelectorAll('.opt-btn');
+
+      allBtns.forEach(btn => {
+        btn.classList.remove('correct', 'wrong');
+      });
+
+      if (isCorrect) {
+        button.classList.add('correct');
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 30, spread: 60, origin: { y: 0.7 } });
+        }
+      } else {
+        button.classList.add('wrong');
+        // Visually indicate correct answer after an incorrect attempt
+        allBtns.forEach(btn => {
+          if (btn.getAttribute('data-correct') === 'true') {
+            btn.classList.add('correct');
+          }
+        });
+      }
+      // Note: We intentionally DO NOT auto-reveal the explanation box so answers stay hidden!
+    }
+
+    // Reset all MCQs for fresh test practice
+    function resetTest() {
+      const allBtns = document.querySelectorAll('.opt-btn');
+      allBtns.forEach(btn => {
+        btn.classList.remove('correct', 'wrong');
+      });
+      // Hide all solution boxes
+      answersVisible = false;
+      const allAnswers = document.querySelectorAll('.answer-content');
+      const allButtons = document.querySelectorAll('.toggle-answer-btn');
+      allAnswers.forEach(b => b.classList.remove('revealed'));
+      allButtons.forEach(btn => btn.innerHTML = '👁️ Show Answer');
+      const masterBtnText = document.getElementById('masterToggleText');
+      if (masterBtnText) masterBtnText.innerText = 'Reveal All Answers';
+    }
+
+    // Language Toggle
+    function setLanguage(lang) {
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+
+      const enSpans = document.querySelectorAll('.lang-en');
+      const hiSpans = document.querySelectorAll('.lang-hi');
+
+      if (lang === 'english') {
+        buttons[1].classList.add('active');
+        enSpans.forEach(el => el.style.display = 'inline');
+        hiSpans.forEach(el => el.style.display = 'none');
+      } else if (lang === 'hindi') {
+        buttons[2].classList.add('active');
+        enSpans.forEach(el => el.style.display = 'none');
+        hiSpans.forEach(el => el.style.display = 'inline');
+      } else {
+        buttons[0].classList.add('active');
+        enSpans.forEach(el => el.style.display = 'inline');
+        hiSpans.forEach(el => el.style.display = 'inline');
+      }
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      const btn = document.getElementById('themeBtn');
+      if (btn) btn.innerText = isLight ? '🌙 Dark' : '☀️ Light';
+      localStorage.setItem('studyguide_theme', isLight ? 'light' : 'dark');
+    }
+
+    // Init theme from storage
+    if (localStorage.getItem('studyguide_theme') === 'light') {
+      document.body.classList.add('light-theme');
+      const btn = document.getElementById('themeBtn');
+      if (btn) btn.innerText = '🌙 Dark';
+    }
+
+    // Print handlers
+    function printPaper(withAnswers) {
+      if (withAnswers) {
+        document.body.classList.add('print-with-answers');
+      } else {
+        document.body.classList.remove('print-with-answers');
+      }
+      window.print();
+    }
+  </script>
+</body>
+</html>

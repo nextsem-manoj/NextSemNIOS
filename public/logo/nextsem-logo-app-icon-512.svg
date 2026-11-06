@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="nsAppBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172e"/>
+      <stop offset="50%" stop-color="#080e1d"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="nsAppGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#04AA6D"/>
+    </linearGradient>
+    <radialGradient id="nsAppCenterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#04AA6D" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#04AA6D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nsAppShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#04AA6D" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- App Background (Android Squircle Standard) -->
+  <rect width="512" height="512" rx="115" fill="url(#nsAppBg)"/>
+
+  <!-- Radial Glow Behind Icon -->
+  <circle cx="256" cy="256" r="220" fill="url(#nsAppCenterGlow)"/>
+
+  <!-- Subtle Inner Border -->
+  <rect x="16" y="16" width="480" height="480" rx="100" fill="none" stroke="#04AA6D" stroke-width="4" stroke-opacity="0.5"/>
+
+  <!-- Main Emblem Group -->
+  <g filter="url(#nsAppShadow)">
+    <!-- BOLD N (Emerald Green) -->
+    <path d="M 95 385 V 127 L 235 385 V 127" 
+          fill="none" 
+          stroke="url(#nsAppGreen)" 
+          stroke-width="58" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- BOLD S (Pure Crisp White) -->
+    <path d="M 417 172 C 417 122, 290 122, 290 188 C 290 258, 417 258, 417 328 C 417 388, 290 388, 290 338" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="58" 
+          stroke-linecap="round"/>
+  </g>
+</svg>

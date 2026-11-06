@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Senses: Complete Story Fill in the Blanks with Hints | NCERT Class 5 EVS</title>
+  <meta name="description" content="Interactive line-by-line fill in the blanks story practice with instant hints and answers for NCERT Class 5 Environmental Studies (EVS Looking Around Chapter 1: Super Senses).">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(20, 184, 166, 0.22);
+      --accent-teal: #14b8a6;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at 50% 15%, rgba(20, 184, 166, 0.08) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .story-container {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 100px;
+      z-index: 1;
+    }
+
+    /* Hero Header */
+    .story-hero {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 28px 20px;
+      background: linear-gradient(180deg, rgba(12, 19, 40, 0.95) 0%, rgba(6, 12, 24, 0.95) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(16px);
+    }
+
+    .badge-capsule {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background: rgba(20, 184, 166, 0.15);
+      color: #2dd4bf;
+      border: 1px solid rgba(20, 184, 166, 0.4);
+      margin-bottom: 12px;
+    }
+
+    .story-main-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      background: linear-gradient(135deg, #ffffff 0%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .story-subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+
+    .nav-buttons-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: rgba(20, 184, 166, 0.18);
+      border-color: #14b8a6;
+      color: #5eead4;
+      transform: translateY(-1px);
+    }
+
+    .nav-btn.primary {
+      background: rgba(20, 184, 166, 0.25);
+      border-color: #14b8a6;
+      color: #5eead4;
+    }
+
+    /* Sticky Control Toolbar */
+    .sticky-toolbar {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(12, 19, 40, 0.92);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+      border-radius: 14px;
+      padding: 10px 18px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stats-info {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats-highlight {
+      color: #2dd4bf;
+      background: rgba(20, 184, 166, 0.14);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(20, 184, 166, 0.3);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tool-btn:hover {
+      background: rgba(20, 184, 166, 0.2);
+      border-color: #2dd4bf;
+      color: #ffffff;
+    }
+
+    .tool-btn.active-btn {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: #f59e0b;
+      color: #fde68a;
+    }
+
+    /* Paragraph Story Card */
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 26px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .story-card:hover {
+      border-color: rgba(20, 184, 166, 0.45);
+      background: var(--bg-card-hover);
+    }
+
+    .card-top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .card-top-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fcd34d;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 11px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .story-text {
+      font-size: 1.05rem;
+      line-height: 2.25;
+      color: #f1f5f9;
+    }
+
+    /* Fill in the Blank Markup */
+    .blank-num {
+      display: inline-block;
+      font-weight: 800;
+      color: #f59e0b;
+      margin-right: 2px;
+      font-size: 0.95rem;
+    }
+
+    .blank-line {
+      display: inline-block;
+      min-width: 95px;
+      border-bottom: 2px dashed #64748b;
+      margin: 0 4px;
+      vertical-align: middle;
+      transition: border-color 0.2s;
+    }
+
+    /* Hint & Answer Dropdown Details */
+    details.hint-drop, details.ans-drop {
+      display: inline-block;
+      margin: 0 3px;
+      vertical-align: middle;
+    }
+
+    details.hint-drop > summary, details.ans-drop > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 2px 9px;
+      border-radius: 6px;
+      user-select: none;
+      transition: all 0.15s ease;
+      list-style: none;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.hint-drop > summary {
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+    details.hint-drop > summary:hover {
+      background: rgba(16, 185, 129, 0.28);
+      color: #6ee7b7;
+    }
+    details.hint-drop[open] > summary {
+      background: rgba(16, 185, 129, 0.35);
+      border-color: #34d399;
+    }
+
+    details.ans-drop > summary {
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+    }
+    details.ans-drop > summary:hover {
+      background: rgba(56, 189, 248, 0.28);
+      color: #7dd3fc;
+    }
+    details.ans-drop[open] > summary {
+      background: rgba(56, 189, 248, 0.35);
+      border-color: #38bdf8;
+    }
+
+    .reveal-pill {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      animation: pillFade 0.2s ease-in-out;
+    }
+
+    .hint-content {
+      background: rgba(16, 185, 129, 0.22);
+      color: #a7f3d0;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      font-weight: 500;
+    }
+
+    .ans-content {
+      background: rgba(245, 158, 11, 0.24);
+      color: #fef08a;
+      border: 1px solid rgba(245, 158, 11, 0.5);
+    }
+
+    @keyframes pillFade {
+      from { opacity: 0; transform: translateY(-2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer Note */
+    .story-footer-note {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      .story-main-title {
+        font-size: 1.6rem;
+      }
+      .story-card {
+        padding: 18px 16px;
+      }
+      .story-text {
+        font-size: 0.98rem;
+        line-height: 2.1;
+      }
+      .sticky-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .toolbar-actions {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="story-container">
+
+    <!-- Top Hero Banner -->
+    <header class="story-hero">
+      <div class="badge-capsule">🌿 NCERT Class 5 EVS • Chapter 1 (ehap101.pdf)</div>
+      <h1 class="story-main-title">Super Senses: The Complete Story</h1>
+      <div class="story-subtitle">
+        Interactive line-by-line paragraph fill in the blanks with dedicated hints & answers for every single blank in English!
+      </div>
+
+      <div class="nav-buttons-row">
+        <a href="/?class=5" class="nav-btn primary" title="Class 5 Subjects Dashboard">🎒 Class 5 Hub</a>
+        <a href="https://ncert.nic.in/textbook/pdf/ehap101.pdf" target="_blank" class="nav-btn" title="Open Official NCERT PDF">📄 View NCERT PDF (ehap101)</a>
+        <a href="/" class="nav-btn" title="Back to Home Dashboard">🏠 Home</a>
+      </div>
+    </header>
+
+    <!-- Global Control Toolbar -->
+    <div class="sticky-toolbar">
+      <div class="stats-info">
+        <span>📖 Full Textbook Story</span>
+        <span class="stats-highlight">11 Sections • 60 Total Blanks</span>
+      </div>
+      <div class="toolbar-actions">
+        <button type="button" class="tool-btn" onclick="toggleAllHints(true)">💡 Show All Hints</button>
+        <button type="button" class="tool-btn" onclick="toggleAllAnswers(true)">👁️ Show All Answers</button>
+        <button type="button" class="tool-btn" onclick="hideAllDetails()">🔒 Hide All</button>
+      </div>
+    </div>
+
+    <!-- 1. Ants and Scent Trails -->
+    <article class="story-card" id="section-1">
+      <div class="card-top-header">
+        <h2><span>1.</span> How Did the Ant Recognise a Friend?</h2>
+        <span class="section-badge">NCERT Pages 1–3</span>
+      </div>
+      <div class="story-text">
+        Animals have amazing senses; they can see, hear, taste, 
+        <span class="blank-num">(1)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Olfactory ability with the nose</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">smell</span></details>
+        and feel. An ant was going along on the ground. It saw a group of ants coming from the other side. The first ant quickly came back to its 
+        <span class="blank-num">(2)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Ant dwelling underground or in tree bark</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">hole (nest)</span></details>.
+        The ant guarding the hole recognized it by its 
+        <span class="blank-num">(3)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Unique chemical odor/pheromone</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">smell</span></details>
+        and let it in. If you drop some sugar, jaggery or sweets on the ground, within a few minutes, many ants collect there. As ants move, they leave a 
+        <span class="blank-num">(4)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Chemical scent on the ground</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">smell (scent trail)</span></details>
+        on the ground, and other ants follow the scent to find the way in a straight 
+        <span class="blank-num">(5)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Queue formation</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">line</span></details>.
+        Even if you block their path with a pencil, the ants simply climb over the pencil and keep following the invisible 
+        <span class="blank-num">(6)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Chemical perfume/scent</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">smell</span></details>.
+      </div>
+    </article>
+
+    <!-- 2. Silkworms, Mosquitoes and Dogs -->
+    <article class="story-card" id="section-2">
+      <div class="card-top-header">
+        <h2><span>2.</span> The Scent of Dogs, Mosquitoes & Silkworms</h2>
+        <span class="section-badge">NCERT Pages 3–4</span>
+      </div>
+      <div class="story-text">
+        Some male insects can recognize their females by their smell. For example, a male 
+        <span class="blank-num">(7)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Insect that produces silk threads</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">silk-worm</span></details>
+        can find his female partner from many 
+        <span class="blank-num">(8)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Unit of long geographical distance</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">kilometres</span></details>
+        away just by her smell. Mosquitoes can find you in a pitch-dark room because they can sense the smell of your 
+        <span class="blank-num">(9)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Physical human frame</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">body</span></details>,
+        the special odor of the sole of your 
+        <span class="blank-num">(10)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Lower limb part in shoes/socks</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">feet</span></details>,
+        and the 
+        <span class="blank-num">(11)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Thermal warmth of warm-blooded creatures</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">heat</span></details>
+        of your body. Dogs mark out their own 
+        <span class="blank-num">(12)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Boundary or street neighborhood</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">area (territory)</span></details>
+        on the road by the smell of their 
+        <span class="blank-num">(13)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Liquid and solid biological waste</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">urine and potty (latrine)</span></details>.
+      </div>
+    </article>
+
+    <!-- 3. Good Smells, Bad Smells & Sushila's Dupatta -->
+    <article class="story-card" id="section-3">
+      <div class="card-top-header">
+        <h2><span>3.</span> Good Smells, Bad Smells & Sushila’s Story</h2>
+        <span class="section-badge">NCERT Pages 4–5</span>
+      </div>
+      <div class="story-text">
+        Today, Rajni had to go out for some important work. She had to leave her six-month-old son 
+        <span class="blank-num">(14)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Name of baby boy in the story</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Deepak</span></details>
+        with her sister 
+        <span class="blank-num">(15)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Name of Rajni’s sister</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Sushila</span></details>.
+        Sushila also has a baby of the same age. Funnily, both babies did potty at the same time! Sushila happily cleaned her own baby girl, but when she was cleaning her nephew Deepak’s dirty nappy, she covered her nose with her 
+        <span class="blank-num">(16)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Cloth scarf/veil worn with salwar suit</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">dupatta (scarf)</span></details>.
+        Whether a smell is good or bad often depends on how our 
+        <span class="blank-num">(17)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Thought organ / perception</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">mind feels about it</span></details>
+        and whether we are used to it every day.
+      </div>
+    </article>
+
+    <!-- 4. Let's See: Bird Eyes and Neck Movements -->
+    <article class="story-card" id="section-4">
+      <div class="card-top-header">
+        <h2><span>4.</span> Eyes on the Sides vs Eyes in the Front</h2>
+        <span class="section-badge">NCERT Pages 6–7</span>
+      </div>
+      <div class="story-text">
+        Most birds have their eyes on 
+        <span class="blank-num">(18)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Lateral sides of the skull</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">either side of the head</span></details>.
+        Their eyes can focus on two 
+        <span class="blank-num">(19)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Separate / not the same</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">different things</span></details>
+        at the same time. When they look straight ahead, both their eyes focus on the 
+        <span class="blank-num">(20)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Identical / single object</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">same object</span></details>.
+        You must have seen birds moving their neck very often. This is because in most birds, the eyes are 
+        <span class="blank-num">(21)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Rigid and immovable in sockets</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">fixed</span></details>
+        and cannot move, so birds have to turn their 
+        <span class="blank-num">(22)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Cervical spine / entire head</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">heads (necks)</span></details>
+        to see around. An 
+        <span class="blank-num">(23)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Nocturnal bird of wisdom</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">owl</span></details>
+        has eyes in front of its head, just like a human being!
+      </div>
+    </article>
+
+    <!-- 5. Birds of Prey with Super Vision -->
+    <article class="story-card" id="section-5">
+      <div class="card-top-header">
+        <h2><span>5.</span> Birds of Prey: Eagles, Kites & Vultures</h2>
+        <span class="section-badge">NCERT Pages 7–8</span>
+      </div>
+      <div class="story-text">
+        Birds like 
+        <span class="blank-num">(24)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Cheel in Hindi</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">kites</span></details>,
+        <span class="blank-num">(25)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Baaz / majestic raptor</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">eagles</span></details>,
+        and 
+        <span class="blank-num">(26)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Gidh / scavenger raptor</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">vultures</span></details>
+        can see 
+        <span class="blank-num">(27)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Number multiple of human vision</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">four times</span></details>
+        as far as humans can. These birds can see things from a distance of 
+        <span class="blank-num">(28)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Double of 4 metres</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">eight metres</span></details>
+        what we can see from two metres. An eagle flying high in the sky can clearly spot a small piece of bread (roti) on the ground from a distance of 
+        <span class="blank-num">(29)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">2000 meters</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">one to two kilometres</span></details>!
+      </div>
+    </article>
+
+    <!-- 6. Do Animals See Colours? -->
+    <article class="story-card" id="section-6">
+      <div class="card-top-header">
+        <h2><span>6.</span> Do Animals See Colours? Daytime vs Night Animals</h2>
+        <span class="section-badge">NCERT Pages 8–9</span>
+      </div>
+      <div class="story-text">
+        Animals cannot see as many 
+        <span class="blank-num">(30)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Hues of the rainbow</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">colours</span></details>
+        as we can. It is believed that animals that are awake in the 
+        <span class="blank-num">(31)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Sunlit daylight hours</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">daytime</span></details>
+        can see some colours. But animals that are awake only at 
+        <span class="blank-num">(32)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Nocturnal dark hours</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">night</span></details>
+        can see things only in two shades: 
+        <span class="blank-num">(33)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Monochrome contrast shades</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">black and white</span></details>.
+        For example, an owl hunting in the dark sees its prey completely in black and white.
+      </div>
+    </article>
+
+    <!-- 7. Sharp Ears & Snakes Feeling Vibrations -->
+    <article class="story-card" id="section-7">
+      <div class="card-top-header">
+        <h2><span>7.</span> Sharp Ears & Sound Vibrations</h2>
+        <span class="section-badge">NCERT Pages 9–10</span>
+      </div>
+      <div class="story-text">
+        Birds have tiny holes for ears which are covered with 
+        <span class="blank-num">(34)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Plumage on bird wings/body</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">feathers</span></details>.
+        Snakes do not have any 
+        <span class="blank-num">(35)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Outer visible ear flaps</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">external ears</span></details>.
+        They can only feel 
+        <span class="blank-num">(36)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Tremors / kinetic shockwaves</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">vibrations on the ground</span></details>
+        through their skin and belly scales. If you put your hand on a wooden desk and tap it with your knuckles, you hear a sound; but if you place your 
+        <span class="blank-num">(37)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Auditory organ flat against surface</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">ear directly on the desk</span></details>,
+        the sound and vibrations travel much sharper and louder through solid wood!
+      </div>
+    </article>
+
+    <!-- 8. Warning Calls & Danger Alarms -->
+    <article class="story-card" id="section-8">
+      <div class="card-top-header">
+        <h2><span>8.</span> Warning Calls & Wildlife Danger Alarms</h2>
+        <span class="section-badge">NCERT Pages 10–11</span>
+      </div>
+      <div class="story-text">
+        High up in a tree, a 
+        <span class="blank-num">(38)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Black-faced long-tailed monkey</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">langur</span></details>
+        warns others of dangers like a tiger or leopard by making a special 
+        <span class="blank-num">(39)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Emergency alert vocal shout</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">warning call</span></details>.
+        Birds also give alarm calls, making a different sound if the enemy is coming from the 
+        <span class="blank-num">(40)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Aerial predator direction</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">sky (above)</span></details>
+        or from the 
+        <span class="blank-num">(41)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Terrestrial surface direction</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">ground</span></details>.
+        In December 
+        <span class="blank-num">(42)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Year of the Great Indian Ocean Tsunami</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">2004</span></details>,
+        few tribes that lived in the forests of the 
+        <span class="blank-num">(43)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Indian union territory archipelago in Bay of Bengal</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Andaman Islands</span></details>
+        noticed animals behaving in a strange manner. Understanding danger, they moved away to a safer part of the island and were saved from the catastrophic 
+        <span class="blank-num">(44)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Giant seismic ocean wave</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">tsunami</span></details>.
+        Dolphins also make different sounds to give messages to one another and communicate in their own 
+        <span class="blank-num">(45)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">System of speech / communication</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">language</span></details>.
+      </div>
+    </article>
+
+    <!-- 9. Sleep Clock & The Lazy Sloth -->
+    <article class="story-card" id="section-9">
+      <div class="card-top-header">
+        <h2><span>9.</span> Slumber Secrets: The Sloth & Sleep Clocks</h2>
+        <span class="section-badge">NCERT Pages 11–12</span>
+      </div>
+      <div class="story-text">
+        Some animals go into a long, deep sleep in certain seasons. In winter, house 
+        <span class="blank-num">(46)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Wall reptiles (chipkali)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">lizards</span></details>
+        cannot be seen because they go into winter hibernation. The 
+        <span class="blank-num">(47)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Slowest mammal that hangs upside down</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Sloth</span></details>
+        looks like a bear, but it is not. It spends almost 
+        <span class="blank-num">(48)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Number between 16 and 18</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">17 hours</span></details>
+        a day sleeping while hanging upside down on a tree branch. It eats the leaves of the same tree on which it lives and has a lifespan of about 
+        <span class="blank-num">(49)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Four decades</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">40 years</span></details>,
+        moving around only 
+        <span class="blank-num">(50)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Count of trees in total lifetime</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">eight trees</span></details>
+        in its entire life! It comes down from the tree only once a week to 
+        <span class="blank-num">(51)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Excrete waste / relieve</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">relieve itself</span></details>.
+      </div>
+    </article>
+
+    <!-- 10. The Super Senses of the Tiger -->
+    <article class="story-card" id="section-10">
+      <div class="card-top-header">
+        <h2><span>10.</span> The Tiger: The Ultimate Super Hunter</h2>
+        <span class="section-badge">NCERT Pages 13–14</span>
+      </div>
+      <div class="story-text">
+        A tiger can see 
+        <span class="blank-num">(52)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Half a dozen times</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">six times better</span></details>
+        at night than most humans. The tiger’s 
+        <span class="blank-num">(53)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Sensitive facial hairs (moochhen)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">whiskers</span></details>
+        are very sensitive and can feel movements and vibrations in the air, helping the tiger move in the dark and find its prey. A tiger’s sense of 
+        <span class="blank-num">(54)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Auditory capability</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">hearing</span></details>
+        is so sharp that it can make out the difference between the rustling of leaves and the sound of an animal moving on the grass. Its ears can move in 
+        <span class="blank-num">(55)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Various spatial angles</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">different directions</span></details>
+        to catch sound from all around. A tiger’s roar can be heard up to 
+        <span class="blank-num">(56)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Distance in km</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">3 kilometres</span></details>
+        away!
+      </div>
+    </article>
+
+    <!-- 11. Endangered Animals & National Parks -->
+    <article class="story-card" id="section-11">
+      <div class="card-top-header">
+        <h2><span>11.</span> Animals in Danger: Poaching & National Parks</h2>
+        <span class="section-badge">NCERT Pages 14–15</span>
+      </div>
+      <div class="story-text">
+        Today, many animals are in danger. Elephants are killed for their 
+        <span class="blank-num">(57)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Ivory dental tusks</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">tusks</span></details>,
+        rhinoceros for their 
+        <span class="blank-num">(58)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Keratin snout horn</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">horn</span></details>,
+        tigers, crocodiles and snakes for their skins, and musk deer just to make a little scent from their musk. People who hunt and kill animals are called 
+        <span class="blank-num">(59)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Illegal animal killers</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">hunters and poachers</span></details>.
+        To protect animals, our government has made special protected forests called National Parks. For example, 
+        <span class="blank-num">(60)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">India’s oldest national park in Uttarakhand</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Jim Corbett National Park in Uttarakhand</span></details>
+        and 'Ghana' in Bharatpur district of Rajasthan are protected sanctuaries where no one can hunt animals or destroy the forest.
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="story-footer-note">
+      Nextsem Academy • NCERT Solutions & Interactive Study Aids • Curriculum Reference: Looking Around (Class 5 EVS)
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleAllHints(openState) {
+      document.querySelectorAll('details.hint-drop').forEach(function(el) {
+        el.open = openState;
+      });
+    }
+
+    function toggleAllAnswers(openState) {
+      document.querySelectorAll('details.ans-drop').forEach(function(el) {
+        el.open = openState;
+      });
+    }
+
+    function hideAllDetails() {
+      document.querySelectorAll('details.hint-drop, details.ans-drop').forEach(function(el) {
+        el.open = false;
+      });
+    }
+  </script>
+</body>
+</html>

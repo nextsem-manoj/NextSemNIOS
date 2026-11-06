@@ -1,0 +1,72 @@
+{
+  "brandName": "Nextsem Academy",
+  "domain": "nextsem.online",
+  "version": "1.0.0",
+  "palette": {
+    "primary": {
+      "main": "#04AA6D",
+      "hover": "#039861",
+      "light": "#10b981",
+      "dark": "#026d46",
+      "glow": "rgba(4, 170, 109, 0.45)"
+    },
+    "background": {
+      "default": "#17181c",
+      "card": "#0c1328",
+      "cardHover": "#111b38",
+      "elevated": "#1e293b",
+      "darkest": "#060c18"
+    },
+    "text": {
+      "primary": "#ffffff",
+      "secondary": "#94a3b8",
+      "tertiary": "#64748b",
+      "highlight": "#04AA6D",
+      "whiteBold": "#ffffff"
+    },
+    "borders": {
+      "subtle": "rgba(255, 255, 255, 0.08)",
+      "medium": "rgba(148, 163, 184, 0.2)",
+      "accent": "rgba(4, 170, 109, 0.5)",
+      "glow": "#04AA6D"
+    },
+    "subBrands": {
+      "ignou": {
+        "accent": "#c1a648",
+        "accentLight": "#f5d77f",
+        "bg": "#060c18",
+        "card": "#0c1328",
+        "glow": "rgba(193, 166, 72, 0.4)"
+      },
+      "kids": {
+        "accentOrange": "#f59e0b",
+        "accentMint": "#10b981",
+        "bg": "#0f172a",
+        "card": "#1e1b4b"
+      },
+      "ncert": {
+        "accentBlue": "#0284c7",
+        "accentSky": "#38bdf8",
+        "bg": "#050e1d",
+        "card": "#0c1e3d"
+      }
+    }
+  },
+  "typography": {
+    "fontSans": "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    "fontMono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+    "weights": {
+      "regular": 400,
+      "semibold": 600,
+      "bold": 700,
+      "black": 900
+    }
+  },
+  "borderRadius": {
+    "sm": "6px",
+    "md": "10px",
+    "lg": "16px",
+    "xl": "24px",
+    "full": "9999px"
+  }
+}

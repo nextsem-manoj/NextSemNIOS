@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 7 Social Science Ch 2: Understanding the Weather — 25 Bilingual MCQs | NextSem</title>
+  <meta name="description" content="Master NCERT Class 7 Social Science (Exploring Society Part 1) Chapter 2: Understanding the Weather (मौसम को समझना) with 25 Competency Bilingual MCQs, instant explanations in Hindi & English, score tracker, and NCERT PDF integration.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js">
+    // Back to Top functionality
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+  </script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3a;
+      --border-card: rgba(14, 165, 233, 0.25);
+      --border-accent: #0ea5e9;
+      
+      --brand-blue: #0284c7;
+      --brand-cyan: #06b6d4;
+      --brand-emerald: #10b981;
+      --brand-gold: #f59e0b;
+      --brand-purple: #8b5cf6;
+      
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --border-accent: #0284c7;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+    }
+    body.light-theme .top-breadcrumb-bar {
+      background: #ffffff !important;
+      border-bottom-color: #cbd5e1 !important;
+      color: #475569 !important;
+    }
+    body.light-theme .top-breadcrumb-bar a {
+      color: #0284c7 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .sep {
+      color: #94a3b8 !important;
+    }
+    body.light-theme .top-breadcrumb-bar .current {
+      color: #0f172a !important;
+    }
+    body.light-theme .quiz-header {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-bottom-color: #cbd5e1 !important;
+    }
+    body.light-theme .hud-card {
+      background: #ffffff !important;
+      border-color: #cbd5e1 !important;
+    }
+    body.light-theme .opt-btn {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    body.light-theme .opt-btn:hover:not(.disabled) {
+      background: #f1f5f9;
+      border-color: #0284c7;
+    }
+    body.light-theme .exp-box {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: #14532d;
+    }
+    body.light-theme .exp-box strong {
+      color: #166534;
+    }
+    body.light-theme .q-topic {
+      background: rgba(14, 165, 233, 0.1);
+      color: #0284c7;
+      border-color: rgba(14, 165, 233, 0.25);
+    }
+    body.light-theme .btn-lang.active {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Breadcrumbs */
+    .top-breadcrumb-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #080f20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .top-breadcrumb-bar a {
+      color: var(--brand-cyan);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .top-breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-dim);
+    }
+    .top-breadcrumb-bar .current {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* Header */
+    .quiz-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(14, 165, 233, 0.4);
+    }
+    .brand-title-wrap h1 {
+      font-size: 1.12rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: -0.01em;
+    }
+    .badge-ch {
+      background: linear-gradient(135deg, #0284c7, #06b6d4);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .brand-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 2px;
+    }
+    .btn-lang {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-lang.active {
+      background: var(--brand-blue);
+      color: #ffffff;
+    }
+
+    .btn-theme {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+      flex: 1;
+    }
+
+    /* HUD Bar */
+    .hud-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .hud-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+    .hud-card .num {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--brand-cyan);
+      font-family: var(--font-mono);
+    }
+    .hud-card .num.correct {
+      color: var(--color-correct);
+    }
+    .hud-card .lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Action Links Bar */
+    .action-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .action-btn {
+      flex: 1;
+      min-width: 240px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .action-btn.primary {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.2), rgba(6, 182, 212, 0.2));
+      border-color: #0284c7;
+      color: #38bdf8;
+    }
+    .action-btn.primary:hover {
+      background: rgba(2, 132, 199, 0.35);
+    }
+    .action-btn.secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+    }
+    .action-btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .q-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .q-number-pill {
+      background: var(--brand-blue);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+    }
+    .q-topic {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(14, 165, 233, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.25);
+    }
+
+    .q-text-en {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .q-text-hi {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-family: var(--font-devanagari);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    /* Options List */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .opt-btn:hover:not(.disabled) {
+      background: var(--bg-card-hover);
+      border-color: var(--brand-cyan);
+    }
+    .opt-key {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.78rem;
+      flex-shrink: 0;
+      text-transform: uppercase;
+      font-family: var(--font-mono);
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct) !important;
+      color: #34d399 !important;
+    }
+    .opt-btn.correct .opt-key {
+      background: var(--color-correct);
+      color: #ffffff;
+    }
+    .opt-btn.wrong {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong) !important;
+      color: #f87171 !important;
+    }
+    .opt-btn.wrong .opt-key {
+      background: var(--color-wrong);
+      color: #ffffff;
+    }
+    .opt-btn.disabled {
+      cursor: default;
+    }
+
+    /* Explanation Box */
+    .exp-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 0.86rem;
+      line-height: 1.55;
+      display: none;
+    }
+    .exp-box strong {
+      color: #34d399;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+    .exp-en {
+      margin-bottom: 8px;
+    }
+    .exp-hi {
+      font-family: var(--font-devanagari);
+      color: var(--text-muted);
+    }
+
+    
+    /* Floating Back to Top Button */
+    .back-to-top-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      background: rgba(12, 19, 40, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid #0284c7;
+      color: #38bdf8;
+      border-radius: 9999px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(2, 132, 199, 0.25);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: var(--font-main);
+      font-weight: 800;
+      font-size: 0.84rem;
+    }
+    .back-to-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top-btn:hover {
+      background: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 10px 28px rgba(2, 132, 199, 0.45);
+      transform: translateY(-3px) scale(1.05);
+    }
+    .back-to-top-btn svg {
+      transition: transform 0.2s ease;
+    }
+    .back-to-top-btn:hover svg {
+      transform: translateY(-2px);
+    }
+    body.light-theme .back-to-top-btn {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #0284c7;
+      color: #0284c7;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 15px rgba(2, 132, 199, 0.15);
+    }
+    body.light-theme .back-to-top-btn:hover {
+      background: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 10px 28px rgba(2, 132, 199, 0.35);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: auto;
+    }
+    footer a {
+      color: var(--brand-cyan);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .hud-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .quiz-header {
+        padding: 10px 16px;
+      }
+      .brand-title-wrap h1 {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Breadcrumbs -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="sep">›</span>
+    <a href="/?class=7">Class 7</a>
+    <span class="sep">›</span>
+    <a href="/?class=7&subject=Social+Science">Social Science</a>
+    <span class="sep">›</span>
+    <a href="/?class=7&subject=Social+Science&chapter=2">Exploring Society Part 1 Ch 2</a>
+    <span class="sep">›</span>
+    <span class="current">25 Bilingual MCQs</span>
+  </nav>
+
+  <!-- Sticky Header -->
+  <header class="quiz-header">
+    <div class="brand-section">
+      <img src="/image-20.png" alt="NextSem Logo" class="brand-logo">
+      <div class="brand-title-wrap">
+        <h1>
+          <span>Understanding the Weather (मौसम को समझना)</span>
+          <span class="badge-ch">Unit 2</span>
+        </h1>
+        <div class="brand-sub">25 High-Yield Competency MCQs • Class 7 Social Science (NCERT 2026-27)</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="lang-switcher">
+        <button class="btn-lang active" onclick="setLang('both')" id="lang-both">Dual</button>
+        <button class="btn-lang" onclick="setLang('en')" id="lang-en">Eng</button>
+        <button class="btn-lang" onclick="setLang('hi')" id="lang-hi">हिन्दी</button>
+      </div>
+      <button class="btn-theme" id="themeToggleBtn">
+        <span id="themeIcon">🌙</span>
+        <span id="themeLabel">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- HUD Stats -->
+    <div class="hud-bar">
+      <div class="hud-card">
+        <div class="num" id="hud-total">25</div>
+        <div class="lbl">Total MCQs</div>
+      </div>
+      <div class="hud-card">
+        <div class="num" id="hud-attempted">0</div>
+        <div class="lbl">Attempted</div>
+      </div>
+      <div class="hud-card">
+        <div class="num correct" id="hud-correct">0</div>
+        <div class="lbl">Correct</div>
+      </div>
+      <div class="hud-card">
+        <div class="num" id="hud-accuracy">0%</div>
+        <div class="lbl">Accuracy</div>
+      </div>
+    </div>
+
+    <!-- Quick Link to PDF -->
+    <div class="action-links">
+      <a href="/pdf/Class 07/7th Exploring part 1/gees1dd/gees102.pdf" target="_blank" class="action-btn primary">
+        <span>📄 Open Official NCERT PDF (gees102.pdf)</span>
+      </a>
+      <button onclick="shuffleAllOptions()" class="action-btn secondary" style="cursor: pointer;"><span>🔀 Reshuffle Options (Fisher-Yates)</span></button>
+      <a href="/?class=7&subject=Social+Science" class="action-btn secondary">
+        <span>📚 All Class 7 Social Science Chapters</span>
+      </a>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="questions-list" style="display: flex; flex-direction: column; gap: 20px;"></div>
+
+  </main>
+
+  <footer>
+    NextSem Academy • NCERT Class 7 Exploring Society: India and Beyond • Line-by-Line Mastery
+  </footer>
+
+  <script>
+    const questions = [
+  {
+    "id": 1,
+    "topic": "Atmospheric Layers & Troposphere",
+    "questionEn": "In which layer of the Earth's atmosphere do almost all weather phenomena (such as clouds, rain, storms, and fog) take place?",
+    "questionHi": "पृथ्वी के वायुमंडल की किस परत में मौसम की लगभग सभी परिघटनाएं (जैसे बादल, वर्षा, तूफान और कोहरा) घटित होती हैं?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Mesosphere",
+        "textHi": "मध्यमंडल (Mesosphere)"
+      },
+      {
+        "key": "b",
+        "textEn": "Stratosphere",
+        "textHi": "समतापमंडल (Stratosphere)"
+      },
+      {
+        "key": "c",
+        "textEn": "Troposphere",
+        "textHi": "क्षोभमंडल (Troposphere)"
+      },
+      {
+        "key": "d",
+        "textEn": "Thermosphere",
+        "textHi": "तापमंडल (Thermosphere)"
+      }
+    ],
+    "correct": "c",
+    "explanationEn": "The troposphere is the layer closest to the surface of the Earth (extending 6 to 18 km). It is where all land-based plants and animals live and breathe, and where almost all weather phenomena take place.",
+    "explanationHi": "क्षोभमंडल (Troposphere) पृथ्वी की सतह के सबसे निकट की परत है (6 से 18 किमी तक)। यहाँ सभी स्थल-आधारित पौधे व प्राणी सांस लेते हैं और मौसम की लगभग सभी परिघटनाएं इसी परत में घटित होती हैं।"
+  },
+  {
+    "id": 2,
+    "topic": "Troposphere Thickness Variation",
+    "questionEn": "Why is the troposphere thicker in the tropical zone (up to 18 km) and less thick at the Earth's poles (about 6 km)?",
+    "questionHi": "क्षोभमंडल उष्णकटिबंधीय क्षेत्र में अधिक मोटा (18 किमी तक) और ध्रुवों पर कम मोटा (लगभग 6 किमी) क्यों होता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Warmer air expands in the tropics, whereas cold air contracts at the poles",
+        "textHi": "उष्णकटिबंधीय क्षेत्र में गर्म हवा फैलती है, जबकि ध्रुवों पर ठंडी हवा सिकुड़ती (संकुचित होती) है"
+      },
+      {
+        "key": "b",
+        "textEn": "Due to heavy snowfall compressing the air at the equator",
+        "textHi": "भूमध्य रेखा पर अत्यधिक बर्फबारी द्वारा हवा संकुचित होने के कारण"
+      },
+      {
+        "key": "c",
+        "textEn": "Due to the Earth's ocean water evaporation exclusively at the poles",
+        "textHi": "केवल ध्रुवों पर महासागरीय जल के वाष्पीकरण के कारण"
+      },
+      {
+        "key": "d",
+        "textEn": "Because the ozone layer pushes the troposphere down in the tropics",
+        "textHi": "क्योंकि ओजोन परत उष्णकटिबंध में क्षोभमंडल को नीचे धकेलती है"
+      }
+    ],
+    "correct": "a",
+    "explanationEn": "According to NCERT Chapter 2, the troposphere extends to a height of 6 to 18 km from the ground; it is less thick at the poles where cold air contracts, and thicker in the tropical zone where warmer air expands.",
+    "explanationHi": "NCERT अध्याय 2 के अनुसार, क्षोभमंडल ध्रुवों पर कम मोटा (लगभग 6 किमी) होता है क्योंकि ठंडी हवा सिकुड़ती है, जबकि उष्णकटिबंध में अधिक मोटा (18 किमी तक) होता है क्योंकि गर्म हवा फैलती (expand) है।"
+  },
+  {
+    "id": 3,
+    "topic": "Definition of Weather",
+    "questionEn": "Which statement best defines 'Weather' according to the NCERT textbook?",
+    "questionHi": "NCERT पाठ्यपुस्तक के अनुसार 'मौसम' (Weather) की सर्वोत्तम परिभाषा कौन सी है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "The state of the Earth's atmosphere at a particular time and place",
+        "textHi": "किसी निश्चित समय और स्थान पर पृथ्वी के वायुमंडल की तात्कालिक स्थिति"
+      },
+      {
+        "key": "b",
+        "textEn": "The gravitational pull of the moon affecting ocean tides",
+        "textHi": "समुद्री ज्वार-भाटा को प्रभावित करने वाला चंद्रमा का गुरुत्वाकर्षण बल"
+      },
+      {
+        "key": "c",
+        "textEn": "The average global temperature measured across several centuries",
+        "textHi": "कई शताब्दियों में मापा गया औसत वैश्विक तापमान"
+      },
+      {
+        "key": "d",
+        "textEn": "The permanent climatic condition of a continent over hundreds of years",
+        "textHi": "सैकड़ों वर्षों में किसी महाद्वीप की स्थायी जलवायु परिस्थिति"
+      }
+    ],
+    "correct": "a",
+    "explanationEn": "Weather is defined as the state of the Earth's atmosphere at a particular time and place, experienced through elements like temperature, humidity, precipitation, wind, and pressure.",
+    "explanationHi": "मौसम किसी विशेष स्थान और समय पर पृथ्वी के वायुमंडल की स्थिति को कहते हैं, जिसे तापमान, आर्द्रता, वर्षा, पवन और वायुमंडलीय दबाव जैसे तत्वों द्वारा अनुभव किया जाता है।"
+  },
+  {
+    "id": 4,
+    "topic": "Core Elements of Weather",
+    "questionEn": "Which of the following is NOT one of the five primary elements of weather described in the chapter?",
+    "questionHi": "निम्नलिखित में से कौन सा पाठ में वर्णित मौसम के पाँच प्राथमिक तत्वों में शामिल नहीं है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Precipitation and Wind",
+        "textHi": "वर्षण (वर्षा) और पवन"
+      },
+      {
+        "key": "b",
+        "textEn": "Temperature and Humidity",
+        "textHi": "तापमान और आर्द्रता"
+      },
+      {
+        "key": "c",
+        "textEn": "Atmospheric Pressure",
+        "textHi": "वायुमंडलीय दबाव"
+      },
+      {
+        "key": "d",
+        "textEn": "Earth's Magnetic Field",
+        "textHi": "पृथ्वी का चुंबकीय क्षेत्र"
+      }
+    ],
+    "correct": "d",
+    "explanationEn": "The five elements of weather are: (1) Temperature, (2) Precipitation, (3) Atmospheric Pressure, (4) Wind, and (5) Humidity. Earth's magnetic field is a geophysical property, not an element of weather.",
+    "explanationHi": "मौसम के पाँच मुख्य तत्व हैं: (१) तापमान, (२) वर्षण, (३) वायुमंडलीय दबाव, (४) पवन, और (५) आर्द्रता। पृथ्वी का चुंबकीय क्षेत्र मौसम का तत्व नहीं है।"
+  },
+  {
+    "id": 5,
+    "topic": "Traditional Weather Clues: Ants",
+    "questionEn": "What natural behavior of ants has traditionally been observed by communities as a reliable sign of impending heavy rain?",
+    "questionHi": "चींटियों के किस स्वाभाविक व्यवहार को पारंपरिक रूप से भारी बारिश आने का एक विश्वसनीय प्राकृतिक संकेत माना जाता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Digging deeper underground burrows in water pools",
+        "textHi": "पानी के गड्ढों में गहराई तक बिल खोदना"
+      },
+      {
+        "key": "b",
+        "textEn": "Shifting their eggs to higher ground",
+        "textHi": "अपने अंडों को ऊँचे स्थानों पर ले जाना"
+      },
+      {
+        "key": "c",
+        "textEn": "Stopping food collection completely during summer",
+        "textHi": "गर्मियों में भोजन एकत्र करना पूरी तरह बंद कर देना"
+      },
+      {
+        "key": "d",
+        "textEn": "Flying out in large swarms towards the sea",
+        "textHi": "समुद्र की ओर बड़े झुंडों में उड़ जाना"
+      }
+    ],
+    "correct": "b",
+    "explanationEn": "Ants shifting their eggs to higher ground is a natural instinct that indicates an expected change in the weather, especially heavy rain, to protect their brood from flooding.",
+    "explanationHi": "चींटियों द्वारा अपने अंडों को सुरक्षित ऊँचे स्थानों पर ले जाना भारी वर्षा और बाढ़ से अपने अंडों को बचाने का एक प्राकृतिक संकेत है।"
+  },
+  {
+    "id": 6,
+    "topic": "Traditional Clues: Pine Cones Mechanism",
+    "questionEn": "How do pine cones naturally respond to changes in environmental humidity?",
+    "questionHi": "चीड़ के शंकु (Pine Cones) पर्यावरणीय आर्द्रता (नमी) में बदलाव पर प्राकृतिक रूप से क्या प्रतिक्रिया देते हैं?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "They close in humid conditions to protect seeds and open in dry conditions to disperse them",
+        "textHi": "वे बीजों की सुरक्षा के लिए नम मौसम में बंद हो जाते हैं और शुष्क मौसम में उन्हें बिखेरने के लिए खुल जाते हैं"
+      },
+      {
+        "key": "b",
+        "textEn": "They fall off the branches immediately when humidity increases",
+        "textHi": "हवा में नमी बढ़ते ही वे शाखाओं से तुरंत नीचे गिर जाते हैं"
+      },
+      {
+        "key": "c",
+        "textEn": "They open in humid conditions and close in dry conditions",
+        "textHi": "वे नम मौसम में खुलते हैं और सूखे मौसम में बंद होते हैं"
+      },
+      {
+        "key": "d",
+        "textEn": "They change color from green to purple when rain approaches",
+        "textHi": "बारिश आने पर वे हरे से बैंगनी रंग में बदल जाते हैं"
+      }
+    ],
+    "correct": "a",
+    "explanationEn": "Pine cones close in humid conditions to protect their seeds from moisture and rot, and open in dry conditions to release seeds so they can be dispersed by the wind in favorable weather.",
+    "explanationHi": "चीड़ के शंकु (Pine cones) अधिक नमी में बीजों को सुरक्षित रखने के लिए बंद हो जाते हैं और शुष्क (सूखे) मौसम में बीजों को हवा द्वारा फैलाने के लिए खुल जाते हैं।"
+  },
+  {
+    "id": 7,
+    "topic": "India Meteorological Department (IMD) History",
+    "questionEn": "In which year was the India Meteorological Department (IMD) established?",
+    "questionHi": "भारत मौसम विज्ञान विभाग (IMD) की स्थापना किस वर्ष में हुई थी?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "1947",
+        "textHi": "1947"
+      },
+      {
+        "key": "b",
+        "textEn": "1905",
+        "textHi": "1905"
+      },
+      {
+        "key": "c",
+        "textEn": "1982",
+        "textHi": "1982"
+      },
+      {
+        "key": "d",
+        "textEn": "1875",
+        "textHi": "1875"
+      }
+    ],
+    "correct": "d",
+    "explanationEn": "As highlighted in the 'Don't Miss Out' box in NCERT Chapter 2, the India Meteorological Department (IMD) was set up in 1875.",
+    "explanationHi": "NCERT अध्याय 2 के 'Don't Miss Out' बॉक्स के अनुसार भारत मौसम विज्ञान विभाग (IMD) की स्थापना वर्ष 1875 में हुई थी।"
+  },
+  {
+    "id": 8,
+    "topic": "IMD Motto & Ancient Text Origin",
+    "questionEn": "What is the official motto of the IMD, and from which ancient Indian text is it taken?",
+    "questionHi": "भारत मौसम विज्ञान विभाग (IMD) का आधिकारिक ध्येयवाक्य (Motto) क्या है और यह किस प्राचीन ग्रंथ से लिया गया है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Satyameva Jayate — Mundaka Upanishad",
+        "textHi": "सत्यमेव जयते — मुण्डक उपनिषद"
+      },
+      {
+        "key": "b",
+        "textEn": "Vasudhaiva Kutumbakam — Maha Upanishad",
+        "textHi": "वसुधैव कुटुम्बकम् — महा उपनिषद"
+      },
+      {
+        "key": "c",
+        "textEn": "Ādityāt jāyate vriṣhṭi ('From the sun arises rain') — Manusmṛiti",
+        "textHi": "आदित्यात् जायते वृष्टिः ('सूर्य से वर्षा उत्पन्न होती है') — मनुस्मृति"
+      },
+      {
+        "key": "d",
+        "textEn": "Yogakshemam Vahamyaham — Bhagavad Gita",
+        "textHi": "योगक्षेमं वहाम्यहम् — भगवद्गीता"
+      }
+    ],
+    "correct": "c",
+    "explanationEn": "The IMD's motto is 'Ādityāt jāyate vriṣhṭi' (From the sun arises rain), taken from the Manusmṛiti. The full verse says: 'From the sun arises rain, from rain comes food, and from food, living beings originate.'",
+    "explanationHi": "IMD का ध्येयवाक्य 'आदित्यात् जायते वृष्टिः' (सूर्य से वर्षा उत्पन्न होती है) है, जो मनुस्मृति से लिया गया है। पूर्ण श्लोक है: 'सूर्य से वर्षा, वर्षा से अन्न और अन्न से सभी प्राणियों की उत्पत्ति होती है।'"
+  },
+  {
+    "id": 9,
+    "topic": "Temperature Scales: Celsius & Fahrenheit",
+    "questionEn": "A temperature reading of 15 degrees Celsius (15°C) is equivalent to what reading on the Fahrenheit scale?",
+    "questionHi": "15 डिग्री सेल्सियस (15°C) का तापमान फारेनहाइट पैमाने पर कितने डिग्री के बराबर होता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "45°F",
+        "textHi": "45°F"
+      },
+      {
+        "key": "b",
+        "textEn": "59°F",
+        "textHi": "59°F"
+      },
+      {
+        "key": "c",
+        "textEn": "75°F",
+        "textHi": "75°F"
+      },
+      {
+        "key": "d",
+        "textEn": "32°F",
+        "textHi": "32°F"
+      }
+    ],
+    "correct": "b",
+    "explanationEn": "According to the NCERT textbook, 15°C corresponds to 59°F. Formula: F = (C × 9/5) + 32 = (15 × 1.8) + 32 = 27 + 32 = 59°F.",
+    "explanationHi": "NCERT पाठ्यपुस्तक के अनुसार 15°C का तापमान 59°F के बराबर होता है। सूत्र: F = (C × 9/5) + 32 = (15 × 1.8) + 32 = 59°F।"
+  },
+  {
+    "id": 10,
+    "topic": "Range of Temperature Calculation",
+    "questionEn": "If the maximum temperature on a day in Bhopal is 32°C and the minimum temperature is 18°C, what is the 'Range of Temperature' for that day?",
+    "questionHi": "यदि भोपाल में किसी दिन का अधिकतम तापमान 32°C और न्यूनतम तापमान 18°C दर्ज किया जाता है, तो उस दिन का 'तापांतर' (Range of Temperature) क्या होगा?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "25°C",
+        "textHi": "25°C"
+      },
+      {
+        "key": "b",
+        "textEn": "14°C",
+        "textHi": "14°C"
+      },
+      {
+        "key": "c",
+        "textEn": "7°C",
+        "textHi": "7°C"
+      },
+      {
+        "key": "d",
+        "textEn": "50°C",
+        "textHi": "50°C"
+      }
+    ],
+    "correct": "b",
+    "explanationEn": "Range of temperature = Maximum temperature minus Minimum temperature. Here, 32°C - 18°C = 14°C.",
+    "explanationHi": "तापांतर (Range of temperature) = अधिकतम तापमान - न्यूनतम तापमान = 32°C - 18°C = 14°C।"
+  },
+  {
+    "id": 11,
+    "topic": "Mean Daily Temperature Calculation",
+    "questionEn": "What is the 'Mean Daily Temperature' of a place if the day's maximum temperature is 30°C and minimum temperature is 16°C?",
+    "questionHi": "यदि किसी स्थान का दैनिक अधिकतम तापमान 30°C तथा न्यूनतम तापमान 16°C हो, तो उसका 'दैनिक माध्य तापमान' (Mean Daily Temperature) क्या होगा?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "23°C",
+        "textHi": "23°C"
+      },
+      {
+        "key": "b",
+        "textEn": "20°C",
+        "textHi": "20°C"
+      },
+      {
+        "key": "c",
+        "textEn": "46°C",
+        "textHi": "46°C"
+      },
+      {
+        "key": "d",
+        "textEn": "14°C",
+        "textHi": "14°C"
+      }
+    ],
+    "correct": "a",
+    "explanationEn": "Mean daily temperature = (Maximum temperature + Minimum temperature) / 2. Here: (30°C + 16°C) / 2 = 46 / 2 = 23°C.",
+    "explanationHi": "दैनिक माध्य तापमान = (अधिकतम तापमान + न्यूनतम तापमान) / २ = (30 + 16) / 2 = 46 / 2 = 23°C।"
+  },
+  {
+    "id": 12,
+    "topic": "Rainfall Measurement: Rain Gauge",
+    "questionEn": "What instrument is used to measure the amount of precipitation (rainfall), and in which unit is it typically recorded?",
+    "questionHi": "वर्षा की मात्रा मापने के लिए किस उपकरण का उपयोग किया जाता है और इसे आमतौर पर किस इकाई में मापा जाता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Rain Gauge in millimetres (mm)",
+        "textHi": "वर्षामापी / रेन गेज (मिलीमीटर में)"
+      },
+      {
+        "key": "b",
+        "textEn": "Barometer in millibars (mb)",
+        "textHi": "बैरोमीटर (मिलीबार में)"
+      },
+      {
+        "key": "c",
+        "textEn": "Anemometer in knots",
+        "textHi": "एनीमोमीटर (नॉट्स में)"
+      },
+      {
+        "key": "d",
+        "textEn": "Hygrometer in degrees",
+        "textHi": "हाइग्रोमीटर (डिग्री में)"
+      }
+    ],
+    "correct": "a",
+    "explanationEn": "The amount of rainfall is measured with a rain gauge consisting of a funnel and a measuring cylinder with a scale. Rainfall is measured by the depth of collected water in millimetres (mm).",
+    "explanationHi": "वर्षा की मात्रा वर्षामापी (Rain Gauge) से मापी जाती है जिसमें एक कीप (funnel) और पैमाना लगा सिलेंडर होता है। वर्षा को मिलीमीटर (mm) में दर्ज किया जाता है।"
+  },
+  {
+    "id": 13,
+    "topic": "Rain Gauge Location Criteria",
+    "questionEn": "Where should a rain gauge be placed to get the most accurate and unbiased rainfall reading?",
+    "questionHi": "वर्षा की सबसे सटीक और सही माप प्राप्त करने के लिए वर्षामापी (Rain Gauge) को कहाँ स्थापित किया जाना चाहिए?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Directly next to a tall compound boundary wall",
+        "textHi": "स्कूल की ऊँची चारदीवारी से सटाकर"
+      },
+      {
+        "key": "b",
+        "textEn": "In an open ground on a flat, stable elevated platform away from obstructions",
+        "textHi": "अवरोधों से दूर किसी खुले मैदान में समतल और स्थिर उठे हुए चबूतरे पर"
+      },
+      {
+        "key": "c",
+        "textEn": "Under the shade of a large dense mango tree",
+        "textHi": "एक बड़े घने आम के पेड़ की छाया के नीचे"
+      },
+      {
+        "key": "d",
+        "textEn": "Under the roof eaves of the school building verandah",
+        "textHi": "स्कूल भवन के बरामदे की छत की छज्जे के नीचे"
+      }
+    ],
+    "correct": "b",
+    "explanationEn": "A rain gauge must be placed in an open area away from trees, walls, and buildings that could block falling rain or drip extra water into the funnel. It should be on a flat, level surface so it will not tilt or topple.",
+    "explanationHi": "वर्षामापी को पेड़ों, दीवारों या छतों से दूर खुले मैदान में एक समतल, स्थिर चबूतरे पर रखना चाहिए ताकि उसमें अवरोध न आए और हवा से वह गिरे नहीं।"
+  },
+  {
+    "id": 14,
+    "topic": "Atmospheric Pressure & Altitude",
+    "questionEn": "How does atmospheric pressure change as we travel from the sea coast up into high mountains?",
+    "questionHi": "जैसे-जैसे हम समुद्र तट से ऊपर ऊँचे पर्वतों की ओर जाते हैं, वायुमंडलीय दबाव में क्या परिवर्तन आता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "It decreases because the air gets thinner with less air above",
+        "textHi": "यह घटता है क्योंकि हवा विरल (पतली) हो जाती है और ऊपर वायु का भार कम हो जाता है"
+      },
+      {
+        "key": "b",
+        "textEn": "It stays constant at exactly 1013 millibars everywhere on Earth",
+        "textHi": "यह पृथ्वी पर सभी जगह ठीक 1013 मिलीबार पर स्थिर रहता है"
+      },
+      {
+        "key": "c",
+        "textEn": "It increases because cold mountain air is denser",
+        "textHi": "यह बढ़ता है क्योंकि पहाड़ों की ठंडी हवा अधिक सघन होती है"
+      },
+      {
+        "key": "d",
+        "textEn": "It drops to absolute zero immediately above sea level",
+        "textHi": "यह समुद्र तल से ऊपर उठते ही शून्य हो जाता है"
+      }
+    ],
+    "correct": "a",
+    "explanationEn": "Atmospheric pressure is highest near sea level and decreases as altitude increases because there is less air above us, making the air thinner with less available oxygen.",
+    "explanationHi": "वायुमंडलीय दबाव समुद्र तट पर सर्वाधिक होता है और ऊँचाई पर जाने पर कम होता जाता है क्योंकि हवा विरल (पतली) हो जाती है और ऊपर वायु का वजन कम होता है।"
+  },
+  {
+    "id": 15,
+    "topic": "Khardung La Altitude & Extreme Pressure",
+    "questionEn": "At Khardung La in Ladakh (over 5,600 metres above sea level), what is the typical atmospheric pressure experienced by soldiers?",
+    "questionHi": "लद्दाख में खारदुंग ला (समुद्र तल से 5,600 मीटर से अधिक ऊँचाई) पर हमारे सैनिकों द्वारा अनुभव किया जाने वाला वायुमंडलीय दबाव आमतौर पर कितना होता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Above 1200 mb",
+        "textHi": "1200 मिलीबार से अधिक"
+      },
+      {
+        "key": "b",
+        "textEn": "Zero mb",
+        "textHi": "शून्य मिलीबार"
+      },
+      {
+        "key": "c",
+        "textEn": "Around 1013 mb",
+        "textHi": "लगभग 1013 मिलीबार"
+      },
+      {
+        "key": "d",
+        "textEn": "About 650 mb",
+        "textHi": "लगभग 650 मिलीबार"
+      }
+    ],
+    "correct": "d",
+    "explanationEn": "At high altitudes like Khardung La in Ladakh (over 5,600 m), the air is so thin that the atmospheric pressure is only about 650 millibars compared to 1013 mb at sea level, leading to lower oxygen levels.",
+    "explanationHi": "खारदुंग ला (लद्दाख, 5600 मीटर से अधिक) पर वायुमंडलीय दबाव केवल लगभग 650 मिलीबार होता है (समुद्र तट पर 1013 mb की तुलना में), जिससे ऑक्सीजन का स्तर काफी कम हो जाता है।"
+  },
+  {
+    "id": 16,
+    "topic": "Normal Pressure vs Depression",
+    "questionEn": "What is the normal atmospheric pressure at sea level, and what pressure value indicates a meteorological 'depression'?",
+    "questionHi": "समुद्र तल पर सामान्य वायुमंडलीय दबाव कितना होता है, और कौन सा मान मौसम विज्ञान में 'दबाव गर्त/अवदाब' (Depression) को दर्शाता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Normal is ~500 mb; below 400 mb is a depression",
+        "textHi": "सामान्य ~500 mb; 400 mb से कम अवदाब है"
+      },
+      {
+        "key": "b",
+        "textEn": "Normal is 760 mb; below 750 mb is a cyclone",
+        "textHi": "सामान्य 760 mb; 750 mb से कम चक्रवात है"
+      },
+      {
+        "key": "c",
+        "textEn": "Normal is around 1013 mb; a pressure below 1000 mb indicates a depression",
+        "textHi": "सामान्य लगभग 1013 मिलीबार है; 1000 मिलीबार से कम दबाव अवदाब (डिप्रेशन) दर्शाता है"
+      },
+      {
+        "key": "d",
+        "textEn": "Normal is 2000 mb; below 1500 mb is a storm",
+        "textHi": "सामान्य 2000 mb; 1500 mb से कम तूफान है"
+      }
+    ],
+    "correct": "c",
+    "explanationEn": "The normal atmospheric pressure at sea coast is around 1013 mb. When atmospheric pressure drops below 1000 mb, meteorologists classify it as a depression or low-pressure system which can develop into a cyclone.",
+    "explanationHi": "समुद्र तट पर सामान्य वायुमंडलीय दबाव लगभग 1013 मिलीबार (mb) होता है। जब यह 1000 mb से नीचे गिर जाता है, तो यह 'अवदाब' (depression या निम्न दाब प्रणाली) का संकेत देता है जो तूफान या चक्रवात बन सकता है।"
+  },
+  {
+    "id": 17,
+    "topic": "Barometer & Units",
+    "questionEn": "Which scientific instrument is used to measure atmospheric pressure?",
+    "questionHi": "वायुमंडलीय दबाव को मापने के लिए किस वैज्ञानिक उपकरण का उपयोग किया जाता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Hygrometer",
+        "textHi": "हाइग्रोमीटर (Hygrometer)"
+      },
+      {
+        "key": "b",
+        "textEn": "Rain Gauge",
+        "textHi": "वर्षामापी (Rain Gauge)"
+      },
+      {
+        "key": "c",
+        "textEn": "Barometer",
+        "textHi": "बैरोमीटर (Barometer)"
+      },
+      {
+        "key": "d",
+        "textEn": "Anemometer",
+        "textHi": "एनीमोमीटर (Anemometer)"
+      }
+    ],
+    "correct": "c",
+    "explanationEn": "A barometer is used to measure atmospheric pressure, usually displaying values in millibars (mb).",
+    "explanationHi": "वायुमंडलीय दबाव को मापने के लिए बैरोमीटर (Barometer) का उपयोग किया जाता है, जो सामान्यतः मिलीबार (mb) में मान दर्शाता है।"
+  },
+  {
+    "id": 18,
+    "topic": "Wind Definition & Cause",
+    "questionEn": "What is wind, and why does air move across the Earth's surface?",
+    "questionHi": "पवन (Wind) क्या है और वायु पृथ्वी की सतह पर गति क्यों करती है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Wind is static air that never changes speed or direction",
+        "textHi": "पवन एक स्थिर हवा है जो कभी दिशा नहीं बदलती"
+      },
+      {
+        "key": "b",
+        "textEn": "Wind is created solely by ocean fish swimming in currents",
+        "textHi": "पवन केवल समुद्री लहरों में तैरती मछलियों द्वारा उत्पन्न होती है"
+      },
+      {
+        "key": "c",
+        "textEn": "Wind is the falling of frozen water droplets from clouds",
+        "textHi": "पवन बादलों से बर्फ की बूंदों का गिरना है"
+      },
+      {
+        "key": "d",
+        "textEn": "Wind is movement of air from areas of high pressure to areas of low pressure",
+        "textHi": "पवन उच्च वायुदाब वाले क्षेत्रों से निम्न वायुदाब वाले क्षेत्रों की ओर हवा की गति है"
+      }
+    ],
+    "correct": "d",
+    "explanationEn": "Wind is defined as the movement of air from areas of high atmospheric pressure to areas of low atmospheric pressure. Speed and direction are its two key factors.",
+    "explanationHi": "पवन उच्च दबाव वाले क्षेत्रों से निम्न दबाव वाले क्षेत्रों की ओर बहने वाली हवा की गति है। गति और दिशा इसके दो महत्वपूर्ण कारक हैं।"
+  },
+  {
+    "id": 19,
+    "topic": "Wind Vane vs Wind Sock",
+    "questionEn": "What is the specialized conical fabric wind vane installed on airport runways (tarmac) called?",
+    "questionHi": "हवाई अड्डे के रनवे (टारमैक) पर स्थापित विशेष शंक्वाकार कपड़े वाले पवन दिशा सूचक को क्या कहा जाता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Hygro-sensor",
+        "textHi": "हाइग्रो-सेंसर"
+      },
+      {
+        "key": "b",
+        "textEn": "Wind Sock",
+        "textHi": "विंड सॉक (Wind Sock)"
+      },
+      {
+        "key": "c",
+        "textEn": "Barometer Dial",
+        "textHi": "बैरोमीटर डायल"
+      },
+      {
+        "key": "d",
+        "textEn": "Anemometer Cup",
+        "textHi": "एनीमोमीटर कप"
+      }
+    ],
+    "correct": "b",
+    "explanationEn": "The wind vane on the tarmac is called a 'wind sock'. It gives airplane pilots an immediate visual indication of wind direction and strength during take-off and landing.",
+    "explanationHi": "हवाई पट्टी (tarmac) पर लगे पवन सूचक को 'विंड सॉक' (Wind sock) कहा जाता है। यह पायलटों को विमान के उड़ान भरने और उतरने के समय हवा की दिशा व तीव्रता का तुरंत संकेत देता है।"
+  },
+  {
+    "id": 20,
+    "topic": "Anemometer Speed Measurement",
+    "questionEn": "How does a cup anemometer measure wind speed?",
+    "questionHi": "कप एनीमोमीटर (Anemometer) पवन की गति को कैसे मापता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "It measures the temperature difference between shade and sunlight",
+        "textHi": "यह धूप और छाया के बीच तापमान अंतर मापता है"
+      },
+      {
+        "key": "b",
+        "textEn": "It collects rain in a calibrated plastic beaker",
+        "textHi": "यह एक बीकर में वर्षा का पानी इकट्ठा करता है"
+      },
+      {
+        "key": "c",
+        "textEn": "It measures the weight of mercury in a vacuum tube",
+        "textHi": "यह वैक्यूम ट्यूब में पारे का वजन मापता है"
+      },
+      {
+        "key": "d",
+        "textEn": "Metal cups rotate on a vertical shaft; a counter counts rotations to calculate speed in km/h",
+        "textHi": "धातु के कप एक ऊर्ध्वाधर शाफ्ट पर घूमते हैं; एक मीटर चक्रों की गिनती करके किमी/घंटा में गति मापता है"
+      }
+    ],
+    "correct": "d",
+    "explanationEn": "An anemometer has three or four metal cups rotating on a vertical shaft. The stronger the wind, the faster the rotation. An attached meter counts rotations and calculates wind speed in km/h.",
+    "explanationHi": "एनीमोमीटर में ३ या ४ धातु के कप एक ऊर्ध्वाधर धुरी पर घूमते हैं। जितनी तेज हवा होगी, कप उतनी तेजी से घूमेंगे। नीचे लगा मीटर चक्रों को गिनकर हवा की गति (किमी/घंटा) में बताता है।"
+  },
+  {
+    "id": 21,
+    "topic": "Humidity & Relative Humidity",
+    "questionEn": "What is relative humidity, and what is the typical relative humidity range in dry vs humid weather?",
+    "questionHi": "आपेक्षिक आर्द्रता (Relative Humidity) क्या है, और शुष्क बनाम नम मौसम में इसका सामान्य प्रतिशत कितना होता है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Dry weather: 90%; Humid weather: 10%",
+        "textHi": "शुष्क: 90%; नम: 10%"
+      },
+      {
+        "key": "b",
+        "textEn": "Dry weather: 20% to 40%; Humid weather: 60% to 80%",
+        "textHi": "शुष्क मौसम: 20% से 40%; नम (आर्द्र) मौसम: 60% से 80%"
+      },
+      {
+        "key": "c",
+        "textEn": "Relative humidity is always fixed at 50% globally",
+        "textHi": "आपेक्षिक आर्द्रता दुनिया भर में हमेशा 50% पर स्थिर रहती है"
+      },
+      {
+        "key": "d",
+        "textEn": "Dry weather: 0%; Humid weather: always 200%",
+        "textHi": "शुष्क: 0%; नम: सदैव 200%"
+      }
+    ],
+    "correct": "b",
+    "explanationEn": "Relative humidity rates the saturation of air with water vapour from 0% (completely dry air) to 100% (fully saturated). In practice, dry weather has 20% to 40% humidity, while humid weather falls between 60% and 80%.",
+    "explanationHi": "आपेक्षिक आर्द्रता हवा में जलवाष्प की संतृप्ति को 0% से 100% तक मापती है। व्यावहारिक रूप से शुष्क मौसम में आर्द्रता 20% से 40% और नम मौसम में 60% से 80% होती है।"
+  },
+  {
+    "id": 22,
+    "topic": "Evaporation & Humidity Comparison",
+    "questionEn": "If Delhi has 52% relative humidity and Kochi has 84% relative humidity at the same temperature (30°C), in which city will wet clothes dry faster and why?",
+    "questionHi": "यदि समान तापमान (30°C) पर दिल्ली में आपेक्षिक आर्द्रता 52% और कोच्चि में 84% हो, तो गीले कपड़े किस शहर में तेजी से सूखेंगे और क्यों?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "At exactly the same speed in both cities",
+        "textHi": "दोनों शहरों में बिल्कुल समान गति से"
+      },
+      {
+        "key": "b",
+        "textEn": "Neither; clothes never dry when humidity is above 50%",
+        "textHi": "किसी में नहीं; 50% से अधिक आर्द्रता पर कपड़े कभी नहीं सूखते"
+      },
+      {
+        "key": "c",
+        "textEn": "In Kochi, because seawater attracts moisture rapidly",
+        "textHi": "कोच्चि में, क्योंकि समुद्र का पानी नमी को तेजी से खींचता है"
+      },
+      {
+        "key": "d",
+        "textEn": "In Delhi, because lower humidity allows water to evaporate faster",
+        "textHi": "दिल्ली में, क्योंकि कम आर्द्रता होने के कारण वाष्पीकरण तेजी से होता है"
+      }
+    ],
+    "correct": "d",
+    "explanationEn": "Evaporation is faster when the surrounding air is drier. Since Delhi has lower relative humidity (52%) than Kochi (84%), the air in Delhi can absorb moisture more readily, causing wet clothes to dry faster.",
+    "explanationHi": "वाष्पीकरण तब तेजी से होता है जब आसपास की हवा सूखी (कम नम) हो। दिल्ली में आर्द्रता (52%) कोच्चि (84%) से कम है, इसलिए दिल्ली में गीले कपड़े तेजी से सूखेंगे और पसीना भी जल्दी सूखेगा।"
+  },
+  {
+    "id": 23,
+    "topic": "Hygrometer Applications",
+    "questionEn": "Which instrument measures humidity, and why is monitoring humidity critical for museums and food processing industries?",
+    "questionHi": "आर्द्रता मापने के लिए किस उपकरण का उपयोग किया जाता है, और संग्रहालयों तथा खाद्य प्रसंस्करण उद्योगों में इसकी निगरानी क्यों महत्वपूर्ण है?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Wind Vane; to ensure proper ventilation in cold storage",
+        "textHi": "विंड वेन; कोल्ड स्टोरेज में वेंटिलेशन सुनिश्चित करने के लिए"
+      },
+      {
+        "key": "b",
+        "textEn": "Barometer; to count visitors entering the building",
+        "textHi": "बैरोमीटर; भवन में प्रवेश करने वाले आगंतुकों की गिनती के लिए"
+      },
+      {
+        "key": "c",
+        "textEn": "Hygrometer; to prevent mold/spoilage in food and protect ancient artifacts from decay",
+        "textHi": "हाइग्रोमीटर (Hygrometer); भोजन को खराब होने से बचाने और प्राचीन कलाकृतियों को नष्ट होने से सुरक्षित रखने के लिए"
+      },
+      {
+        "key": "d",
+        "textEn": "Rain Gauge; to measure water leaks through roofs",
+        "textHi": "वर्षामापी; छत से पानी के रिसाव को मापने के लिए"
+      }
+    ],
+    "correct": "c",
+    "explanationEn": "A hygrometer measures humidity. Controlling humidity is crucial: food industries need precise moisture levels to prevent spoilage, and museums require dry, stable environments to preserve historical paintings and manuscripts.",
+    "explanationHi": "हाइग्रोमीटर (Hygrometer) आर्द्रता मापता है। खाद्य प्रसंस्करण में भोजन की गुणवत्ता और संग्रहालयों में प्राचीन पांडुलिपियों व कलाकृतियों को सड़ने या खराब होने से बचाने के लिए नमी का नियंत्रण आवश्यक होता है।"
+  },
+  {
+    "id": 24,
+    "topic": "Automated Weather Station (AWS) in Sikkim",
+    "questionEn": "In 2023, where did the National Disaster Management Authority (NDMA) set up an Automated Weather Station (AWS) at an altitude above 4,800 metres?",
+    "questionHi": "वर्ष 2023 में राष्ट्रीय आपदा प्रबंधन प्राधिकरण (NDMA) ने 4,800 मीटर से अधिक ऊँचाई पर एक स्वचालित मौसम स्टेशन (AWS) कहाँ स्थापित किया?",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Near the Thar Desert sand dunes in Jaisalmer",
+        "textHi": "जैसलमेर में थार रेगिस्तान के रेत के टीलों के पास"
+      },
+      {
+        "key": "b",
+        "textEn": "At the peak of Mount Kanchenjunga",
+        "textHi": "कंचनजंगा पर्वत की चोटी पर"
+      },
+      {
+        "key": "c",
+        "textEn": "At a glacial lake in Sikkim",
+        "textHi": "सिक्किम में एक हिमनद झील (Glacial Lake) पर"
+      },
+      {
+        "key": "d",
+        "textEn": "On the Marina Beach promenade in Chennai",
+        "textHi": "चेन्नई के मरीना बीच पर"
+      }
+    ],
+    "correct": "c",
+    "explanationEn": "In 2023, the NDMA set up an Automated Weather Station (AWS) at a glacial lake in Sikkim at over 4,800 metres altitude to provide real-time early warnings against extreme weather and Glacial Lake Outburst Floods (GLOFs).",
+    "explanationHi": "वर्ष 2023 में NDMA ने सिक्किम की एक हिमनद झील पर 4,800 मीटर से अधिक ऊँचाई पर AWS स्थापित किया, जिससे अत्यधिक मौसम और ग्लेशियर झील फटने की पूर्व चेतावनी मिल सके।"
+  },
+  {
+    "id": 25,
+    "topic": "IMD Weather Warning Color Codes",
+    "questionEn": "Match the IMD weather alert color codes with their correct official actions:",
+    "questionHi": "भारत मौसम विज्ञान विभाग (IMD) के चेतावनी रंग कोडों को उनकी सही आधिकारिक कार्रवाई से सुमेलित कीजिए:",
+    "options": [
+      {
+        "key": "a",
+        "textEn": "Red = No Warning, Green = Take Action, Yellow = Evacuate, Blue = Watch",
+        "textHi": "लाल = कोई चेतावनी नहीं, हरा = कार्रवाई करें, पीला = खाली करें, नीला = देखें"
+      },
+      {
+        "key": "b",
+        "textEn": "Yellow = Severe Cyclone, Orange = Pleasant breeze, Green = Heatwave, Red = Drought",
+        "textHi": "पीला = भीषण चक्रवात, नारंगी = सुहावनी हवा, हरा = लू, लाल = सूखा"
+      },
+      {
+        "key": "c",
+        "textEn": "Green = No Warning, Yellow = Watch (Be Updated), Orange = Alert (Be Prepared), Red = Warning (Take Action)",
+        "textHi": "हरा = कोई चेतावनी नहीं, पीला = निगरानी रखें (अपडेट रहें), नारंगी = सतर्क रहें (तैयार रहें), लाल = चेतावनी (कार्रवाई करें)"
+      },
+      {
+        "key": "d",
+        "textEn": "All colors represent the exact same level of mild daily weather advisory",
+        "textHi": "सभी रंग बिल्कुल एक समान स्तर की सामान्य मौसम सलाह दर्शाते हैं"
+      }
+    ],
+    "correct": "c",
+    "explanationEn": "The IMD uses a four-tier color alert system: Green (No Warning - normal), Yellow (Watch - be updated), Orange (Alert - be prepared for severe weather), and Red (Warning - take action to protect life and property).",
+    "explanationHi": "IMD चार रंगों का चेतावनी कोड उपयोग करता है: हरा = कोई चेतावनी नहीं, पीला = निगरानी रखें / अपडेट रहें (Watch), नारंगी = तैयार रहें (Alert), और लाल = तत्काल सुरक्षात्मक कार्रवाई करें (Warning - Take Action)।"
+  }
+];
+
+    let currentLang = 'both';
+    let userAnswers = {};
+
+    
+    // Live Fisher-Yates Option Shuffle
+    function shuffleAllOptions() {
+      const keys = ['a', 'b', 'c', 'd'];
+      questions.forEach(q => {
+        const correctOpt = q.options.find(o => o.key === q.correct);
+        const optsCopy = [...q.options];
+        for (let i = optsCopy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [optsCopy[i], optsCopy[j]] = [optsCopy[j], optsCopy[i]];
+        }
+        optsCopy.forEach((opt, idx) => {
+          if (opt === correctOpt) {
+            q.correct = keys[idx];
+          }
+          opt.key = keys[idx];
+        });
+        q.options = optsCopy;
+      });
+      userAnswers = {};
+      renderQuestions();
+      confetti({ particleCount: 25, spread: 50, origin: { y: 0.3 } });
+    }
+
+    function renderQuestions() {
+      const container = document.getElementById('questions-list');
+      container.innerHTML = '';
+
+      questions.forEach((q, index) => {
+        const qCard = document.createElement('div');
+        qCard.className = 'q-card';
+        qCard.id = `q-card-${q.id}`;
+
+        const isAnswered = userAnswers[q.id] !== undefined;
+        const selectedKey = userAnswers[q.id];
+
+        let optionsHtml = '';
+        q.options.forEach(opt => {
+          let btnClass = 'opt-btn';
+          if (isAnswered) {
+            btnClass += ' disabled';
+            if (opt.key === q.correct) {
+              btnClass += ' correct';
+            } else if (opt.key === selectedKey) {
+              btnClass += ' wrong';
+            }
+          }
+
+          const optText = currentLang === 'en' 
+            ? opt.textEn 
+            : currentLang === 'hi' 
+            ? opt.textHi 
+            : `<div>${opt.textEn}</div><div style="font-size: 0.85em; color: var(--text-muted); font-family: var(--font-devanagari); margin-top: 2px;">${opt.textHi}</div>`;
+
+          optionsHtml += `
+            <button class="${btnClass}" onclick="handleOptionClick(${q.id}, '${opt.key}')" ${isAnswered ? 'disabled' : ''}>
+              <span class="opt-key">${opt.key}</span>
+              <div style="flex: 1;">${optText}</div>
+            </button>
+          `;
+        });
+
+        const showEn = currentLang === 'en' || currentLang === 'both';
+        const showHi = currentLang === 'hi' || currentLang === 'both';
+
+        qCard.innerHTML = `
+          <div class="q-meta">
+            <span class="q-number-pill">Q${index + 1} / ${questions.length}</span>
+            <span class="q-topic">${q.topic}</span>
+          </div>
+          ${showEn ? `<div class="q-text-en">${q.questionEn}</div>` : ''}
+          ${showHi ? `<div class="q-text-hi">${q.questionHi}</div>` : ''}
+          <div class="options-grid">${optionsHtml}</div>
+          <div class="exp-box" id="exp-${q.id}" style="${isAnswered ? 'display: block;' : 'display: none;'}">
+            <strong>💡 NCERT Textbook Explanation & Facts:</strong>
+            ${showEn ? `<div class="exp-en">${q.explanationEn}</div>` : ''}
+            ${showHi ? `<div class="exp-hi">${q.explanationHi}</div>` : ''}
+          </div>
+        `;
+
+        container.appendChild(qCard);
+      });
+
+      updateHud();
+    }
+
+    function handleOptionClick(questionId, selectedKey) {
+      if (userAnswers[questionId] !== undefined) return;
+
+      userAnswers[questionId] = selectedKey;
+      const q = questions.find(item => item.id === questionId);
+
+      if (selectedKey === q.correct) {
+        confetti({
+          particleCount: 35,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      }
+
+      renderQuestions();
+    }
+
+    function updateHud() {
+      const total = questions.length;
+      const attempted = Object.keys(userAnswers).length;
+      let correct = 0;
+
+      questions.forEach(q => {
+        if (userAnswers[q.id] === q.correct) {
+          correct++;
+        }
+      });
+
+      const accuracy = attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
+
+      document.getElementById('hud-total').textContent = total;
+      document.getElementById('hud-attempted').textContent = attempted;
+      document.getElementById('hud-correct').textContent = correct;
+      document.getElementById('hud-accuracy').textContent = `${accuracy}%`;
+
+      if (attempted === total) {
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.getElementById('lang-both').classList.toggle('active', lang === 'both');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-hi').classList.toggle('active', lang === 'hi');
+      renderQuestions();
+    }
+
+    // Theme Toggle
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem('nextsem_theme') || 'dark';
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+      } else {
+        document.body.classList.remove('light-theme');
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Dark';
+      }
+    }
+
+    themeBtn.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-theme');
+      if (isLight) {
+        localStorage.setItem('nextsem_theme', 'light');
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+      } else {
+        localStorage.setItem('nextsem_theme', 'dark');
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Dark';
+      }
+    });
+
+    initTheme();
+    renderQuestions();
+  </script>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top" onclick="scrollToTop()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <span>Top</span>
+  </button>
+
+</body>
+</html>

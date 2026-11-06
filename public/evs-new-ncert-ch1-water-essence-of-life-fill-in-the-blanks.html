@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water — The Essence of Life: Complete Story Fill in the Blanks with Hints | New NCERT Class 5 EVS (eeev101.pdf)</title>
+  <meta name="description" content="Interactive line-by-line whole story fill in the blanks practice with hints and answers for New NCERT 2026-27 Class 5 EVS (Our Wondrous World / Life Around Us - Chapter 1: Water — The Essence of Life - eeev101.pdf).">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-cyan: #06b6d4;
+      --accent-sky: #38bdf8;
+      --accent-blue: #3b82f6;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at 50% 12%, rgba(56, 189, 248, 0.1) 0%, transparent 60%),
+                  radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .story-container {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 100px;
+      z-index: 1;
+    }
+
+    /* Hero Header */
+    .story-hero {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 28px 20px;
+      background: linear-gradient(180deg, rgba(12, 19, 40, 0.95) 0%, rgba(6, 12, 24, 0.95) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(16px);
+    }
+
+    .badge-capsule {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 16px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      margin-bottom: 12px;
+    }
+
+    .story-main-title {
+      font-size: 2.15rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .story-subtitle {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 740px;
+      margin: 0 auto 16px;
+    }
+
+    .nav-buttons-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: #38bdf8;
+      color: #7dd3fc;
+      transform: translateY(-1px);
+    }
+
+    .nav-btn.primary {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: #38bdf8;
+      color: #7dd3fc;
+    }
+
+    /* Sticky Control Toolbar */
+    .sticky-toolbar {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(12, 19, 40, 0.92);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 14px;
+      padding: 10px 18px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stats-info {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stats-highlight {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.14);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tool-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8;
+      color: #ffffff;
+    }
+
+    /* Story Card */
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 26px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .story-card:hover {
+      border-color: rgba(56, 189, 248, 0.45);
+      background: var(--bg-card-hover);
+    }
+
+    .card-top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .card-top-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fcd34d;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 11px;
+      border-radius: 9999px;
+      background: rgba(20, 184, 166, 0.15);
+      color: #2dd4bf;
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .story-text {
+      font-size: 1.05rem;
+      line-height: 2.25;
+      color: #f1f5f9;
+    }
+
+    /* Fill in the Blank Markup */
+    .blank-num {
+      display: inline-block;
+      font-weight: 800;
+      color: #f59e0b;
+      margin-right: 2px;
+      font-size: 0.95rem;
+    }
+
+    .blank-line {
+      display: inline-block;
+      min-width: 95px;
+      border-bottom: 2px dashed #64748b;
+      margin: 0 4px;
+      vertical-align: middle;
+      transition: border-color 0.2s;
+    }
+
+    /* Dropdowns */
+    details.hint-drop, details.ans-drop {
+      display: inline-block;
+      margin: 0 3px;
+      vertical-align: middle;
+    }
+
+    details.hint-drop > summary, details.ans-drop > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 2px 9px;
+      border-radius: 6px;
+      user-select: none;
+      transition: all 0.15s ease;
+      list-style: none;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.hint-drop > summary {
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+    details.hint-drop > summary:hover {
+      background: rgba(16, 185, 129, 0.28);
+      color: #6ee7b7;
+    }
+    details.hint-drop[open] > summary {
+      background: rgba(16, 185, 129, 0.35);
+      border-color: #34d399;
+    }
+
+    details.ans-drop > summary {
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+    }
+    details.ans-drop > summary:hover {
+      background: rgba(56, 189, 248, 0.28);
+      color: #7dd3fc;
+    }
+    details.ans-drop[open] > summary {
+      background: rgba(56, 189, 248, 0.35);
+      border-color: #38bdf8;
+    }
+
+    .reveal-pill {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      animation: pillFade 0.2s ease-in-out;
+    }
+
+    .hint-content {
+      background: rgba(16, 185, 129, 0.22);
+      color: #a7f3d0;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      font-weight: 500;
+    }
+
+    .ans-content {
+      background: rgba(245, 158, 11, 0.24);
+      color: #fef08a;
+      border: 1px solid rgba(245, 158, 11, 0.5);
+    }
+
+    @keyframes pillFade {
+      from { opacity: 0; transform: translateY(-2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    .story-footer-note {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      .story-main-title {
+        font-size: 1.6rem;
+      }
+      .story-card {
+        padding: 18px 16px;
+      }
+      .story-text {
+        font-size: 0.98rem;
+        line-height: 2.1;
+      }
+      .sticky-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .toolbar-actions {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="story-container">
+
+    <!-- Top Hero Banner -->
+    <header class="story-hero">
+      <div class="badge-capsule">💧 New NCERT 2026–27 • Class 5 EVS (eeev101.pdf)</div>
+      <h1 class="story-main-title">Water — The Essence of Life: Whole Story</h1>
+      <div class="story-subtitle">
+        Interactive line-by-line fill in the blanks story practice with dedicated hints & answers for every single blank in English!
+      </div>
+
+      <div class="nav-buttons-row">
+        <a href="/?class=5" class="nav-btn primary" title="Class 5 Subjects Dashboard">🎒 Class 5 Hub</a>
+        <a href="https://drive.google.com/file/d/1M44YVvmWpjRSdmuW8LZjkll0wU8zFo9f/view" target="_blank" class="nav-btn" title="Open Google Drive PDF">📄 View Drive PDF (eeev101)</a>
+        <a href="/evs-ch1-super-senses-fill-in-the-blanks.html" class="nav-btn" title="Super Senses Fill-ups">🌿 Super Senses Story</a>
+        <a href="/" class="nav-btn" title="Back to Home Dashboard">🏠 Home</a>
+      </div>
+    </header>
+
+    <!-- Global Control Toolbar -->
+    <div class="sticky-toolbar">
+      <div class="stats-info">
+        <span>📖 New NCERT Unit 1 Story</span>
+        <span class="stats-highlight">10 Sections • 55 Total Blanks</span>
+      </div>
+      <div class="toolbar-actions">
+        <button type="button" class="tool-btn" onclick="toggleAllHints(true)">💡 Show All Hints</button>
+        <button type="button" class="tool-btn" onclick="toggleAllAnswers(true)">👁️ Show All Answers</button>
+        <button type="button" class="tool-btn" onclick="hideAllDetails()">🔒 Hide All</button>
+      </div>
+    </div>
+
+    <!-- 1. Afreen & Jyoti: Raindrops and Ocean Water -->
+    <article class="story-card" id="section-1">
+      <div class="card-top-header">
+        <h2><span>1.</span> Afreen & Jyoti: Raindrops and Water on Earth</h2>
+        <span class="section-badge">NCERT Pages 3–4</span>
+      </div>
+      <div class="story-text">
+        It was raining outside. Afreen rushed to the window where 
+        <span class="blank-num">(1)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Name of the friend watching raindrops</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Jyoti</span></details>
+        was already watching tiny raindrops slide down the glass pane. Afreen wondered, "Where do you think all this water comes from, and where does it go?"
+        Although most of the Earth’s surface is covered with water, the majority of it is 
+        <span class="blank-num">(2)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Saline ocean water containing salt</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">salty (saltwater)</span></details>,
+        leaving only a very small amount of 
+        <span class="blank-num">(3)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Drinkable sweet water</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">freshwater</span></details>.
+        If all the water on Earth were placed in a 200 ml glass, the total usable freshwater would only be as much as in a single 
+        <span class="blank-num">(4)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Small cutlery spoon containing about 5 ml</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">teaspoon (5 ml)</span></details>!
+        In Gujarat, the vast flat 
+        <span class="blank-num">(5)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Fields where seawater evaporates to make edible salt</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">salt pans</span></details>
+        are used to dry seawater under the sun to collect edible salt. In dry Rajasthan, traditional earthen structures called 
+        <span class="blank-num">(6)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Small traditional community rainwater dams</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Johads</span></details>
+        are built to collect rainwater and recharge underground aquifers.
+      </div>
+    </article>
+
+    <!-- 2. Three Forms of Water & Wular Lake -->
+    <article class="story-card" id="section-2">
+      <div class="card-top-header">
+        <h2><span>2.</span> The Three Forms of Water & Asia’s Largest Lake</h2>
+        <span class="section-badge">NCERT Pages 5–6</span>
+      </div>
+      <div class="story-text">
+        Water exists naturally in three states: 
+        <span class="blank-num">(7)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Flowing state as in rain and rivers</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">liquid</span></details>,
+        <span class="blank-num">(8)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Hard frozen state as in ice and glaciers</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">solid</span></details>,
+        and 
+        <span class="blank-num">(9)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Gaseous state as in steam and water vapour</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">vapour (gas)</span></details>.
+        When you put ice cubes into a steel glass, tiny water droplets form on the outer surface of the glass due to 
+        <span class="blank-num">(10)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Water vapour in air cooling down</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">condensation of moisture</span></details>
+        from the surrounding air.
+        In Jammu and Kashmir, 
+        <span class="blank-num">(11)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Major natural freshwater lake in J&K</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Wular Lake</span></details>
+        is one of the largest freshwater lakes in Asia, helping to regulate river flow and prevent dangerous floods.
+      </div>
+    </article>
+
+    <!-- 3. The Water Cycle & The Swimming Fishing Cat -->
+    <article class="story-card" id="section-3">
+      <div class="card-top-header">
+        <h2><span>3.</span> The Water Cycle & Wetland Wildlife</h2>
+        <span class="section-badge">NCERT Pages 7–8</span>
+      </div>
+      <div class="story-text">
+        In nature, heat from the 
+        <span class="blank-num">(12)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Solar energy star in sky</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Sun</span></details>
+        causes liquid water from oceans, lakes, and rivers to evaporate and become 
+        <span class="blank-num">(13)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Invisible airborne water gas</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">water vapour</span></details>.
+        As water vapour rises high into the cool atmosphere, it condenses to form 
+        <span class="blank-num">(14)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">White fluffy sky masses</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">clouds</span></details>.
+        When water droplets in clouds become too heavy, they fall back to the ground as 
+        <span class="blank-num">(15)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Precipitation: liquid drops, frozen flakes or ice pellets</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">rain, snow, and hail</span></details>.
+        This continuous circular movement of water on Earth is known as the 
+        <span class="blank-num">(16)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Global hydrological cycle</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">water cycle</span></details>.
+        In India’s wetlands, the rare 
+        <span class="blank-num">(17)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Feline carnivore that dives for fish</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Fishing Cat</span></details>
+        has partially webbed paws, making it an extraordinary swimmer that dives into rivers to catch fish.
+      </div>
+    </article>
+
+    <!-- 4. Groundwater & The Floating National Park -->
+    <article class="story-card" id="section-4">
+      <div class="card-top-header">
+        <h2><span>4.</span> Groundwater Recharge & Floating Phumdis</h2>
+        <span class="section-badge">NCERT Pages 8–9</span>
+      </div>
+      <div class="story-text">
+        When rain falls on open ground, some water is soaked up by the soil and sinks deep through layers of sand and rocks. This water stored deep underground is called 
+        <span class="blank-num">(18)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Subsurface aquifer water</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">groundwater</span></details>.
+        Humans dig wells, 
+        <span class="blank-num">(19)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Deep motorized drilled pipe wells</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">borewells (tube wells)</span></details>,
+        and manual 
+        <span class="blank-num">(20)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Lever operated village water pump</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">handpumps</span></details>
+        to draw this clean water. In cities where large surfaces are covered with 
+        <span class="blank-num">(21)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Impermeable paved road material</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">concrete and asphalt</span></details>,
+        rainwater cannot seep through, which prevents groundwater recharge.
+        In Manipur, the world’s only floating national park is called 
+        <span class="blank-num">(22)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Famous sanctuary on Loktak Lake</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Keibul Lamjao National Park</span></details>,
+        famous for its floating vegetation islands called 
+        <span class="blank-num">(23)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Local Manipuri name for floating biomass</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">phumdis</span></details>
+        and the endangered dancing deer named 
+        <span class="blank-num">(24)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">State animal deer of Manipur</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Sangai deer</span></details>.
+      </div>
+    </article>
+
+    <!-- 5. How Rivers Flow: The Mustard Seed Experiment -->
+    <article class="story-card" id="section-5">
+      <div class="card-top-header">
+        <h2><span>5.</span> How Rivers Flow: The Mustard Seed Experiment</h2>
+        <span class="section-badge">NCERT Pages 10–11</span>
+      </div>
+      <div class="story-text">
+        A river usually begins its journey high up in the 
+        <span class="blank-num">(25)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">High elevated rocky terrain</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">mountains (glaciers)</span></details>
+        and flows downwards across the land. When you crumple newspaper sheets to create slopes and pour 
+        <span class="blank-num">(26)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Tiny round cooking seeds (sarson)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">mustard seeds</span></details>
+        from the top, the seeds roll along the lowest channels and gather in depressions. This proves that water always flows, curves, or stops according to the 
+        <span class="blank-num">(27)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Topography and natural valleys</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">shape of the land formations</span></details>.
+        The powerful force of flowing water can also carve valleys and change the 
+        <span class="blank-num">(28)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Physical landscape contour</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">shape of the land</span></details>.
+      </div>
+    </article>
+
+    <!-- 6. Water Champions: Hiware Bazar & The Luni River -->
+    <article class="story-card" id="section-6">
+      <div class="card-top-header">
+        <h2><span>6.</span> Water Heroes: Hiware Bazar & The Inland Luni River</h2>
+        <span class="section-badge">NCERT Page 11</span>
+      </div>
+      <div class="story-text">
+        In Maharashtra, the village of 
+        <span class="blank-num">(29)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Model water-positive village in Ahmednagar district</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Hiware Bazar</span></details>
+        is a world-famous model of community watershed management and rainwater harvesting that transformed a drought-stricken area into a prosperous, green haven.
+        Originating in the Aravalli Range in Rajasthan, the 
+        <span class="blank-num">(30)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Desert river of western India</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Luni river</span></details>
+        is unique because it is the only major Indian river that does not drain into an ocean or sea; instead, its water disappears into the marshy salt flats of the 
+        <span class="blank-num">(31)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Vast marshland desert in Gujarat</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Rann of Kutch</span></details>.
+      </div>
+    </article>
+
+    <!-- 7. River Lifelines of India & Jal Shakti Museum -->
+    <article class="story-card" id="section-7">
+      <div class="card-top-header">
+        <h2><span>7.</span> River Drainage Basins & Jal Shakti Museum</h2>
+        <span class="section-badge">NCERT Pages 12–13</span>
+      </div>
+      <div class="story-text">
+        In India, major rivers flow in two primary directions guided by mountain ranges: rivers like the Ganga, Brahmaputra, Mahanadi, Godavari, Krishna, and Kaveri drain eastwards into the 
+        <span class="blank-num">(32)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Eastern Indian sea basin</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Bay of Bengal</span></details>,
+        while west-flowing rivers like the Narmada and Tapi flow into the 
+        <span class="blank-num">(33)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Western Indian sea basin</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Arabian Sea</span></details>.
+        To celebrate India’s rich water heritage and foster citizen conservation, India’s first water museum, the 
+        <span class="blank-num">(34)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">National water museum ministry building</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Jal Shakti Museum</span></details>,
+        was established in 
+        <span class="blank-num">(35)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Capital city of India</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">New Delhi</span></details>.
+      </div>
+    </article>
+
+    <!-- 8. Life in Freshwater Ponds & Aquatic Creatures -->
+    <article class="story-card" id="section-8">
+      <div class="card-top-header">
+        <h2><span>8.</span> Life in Freshwater: Aquatic Creatures & Birds</h2>
+        <span class="section-badge">NCERT Pages 14–16</span>
+      </div>
+      <div class="story-text">
+        Freshwater bodies are teeming with diverse animal life:
+        The fast-flying 
+        <span class="blank-num">(36)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Four-winged insect hovering over ponds</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Dragonfly</span></details>
+        lays eggs near water and feeds voraciously on harmful mosquitoes.
+        The predatory 
+        <span class="blank-num">(37)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Underwater bug with pincers and breathing tail siphon</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Water Scorpion</span></details>
+        lives submerged underwater and breathes air using a specialized tail tube.
+        The wading bird called the 
+        <span class="blank-num">(38)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Long-legged standing bird (Bagula)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Pond Heron</span></details>
+        stands motionless on thin legs to spear fish with its sharp, pointed beak.
+        Ponds are also home to the harmless 
+        <span class="blank-num">(39)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Aquatic reptile feeding on frogs and small fish</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Water Snake</span></details>
+        and soft-shelled 
+        <span class="blank-num">(40)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Reptile with protective carapace</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Freshwater Turtles</span></details>.
+      </div>
+    </article>
+
+    <!-- 9. Aquatic Plants & The Waxy Leaf Mystery -->
+    <article class="story-card" id="section-9">
+      <div class="card-top-header">
+        <h2><span>9.</span> Types of Water Plants & The Waxy Waterproofing</h2>
+        <span class="section-badge">NCERT Pages 16–19</span>
+      </div>
+      <div class="story-text">
+        Aquatic plants are categorized by their adaptations:
+        Tall grass-like 
+        <span class="blank-num">(41)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Marsh edge marsh plants</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Reeds</span></details>
+        grow along pond edges.
+        Plants like the 
+        <span class="blank-num">(42)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">National flower of India (Kamal)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Lotus</span></details>
+        and 
+        <span class="blank-num">(43)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">White/pink floating flower with anchored root</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Water Lily</span></details>
+        are rooted in the mud bed while their leaves and flowers float on the surface.
+        The fast-spreading 
+        <span class="blank-num">(44)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Jalkumbhi / free-floating weed</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Water Hyacinth</span></details>
+        floats freely without any anchor to the pond bottom.
+        When you colour paper with a wax crayon and drop water on it, water beads up without soaking through. Similarly, floating aquatic leaves have a special 
+        <span class="blank-num">(45)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Water-repellent oily layer</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">waxy coating</span></details>
+        that makes them 
+        <span class="blank-num">(46)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Resistant to water penetration and rotting</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">waterproof</span></details>,
+        preventing waterlogging and decay!
+      </div>
+    </article>
+
+    <!-- 10. River Food Chain & Water Stewardship -->
+    <article class="story-card" id="section-10">
+      <div class="card-top-header">
+        <h2><span>10.</span> Who Eats Whom? River Food Chains & Water Wisdom</h2>
+        <span class="section-badge">NCERT Pages 19–20</span>
+      </div>
+      <div class="story-text">
+        In a river ecosystem, every living creature is interconnected in a 
+        <span class="blank-num">(47)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Trophic feeding sequence</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">food chain</span></details>.
+        Aquatic insects feed on algae and water plants; tiny fish eat insects; bigger fish and 
+        <span class="blank-num">(48)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Amphibians leaping from lotus leaves</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">frogs</span></details>
+        eat small fish; while birds like pond herons, 
+        <span class="blank-num">(49)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Large aquatic reptile predators (Magarmachh)</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">crocodiles</span></details>,
+        and river otters occupy higher feeding levels.
+        If any single link like small fish disappears, the entire 
+        <span class="blank-num">(50)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Ecological community balance</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">ecosystem</span></details>
+        collapses.
+        Freshwater is a 
+        <span class="blank-num">(51)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Scarce, non-infinite precious gift</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">limited and shared resource</span></details>.
+        We must conserve water by creating 
+        <span class="blank-num">(52)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Rooftop water collection methods</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">rainwater harvesting systems</span></details>,
+        protecting wetlands and open soil, and building 
+        <span class="blank-num">(53)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Village ponds and earthen percolation dams</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">soak pits and ponds</span></details>
+        to ensure that future generations inherit clean, flowing water for all 
+        <span class="blank-num">(54)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Humans, fauna, flora and trees</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">life on Earth</span></details>
+        because Water is truly the 
+        <span class="blank-num">(55)</span><span class="blank-line"></span>
+        <details class="hint-drop"><summary>💡 Hint</summary><span class="reveal-pill hint-content">Title of this chapter</span></details>
+        <details class="ans-drop"><summary>👁️ Ans</summary><span class="reveal-pill ans-content">Essence of Life</span></details>!
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="story-footer-note">
+      Nextsem Academy • NCERT Solutions & Interactive Study Aids • Curriculum Reference: Our Wondrous World (New NCERT Grade 5 EVS - eeev101.pdf)
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleAllHints(openState) {
+      document.querySelectorAll('details.hint-drop').forEach(function(el) {
+        el.open = openState;
+      });
+    }
+
+    function toggleAllAnswers(openState) {
+      document.querySelectorAll('details.ans-drop').forEach(function(el) {
+        el.open = openState;
+      });
+    }
+
+    function hideAllDetails() {
+      document.querySelectorAll('details.hint-drop, details.ans-drop').forEach(function(el) {
+        el.open = false;
+      });
+    }
+  </script>
+</body>
+</html>

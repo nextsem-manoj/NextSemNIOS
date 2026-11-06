@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 9 Science Ch 6: How Forces Affect Motion (बल और गति के नियम) | Comprehensive Bilingual Notes & MCQs</title>
+  <meta name="description" content="NCERT Class 9 Science (Exploration) Chapter 6: How Forces Affect Motion - Complete Bilingual Notes (English & Hindi), Newton's 3 Laws, Formulas, Solved Numericals & 25 Interactive MCQs.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3b;
+      --bg-inner: #111a36;
+      --border-color: rgba(6, 182, 212, 0.28);
+      --border-emerald: rgba(16, 185, 129, 0.35);
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-purple: #a855f7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-green-link: #04AA6D;
+      --tag-bg: rgba(6, 182, 212, 0.12);
+      --table-stripe: rgba(255, 255, 255, 0.03);
+    }
+
+    body.light-mode {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --bg-inner: #f1f5f9;
+      --border-color: rgba(6, 182, 212, 0.35);
+      --border-emerald: rgba(16, 185, 129, 0.45);
+      --accent-cyan: #0891b2;
+      --accent-emerald: #059669;
+      --accent-gold: #d97706;
+      --accent-rose: #e11d48;
+      --accent-purple: #9333ea;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-green-link: #038756;
+      --tag-bg: rgba(6, 182, 212, 0.1);
+      --table-stripe: rgba(0, 0, 0, 0.02);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.68;
+      padding-bottom: 90px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Sticky Brand Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(12, 19, 40, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 16px;
+    }
+    body.light-mode .top-nav {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .top-nav-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo-img {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--accent-cyan);
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: -0.2px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-sub {
+      font-size: 0.65rem;
+      color: var(--accent-cyan);
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-pill-wrap {
+      display: flex;
+      background: var(--bg-inner);
+      border: 1px solid var(--border-color);
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent-cyan);
+      color: #060c18;
+    }
+
+    .btn-theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-theme-toggle:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    /* Top Breadcrumb Bar */
+    .top-breadcrumb-bar {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 10px 16px 0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+    }
+    .top-breadcrumb-bar a {
+      color: var(--text-green-link);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+    .top-breadcrumb-bar .current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1060px;
+      margin: 16px auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.16) 0%, rgba(16, 185, 129, 0.1) 40%, rgba(12, 19, 40, 0.96) 100%);
+      border: 1.5px solid var(--border-color);
+      border-radius: 24px;
+      padding: 30px 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    }
+    body.light-mode .hero-banner {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(16, 185, 129, 0.08) 50%, #ffffff 100%);
+    }
+
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .hero-pill.gold {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-gold);
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+    .hero-pill.emerald {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    body.light-mode .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title .hindi-title {
+      font-size: 1.6rem;
+      color: var(--accent-gold);
+      display: block;
+      margin-top: 4px;
+      font-weight: 800;
+    }
+
+    .hero-desc {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 850px;
+      margin-top: 8px;
+    }
+
+    .quick-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .stat-icon {
+      font-size: 1.8rem;
+    }
+    .stat-value {
+      font-size: 1.18rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    /* Jump Navigation Bar */
+    .jump-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+    .jump-btn {
+      white-space: nowrap;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .jump-btn:hover {
+      border-color: var(--accent-cyan);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Section Cards */
+    .section-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    body.light-mode .section-card {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sec-badge {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-weight: 800;
+      background: var(--tag-bg);
+      color: var(--accent-cyan);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Notes Blocks & Bullet styling */
+    .note-block {
+      background: var(--bg-inner);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    body.light-mode .note-block {
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .block-heading {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bilingual-text {
+      margin-bottom: 10px;
+    }
+    .en-text {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      line-height: 1.68;
+    }
+    .hi-text {
+      font-size: 0.92rem;
+      color: var(--accent-gold);
+      margin-top: 6px;
+      line-height: 1.65;
+      font-weight: 500;
+    }
+
+    /* Comparison Tables */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+    th {
+      background: rgba(6, 182, 212, 0.14);
+      color: var(--accent-cyan);
+      padding: 12px 14px;
+      font-weight: 800;
+      border-bottom: 1px solid var(--border-color);
+    }
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+    }
+    body.light-mode td {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    tr:nth-child(even) {
+      background-color: var(--table-stripe);
+    }
+
+    /* Equation Boxes */
+    .equation-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border: 1.5px solid var(--accent-emerald);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+      margin: 16px 0;
+    }
+    .equation-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-emerald);
+      margin-bottom: 8px;
+    }
+    .equation-formula {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      padding: 10px 18px;
+      background: var(--bg-body);
+      border-radius: 12px;
+      display: inline-block;
+      border: 1.5px solid var(--border-emerald);
+    }
+    body.light-mode .equation-formula {
+      color: #0f172a;
+    }
+
+    /* Callout & Fact Boxes */
+    .callout-box {
+      border-radius: 14px;
+      padding: 16px;
+      margin: 14px 0;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .callout-box.info {
+      background: rgba(6, 182, 212, 0.1);
+      border-left: 4px solid var(--accent-cyan);
+    }
+    .callout-box.fact {
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 4px solid var(--accent-gold);
+    }
+    .callout-box.caution {
+      background: rgba(244, 63, 94, 0.1);
+      border-left: 4px solid var(--accent-rose);
+    }
+    .callout-box.success {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid var(--accent-emerald);
+    }
+    .callout-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .callout-content {
+      flex: 1;
+    }
+    .callout-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    /* Solved Numericals Accordion */
+    .qa-item {
+      background: var(--bg-inner);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .qa-header {
+      padding: 14px 18px;
+      font-weight: 800;
+      font-size: 0.98rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-card);
+    }
+    .qa-body {
+      padding: 16px 18px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    /* MCQs Section */
+    .quiz-card {
+      background: var(--bg-inner);
+      border: 1.5px solid var(--border-color);
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .quiz-q-num {
+      font-size: 0.76rem;
+      font-weight: 900;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .quiz-q-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 8px 0 14px;
+      color: var(--text-main);
+    }
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .quiz-opt-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 12px 16px;
+      text-align: left;
+      color: var(--text-main);
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .quiz-opt-btn:hover {
+      border-color: var(--accent-cyan);
+      background: var(--bg-card-hover);
+    }
+    .quiz-opt-btn.correct {
+      background: rgba(16, 185, 129, 0.25) !important;
+      border-color: var(--accent-emerald) !important;
+      color: #10b981 !important;
+      font-weight: 800;
+    }
+    .quiz-opt-btn.wrong {
+      background: rgba(244, 63, 94, 0.25) !important;
+      border-color: var(--accent-rose) !important;
+      color: #f43f5e !important;
+      font-weight: 800;
+    }
+    .quiz-feedback {
+      display: none;
+      margin-top: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    /* Bottom Fixed Nav for Mobile */
+    .mobile-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: rgba(12, 19, 40, 0.94);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 12px;
+    }
+    body.light-mode .mobile-bottom-nav {
+      background: rgba(255, 255, 255, 0.95);
+    }
+    .bottom-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      font-weight: 700;
+      gap: 2px;
+    }
+    .bottom-tab.active {
+      color: var(--accent-cyan);
+    }
+    .bottom-tab-icon {
+      font-size: 1.2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      .hero-title .hindi-title {
+        font-size: 1.3rem;
+      }
+      .section-card {
+        padding: 16px;
+      }
+      .top-nav {
+        padding: 8px 12px;
+      }
+    }
+
+    /* Language display modes */
+    body.lang-en-only .hi-text,
+    body.lang-en-only .hindi-title {
+      display: none !important;
+    }
+    body.lang-hi-only .en-text,
+    body.lang-hi-only .en-title {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="/" class="brand-box">
+        <img src="/image-20.png" alt="NextSem Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-title">Study Guide 📚</span>
+          <span class="brand-sub">NextSem Academy • Grade 9 Science (Exploration)</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-pill-wrap" title="Switch Study Language">
+          <button class="lang-btn active" id="btn-lang-bi" onclick="setLang('bilingual')">द्विभाषी</button>
+          <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="btn-lang-hi" onclick="setLang('hi')">हिन्दी</button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="btn-theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()" title="Switch Light/Dark Mode">
+          <span id="theme-icon">🌙</span> <span id="theme-text">Dark</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Complete Top Breadcrumb Navigation Bar -->
+  <div class="top-breadcrumb-bar">
+    <a href="/">🏠 Home</a>
+    <span class="sep">❯</span>
+    <a href="/?class=9">Class 9</a>
+    <span class="sep">❯</span>
+    <a href="/?class=9&subject=c9-science">Science (Exploration)</a>
+    <span class="sep">❯</span>
+    <span class="current">Chapter 6: How Forces Affect Motion (Notes & MCQs)</span>
+  </div>
+
+  <main class="container">
+
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="hero-badge-row">
+        <span class="hero-pill">NCERT Grade 9 Exploration</span>
+        <span class="hero-pill gold">Chapter 6 • iesc106.pdf</span>
+        <span class="hero-pill emerald">100% Comprehensive & Bilingual</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="en-title">How Forces Affect Motion</span>
+        <span class="hindi-title">बल गति को कैसे प्रभावित करते हैं (बल और गति के नियम)</span>
+      </h1>
+
+      <p class="hero-desc">
+        Comprehensive textbook-aligned study notes covering the concept of force, balanced & unbalanced forces, friction, Galileo's thought experiments, Newton's 3 Laws of Motion ($F=ma$, Inertia, Action-Reaction), momentum, and 25 interactive MCQs with step-by-step numericals.
+      </p>
+
+      <!-- Quick Metrics Grid -->
+      <div class="quick-stats-grid">
+        <div class="stat-card">
+          <span class="stat-icon">⚖️</span>
+          <div>
+            <div class="stat-value">3 Laws</div>
+            <div class="stat-label">Newton's Laws of Motion</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">📐</span>
+          <div>
+            <div class="stat-value">F = ma</div>
+            <div class="stat-label">1 N = 1 kg·m/s²</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">🌍</span>
+          <div>
+            <div class="stat-value">g = 9.8 m/s²</div>
+            <div class="stat-label">Earth's Gravitational Pull</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">🎯</span>
+          <div>
+            <div class="stat-value">25 MCQs</div>
+            <div class="stat-label">Instant Feedback & Solutions</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Jump Navigation -->
+    <div class="jump-nav">
+      <a href="#sec-concept" class="jump-btn">⚡ 1. Concept of Force</a>
+      <a href="#sec-balanced" class="jump-btn">⚖️ 2. Balanced & Unbalanced</a>
+      <a href="#sec-friction" class="jump-btn">🛑 3. Friction & Experiments</a>
+      <a href="#sec-first-law" class="jump-btn">🌀 4. Galileo & First Law</a>
+      <a href="#sec-second-law" class="jump-btn">🚀 5. Second Law & Momentum</a>
+      <a href="#sec-third-law" class="jump-btn">🔄 6. Third Law & Rockets</a>
+      <a href="#sec-system" class="jump-btn">🔗 7. System of Objects</a>
+      <a href="#sec-numericals" class="jump-btn">📝 8. Solved NCERT Numericals</a>
+      <a href="#sec-mcq" class="jump-btn">🎯 9. 25 Interactive MCQs</a>
+    </div>
+
+    <!-- MODULE 1: The Concept of Force -->
+    <section class="section-card" id="sec-concept">
+      <div class="section-header">
+        <h2 class="section-title"><span>⚡ 1. The Concept of Force (बल की अवधारणा)</span></h2>
+        <span class="sec-badge">NCERT Sec 6.1</span>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">📌 What is a Force? (बल क्या है?)</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• A <strong>force</strong> is a push or pull upon an object resulting from its interaction with another object.<br>
+          • <strong>Effects of Force:</strong><br>
+          &nbsp;&nbsp;1. Can set a stationary object into motion (e.g. kicking a resting football).<br>
+          &nbsp;&nbsp;2. Can change the speed of a moving object (e.g. pedalling harder speeds up a bicycle).<br>
+          &nbsp;&nbsp;3. Can change the direction of motion (e.g. a cricket bat striking a ball).<br>
+          &nbsp;&nbsp;4. Can change the shape or size of an object (e.g. squeezing a lemon or stretching a rubber band).<br>
+          • <strong>Vector Nature:</strong> Force has both <strong>magnitude</strong> and <strong>direction</strong>. If either changes, the net effect changes.</p>
+          <p class="hi-text">• <strong>बल (Force):</strong> किसी वस्तु पर लगने वाला धक्का या खिंचाव जो दूसरी वस्तु के साथ परस्पर क्रिया से उत्पन्न होता है।<br>
+          • <strong>बल के प्रभाव:</strong><br>
+          &nbsp;&nbsp;१. विराम अवस्था की वस्तु को गतिशील कर सकता है (जैसे गेंद को किक मारना)।<br>
+          &nbsp;&nbsp;२. गति की चाल बदल सकता है (साइकिल को तेज या धीमा करना)।<br>
+          &nbsp;&nbsp;३. गति की दिशा बदल सकता है (क्रिकेट बल्ले से गेंद की दिशा मोड़ना)।<br>
+          &nbsp;&nbsp;४. वस्तु की आकृति बदल सकता है (नींबू निचोड़ना या रबड़ बैंड खींचना)।<br>
+          • <strong>सदिश राशि:</strong> बल में <strong>परिमाण</strong> और <strong>दिशा</strong> दोनों होते हैं।</p>
+        </div>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">📏 SI Unit & Measuring Force</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>SI Unit:</strong> The SI unit of force is the <strong>newton</strong> (symbol: <strong>N</strong>).<br>
+          • <em>Naming convention rule:</em> Full name begins with lowercase ('newton'), while the symbol is capitalized ('N').<br>
+          • <strong>Measuring Tool:</strong> A <strong>spring balance</strong> measures the magnitude of a force based on the extension of a calibrated coiled spring.<br>
+          • <strong>Force Scales:</strong> In everyday life, the smallest force we directly feel is $\sim 10^{-3}\text{ N}$ (millinewton, like a light touch). Scientists can measure forces down to $10^{-24}\text{ N}$ (yoctonewtons)!</p>
+          <p class="hi-text">• <strong>SI मात्रक:</strong> बल का SI मात्रक <strong>न्यूटन</strong> (प्रतीक: <strong>N</strong>) है।<br>
+          • <strong>मापन यंत्र:</strong> <strong>कमानीदार तुला (Spring Balance)</strong> का उपयोग बल और भार ($W=mg$) को मापने के लिए किया जाता है।<br>
+          • दैनिक जीवन में हम $10^{-3}\text{ N}$ (मिली-न्यूटन) तक का स्पर्श महसूस कर सकते हैं, जबकि वैज्ञानिक $10^{-24}\text{ N}$ (योक्टो-न्यूटन) तक माप सकते हैं।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 2: Balanced and Unbalanced Forces -->
+    <section class="section-card" id="sec-balanced">
+      <div class="section-header">
+        <h2 class="section-title"><span>⚖️ 2. Balanced & Unbalanced Forces (संतुलित एवं असंतुलित बल)</span></h2>
+        <span class="sec-badge">NCERT Sec 6.2</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature (लक्षण)</th>
+              <th>Balanced Forces (संतुलित बल)</th>
+              <th>Unbalanced Forces (असंतुलित बल)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Net Force ($F_{net}$)</strong></td>
+              <td>$\Sigma F = 0$ (परिणामी बल शून्य)</td>
+              <td>$\Sigma F \neq 0$ (परिणामी बल अशून्य)</td>
+            </tr>
+            <tr>
+              <td><strong>State of Motion</strong></td>
+              <td>No change. Object at rest stays at rest; moving object maintains constant velocity.</td>
+              <td>Produces <strong>acceleration</strong> or deceleration. Changes speed and/or direction.</td>
+            </tr>
+            <tr>
+              <td><strong>Classic Example</strong></td>
+              <td>Tug of war when both teams pull with equal force; block resting on table (Gravity = Normal force).</td>
+              <td>Tug of war when one team pulls harder; car accelerating when forward engine force exceeds friction.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">🧮 Calculating Net Force ($F_{net}$)</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>Forces in Same Direction:</strong> Magnitudes add together: $F_{net} = F_1 + F_2$ (in that direction).<br>
+          • <strong>Forces in Opposite Directions:</strong> Magnitudes subtract: $F_{net} = |F_1 - F_2|$ (acting towards the larger force).<br>
+          • <em>Example 6.1:</em> If $10\text{ N}$ acts to the right and $6\text{ N}$ acts to the left, $F_{net} = 10 - 6 = 4\text{ N}$ to the right.</p>
+          <p class="hi-text">• <strong>एक ही दिशा में बल:</strong> परिणामी बल दोनों बलों का योग होता है ($F_{net} = F_1 + F_2$)।<br>
+          • <strong>विपरीत दिशा में बल:</strong> परिणामी बल बड़े बल में से छोटे बल का अंतर होता है ($F_{net} = F_1 - F_2$) और दिशा बड़े बल की ओर होती है।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 3: The Force of Friction -->
+    <section class="section-card" id="sec-friction">
+      <div class="section-header">
+        <h2 class="section-title"><span>🛑 3. The Force of Friction (घर्षण बल: अनदेखा पर सर्वत्र विद्यमान)</span></h2>
+        <span class="sec-badge">NCERT Sec 6.3 & Labs</span>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">🔍 Characteristics of Friction</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>Direction:</strong> Always acts <strong>opposite</strong> to the direction of motion or impending motion between contact surfaces.<br>
+          • <strong>Why moving objects slow down:</strong> When you stop pedalling a bicycle or pushing a box, the force of friction opposes motion and brings the object to rest.<br>
+          • <strong>Crucial takeaway:</strong> In the real world, continuous force is often required only to counter friction, NOT because motion naturally dies out!</p>
+          <p class="hi-text">• <strong>दिशा:</strong> घर्षण बल सदैव संपर्क तलों के बीच गति (या गति के प्रयास) की <strong>विपरीत दिशा</strong> में कार्य करता है।<br>
+          • वास्तविक दुनिया में किसी गतिशील वस्तु पर लगातार बल केवल इसलिए लगाना पड़ता है ताकि घर्षण बल को निष्प्रभावी किया जा सके!</p>
+        </div>
+      </div>
+
+      <!-- Activities 6.1 and 6.2 -->
+      <div class="note-block">
+        <h3 class="block-heading">🧪 Textbook Experiments: Activities 6.1 & 6.2</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>Activity 6.1 (Coin Stack on Surfaces):</strong> Stacking 4 coins and launching with a rubber band across different surfaces. On smooth surfaces (polished marble / tiles), the coins travel much farther and decelerate slowly. On rough cement or unfinished wood, they stop rapidly.<br>
+          • <strong>Activity 6.2 (Spring Balance Pulling Block):</strong> Pulling a wooden block with a spring balance until it just begins to move. The reading measures the force of friction. Smoother surfaces register lower spring balance readings.</p>
+          <p class="hi-text">• <strong>क्रियाकलाप 6.1 (सिक्कों की ढेरी):</strong> चिकने फर्श (पॉलिश मार्बल/टाइल्स) पर सिक्के अधिक दूरी तय करते हैं क्योंकि घर्षण कम होता है। खुरदरी सतह पर घर्षण अधिक होने से वे तुरंत रुक जाते हैं।<br>
+          • <strong>क्रियाकलाप 6.2 (कमानीदार तुला):</strong> तुला का पाठ्यांक घर्षण बल का परिमाण दर्शाता है। चिकनी सतहों पर पाठ्यांक कम आता है।</p>
+        </div>
+      </div>
+
+      <!-- Science & Society: Walking -->
+      <div class="callout-box success">
+        <span class="callout-icon">👟</span>
+        <div class="callout-content">
+          <div class="callout-title">Science & Society: Why Friction Helps Us Walk!</div>
+          <p class="en-text">When you walk or run, your feet push the ground <strong>backwards</strong>. The ground applies an equal and opposite force of friction on your feet in the <strong>forward direction</strong>! Without friction (e.g. on wet polished marble or ice), your foot slips backward and you fall. Grooves on shoe soles and treads on vehicle tyres exist specifically to increase friction.</p>
+          <p class="hi-text">चलते समय हमारे पैर जमीन को <strong>पीछे की ओर</strong> धकेलते हैं। जमीन की प्रतिक्रिया के रूप में घर्षण बल हमें <strong>आगे की ओर</strong> धकेलता है! यदि घर्षण न हो (जैसे गीले मार्बल या बर्फ पर), तो पैर पीछे फिसल जाता है और हम गिर जाते हैं।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 4: Galileo & First Law of Motion -->
+    <section class="section-card" id="sec-first-law">
+      <div class="section-header">
+        <h2 class="section-title"><span>🌀 4. Galileo's Thought Experiment & Newton's First Law</span></h2>
+        <span class="sec-badge">NCERT Sec 6.4</span>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">💡 Galileo's Radical Breakthrough (गैलिलियो का क्रांतिकारी विचार)</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• For centuries (since Aristotle), thinkers mistakenly believed that a continuous force is required to keep an object in uniform motion.<br>
+          • In the 17th century, <strong>Galileo Galilei</strong> performed thought experiments on inclined planes and deduced: <em>If all friction and impediments are removed, a body moving on a horizontal plane will continue to move indefinitely with constant velocity without any force!</em><br>
+          • <strong>Inertia (जड़त्व):</strong> The inherent property of all bodies to resist any change in their state of rest or uniform motion. Mass is the measure of inertia.</p>
+          <p class="hi-text">• सदियों तक अरस्तू की यह गलत धारणा रही कि वस्तु को निरंतर गतिशील रखने के लिए बल आवश्यक है।<br>
+          • 17वीं शताब्दी में <strong>गैलिलियो</strong> ने निष्कर्ष निकाला कि यदि सभी प्रकार के अवरोध और घर्षण हटा दिए जाएं, तो क्षैतिज तल पर गतिशील वस्तु अनिश्चित काल तक नियत वेग से चलती रहेगी!<br>
+          • <strong>जड़त्व:</strong> किसी वस्तु का वह प्राकृतिक गुण जिसके कारण वह अपनी विराम अवस्था या एकसमान गति की अवस्था में परिवर्तन का विरोध करती है। द्रव्यमान जड़त्व की माप है।</p>
+        </div>
+      </div>
+
+      <!-- Law Statement Card -->
+      <div class="equation-card">
+        <div class="equation-title">📜 Newton's First Law of Motion (Law of Inertia)</div>
+        <div class="equation-formula">
+          An object at rest remains at rest, and an object in motion continues to move with a constant velocity, unless acted upon by a net external force.
+        </div>
+        <p style="margin-top: 8px; font-size: 0.88rem; color: var(--text-muted);">
+          यदि किसी वस्तु पर कोई नेट बाह्य बल नहीं लग रहा है ($F_{net} = 0$), तो उसका त्वरण शून्य होगा ($a = 0$)।
+        </p>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">📈 Graphs when Net Force is Zero ($F_{net} = 0$)</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>Case 1: Object at Rest:</strong> Position-time graph is a horizontal line ($x = \text{const}$); Velocity-time graph is along the time axis ($v = 0$).<br>
+          • <strong>Case 2: Object in Uniform Motion:</strong> Position-time graph is a straight inclined line ($x = vt$); Velocity-time graph is a horizontal line parallel to the time axis ($v = \text{const}$).</p>
+          <p class="hi-text">• <strong>विराम अवस्था:</strong> स्थिति-समय ग्राफ समय अक्ष के समानांतर क्षैतिज रेखा होती है ($v = 0$)।<br>
+          • <strong>एकसमान गति:</strong> स्थिति-समय ग्राफ एक सरल ढलान वाली रेखा होती है, और वेग-समय ग्राफ समय अक्ष के समानांतर क्षैतिज रेखा होती है ($v = \text{नियत}$)।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 5: Newton's Second Law & Momentum -->
+    <section class="section-card" id="sec-second-law">
+      <div class="section-header">
+        <h2 class="section-title"><span>🚀 5. Newton's Second Law of Motion & Momentum ($F = ma$)</span></h2>
+        <span class="sec-badge">NCERT Sec 6.5</span>
+      </div>
+
+      <!-- Second Law Statement -->
+      <div class="equation-card">
+        <div class="equation-title">⚡ Newton's Second Law Formula</div>
+        <div class="equation-formula">
+          F = ma &nbsp;&nbsp;|&nbsp;&nbsp; a = F / m &nbsp;&nbsp;|&nbsp;&nbsp; 1 N = 1 kg · m s⁻²
+        </div>
+        <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-muted);">
+          नेट बल = द्रव्यमान × त्वरण | किसी वस्तु का त्वरण उस पर लगे नेट बल के समानुपाती तथा द्रव्यमान के व्युत्क्रमानुपाती होता है।
+        </p>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">⚖️ What does 1 Newton of Force Feel Like?</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>Definition:</strong> One newton ($1\text{ N}$) is the force that produces an acceleration of $1\text{ m/s}^2$ on an object of mass $1\text{ kg}$.<br>
+          • <strong>Human Intuition:</strong> If you hold an apple or a $100\text{ g}$ mass in your palm, the upward force exerted by your palm against gravity is approximately **$1\text{ N}$** ($F = mg = 0.1\text{ kg} \times 9.8\text{ m/s}^2 \approx 1\text{ N}$).</p>
+          <p class="hi-text">• <strong>1 न्यूटन की परिभाषा:</strong> वह बल जो $1\text{ kg}$ द्रव्यमान की वस्तु में $1\text{ m/s}^2$ का त्वरण उत्पन्न करे।<br>
+          • <strong>अनुभव:</strong> यदि आप अपनी हथेली पर $100\text{ ग्राम}$ का भार (जैसे मध्यम सेब) रखते हैं, तो आपकी हथेली द्वारा लगाया गया बल लगभग **$1\text{ N}$** होता है।</p>
+        </div>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">💥 Momentum & Impulse: Real-World Applications</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>Momentum ($p$):</strong> The product of mass and velocity: $\vec{p} = m\vec{v}$. SI unit: $\text{kg}\cdot\text{m/s}$.<br>
+          • <strong>Rate of Change of Momentum:</strong> $F = \frac{\Delta p}{\Delta t} = \frac{m(v - u)}{t}$.<br>
+          • <strong>Why Fielders Pull Hands Backwards:</strong> Gradually pulling hands backwards while catching a fast cricket ball increases the contact time $\Delta t$. A larger $\Delta t$ reduces the acceleration ($a = \Delta v / \Delta t$) and drastically reduces the impact force $F$ on the hands, preventing severe injury!<br>
+          • <strong>Vehicle Airbags & Seatbelts:</strong> In a crash, airbags inflate so passenger's head hits a soft cushion, extending deceleration time $\Delta t$ and minimizing lethal force on the skull and chest.<br>
+          • <strong>High Jump Mats:</strong> Landing on foam cushions/sand increases time of impact to reduce impact force on joints.<br>
+          • <strong>Cracking a Coconut:</strong> Bringing it down fast on hard rock stops it in a fraction of a millisecond ($\Delta t \to 0$), producing an enormous force that instantly shatters the shell!</p>
+          <p class="hi-text">• <strong>संवेग ($p$):</strong> द्रव्यमान और वेग का गुणनफल ($p = mv$)।<br>
+          • <strong>क्रिकेट में कैच लेते समय हाथ पीछे खींचना:</strong> हाथ पीछे करने से संवेग परिवर्तन में लगा समय ($\Delta t$) बढ़ जाता है, जिससे त्वरण और बल ($F$) का मान बहुत कम हो जाता है तथा हाथों में चोट नहीं लगती।<br>
+          • <strong>गाड़ियों में एयरबैग:</strong> टक्कर के समय रुकने का समय बढ़ाकर सिर और छाती पर लगने वाले घातक बल को कम करते हैं।<br>
+          • <strong>एक झटके में नारियल फोड़ना:</strong> बहुत कम समय में वेग शून्य होने से विशाल बल उत्पन्न होता है जो खोल को तोड़ देता है।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 6: Newton's Third Law of Motion -->
+    <section class="section-card" id="sec-third-law">
+      <div class="section-header">
+        <h2 class="section-title"><span>🔄 6. Newton's Third Law of Motion (क्रिया-प्रतिक्रिया का नियम)</span></h2>
+        <span class="sec-badge">NCERT Sec 6.6</span>
+      </div>
+
+      <!-- Third Law Statement Card -->
+      <div class="equation-card">
+        <div class="equation-title">🔄 Newton's Third Law (Action-Reaction Principle)</div>
+        <div class="equation-formula">
+          F₁₂ = – F₂₁ &nbsp;&nbsp;|&nbsp;&nbsp; Action and Reaction are Equal and Opposite
+        </div>
+        <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-muted);">
+          जब भी कोई वस्तु किसी दूसरी वस्तु पर बल लगाती है, तो दूसरी वस्तु भी उसी क्षण पहली वस्तु पर बराबर और विपरीत दिशा में बल लगाती है।
+        </p>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">⚠️ Golden Rule: Action and Reaction Act on TWO DIFFERENT Objects!</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• <strong>Why don't they cancel each other?</strong> Action and reaction forces act on **two different interacting bodies**, so they CANNOT cancel each other! (Forces only cancel when equal and opposite forces act on the *same* object).<br>
+          • <strong>Equal forces do NOT mean equal accelerations:</strong> Since $a = F/m$, the lighter object accelerates much more than the heavier object!</p>
+          <p class="hi-text">• <strong>वे एक-दूसरे को निरस्त क्यों नहीं करते?</strong> क्योंकि क्रिया और प्रतिक्रिया बल **दो अलग-अलग वस्तुओं** पर लगते हैं! (बल केवल तभी निरस्त होते हैं जब वे एक ही वस्तु पर लगें)।<br>
+          • समान बल होने पर भी त्वरण अलग-अलग हो सकते हैं, क्योंकि जिस वस्तु का द्रव्यमान कम होगा, उसका त्वरण अधिक होगा ($a = F/m$)।</p>
+        </div>
+      </div>
+
+      <!-- Everyday Illustrations -->
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Situation (स्थिति)</th>
+              <th>Action Force (क्रिया बल)</th>
+              <th>Reaction Force (प्रतिक्रिया बल)</th>
+              <th>Result / Acceleration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Rowing a Canoe / Boat</strong></td>
+              <td>Paddle pushes water <strong>backwards</strong>.</td>
+              <td>Water pushes paddle & boat <strong>forward</strong>.</td>
+              <td>Boat accelerates forward through water.</td>
+            </tr>
+            <tr>
+              <td><strong>Firing a Gun & Bullet</strong></td>
+              <td>Gun pushes bullet forward ($F$).</td>
+              <td>Bullet pushes gun backward ($F$).</td>
+              <td>Bullet moves fast ($m_{bullet}$ is small); Gun recoils slowly ($m_{gun}$ is large).</td>
+            </tr>
+            <tr>
+              <td><strong>Rocket Launch (Chandrayaan-3)</strong></td>
+              <td>Engine expels hot gas <strong>downwards</strong>.</td>
+              <td>Exhaust gas pushes rocket <strong>upwards</strong>.</td>
+              <td>Rocket lifts off; retro-firing slows lander for soft landing.</td>
+            </tr>
+            <tr>
+              <td><strong>Sailor Jumping from Boat</strong></td>
+              <td>Sailor's foot pushes boat <strong>backwards</strong>.</td>
+              <td>Boat pushes sailor <strong>forward onto shore</strong>.</td>
+              <td>Sailor lands on shore while boat floats backward.</td>
+            </tr>
+            <tr>
+              <td><strong>Earth and Falling Fruit</strong></td>
+              <td>Earth pulls fruit downward ($F_g$).</td>
+              <td>Fruit pulls Earth upward with equal $F_g$!</td>
+              <td>Fruit accelerates visibly ($9.8\text{ m/s}^2$); Earth's acceleration is undetectable due to massive mass ($6 \times 10^{24}\text{ kg}$).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- MODULE 7: Forces on a System of Objects -->
+    <section class="section-card" id="sec-system">
+      <div class="section-header">
+        <h2 class="section-title"><span>🔗 7. Forces Acting on a System of Objects (पिंडों का निकाय)</span></h2>
+        <span class="sec-badge">NCERT Sec 6.7</span>
+      </div>
+
+      <div class="note-block">
+        <h3 class="block-heading">📦 Connected Masses & Internal vs. External Forces</h3>
+        <div class="bilingual-text">
+          <p class="en-text">• When two boxes $m_1$ and $m_2$ are connected by a string and pulled by external force $F$:<br>
+          • <strong>Internal Forces (Tension $T$):</strong> Forces between the two boxes cancel each other within the system.<br>
+          • <strong>External Force ($F$):</strong> Acts on the entire system from the outside.<br>
+          • <strong>System Acceleration:</strong> $a = \frac{F}{m_1 + m_2}$.<br>
+          • Treating connected bodies as a single combined system greatly simplifies complex mechanical problems!</p>
+          <p class="hi-text">• जब दो डिब्बे $m_1$ और $m_2$ एक डोरी से जुड़े हों और उन पर बाह्य बल $F$ लगाया जाए:<br>
+          • डोरी का तनाव ($T$) आंतरिक बल है जो निकाय के भीतर संतुलित हो जाता है।<br>
+          • निकाय का कुल त्वरण: $a = \frac{F}{m_1 + m_2}$ होता है।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 8: Step-by-Step Solved NCERT Textbook Numericals -->
+    <section class="section-card" id="sec-numericals">
+      <div class="section-header">
+        <h2 class="section-title"><span>📝 8. Step-by-Step Solved NCERT Textbook Numericals</span></h2>
+        <span class="sec-badge">100% Verified Solutions</span>
+      </div>
+
+      <!-- Problem 1: Snake Boat Race -->
+      <div class="qa-item">
+        <div class="qa-header" onclick="toggleQa(this)">
+          <span>Q4. Snake Boat Race (Vallam Kali): 100 oarsmen. 95 row forward, 5 mistakenly row backward. Each applies 200 N. Net force?</span>
+          <span>▼</span>
+        </div>
+        <div class="qa-body">
+          <p class="en-text"><strong>Given:</strong> Forward oarsmen $n_1 = 95$, Backward oarsmen $n_2 = 5$, Force per oarsman $F_0 = 200\text{ N}$.<br>
+          <strong>Formula:</strong> $F_{net} = (n_1 - n_2) \times F_0$<br>
+          <strong>Calculation:</strong> $F_{net} = (95 - 5) \times 200\text{ N} = 90 \times 200 = \mathbf{18,000\text{ N}}$ (in the forward direction).<br>
+          <em>Key Takeaway:</em> Opposing forces subtract from the net propulsive forward force.</p>
+        </div>
+      </div>
+
+      <!-- Problem 2: Velocity-Time Graph -->
+      <div class="qa-item">
+        <div class="qa-header" onclick="toggleQa(this)">
+          <span>Q11. Object of mass 10 kg moving along a straight line. From v-t graph (Fig 6.41: u = 0, v = 20 m/s at t = 4 s). Calculate force.</span>
+          <span>▼</span>
+        </div>
+        <div class="qa-body">
+          <p class="en-text"><strong>Given:</strong> $m = 10\text{ kg}$, $u = 0$, $v = 20\text{ m/s}$, $t = 4\text{ s}$.<br>
+          <strong>Acceleration:</strong> $a = \frac{v - u}{t} = \frac{20 - 0}{4} = 5\text{ m/s}^2$.<br>
+          <strong>Force:</strong> $F = ma = 10\text{ kg} \times 5\text{ m/s}^2 = \mathbf{50\text{ N}}$.</p>
+        </div>
+      </div>
+
+      <!-- Problem 3: Bullet Penetration -->
+      <div class="qa-item">
+        <div class="qa-header" onclick="toggleQa(this)">
+          <span>Q12. Bullet of mass 50 g moving with 100 m/s penetrates 50 cm into wooden block before stopping. Estimate stopping force.</span>
+          <span>▼</span>
+        </div>
+        <div class="qa-body">
+          <p class="en-text"><strong>Given:</strong> $m = 50\text{ g} = 0.05\text{ kg}$, $u = 100\text{ m/s}$, $v = 0$, $s = 50\text{ cm} = 0.5\text{ m}$.<br>
+          <strong>Kinematic Equation:</strong> $v^2 - u^2 = 2as \implies 0 - (100)^2 = 2 \times a \times 0.5 \implies -10000 = 1.0 \times a \implies a = -10,000\text{ m/s}^2$.<br>
+          <strong>Stopping Force:</strong> $F = ma = 0.05\text{ kg} \times (-10,000\text{ m/s}^2) = \mathbf{-500\text{ N}}$ (magnitude is $500\text{ N}$ opposing motion).</p>
+        </div>
+      </div>
+
+      <!-- Problem 4: Football Penalty Shot -->
+      <div class="qa-item">
+        <div class="qa-header" onclick="toggleQa(this)">
+          <span>Q13. Footballer kicks ball of mass 0.4 kg to a speed of 108 km/h with 800 N force. Calculate contact time.</span>
+          <span>▼</span>
+        </div>
+        <div class="qa-body">
+          <p class="en-text"><strong>Given:</strong> $m = 0.4\text{ kg}$, $u = 0$, $v = 108\text{ km/h} = 108 \times \frac{5}{18} = 30\text{ m/s}$, $F = 800\text{ N}$.<br>
+          <strong>Impulse Formula:</strong> $F \times \Delta t = m(v - u) \implies 800 \times \Delta t = 0.4 \times (30 - 0) = 12\text{ N}\cdot\text{s}$.<br>
+          <strong>Contact Time:</strong> $\Delta t = \frac{12}{800} = \mathbf{0.015\text{ s}}$ (or $15\text{ milliseconds}$).</p>
+        </div>
+      </div>
+
+      <!-- Problem 5: Rough Patch Distance -->
+      <div class="qa-item">
+        <div class="qa-header" onclick="toggleQa(this)">
+          <span>Q14. Mass 2 kg moving at 10 m/s encounters rough patch with friction 7 N plus additional opposing force 3 N. Distance before stopping?</span>
+          <span>▼</span>
+        </div>
+        <div class="qa-body">
+          <p class="en-text"><strong>Given:</strong> $m = 2\text{ kg}$, $u = 10\text{ m/s}$, $v = 0$, Total opposing force $F_{opp} = 7\text{ N} + 3\text{ N} = 10\text{ N}$.<br>
+          <strong>Retardation:</strong> $a = -\frac{F_{opp}}{m} = -\frac{10}{2} = -5\text{ m/s}^2$.<br>
+          <strong>Stopping Distance:</strong> $v^2 - u^2 = 2as \implies 0 - (10)^2 = 2(-5)s \implies -100 = -10s \implies s = \mathbf{10\text{ metres}}$.</p>
+        </div>
+      </div>
+
+      <!-- Problem 6: Tractor Pulling Combined Harrow & Trolley -->
+      <div class="qa-item">
+        <div class="qa-header" onclick="toggleQa(this)">
+          <span>Q15. Tractor pulls harrow (m₁) with force F producing acceleration a₁. Pulls trolley (m₂) with force F producing a₂. Acceleration when pulling both?</span>
+          <span>▼</span>
+        </div>
+        <div class="qa-body">
+          <p class="en-text"><strong>From Second Law:</strong> $m_1 = \frac{F}{a_1}$ and $m_2 = \frac{F}{a_2}$.<br>
+          <strong>Combined Mass:</strong> $M = m_1 + m_2 = \frac{F}{a_1} + \frac{F}{a_2} = F\left(\frac{a_1 + a_2}{a_1 a_2}\right)$.<br>
+          <strong>Resulting Acceleration:</strong> $a = \frac{F}{M} = \frac{F}{F\left(\frac{a_1 + a_2}{a_1 a_2}\right)} = \mathbf{\frac{a_1 a_2}{a_1 + a_2}}$.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 9: 25 Comprehensive Interactive MCQs -->
+    <section class="section-card" id="sec-mcq">
+      <div class="section-header">
+        <h2 class="section-title"><span>🎯 9. 25 Comprehensive Interactive MCQs (ज्ञान परीक्षण)</span></h2>
+        <span class="sec-badge">Instant Evaluation & Explanations</span>
+      </div>
+
+      <!-- MCQ 1 -->
+      <div class="quiz-card" data-correct="2">
+        <span class="quiz-q-num">Question 1 of 25</span>
+        <div class="quiz-q-text">Which of the following is NOT an effect of an unbalanced force acting on a body?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Setting a stationary body into motion</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Changing the direction of motion</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Changing the mass of the body</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Changing the speed of the body</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 2 -->
+      <div class="quiz-card" data-correct="1">
+        <span class="quiz-q-num">Question 2 of 25</span>
+        <div class="quiz-q-text">The SI unit of force is named after Isaac Newton. What is the correct standard writing convention?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Word: Newton, Symbol: n</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Word: newton, Symbol: N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Word: Newton, Symbol: N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Word: newton, Symbol: nt</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 3 -->
+      <div class="quiz-card" data-correct="0">
+        <span class="quiz-q-num">Question 3 of 25</span>
+        <div class="quiz-q-text">Two forces of 10 N and 6 N act on a block in opposite directions. What is the net force acting on the block?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">4 N in the direction of the 10 N force</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">16 N in the direction of the 10 N force</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">4 N in the direction of the 6 N force</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Zero</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 4 -->
+      <div class="quiz-card" data-correct="3">
+        <span class="quiz-q-num">Question 4 of 25</span>
+        <div class="quiz-q-text">Who first deduced that an object moving on a frictionless horizontal plane will continue moving indefinitely at constant velocity?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Aristotle</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Archimedes</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Albert Einstein</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Galileo Galilei</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 5 -->
+      <div class="quiz-card" data-correct="1">
+        <span class="quiz-q-num">Question 5 of 25</span>
+        <div class="quiz-q-text">What is the physical quantity that measures the inertia of a body?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Velocity</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Mass</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Volume</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Acceleration</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 6 -->
+      <div class="quiz-card" data-correct="2">
+        <span class="quiz-q-num">Question 6 of 25</span>
+        <div class="quiz-q-text">A toy car of mass 100 g moves with a constant velocity of 0.5 m/s. The net force acting on the toy car is:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">0.05 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">50 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">0 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">0.5 N</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 7 -->
+      <div class="quiz-card" data-correct="0">
+        <span class="quiz-q-num">Question 7 of 25</span>
+        <div class="quiz-q-text">When you hold a 100 g mass stationary in your palm, approximately how much upward force does your palm apply?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">≈ 1 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">≈ 10 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">≈ 100 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">≈ 0.1 N</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 8 -->
+      <div class="quiz-card" data-correct="3">
+        <span class="quiz-q-num">Question 8 of 25</span>
+        <div class="quiz-q-text">Why does a cricket fielder pull their hands backwards while catching a fast cricket ball?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">To increase the momentum of the ball</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">To apply a larger force on the ball</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">To catch the ball faster</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">To increase stopping time, reducing deceleration and impact force</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 9 -->
+      <div class="quiz-card" data-correct="1">
+        <span class="quiz-q-num">Question 9 of 25</span>
+        <div class="quiz-q-text">Action and reaction forces according to Newton's Third Law:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Act on the same object and cancel each other</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Act simultaneously on two different interacting objects</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Act at different times</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Always produce equal accelerations on both objects</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 10 -->
+      <div class="quiz-card" data-correct="2">
+        <span class="quiz-q-num">Question 10 of 25</span>
+        <div class="quiz-q-text">A bullet is fired from a heavy rifle. The rifle recoils backward with:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Greater force and greater acceleration</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Lesser force and lesser acceleration</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">An equal force but much smaller acceleration due to greater mass</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Zero force</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 11 -->
+      <div class="quiz-card" data-correct="0">
+        <span class="quiz-q-num">Question 11 of 25</span>
+        <div class="quiz-q-text">When walking on a road, in which direction does the force of friction act on the person's feet?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">In the forward direction</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">In the backward direction</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Vertically downwards</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Vertically upwards</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 12 -->
+      <div class="quiz-card" data-correct="3">
+        <span class="quiz-q-num">Question 12 of 25</span>
+        <div class="quiz-q-text">A loaded vegetable hand cart collides with an identical empty hand cart. During the collision:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">The loaded cart exerts a larger force on the empty cart</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">The empty cart exerts a larger force on the loaded cart</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Neither exerts a force on the other</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Both exert equal magnitude of force on each other</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 13 -->
+      <div class="quiz-card" data-correct="1">
+        <span class="quiz-q-num">Question 13 of 25</span>
+        <div class="quiz-q-text">The propulsion of a rocket into space is based on which fundamental scientific principle?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Newton's First Law of Motion</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Newton's Third Law of Motion (and Conservation of Momentum)</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Universal Law of Gravitation only</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Archimedes' Principle</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 14 -->
+      <div class="quiz-card" data-correct="2">
+        <span class="quiz-q-num">Question 14 of 25</span>
+        <div class="quiz-q-text">How does the acceleration due to gravity near the Earth's surface (g = 9.8 m/s²) depend on the mass of the falling object?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Directly proportional to the mass</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Inversely proportional to the mass</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">It is independent of the mass of the object</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Directly proportional to the square of mass</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 15 -->
+      <div class="quiz-card" data-correct="0">
+        <span class="quiz-q-num">Question 15 of 25</span>
+        <div class="quiz-q-text">Two connected masses m₁ and m₂ on a frictionless table are pulled by a force F. The acceleration of the system is:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">F / (m₁ + m₂)</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">F / (m₁ - m₂)</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">(m₁ + m₂) / F</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">F / m₁</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 16 -->
+      <div class="quiz-card" data-correct="1">
+        <span class="quiz-q-num">Question 16 of 25</span>
+        <div class="quiz-q-text">What was the retrograde thruster firing used by Chandrayaan-3's Vikram Lander designed to do?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">To accelerate towards the lunar surface</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">To produce an opposing force and slow down for soft landing</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">To generate electrical power</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">To escape lunar gravity</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 17 -->
+      <div class="quiz-card" data-correct="3">
+        <span class="quiz-q-num">Question 17 of 25</span>
+        <div class="quiz-q-text">If an object's velocity-time graph is a horizontal line parallel to the time axis, what is the net force acting on it?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Positive and constant</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Negative and constant</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Increasing linearly</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Zero</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 18 -->
+      <div class="quiz-card" data-correct="2">
+        <span class="quiz-q-num">Question 18 of 25</span>
+        <div class="quiz-q-text">A net force of 5 N acts on a mass of 25 kg. What is the acceleration produced?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">5 m/s²</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">125 m/s²</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">0.2 m/s²</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">0.05 m/s²</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 19 -->
+      <div class="quiz-card" data-correct="0">
+        <span class="quiz-q-num">Question 19 of 25</span>
+        <div class="quiz-q-text">Why does a sailor jumping forward to the shore push the boat backward?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Sailor exerts a backward force on the boat (action), boat exerts forward force on sailor (reaction)</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Water currents pull the boat</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Boat loses mass</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Friction between boat and water disappears</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 20 -->
+      <div class="quiz-card" data-correct="1">
+        <span class="quiz-q-num">Question 20 of 25</span>
+        <div class="quiz-q-text">Two spring balances A and B are hooked together. If balance B is pulled with 15 N force while balance A is fixed to a wall, the reading on balance A will be:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">0 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">15 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">30 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">7.5 N</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 21 -->
+      <div class="quiz-card" data-correct="3">
+        <span class="quiz-q-num">Question 21 of 25</span>
+        <div class="quiz-q-text">A car of mass 1500 kg accelerates uniformly from rest to 10 m/s in 5 seconds. What is the net forward force acting on it?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">1500 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">7500 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">15000 N</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">3000 N</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 22 -->
+      <div class="quiz-card" data-correct="2">
+        <span class="quiz-q-num">Question 22 of 25</span>
+        <div class="quiz-q-text">Why does wrapping a rope multiple times around a rough post allow a small force to hold a massive ship at a dock?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Gravitational force on the rope increases</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Tension in the rope becomes zero</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Friction increases exponentially with each turn of the rope</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">The ship loses inertia</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 23 -->
+      <div class="quiz-card" data-correct="0">
+        <span class="quiz-q-num">Question 23 of 25</span>
+        <div class="quiz-q-text">Which of the following is an example of an internal force in a system consisting of two horses pulling a cart?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Tension in the harness connecting the horses to the cart</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Friction between wheels and ground</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Air resistance</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Weight of the cart</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 24 -->
+      <div class="quiz-card" data-correct="1">
+        <span class="quiz-q-num">Question 24 of 25</span>
+        <div class="quiz-q-text">An athlete lands on a sand bed or foam mat during a high jump event primarily to:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Jump higher</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Prolong stopping time and reduce impact force on the body</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Decrease stopping time</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Increase acceleration</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <!-- MCQ 25 -->
+      <div class="quiz-card" data-correct="2">
+        <span class="quiz-q-num">Question 25 of 25</span>
+        <div class="quiz-q-text">When a constant force F pulls an object of mass m, its acceleration is 'a'. If the force is doubled and mass is halved, the new acceleration will be:</div>
+        <div class="quiz-options">
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 0)">Same (a)</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 1)">Doubled (2a)</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 2)">Four times (4a)</button>
+          <button class="quiz-opt-btn" onclick="checkQuiz(this, 3)">Halved (a/2)</button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Mobile Bottom Sticky Navigation -->
+  <footer class="mobile-bottom-nav">
+    <a href="#sec-concept" class="bottom-tab active">
+      <span class="bottom-tab-icon">📖</span>
+      <span>Notes</span>
+    </a>
+    <a href="#sec-first-law" class="bottom-tab">
+      <span class="bottom-tab-icon">⚖️</span>
+      <span>Laws</span>
+    </a>
+    <a href="#sec-numericals" class="bottom-tab">
+      <span class="bottom-tab-icon">📝</span>
+      <span>Numericals</span>
+    </a>
+    <a href="#sec-mcq" class="bottom-tab">
+      <span class="bottom-tab-icon">🎯</span>
+      <span>MCQs</span>
+    </a>
+    <button class="bottom-tab" onclick="toggleTheme()" style="background:none;border:none;cursor:pointer;">
+      <span class="bottom-tab-icon" id="bottom-theme-icon">🌙</span>
+      <span>Theme</span>
+    </button>
+  </footer>
+
+  <script>
+    // Theme Management with localStorage persistence
+    function initTheme() {
+      const savedTheme = localStorage.getItem('nextsem_ncert_theme') || 'dark';
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        updateThemeUI('light');
+      } else {
+        document.body.classList.remove('light-mode');
+        updateThemeUI('dark');
+      }
+    }
+
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-mode');
+      const theme = isLight ? 'light' : 'dark';
+      localStorage.setItem('nextsem_ncert_theme', theme);
+      updateThemeUI(theme);
+    }
+
+    function updateThemeUI(theme) {
+      const icon = theme === 'light' ? '☀️' : '🌙';
+      const text = theme === 'light' ? 'Light' : 'Dark';
+      document.getElementById('theme-icon').textContent = icon;
+      document.getElementById('theme-text').textContent = text;
+      const bIcon = document.getElementById('bottom-theme-icon');
+      if (bIcon) bIcon.textContent = icon;
+    }
+
+    // Language Toggle
+    function setLang(mode) {
+      document.body.classList.remove('lang-en-only', 'lang-hi-only');
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+
+      if (mode === 'en') {
+        document.body.classList.add('lang-en-only');
+        document.getElementById('btn-lang-en').classList.add('active');
+      } else if (mode === 'hi') {
+        document.body.classList.add('lang-hi-only');
+        document.getElementById('btn-lang-hi').classList.add('active');
+      } else {
+        document.getElementById('btn-lang-bi').classList.add('active');
+      }
+      localStorage.setItem('nextsem_ncert_lang', mode);
+    }
+
+    // Solved Q&A Accordion
+    function toggleQa(el) {
+      const body = el.nextElementSibling;
+      const arrow = el.querySelector('span:last-child');
+      if (body.style.display === 'none' || !body.style.display) {
+        body.style.display = 'block';
+        arrow.textContent = '▲';
+      } else {
+        body.style.display = 'none';
+        arrow.textContent = '▼';
+      }
+    }
+
+    // Interactive Quiz Evaluator
+    function checkQuiz(btn, chosenIndex) {
+      const card = btn.closest('.quiz-card');
+      const correctIndex = parseInt(card.getAttribute('data-correct'), 10);
+      const buttons = card.querySelectorAll('.quiz-opt-btn');
+      const feedback = card.querySelector('.quiz-feedback');
+
+      buttons.forEach(b => b.disabled = true);
+
+      if (chosenIndex === correctIndex) {
+        btn.classList.add('correct');
+        feedback.style.display = 'block';
+        feedback.style.background = 'rgba(16, 185, 129, 0.15)';
+        feedback.style.color = '#10b981';
+        feedback.innerHTML = '🎉 <strong>Correct!</strong> Excellent mastery of Newton\'s Laws.';
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 35, spread: 60, origin: { y: 0.8 } });
+        }
+      } else {
+        btn.classList.add('wrong');
+        buttons[correctIndex].classList.add('correct');
+        feedback.style.display = 'block';
+        feedback.style.background = 'rgba(244, 63, 94, 0.15)';
+        feedback.style.color = '#f43f5e';
+        feedback.innerHTML = '❌ <strong>Incorrect.</strong> The correct answer is highlighted in green above.';
+      }
+    }
+
+    // Init on load
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      const savedLang = localStorage.getItem('nextsem_ncert_lang') || 'bilingual';
+      setLang(savedLang);
+    });
+  </script>
+</body>
+</html>

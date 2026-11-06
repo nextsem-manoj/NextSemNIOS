@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class 12 Geography (Code 64/3/1) - Solved Board Paper with Hidden Answers</title>
+  <meta name="description" content="Official CBSE Class 12 Geography Board Examination Paper (Series QR3SP, Set 1, Code 64/3/1). Complete interactive solutions with hidden answers, self-testing MCQs, map solutions, and marking scheme." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #060e1a;
+      --surface: #0b172a;
+      --card: #101f38;
+      --card-hover: #162a4d;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(16, 185, 129, 0.3);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --gold: #f59e0b;
+      --gold-glow: rgba(245, 158, 11, 0.18);
+      --cyan: #06b6d4;
+      --purple: #a855f7;
+      --red: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-en: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-hi: 'Noto Sans Devanagari', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-en);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding-bottom: 90px;
+    }
+
+    /* Top Sticky Bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(6, 14, 26, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+    }
+    .top-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+    .brand-sub {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+    .top-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-action {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-action:hover {
+      background: var(--card);
+      border-color: var(--emerald);
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.14) 0%, transparent 65%),
+                  radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+                  linear-gradient(180deg, #0a1b33 0%, #060e1a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-tag {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 4px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--emerald);
+    }
+    .hero h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      max-width: 780px;
+      margin: 0 auto 24px;
+    }
+    .paper-info-grid {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 20px;
+      min-width: 140px;
+    }
+    .info-card .val {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+    .info-card .lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+    }
+
+    /* Filter & Search Bar */
+    .filter-wrapper {
+      max-width: 1100px;
+      margin: 24px auto 10px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .search-input-box {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 18px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input-box:focus {
+      border-color: var(--emerald);
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.2);
+    }
+    .section-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+    .sec-tab {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .sec-tab:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,0.2);
+    }
+    .sec-tab.active {
+      background: var(--emerald);
+      color: #000;
+      border-color: var(--emerald);
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    /* Section Divider Banner */
+    .sec-banner {
+      background: linear-gradient(90deg, rgba(16,185,129,0.12) 0%, rgba(6,182,212,0.06) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: 14px;
+      padding: 18px 24px;
+      margin: 36px 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .sec-banner.sec-b { border-color: rgba(6,182,212,0.3); background: linear-gradient(90deg, rgba(6,182,212,0.12) 0%, transparent 100%); }
+    .sec-banner.sec-c { border-color: rgba(245,158,11,0.3); background: linear-gradient(90deg, rgba(245,158,11,0.12) 0%, transparent 100%); }
+    .sec-banner.sec-d { border-color: rgba(168,85,247,0.3); background: linear-gradient(90deg, rgba(168,85,247,0.12) 0%, transparent 100%); }
+    .sec-banner.sec-e { border-color: rgba(244,63,94,0.3); background: linear-gradient(90deg, rgba(244,63,94,0.12) 0%, transparent 100%); }
+
+    .sec-banner-left h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .sec-banner-left p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .sec-marks-badge {
+      background: rgba(255,255,255,0.08);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 0.84rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+    .q-card:hover {
+      border-color: rgba(255,255,255,0.15);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    .q-head {
+      display: flex;
+      gap: 16px;
+      padding: 20px 22px 14px;
+    }
+    .q-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .sec-b-q .q-badge { background: rgba(6,182,212,0.15); color: var(--cyan); }
+    .sec-c-q .q-badge { background: rgba(245,158,11,0.15); color: var(--gold); }
+    .sec-d-q .q-badge { background: rgba(168,85,247,0.15); color: var(--purple); }
+    .sec-e-q .q-badge { background: rgba(244,63,94,0.15); color: var(--red); }
+
+    .q-body { flex: 1; }
+    .q-text-en {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.55;
+      margin-bottom: 6px;
+    }
+    .q-text-hi {
+      font-family: var(--font-hi);
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      background: rgba(0,0,0,0.22);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border-left: 3px solid var(--emerald);
+    }
+    .q-marks-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--gold);
+      background: rgba(245,158,11,0.1);
+      padding: 3px 8px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    /* MCQ Interactive Options */
+    .mcq-container {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+    .mcq-option {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px 14px;
+      font-size: 0.86rem;
+      color: #cbd5e1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .mcq-option:hover {
+      background: var(--card-hover);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .mcq-option.correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: var(--emerald) !important;
+      color: #6ee7b7 !important;
+      font-weight: 700;
+    }
+    .mcq-option.wrong {
+      background: rgba(244, 63, 94, 0.18) !important;
+      border-color: var(--red) !important;
+      color: #fda4af !important;
+    }
+    .mcq-feedback {
+      font-size: 0.78rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: none;
+      font-weight: 800;
+    }
+
+    /* Hidden Answer Accordion / Reveal Button */
+    .ans-footer {
+      border-top: 1px solid var(--border);
+      padding: 12px 22px;
+      background: rgba(0,0,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn-toggle-ans {
+      background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.25));
+      border: 1px solid rgba(16,185,129,0.4);
+      color: #34d399;
+      padding: 6px 14px;
+      border-radius: 7px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-toggle-ans:hover {
+      background: var(--emerald);
+      color: #000;
+    }
+    .ans-status {
+      font-size: 0.74rem;
+      color: var(--text-dim);
+    }
+
+    /* Answer Content (Initially Hidden) */
+    .answer-tray {
+      display: none;
+      padding: 20px 22px;
+      background: rgba(4, 11, 22, 0.75);
+      border-top: 1px dashed rgba(255,255,255,0.1);
+      animation: fadeIn 0.25s ease;
+    }
+    .answer-tray.revealed {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .ans-header-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    .ans-body-en {
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .ans-body-hi {
+      font-family: var(--font-hi);
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      line-height: 1.75;
+      padding: 12px 16px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 8px;
+      border-left: 3px solid var(--gold);
+    }
+    .marking-scheme-pill {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fde047;
+      font-size: 0.75rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sol-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 0.85rem;
+    }
+    .sol-table th, .sol-table td {
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .sol-table th {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      font-weight: 800;
+    }
+
+    /* Floating Quick Bar */
+    .quick-scroll {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 99;
+    }
+    .scroll-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+      transition: all 0.2s;
+    }
+    .scroll-btn:hover {
+      background: var(--emerald);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      max-width: 1100px;
+      margin: 60px auto 0;
+      padding: 24px 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="brand-title">
+        <span class="brand-badge">CBSE 2024</span>
+        <div>
+          <div class="brand-name">Class 12 Geography (भूगोल - 64/3/1)</div>
+          <div class="brand-sub">Series QR3SP • Set 1 • Solved Board Paper with Hidden Answers</div>
+        </div>
+      </div>
+      <div class="top-controls">
+        <button class="btn-action" onclick="toggleAllAnswers(true)">
+          <span>👁️</span> Reveal All Answers
+        </button>
+        <button class="btn-action" onclick="toggleAllAnswers(false)">
+          <span>🙈</span> Hide All Answers
+        </button>
+        <button class="btn-action" onclick="toggleLanguage()">
+          <span id="lang-indicator">🌐 Both (EN + HI)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-meta">
+      <span class="hero-tag">Central Board of Secondary Education</span>
+      <span class="hero-tag">Class XII Board Examination (Theory)</span>
+      <span class="hero-tag">100% NCERT Verified Solutions</span>
+    </div>
+    <h1>Geography (भूगोल - सैद्धांतिक)</h1>
+    <p class="hero-sub">
+      Official Board Question Paper <strong>Q.P. Code 64/3/1</strong>. Complete solutions with interactive self-testing MCQs, hidden step-by-step marking answers, world & India map identification, and source passages.
+    </p>
+
+    <div class="paper-info-grid">
+      <div class="info-card">
+        <div class="val">70</div>
+        <div class="lbl">Max Marks</div>
+      </div>
+      <div class="info-card">
+        <div class="val">3 Hours</div>
+        <div class="lbl">Time Allowed</div>
+      </div>
+      <div class="info-card">
+        <div class="val">30</div>
+        <div class="lbl">Total Questions</div>
+      </div>
+      <div class="info-card">
+        <div class="val">5</div>
+        <div class="lbl">Sections (A - E)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Bar -->
+  <div class="filter-wrapper">
+    <input type="text" id="q-search" class="search-input-box" placeholder="🔍 Search keywords (e.g. human development, cottage, ports, Atal Tunnel, demographic transition, quaternary, railways, map)..." oninput="filterQuestions()" />
+    
+    <div class="section-tabs">
+      <button class="sec-tab active" onclick="selectSection('ALL', this)">All Questions (30)</button>
+      <button class="sec-tab" onclick="selectSection('A', this)">Section A: MCQs (Q1–Q17)</button>
+      <button class="sec-tab" onclick="selectSection('B', this)">Section B: Source-Based (Q18–Q19)</button>
+      <button class="sec-tab" onclick="selectSection('C', this)">Section C: 3 Marks (Q20–Q23)</button>
+      <button class="sec-tab" onclick="selectSection('D', this)">Section D: 5 Marks (Q24–Q28)</button>
+      <button class="sec-tab" onclick="selectSection('E', this)">Section E: Maps (Q29–Q30)</button>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="main-container" id="questions-root">
+
+    <!-- ========================================== -->
+    <!-- SECTION A -->
+    <!-- ========================================== -->
+    <div class="sec-banner sec-a" data-section="A">
+      <div class="sec-banner-left">
+        <h2>SECTION A : Multiple Choice Questions (खंड – क)</h2>
+        <p>Questions 1 to 17 carry 1 mark each. Click on any option to test your answer!</p>
+      </div>
+      <div class="sec-marks-badge">17 × 1 = 17 Marks</div>
+    </div>
+
+    <!-- Q1 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="1">
+      <div class="q-head">
+        <div class="q-badge">1</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which of the following is one of the main objectives of ‘human development’ ? Choose the most appropriate option.
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से कौन-सा ‘मानव विकास’ का एक प्रमुख उद्देश्य है ? सबसे उपयुक्त विकल्प का चयन कीजिए ।
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 1)"><span>(A) Long life / दीर्घ जीवन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 1)"><span>(B) Healthy life / स्वस्थ जीवन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 1)"><span>(C) Wealthy life / समृद्ध जीवन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 1)"><span>(D) Meaningful life / सार्थक जीवन</span><span class="mcq-feedback">✓ Correct</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (D) Meaningful life</strong><br><br>
+          <strong>Explanation:</strong> According to Dr. Mahbub-ul-Haq and Amartya Sen in NCERT Chapter 4 (*Human Development*), the basic goal of development is to create conditions where people can live a <em>meaningful life</em>. A meaningful life is not just a long life; it is a life with some purpose, where people are healthy, develop their talents, participate in society, and are free to achieve their goals.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (D) सार्थक जीवन</strong><br><br>
+          <strong>व्याख्या :</strong> एनसीईआरटी के अनुसार मानव विकास का मूल ध्येय ऐसी परिस्थितियों का निर्माण करना है जिसमें लोग 'सार्थक जीवन' जी सकें । सार्थक जीवन केवल दीर्घायु होना नहीं, बल्कि ऐसा जीवन है जिसका कोई उद्देश्य हो, जिसमें व्यक्ति अपनी प्रतिभा का विकास कर सके और स्वतंत्रतापूर्वक समाज में योगदान दे सके ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="2">
+      <div class="q-head">
+        <div class="q-badge">2</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which of the following aspects are true regarding the countries with low level of ‘human development’ ? Choose the most appropriate option.<br>
+            I. These countries are largely facing political turmoil.<br>
+            II. These countries are facing social instability.<br>
+            III. The number of countries in the low level category is the largest.<br>
+            IV. The health status of the people of these countries is poor.
+          </div>
+          <div class="q-text-hi">
+            ‘मानव विकास’ के निम्न स्तर वाले देशों से संबंधित निम्नलिखित में से कौन-से पहलू सही हैं ? सबसे उपयुक्त विकल्प का चयन कीजिए ।<br>
+            I. ये देश बड़े स्तर पर राजनीतिक उपद्रव का सामना कर रहे हैं ।<br>
+            II. ये देश सामाजिक अस्थिरता का सामना कर रहे हैं ।<br>
+            III. निम्न स्तर श्रेणी वाले देशों की संख्या सबसे अधिक है ।<br>
+            IV. इन देशों के लोगों की स्वास्थ्य दशा कमजोर है ।
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 2)"><span>(A) Only I, II and III are correct. / केवल I, II और III सही हैं ।</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 2)"><span>(B) Only I, II and IV are correct. / केवल I, II और IV सही हैं ।</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 2)"><span>(C) Only I, III and IV are correct. / केवल I, III और IV सही हैं ।</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 2)"><span>(D) Only II, III and IV are correct. / केवल II, III और IV सही हैं ।</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (B) Only I, II and IV are correct.</strong><br><br>
+          <strong>Explanation:</strong> Countries with a low level of human development (HDI score below 0.550) frequently suffer from political turmoil (I), civil wars/social instability (II), and poor health and education conditions (IV). However, the number of countries in this low category is NOT the largest (high and medium human development categories contain more countries). Hence, statement III is incorrect.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (B) केवल I, II और IV सही हैं ।</strong><br><br>
+          <strong>व्याख्या :</strong> निम्न मानव विकास वाले देश राजनीतिक उथल-पुथल (I), गृहयुद्ध व सामाजिक अस्थिरता (II) तथा खराब स्वास्थ्य दशाओं (IV) से जूझ रहे हैं । लेकिन इस श्रेणी में देशों की संख्या सर्वाधिक नहीं है (कथन III असत्य है) ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="3">
+      <div class="q-head">
+        <div class="q-badge">3</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which one of the following types of ports is categorised on the basis of function ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से किस प्रकार के पत्तन को कार्य के आधार पर वर्गीकृत किया गया है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 3)"><span>(A) Out port / बाह्य पत्तन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 3)"><span>(B) Oil port / तेल पत्तन</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 3)"><span>(C) Inland port / अंतर्देशीय पत्तन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 3)"><span>(D) Comprehensive port / विस्तृत पत्तन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (B) Oil port</strong><br><br>
+          <strong>Explanation:</strong> In NCERT Chapter *International Trade / Transport*, ports are classified:
+          • On the basis of location: Inland ports & Out ports.<br>
+          • On the basis of traffic handled: Industrial ports, Commercial ports, Comprehensive ports.<br>
+          • <strong>On the basis of specialized function:</strong> <strong>Oil ports</strong> (e.g. Maracaibo, Esskhira, Tripoli), Ports of call, Packet stations, Entrepot ports, and Naval ports.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (B) तेल पत्तन</strong><br><br>
+          <strong>व्याख्या :</strong> विशिष्ट कार्यों के आधार पर पत्तनों को तेल पत्तन (जैसे त्रिपोली, मराकाइबो), विश्राम पत्तन (Ports of Call), पैकेट स्टेशन और आंत्रपो पत्तन में वर्गीकृत किया गया है । बाह्य व अंतर्देशीय पत्तन 'अवस्थिति' के आधार पर हैं ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="4">
+      <div class="q-head">
+        <div class="q-badge">4</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which of the following are the true characteristics of cottage manufacturing ? Choose the most appropriate option.<br>
+            I. The artisans use local raw materials.<br>
+            II. The products of these units are supplied at distant markets.<br>
+            III. Most of the times, the family members work in these units.<br>
+            IV. The finished products like mats, bricks, pottery, etc. are some important examples.
+          </div>
+          <div class="q-text-hi">
+            कुटीर विनिर्माण की निम्नलिखित में से कौन-सी विशेषताएं सही हैं ? सबसे उपयुक्त विकल्प का चयन कीजिए ।<br>
+            I. शिल्पकार स्थानीय कच्चे माल का उपयोग करते हैं ।<br>
+            II. इन इकाइयों के उत्पादों की आपूर्ति दूरदराज के बाजारों में होती है ।<br>
+            III. अधिकांश समय परिवार के सदस्य इन इकाइयों में काम करते हैं ।<br>
+            IV. तैयार उत्पाद जैसे चटाई, ईंट, मिट्टी के बर्तन, आदि कुछ महत्वपूर्ण उदाहरण हैं ।
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 4)"><span>(A) Only I, II and III are correct.</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 4)"><span>(B) Only I, III and IV are correct. / केवल I, III और IV सही हैं ।</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 4)"><span>(C) Only I, II and IV are correct.</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 4)"><span>(D) Only II, III and IV are correct.</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (B) Only I, III and IV are correct.</strong><br><br>
+          <strong>Explanation:</strong> Cottage or household industries utilize local raw materials (I), family labor (III), and simple hand tools to produce everyday goods like pottery, mats, bricks, and baskets (IV) for local consumption. Statement II is false because cottage goods have low commercial value and are sold in nearby local markets, not distant international markets.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (B) केवल I, III और IV सही हैं ।</strong><br><br>
+          <strong>व्याख्या :</strong> कुटीर उद्योग में स्थानीय कच्चे माल का उपयोग (I), परिवार के सदस्यों का श्रम (III) तथा चटाई, बर्तन आदि का निर्माण (IV) होता है । इनका व्यापार स्थानीय स्तर पर होता है, दूरदराज के बाजारों में नहीं (कथन II गलत है) ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="5">
+      <div class="q-head">
+        <div class="q-badge">5</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which of the following is a product of forest-based industry ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से कौन-सा वन-आधारित उद्योग का एक उत्पाद है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 5)"><span>(A) Leather / चमड़ा</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 5)"><span>(B) Tea / चाय</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 5)"><span>(C) Cotton / कपास</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 5)"><span>(D) Paper / कागज</span><span class="mcq-feedback">✓ Correct</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (D) Paper</strong><br><br>
+          <strong>Explanation:</strong> Forest-based industries utilize major and minor forest produce such as timber, wood pulp, bamboo, and grass. Paper manufacturing relies directly on wood pulp and bamboo from forests. (Leather is animal-based; Tea and Cotton are agro-based).
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (D) कागज</strong><br><br>
+          <strong>व्याख्या :</strong> कागज उद्योग वनों से प्राप्त लकड़ी की लुगदी और बांस पर आधारित है, इसलिए यह वन-आधारित उद्योग है । (चमड़ा पशु-आधारित है तथा चाय व कपास कृषि-आधारित हैं) ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="6">
+      <div class="q-head">
+        <div class="q-badge">6</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which of the following factors are involved in large-scale manufacturing ? Choose the most appropriate option.<br>
+            I. Variety of raw material<br>
+            II. Advanced technology<br>
+            III. Semi-skilled worker<br>
+            IV. Large investment
+          </div>
+          <div class="q-text-hi">
+            बड़े-पैमाने के विनिर्माण में निम्नलिखित में से कौन-से कारक शामिल हैं ? सबसे उपयुक्त विकल्प का चयन कीजिए ।<br>
+            I. विभिन्न प्रकार का कच्चा माल<br>
+            II. विकसित प्रौद्योगिकी<br>
+            III. अर्धकुशल श्रमिक<br>
+            IV. अधिक निवेश
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 6)"><span>(A) Only I, II and III are correct.</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 6)"><span>(B) Only I, III and IV are correct.</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 6)"><span>(C) Only I, II and IV are correct. / केवल I, II और IV सही हैं ।</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 6)"><span>(D) Only II, III and IV are correct.</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (C) Only I, II and IV are correct.</strong><br><br>
+          <strong>Explanation:</strong> Large-scale manufacturing involves diverse types of raw materials (I), sophisticated automated modern technology (II), huge capital investments (IV), and specialized division of skilled labor (not mere semi-skilled workforce).
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (C) केवल I, II और IV सही हैं ।</strong><br><br>
+          <strong>व्याख्या :</strong> बड़े पैमाने के उद्योग में भारी पूँजी निवेश (IV), उन्नत तकनीक (II) तथा विभिन्न प्रकार के कच्चे माल (I) की आवश्यकता होती है और इसमें श्रम विभाजन तथा अत्यधिक कुशल श्रम की प्रधानता होती है ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="7">
+      <div class="q-head">
+        <div class="q-badge">7</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which one of the following is not the base of ‘international trade’ ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से कौन-सा ‘अंतर्राष्ट्रीय व्यापार’ का आधार नहीं है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 7)"><span>(A) Differences in national resources / राष्ट्रीय संसाधनों में भिन्नता</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 7)"><span>(B) Stage of economic development / आर्थिक विकास की प्रावस्था</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 7)"><span>(C) Level of transport development / परिवहन के विकास का स्तर</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 7)"><span>(D) Social diversity in the country / देश में सामाजिक विविधता</span><span class="mcq-feedback">✓ Correct</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (D) Social diversity in the country</strong><br><br>
+          <strong>Explanation:</strong> According to NCERT Chapter *International Trade*, the recognized bases of international trade are: (1) Difference in national resources (geology, minerals, climate), (2) Population factors (cultural diversity, size of population), (3) Stage of economic development, (4) Extent of foreign investment, and (5) Transport infrastructure. "Social diversity within the country" is not a formal base of international commerce.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (D) देश में सामाजिक विविधता</strong><br><br>
+          <strong>व्याख्या :</strong> राष्ट्रीय संसाधनों में भिन्नता, आर्थिक विकास का स्तर और परिवहन का विकास अंतरराष्ट्रीय व्यापार के प्रमुख आधार हैं, जबकि देश के भीतर सामाजिक विविधता इसका आधार नहीं है ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="8">
+      <div class="q-head">
+        <div class="q-badge">8</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Match Column I with Column II correctly and choose the most appropriate option :<br>
+            <strong>Column I (Type of Port):</strong> a. Packet station, b. Naval port, c. Port of call, d. Entrepot port<br>
+            <strong>Column II (Example):</strong> i. Kochi, ii. Copenhagen, iii. Dover, iv. Honolulu
+          </div>
+          <div class="q-text-hi">
+            कॉलम I का सही मिलान कॉलम II से कीजिए और सबसे उपयुक्त विकल्प का चयन कीजिए :<br>
+            <strong>कॉलम I (पत्तन का प्रकार):</strong> a. पैकेट स्टेशन, b. नौसेना पत्तन, c. मार्ग पत्तन (विश्राम पत्तन), d. आंत्रपो पत्तन<br>
+            <strong>कॉलम II (उदाहरण):</strong> i. कोच्चि, ii. कोपेनहेगेन, iii. डोवर, iv. होनोलूलू
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, true, 8)"><span>(A) a-iii, b-i, c-iv, d-ii</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 8)"><span>(B) a-iii, b-i, c-ii, d-iv</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 8)"><span>(C) a-i, b-ii, c-iii, d-iv</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 8)"><span>(D) a-i, b-ii, c-iv, d-iii</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (A) a-iii, b-i, c-iv, d-ii</strong><br><br>
+          <strong>Matching Analysis:</strong><br>
+          • <strong>a. Packet station → iii. Dover</strong> (Ferry ports connecting England and France across the English Channel).<br>
+          • <strong>b. Naval port → i. Kochi</strong> (Strategically placed port serving warships, alongside Karwar).<br>
+          • <strong>c. Port of call → iv. Honolulu</strong> (Refueling, watering, and resting stations on long ocean routes, e.g. Aden, Honolulu, Singapore).<br>
+          • <strong>d. Entrepot port → ii. Copenhagen</strong> (Collection and trans-shipment hubs for goods from different nations, e.g. Rotterdam, Copenhagen, Singapore).
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (A) a-iii, b-i, c-iv, d-ii</strong><br><br>
+          • a. पैकेट स्टेशन → iii. डोवर (फेरी पत्तन)<br>
+          • b. नौसेना पत्तन → i. कोच्चि (युद्धपोतों के लिए)<br>
+          • c. मार्ग पत्तन (विश्राम पत्तन) → iv. होनोलूलू (ईंधन व भोजन भरने हेतु)<br>
+          • d. आंत्रपो पत्तन → ii. कोपेनहेगेन (पुनर्निर्यात केंद्र)
+        </div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="9">
+      <div class="q-head">
+        <div class="q-badge">9</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            During which one of the following decades, the population growth in India was negative ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से किस दशक के दौरान भारत में जनसंख्या वृद्धि नकारात्मक थी ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, true, 9)"><span>(A) 1911 – 1921 / 1911 – 1921</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 9)"><span>(B) 1931 – 1941 / 1931 – 1941</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 9)"><span>(C) 1951 – 1961 / 1951 – 1961</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 9)"><span>(D) 1971 – 1981 / 1971 – 1981</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (A) 1911 to 1921</strong><br><br>
+          <strong>Explanation:</strong> India's demographic history experienced Phase I (1901–1921) as a stagnant phase of growth. During the decade 1911–1921, India recorded a negative decadal growth rate of <strong>-0.31%</strong> caused by catastrophic mortality from the 1918 Spanish Flu pandemic, severe famines, and inadequate health infrastructure.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (A) 1911 – 1921</strong><br><br>
+          <strong>व्याख्या :</strong> 1911-1921 के दशक में भारत की जनसंख्या वृद्धि दर नकारात्मक (-0.31%) दर्ज की गई थी, जिसका मुख्य कारण 1918 का इन्फ्लुएंजा महाप्रकोप (महामारी), अकाल और स्वास्थ्य सुविधाओं का अभाव था ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="10">
+      <div class="q-head">
+        <div class="q-badge">10</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which of the following set of states have the lowest percentage of urban population ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से किन राज्यों के समूह की नगरीय जनसंख्या का प्रतिशत सबसे कम है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 10)"><span>(A) Madhya Pradesh and Kerala / मध्य प्रदेश और केरल</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 10)"><span>(B) Punjab and Gujarat / पंजाब और गुजरात</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 10)"><span>(C) Goa and Maharashtra / गोआ और महाराष्ट्र</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 10)"><span>(D) Bihar and Himachal Pradesh / बिहार और हिमाचल प्रदेश</span><span class="mcq-feedback">✓ Correct</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (D) Bihar and Himachal Pradesh</strong><br><br>
+          <strong>Explanation:</strong> According to Census data in NCERT *India: People and Economy*, Himachal Pradesh has the lowest proportion of urban population in India (10.03%), closely followed by Bihar (11.29%). Both states have predominantly rural populations.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (D) बिहार और हिमाचल प्रदेश</strong><br><br>
+          <strong>व्याख्या :</strong> 2011 की जनगणना के अनुसार हिमाचल प्रदेश (10.03%) और बिहार (11.29%) में नगरीय जनसंख्या का प्रतिशत देश में सबसे कम है ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="11">
+      <div class="q-head">
+        <div class="q-badge">11</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which one of the following set of places are connected by the ‘Atal Tunnel’ ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित स्थानों का कौन-सा समूह ‘अटल टनल’ द्वारा जुड़ा है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 11)"><span>(A) Shimla and Manikaran / शिमला और मणिकरण</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 11)"><span>(B) Shimla and Lahaul-Spiti / शिमला और लाहौल-स्पीति</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 11)"><span>(C) Manali and Lahaul-Spiti / मनाली और लाहौल-स्पीति</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 11)"><span>(D) Manali and Manikaran / मनाली और मणिकरण</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (C) Manali and Lahaul-Spiti</strong><br><br>
+          <strong>Explanation:</strong> The 9.02 km long Atal Tunnel, constructed by the Border Roads Organisation (BRO) under the Rohtang Pass in the Pir Panjal range, connects **Manali to Lahaul-Spiti valley** throughout the entire year, cutting travel distance by 46 km and travel time by 4–5 hours.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (C) मनाली और लाहौल-स्पीति</strong><br><br>
+          <strong>व्याख्या :</strong> पीर पंजाल श्रेणी में रोहतांग दर्रे के नीचे 9.02 किमी लंबी 'अटल टनल' मनाली को लाहौल-स्पीति घाटी से जोड़ती है और पूरे वर्ष यातायात सुगम बनाती है ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="12">
+      <div class="q-head">
+        <div class="q-badge">12</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which one of the following organisations constructed the Hazira-Vijaipur-Jagdishpur (HVJ) gas pipeline ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से किस संगठन ने हजीरा-विजयपुर-जगदीशपुर गैस पाइपलाइन का निर्माण किया ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 12)"><span>(A) Hindustan Petroleum Corporation / हिंदुस्तान पेट्रोलियम कॉर्पोरेशन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 12)"><span>(B) Oil and Natural Gas Corporation / तेल और प्राकृतिक गैस कॉर्पोरेशन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 12)"><span>(C) Oil Authority of India Limited / भारतीय तेल प्राधिकरण लिमिटेड</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 12)"><span>(D) Gas Authority of India Limited / भारतीय गैस प्राधिकरण लिमिटेड (GAIL)</span><span class="mcq-feedback">✓ Correct</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (D) Gas Authority of India Limited (GAIL)</strong><br><br>
+          <strong>Explanation:</strong> The landmark 1,750 km Hazira-Vijaipur-Jagdishpur (HVJ) natural gas pipeline connecting Gujarat to Uttar Pradesh was constructed by **Gas Authority of India Limited (GAIL)**, which was set up in 1984 under the Ministry of Petroleum and Natural Gas.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (D) भारतीय गैस प्राधिकरण लिमिटेड (GAIL)</strong><br><br>
+          <strong>व्याख्या :</strong> गेल (GAIL) की स्थापना 1984 में हुई थी और इसने भारत की पहली 1,750 किमी लंबी हजीरा-विजयपुर-जगदीशपुर (HVJ) गैस पाइपलाइन का निर्माण किया ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="13">
+      <div class="q-head">
+        <div class="q-badge">13</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            The Watershed Management Programme in Jhabua district of Madhya Pradesh was funded by which one of the following ministries ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से किस मंत्रालय द्वारा मध्य प्रदेश के झाबुआ जिले में जलसंभर प्रबंधन कार्यक्रम को धन उपलब्ध कराया गया ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, true, 13)"><span>(A) Ministry of Agriculture (or Ministry of Rural Development) / कृषि मंत्रालय</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 13)"><span>(B) Ministry of Urban Development / नगरीय विकास मंत्रालय</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 13)"><span>(C) Ministry of Human Development / मानव विकास मंत्रालय</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 13)"><span>(D) Ministry of Finance / वित्त मंत्रालय</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (A) Ministry of Agriculture / Ministry of Rural Development</strong><br><br>
+          <strong>Explanation:</strong> In NCERT *Planning and Sustainable Development in Indian Context* (Jhabua Case Study), watershed management programs in Jhabua were funded under the central government's Rajiv Gandhi Mission for Watershed Management via the Ministry of Rural Development and Ministry of Agriculture.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (A) कृषि मंत्रालय (ग्रामीण विकास मंत्रालय)</strong><br><br>
+          <strong>व्याख्या :</strong> मध्य प्रदेश के झाबुआ जिले में जलसंभर विकास कार्यक्रम राजीव गांधी जलसंभर प्रबंधन मिशन के तहत केंद्रीय ग्रामीण विकास व कृषि मंत्रालय द्वारा वित्तपोषित किया गया था ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="14">
+      <div class="q-head">
+        <div class="q-badge">14</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • MCQ</div>
+          <div class="q-text-en">
+            Which one of the following has classified ‘wastelands’ in India ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से किसने भारत में ‘व्यर्थ भूमि’ को वर्गीकृत किया है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 14)"><span>(A) Indian Space Research Organisation / भारतीय अंतरिक्ष अनुसंधान संगठन</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 14)"><span>(B) Indian Institute of Remote Sensing / भारतीय सुदूर संवेदन संस्थान</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 14)"><span>(C) Regional Remote Sensing Centres / क्षेत्रीय सुदूर संवेदन केंद्र</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 14)"><span>(D) National Remote Sensing Centre / राष्ट्रीय सुदूर संवेदन केंद्र (NRSC)</span><span class="mcq-feedback">✓ Correct</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (D) National Remote Sensing Centre (NRSC)</strong><br><br>
+          <strong>Explanation:</strong> In NCERT *Land Resources and Agriculture*, wastelands in India (such as gullied/ravinous land, degraded forest, and salt-affected land) have been systematically mapped and categorized using satellite remote sensing by the **National Remote Sensing Centre (NRSC)**, Hyderabad.
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (D) राष्ट्रीय सुदूर संवेदन केंद्र (NRSC)</strong><br><br>
+          <strong>व्याख्या :</strong> भारत में व्यर्थ भूमि (Wastelands) का वर्गीकरण और मानचित्रण उपग्रह आंकड़ों के आधार पर हैदराबाद स्थित राष्ट्रीय सुदूर संवेदन केंद्र (NRSC) द्वारा किया गया है ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q15-17 Table Intro -->
+    <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin:20px 0;">
+      <h3 style="color:var(--gold); font-size:0.95rem; margin-bottom:8px;">📊 Data Table for Questions 15 to 17: Human Development Index of Selected Countries (2022)</h3>
+      <table class="sol-table">
+        <thead>
+          <tr><th>S. No.</th><th>Country</th><th>HDI Value (2022)</th><th>Continent</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Bhutan (भूटान)</td><td>0.681</td><td>Asia</td></tr>
+          <tr><td>2</td><td>Bulgaria (बुल्गारिया)</td><td>0.799</td><td>Europe</td></tr>
+          <tr><td>3</td><td>Mauritius (मॉरीशस)</td><td>0.796</td><td>Africa</td></tr>
+          <tr><td>4</td><td>Singapore (सिंगापुर)</td><td>0.949</td><td>Asia</td></tr>
+          <tr><td>5</td><td>Sweden (स्वीडन)</td><td>0.952</td><td>Europe</td></tr>
+          <tr><td>6</td><td>Venezuela (वेनेजुएला)</td><td>0.699</td><td>South America</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q15 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="15">
+      <div class="q-head">
+        <div class="q-badge">15</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • Table Interpretation</div>
+          <div class="q-text-en">
+            Which one of the following countries is ranked the best in Human Development Index ?
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित में से कौन-सा देश मानव विकास सूचकांक में सबसे उत्तम है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 15)"><span>(A) Bhutan (0.681)</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 15)"><span>(B) Bulgaria (0.799)</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 15)"><span>(C) Mauritius (0.796)</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 15)"><span>(D) Singapore (0.949)</span><span class="mcq-feedback">✓ Correct</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (D) Singapore (0.949)</strong><br><br>
+          Among the four given choices (Bhutan: 0.681, Bulgaria: 0.799, Mauritius: 0.796, Singapore: 0.949), Singapore has the highest HDI score. (Sweden has 0.952, but it is not listed among the options).
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (D) सिंगापुर (0.949)</strong><br><br>
+          दिए गए चारों विकल्पों में सिंगापुर का सूचकांक (0.949) सर्वाधिक है ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="16">
+      <div class="q-head">
+        <div class="q-badge">16</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • Sequence Ordering</div>
+          <div class="q-text-en">
+            Arrange the following countries in descending order of their HDI and choose the correct option :<br>
+            I. Mauritius (0.796)<br>
+            II. Singapore (0.949)<br>
+            III. Sweden (0.952)<br>
+            IV. Venezuela (0.699)
+          </div>
+          <div class="q-text-hi">
+            निम्नलिखित देशों को उनके मानव विकास सूचकांक के अनुसार अवरोही क्रम में व्यवस्थित कीजिए और सही विकल्प का चयन कीजिए ।
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, false, 16)"><span>(A) II, III, IV, I</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 16)"><span>(B) II, III, I, IV</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 16)"><span>(C) III, II, I, IV</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 16)"><span>(D) III, II, IV, I</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (C) III, II, I, IV</strong><br><br>
+          <strong>Descending Order (Highest to Lowest):</strong><br>
+          1. III. Sweden = 0.952<br>
+          2. II. Singapore = 0.949<br>
+          3. I. Mauritius = 0.796<br>
+          4. IV. Venezuela = 0.699
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (C) III, II, I, IV</strong><br><br>
+          अवरोही क्रम (अधिकतम से न्यूनतम) : स्वीडन (0.952) → सिंगापुर (0.949) → मॉरीशस (0.796) → वेनेजुएला (0.699) ।
+        </div>
+      </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="q-card sec-a-q" data-section="A" data-qnum="17">
+      <div class="q-head">
+        <div class="q-badge">17</div>
+        <div class="q-body">
+          <div class="q-marks-tag">1 Mark • Geographic Analysis</div>
+          <div class="q-text-en">
+            Which continent has the highest number of countries in the given table ?
+          </div>
+          <div class="q-text-hi">
+            दी गई तालिका में निम्नलिखित में से किस महाद्वीप के देशों की संख्या सबसे अधिक है ?
+          </div>
+
+          <div class="mcq-container">
+            <div class="mcq-option" onclick="handleMcq(this, true, 17)"><span>(A) Asia (Bhutan, Singapore - 2 countries) / एशिया</span><span class="mcq-feedback">✓ Correct</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 17)"><span>(B) Africa (Mauritius - 1 country) / अफ्रीका</span><span class="mcq-feedback">✗ Incorrect</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, true, 17)"><span>(C) Europe (Bulgaria, Sweden - 2 countries) / यूरोप</span><span class="mcq-feedback">✓ Also 2 countries</span></div>
+            <div class="mcq-option" onclick="handleMcq(this, false, 17)"><span>(D) South America (Venezuela - 1 country) / दक्षिण अमेरिका</span><span class="mcq-feedback">✗ Incorrect</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Rationale</span>
+        <div class="ans-body-en">
+          <strong>Correct Answer: (A) Asia / (C) Europe</strong><br><br>
+          • Asia: Bhutan & Singapore (2 countries)<br>
+          • Europe: Bulgaria & Sweden (2 countries)<br>
+          • Africa: Mauritius (1 country)<br>
+          • South America: Venezuela (1 country)<br>
+          Both Asia and Europe tie for the highest number (2 countries each).
+        </div>
+        <div class="ans-body-hi">
+          <strong>सही उत्तर : (A) एशिया / (C) यूरोप</strong> (दोनों में 2-2 देश शामिल हैं) ।
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION B -->
+    <!-- ========================================== -->
+    <div class="sec-banner sec-b" data-section="B">
+      <div class="sec-banner-left">
+        <h2>SECTION B : Source-Based Questions (खंड – ख)</h2>
+        <p>Questions 18 and 19 carry 3 marks each.</p>
+      </div>
+      <div class="sec-marks-badge">2 × 3 = 6 Marks</div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="q-card sec-b-q" data-section="B" data-qnum="18">
+      <div class="q-head">
+        <div class="q-badge">18</div>
+        <div class="q-body">
+          <div class="q-marks-tag">3 Marks • Map-based Source (1 + 1 + 1 = 3 Marks)</div>
+          <div class="q-text-en">
+            <strong>Study the given map carefully and answer the questions that follow :</strong><br>
+            <em>Areas of Nomadic Herding</em><br><br>
+            (18.1) Identify the area of nomadic herding marked as ‘A’ on the map. (1 Mark)<br>
+            (18.2) Name an important animal reared in the areas marked as ‘B’ on the map. (1 Mark)<br>
+            (18.3) Describe the main characteristic of nomadic herding practised in the world. (1 Mark)<br><br>
+            <strong>Note for Visually Impaired Candidates :</strong><br>
+            Explain the main characteristics of ‘hunting and gathering’ practised in the world. (3 Marks)
+          </div>
+          <div class="q-text-hi">
+            <strong>दिए गए मानचित्र का ध्यानपूर्वक अध्ययन कीजिए और उसके नीचे दिए गए प्रश्नों के उत्तर लिखिए :</strong><br>
+            <em>चलवासी पशुचारण के क्षेत्र</em><br><br>
+            (18.1) मानचित्र पर ‘A’ अंकित चलवासी पशुचारण क्षेत्र की पहचान कीजिए । (1 अंक)<br>
+            (18.2) मानचित्र पर अंकित ‘B’ क्षेत्र में पाले जाने वाले प्रमुख पशु का नाम लिखिए । (1 अंक)<br>
+            (18.3) विश्व में चलवासी पशुचारण की प्रमुख विशेषता का वर्णन कीजिए । (1 अंक)
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Answers to Nomadic Herding Questions:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>(18.1) Area ‘A’:</strong> <strong>North Africa extending through the Arabian Peninsula into Central Asia / Mongolia / Central China</strong> (The core trans-Saharan and Central Asian arid belt). [1 Mark]</li>
+            <li><strong>(18.2) Animal reared in Area ‘B’ (Northern Tundra / Arctic Eurasia):</strong> <strong>Reindeer</strong> (रेनडियर). [1 Mark]</li>
+            <li><strong>(18.3) Main Characteristic of Nomadic Herding:</strong> It is a primitive subsistence activity where pastoralists rely on animals for food, clothing, shelter, and transport, moving seasonally from one pasture to another with their herds in search of water and grazing lands (Transhumance). [1 Mark]</li>
+          </ol>
+          <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:12px 0;">
+          <strong>For Visually Impaired Candidates: Characteristics of Hunting and Gathering:</strong><br>
+          1. Oldest known economic activity carried out at subsistence level.<br>
+          2. Requires low capital and very simple tools (bows, spears, stones).<br>
+          3. Practiced in harsh climates: high latitude (Northern Canada, Eurasia) and low latitude zones (Amazon, Congo, Australian aborigines).
+        </div>
+        <div class="ans-body-hi">
+          <strong>(18.1) क्षेत्र ‘A’ :</strong> उत्तरी अफ्रीका से अरब प्रायद्वीप होते हुए मंगोलिया एवं मध्य चीन का शुष्क क्षेत्र । [1 अंक]<br>
+          <strong>(18.2) क्षेत्र ‘B’ का पशु :</strong> <strong>रेनडियर</strong> (उत्तरी यूरेशिया का टुंड्रा क्षेत्र) । [1 अंक]<br>
+          <strong>(18.3) चलवासी पशुचारण की मुख्य विशेषता :</strong> यह एक प्राचीन जीवन निर्वाह व्यवसाय है जिसमें चरवाहे अपने पशुओं के साथ चारे और पानी की तलाश में एक स्थान से दूसरे स्थान पर मौसमी प्रवास (ऋतु-प्रवास) करते हैं । [1 अंक]
+        </div>
+      </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="q-card sec-b-q" data-section="B" data-qnum="19">
+      <div class="q-head">
+        <div class="q-badge">19</div>
+        <div class="q-body">
+          <div class="q-marks-tag">3 Marks • Passage Study (1 + 1 + 1 = 3 Marks)</div>
+          <div class="q-text-en">
+            <strong>Read the given passage carefully and answer the questions that follow :</strong><br><br>
+            <em>"Water pollution is a source of various water-borne diseases. The diseases commonly caused due to contaminated water are diarrhoea, intestinal worms, hepatitis, etc. The World Health Organization shows that about one-fourth of the communicable diseases in India are water-borne. Though river pollution is common to all rivers, yet pollution of the river Ganga flowing through one of the most populous regions of India has caused great concerns among all. To improve the condition of the river, National Mission for Clean Ganga was initiated. The Namami Gange Programme has been launched for the same."</em><br><br>
+            (19.1) Describe the main cause of water pollution. (1 Mark)<br>
+            (19.2) Mention any two features of the Namami Gange Programme. (1 Mark)<br>
+            (19.3) Explain the impact of water pollution on human health. (1 Mark)
+          </div>
+          <div class="q-text-hi">
+            <strong>दिए गए अनुच्छेद को ध्यानपूर्वक पढ़िए और उसके नीचे दिए गए प्रश्नों के उत्तर लिखिए :</strong><br><br>
+            (19.1) जल प्रदूषण के प्रमुख कारण का वर्णन कीजिए । (1 अंक)<br>
+            (19.2) नमामि गंगे कार्यक्रम की किन्हीं दो विशेषताओं का उल्लेख कीजिए । (1 अंक)<br>
+            (19.3) मानव स्वास्थ्य पर जल प्रदूषण के प्रभाव की व्याख्या कीजिए । (1 अंक)
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>(19.1) Main Cause of Water Pollution:</strong> Discharge of untreated urban domestic sewage, industrial chemical effluents, agricultural runoff containing chemical fertilizers and pesticides, and religious/cultural immersions into river bodies. [1 Mark]</li>
+            <li><strong>(19.2) Two Features of Namami Gange Programme:</strong> (i) Creation of sewage treatment infrastructure (STPs) to stop raw sewage entry into the river, (ii) River surface cleaning, ghat modernisation, afforestation along riverbanks, and biological diversity conservation. [1 Mark]</li>
+            <li><strong>(19.3) Impact on Human Health:</strong> Polluted water causes deadly water-borne and gastrointestinal diseases like diarrhea, hepatitis, typhoid, and cholera, accounting for nearly 25% of all communicable diseases in India. [1 Mark]</li>
+          </ol>
+        </div>
+        <div class="ans-body-hi">
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>(19.1) जल प्रदूषण का प्रमुख कारण :</strong> शहरों का अनौपचारिक सीवेज, उद्योगों का विषाक्त रासायनिक कचरा और रासायनिक उर्वरकों से युक्त कृषि अपवाह का सीधे नदियों में बहाया जाना । [1 अंक]</li>
+            <li><strong>(19.2) नमामि गंगे की दो विशेषताएं :</strong> (i) नदी में सीवेज प्रवाह रोकने हेतु सीवेज ट्रीटमेंट प्लांट (STP) लगाना, (ii) रिवरफ्रंट व घाटों का विकास तथा नदी तटों पर बड़े पैमाने पर वनीकरण । [1 अंक]</li>
+            <li><strong>(19.3) मानव स्वास्थ्य पर प्रभाव :</strong> दूषित जल से हैजा, डायरिया (दस्त), पीलिया (हेपेटाइटिस) और आंतों के कीड़े जैसी संक्रामक बीमारियां होती हैं, जो भारत में 25% संचारी रोगों का कारण हैं । [1 अंक]</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION C -->
+    <!-- ========================================== -->
+    <div class="sec-banner sec-c" data-section="C">
+      <div class="sec-banner-left">
+        <h2>SECTION C : Short Answer Type Questions (खंड – ग)</h2>
+        <p>Questions 20 to 23 carry 3 marks each. Answer in 80 to 100 words.</p>
+      </div>
+      <div class="sec-marks-badge">4 × 3 = 12 Marks</div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="q-card sec-c-q" data-section="C" data-qnum="20">
+      <div class="q-head">
+        <div class="q-badge">20</div>
+        <div class="q-body">
+          <div class="q-marks-tag">3 Marks • Short Answer (80–100 words)</div>
+          <div class="q-text-en">
+            Explain the concept of ‘neo-determinism’.
+          </div>
+          <div class="q-text-hi">
+            ‘नव-निश्चयवाद’ की अवधारणा को स्पष्ट कीजिए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Concept of Neo-Determinism (नव-निश्चयवाद):</strong>
+          <ul style="padding-left:20px; margin-top:8px;">
+            <li><strong>Propounded by Griffith Taylor:</strong> Also known as <em>‘Stop and Go Determinism’</em> (रुको और जाओ निश्चयवाद).</li>
+            <li><strong>Middle Path:</strong> It reflects a middle ground between absolute Environmental Determinism (nature dictating human destiny) and absolute Possibilism (humans freely dominating nature without restraint).</li>
+            <li><strong>Obeying Nature to Conquer It:</strong> It asserts that humans can conquer nature only by understanding and obeying its limits. Nature provides red signals (limits) and green signals (possibilities). Blind exploitation of natural resources leads to environmental catastrophes like global warming, ozone layer depletion, and desertification. Development must be sustainable and respect nature's carrying capacity.</li>
+          </ul>
+        </div>
+        <div class="ans-body-hi">
+          <strong>नव-निश्चयवाद की अवधारणा :</strong>
+          <ul style="padding-left:20px; margin-top:8px;">
+            <li><strong>प्रतिपादक ग्रिफ़िथ टेलर :</strong> इसे 'रुको और जाओ निश्चयवाद' (Stop and Go Determinism) भी कहा जाता है ।</li>
+            <li><strong>मध्यम मार्ग :</strong> यह पर्यावरण निश्चयवाद (प्रकृति की पूर्ण दासता) और संभववाद (प्रकृति पर पूर्ण विजय) के बीच का एक व्यावहारिक मध्यम मार्ग है ।</li>
+            <li><strong>प्रकृति के नियमों का पालन :</strong> इसका सिद्धांत है कि मानव प्रकृति के नियमों को समझकर ही उस पर विजय पा सकता है । यदि मानव प्रकृति की सीमाओं की अनदेखी करेगा तो ग्लोबल वार्मिंग और मरुस्थलीकरण जैसी आपदाएं आएंगी ।</li>
+          </ul>
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 1 mark for origin/Taylor + 2 marks for core philosophical explanation = 3 marks.</span></div>
+      </div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="q-card sec-c-q" data-section="C" data-qnum="21">
+      <div class="q-head">
+        <div class="q-badge">21</div>
+        <div class="q-body">
+          <div class="q-marks-tag">3 Marks • Diagram / Theory Question</div>
+          <div class="q-text-en">
+            Study the given diagram carefully and answer the question that follows :<br>
+            <strong>Demographic Transition Theory:</strong><br>
+            Explain the main characteristics of Stage I of the Demographic Transition Theory on the bases of birth rate, death rate and growth of population.<br><br>
+            <strong>Note for Visually Impaired Candidates :</strong><br>
+            Explain the main characteristics of ‘demographic cycle’. (3 Marks)
+          </div>
+          <div class="q-text-hi">
+            दिए गए आरेख का ध्यानपूर्वक अध्ययन कीजिए और उसके नीचे दिए गए प्रश्न का उत्तर लिखिए :<br>
+            <strong>जनांकिकीय संक्रमण सिद्धांत:</strong><br>
+            जन्म दर, मृत्यु दर और जनसंख्या वृद्धि के आधार पर जनांकिकीय संक्रमण सिद्धांत की प्रथम (I) अवस्था की प्रमुख विशेषताओं की व्याख्या कीजिए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Stage I of Demographic Transition Theory (High Fluctuating Stage):</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>High Birth Rate (उच्च जन्म दर):</strong> Fertility is extremely high because people compensate for high mortality, lack access to family planning, and children are seen as economic assets for agrarian family labor.</li>
+            <li><strong>High Death Rate (उच्च मृत्यु दर):</strong> Mortality is exceptionally high due to recurrent epidemics, famines, malnutrition, poor sanitation, and absence of modern healthcare facilities.</li>
+            <li><strong>Low/Stagnant Population Growth (धीमी जनसंख्या वृद्धि):</strong> Because the high birth rate is nearly matched by the high death rate, net population growth is extremely slow or stagnant. Life expectancy is very low and society is predominantly rural and illiterate (as all nations were before 200 years ago).</li>
+          </ol>
+          <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:12px 0;">
+          <strong>For Visually Impaired Candidates: Demographic Cycle:</strong><br>
+          Describes the progressive transition of a human population from high birth and death rates in a rural, agrarian, illiterate society (Stage I), through rapid population growth with falling death rates (Stage II), to low birth and death rates in an urban, industrialized, literate society with stable population (Stage III).
+        </div>
+        <div class="ans-body-hi">
+          <strong>जनांकिकीय संक्रमण की प्रथम अवस्था की विशेषताएं :</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>उच्च जन्म दर :</strong> अधिक बच्चों का जन्म होता है क्योंकि लोग मृत्यु दर की भरपाई करना चाहते हैं और बच्चे कृषि कार्यों में हाथ बंटाते हैं ।</li>
+            <li><strong>उच्च मृत्यु दर :</strong> महामारियों, भुखमरी और चिकित्सा सुविधाओं के अभाव के कारण मृत्यु दर अत्यधिक ऊंची रहती है ।</li>
+            <li><strong>धीमी/स्थिर जनसंख्या वृद्धि :</strong> उच्च जन्म दर और उच्च मृत्यु दर एक दूसरे को निरस्त कर देती हैं, जिससे शुद्ध जनसंख्या वृद्धि नगण्य या बहुत धीमी रहती है तथा जीवन प्रत्याशा कम होती है ।</li>
+          </ol>
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 1 mark birth rate + 1 mark death rate + 1 mark population growth = 3 marks.</span></div>
+      </div>
+    </div>
+
+    <!-- Q22 -->
+    <div class="q-card sec-c-q" data-section="C" data-qnum="22">
+      <div class="q-head">
+        <div class="q-badge">22</div>
+        <div class="q-body">
+          <div class="q-marks-tag">3 Marks • Short Answer (Internal Choice)</div>
+          <div class="q-text-en">
+            <strong>(a)</strong> “The adolescent people of India have high potential but they are quite vulnerable.” Explain the statement.<br>
+            <em>OR</em><br>
+            <strong>(b)</strong> “The Indian government formulated the National Policy for Skill Development.” Explain the need for the policy.
+          </div>
+          <div class="q-text-hi">
+            <strong>(क)</strong> “भारत के किशोर लोगों में उच्च संभावनाएं हैं, लेकिन वे काफी सुभेद्य (Vulnerable) हैं ।” इस कथन की व्याख्या कीजिए ।<br>
+            <em>अथवा</em><br>
+            <strong>(ख)</strong> “भारतीय सरकार ने कौशल विकास के लिए राष्ट्रीय नीति बनाई है ।” नीति की आवश्यकता की व्याख्या कीजिए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Solution to Part (a): Adolescents in India:</strong><br>
+          • <em>High Potential:</em> Adolescents (aged 10–19 years) constitute roughly 20.9% of India’s population. They embody immense youthful energy, capacity for innovation, and represent the future demographic dividend and economic workforce of the country.<br>
+          • <em>High Vulnerability:</em> They face serious challenges including school drop-out before secondary education, child marriage, maternal mortality among young mothers, high prevalence of anemia (particularly in adolescent girls), drug and alcohol abuse, and lack of career-oriented vocational training.<br><br>
+          <strong>Solution to Part (b) (OR): Need for National Policy for Skill Development:</strong><br>
+          1. <strong>Harnessing Demographic Dividend:</strong> India has one of the world's youngest populations; without market-aligned skills, youth face unemployment.<br>
+          2. <strong>Bridging the Industry-Education Divide:</strong> Conventional education lacks practical vocational training required by modern manufacturing and services.<br>
+          3. <strong>Promoting Entrepreneurship and Productivity:</strong> Enables self-employment, raises national labor productivity, and drives economic initiatives like 'Make in India' and 'Digital India'.
+        </div>
+        <div class="ans-body-hi">
+          <strong>(क) किशोर जनसंख्या का सामर्थ्य व सुभेद्यता :</strong><br>
+          • <em>उच्च संभावनाएं :</em> 10 से 19 वर्ष के किशोर कुल आबादी का लगभग 21% हैं, जो देश के भविष्य और जनसांख्यिकीय लाभांश का आधार हैं ।<br>
+          • <em>सुभेद्यता :</em> उचित मार्गदर्शन के अभाव में वे कम उम्र में विवाह, कुपोषण व एनीमिया (विशेष रूप से बालिकाओं में), स्कूल छोड़ने की दर, नशीले पदार्थों के सेवन तथा बेरोजगारी जैसी समस्याओं के प्रति अत्यधिक संवेदनशील हैं ।<br><br>
+          <strong>(ख) अथवा (कौशल विकास नीति की आवश्यकता) :</strong><br>
+          1. युवाओं को आधुनिक उद्योगों और बाजार की मांग के अनुरूप तकनीकी प्रशिक्षण देना ।<br>
+          2. बेरोजगारी घटाकर युवाओं को स्वरोजगार और उद्यमिता हेतु सक्षम बनाना ।
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 1.5 marks for potential + 1.5 marks for vulnerabilities (or 3 clear points for Skill Policy) = 3 marks.</span></div>
+      </div>
+    </div>
+
+    <!-- Q23 -->
+    <div class="q-card sec-c-q" data-section="C" data-qnum="23">
+      <div class="q-head">
+        <div class="q-badge">23</div>
+        <div class="q-body">
+          <div class="q-marks-tag">3 Marks • Short Answer (80–100 words)</div>
+          <div class="q-text-en">
+            Explain the characteristics of clustered rural settlements in India.
+          </div>
+          <div class="q-text-hi">
+            भारत में ग्रामीण गुच्छित बस्तियों की विशेषताओं को स्पष्ट कीजिए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Characteristics of Clustered Rural Settlements (गुच्छित बस्तियां):</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Compact Built-Up Area:</strong> Houses are built very close to one another in a dense, compact arrangement separated by narrow streets and lanes.</li>
+            <li><strong>Separation from Farmlands:</strong> The inhabited village settlement area (abadi) is distinctly separated from the surrounding agricultural fields, pastures, and orchards.</li>
+            <li><strong>Recognizable Geometric Shapes:</strong> Settlements often assume geometric layouts such as rectangular, radial, or linear patterns along transport routes.</li>
+            <li><strong>Geographical Occurrence & Factors:</strong> Widely found in the fertile alluvial Northern Plains (Indo-Gangetic plains) due to water and fertile soil, and in Bundelkhand/Nagaland due to defense and security needs.</li>
+          </ol>
+        </div>
+        <div class="ans-body-hi">
+          <strong>गुच्छित ग्रामीण बस्तियों की विशेषताएं :</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>सघन बसावट :</strong> मकान एक-दूसरे से सटे हुए बहुत पास-पास बनाए जाते हैं और गलियां संकरी होती हैं ।</li>
+            <li><strong>खेतों से अलग निवास क्षेत्र :</strong> मुख्य रिहायशी क्षेत्र चारों ओर फैले कृषि खेतों, चरागाहों और खलिहानों से स्पष्ट रूप से अलग होता है ।</li>
+            <li><strong>भौगोलिक वितरण :</strong> ये बस्तियां उपजाऊ जलोढ़ मैदानों (उत्तर भारत के मैदान) में जल उपलब्धता तथा नागालैंड व बुंदेलखंड में सुरक्षा कारणों से पाई जाती हैं ।</li>
+          </ol>
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 1 mark for each well-described characteristic (3 × 1 = 3 marks).</span></div>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION D -->
+    <!-- ========================================== -->
+    <div class="sec-banner sec-d" data-section="D">
+      <div class="sec-banner-left">
+        <h2>SECTION D : Long Answer Type Questions (खंड – घ)</h2>
+        <p>Questions 24 to 28 carry 5 marks each. Answer in 120 to 150 words.</p>
+      </div>
+      <div class="sec-marks-badge">5 × 5 = 25 Marks</div>
+    </div>
+
+    <!-- Q24 -->
+    <div class="q-card sec-d-q" data-section="D" data-qnum="24">
+      <div class="q-head">
+        <div class="q-badge">24</div>
+        <div class="q-body">
+          <div class="q-marks-tag">5 Marks • Long Answer (120–150 words)</div>
+          <div class="q-text-en">
+            “Quaternary activities are based on specialised knowledge and skill.” Justify the statement by giving suitable arguments.
+          </div>
+          <div class="q-text-hi">
+            “चतुर्थक क्रियाकलाप विशिष्टीकृत ज्ञान और कौशल पर आधारित हैं ।” उपयुक्त तर्क देकर इस कथन को न्यायसंगत ठहराइए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Arguments Justifying that Quaternary Activities are Based on Specialized Knowledge & Skill:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Focus on Information & Knowledge Generation:</strong> Quaternary activities involve the collection, production, processing, and dissemination of information and knowledge rather than handling physical raw materials.</li>
+            <li><strong>Advanced Cognitive & Technical Competence:</strong> Personnel in this sector (scientists, software developers, financial analysts, statisticians, tax consultants) require specialized university education, high intellectual expertise, and technical training.</li>
+            <li><strong>Research and Development (R&D) Driven:</strong> This sector propels technological innovation, patents, medical discoveries, and product improvements that dictate the efficiency of all primary and secondary industries.</li>
+            <li><strong>White-Collar & Gold-Collar Dominance:</strong> Workers in this sector are highly paid white-collar and specialized professionals whose output is measured in intellectual property and business solutions.</li>
+            <li><strong>Decoupling from Raw Material Locations:</strong> Unlike manufacturing, quaternary tasks can be conducted from anywhere using digital telecommunications, giving rise to specialized technology parks (e.g. Silicon Valley, Bengaluru).</li>
+          </ol>
+        </div>
+        <div class="ans-body-hi">
+          <strong>चतुर्थक क्रियाकलाप विशिष्ट ज्ञान व कौशल पर आधारित हैं - तर्क :</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>ज्ञान व सूचना का उत्पादन :</strong> यह क्षेत्र सूचना के संकलन, उत्पादन और प्रकीर्णन (रिसर्च व एनालिसिस) पर केंद्रित है ।</li>
+            <li><strong>उच्च बौद्धिक दक्षता :</strong> इसमें कार्यरत व्यक्ति (वैज्ञानिक, सॉफ्टवेयर इंजीनियर, वित्तीय सलाहकार) उच्च शिक्षित और विशिष्ट तकनीकी कौशल से संपन्न होते हैं ।</li>
+            <li><strong>अनुसंधान एवं विकास (R&D) :</strong> यह नए उत्पादों, औषधियों और तकनीकों के नवाचार का स्रोत है जो अन्य सभी उद्योगों को गति देता है ।</li>
+            <li><strong>'सफेद कॉलर' कर्मी :</strong> इसमें उच्च वेतन पाने वाले पेशेवर शामिल होते हैं जिनका कार्य शारीरिक श्रम के बजाय मानसिक क्षमता पर निर्भर करता है ।</li>
+            <li><strong>सॉफ्टवेयर पार्क :</strong> दूरसंचार और इंटरनेट के विकास से यह क्षेत्र भौगोलिक दूरियों से परे सिलिकॉन वैली और बेंगलुरु जैसे आईटी हब में विकसित हुआ है ।</li>
+          </ol>
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 1 mark for each valid argument/point with explanation (5 × 1 = 5 marks).</span></div>
+      </div>
+    </div>
+
+    <!-- Q25 -->
+    <div class="q-card sec-d-q" data-section="D" data-qnum="25">
+      <div class="q-head">
+        <div class="q-badge">25</div>
+        <div class="q-body">
+          <div class="q-marks-tag">5 Marks • Long Answer (Internal Choice)</div>
+          <div class="q-text-en">
+            <strong>(a)</strong> “Roads play a vital role in trade and commerce of a country across the world.” Support the statement with examples.<br>
+            <em>OR</em><br>
+            <strong>(b)</strong> “Railways are a mode of land transport for bulky goods and passengers over long distances in the world.” Support the statement with examples.
+          </div>
+          <div class="q-text-hi">
+            <strong>(क)</strong> “विश्व भर में सड़कें देश के वाणिज्य एवं व्यापार में महत्वपूर्ण भूमिका निभाती हैं ।” उदाहरणों सहित इस कथन की पुष्टि कीजिए ।<br>
+            <em>अथवा</em><br>
+            <strong>(ख)</strong> “विश्व में रेलमार्ग लंबी दूरी तक स्थूल वस्तुओं और यात्रियों के स्थल परिवहन का साधन है ।” उदाहरणों सहित इस कथन की पुष्टि कीजिए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Solution to Part (a): Role of Roads in World Trade & Commerce:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Door-to-Door Delivery:</strong> Roads provide direct door-to-door service, reducing loading/unloading costs and transit delays.</li>
+            <li><strong>Feeder to Other Transport Modes:</strong> Roads link rural hinterlands, farms, and factories to railways, seaports, and airports.</li>
+            <li><strong>Ideal for Short-Haul & Perishables:</strong> Unmatched flexibility for transporting fresh agricultural produce (milk, fruits, vegetables) to urban centers.</li>
+            <li><strong>Topographical Adaptability:</strong> Roads negotiate steep gradients and rugged mountain terrain where rail lines cannot be built.</li>
+            <li><strong>Trans-Continental Highways:</strong> Examples like the Pan-American Highway, Trans-Canada Highway, and India’s Golden Quadrilateral directly integrate continental trade corridors.</li>
+          </ol>
+          <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:12px 0;">
+          <strong>Solution to Part (b) (OR): Railways for Bulky Goods & Long-Distance Passenger Transit:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Heavy Freight Haulage:</strong> Economically carries bulk commodities like coal, iron ore, grains, and crude oil across thousands of kilometers.</li>
+            <li><strong>High-Speed Passenger Inter-City Transit:</strong> Bullet trains and express lines (TGV France, Shinkansen Japan, Vande Bharat India) transport millions efficiently.</li>
+            <li><strong>Trans-Continental Trunk Lines:</strong> Trans-Siberian Railway (St. Petersburg to Vladivostok, 9,332 km) connects European Russia with the Pacific coast.</li>
+            <li><strong>Economic Backbone of Continents:</strong> Dense railway grids in North America and Western Europe underpin industrial integration and raw material supply.</li>
+          </ol>
+        </div>
+        <div class="ans-body-hi">
+          <strong>(क) वाणिज्य एवं व्यापार में सड़कों की भूमिका :</strong><br>
+          1. <strong>घर-घर तक सेवा (Door-to-Door) :</strong> सड़कें उत्पादों को सीधे खेत/फैक्ट्री से उपभोक्ता तक पहुंचाती हैं ।<br>
+          2. <strong>अन्य साधनों के लिए पूरक :</strong> रेलवे स्टेशनों, बंदरगाहों और हवाई अड्डों तक माल पहुंचाने का एकमात्र माध्यम सड़कें हैं ।<br>
+          3. <strong>नाशवान वस्तुओं का परिवहन :</strong> फल, सब्जियां, दूध जैसी वस्तुओं के त्वरित परिवहन हेतु सर्वाधिक उपयुक्त हैं ।<br>
+          4. <strong>विषम भूभाग में सुलभ :</strong> पहाड़ों और बीहड़ क्षेत्रों में रेल के बजाय सड़कें आसानी से बनाई जा सकती हैं ।<br>
+          5. <strong>प्रमुख महामार्ग :</strong> ट्रांस-कनाडियन हाईवे और भारत का स्वर्णिम चतुर्भुज व्यापार को गति देते हैं ।
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 1 mark for each point with examples (5 × 1 = 5 marks).</span></div>
+      </div>
+    </div>
+
+    <!-- Q26 -->
+    <div class="q-card sec-d-q" data-section="D" data-qnum="26">
+      <div class="q-head">
+        <div class="q-badge">26</div>
+        <div class="q-body">
+          <div class="q-marks-tag">5 Marks • Long Answer (Internal Choice)</div>
+          <div class="q-text-en">
+            <strong>(a)</strong> ‘‘Metro rail has revolutionised the urban transport system in India.’’ Support the statement with examples.<br>
+            <em>OR</em><br>
+            <strong>(b)</strong> ‘‘Among all the personal communication systems, Internet is the most effective and advanced one in India.’’ Support the statement with examples.
+          </div>
+          <div class="q-text-hi">
+            <strong>(क)</strong> “मेट्रो रेल ने भारत में नगरीय परिवहन व्यवस्था में क्रांति ला दी है ।” उदाहरणों सहित इस कथन की पुष्टि कीजिए ।<br>
+            <em>अथवा</em><br>
+            <strong>(ख)</strong> “भारत में सभी वैयक्तिक संचार तंत्रों में इंटरनेट सर्वाधिक प्रभावी एवं उन्नत है ।” उदाहरणों सहित इस कथन की पुष्टि कीजिए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Solution to Part (a): Metro Rail Revolution in India:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Mass Rapid Transit Capability:</strong> Cities like Delhi, Bengaluru, Mumbai, and Kolkata carry millions of passengers daily on elevated and underground lines without road congestion.</li>
+            <li><strong>Drastic Reduction in Travel Time & Punctuality:</strong> Segregated electric tracks ensure trains run on strict clockwork schedules, cutting commuting time by more than half.</li>
+            <li><strong>Environmental Sustainability:</strong> Electric operation has eliminated tons of vehicular exhaust emissions, combating urban smog and greenhouse pollution.</li>
+            <li><strong>Suburban Integration:</strong> Delhi Metro connects distant suburbs (Noida, Gurugram, Faridabad, Ghaziabad) seamlessly into a unified economic hub.</li>
+            <li><strong>Safety & Comfort:</strong> Air-conditioned coaches, CCTV surveillance, automated ticketing, and dedicated facilities for women and persons with disabilities.</li>
+          </ol>
+          <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:12px 0;">
+          <strong>Solution to Part (b) (OR): Internet as Most Advanced Personal Communication System in India:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Real-Time Instant Connectivity:</strong> Instant messaging (WhatsApp), email, and voice/video calling connect people across the country and globe in milliseconds.</li>
+            <li><strong>Financial Integration (UPI):</strong> The internet powers India’s Unified Payments Interface (UPI) and mobile banking, handling billions of personal peer-to-peer and merchant transactions smoothly.</li>
+            <li><strong>Democratization of Knowledge & Work:</strong> Facilitates remote work, online education (MOOCs, digital classes), and telemedicine accessible on smartphones.</li>
+            <li><strong>Affordable Data Revolution:</strong> Ubiquitous 4G/5G mobile penetration has extended high-speed internet to rural towns and villages.</li>
+          </ol>
+        </div>
+        <div class="ans-body-hi">
+          <strong>(क) मेट्रो रेल क्रांति :</strong><br>
+          1. <strong>सड़क जाम से मुक्ति :</strong> दिल्ली, मुंबई, बेंगलुरु में लाखों यात्री रोज बिना ट्रैफिक जाम के आवागमन करते हैं ।<br>
+          2. <strong>समय की भारी बचत :</strong> स्वतंत्र ट्रैक पर तेज गति से चलने के कारण यात्रा समय आधा हो गया है ।<br>
+          3. <strong>प्रदूषण में कमी :</strong> बिजली से चलने के कारण वाहनों के धुएं और कार्बन उत्सर्जन में भारी कमी आई है ।<br>
+          4. <strong>उप-नगरों का जुड़ाव :</strong> दिल्ली मेट्रो ने नोएडा, गुरुग्राम, गाजियाबाद और फरीदाबाद को एकीकृत कर दिया है ।<br>
+          5. <strong>सुरक्षित व वातानुकूलित सफर :</strong> महिलाओं के लिए आरक्षित डिब्बे, सीसीटीवी और स्वचालित टिकट प्रणाली ।
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 5 marks for 5 well-elaborated points with examples.</span></div>
+      </div>
+    </div>
+
+    <!-- Q27 -->
+    <div class="q-card sec-d-q" data-section="D" data-qnum="27">
+      <div class="q-head">
+        <div class="q-badge">27</div>
+        <div class="q-body">
+          <div class="q-marks-tag">5 Marks • Long Answer (Internal Choice)</div>
+          <div class="q-text-en">
+            <strong>(a)</strong> Examine the agricultural development in India since independence.<br>
+            <em>OR</em><br>
+            <strong>(b)</strong> Examine the various problems of Indian agriculture.
+          </div>
+          <div class="q-text-hi">
+            <strong>(क)</strong> स्वतंत्रता प्राप्ति के समय से भारत में कृषि के विकास की परख कीजिए ।<br>
+            <em>अथवा</em><br>
+            <strong>(ख)</strong> भारतीय कृषि की विभिन्न समस्याओं की परख कीजिए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Solution to Part (a): Agricultural Development in India Since Independence:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Institutional Land Reforms (1950s):</strong> Abolition of the exploitative Zamindari system, tenancy reforms, and consolidation of fragmented holdings.</li>
+            <li><strong>The Green Revolution (late 1960s–1970s):</strong> Adoption of High Yielding Variety (HYV) seeds for wheat and rice, chemical fertilizers, tubewell irrigation, and tractors in Punjab, Haryana, and Western UP, ending India's dependence on foreign food aid (PL-480).</li>
+            <li><strong>Allied Revolutions:</strong> White Revolution (Operation Flood) made India the world's largest milk producer; Blue Revolution transformed fisheries; Yellow Revolution expanded oilseed crops.</li>
+            <li><strong>Food Security & Export Dominance:</strong> India transformed from food-deficient to self-sufficient, building massive buffer stocks through FCI and emerging as a top exporter of rice, spices, and sugar.</li>
+            <li><strong>Modern Technology & Credit Support:</strong> Expansion of Kisan Credit Cards (KCC), PM Fasal Bima Yojana, Soil Health Cards, and micro-irrigation subsidies.</li>
+          </ol>
+          <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:12px 0;">
+          <strong>Solution to Part (b) (OR): Major Problems of Indian Agriculture:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Erratic Monsoon Dependence:</strong> Nearly half of cropped area relies on rainfall; drought or delayed monsoons causes widespread crop failure.</li>
+            <li><strong>Small and Fragmented Landholdings:</strong> Population pressure has reduced average farm size to under 1 hectare, preventing modern mechanization.</li>
+            <li><strong>Low Per-Hectare Productivity:</strong> Crop yields lag significantly behind international benchmarks due to poor access to certified seeds and modern inputs.</li>
+            <li><strong>Inadequate Storage & Distress Sales:</strong> Lack of cold chains and warehousing forces farmers to sell produce to middlemen at unremunerative prices.</li>
+            <li><strong>Environmental Degradation:</strong> Excessive tubewell pumping has depleted water tables in Punjab and Haryana, while chemical overuse has degraded soil fertility.</li>
+          </ol>
+        </div>
+        <div class="ans-body-hi">
+          <strong>(क) स्वतंत्रता के बाद कृषि का विकास :</strong><br>
+          1. <strong>संस्थागत सुधार :</strong> जमींदारी प्रथा का उन्मूलन और काश्तकारी सुधार किए गए ।<br>
+          2. <strong>हरित क्रांति (1960 का दशक) :</strong> अधिक उपज देने वाले बीज (HYV), रासायनिक उर्वरक और नलकूप सिंचाई से खाद्यान्न में आत्मनिर्भरता मिली ।<br>
+          3. <strong>अन्य क्रांतियां :</strong> श्वेत क्रांति (दुग्ध उत्पादन) और पीली क्रांति (तिलहन उत्पादन) ने ग्रामीण अर्थव्यवस्था को बदला ।<br>
+          4. <strong>खाद्यान्न सुरक्षा व निर्यात :</strong> भारत खाद्यान्न आयातक से बड़ा निर्यातक बना (चावल, गेहूं) ।<br>
+          5. <strong>आधुनिक योजनाएं :</strong> पीएम किसान सम्मान निधि, मृदा स्वास्थ्य कार्ड और सूक्ष्म सिंचाई को बढ़ावा ।
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 5 marks for 5 comprehensive points.</span></div>
+      </div>
+    </div>
+
+    <!-- Q28 -->
+    <div class="q-card sec-d-q" data-section="D" data-qnum="28">
+      <div class="q-head">
+        <div class="q-badge">28</div>
+        <div class="q-body">
+          <div class="q-marks-tag">5 Marks • Long Answer (Internal Choice)</div>
+          <div class="q-text-en">
+            <strong>(a)</strong> “Non-conventional energy sources are equitably distributed in India.” Justify the statement with suitable arguments.<br>
+            <em>OR</em><br>
+            <strong>(b)</strong> “The conventional sources of energy need to be replaced due to their exhaustibility.” Justify the statement with suitable arguments.
+          </div>
+          <div class="q-text-hi">
+            <strong>(क)</strong> “भारत में ऊर्जा के गैर-परंपरागत स्रोत समान रूप से वितरित हैं ।” उपयुक्त तर्कों सहित इस कथन को न्यायसंगत ठहराइए ।<br>
+            <em>अथवा</em><br>
+            <strong>(ख)</strong> “समाप्यता के कारण ऊर्जा के परम्परागत स्रोतों को बदलने की आवश्यकता है ।” उपयुक्त तर्कों सहित इस कथन को न्यायसंगत ठहराइए ।
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Solution</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Solution & Marking Scheme</span>
+        <div class="ans-body-en">
+          <strong>Solution to Part (a): Equitable Distribution of Non-Conventional Energy in India:</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Widespread Solar Insolation:</strong> Being a tropical country, almost all states receive 250–300 sunny days annually, with immense solar potential in western India (Rajasthan, Gujarat) as well as the Deccan plateau.</li>
+            <li><strong>Extensive Coastal & Ridge Wind Power:</strong> A vast 7,516 km coastline provides steady wind energy in Tamil Nadu, Gujarat, Maharashtra, and Karnataka.</li>
+            <li><strong>Universal Biomass & Biogas:</strong> Agricultural residue, cattle dung, and municipal organic wastes are available across every village and town in India.</li>
+            <li><strong>Geothermal & Tidal Dispersal:</strong> Geothermal springs in Himachal (Manikaran) and Ladakh (Puga valley); tidal potential in Gulf of Khambhat and Sunderbans.</li>
+            <li><strong>Decentralized Clean Energy:</strong> Unlike coal localized in eastern plateau states (Jharkhand, Odisha), non-conventional sources empower local micro-grids everywhere.</li>
+          </ol>
+          <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:12px 0;">
+          <strong>Solution to Part (b) (OR): Why Conventional Sources Need Replacement (Exhaustibility):</strong>
+          <ol style="padding-left:20px; margin-top:8px;">
+            <li><strong>Finite Reserves:</strong> Fossil fuels (coal, petroleum, natural gas) take millions of years to form and are being depleted rapidly by industrial consumption.</li>
+            <li><strong>Heavy Import Dependence:</strong> India imports over 85% of its crude oil requirements, straining balance of payments and exposing the economy to international price shocks.</li>
+            <li><strong>Severe Climate Impact:</strong> Combustion of fossil fuels emits massive greenhouse gases causing global warming, acid rain, and urban smog.</li>
+            <li><strong>Environmental Degradation:</strong> Coal mining causes deforestation, land subsidence, and water contamination.</li>
+          </ol>
+        </div>
+        <div class="ans-body-hi">
+          <strong>(क) गैर-परंपरागत ऊर्जा स्रोतों का समान वितरण :</strong><br>
+          1. <strong>सौर ऊर्जा :</strong> भारत उष्णकटिबंधीय देश है जहां वर्ष में 300 धूप वाले दिन मिलते हैं (राजस्थान, गुजरात और दक्कन का पठार) ।<br>
+          2. <strong>पवन ऊर्जा :</strong> 7,500 किमी लंबी तटरेखा के कारण तमिलनाडु, गुजरात और महाराष्ट्र में प्रचुर पवन ऊर्जा उपलब्ध है ।<br>
+          3. <strong>जैव ऊर्जा (बायोगैस) :</strong> कृषि अवशेष और गोबर देश के हर गांव में सुलभ हैं ।<br>
+          4. <strong>विकेंद्रीकृत उत्पादन :</strong> कोयले की तरह केवल पूर्वी भारत में केंद्रित होने के बजाय ये स्रोत हर राज्य में उपलब्ध हैं ।
+        </div>
+        <div class="marking-scheme-pill"><span>🎯 Marking Scheme: 5 marks for 5 logical arguments with geographical examples.</span></div>
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION E -->
+    <!-- ========================================== -->
+    <div class="sec-banner sec-e" data-section="E">
+      <div class="sec-banner-left">
+        <h2>SECTION E : Map-Based Questions (खंड – ङ)</h2>
+        <p>Questions 29 and 30 carry 5 marks each (World & India Maps).</p>
+      </div>
+      <div class="sec-marks-badge">2 × 5 = 10 Marks</div>
+    </div>
+
+    <!-- Q29 -->
+    <div class="q-card sec-e-q" data-section="E" data-qnum="29">
+      <div class="q-head">
+        <div class="q-badge">29</div>
+        <div class="q-body">
+          <div class="q-marks-tag">5 Marks • World Political Map (5 × 1 Mark)</div>
+          <div class="q-text-en">
+            <strong>On the given political outline map of the World, seven geographical features have been marked as A, B, C, D, E, F and G. Identify any five :</strong><br><br>
+            A. A terminal station on the Trans-Australian Railway<br>
+            B. A major sea port<br>
+            C. A major international airport<br>
+            D. An important inland waterway<br>
+            E. An area of subsistence gathering<br>
+            F. An area of extensive commercial grain farming<br>
+            G. An area of mixed farming<br><br>
+            <strong>Note for Visually Impaired Candidates :</strong><br>
+            (29.1) Western terminal station of Trans-Australian Railway.<br>
+            (29.2) Major sea port on western coast of USA.<br>
+            (29.3) Major international airport in France.<br>
+            (29.4) Inland waterway between Canada and USA.<br>
+            (29.5) Region of Africa where subsistence gathering is practised.<br>
+            (29.6) Extensive commercial grain farming in New Zealand.<br>
+            (29.7) Area of mixed farming in South America.
+          </div>
+          <div class="q-text-hi">
+            <strong>दिए गए विश्व के राजनीतिक रेखा-मानचित्र पर सात भौगोलिक लक्षणों (A से G) में से किन्हीं पाँच की पहचान कीजिए :</strong><br>
+            A. पार-ऑस्ट्रेलियन रेलमार्ग पर एक टर्मिनल स्टेशन<br>
+            B. एक प्रमुख समुद्री पत्तन<br>
+            C. एक प्रमुख अंतर्राष्ट्रीय वायु पत्तन<br>
+            D. एक महत्वपूर्ण आंतरिक जलमार्ग<br>
+            E. निर्वाह संग्रहण का एक क्षेत्र<br>
+            F. गहन/विस्तृत वाणिज्य अनाज कृषि का एक क्षेत्र<br>
+            G. मिश्रित कृषि का एक क्षेत्र
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Official Map Answers</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Map Answers in CBSE Table Format</span>
+        <div class="ans-body-en">
+          <table class="sol-table">
+            <thead>
+              <tr><th>Letter</th><th>Geographical Feature Question</th><th>Identified Location / Name</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>A</strong></td><td>Terminal station on Trans-Australian Railway</td><td><strong>Perth</strong> (Western terminal) or <strong>Sydney</strong> (Eastern terminal)</td></tr>
+              <tr><td><strong>B</strong></td><td>A major sea port (West coast of North America)</td><td><strong>San Francisco</strong> / <strong>Vancouver</strong> / <strong>Los Angeles</strong></td></tr>
+              <tr><td><strong>C</strong></td><td>Major international airport in France</td><td><strong>Paris</strong> (Charles de Gaulle / Orly)</td></tr>
+              <tr><td><strong>D</strong></td><td>Important inland waterway (USA/Canada)</td><td><strong>St. Lawrence Seaway / Great Lakes</strong></td></tr>
+              <tr><td><strong>E</strong></td><td>Area of subsistence gathering in Africa</td><td><strong>Tropical Africa (Congo basin) / Kalahari Desert</strong></td></tr>
+              <tr><td><strong>F</strong></td><td>Extensive commercial grain farming (New Zealand)</td><td><strong>Canterbury Plains</strong> (New Zealand)</td></tr>
+              <tr><td><strong>G</strong></td><td>Area of mixed farming in South America</td><td><strong>Pampas of Argentina and Uruguay</strong></td></tr>
+            </tbody>
+          </table>
+          <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:12px 0;">
+          <strong>Answers for Visually Impaired Candidates (Q 29.1–29.7):</strong><br>
+          (29.1) <strong>Perth</strong> | (29.2) <strong>San Francisco</strong> | (29.3) <strong>Paris</strong> | (29.4) <strong>St. Lawrence Seaway</strong> | (29.5) <strong>Congo Basin / Central Africa</strong> | (29.6) <strong>Canterbury Plains</strong> | (29.7) <strong>Pampas (Argentina)</strong>.
+        </div>
+        <div class="ans-body-hi">
+          <strong>विश्व मानचित्र उत्तर :</strong><br>
+          A. <strong>पर्थ</strong> (ट्रांस-ऑस्ट्रेलियन रेलमार्ग का पश्चिमी टर्मिनल स्टेशन)<br>
+          B. <strong>सैन फ्रांसिस्को</strong> (उत्तरी अमेरिका का प्रमुख पत्तन)<br>
+          C. <strong>पेरिस</strong> (फ्रांस का अंतर्राष्ट्रीय हवाई अड्डा)<br>
+          D. <strong>सेंट लॉरेंस जलमार्ग</strong> (कनाडा-अमेरिका सीमा)<br>
+          E. <strong>कांगो बेसिन / मध्य अफ्रीका</strong> (निर्वाह संग्रहण क्षेत्र)<br>
+          F. <strong>कैंटरबरी के मैदान</strong> (न्यूजीलैंड में वाणिज्य अनाज कृषि)<br>
+          G. <strong>पंपास, अर्जेंटीना</strong> (दक्षिण अमेरिका में मिश्रित कृषि)
+        </div>
+      </div>
+    </div>
+
+    <!-- Q30 -->
+    <div class="q-card sec-e-q" data-section="E" data-qnum="30">
+      <div class="q-head">
+        <div class="q-badge">30</div>
+        <div class="q-body">
+          <div class="q-marks-tag">5 Marks • India Political Map (5 × 1 Mark)</div>
+          <div class="q-text-en">
+            <strong>On the given political outline map of India, locate and label any five of the following seven features with appropriate symbols :</strong><br><br>
+            (30.1) State leading in the production of rice<br>
+            (30.2) State leading in the production of wheat<br>
+            (30.3) Easternmost iron-ore mining area in Odisha<br>
+            (30.4) Coal mining area in Tamil Nadu<br>
+            (30.5) An oil refinery in Bihar<br>
+            (30.6) A major sea port in Gujarat<br>
+            (30.7) An international airport located in Assam
+          </div>
+          <div class="q-text-hi">
+            <strong>दिए गए भारत के राजनीतिक रेखा-मानचित्र पर निम्नलिखित सात भौगोलिक लक्षणों में से किन्हीं पाँच को उपयुक्त चिह्नों द्वारा दर्शाइए और उनके नाम लिखिए :</strong><br>
+            (30.1) चावल उत्पादन में अग्रणी राज्य<br>
+            (30.2) गेहूं उत्पादन में अग्रणी राज्य<br>
+            (30.3) ओडिशा में सबसे पूर्वी लौह-अयस्क खनन क्षेत्र<br>
+            (30.4) तमिलनाडु में कोयला खनन क्षेत्र<br>
+            (30.5) बिहार में एक तेल शोधन कारखाना<br>
+            (30.6) गुजरात में एक प्रमुख समुद्री पत्तन<br>
+            (30.7) असम में स्थित एक अंतर्राष्ट्रीय वायु पत्तन
+          </div>
+        </div>
+      </div>
+      <div class="ans-footer">
+        <button class="btn-toggle-ans" onclick="toggleAnswer(this)"><span>👁️ Reveal Official Map Answers</span></button>
+        <span class="ans-status">Answer is hidden</span>
+      </div>
+      <div class="answer-tray">
+        <span class="ans-header-tag">✓ Official Map Answers in CBSE Table Format</span>
+        <div class="ans-body-en">
+          <table class="sol-table">
+            <thead>
+              <tr><th>S. No.</th><th>Geographical Feature Question</th><th>Correct Location / Label on India Map</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>(30.1)</strong></td><td>State leading in production of rice</td><td><strong>West Bengal</strong> (पश्चिम बंगाल)</td></tr>
+              <tr><td><strong>(30.2)</strong></td><td>State leading in production of wheat</td><td><strong>Uttar Pradesh</strong> (उत्तर प्रदेश)</td></tr>
+              <tr><td><strong>(30.3)</strong></td><td>Easternmost iron-ore mining area in Odisha</td><td><strong>Mayurbhanj</strong> (मयूरभंज - Gorumahisani / Badampahar)</td></tr>
+              <tr><td><strong>(30.4)</strong></td><td>Coal mining area in Tamil Nadu</td><td><strong>Neyveli</strong> (नेवेली - Lignite coal mine)</td></tr>
+              <tr><td><strong>(30.5)</strong></td><td>Oil refinery in Bihar</td><td><strong>Barauni</strong> (बरौनी तेल शोधन कारखाना)</td></tr>
+              <tr><td><strong>(30.6)</strong></td><td>Major sea port in Gujarat</td><td><strong>Kandla (Deendayal Port)</strong> (कांडला पत्तन)</td></tr>
+              <tr><td><strong>(30.7)</strong></td><td>International airport in Assam</td><td><strong>Guwahati</strong> (गुवाहाटी - Lokpriya Gopinath Bordoloi Airport)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ans-body-hi">
+          <strong>भारत मानचित्र उत्तर तालिका :</strong><br>
+          (30.1) चावल उत्पादक अग्रणी राज्य : <strong>पश्चिम बंगाल</strong><br>
+          (30.2) गेहूं उत्पादक अग्रणी राज्य : <strong>उत्तर प्रदेश</strong><br>
+          (30.3) ओडिशा में सबसे पूर्वी लौह-अयस्क क्षेत्र : <strong>मयूरभंज</strong> (या बादामपहाड़/गुरुमहिसानी)<br>
+          (30.4) तमिलनाडु में कोयला क्षेत्र : <strong>नेवेली</strong> (लिग्नाइट कोयला)<br>
+          (30.5) बिहार में तेल शोधनागार : <strong>बरौनी</strong><br>
+          (30.6) गुजरात में प्रमुख समुद्री पत्तन : <strong>कांडला (दीनदयाल पत्तन)</strong><br>
+          (30.7) असम का अंतर्राष्ट्रीय हवाई अड्डा : <strong>गुवाहाटी</strong> (लोकप्रिय गोपीनाथ बोरदोलोई हवाई अड्डा)
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="quick-scroll">
+    <button class="scroll-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to Top">↑</button>
+  </div>
+
+  <footer>
+    <p><strong>NextSem Academy</strong> • CBSE Class 12 Geography (Code 64/3/1) Solved Board Paper Studio</p>
+    <p style="margin-top:4px;">Original Source: 64-3-1.pdf (Series QR3SP, Set 1) • Verified NCERT Solutions</p>
+  </footer>
+
+  <script>
+    function toggleAnswer(btn) {
+      const card = btn.closest('.q-card');
+      const tray = card.querySelector('.answer-tray');
+      const status = card.querySelector('.ans-status');
+      const isRevealed = tray.classList.contains('revealed');
+
+      if (isRevealed) {
+        tray.classList.remove('revealed');
+        btn.innerHTML = '<span>👁️ Reveal Solution</span>';
+        if (status) status.textContent = 'Answer is hidden';
+      } else {
+        tray.classList.add('revealed');
+        btn.innerHTML = '<span>🙈 Hide Solution</span>';
+        if (status) status.textContent = 'Answer is revealed';
+      }
+    }
+
+    function toggleAllAnswers(show) {
+      const trays = document.querySelectorAll('.answer-tray');
+      const btns = document.querySelectorAll('.btn-toggle-ans');
+      const statuses = document.querySelectorAll('.ans-status');
+
+      trays.forEach(tray => {
+        if (show) tray.classList.add('revealed');
+        else tray.classList.remove('revealed');
+      });
+
+      btns.forEach(btn => {
+        btn.innerHTML = show ? '<span>🙈 Hide Solution</span>' : '<span>👁️ Reveal Solution</span>';
+      });
+
+      statuses.forEach(status => {
+        status.textContent = show ? 'Answer is revealed' : 'Answer is hidden';
+      });
+    }
+
+    function handleMcq(optionElem, isCorrect, qId) {
+      const container = optionElem.closest('.mcq-container');
+      const allOptions = container.querySelectorAll('.mcq-option');
+      
+      allOptions.forEach(opt => {
+        opt.classList.remove('correct', 'wrong');
+        const fb = opt.querySelector('.mcq-feedback');
+        if (fb) fb.style.display = 'none';
+      });
+
+      const feedback = optionElem.querySelector('.mcq-feedback');
+      if (isCorrect) {
+        optionElem.classList.add('correct');
+        if (feedback) feedback.style.display = 'inline-block';
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 35,
+            spread: 60,
+            origin: { y: 0.8 }
+          });
+        }
+      } else {
+        optionElem.classList.add('wrong');
+        if (feedback) feedback.style.display = 'inline-block';
+      }
+    }
+
+    let currentLang = 'BOTH';
+    function toggleLanguage() {
+      const indicator = document.getElementById('lang-indicator');
+      const hiElements = document.querySelectorAll('.q-text-hi, .ans-body-hi');
+      const enElements = document.querySelectorAll('.q-text-en, .ans-body-en');
+
+      if (currentLang === 'BOTH') {
+        currentLang = 'EN_ONLY';
+        indicator.textContent = '🇬🇧 English Only';
+        hiElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = 'block');
+      } else if (currentLang === 'EN_ONLY') {
+        currentLang = 'HI_ONLY';
+        indicator.textContent = '🇮🇳 हिन्दी Only';
+        enElements.forEach(el => el.style.display = 'none');
+        hiElements.forEach(el => el.style.display = 'block');
+      } else {
+        currentLang = 'BOTH';
+        indicator.textContent = '🌐 Both (EN + HI)';
+        enElements.forEach(el => el.style.display = 'block');
+        hiElements.forEach(el => el.style.display = 'block');
+      }
+    }
+
+    function selectSection(sec, btn) {
+      document.querySelectorAll('.sec-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.q-card');
+      const banners = document.querySelectorAll('.sec-banner');
+
+      if (sec === 'ALL') {
+        cards.forEach(c => c.style.display = 'block');
+        banners.forEach(b => b.style.display = 'flex');
+      } else {
+        cards.forEach(c => {
+          c.style.display = (c.getAttribute('data-section') === sec) ? 'block' : 'none';
+        });
+        banners.forEach(b => {
+          b.style.display = (b.getAttribute('data-section') === sec) ? 'flex' : 'none';
+        });
+      }
+    }
+
+    function filterQuestions() {
+      const query = document.getElementById('q-search').value.toLowerCase();
+      const cards = document.querySelectorAll('.q-card');
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Financial Accounting: Journal to Ledger Accounts (10 Transactions Step-by-Step)</title>
+  <meta name="description" content="Step-by-step practical accounting masterclass: 10 Business Transactions → Journal Entries → 12 T-Shape Ledger Accounts → Trial Balance.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.85);
+      --border-card: rgba(255, 255, 255, 0.08);
+      
+      --brand-green: #04AA6D;
+      --brand-green-hover: #03945f;
+      --brand-emerald: #10b981;
+      --brand-purple: #a855f7;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.9);
+      --border-card: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(4, 170, 109, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
+      background-attachment: fixed;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #04AA6D, #a855f7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-green);
+      background: rgba(4, 170, 109, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-green);
+      font-weight: 700;
+      background: rgba(4, 170, 109, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(4, 170, 109, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-green);
+      color: var(--brand-green);
+      transform: translateY(-1px);
+    }
+
+    .hero-wrapper {
+      max-width: 1080px;
+      margin: 24px auto 20px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #04AA6D, #a855f7, #ec4899);
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-green {
+      background: rgba(4, 170, 109, 0.15);
+      border: 1px solid rgba(4, 170, 109, 0.4);
+      color: var(--brand-green);
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #04AA6D 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      font-weight: 500;
+    }
+
+    .content-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .master-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(4, 170, 109, 0.2);
+      color: var(--brand-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .tx-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+    }
+
+    .tx-card {
+      padding: 12px 16px;
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .ledger-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .ledger-table th {
+      background: var(--bg-card-alt);
+      color: var(--brand-green);
+      padding: 8px 10px;
+      border: 1px solid var(--border-card);
+      font-weight: 800;
+      text-align: left;
+    }
+
+    .ledger-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+    }
+
+    @media print {
+      .top-navbar, .hero-wrapper { display: none; }
+      body { background: white; color: black; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumb Navigation (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11" class="breadcrumb-link">Class 11</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy" class="breadcrumb-link">Financial Accounting</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy&chapter=4" class="breadcrumb-link">Chapter 4</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">Journal to Ledger Masterclass</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button onclick="window.print()" class="nav-btn" style="background: var(--brand-green); color: black; font-weight: 800;">
+          <span>🖨️ Print / PDF</span>
+        </button>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div>
+        <div class="tag-badge tag-badge-green" style="margin-bottom: 8px;">
+          <span>Accounting Masterclass • Practical Ledger Posting</span>
+        </div>
+        <h1 class="hero-title">
+          Journal to Ledger Posting <span class="hero-title-highlight">| जर्नल से खाता बही में खतौनी</span>
+        </h1>
+        <p class="hero-subtitle">
+          Complete practical workflow: 10 Business Transactions → Journal Entries → 12 T-Shape Ledger Accounts → Trial Balance.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-container">
+
+    <!-- Section 1: The 10 Business Transactions -->
+    <section class="bg-[#0f172a] border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-[#04AA6D]/20 text-[#04AA6D] flex items-center justify-center text-xs font-black">1</span>
+          The 10 Business Transactions (जनवरी 2026 के 10 व्यावसायिक लेन-देन)
+        </h2>
+        <span class="text-xs text-slate-400">Owner: Rahul Traders</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 1:</strong> Started business with Cash ₹1,00,000 (नकद पूँजी से व्यापार शुरू किया).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 2:</strong> Opened a Bank account by depositing Cash ₹60,000 (बैंक खाता खोला).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 4:</strong> Purchased goods for Cash ₹15,000 (नकद माल खरीदा).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 7:</strong> Purchased goods on credit from Rohit ₹25,000 (रोहित से उधार माल खरीदा).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 10:</strong> Sold goods for Cash ₹18,000 (नकद माल बेचा).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 14:</strong> Sold goods to Ankit on credit ₹20,000 (अंकित को उधार माल बेचा).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 18:</strong> Returned damaged goods to Rohit ₹3,000 (रोहित को माल वापस किया).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 22:</strong> Received Cash from Ankit ₹19,500 in full settlement of ₹20,000 (Discount allowed ₹500).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 26:</strong> Paid Cash to Rohit ₹21,500 in full settlement of remaining ₹22,000 (Discount received ₹500).
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+          <strong class="text-[#04AA6D]">Jan 31:</strong> Paid Shop Rent by Cheque ₹4,000 and Salaries in Cash ₹6,000.
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Journal of Rahul Traders -->
+    <section class="bg-[#0f172a] border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-[#04AA6D]/20 text-[#04AA6D] flex items-center justify-center text-xs font-black">2</span>
+          Journal of Rahul Traders (राहुल ट्रेडर्स का मुख्य जर्नल)
+        </h2>
+        <span class="text-xs text-[#04AA6D] font-bold">Total ₹2,74,500</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse border border-slate-700 text-xs text-slate-200">
+          <thead>
+            <tr class="bg-slate-800 text-[#04AA6D]">
+              <th class="border border-slate-700 p-2 text-left w-24">Date (2026)</th>
+              <th class="border border-slate-700 p-2 text-left">Particulars & Narration</th>
+              <th class="border border-slate-700 p-2 text-center w-12">L.F.</th>
+              <th class="border border-slate-700 p-2 text-right w-28">Debit (₹)</th>
+              <th class="border border-slate-700 p-2 text-right w-28">Credit (₹)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800">
+            <!-- 1 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 1</td>
+              <td class="p-2">
+                <strong>Cash A/c</strong> ................................................................ Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Capital A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being business commenced with cash)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">1</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">1,00,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">1,00,000</td>
+            </tr>
+            <!-- 2 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 2</td>
+              <td class="p-2">
+                <strong>Bank A/c</strong> ................................................................ Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Cash A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being cash deposited into bank to open account)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">2</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">60,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">60,000</td>
+            </tr>
+            <!-- 3 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 4</td>
+              <td class="p-2">
+                <strong>Purchases A/c</strong> ......................................................... Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Cash A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being goods purchased for cash)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">3</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">15,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">15,000</td>
+            </tr>
+            <!-- 4 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 7</td>
+              <td class="p-2">
+                <strong>Purchases A/c</strong> ......................................................... Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Rohit A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being goods purchased on credit from Rohit)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">3</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">25,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">25,000</td>
+            </tr>
+            <!-- 5 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 10</td>
+              <td class="p-2">
+                <strong>Cash A/c</strong> ................................................................ Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Sales A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being goods sold for cash)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">1</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">18,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">18,000</td>
+            </tr>
+            <!-- 6 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 14</td>
+              <td class="p-2">
+                <strong>Ankit A/c</strong> ................................................................. Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Sales A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being goods sold to Ankit on credit)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">5</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">20,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">20,000</td>
+            </tr>
+            <!-- 7 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 18</td>
+              <td class="p-2">
+                <strong>Rohit A/c</strong> ................................................................. Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Purchases Return A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being damaged goods returned to Rohit)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">4</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">3,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">3,000</td>
+            </tr>
+            <!-- 8 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 22</td>
+              <td class="p-2">
+                <strong>Cash A/c</strong> ................................................................ Dr.<br>
+                <strong>Discount Allowed A/c</strong> ........................................... Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Ankit A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being cash received in full settlement & discount allowed)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">1</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">19,500<br>500</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300"><br>20,000</td>
+            </tr>
+            <!-- 9 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 26</td>
+              <td class="p-2">
+                <strong>Rohit A/c</strong> ................................................................. Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Cash A/c</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Discount Received A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being cash paid to Rohit in full settlement & discount received)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">4</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">22,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">21,500<br>500</td>
+            </tr>
+            <!-- 10 -->
+            <tr>
+              <td class="p-2 font-mono text-slate-400">Jan 31</td>
+              <td class="p-2">
+                <strong>Rent A/c</strong> .................................................................... Dr.<br>
+                <strong>Salaries A/c</strong> ............................................................. Dr.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Bank A/c</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;To <strong>Cash A/c</strong><br>
+                <span class="text-[11px] text-slate-400 italic">(Being rent paid by cheque and salaries paid in cash)</span>
+              </td>
+              <td class="p-2 text-center text-slate-500">9</td>
+              <td class="p-2 text-right font-mono font-bold text-emerald-400">4,000<br>6,000</td>
+              <td class="p-2 text-right font-mono font-bold text-slate-300">4,000<br>6,000</td>
+            </tr>
+            <!-- Total -->
+            <tr class="bg-slate-800/80 font-bold text-amber-300 text-sm">
+              <td colspan="3" class="p-2 text-center uppercase tracking-wider">Total Journal Balance</td>
+              <td class="p-2 text-right font-mono">₹2,74,500</td>
+              <td class="p-2 text-right font-mono">₹2,74,500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: All 12 Ledger Accounts Posted & Balanced -->
+    <section class="bg-[#0f172a] border border-slate-800 rounded-2xl p-6 shadow-xl space-y-8">
+      <div class="border-b border-slate-800 pb-3">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-[#04AA6D]/20 text-[#04AA6D] flex items-center justify-center text-xs font-black">3</span>
+          Ledger of Rahul Traders (खाता बही के 12 खाते)
+        </h2>
+        <p class="text-xs text-slate-400 mt-1">Each account posted from Journal, totaled, and balanced with Balance c/d (carried down) and Balance b/d (brought down).</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8">
+
+        <!-- 1. Cash Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">1. Cash Account (Dr. / Cr.)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 1</td>
+                  <td>To Capital A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">1,00,000</td>
+                  <td>Jan 2</td>
+                  <td>By Bank A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">60,000</td>
+                </tr>
+                <tr>
+                  <td>Jan 10</td>
+                  <td>To Sales A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">18,000</td>
+                  <td>Jan 4</td>
+                  <td>By Purchases A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">15,000</td>
+                </tr>
+                <tr>
+                  <td>Jan 22</td>
+                  <td>To Ankit A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">19,500</td>
+                  <td>Jan 26</td>
+                  <td>By Rohit A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">21,500</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Jan 31</td>
+                  <td>By Salaries A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">6,000</td>
+                </tr>
+                <tr class="bg-slate-900 font-bold text-amber-300">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Jan 31</td>
+                  <td>By Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">35,000</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">1,37,500</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">1,37,500</td>
+                </tr>
+                <tr class="text-xs text-emerald-400 font-bold">
+                  <td>Feb 1</td>
+                  <td>To Balance b/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">35,000</td>
+                  <td colspan="4"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 2. Capital Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">2. Capital Account</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-900 font-bold text-amber-300">
+                  <td>Jan 31</td>
+                  <td>To Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">1,00,000</td>
+                  <td>Jan 1</td>
+                  <td>By Cash A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">1,00,000</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">1,00,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">1,00,000</td>
+                </tr>
+                <tr class="text-xs text-emerald-400 font-bold">
+                  <td colspan="4"></td>
+                  <td>Feb 1</td>
+                  <td>By Balance b/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">1,00,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 3. Bank Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">3. Bank Account</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 2</td>
+                  <td>To Cash A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">60,000</td>
+                  <td>Jan 31</td>
+                  <td>By Rent A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">4,000</td>
+                </tr>
+                <tr class="bg-slate-900 font-bold text-amber-300">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Jan 31</td>
+                  <td>By Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">56,000</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">60,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">60,000</td>
+                </tr>
+                <tr class="text-xs text-emerald-400 font-bold">
+                  <td>Feb 1</td>
+                  <td>To Balance b/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">56,000</td>
+                  <td colspan="4"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4. Purchases Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">4. Purchases Account</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 4</td>
+                  <td>To Cash A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">15,000</td>
+                  <td>Jan 31</td>
+                  <td>By Balance c/d (Trading A/c)</td>
+                  <td></td>
+                  <td class="text-right font-mono text-amber-300 font-bold">40,000</td>
+                </tr>
+                <tr>
+                  <td>Jan 7</td>
+                  <td>To Rohit A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">25,000</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">40,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">40,000</td>
+                </tr>
+                <tr class="text-xs text-emerald-400 font-bold">
+                  <td>Feb 1</td>
+                  <td>To Balance b/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">40,000</td>
+                  <td colspan="4"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 5. Rohit Account (Creditor) -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">5. Rohit Account (Creditor - Fully Settled)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 18</td>
+                  <td>To Purchases Return A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">3,000</td>
+                  <td>Jan 7</td>
+                  <td>By Purchases A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">25,000</td>
+                </tr>
+                <tr>
+                  <td>Jan 26</td>
+                  <td>To Cash A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">21,500</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Jan 26</td>
+                  <td>To Discount Received A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">500</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total (Settled Nil)</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">25,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">25,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 6. Sales Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">6. Sales Account</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-900 font-bold text-amber-300">
+                  <td>Jan 31</td>
+                  <td>To Balance c/d (Trading A/c)</td>
+                  <td></td>
+                  <td class="text-right font-mono">38,000</td>
+                  <td>Jan 10</td>
+                  <td>By Cash A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">18,000</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Jan 14</td>
+                  <td>By Ankit A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">20,000</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">38,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">38,000</td>
+                </tr>
+                <tr class="text-xs text-emerald-400 font-bold">
+                  <td colspan="4"></td>
+                  <td>Feb 1</td>
+                  <td>By Balance b/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">38,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 7. Ankit Account (Debtor) -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">7. Ankit Account (Debtor - Fully Settled)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 14</td>
+                  <td>To Sales A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">20,000</td>
+                  <td>Jan 22</td>
+                  <td>By Cash A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">19,500</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Jan 22</td>
+                  <td>By Discount Allowed A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">500</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total (Settled Nil)</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">20,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">20,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 8. Purchases Return Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">8. Purchases Return Account</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-900 font-bold text-amber-300">
+                  <td>Jan 31</td>
+                  <td>To Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">3,000</td>
+                  <td>Jan 18</td>
+                  <td>By Rohit A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">3,000</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">3,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">3,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 9. Discount Allowed Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">9. Discount Allowed Account (Expense/Loss)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 22</td>
+                  <td>To Ankit A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">500</td>
+                  <td>Jan 31</td>
+                  <td>By Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono text-amber-300 font-bold">500</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">500</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 10. Discount Received Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">10. Discount Received Account (Income/Gain)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-slate-900 font-bold text-amber-300">
+                  <td>Jan 31</td>
+                  <td>To Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono">500</td>
+                  <td>Jan 26</td>
+                  <td>By Rohit A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">500</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">500</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 11. Rent Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">11. Rent Account (Expense)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 31</td>
+                  <td>To Bank A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">4,000</td>
+                  <td>Jan 31</td>
+                  <td>By Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono text-amber-300 font-bold">4,000</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">4,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">4,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 12. Salaries Account -->
+        <div class="space-y-2">
+          <h3 class="text-sm font-black text-[#04AA6D] uppercase tracking-wider">12. Salaries Account (Expense)</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-slate-700 ledger-table">
+              <thead>
+                <tr>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Dr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                  <th class="w-16">Date</th>
+                  <th>Particulars (Cr.)</th>
+                  <th class="w-8">J.F.</th>
+                  <th class="w-20 text-right">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan 31</td>
+                  <td>To Cash A/c</td>
+                  <td></td>
+                  <td class="text-right font-mono">6,000</td>
+                  <td>Jan 31</td>
+                  <td>By Balance c/d</td>
+                  <td></td>
+                  <td class="text-right font-mono text-amber-300 font-bold">6,000</td>
+                </tr>
+                <tr class="bg-slate-800 font-bold">
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">6,000</td>
+                  <td></td>
+                  <td>Total</td>
+                  <td></td>
+                  <td class="text-right font-mono text-emerald-400">6,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 4: Trial Balance -->
+    <section class="bg-[#0f172a] border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h2 class="text-lg font-black text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-[#04AA6D]/20 text-[#04AA6D] flex items-center justify-center text-xs font-black">4</span>
+          Trial Balance as on 31st January 2026 (तलपट)
+        </h2>
+        <span class="text-xs text-emerald-400 font-bold">Proof of Double Entry Equality</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse border border-slate-700 text-xs text-slate-200">
+          <thead>
+            <tr class="bg-slate-800 text-[#04AA6D]">
+              <th class="border border-slate-700 p-2 text-left w-12">S.No.</th>
+              <th class="border border-slate-700 p-2 text-left">Heads of Account (खातों के नाम)</th>
+              <th class="border border-slate-700 p-2 text-center w-12">L.F.</th>
+              <th class="border border-slate-700 p-2 text-right w-36">Debit Balance (₹)</th>
+              <th class="border border-slate-700 p-2 text-right w-36">Credit Balance (₹)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800">
+            <tr>
+              <td class="p-2 text-center text-slate-400">1</td>
+              <td class="p-2 font-bold">Cash Account</td>
+              <td class="p-2 text-center">1</td>
+              <td class="p-2 text-right font-mono text-emerald-400">35,000</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">2</td>
+              <td class="p-2 font-bold">Capital Account</td>
+              <td class="p-2 text-center">2</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+              <td class="p-2 text-right font-mono text-slate-300">1,00,000</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">3</td>
+              <td class="p-2 font-bold">Bank Account</td>
+              <td class="p-2 text-center">3</td>
+              <td class="p-2 text-right font-mono text-emerald-400">56,000</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">4</td>
+              <td class="p-2 font-bold">Purchases Account</td>
+              <td class="p-2 text-center">4</td>
+              <td class="p-2 text-right font-mono text-emerald-400">40,000</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">5</td>
+              <td class="p-2 font-bold">Sales Account</td>
+              <td class="p-2 text-center">5</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+              <td class="p-2 text-right font-mono text-slate-300">38,000</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">6</td>
+              <td class="p-2 font-bold">Purchases Return Account</td>
+              <td class="p-2 text-center">6</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+              <td class="p-2 text-right font-mono text-slate-300">3,000</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">7</td>
+              <td class="p-2 font-bold">Discount Allowed Account</td>
+              <td class="p-2 text-center">7</td>
+              <td class="p-2 text-right font-mono text-emerald-400">500</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">8</td>
+              <td class="p-2 font-bold">Discount Received Account</td>
+              <td class="p-2 text-center">8</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+              <td class="p-2 text-right font-mono text-slate-300">500</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">9</td>
+              <td class="p-2 font-bold">Rent Account</td>
+              <td class="p-2 text-center">9</td>
+              <td class="p-2 text-right font-mono text-emerald-400">4,000</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">10</td>
+              <td class="p-2 font-bold">Salaries Account</td>
+              <td class="p-2 text-center">10</td>
+              <td class="p-2 text-right font-mono text-emerald-400">6,000</td>
+              <td class="p-2 text-right font-mono text-slate-500">-</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">11</td>
+              <td class="p-2 font-bold">Rohit Account (Creditor)</td>
+              <td class="p-2 text-center">11</td>
+              <td class="p-2 text-right font-mono text-slate-500">Nil</td>
+              <td class="p-2 text-right font-mono text-slate-500">Nil</td>
+            </tr>
+            <tr>
+              <td class="p-2 text-center text-slate-400">12</td>
+              <td class="p-2 font-bold">Ankit Account (Debtor)</td>
+              <td class="p-2 text-center">12</td>
+              <td class="p-2 text-right font-mono text-slate-500">Nil</td>
+              <td class="p-2 text-right font-mono text-slate-500">Nil</td>
+            </tr>
+            <!-- Total -->
+            <tr class="bg-slate-800 font-black text-amber-300 text-sm">
+              <td colspan="3" class="p-3 text-center uppercase tracking-wider">Total of Trial Balance</td>
+              <td class="p-3 text-right font-mono text-emerald-400">₹1,41,500</td>
+              <td class="p-3 text-right font-mono text-emerald-400">₹1,41,500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

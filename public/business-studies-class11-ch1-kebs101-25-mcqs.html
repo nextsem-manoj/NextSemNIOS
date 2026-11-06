@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Class 11 Business Studies Ch 1: Business, Trade and Commerce — 25 Target MCQs (kebs101.pdf)</title>
+  <meta name="description" content="NCERT Class 11 Business Studies Chapter 1: Business, Trade and Commerce (kebs101.pdf). Complete 25 high-yield MCQs covering every concept with instant explanations, NCERT page references, and score tracker." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #070d1e;
+      --surface: #0c1733;
+      --card: #112044;
+      --card-hover: #162956;
+      --border: rgba(255, 255, 255, 0.09);
+      --border-accent: rgba(56, 189, 248, 0.35);
+      --cyan: #38bdf8;
+      --cyan-glow: rgba(56, 189, 248, 0.2);
+      --gold: #f59e0b;
+      --gold-glow: rgba(245, 158, 11, 0.2);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --red: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-main: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg: #f8fafc;
+      --surface: #f1f5f9;
+      --card: #ffffff;
+      --card-hover: #f8fafc;
+      --border: #cbd5e1;
+      --border-accent: rgba(2, 132, 199, 0.4);
+      --cyan: #0284c7;
+      --cyan-glow: rgba(2, 132, 199, 0.15);
+      --gold: #d97706;
+      --gold-glow: rgba(217, 119, 6, 0.15);
+      --emerald: #059669;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding-bottom: 120px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Sticky Header */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(7, 13, 30, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+    }
+    body.light-theme .top-bar { background: rgba(248, 250, 252, 0.94); }
+
+    .top-bar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, #38bdf8, #0284c7);
+      color: #031024;
+      font-weight: 900;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.02rem;
+      color: var(--text-main);
+    }
+    .brand-sub {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    .top-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-action:hover {
+      border-color: var(--cyan);
+      transform: translateY(-1px);
+    }
+    .score-pill {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+    }
+
+    /* Hero Banner */
+    .hero {
+      max-width: 1180px;
+      margin: 24px auto 16px;
+      padding: 0 20px;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .hero-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hero-tag.gold {
+      color: var(--gold);
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+    .hero-tag.emerald {
+      color: var(--emerald);
+      border-color: rgba(16, 185, 129, 0.35);
+    }
+    .hero h1 {
+      font-size: clamp(1.5rem, 3.8vw, 2.3rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 40%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    body.light-theme .hero h1 {
+      background: linear-gradient(135deg, #0f172a 40%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 900px;
+      margin-bottom: 20px;
+    }
+
+    /* Stats Grid */
+    .paper-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .info-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+    }
+    .info-card .val {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+    }
+    .info-card .lbl {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
+    /* Category Filter Bar */
+    .filter-bar {
+      max-width: 1180px;
+      margin: 0 auto 20px;
+      padding: 0 20px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+    }
+    .filter-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover {
+      border-color: var(--cyan);
+      color: var(--text-main);
+    }
+    .filter-btn.active {
+      background: var(--cyan);
+      color: #031024;
+      border-color: var(--cyan);
+      font-weight: 900;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Question Card */
+    .mcq-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      position: relative;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .mcq-card:hover {
+      border-color: var(--border-accent);
+    }
+    .mcq-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mcq-badge {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-weight: 900;
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+    }
+    .mcq-topic-badge {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+    .mcq-page-ref {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+    }
+
+    .q-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    @media (min-width: 640px) {
+      .options-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .opt-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      transition: all 0.2s;
+      text-align: left;
+    }
+    .opt-btn:hover {
+      background: var(--card-hover);
+      border-color: var(--cyan);
+      transform: translateX(3px);
+    }
+    .opt-btn.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: var(--emerald) !important;
+      color: #34d399 !important;
+      font-weight: 700;
+    }
+    .opt-btn.wrong {
+      background: rgba(244, 63, 94, 0.18) !important;
+      border-color: var(--red) !important;
+      color: #fb7185 !important;
+    }
+    .feedback-badge {
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: none;
+      white-space: nowrap;
+    }
+    .opt-btn.correct .feedback-badge {
+      display: inline-block;
+      background: var(--emerald);
+      color: #031024;
+    }
+    .opt-btn.wrong .feedback-badge {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+    }
+
+    /* Rationale Tray */
+    .rationale-tray {
+      display: none;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 14px;
+      animation: fadeIn 0.25s ease-out;
+    }
+    .rationale-tray.revealed { display: block; }
+    .rat-title {
+      font-size: 0.76rem;
+      font-weight: 900;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rat-text {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+    .rat-cite {
+      font-size: 0.76rem;
+      color: var(--gold);
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+
+    /* Floating Navigation Dock */
+    .floating-dock {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+    .dock-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+      transition: all 0.2s;
+    }
+    .dock-btn:hover {
+      background: var(--cyan);
+      color: #031024;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      max-width: 1180px;
+      margin: 60px auto 0;
+      padding: 24px 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.82rem;
+    }
+    footer a { color: var(--cyan); text-decoration: none; font-weight: 700; }
+    footer a:hover { text-decoration: underline; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar { padding: 10px 16px; }
+      .mcq-card { padding: 18px 16px; }
+      .hero h1 { font-size: 1.45rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="brand-title">
+        <span class="brand-badge">NCERT CLASS 11</span>
+        <div>
+          <div class="brand-name">Business Studies • Chapter 1: Business, Trade and Commerce</div>
+          <div class="brand-sub">kebs101.pdf • 25 Target Multiple Choice Questions</div>
+        </div>
+      </div>
+      <div class="top-controls">
+        <div class="score-pill" id="score-counter">
+          <span>🎯 Score: 0 / 25</span>
+        </div>
+        <button class="btn-action" onclick="revealAllAnswers()">
+          <span>👁️</span> Reveal All
+        </button>
+        <button class="btn-action" onclick="resetQuiz()">
+          <span>🔄</span> Reset
+        </button>
+        <button class="btn-action" onclick="toggleTheme()">
+          <span id="theme-indicator">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-meta">
+      <span class="hero-tag">Part I • Foundations of Business</span>
+      <span class="hero-tag gold">Chapter 1 • Business, Trade and Commerce</span>
+      <span class="hero-tag emerald">100% NCERT Verified</span>
+    </div>
+    <h1>Business, Trade and Commerce — 25 Target Practice MCQs</h1>
+    <p class="hero-sub">
+      Meticulously crafted question bank based strictly on NCERT textbook file <strong>kebs101.pdf</strong>. Covers Indigenous Banking, Hundis, Trade Centres, Forms of Industry, Commerce, Auxiliaries to Trade, Multiple Objectives of Business, and Business Risks.
+    </p>
+
+    <div class="paper-info-grid">
+      <div class="info-card">
+        <div class="val">25</div>
+        <div class="lbl">Total MCQs</div>
+      </div>
+      <div class="info-card">
+        <div class="val">1–25</div>
+        <div class="lbl">Book Pages</div>
+      </div>
+      <div class="info-card">
+        <div class="val">100%</div>
+        <div class="lbl">NCERT Aligned</div>
+      </div>
+      <div class="info-card">
+        <div class="val">CBSE / CUET</div>
+        <div class="lbl">Exam Standard</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterQuestions('all', this)">All Questions (25)</button>
+    <button class="filter-btn" onclick="filterQuestions('Ancient Trade & Hundis', this)">Ancient Trade & Hundis</button><button class="filter-btn" onclick="filterQuestions('Trade History & Colonial Impact', this)">Trade History & Colonial Impact</button><button class="filter-btn" onclick="filterQuestions('Nature & Purpose of Business', this)">Nature & Purpose of Business</button><button class="filter-btn" onclick="filterQuestions('Business, Profession & Employment', this)">Business, Profession & Employment</button><button class="filter-btn" onclick="filterQuestions('Industry & Classification', this)">Industry & Classification</button><button class="filter-btn" onclick="filterQuestions('Commerce & Auxiliaries to Trade', this)">Commerce & Auxiliaries to Trade</button><button class="filter-btn" onclick="filterQuestions('Business Objectives & Profit Role', this)">Business Objectives & Profit Role</button><button class="filter-btn" onclick="filterQuestions('Business Risks & Causes', this)">Business Risks & Causes</button><button class="filter-btn" onclick="filterQuestions('Starting a Business Enterprise', this)">Starting a Business Enterprise</button>
+  </div>
+
+  <!-- Main Question Cards Container -->
+  <main class="main-container" id="questions-container">
+    
+      <article class="mcq-card" data-category="Ancient Trade & Hundis" id="mcq-card-1">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q1 of 25</span>
+            <span class="mcq-topic-badge">History of Trade & Indigenous Banking</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 3</span>
+        </div>
+
+        <h3 class="q-text">In ancient and medieval India, which credit instrument was widely used by merchant communities for carrying out transactions involving transfer of money from one person or place to another without physical movement of cash?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 1)">
+              <span>(A) Hundi and Chitti</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 1)">
+              <span>(B) Modern Crossed Cheque</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 1)">
+              <span>(C) Bill of Lading</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 1)">
+              <span>(D) Reserve Bank Promissory Note</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-1">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">According to NCERT Chapter 1 (Page 3-4), Hundi and Chitti were indigenous credit instruments used in ancient India. The word 'Hundi' is derived from the Sanskrit word meaning 'to collect'. It was a contract warranting payment of money, capable of being negotiated by endorsement.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 3 & 4</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Ancient Trade & Hundis" id="mcq-card-2">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q2 of 25</span>
+            <span class="mcq-topic-badge">Types of Hundis (Jokhmi Hundi)</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 4</span>
+        </div>
+
+        <h3 class="q-text">Which specific type of ancient Hundi was drawn against dispatched goods, where if the goods were lost in transit due to shipwreck or perils of the sea, the drawer or holder bore the loss, functioning as an early form of marine insurance?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 2)">
+              <span>(A) Dhani-jog Hundi</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 2)">
+              <span>(B) Sah-jog Hundi</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 2)">
+              <span>(C) Jokhmi Hundi</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 2)">
+              <span>(D) Firman-jog Hundi</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-2">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Table 1.1 (Page 5) classifies 'Jokhmi Hundi' as a Muddati Hundi drawn against dispatched goods. If goods were lost in transit, the drawer/holder absorbed the financial loss, effectively acting as an indigenous marine insurance contract.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 5 (Table 1.1)</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Ancient Trade & Hundis" id="mcq-card-3">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q3 of 25</span>
+            <span class="mcq-topic-badge">Merchant Guilds & Municipal Leadership</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 5</span>
+        </div>
+
+        <h3 class="q-text">In ancient and medieval Indian trading cities, the supreme head of the merchant guilds (Mahajans) who exercised substantial influence over civic, commercial, and municipal administration was known as:</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 3)">
+              <span>(A) Nagarseth</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 3)">
+              <span>(B) Jagat Seth</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 3)">
+              <span>(C) Kotwal</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 3)">
+              <span>(D) Subahdar</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-3">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Chapter 1 (Page 5) notes that in western India and major trading towns, the merchant corporations were led by an influential community chief designated as 'Nagarseth' who dealt directly with state kings and tax collectors.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 5</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Ancient Trade & Hundis" id="mcq-card-4">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q4 of 25</span>
+            <span class="mcq-topic-badge">Major Ancient Trade Centres (Peshawar)</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 6</span>
+        </div>
+
+        <h3 class="q-text">Which ancient Indian trade centre was an important exporting hub for wool and importing hub for war horses, and played a major role in commercial transactions connecting India, China, and Rome in the 1st century A.D.?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 4)">
+              <span>(A) Taxila</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 4)">
+              <span>(B) Peshawar</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 4)">
+              <span>(C) Indraprastha</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 4)">
+              <span>(D) Mathura</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-4">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">According to NCERT Chapter 1 (Page 6), Peshawar was an important commercial centre for the export of fine wool and the import of horses. It had a massive share in transactions between India, China, and Rome in the 1st century A.D.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 6</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Trade History & Colonial Impact" id="mcq-card-5">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q5 of 25</span>
+            <span class="mcq-topic-badge">De-industrialisation under British Rule</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 7</span>
+        </div>
+
+        <h3 class="q-text">What fundamental structural change occurred in the Indian economy with the political consolidation of the British East India Company?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 5)">
+              <span>(A) India transformed from an importer of primary materials into an exporter of machinery</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 5)">
+              <span>(B) India was transformed from an exporter of processed manufactured goods into an exporter of raw materials and buyer of British factory goods</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 5)">
+              <span>(C) India became a self-sufficient socialist agrarian collective</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 5)">
+              <span>(D) India established exclusive trading monopolies across East Asia</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-5">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 7 explains that the British used Indian revenues to purchase raw materials and spices, shifting India from an exporter of processed manufactured goods into an exporter of raw materials and an open consumer market for British manufactured goods.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 7</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Trade History & Colonial Impact" id="mcq-card-6">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q6 of 25</span>
+            <span class="mcq-topic-badge">Modern Industrial Initiatives (Make in India)</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 8</span>
+        </div>
+
+        <h3 class="q-text">Which prominent national campaign launched by the Government of India in September 2014 was specifically designed to encourage domestic and global companies to manufacture goods in India and transform the nation into a global manufacturing hub?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 6)">
+              <span>(A) Startup India</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 6)">
+              <span>(B) Make in India</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 6)">
+              <span>(C) Digital India</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 6)">
+              <span>(D) Standup India</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-6">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Chapter 1 (Page 8) highlights 'Make in India', launched in September 2014, as a major flagship initiative designed to encourage investment, foster innovation, build best-in-class manufacturing infrastructure, and make India a global manufacturing powerhouse.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 8</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Nature & Purpose of Business" id="mcq-card-7">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q7 of 25</span>
+            <span class="mcq-topic-badge">Concept of Economic Activities</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 9</span>
+        </div>
+
+        <h3 class="q-text">Human activities are divided into economic and non-economic activities. An activity is classified as an 'Economic Activity' when it is undertaken:</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 7)">
+              <span>(A) Purely out of religious devotion, affection, or family sympathy</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 7)">
+              <span>(B) With the primary objective of earning money or a livelihood</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 7)">
+              <span>(C) Without any expectation of financial or material reward</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 7)">
+              <span>(D) Exclusively during national festivals and public holidays</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-7">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 9 defines economic activities as those by which we can earn our livelihood (e.g., a worker in a factory, a doctor in a clinic, a manager in an enterprise). Non-economic activities are motivated by love, sympathy, patriotism, etc.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 9</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Nature & Purpose of Business" id="mcq-card-8">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q8 of 25</span>
+            <span class="mcq-topic-badge">Characteristics of Business: Regularity in Dealings</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 10</span>
+        </div>
+
+        <h3 class="q-text">Kunal sold his personal used motorbike to his neighbour at a profit of ₹8,000 to purchase a new sports bike. Why is this transaction NOT considered a 'Business'?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 8)">
+              <span>(A) Because no profit was earned</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 8)">
+              <span>(B) Because it involved transfer of a second-hand good</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 8)">
+              <span>(C) Because business involves regularity in dealings; an isolated single transaction does not constitute business</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 8)">
+              <span>(D) Because motorbikes cannot legally be traded by individuals</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-8">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 10 emphasizes 'Regularity in Dealings': Business involves dealings in goods or services on a recurring, regular basis. A single isolated transaction of sale or purchase (e.g., selling one's personal vehicle or furniture) is not a business.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 10</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Nature & Purpose of Business" id="mcq-card-9">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q9 of 25</span>
+            <span class="mcq-topic-badge">Uncertainty of Return & Element of Risk</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 11</span>
+        </div>
+
+        <h3 class="q-text">Which essential feature of business refers to the inability to predict or guarantee the exact amount of profit that an enterprise will make during a future period?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 9)">
+              <span>(A) Regularity of exchange</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 9)">
+              <span>(B) Profit motive</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 9)">
+              <span>(C) Uncertainty of return</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 9)">
+              <span>(D) Legal continuity</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-9">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 11 states that 'Uncertainty of return' refers to the lack of certainty regarding how much profit the business will make. There is always the possibility of losses being incurred despite the best managerial efforts.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 11</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Business, Profession & Employment" id="mcq-card-10">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q10 of 25</span>
+            <span class="mcq-topic-badge">Comparison: Transfer of Interest</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 12</span>
+        </div>
+
+        <h3 class="q-text">In which of the following economic activities is the 'Transfer of Interest' possible with some procedural formalities?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 10)">
+              <span>(A) Business</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 10)">
+              <span>(B) Profession</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 10)">
+              <span>(C) Employment</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 10)">
+              <span>(D) Both Profession and Employment</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-10">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Table 1.1 (Page 12) points out that in a business, transfer of interest is possible with some formalities (e.g., transferring company shares or selling ownership). In a profession or employment, transfer of personal qualification or employment contract is not possible.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 12 (Table 1.1)</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Business, Profession & Employment" id="mcq-card-11">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q11 of 25</span>
+            <span class="mcq-topic-badge">Professional Regulatory Code of Conduct</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 12</span>
+        </div>
+
+        <h3 class="q-text">Which of the following characteristics strictly applies to a 'Profession' but NOT necessarily to an ordinary trading business?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 11)">
+              <span>(A) Freedom to operate without any formal educational qualifications</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 11)">
+              <span>(B) Mandatory adherence to an ethical code of conduct laid down by a professional body</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 11)">
+              <span>(C) Complete absence of financial investment</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 11)">
+              <span>(D) Unlimited transferability of ownership rights</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-11">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Table 1.1 (Page 12) states that professionals (such as doctors, lawyers, and chartered accountants) must strictly follow a prescribed ethical code of conduct established by their statutory regulatory bodies.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 12</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Industry & Classification" id="mcq-card-12">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q12 of 25</span>
+            <span class="mcq-topic-badge">Primary Industry: Genetic Industry</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 13</span>
+        </div>
+
+        <h3 class="q-text">Industries engaged in the breeding and reproduction of plants and animals for further multiplication and sale (e.g., cattle breeding farms, nurseries, and poultry farms) are classified as:</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 12)">
+              <span>(A) Extractive Industries</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 12)">
+              <span>(B) Genetic Industries</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 12)">
+              <span>(C) Manufacturing Industries</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 12)">
+              <span>(D) Assembling Industries</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-12">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 13 explicitly defines 'Genetic Industries' as those engaged in breeding plants and animals for their use in further reproduction. Examples include nurseries, cattle farms, poultry farms, and fish hatcheries.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 13</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Industry & Classification" id="mcq-card-13">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q13 of 25</span>
+            <span class="mcq-topic-badge">Primary Industry: Extractive Industry</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 13</span>
+        </div>
+
+        <h3 class="q-text">Which classification of industry is concerned with drawing out or collecting useful raw materials directly from natural reservoirs like the earth, sea, or air?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 13)">
+              <span>(A) Extractive Industry</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 13)">
+              <span>(B) Synthetical Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 13)">
+              <span>(C) Assembling Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 13)">
+              <span>(D) Processing Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-13">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 13 notes that 'Extractive Industries' extract or draw products from natural sources like soil, air, or water (e.g., farming, mining, hunting, and fishing operations).</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 13</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Industry & Classification" id="mcq-card-14">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q14 of 25</span>
+            <span class="mcq-topic-badge">Manufacturing Industry: Analytical Industry</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 14</span>
+        </div>
+
+        <h3 class="q-text">An oil refinery plant that separates and breaks down crude petroleum into different distinct products such as gasoline (petrol), diesel, kerosene, and lubricating oil is an example of an:</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 14)">
+              <span>(A) Analytical Industry</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 14)">
+              <span>(B) Synthetical Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 14)">
+              <span>(C) Assembling Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 14)">
+              <span>(D) Construction Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-14">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 14 defines an 'Analytical Industry' as one which separates and analyzes different basic elements from the same raw material, as in the case of an oil refinery.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 14</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Industry & Classification" id="mcq-card-15">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q15 of 25</span>
+            <span class="mcq-topic-badge">Manufacturing Industry: Assembling Industry</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 14</span>
+        </div>
+
+        <h3 class="q-text">An industrial plant that brings together different manufactured component parts to produce a new finished product, such as a television set, automobile, or computer, is termed an:</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 15)">
+              <span>(A) Processing Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 15)">
+              <span>(B) Assembling Industry</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 15)">
+              <span>(C) Synthetical Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 15)">
+              <span>(D) Extractive Industry</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-15">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 14 defines an 'Assembling Industry' as one that assembles various finished component parts to produce a new finished product (e.g., cars, TVs, computers). Synthetical industries combine ingredients like chemicals to make cement.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 14</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Commerce & Auxiliaries to Trade" id="mcq-card-16">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q16 of 25</span>
+            <span class="mcq-topic-badge">Components of Commerce</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 15</span>
+        </div>
+
+        <h3 class="q-text">Commerce comprises all those activities that facilitate the exchange of goods and services. What are the two broad components into which Commerce is divided?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 16)">
+              <span>(A) Wholesale and Retail</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 16)">
+              <span>(B) Industry and Agriculture</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 16)">
+              <span>(C) Trade and Auxiliaries to Trade</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 16)">
+              <span>(D) Import and Export</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-16">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 15 states that Commerce includes two broad types of activities: (1) Trade (actual buying and selling) and (2) Auxiliaries to Trade (support activities assisting the trade process).</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 15</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Commerce & Auxiliaries to Trade" id="mcq-card-17">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q17 of 25</span>
+            <span class="mcq-topic-badge">Hindrance of Place (Transport)</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 16</span>
+        </div>
+
+        <h3 class="q-text">Goods are manufactured in specific geographic centres (e.g., tea in Assam, cotton textiles in Gujarat), but demanded across the entire country. Which auxiliary to trade overcomes this 'Hindrance of Place'?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 17)">
+              <span>(A) Warehousing</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 17)">
+              <span>(B) Transport and Communication</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 17)">
+              <span>(C) Insurance</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 17)">
+              <span>(D) Banking</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-17">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 16 explains that 'Transport' moves goods from the place of production to the point of consumption, thereby removing the hindrance of place.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 16</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Commerce & Auxiliaries to Trade" id="mcq-card-18">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q18 of 25</span>
+            <span class="mcq-topic-badge">Hindrance of Time (Warehousing)</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 16</span>
+        </div>
+
+        <h3 class="q-text">Agricultural commodities like wheat, paddy, and sugar are produced seasonally but consumed round the year. Which auxiliary to trade overcomes this 'Hindrance of Time'?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 18)">
+              <span>(A) Advertising</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 18)">
+              <span>(B) Warehousing</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 18)">
+              <span>(C) Insurance</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 18)">
+              <span>(D) Transport</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-18">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 16-17 states that 'Warehousing' provides storage facilities, preserving goods securely until demand arises and thereby overcoming the hindrance of time.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 16-17</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Commerce & Auxiliaries to Trade" id="mcq-card-19">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q19 of 25</span>
+            <span class="mcq-topic-badge">Hindrance of Risk (Insurance)</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 17</span>
+        </div>
+
+        <h3 class="q-text">Business entities face constant exposure to financial loss from fire, theft, floods, or transit accidents. Which auxiliary to trade removes the 'Hindrance of Risk' by compensating for covered losses?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 19)">
+              <span>(A) Insurance</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 19)">
+              <span>(B) Advertising</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 19)">
+              <span>(C) Banking</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 19)">
+              <span>(D) Factoring</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-19">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 17 explains that 'Insurance' provides protection against risks of loss or damage to goods during storage or transit upon payment of a nominal premium, removing the hindrance of risk.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 17</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Business Objectives & Profit Role" id="mcq-card-20">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q20 of 25</span>
+            <span class="mcq-topic-badge">Role of Profit in Business</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 18</span>
+        </div>
+
+        <h3 class="q-text">Profit is an indispensable objective of every business enterprise because:</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 20)">
+              <span>(A) It is the legitimate reward for bearing business risks</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 20)">
+              <span>(B) It serves as a vital internal source of funds for growth and expansion</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 20)">
+              <span>(C) It provides an objective index of managerial efficiency and builds market reputation</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 20)">
+              <span>(D) All of the above</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-20">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 18 lists multiple justifications for profit: livelihood for the entrepreneur, reward for risk-taking, source of internal finance for expansion, and an index of performance and prestige.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 18</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Business Objectives & Profit Role" id="mcq-card-21">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q21 of 25</span>
+            <span class="mcq-topic-badge">Innovation as a Business Objective</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 19</span>
+        </div>
+
+        <h3 class="q-text">Introducing a newly patented lightweight solar battery for smartphones or implementing automated inventory tracking in a warehouse are practical examples of which major business objective?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 21)">
+              <span>(A) Market standing</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 21)">
+              <span>(B) Innovation</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 21)">
+              <span>(C) Worker performance</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 21)">
+              <span>(D) Public procurement</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-21">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 19 highlights 'Innovation' as an essential business objective: developing new products or introducing novel methods in production, marketing, and distribution to maintain competitive advantage.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 19</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Business Risks & Causes" id="mcq-card-22">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q22 of 25</span>
+            <span class="mcq-topic-badge">Speculative Risk vs Pure Risk</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 20</span>
+        </div>
+
+        <h3 class="q-text">Which of the following is an example of a 'Speculative Risk' in business?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 22)">
+              <span>(A) Loss caused by a fire in the factory warehouse</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 22)">
+              <span>(B) Theft of raw materials by miscreants</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 22)">
+              <span>(C) Fluctuation in market demand due to changes in consumer tastes and fashion</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 22)">
+              <span>(D) Plant shutdown due to an accidental boiler explosion</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-22">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 20 explains that 'Speculative risks' involve both the possibility of gain as well as loss (e.g., changes in prices, fashion, or competition). Pure risks (fire, theft, strike) involve only the possibility of loss or no loss.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 20</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Business Risks & Causes" id="mcq-card-23">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q23 of 25</span>
+            <span class="mcq-topic-badge">Causes of Business Risk: Human Causes</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 21</span>
+        </div>
+
+        <h3 class="q-text">Financial losses resulting from employee dishonesty, fraud, pilferage, carelessness, or sudden labor strikes are classified under which category of business risk causes?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 23)">
+              <span>(A) Natural Causes</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 23)">
+              <span>(B) Human Causes</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 23)">
+              <span>(C) Economic Causes</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 23)">
+              <span>(D) Physical Causes</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-23">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 21 categorizes business risks into Natural, Human, Economic, and Other causes. 'Human causes' arise from human behavior, such as employee dishonesty, carelessness, riots, or strikes.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 21</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Starting a Business Enterprise" id="mcq-card-24">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q24 of 25</span>
+            <span class="mcq-topic-badge">Starting a Business: Selection of Line</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 22</span>
+        </div>
+
+        <h3 class="q-text">What is the very first and most fundamental decision an entrepreneur must make before initiating any steps to launch a new business enterprise?</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 24)">
+              <span>(A) Selection of the line of business</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 24)">
+              <span>(B) Designing the office visiting cards</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 24)">
+              <span>(C) Arranging bank loans for working capital</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 24)">
+              <span>(D) Choosing the colour scheme of the factory wall</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-24">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 22 states that the first decision is the 'Selection of line of business': deciding the nature and type of goods and services to produce or trade based on market demand, technical know-how, and profit prospects.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 22</div>
+        </div>
+      </article>
+    
+      <article class="mcq-card" data-category="Starting a Business Enterprise" id="mcq-card-25">
+        <div class="mcq-top-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="mcq-badge">Q25 of 25</span>
+            <span class="mcq-topic-badge">Plant Layout & Physical Facilities</span>
+          </div>
+          <span class="mcq-page-ref">📖 PDF Page 23</span>
+        </div>
+
+        <h3 class="q-text">The physical design and systematic spatial arrangement of machinery, equipment, work stations, and material handling facilities within a manufacturing factory is referred to as:</h3>
+
+        <div class="options-grid">
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 25)">
+              <span>(A) Line of business</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, true, 25)">
+              <span>(B) Plant layout</span>
+              <span class="feedback-badge">✓ Correct</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 25)">
+              <span>(C) Tax planning</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+            <button class="opt-btn" onclick="checkOption(this, false, 25)">
+              <span>(D) Form of ownership</span>
+              <span class="feedback-badge">✗ Incorrect</span>
+            </button>
+          
+        </div>
+
+        <div class="rationale-tray" id="rat-25">
+          <div class="rat-title">
+            <span>✓ Verified NCERT Explanation</span>
+          </div>
+          <p class="rat-text">NCERT Page 23 defines 'Plant layout' as the drawing or physical arrangement showing the layout of machines, equipment, and workstations to ensure the smoothest flow of materials and maximum operational efficiency.</p>
+          <div class="rat-cite">Source: NCERT Class 11 Business Studies, Chapter 1, Page 23</div>
+        </div>
+      </article>
+    
+  </main>
+
+  <!-- Floating Dock -->
+  <div class="floating-dock">
+    <button class="dock-btn" title="Back to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      NCERT Class 11 Business Studies (Part I: Foundations of Business) • Chapter 1: Business, Trade and Commerce (kebs101.pdf)<br>
+      Study Guide & Question Bank prepared by <a href="/">NextSem Academy</a> • All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    const answeredMap = {};
+    const totalCount = 25;
+
+    function checkOption(btn, isCorrect, qId) {
+      const card = document.getElementById('mcq-card-' + qId);
+      const allBtns = card.querySelectorAll('.opt-btn');
+      allBtns.forEach(b => b.classList.remove('correct', 'wrong'));
+
+      if (isCorrect) {
+        btn.classList.add('correct');
+        answeredMap[qId] = true;
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+        }
+      } else {
+        btn.classList.add('wrong');
+        answeredMap[qId] = false;
+      }
+
+      // Reveal rationale
+      const rat = document.getElementById('rat-' + qId);
+      if (rat) rat.classList.add('revealed');
+
+      updateScore();
+    }
+
+    function updateScore() {
+      let score = 0;
+      Object.keys(answeredMap).forEach(k => {
+        if (answeredMap[k]) score++;
+      });
+      document.getElementById('score-counter').innerHTML = '<span>🎯 Score: ' + score + ' / ' + totalCount + '</span>';
+    }
+
+    function revealAllAnswers() {
+      document.querySelectorAll('.rationale-tray').forEach(t => t.classList.add('revealed'));
+    }
+
+    function resetQuiz() {
+      Object.keys(answeredMap).forEach(k => delete answeredMap[k]);
+      document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('correct', 'wrong'));
+      document.querySelectorAll('.rationale-tray').forEach(t => t.classList.remove('revealed'));
+      updateScore();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function filterQuestions(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.mcq-card').forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      document.getElementById('theme-indicator').textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('kebs101_quiz_theme', isLight ? 'light' : 'dark');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('kebs101_quiz_theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-theme');
+        document.getElementById('theme-indicator').textContent = '☀️';
+      }
+    });
+  </script>
+</body>
+</html>

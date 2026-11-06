@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 6 & 7 English Reading Comprehension: The Mighty Banyan Tree | Nextsem</title>
+  <meta name="description" content="Engaging bilingual reading comprehension passage and interactive questions for NCERT Class 6th and 7th English. Includes factual, vocabulary, and grammar in context MCQs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #060c18;
+      --card-bg: #0c1328;
+      --card-border: rgba(56, 189, 248, 0.2);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-emerald: #10b981;
+      --accent-cyan: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --accent-red: #ef4444;
+      --header-surface: rgba(6, 12, 24, 0.95);
+      --font-body: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: rgba(14, 165, 233, 0.25);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-emerald: #059669;
+      --accent-cyan: #0284c7;
+      --accent-gold: #d97706;
+      --accent-purple: #7c3aed;
+      --accent-red: #dc2626;
+      --header-surface: rgba(255, 255, 255, 0.95);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    /* Top Breadcrumb Bar */
+    .top-breadcrumb-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb-trail a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .breadcrumb-trail a:hover {
+      text-decoration: underline;
+      color: var(--accent-emerald);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    .breadcrumb-current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill-btn {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .pill-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    .pill-btn.active {
+      background: var(--accent-cyan);
+      color: #060c18;
+      border-color: var(--accent-cyan);
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(12, 19, 40, 0.95) 0%, rgba(16, 24, 52, 0.85) 100%);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-primary {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    .badge-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .badge-gold {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-gold);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .hero-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    /* Passage Box */
+    .passage-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 26px 22px;
+      margin-bottom: 26px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .passage-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .passage-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .passage-body {
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .passage-body p {
+      margin-bottom: 14px;
+    }
+
+    .passage-body-hi {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      background: rgba(245, 158, 11, 0.05);
+      border-left: 3px solid var(--accent-gold);
+      padding: 14px 16px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 16px;
+    }
+
+    .highlight-word {
+      color: var(--accent-cyan);
+      font-weight: 700;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    /* Scoreboard */
+    .control-dashboard {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .score-meter-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .score-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(56, 189, 248, 0.2) 100%);
+      border: 2px solid var(--accent-emerald);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--accent-emerald);
+    }
+
+    .score-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .progress-bar-container {
+      flex: 1;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-emerald));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    /* Question Card */
+    .question-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 18px;
+      padding: 22px 20px;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .question-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      gap: 10px;
+    }
+
+    .q-number-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-cyan);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+    }
+
+    .q-meta-tags {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .q-meta-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    .question-title-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .question-title-hi {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    /* Options Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .options-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1.5px solid var(--card-border);
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      position: relative;
+    }
+
+    .option-btn:hover:not(.disabled) {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    .option-btn.selected-correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: var(--accent-emerald) !important;
+      color: var(--text-main);
+    }
+
+    .option-btn.selected-wrong {
+      background: rgba(239, 68, 68, 0.18) !important;
+      border-color: var(--accent-red) !important;
+      color: var(--text-main);
+    }
+
+    .opt-label-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .opt-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+    }
+
+    .opt-text-en {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .opt-text-hi {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-left: 32px;
+    }
+
+    /* Explanation Box */
+    .explanation-box {
+      display: none;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .explanation-box.wrong-mode {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .exp-title {
+      font-weight: 800;
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .wrong-mode .exp-title {
+      color: var(--accent-red);
+    }
+
+    .exp-body-en {
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .exp-body-hi {
+      color: var(--accent-gold);
+    }
+
+    /* Short Answer Card */
+    .qa-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .qa-q {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .qa-q-hi {
+      font-size: 0.95rem;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+    }
+
+    .qa-a {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid var(--accent-emerald);
+      padding: 12px 14px;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* Floating bottom mobile bar */
+    .mobile-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--card-border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 99;
+    }
+
+    .dock-stat {
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dock-stat-val {
+      font-family: var(--font-mono);
+      color: var(--accent-emerald);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Breadcrumb Bar -->
+  <header class="top-breadcrumb-bar">
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=6">Class 6</a>
+      <span class="breadcrumb-separator">&amp;</span>
+      <a href="/?class=7">Class 7</a>
+      <span class="breadcrumb-separator">❯</span>
+      <span class="breadcrumb-current">English Reading Comprehension</span>
+    </nav>
+    <div class="top-actions">
+      <button id="themeToggleBtn" class="pill-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        <span id="themeIcon">🌙</span> <span id="themeLabel">Dark</span>
+      </button>
+      <a href="/" class="pill-btn">Back to Portal</a>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    <!-- Hero Header -->
+    <section class="hero-card">
+      <div class="hero-badge-row">
+        <span class="badge-tag badge-primary">NCERT English</span>
+        <span class="badge-tag badge-emerald">Class 6th &amp; 7th</span>
+        <span class="badge-tag badge-gold">Reading Comprehension Passage</span>
+      </div>
+      <h1 class="hero-title">Reading Comprehension &amp; Grammar in Context</h1>
+      <p class="hero-subtitle">
+        Read the inspiring story of India's National Tree and answer factual, inferential, vocabulary, and grammar questions in English &amp; हिन्दी (द्विभाषी).
+      </p>
+    </section>
+
+    <!-- Reading Passage Box -->
+    <section class="passage-card">
+      <div class="passage-header">
+        <div class="passage-title">
+          <span>🌳 The Mighty Banyan Tree: The Silent Guardian of the Forest</span>
+        </div>
+        <button class="pill-btn" onclick="togglePassageLang(this)" id="passageLangBtn">
+          🇮🇳 Show Hindi Translation
+        </button>
+      </div>
+
+      <!-- English Passage -->
+      <div class="passage-body">
+        <p>
+          In the heart of the village stood an <span class="highlight-word">immense</span> banyan tree. For more than two hundred years, it had witnessed generations of children playing under its <span class="highlight-word">colossal</span> canopy. Unlike other trees, the banyan has a miraculous way of growing. Its wide branches send down slender, rope-like shoots into the air. When these shoots reach the fertile earth, they take root and gradually thicken into sturdy woody pillars called <strong>aerial prop roots</strong>. Over decades, a single banyan tree can resemble a miniature forest all by itself.
+        </p>
+        <p>
+          During the golden summer months, the tree burst with thousands of tiny, sweet red figs. This feast attracted a cheerful <span class="highlight-word">flock</span> of parrots, lively squirrels, chattering monkeys, and delicate butterflies. The tree was not just a plant; it was a vibrant, thriving ecosystem that provided shelter, oxygen, and nourishment to countess living beings. Weary farmers rested in its cool shade during scorching afternoons, while elders gathered beneath its branches in the evening to share wisdom and resolve village disputes. Truly, the banyan tree lived as a generous and silent guardian for everyone.
+        </p>
+      </div>
+
+      <!-- Hindi Passage (Toggleable) -->
+      <div id="hindiPassage" class="passage-body-hi" style="display: none;">
+        <p><strong>📖 हिंदी अनुवाद (Passage Translation):</strong></p>
+        <p>
+          गाँव के केंद्र में एक <strong>विशाल बरगद का पेड़</strong> खड़ा था। दो सौ से अधिक वर्षों से, यह बच्चों की कई पीढ़ियों को अपनी विशाल छत्रछाया में खेलते हुए देख चुका था। अन्य पेड़ों की तुलना में बरगद के बढ़ने का तरीका बहुत अनोखा होता है। इसकी चौड़ी शाखाओं से पतली, रस्सी जैसी कोपलें नीचे हवा में लटकती हैं। जब ये कोपलें उपजाऊ धरती तक पहुँचती हैं, तो वे जड़ें जमा लेती हैं और धीरे-धीरे मजबूत खंभों जैसे तनों में बदल जाती हैं, जिन्हें <strong>वायवीय जड़ें (Aerial prop roots)</strong> कहा जाता है। दशकों के अंतराल में, एक अकेला बरगद का पेड़ अपने आप में एक छोटे जंगल जैसा प्रतीत होने लगता है।
+        </p>
+        <p>
+          गर्मियों के सुनहरे महीनों में, यह पेड़ हज़ारों छोटे और मीठे लाल गूलर के फलों से लद जाता था। यह दावत तोतों के एक प्रफुल्लित झुंड, चंचल गिलहरियों, बकबक करते बंदरों और तितलियों को आकर्षित करती थी। यह पेड़ केवल एक पौधा नहीं था; यह एक जीवंत पारिस्थितिकी तंत्र था जो अनगिनत जीवों को आश्रय, ऑक्सीजन और पोषण प्रदान करता था। तपती दोपहर में थके हुए किसान इसकी ठंडी छाँव में विश्राम करते थे, जबकि शाम को गाँव के बड़े-बुजुर्ग इसकी शाखाओं के नीचे बैठकर ज्ञान बाँटते और विवाद सुलझाते थे। सचमुच, यह बरगद का पेड़ सभी के लिए एक उदार और मौन संरक्षक की भाँति जीवित था।
+        </p>
+      </div>
+    </section>
+
+    <!-- Score & Control Bar -->
+    <section class="control-dashboard">
+      <div class="score-meter-wrap">
+        <div class="score-circle">
+          <span id="scoreText">0</span>
+          <span class="score-label">Score</span>
+        </div>
+        <div class="progress-bar-container">
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 700;">
+            <span>Questions Attempted: <strong id="attemptedText">0</strong> / 8</span>
+            <span id="accuracyText">0%</span>
+          </div>
+          <div class="progress-track">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="filter-btn active" onclick="toggleAllLang(this)" id="langToggleBtn">🌐 Toggle Bilingual Questions</button>
+      </div>
+    </section>
+
+    <!-- MCQs Section -->
+    <h2 style="font-size: 1.3rem; margin-bottom: 14px; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px;">
+      📝 Part 1: Passage Comprehension &amp; Grammar MCQs
+    </h2>
+    <div id="questionsContainer"></div>
+
+    <!-- Part 2: Short Conceptual Questions -->
+    <h2 style="font-size: 1.3rem; margin: 30px 0 14px 0; color: var(--accent-emerald); display: flex; align-items: center; gap: 8px;">
+      💡 Part 2: Critical Thinking &amp; Short Answer Questions
+    </h2>
+
+    <article class="qa-card">
+      <div class="qa-q">Q9. How do aerial prop roots help a banyan tree expand across a wide area?</div>
+      <div class="qa-q-hi">प्रश्न 9: वायवीय जड़ें (Aerial prop roots) बरगद के पेड़ को एक विस्तृत क्षेत्र में फैलने में किस प्रकार सहायता करती हैं?</div>
+      <div class="qa-a">
+        <p><strong>Model Answer (आदर्श उत्तर):</strong></p>
+        <p>• <strong>EN:</strong> The aerial prop roots hang down from horizontal branches, reach the soil, and develop into pillar-like supportive trunks. These auxiliary trunks provide structural support and absorb extra water and minerals, allowing the tree to spread endlessly outward without collapsing under its own massive weight.</p>
+        <p>• <strong>HI:</strong> वायवीय जड़ें क्षैतिज शाखाओं से नीचे लटकती हैं और मिट्टी में धंसकर खंभेनुमा सहायक तने बन जाती हैं। ये नए तने पेड़ की विशाल शाखाओं को वजन संभालने में सहारा देते हैं तथा अतिरिक्त जल व खनिज अवशोषित करते हैं, जिससे पेड़ गिरे बिना चारों तरफ फैलता जाता है।</p>
+      </div>
+    </article>
+
+    <article class="qa-card">
+      <div class="qa-q">Q10. Why is the banyan tree described as a "thriving ecosystem"?</div>
+      <div class="qa-q-hi">प्रश्न 10: बरगद के पेड़ को एक "जीवंत पारिस्थितिकी तंत्र (Thriving Ecosystem)" क्यों कहा गया है?</div>
+      <div class="qa-a">
+        <p><strong>Model Answer (आदर्श उत्तर):</strong></p>
+        <p>• <strong>EN:</strong> A single banyan tree supports diverse forms of life simultaneously. It provides food (sweet figs) to birds, fruit bats, and monkeys; shelter and nesting grounds in its hollows; fresh oxygen; and cool shade to weary travelers and villagers.</p>
+        <p>• <strong>HI:</strong> एक अकेला बरगद का पेड़ एक साथ कई प्रकार के जीवों को जीवन देता है। यह पक्षियों और बंदरों को मीठे फल (भोजन), शाखाओं में घोंसले और आश्रय, वायुमंडल को प्रचुर ऑक्सीजन तथा ग्रामीणों व पशुओं को शीतल छाया प्रदान करता है।</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Mobile Bottom Dock -->
+  <aside class="mobile-dock">
+    <div class="dock-stat">
+      <span>Score:</span>
+      <span id="dockScore" class="dock-stat-val">0 / 8</span>
+    </div>
+    <div class="dock-stat">
+      <span>Done:</span>
+      <span id="dockAttempted" class="dock-stat-val">0</span>
+    </div>
+    <button class="pill-btn" onclick="toggleTheme()">
+      <span id="mobileThemeIcon">🌙</span> Theme
+    </button>
+  </aside>
+
+  <script>
+    // 8 High-Yield Comprehension & Grammar Questions on the Passage
+    const questionsData = [
+      // Factual & Reading Comprehension
+      {
+        id: 1,
+        topic: 'Reading Comprehension (गद्यांश बोध)',
+        en: {
+          q: "What are the specialized pillar-like roots hanging down from banyan branches called?",
+          options: ["Tap roots", "Fibrous roots", "Aerial prop roots", "Creeping roots"],
+          exp: "According to the passage, the rope-like shoots that reach the earth and thicken into woody pillars are called aerial prop roots."
+        },
+        hi: {
+          q: "बरगद की शाखाओं से नीचे लटकने वाली खंभेनुमा जड़ों को क्या कहा जाता है?",
+          options: ["मूसला जड़ें (Tap roots)", "झकड़ा जड़ें (Fibrous roots)", "वायवीय सहारा जड़ें (Aerial prop roots)", "विसर्पी जड़ें (Creeping roots)"],
+          exp: "गद्यांश के अनुसार, शाखाओं से लटककर जमीन में धंसने वाले लकड़ी के खंभेनुमा तनों को Aerial prop roots (वायवीय जड़ें) कहते हैं।"
+        },
+        correctIndex: 2 // C
+      },
+      {
+        id: 2,
+        topic: 'Vocabulary - Synonym (समानार्थी शब्द)',
+        en: {
+          q: "Which word in the passage means 'huge, extremely large, or gigantic'?",
+          options: ["Slender", "Immense", "Delicate", "Miniature"],
+          exp: "'Immense' means extremely large in scale or degree. 'Slender' means thin, and 'miniature' means very small."
+        },
+        hi: {
+          q: "गद्यांश में प्रयुक्त किस शब्द का अर्थ 'विशाल अथवा अत्यधिक बड़ा' है?",
+          options: ["स्लेंडर (Slender / पतला)", "इमेंस (Immense / विशाल)", "डेलिकेट (Delicate / कोमल)", "मिनिएचर (Miniature / छोटा)"],
+          exp: "'Immense' का अर्थ अत्यधिक विशाल अथवा बड़ा होता है। 'Slender' का अर्थ पतला और 'Miniature' का अर्थ छोटा रूप होता है।"
+        },
+        correctIndex: 1 // B
+      },
+      {
+        id: 3,
+        topic: 'Factual Understanding (तथ्यात्मक बोध)',
+        en: {
+          q: "What attracted parrots, squirrels, and monkeys to the banyan tree during summer?",
+          options: ["Sweet red figs", "Scented white flowers", "Green leaves only", "Cold rain droplets"],
+          exp: "The passage mentions: 'During the golden summer months, the tree burst with thousands of tiny, sweet red figs which attracted parrots, squirrels, and monkeys.'"
+        },
+        hi: {
+          q: "गर्मियों के दौरान तोतों, गिलहरियों और बंदरों को बरगद के पेड़ की ओर क्या आकर्षित करता था?",
+          options: ["मीठे लाल गूलर के फल", "सुगंधित सफेद फूल", "केवल हरी पत्तियाँ", "ठंडी बारिश की बूँदें"],
+          exp: "गद्यांश में स्पष्ट लिखा है कि गर्मियों में पेड़ पर हज़ारों मीठे लाल गूलर के फल (figs) लगते थे जो सभी जीवों को आकर्षित करते थे।"
+        },
+        correctIndex: 0 // A
+      },
+      {
+        id: 4,
+        topic: 'Vocabulary - Antonym (विलोम शब्द)',
+        en: {
+          q: "What is the antonym (opposite word) of 'Sturdy' as used to describe the tree's woody pillars?",
+          options: ["Strong", "Tough", "Weak / Fragile", "Firm"],
+          exp: "'Sturdy' means solidly built and strong. Its antonym is 'Weak' or 'Fragile'."
+        },
+        hi: {
+          q: "पेड़ के खंभों के लिए प्रयुक्त शब्द 'Sturdy' (मजबूत/दृढ़) का विलोम शब्द क्या है?",
+          options: ["Strong (मजबूत)", "Tough (कठोर)", "Weak / Fragile (कमजोर/नाजुक)", "Firm (दृढ़)"],
+          exp: "'Sturdy' का अर्थ बलिष्ठ और मजबूत होता है। इसका विपरीतार्थक (Antonym) 'Weak' या 'Fragile' (कमजोर) होगा।"
+        },
+        correctIndex: 2 // C
+      },
+
+      // Grammar in Context
+      {
+        id: 5,
+        topic: 'Parts of Speech - Adjective (विशेषण)',
+        en: {
+          q: "In the sentence 'Weary farmers rested in its cool shade', what part of speech is 'Weary'?",
+          options: ["Noun", "Verb", "Adjective", "Adverb"],
+          exp: "'Weary' describes the physical state of the noun 'farmers' (tired farmers). Hence, it is an Adjective."
+        },
+        hi: {
+          q: "वाक्य 'Weary farmers rested in its cool shade' में 'Weary' (थके हुए) शब्द व्याकरण की दृष्टि से क्या है?",
+          options: ["संज्ञा (Noun)", "क्रिया (Verb)", "विशेषण (Adjective)", "क्रिया-विशेषण (Adverb)"],
+          exp: "'Weary' शब्द संज्ञा 'farmers' (किसानों) की विशेषता बता रहा है, अतः यह विशेषण (Adjective) है।"
+        },
+        correctIndex: 2 // C
+      },
+      {
+        id: 6,
+        topic: 'Collective Nouns in Context (समूहवाचक संज्ञा)',
+        en: {
+          q: "Fill in the blank from the passage: 'This feast attracted a cheerful ______ of parrots.'",
+          options: ["herd", "pack", "flock", "swarm"],
+          exp: "A group of birds like parrots is called a 'flock'."
+        },
+        hi: {
+          q: "गद्यांश से रिक्त स्थान भरें: 'This feast attracted a cheerful ______ of parrots.'",
+          options: ["herd (हर्ड)", "pack (पैक)", "flock (फ्लॉक)", "swarm (स्वार्म)"],
+          exp: "पक्षियों (तोतों) के समूह के लिए Collective Noun 'flock' का प्रयोग होता है।"
+        },
+        correctIndex: 2 // C
+      },
+      {
+        id: 7,
+        topic: 'Prepositions in Context (संबंधबोधक)',
+        en: {
+          q: "Choose the correct preposition: Elders gathered ______ its wide branches to resolve disputes.",
+          options: ["beneath / under", "between", "over", "into"],
+          exp: "'Beneath' or 'under' means in a lower position directly under the canopy of the tree."
+        },
+        hi: {
+          q: "सही Preposition चुनें: Elders gathered ______ its wide branches to resolve disputes.",
+          options: ["beneath / under (के नीचे)", "between (के बीच)", "over (के ऊपर)", "into (में)"],
+          exp: "पेड़ की शाखाओं की छाया के नीचे बैठने के लिए 'beneath' अथवा 'under' का प्रयोग होता है।"
+        },
+        correctIndex: 0 // A
+      },
+      {
+        id: 8,
+        topic: 'Abstract Noun in Context (भाववाचक संज्ञा)',
+        en: {
+          q: "What is the abstract noun formed from the adjective 'Wise' (as in village elders sharing their thoughts)?",
+          options: ["Wisely", "Wisdom", "Wiseness", "Wish"],
+          exp: "The quality of being wise is the abstract noun 'Wisdom' (बुद्धिमत्ता / ज्ञान)."
+        },
+        hi: {
+          q: "विशेषण 'Wise' (बुद्धिमान) से बनने वाली भाववाचक संज्ञा (Abstract Noun) क्या है?",
+          options: ["Wisely", "Wisdom (बुद्धिमत्ता/ज्ञान)", "Wiseness", "Wish"],
+          exp: "'Wise' एक विशेषण है, और इससे बनने वाली भाववाचक संज्ञा 'Wisdom' (ज्ञान/बुद्धिमत्ता) होती है।"
+        },
+        correctIndex: 1 // B
+      }
+    ];
+
+    let userAnswers = {};
+    let isBilingual = true;
+
+    function renderQuestions() {
+      const container = document.getElementById('questionsContainer');
+      container.innerHTML = '';
+      const labels = ['A', 'B', 'C', 'D'];
+
+      questionsData.forEach(q => {
+        const isAttempted = userAnswers.hasOwnProperty(q.id);
+        const userChoice = userAnswers[q.id];
+        const isCorrect = userChoice === q.correctIndex;
+
+        const card = document.createElement('article');
+        card.className = 'question-card';
+
+        // Header
+        const header = document.createElement('div');
+        header.className = 'question-header';
+        header.innerHTML = `
+          <div class="q-number-badge">Q${q.id} of 8</div>
+          <div class="q-meta-tags">
+            <span class="q-meta-pill">📖 Comprehension</span>
+            <span class="q-meta-pill">${q.topic}</span>
+          </div>
+        `;
+        card.appendChild(header);
+
+        // English Question
+        const qTitleEn = document.createElement('h3');
+        qTitleEn.className = 'question-title-en';
+        qTitleEn.textContent = q.en.q;
+        card.appendChild(qTitleEn);
+
+        // Hindi Question
+        if (isBilingual) {
+          const qTitleHi = document.createElement('h4');
+          qTitleHi.className = 'question-title-hi';
+          qTitleHi.textContent = q.hi.q;
+          card.appendChild(qTitleHi);
+        }
+
+        // Options Grid
+        const grid = document.createElement('div');
+        grid.className = 'options-grid';
+
+        q.en.options.forEach((optEn, optIdx) => {
+          const optBtn = document.createElement('button');
+          optBtn.className = 'option-btn';
+          if (isAttempted) optBtn.classList.add('disabled');
+
+          if (isAttempted) {
+            if (optIdx === q.correctIndex) optBtn.classList.add('selected-correct');
+            else if (optIdx === userChoice) optBtn.classList.add('selected-wrong');
+          }
+
+          let optContent = `
+            <div class="opt-label-row">
+              <span class="opt-key">${labels[optIdx]}</span>
+              <span class="opt-text-en">${optEn}</span>
+            </div>
+          `;
+          if (isBilingual) {
+            optContent += `<div class="opt-text-hi">${q.hi.options[optIdx]}</div>`;
+          }
+
+          optBtn.innerHTML = optContent;
+          optBtn.onclick = () => selectOption(q.id, optIdx);
+          grid.appendChild(optBtn);
+        });
+        card.appendChild(grid);
+
+        // Explanation Box
+        if (isAttempted) {
+          const expBox = document.createElement('div');
+          expBox.className = `explanation-box ${!isCorrect ? 'wrong-mode' : ''}`;
+          expBox.style.display = 'block';
+          expBox.innerHTML = `
+            <div class="exp-title">${isCorrect ? '✅ Correct Answer!' : '❌ Incorrect. Correct Option: ' + labels[q.correctIndex]}</div>
+            <div class="exp-body-en"><strong>Context Rule:</strong> ${q.en.exp}</div>
+            ${isBilingual ? `<div class="exp-body-hi"><strong>संदर्भ नियम:</strong> ${q.hi.exp}</div>` : ''}
+          `;
+          card.appendChild(expBox);
+        }
+
+        container.appendChild(card);
+      });
+
+      updateStats();
+    }
+
+    function selectOption(qId, choiceIdx) {
+      if (userAnswers.hasOwnProperty(qId)) return;
+      userAnswers[qId] = choiceIdx;
+
+      const q = questionsData.find(item => item.id === qId);
+      if (choiceIdx === q.correctIndex && typeof confetti === 'function') {
+        confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+      }
+
+      renderQuestions();
+
+      if (Object.keys(userAnswers).length === questionsData.length) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+        }
+      }
+    }
+
+    function updateStats() {
+      const totalAttempted = Object.keys(userAnswers).length;
+      let score = 0;
+      Object.keys(userAnswers).forEach(qId => {
+        const q = questionsData.find(item => item.id === Number(qId));
+        if (q && userAnswers[qId] === q.correctIndex) score++;
+      });
+
+      document.getElementById('scoreText').textContent = score;
+      document.getElementById('attemptedText').textContent = totalAttempted;
+      document.getElementById('dockScore').textContent = `${score} / 8`;
+      document.getElementById('dockAttempted').textContent = `${totalAttempted} / 8`;
+
+      const accuracy = totalAttempted > 0 ? Math.round((score / totalAttempted) * 100) : 0;
+      document.getElementById('accuracyText').textContent = `${accuracy}% Accuracy`;
+      document.getElementById('progressFill').style.width = `${(totalAttempted / 8) * 100}%`;
+    }
+
+    function togglePassageLang(btn) {
+      const hiDiv = document.getElementById('hindiPassage');
+      if (hiDiv.style.display === 'none') {
+        hiDiv.style.display = 'block';
+        btn.textContent = 'Hide Hindi Translation';
+        btn.classList.add('active');
+      } else {
+        hiDiv.style.display = 'none';
+        btn.textContent = '🇮🇳 Show Hindi Translation';
+        btn.classList.remove('active');
+      }
+    }
+
+    function toggleAllLang(btn) {
+      isBilingual = !isBilingual;
+      btn.textContent = isBilingual ? '🌐 Bilingual Enabled' : '🇬🇧 English Only';
+      renderQuestions();
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const target = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', target);
+      localStorage.setItem('ncert_theme', target);
+
+      const isLight = target === 'light';
+      document.getElementById('themeIcon').textContent = isLight ? '☀️' : '🌙';
+      document.getElementById('themeLabel').textContent = isLight ? 'Light' : 'Dark';
+      document.getElementById('mobileThemeIcon').textContent = isLight ? '☀️' : '🌙';
+    }
+
+    (function init() {
+      const saved = localStorage.getItem('ncert_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', saved);
+      const isLight = saved === 'light';
+      document.getElementById('themeIcon').textContent = isLight ? '☀️' : '🌙';
+      document.getElementById('themeLabel').textContent = isLight ? 'Light' : 'Dark';
+      document.getElementById('mobileThemeIcon').textContent = isLight ? '☀️' : '🌙';
+    })();
+
+    renderQuestions();
+  </script>
+</body>
+</html>

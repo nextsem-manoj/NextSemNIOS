@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Purchases Book Table: Question 1 | NCERT Class 11 Accountancy</title>
+  <meta name="description" content="Step-by-step Purchases Book Table solution for Question 1 (M/s Modern Electronics) with interactive Trade Discount, CGST, SGST, and Ledger posting visualizer.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📑</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .container {
+      position: relative; max-width: 1040px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(16, 185, 129, 0.12));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 30px; font-weight: 900; margin-bottom: 8px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; }
+
+    /* Studio Card */
+    .studio-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px; padding: 24px; margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      font-size: 18px; font-weight: 800; margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px; color: var(--accent-sky);
+    }
+
+    /* Problem statement callout */
+    .problem-box {
+      background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3);
+      border-left: 4px solid var(--accent-gold); border-radius: 0 12px 12px 0;
+      padding: 16px 20px; font-size: 14px; line-height: 1.7; margin-bottom: 20px;
+    }
+
+    /* Table */
+    .table-responsive {
+      overflow-x: auto; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); margin-top: 14px;
+    }
+    table {
+      width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;
+    }
+    th, td {
+      padding: 12px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); vertical-align: top;
+    }
+    th {
+      background: rgba(15, 23, 42, 0.95); font-weight: 800; color: var(--accent-sky);
+    }
+    .amount-col { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+    .highlight-cost { color: var(--accent-emerald); font-weight: 800; }
+    .highlight-tax { color: var(--accent-gold); font-weight: 700; }
+    .highlight-total { color: var(--accent-sky); font-size: 15px; font-weight: 900; }
+
+    /* Interactive Calculator sliders */
+    .slider-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 16px;
+    }
+    .slider-box {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 12px 16px;
+    }
+    .slider-box label {
+      display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px;
+    }
+    input[type=range] { width: 100%; accent-color: var(--accent-sky); cursor: pointer; }
+
+    /* T-Accounts */
+    .t-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 14px;
+    }
+    .t-account {
+      background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px; padding: 14px;
+    }
+    .t-title {
+      text-align: center; font-size: 13px; font-weight: 800; color: var(--accent-gold);
+      padding-bottom: 6px; border-bottom: 2px solid var(--accent-sky); margin-bottom: 10px;
+    }
+    .t-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">NCERT Class 11</span>
+      <span style="font-weight: 700; font-size: 15px;">Purchases Book Q1</span>
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/docs/purchases_book_table_question_1_solution.md" class="nav-btn" target="_blank">📄 Full Solution MD</a>
+      <a href="/accountancy-purchases-book-5-transactions-studio.html" class="nav-btn">📑 All 5 TXs</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">📑 Question 1: Comprehensive Solution</div>
+      <h1 class="hero-title">Purchases Book Table: M/s Modern Electronics</h1>
+      <p class="hero-subtitle">Credit purchase with 10% Trade Discount, 9% CGST, and 9% SGST with step-by-step Ledger Postings.</p>
+    </header>
+
+    <!-- Problem Statement Box -->
+    <section class="problem-box">
+      <strong style="color:var(--accent-gold); font-size:15px;">📝 Transaction (April 04, 2026):</strong><br>
+      Purchased on credit from <strong>M/s Modern Electronics, Nehru Place, Delhi</strong> (Invoice No. 401):<br>
+      • <span style="color:var(--text-main); font-weight:700;">20 Laptops @ ₹30,000 each</span><br>
+      • <span style="color:var(--text-main); font-weight:700;">15 Desktop Monitors @ ₹8,000 each</span><br>
+      • <span style="color:var(--accent-emerald); font-weight:700;">Trade Discount allowed @ 10%</span> | <span style="color:var(--accent-sky); font-weight:700;">CGST @ 9% & SGST @ 9%</span>
+    </section>
+
+    <!-- Interactive Live Purchases Book Table -->
+    <section class="studio-card">
+      <div class="section-title">📊 1. Standard Formatted Purchases Book</div>
+
+      <!-- Live Adjustment Sliders -->
+      <div class="slider-grid">
+        <div class="slider-box">
+          <label><span>Laptops Quantity:</span> <span id="val_laptops" style="color:var(--accent-sky); font-weight:800;">20 Units</span></label>
+          <input type="range" id="sl_laptops" min="5" max="50" value="20" oninput="recalc()">
+        </div>
+        <div class="slider-box">
+          <label><span>Trade Discount %:</span> <span id="val_td" style="color:var(--accent-emerald); font-weight:800;">10%</span></label>
+          <input type="range" id="sl_td" min="0" max="30" step="5" value="10" oninput="recalc()">
+        </div>
+        <div class="slider-box">
+          <label><span>CGST / SGST Rate:</span> <span id="val_gst" style="color:var(--accent-gold); font-weight:800;">9% + 9%</span></label>
+          <input type="range" id="sl_gst" min="6" max="14" step="1" value="9" oninput="recalc()">
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:100px;">Date (2026)</th>
+              <th style="width:90px;">Inv No.</th>
+              <th>Name of Supplier / Particulars</th>
+              <th class="amount-col">Details (₹)</th>
+              <th class="amount-col">Cost / Purchases (₹)</th>
+              <th class="amount-col">Input CGST (₹)</th>
+              <th class="amount-col">Input SGST (₹)</th>
+              <th class="amount-col">Total Payable (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Apr 04</strong></td>
+              <td><strong>401</strong></td>
+              <td>
+                <strong style="color:var(--accent-sky);">M/s Modern Electronics, Delhi</strong><br>
+                • <span id="txt_laptop_line">20 Laptops @ ₹30,000</span> = <span id="txt_laptop_amt">6,00,000</span><br>
+                • 15 Monitors @ ₹8,000 = 1,20,000<br>
+                <span style="color:var(--text-muted);">------------------------------------</span><br>
+                Gross Total = <span id="txt_gross">7,20,000</span><br>
+                <em>Less: Trade Discount (<span id="txt_td_pct">10</span>%)</em> = (<span id="txt_td_amt">72,000</span>)<br>
+                <span style="color:var(--text-muted);">------------------------------------</span><br>
+                <strong>Net Cost (Purchases Dr.)</strong> = <span id="txt_net_cost">6,48,000</span><br>
+                <em>Add: Input CGST @ <span id="txt_cgst_pct">9</span>%</em> = <span id="txt_cgst_amt">58,320</span><br>
+                <em>Add: Input SGST @ <span id="txt_sgst_pct">9</span>%</em> = <span id="txt_sgst_amt">58,320</span>
+              </td>
+              <td class="amount-col">
+                <span id="dt_cost">6,48,000</span><br><br>
+                <span id="dt_cgst">58,320</span><br>
+                <span id="dt_sgst">58,320</span>
+              </td>
+              <td class="amount-col highlight-cost" id="col_cost">6,48,000</td>
+              <td class="amount-col highlight-tax" id="col_cgst">58,320</td>
+              <td class="amount-col highlight-tax" id="col_sgst">58,320</td>
+              <td class="amount-col highlight-total" id="col_total">7,64,640</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. Step-by-Step Mathematical Notes -->
+    <section class="studio-card">
+      <div class="section-title">🧮 2. Step-by-Step Calculation Breakdown</div>
+      <div style="background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:18px; font-size:13px; line-height:1.8;">
+        1. <strong>Gross Amount:</strong> <span id="calc_step_gross">(20 × ₹30,000) + (15 × ₹8,000) = ₹6,00,000 + ₹1,20,000 = ₹7,20,000</span><br>
+        2. <strong>Trade Discount:</strong> <span id="calc_step_td">10% of ₹7,20,000 = ₹72,000 (Deducted before tax; not shown in ledger)</span><br>
+        3. <strong>Taxable Net Cost:</strong> <span id="calc_step_cost">₹7,20,000 - ₹72,000 = ₹6,48,000 (Transferred to Purchases A/c Dr.)</span><br>
+        4. <strong>Input GST:</strong> <span id="calc_step_gst">CGST 9% (₹58,320) + SGST 9% (₹58,320) = ₹1,16,640 (Asset accounts Dr.)</span><br>
+        5. <strong>Total Payable:</strong> <span id="calc_step_total">₹6,48,000 + ₹58,320 + ₹58,320 = ₹7,64,640 (Credited to M/s Modern Electronics)</span>
+      </div>
+    </section>
+
+    <!-- 3. Ledger Postings T-Accounts -->
+    <section class="studio-card">
+      <div class="section-title">🏛️ 3. Ledger Accounts Posting</div>
+      
+      <div class="t-grid">
+        <!-- Purchases Account -->
+        <div class="t-account">
+          <div class="t-title">PURCHASES A/C (Dr.)</div>
+          <div class="t-row">
+            <span style="color:var(--accent-emerald);">Apr 04: To Modern Electronics</span>
+            <strong id="led_p_amt">₹6,48,000</strong>
+          </div>
+        </div>
+
+        <!-- Input CGST Account -->
+        <div class="t-account">
+          <div class="t-title">INPUT CGST A/C (Dr.)</div>
+          <div class="t-row">
+            <span style="color:var(--accent-gold);">Apr 04: To Modern Electronics</span>
+            <strong id="led_cgst_amt">₹58,320</strong>
+          </div>
+        </div>
+
+        <!-- Input SGST Account -->
+        <div class="t-account">
+          <div class="t-title">INPUT SGST A/C (Dr.)</div>
+          <div class="t-row">
+            <span style="color:var(--accent-gold);">Apr 04: To Modern Electronics</span>
+            <strong id="led_sgst_amt">₹58,320</strong>
+          </div>
+        </div>
+
+        <!-- Creditor Account -->
+        <div class="t-account">
+          <div class="t-title">M/S MODERN ELECTRONICS (Cr.)</div>
+          <div class="t-row"><span>Apr 04: By Purchases A/c</span><strong id="led_cr_p">₹6,48,000</strong></div>
+          <div class="t-row"><span>Apr 04: By Input CGST</span><strong id="led_cr_cgst">₹58,320</strong></div>
+          <div class="t-row"><span>Apr 04: By Input SGST</span><strong id="led_cr_sgst">₹58,320</strong></div>
+          <div class="t-row" style="border-top:1px solid var(--accent-sky); color:var(--accent-sky); font-weight:800; margin-top:4px;">
+            <span>Total Credit Payable:</span>
+            <span id="led_cr_total">₹7,64,640</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function formatINR(val) {
+      return Number(val).toLocaleString('en-IN');
+    }
+
+    function recalc() {
+      const laptopQty = parseInt(document.getElementById('sl_laptops').value, 10);
+      const tdPct = parseFloat(document.getElementById('sl_td').value);
+      const gstPct = parseFloat(document.getElementById('sl_gst').value);
+
+      document.getElementById('val_laptops').innerText = laptopQty + ' Units';
+      document.getElementById('val_td').innerText = tdPct + '%';
+      document.getElementById('val_gst').innerText = gstPct + '% + ' + gstPct + '%';
+
+      const laptopAmt = laptopQty * 30000;
+      const monitorAmt = 15 * 8000; // 1,20,000
+      const gross = laptopAmt + monitorAmt;
+      const tdAmt = (tdPct / 100) * gross;
+      const netCost = gross - tdAmt;
+      const cgstAmt = (gstPct / 100) * netCost;
+      const sgstAmt = (gstPct / 100) * netCost;
+      const total = netCost + cgstAmt + sgstAmt;
+
+      // Update Table Text
+      document.getElementById('txt_laptop_line').innerText = `${laptopQty} Laptops @ ₹30,000`;
+      document.getElementById('txt_laptop_amt').innerText = formatINR(laptopAmt);
+      document.getElementById('txt_gross').innerText = formatINR(gross);
+      document.getElementById('txt_td_pct').innerText = tdPct;
+      document.getElementById('txt_td_amt').innerText = formatINR(tdAmt);
+      document.getElementById('txt_net_cost').innerText = formatINR(netCost);
+      document.getElementById('txt_cgst_pct').innerText = gstPct;
+      document.getElementById('txt_cgst_amt').innerText = formatINR(cgstAmt);
+      document.getElementById('txt_sgst_pct').innerText = gstPct;
+      document.getElementById('txt_sgst_amt').innerText = formatINR(sgstAmt);
+
+      // Table Columns
+      document.getElementById('dt_cost').innerText = formatINR(netCost);
+      document.getElementById('dt_cgst').innerText = formatINR(cgstAmt);
+      document.getElementById('dt_sgst').innerText = formatINR(sgstAmt);
+      document.getElementById('col_cost').innerText = formatINR(netCost);
+      document.getElementById('col_cgst').innerText = formatINR(cgstAmt);
+      document.getElementById('col_sgst').innerText = formatINR(sgstAmt);
+      document.getElementById('col_total').innerText = formatINR(total);
+
+      // Calculation Steps
+      document.getElementById('calc_step_gross').innerText = `(${laptopQty} × ₹30,000) + (15 × ₹8,000) = ₹${formatINR(laptopAmt)} + ₹1,20,000 = ₹${formatINR(gross)}`;
+      document.getElementById('calc_step_td').innerText = `${tdPct}% of ₹${formatINR(gross)} = ₹${formatINR(tdAmt)} (Deducted before tax)`;
+      document.getElementById('calc_step_cost').innerText = `₹${formatINR(gross)} - ₹${formatINR(tdAmt)} = ₹${formatINR(netCost)} (Purchases A/c Dr.)`;
+      document.getElementById('calc_step_gst').innerText = `CGST ${gstPct}% (₹${formatINR(cgstAmt)}) + SGST ${gstPct}% (₹${formatINR(sgstAmt)}) = ₹${formatINR(cgstAmt + sgstAmt)}`;
+      document.getElementById('calc_step_total').innerText = `₹${formatINR(netCost)} + ₹${formatINR(cgstAmt)} + ₹${formatINR(sgstAmt)} = ₹${formatINR(total)}`;
+
+      // Ledger Postings
+      document.getElementById('led_p_amt').innerText = '₹' + formatINR(netCost);
+      document.getElementById('led_cgst_amt').innerText = '₹' + formatINR(cgstAmt);
+      document.getElementById('led_sgst_amt').innerText = '₹' + formatINR(sgstAmt);
+      document.getElementById('led_cr_p').innerText = '₹' + formatINR(netCost);
+      document.getElementById('led_cr_cgst').innerText = '₹' + formatINR(cgstAmt);
+      document.getElementById('led_cr_sgst').innerText = '₹' + formatINR(sgstAmt);
+      document.getElementById('led_cr_total').innerText = '₹' + formatINR(total);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    recalc();
+  </script>
+</body>
+</html>

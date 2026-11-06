@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Navyug Class 11 Accountancy Mid-Term Exam (2026-27): Fully Solved Paper</title>
+  <meta name="description" content="100% complete step-by-step solutions for Navyug School Class 11 Accountancy Mid-Term Examination (80 Marks). Interactive click-to-reveal answers, bilingual English & Hindi explanations, journal entries, ledger accounts, cash book, and BRS.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3b;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --code-bg: #030712;
+      --table-header: #1e293b;
+      --table-row-alt: rgba(255, 255, 255, 0.02);
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --code-bg: #f1f5f9;
+      --table-header: #e2e8f0;
+      --table-row-alt: rgba(0, 0, 0, 0.02);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 90px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Sticky Navbar & Breadcrumbs */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      display: flex; flex-direction: column; gap: 8px;
+      z-index: 100;
+    }
+
+    .nav-content {
+      display: flex; justify-content: space-between; align-items: center; width: 100%;
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;
+    }
+    .brand-logo-emblem {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, #059669, #10b981);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 16px; color: #fff;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+    }
+    .brand-title-wrap { display: flex; flex-direction: column; }
+    .brand-title { font-weight: 800; font-size: 15px; color: #fff; line-height: 1.2; }
+    .brand-sub { font-size: 10px; font-weight: 700; color: #10b981; letter-spacing: 0.5px; text-transform: uppercase; }
+
+    /* Interactive Breadcrumbs Trail (Permanent Rule) */
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+      color: var(--text-muted); overflow-x: auto; white-space: nowrap; padding-bottom: 2px;
+    }
+    .breadcrumb-trail a {
+      color: #38bdf8; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+      transition: color 0.2s;
+    }
+    .breadcrumb-trail a:hover { color: #7dd3fc; text-decoration: underline; }
+    .breadcrumb-sep { opacity: 0.5; font-size: 10px; }
+    .breadcrumb-current { color: #f59e0b; font-weight: 700; }
+
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.16); transform: translateY(-1px); }
+    .nav-btn.primary {
+      background: linear-gradient(135deg, #059669, #10b981); color: #fff; border-color: rgba(16, 185, 129, 0.4);
+    }
+    .nav-btn.primary:hover { box-shadow: 0 0 16px rgba(16, 185, 129, 0.4); }
+
+    /* Main Container */
+    .container {
+      position: relative; max-width: 1060px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(56, 189, 248, 0.12), rgba(245, 158, 11, 0.08));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      position: relative; overflow: hidden;
+    }
+    .hero-badge-row {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 800; padding: 4px 12px; border-radius: 9999px;
+    }
+    .hero-tag.exam { background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent-sky); }
+    .hero-tag.marks { background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.4); color: var(--accent-gold); }
+    .hero-tag.bilingual { background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: var(--accent-emerald); }
+
+    .hero-title {
+      font-size: 28px; font-weight: 900; line-height: 1.3; margin-bottom: 10px;
+      background: linear-gradient(135deg, #ffffff 40%, #7dd3fc 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; max-width: 760px; margin: 0 auto 18px; }
+
+    /* Control Bar: Master Expand, Language, Filter */
+    .controls-panel {
+      background: var(--bg-card); border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 14px 18px; margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .control-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .ctrl-label { font-size: 12px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); margin-right: 4px; }
+
+    .pill-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main); font-size: 12px; font-weight: 700; padding: 6px 12px;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s ease;
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky); color: var(--accent-sky);
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px;
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 8px 16px; border-radius: 10px; font-size: 13px;
+      font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: rgba(16, 185, 129, 0.2); border-color: var(--accent-emerald);
+      color: #34d399; transform: translateY(-1px);
+    }
+
+    /* Question Card */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px; padding: 22px 24px;
+      margin-bottom: 22px; box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .q-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+
+    .q-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 14px; gap: 8px; flex-wrap: wrap;
+    }
+    .q-meta-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .q-badge {
+      font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 6px;
+      background: rgba(56, 189, 248, 0.15); color: var(--accent-sky); border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .topic-badge {
+      font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+    .marks-badge {
+      font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .q-body {
+      font-size: 15px; font-weight: 600; line-height: 1.7; margin-bottom: 16px;
+    }
+    .q-en { color: var(--text-main); margin-bottom: 6px; }
+    .q-hi { color: #94a3b8; font-size: 14px; font-style: normal; margin-bottom: 12px; }
+
+    /* MCQ Option List */
+    .mcq-options {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 8px; margin: 12px 0 16px;
+    }
+    .mcq-opt {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 14px; border-radius: 10px; font-size: 13px; font-weight: 600;
+      display: flex; align-items: baseline; gap: 8px; color: var(--text-muted);
+    }
+    .opt-key {
+      font-weight: 800; color: var(--accent-sky); background: rgba(56, 189, 248, 0.15);
+      width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 11px;
+    }
+
+    /* Action Buttons Row */
+    .action-row {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;
+    }
+    .sol-toggle-btn {
+      background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-emerald);
+      color: #34d399; padding: 8px 16px; border-radius: 10px; font-size: 13px; font-weight: 800;
+      cursor: pointer; transition: all 0.25s ease; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .sol-toggle-btn:hover {
+      background: rgba(16, 185, 129, 0.3); transform: translateY(-1px);
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.3);
+    }
+    .sol-toggle-btn.revealed {
+      background: rgba(244, 63, 94, 0.15); border-color: var(--accent-rose); color: #fda4af;
+    }
+    .sol-toggle-btn.revealed:hover {
+      background: rgba(244, 63, 94, 0.3);
+    }
+
+    /* Solution Box (Hidden by default) */
+    .sol-drawer {
+      display: none;
+      background: rgba(3, 7, 18, 0.7);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-left: 4px solid var(--accent-emerald);
+      border-radius: 12px; padding: 18px 22px;
+      margin-top: 14px; font-size: 14px; line-height: 1.8;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ans-highlight-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399; font-weight: 800; font-size: 13px; padding: 4px 12px; border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .sol-explanation {
+      margin-bottom: 12px; color: var(--text-main);
+    }
+
+    /* Accounting Tables Styling */
+    .acc-table-wrapper {
+      overflow-x: auto; margin: 14px 0; border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .acc-table {
+      width: 100%; border-collapse: collapse; font-size: 13px;
+      font-family: 'JetBrains Mono', monospace, system-ui;
+    }
+    .acc-table th {
+      background: var(--table-header); color: #38bdf8; font-weight: 700;
+      padding: 10px 14px; text-align: left; border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+      white-space: nowrap;
+    }
+    .acc-table td {
+      padding: 9px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-main);
+    }
+    .acc-table tr:nth-child(even) { background: var(--table-row-alt); }
+    .acc-table tr:hover { background: rgba(56, 189, 248, 0.05); }
+    .acc-table .text-right { text-align: right; }
+    .acc-table .total-row {
+      font-weight: 800; background: rgba(16, 185, 129, 0.1); color: #34d399;
+      border-top: 2px solid var(--accent-emerald); border-bottom: 2px solid var(--accent-emerald);
+    }
+
+    /* Voucher Card Box */
+    .voucher-card {
+      border: 2px dashed rgba(245, 158, 11, 0.4); border-radius: 12px;
+      padding: 16px; background: rgba(245, 158, 11, 0.04); margin: 12px 0;
+    }
+    .voucher-header {
+      text-align: center; border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+      padding-bottom: 8px; margin-bottom: 10px;
+    }
+    .voucher-firm { font-weight: 800; font-size: 15px; color: #fcd34d; }
+    .voucher-type { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+
+    /* Working Notes Box */
+    .wn-box {
+      background: rgba(56, 189, 248, 0.06); border-left: 3px solid var(--accent-sky);
+      border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 12px 0; font-size: 13px;
+    }
+    .wn-title { font-weight: 800; color: var(--accent-sky); margin-bottom: 4px; }
+
+    /* Footer */
+    .page-footer {
+      text-align: center; padding: 30px 16px; border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px; color: var(--text-muted);
+    }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px; margin-top: 10px; flex-wrap: wrap;
+    }
+    .footer-links a { color: #38bdf8; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 22px; }
+      .container { padding: 16px 10px; }
+      .q-card { padding: 16px 14px; }
+      .controls-panel { flex-direction: column; align-items: stretch; }
+      .control-group { justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Nav with Full Breadcrumbs (Permanent Rule) -->
+  <nav class="top-nav">
+    <div class="nav-content">
+      <a href="/" class="nav-brand">
+        <div class="brand-logo-emblem">N</div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">NextSem Study Guide</span>
+          <span class="brand-sub">Class 11 Accountancy Studio</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="nav-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓 <span id="themeLabel">Light</span></button>
+        <button class="nav-btn primary" onclick="toggleAllSolutions()" id="masterToggleBtn">👁️ Reveal All</button>
+        <button class="nav-btn" onclick="window.print()">🖨️ Print / PDF</button>
+      </div>
+    </div>
+
+    <!-- Complete Top Navbar Breadcrumb Navigation (PERMANENT RULE) -->
+    <div class="breadcrumb-trail">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=11">Class 11</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/financial-accounting-ch3-notes-and-numericals.html">Accountancy</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Navyug Mid-Term Exam Paper (25 Sept 2026) Fully Solved</span>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="hero-badge-row">
+        <span class="hero-tag exam">🏫 Navyug School Educational Society</span>
+        <span class="hero-tag marks">🎯 Mid-Term Exam 2026-27 • 80 Marks</span>
+        <span class="hero-tag bilingual">🌐 Dual Language: English & हिंदी</span>
+      </div>
+      <h1 class="hero-title">Class 11 Accountancy: Full Solved Question Paper</h1>
+      <p class="hero-subtitle">
+        Every question solved with step-by-step working notes, Journal Entries, Ledger Accounts, Sales Book, Two-Column Cash Book, and Bank Reconciliation Statement. Solutions are <strong>hidden by default</strong> so you can solve first, then click to verify!
+      </p>
+    </header>
+
+    <!-- Controls Panel -->
+    <section class="controls-panel">
+      <div class="control-group">
+        <span class="ctrl-label">Language View:</span>
+        <button class="pill-btn active" onclick="setLanguage('both', this)">Bilingual (English + हिंदी)</button>
+        <button class="pill-btn" onclick="setLanguage('en', this)">English Only</button>
+        <button class="pill-btn" onclick="setLanguage('hi', this)">हिंदी Only</button>
+      </div>
+      <div class="control-group">
+        <span class="ctrl-label">Quick Actions:</span>
+        <button class="pill-btn" onclick="expandAll(true)">👁️ Show All Solutions</button>
+        <button class="pill-btn" onclick="expandAll(false)">🔒 Hide All Solutions</button>
+      </div>
+    </section>
+
+    <!-- Filter Tabs by Section -->
+    <div class="filter-tabs">
+      <button class="tab-btn active" onclick="filterQuestions('all', this)">All Questions (Q1 - Q13)</button>
+      <button class="tab-btn" onclick="filterQuestions('mcq', this)">Section A: 1-Mark MCQs (Q1)</button>
+      <button class="tab-btn" onclick="filterQuestions('short', this)">Section B: Short Numericals (Q2-Q4)</button>
+      <button class="tab-btn" onclick="filterQuestions('theory', this)">Section C: Concepts & Vouchers (Q5-Q7)</button>
+      <button class="tab-btn" onclick="filterQuestions('long', this)">Section D: 6-Mark Practical (Q8-Q13)</button>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="questionsContainer"></div>
+  </main>
+
+  <footer class="page-footer">
+    <div>Nextsem Academy • Complete Free CBSE & NCERT Dev Curriculum</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/?class=11">Class 11 Hub</a>
+      <a href="/financial-accounting-ch5-bank-reconciliation-statement-studio.html">BRS Studio</a>
+      <a href="/financial-accounting-cash-book-numericals-studio.html">Cash Book Studio</a>
+      <a href="/accountancy-purchases-book-5-transactions-studio.html">Purchases Book</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Theme Management with localStorage persistence (Permanent Rule)
+    function initTheme() {
+      const saved = localStorage.getItem('nextsem_theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-theme');
+        document.getElementById('themeLabel').textContent = 'Dark';
+      } else {
+        document.body.classList.remove('light-theme');
+        document.getElementById('themeLabel').textContent = 'Light';
+      }
+    }
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+      document.getElementById('themeLabel').textContent = isLight ? 'Dark' : 'Light';
+    }
+    initTheme();
+
+    // Language view state
+    let currentLang = 'both';
+    function setLanguage(lang, btn) {
+      currentLang = lang;
+      document.querySelectorAll('.controls-panel .pill-btn').forEach(b => {
+        if (b.innerText.toLowerCase().includes('english') || b.innerText.toLowerCase().includes('हिंदी') || b.innerText.toLowerCase().includes('bilingual')) {
+          b.classList.remove('active');
+        }
+      });
+      btn.classList.add('active');
+
+      document.querySelectorAll('.q-en').forEach(el => el.style.display = (lang === 'hi') ? 'none' : 'block');
+      document.querySelectorAll('.q-hi').forEach(el => el.style.display = (lang === 'en') ? 'none' : 'block');
+      document.querySelectorAll('.sol-en').forEach(el => el.style.display = (lang === 'hi') ? 'none' : 'block');
+      document.querySelectorAll('.sol-hi').forEach(el => el.style.display = (lang === 'en') ? 'none' : 'block');
+    }
+
+    // Questions Data (100% complete line-by-line from 9-page scan)
+    const questionsData = [
+      // Q1 (i)
+      {
+        id: "1_1", qNum: "Q1 (i)", section: "mcq", marks: "1 Mark", topic: "Cash Basis of Accounting",
+        qEn: "Under Cash Basis of Accounting, only cash transactions are recorded. So transactions relating to which of the following are recorded?",
+        qHi: "रोकड़ आधार लेखांकन (Cash Basis of Accounting) के अंतर्गत केवल नकद लेन-देन अभिलिखित किए जाते हैं। अतः यह किन लेन-देन से संबंधित है?",
+        options: [
+          { key: "A", text: "Cash (रोकड़)" },
+          { key: "B", text: "Bank (बैंक)" },
+          { key: "C", text: "Credit (उधार)" },
+          { key: "D", text: "A and B (A और B दोनों)" }
+        ],
+        ansKey: "D",
+        ansTitle: "Correct Option: (D) A and B (Cash and Bank)",
+        solEn: "<strong>Explanation:</strong> Under the Cash Basis of Accounting, transactions are recorded only when cash is actually received or paid, which includes both currency cash transactions and bank payments/receipts. Credit transactions are strictly ignored until actual cash or cheque is realized/paid.",
+        solHi: "<strong>व्याख्या:</strong> रोकड़ आधार लेखांकन में केवल वे लेन-देन दर्ज होते हैं जिनमें वास्तविक रूप से रोकड़ या बैंक द्वारा भुगतान प्राप्त या दिया गया हो। उधार लेन-देन को तब तक नहीं लिखा जाता जब तक कि उनका नकद निपटान न हो जाए।"
+      },
+      // Q1 (ii)
+      {
+        id: "1_2", qNum: "Q1 (ii)", section: "mcq", marks: "1 Mark", topic: "Journal - Special Transactions",
+        qEn: "Goods given as free sample is credited to:",
+        qHi: "मुफ्त नमूने (Free Sample) के रूप में वितरित किए गए माल को किस खाते में जमा (Credit) किया जाता है?",
+        options: [
+          { key: "A", text: "Advertisement A/c (विज्ञापन खाता)" },
+          { key: "B", text: "Purchases A/c (क्रय खाता)" },
+          { key: "C", text: "Sales A/c (विक्रय खाता)" },
+          { key: "D", text: "None of these (इनमें से कोई नहीं)" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Purchases A/c",
+        solEn: "<strong>Journal Entry:</strong><br><code>Advertisement A/c (or Free Samples A/c) Dr.<br>&nbsp;&nbsp;To Purchases A/c</code><br><strong>Explanation:</strong> Free samples are distributed for sales promotion at cost price. Since goods are going out of the business without sales revenue, the net cost of Purchases is reduced by crediting Purchases A/c.",
+        solHi: "<strong>रोजनामचा प्रविष्टि:</strong> विज्ञापन खाता नाम (Dr.) क्रय खाते से (Cr.)।<br><strong>व्याख्या:</strong> मुफ्त नमूना लागत मूल्य पर दिया जाता है। चूंकि यह माल बिक्री नहीं है, अतः व्यापार में उपलब्ध माल (Purchases) की लागत को कम करने के लिए क्रय खाते को जमा (Credit) किया जाता है।"
+      },
+      // Q1 (iii)
+      {
+        id: "1_3", qNum: "Q1 (iii)", section: "mcq", marks: "1 Mark", topic: "Classification of Accounts",
+        qEn: "Goodwill A/c is a:",
+        qHi: "ख्याति खाता (Goodwill A/c) किस प्रकार का खाता है?",
+        options: [
+          { key: "A", text: "Personal account (व्यक्तिगत खाता)" },
+          { key: "B", text: "Real account (वास्तविक खाता)" },
+          { key: "C", text: "Nominal account (नाममात्र खाता)" },
+          { key: "D", text: "None of these (इनमें से कोई नहीं)" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Real account",
+        solEn: "<strong>Explanation:</strong> Real accounts relate to properties and assets owned by the business. Goodwill is an <em>intangible real asset</em> (it has commercial value and can be bought/sold), hence it is classified as a Real Account.",
+        solHi: "<strong>व्याख्या:</strong> वास्तविक खाते व्यापार की संपत्तियों से संबंधित होते हैं। ख्याति (Goodwill) एक अमूर्त वास्तविक संपत्ति (Intangible Real Asset) है जिसका आर्थिक मूल्य होता है, अतः यह वास्तविक खाता है।"
+      },
+      // Q1 (iv)
+      {
+        id: "1_4", qNum: "Q1 (iv)", section: "mcq", marks: "1 Mark", topic: "Drawings & Rules of Debit/Credit",
+        qEn: "Drawings of cash is credited to:",
+        qHi: "नकद आहरण (Drawings of cash) होने पर किस खाते को जमा (Credit) किया जाता है?",
+        options: [
+          { key: "A", text: "Capital A/c (पूँजी खाता)" },
+          { key: "B", text: "Drawings A/c (आहरण खाता)" },
+          { key: "C", text: "Cash A/c (रोकड़ खाता)" },
+          { key: "D", text: "Purchases A/c (क्रय खाता)" }
+        ],
+        ansKey: "C",
+        ansTitle: "Correct Option: (C) Cash A/c",
+        solEn: "<strong>Journal Entry:</strong><br><code>Drawings A/c Dr.<br>&nbsp;&nbsp;To Cash A/c</code><br><strong>Explanation:</strong> As cash leaves the business ('Credit what goes out' under traditional or 'Credit decrease in Asset' under modern approach), Cash A/c is credited.",
+        solHi: "<strong>व्याख्या:</strong> जब स्वामी निजी उपयोग के लिए नकद निकालता है, तो व्यापार से रोकड़ कम होती है (Credit what goes out), इसलिए रोकड़ खाते (Cash A/c) को जमा (Credit) किया जाता है।"
+      },
+      // Q1 (v)
+      {
+        id: "1_5", qNum: "Q1 (v)", section: "mcq", marks: "1 Mark", topic: "Golden Rules of Accounting",
+        qEn: "\"Debit the receiver, Credit the giver\" rule is applied to:",
+        qHi: "\"पाने वाले को नाम (Debit) करो और देने वाले को जमा (Credit) करो\" यह नियम किस खाते पर लागू होता है?",
+        options: [
+          { key: "A", text: "Real A/c (वास्तविक खाता)" },
+          { key: "B", text: "Nominal A/c (नाममात्र खाता)" },
+          { key: "C", text: "Personal A/c (व्यक्तिगत खाता)" },
+          { key: "D", text: "None of these (इनमें से कोई नहीं)" }
+        ],
+        ansKey: "C",
+        ansTitle: "Correct Option: (C) Personal A/c",
+        solEn: "<strong>Golden Rules Summary:</strong><br>• <strong>Personal A/c:</strong> Debit the receiver, Credit the giver.<br>• <strong>Real A/c:</strong> Debit what comes in, Credit what goes out.<br>• <strong>Nominal A/c:</strong> Debit all expenses & losses, Credit all incomes & gains.",
+        solHi: "<strong>व्याख्या:</strong> व्यक्तिगत खाते का स्वर्ण नियम है: पाने वाले व्यक्ति/संस्था को नाम (Debit) करें तथा देने वाले व्यक्ति/संस्था को जमा (Credit) करें।"
+      },
+      // Q1 (vi)
+      {
+        id: "1_6", qNum: "Q1 (vi)", section: "mcq", marks: "1 Mark", topic: "Qualitative Characteristics",
+        qEn: "The fundamental qualitative characteristics that make accounting information useful for decision making are:",
+        qHi: "लेखांकन सूचना को निर्णय लेने योग्य बनाने वाली प्राथमिक गुणात्मक विशेषताएँ हैं:",
+        options: [
+          { key: "A", text: "Reliability & Relevance (विश्वसनीयता एवं प्रासंगिकता)" },
+          { key: "B", text: "Understandability & Comparability (बोधगम्यता एवं तुलनात्मकता)" },
+          { key: "C", text: "Both (A) and (B) (दोनों A और B)" },
+          { key: "D", text: "None of these (इनमें से कोई नहीं)" }
+        ],
+        ansKey: "C",
+        ansTitle: "Correct Option: (C) Both (A) and (B)",
+        solEn: "<strong>Explanation:</strong> As per standard accounting frameworks (IASB & ICAI), the 4 primary qualitative characteristics of accounting information are: 1. Reliability, 2. Relevance, 3. Understandability, and 4. Comparability.",
+        solHi: "<strong>व्याख्या:</strong> लेखांकन सूचना की चार मुख्य गुणात्मक विशेषताएं होती हैं: 1. विश्वसनीयता (Reliability), 2. प्रासंगिकता (Relevance), 3. बोधगम्यता (Understandability), 4. तुलनात्मकता (Comparability)।"
+      },
+      // Q1 (vii)
+      {
+        id: "1_7", qNum: "Q1 (vii)", section: "mcq", marks: "1 Mark", topic: "Journal Entry - Credit Purchase",
+        qEn: "When goods are purchased on credit from Mohan, which journal entry is recorded?",
+        qHi: "जब मोहन से उधार माल खरीदा जाता है, तो कौन-सी रोजनामचा प्रविष्टि की जाती है?",
+        options: [
+          { key: "A", text: "Purchases A/c Dr. To Mohan" },
+          { key: "B", text: "Mohan Dr. To Purchases A/c" },
+          { key: "C", text: "Purchases A/c Dr. To Cash A/c" },
+          { key: "D", text: "Cash A/c Dr. To Mohan" }
+        ],
+        ansKey: "A",
+        ansTitle: "Correct Option: (A) Purchases A/c Dr. To Mohan",
+        solEn: "<strong>Explanation:</strong> Purchases is an expense/asset increasing (Debited). Mohan is a creditor/liability increasing (Credited). Hence: Purchases A/c Dr. To Mohan.",
+        solHi: "<strong>व्याख्या:</strong> माल खरीदने पर व्यय बढ़ता है अतः क्रय खाता नाम (Debit) होता है, और मोहन लेनदार (दायित्व) बनता है अतः मोहन का खाता जमा (Credit) होता है।"
+      },
+      // Q1 (viii)
+      {
+        id: "1_8", qNum: "Q1 (viii)", section: "mcq", marks: "1 Mark", topic: "Accounting Equation Effect",
+        qEn: "Payment made to a creditor causes which of the following changes in the accounting equation?",
+        qHi: "लेनदार (Creditor) को नकद भुगतान करने पर लेखांकन समीकरण में क्या परिवर्तन होता है?",
+        options: [
+          { key: "A", text: "Increase in Assets and decrease in Liabilities" },
+          { key: "B", text: "Decrease in Assets and decrease in Liabilities" },
+          { key: "C", text: "Decrease in Assets and increase in Capital" },
+          { key: "D", text: "No change in Assets or Liabilities" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Decrease in Assets and decrease in Liabilities",
+        solEn: "<strong>Equation Impact:</strong> Cash decreases (Asset ↓) and Creditors decrease (Liability ↓). Both sides decrease by the identical amount.",
+        solHi: "<strong>व्याख्या:</strong> रोकड़ (संपत्ति) कम होती है और लेनदार (दायित्व) भी कम होते हैं। अतः संपत्तियों में कमी और देयताओं में कमी होती है।"
+      },
+      // Q1 (ix)
+      {
+        id: "1_9", qNum: "Q1 (ix)", section: "mcq", marks: "1 Mark", topic: "Capital Calculation Formula",
+        qEn: "If Opening Capital is ₹ 60,000, Additional Capital introduced is ₹ 10,000, Profit during the year is ₹ 20,000 and Drawings are ₹ 5,000, what is the Closing Capital?",
+        qHi: "यदि प्रारंभिक पूँजी ₹ 60,000, अतिरिक्त पूँजी ₹ 10,000, वर्ष का लाभ ₹ 20,000 तथा आहरण ₹ 5,000 है, तो अंतिम पूँजी क्या होगी?",
+        options: [
+          { key: "A", text: "₹ 85,000" },
+          { key: "B", text: "₹ 75,000" },
+          { key: "C", text: "₹ 95,000" },
+          { key: "D", text: "₹ 80,000" }
+        ],
+        ansKey: "A",
+        ansTitle: "Correct Option: (A) ₹ 85,000",
+        solEn: "<strong>Formula:</strong><br>Closing Capital = Opening Capital + Additional Capital + Profit - Drawings<br>= ₹ 60,000 + ₹ 10,000 + ₹ 20,000 - ₹ 5,000 = <strong>₹ 85,000</strong>.",
+        solHi: "<strong>सूत्र:</strong> अंतिम पूँजी = प्रारंभिक पूँजी + अतिरिक्त पूँजी + शुद्ध लाभ - आहरण<br>= ₹ 60,000 + ₹ 10,000 + ₹ 20,000 - ₹ 5,000 = <strong>₹ 85,000</strong>।"
+      },
+      // Q1 (x)
+      {
+        id: "1_10", qNum: "Q1 (x)", section: "mcq", marks: "1 Mark", topic: "Companies Act Statutory Basis",
+        qEn: "Which basis of accounting is legally recognized under the Companies Act, 2013?",
+        qHi: "कंपनी अधिनियम, 2013 के अंतर्गत लेखांकन की कौन-सी पद्धति कानूनी रूप से मान्य है?",
+        options: [
+          { key: "A", text: "Cash Basis of Accounting (रोकड़ आधार)" },
+          { key: "B", text: "Accrual Basis of Accounting (उपार्जन आधार)" },
+          { key: "C", text: "Both (A) and (B) (दोनों A और B)" },
+          { key: "D", text: "None of these (इनमें से कोई नहीं)" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Accrual Basis of Accounting",
+        solEn: "<strong>Statutory Provision:</strong> Section 128(1) of the Companies Act, 2013 strictly mandates that every company shall prepare its books of accounts on <strong>Accrual Basis</strong> and according to the Double Entry System of accounting. Cash basis is prohibited for corporate entities.",
+        solHi: "<strong>कानूनी प्रावधान:</strong> कंपनी अधिनियम, 2013 की धारा 128(1) के अनुसार सभी कंपनियों के लिए उपार्जन आधार (Accrual Basis) पर दोहरी प्रविष्टि प्रणाली से खाते बनाना अनिवार्य है।"
+      },
+      // Q1 (xi)
+      {
+        id: "1_11", qNum: "Q1 (xi)", section: "mcq", marks: "1 Mark", topic: "Revenue Recognition Concept",
+        qEn: "A coaching institute received ₹ 1,00,000 as annual tuition fee in advance for two years. According to Revenue Recognition Concept, the revenue of ₹ 1,00,000 should be recognized:",
+        qHi: "एक कोचिंग संस्थान को 2 वर्षों के लिए ₹ 1,00,000 अग्रिम वार्षिक शिक्षण शुल्क प्राप्त हुआ। आगम मान्यता संकल्पना के अनुसार इस राशि को कब आगम माना जाएगा?",
+        options: [
+          { key: "A", text: "In the year of receipt (प्राप्ति के वर्ष में)" },
+          { key: "B", text: "In the first subsequent year (पहले अनुवर्ती वर्ष में)" },
+          { key: "C", text: "₹ 50,000 in 1st subsequent year and ₹ 50,000 in 2nd subsequent year" },
+          { key: "D", text: "At the end of two years (दो वर्षों के अंत में)" }
+        ],
+        ansKey: "C",
+        ansTitle: "Correct Option: (C) ₹ 50,000 in 1st year and ₹ 50,000 in 2nd year",
+        solEn: "<strong>Explanation:</strong> Under the Revenue Recognition (Realization) Concept, revenue is recognized only when the service is rendered / earned, not merely when cash is received. Since the service covers two years equally, revenue must be recognized as ₹ 50,000 in Year 1 and ₹ 50,000 in Year 2.",
+        solHi: "<strong>व्याख्या:</strong> आगम मान्यता सिद्धांत के अनुसार आय को तभी मान्यता दी जाती है जब सेवा प्रदान कर दी जाए। चूंकि शुल्क 2 वर्षों के लिए है, अतः सेवा के अनुरूप ₹ 50,000 प्रथम वर्ष और ₹ 50,000 द्वितीय वर्ष में आय के रूप में दर्ज होगा।"
+      },
+      // Q1 (xii)
+      {
+        id: "1_12", qNum: "Q1 (xii)", section: "mcq", marks: "1 Mark", topic: "Source Documents & Vouchers",
+        qEn: "Assertion (A): Cash memo is a source voucher for cash sales or cash purchases.<br>Reason (R): It acts as an evidence of cash received or paid.",
+        qHi: "अभिकथन (A): रोकड़ मीमो (Cash memo) नकद बिक्री या नकद खरीद के लिए एक मूल प्रमाणक है।<br>कारण (R): यह नकद प्राप्त होने या भुगतान किए जाने का कानूनी साक्ष्य प्रस्तुत करता है।",
+        options: [
+          { key: "A", text: "Both (A) and (R) are false." },
+          { key: "B", text: "Both (A) and (R) are correct and (R) is the correct explanation of (A)." },
+          { key: "C", text: "(A) is true but (R) is false." },
+          { key: "D", text: "(A) is false but (R) is true." }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Both (A) and (R) are correct and (R) is correct explanation",
+        solEn: "<strong>Explanation:</strong> A Cash Memo is generated whenever goods are sold against cash. It states the quantity, description, rate, and total cash received, serving as prima facie documentary proof that cash was transacted.",
+        solHi: "<strong>व्याख्या:</strong> जब नकद माल बेचा जाता है तो विक्रेता रोकड़ मीमो जारी करता है जो नकद प्राप्ति या भुगतान का विश्वसनीय दस्तावेजी साक्ष्य होता है।"
+      },
+      // Q1 (xiii)
+      {
+        id: "1_13", qNum: "Q1 (xiii)", section: "mcq", marks: "1 Mark", topic: "Transfer Vouchers",
+        qEn: "Transfer vouchers are prepared to record:",
+        qHi: "अंतरण प्रमाणक (Transfer Vouchers) किस प्रकार के लेन-देन दर्ज करने के लिए बनाए जाते हैं?",
+        options: [
+          { key: "A", text: "Cash transactions (नकद लेन-देन)" },
+          { key: "B", text: "Non-Cash Transactions (गैर-नकद लेन-देन)" },
+          { key: "C", text: "Bank transactions (बैंक लेन-देन)" },
+          { key: "D", text: "None of these (इनमें से कोई नहीं)" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Non-Cash Transactions",
+        solEn: "<strong>Explanation:</strong> Transfer vouchers (or Non-Cash Vouchers) are prepared for transactions that do not involve cash/bank receipts or payments, such as credit purchases, credit sales, depreciation, bad debts, and rectification entries.",
+        solHi: "<strong>व्याख्या:</strong> अंतरण प्रमाणक उन लेन-देन के लिए बनते हैं जिनमें नकद या बैंक का लेन-देन नहीं होता, जैसे उधार खरीद, उधार बिक्री, मूल्यह्रास, डूबत ऋण आदि।"
+      },
+      // Q1 (xiv)
+      {
+        id: "1_14", qNum: "Q1 (xiv)", section: "mcq", marks: "1 Mark", topic: "Source Documents",
+        qEn: "On purchase of goods against cash, the seller gives:",
+        qHi: "नकद में माल खरीदने पर विक्रेता द्वारा क्रेता को दिया जाता है:",
+        options: [
+          { key: "A", text: "Cash memo (रोकड़ मीमो)" },
+          { key: "B", text: "Invoice (बीजक)" },
+          { key: "C", text: "Cheque (चेक)" },
+          { key: "D", text: "Receipt (रसीद)" }
+        ],
+        ansKey: "A",
+        ansTitle: "Correct Option: (A) Cash memo",
+        solEn: "<strong>Explanation:</strong> When a buyer purchases goods for cash, the seller hands over a Cash Memo. (An Invoice is given on credit sales; a Receipt is given when cash is received from a debtor).",
+        solHi: "<strong>व्याख्या:</strong> नकद माल खरीदने पर विक्रेता द्वारा रोकड़ मीमो (Cash Memo) प्रदान किया जाता है।"
+      },
+      // Q1 (xv)
+      {
+        id: "1_15", qNum: "Q1 (xv)", section: "mcq", marks: "1 Mark", topic: "Invoice & Credit Purchases",
+        qEn: "An invoice is a source voucher for:",
+        qHi: "बीजक (Invoice) निम्नलिखित में से किसका मूल प्रमाणक है?",
+        options: [
+          { key: "A", text: "Cash sale (नकद विक्रय)" },
+          { key: "B", text: "Credit purchase / Credit sale (उधार क्रय / विक्रय)" },
+          { key: "C", text: "Cash purchase (नकद क्रय)" },
+          { key: "D", text: "Cheque payment (चेक भुगतान)" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Credit purchase / Credit sale",
+        solEn: "<strong>Explanation:</strong> When goods are sold on credit, the seller prepares an Invoice (or Bill) detailing items, prices, and terms of payment, and sends it to the buyer.",
+        solHi: "<strong>व्याख्या:</strong> जब उधार माल बेचा जाता है तो विक्रेता बीजक बनाता है। क्रेता के लिए यह इनवर्ड इनवॉइस (उधार क्रय) और विक्रेता के लिए आउटवर्ड इनवॉइस (उधार विक्रय) का प्रमाणक होता है।"
+      },
+      // Q1 (xvi)
+      {
+        id: "1_16", qNum: "Q1 (xvi)", section: "mcq", marks: "1 Mark", topic: "Journal Proper Scope",
+        qEn: "Which of the following is entered in Journal Proper?",
+        qHi: "निम्नलिखित में से कौन-सा लेन-देन मुख्य रोज़नामचे (Journal Proper) में दर्ज किया जाता है?",
+        options: [
+          { key: "A", text: "Purchase of goods on credit (माल का उधार क्रय)" },
+          { key: "B", text: "Sale of goods on credit (माल का उधार विक्रय)" },
+          { key: "C", text: "Correction of an error (अशुद्धि सुधार / Rectification)" },
+          { key: "D", text: "Cash receipt (रोकड़ प्राप्ति)" }
+        ],
+        ansKey: "C",
+        ansTitle: "Correct Option: (C) Correction of an error",
+        solEn: "<strong>Explanation:</strong> Credit purchase of goods goes to Purchases Book, credit sale to Sales Book, cash receipts to Cash Book. Residual entries like correction of errors (rectification), opening/closing entries, and adjustments are recorded in <strong>Journal Proper</strong>.",
+        solHi: "<strong>व्याख्या:</strong> विशिष्ट बहियों (Cash Book, Purchases Book, Sales Book) में दर्ज न होने वाले अवशिष्ट लेन-देन जैसे अशुद्धि सुधार, समायोजन व अंतिम प्रविष्टियाँ मुख्य रोज़नामचे (Journal Proper) में की जाती हैं।"
+      },
+      // Q1 (xvii)
+      {
+        id: "1_17", qNum: "Q1 (xvii)", section: "mcq", marks: "1 Mark", topic: "Subsidiary Books Rules",
+        qEn: "Goods purchased for cash are recorded in:",
+        qHi: "नकद खरीदा गया माल किस बही में अभिलिखित किया जाता है?",
+        options: [
+          { key: "A", text: "Purchases Book (क्रय बही)" },
+          { key: "B", text: "Sales Book (विक्रय बही)" },
+          { key: "C", text: "Cash Book (रोकड़ बही)" },
+          { key: "D", text: "Journal Proper (मुख्य रोज़नामचा)" }
+        ],
+        ansKey: "C",
+        ansTitle: "Correct Option: (C) Cash Book",
+        solEn: "<strong>Key Rule:</strong> Purchases Book records ONLY credit purchases of trading goods. All cash purchases of goods are immediately recorded on the Payment side of the <strong>Cash Book</strong>.",
+        solHi: "<strong>महत्वपूर्ण नियम:</strong> क्रय बही में केवल व्यापारिक माल का उधार क्रय दर्ज होता है। समस्त नकद खरीद रोकड़ बही (Cash Book) के भुगतान पक्ष में लिखी जाती है।"
+      },
+      // Q1 (xviii)
+      {
+        id: "1_18", qNum: "Q1 (xviii)", section: "mcq", marks: "1 Mark", topic: "Closing Entries Timing",
+        qEn: "Closing entries are passed:",
+        qHi: "अंतिम प्रविष्टियाँ (Closing Entries) कब की जाती हैं?",
+        options: [
+          { key: "A", text: "At the beginning of the accounting year" },
+          { key: "B", text: "At the end of the accounting year" },
+          { key: "C", text: "At the time of starting business" },
+          { key: "D", text: "Whenever needed during the month" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) At the end of the accounting year",
+        solEn: "<strong>Explanation:</strong> Closing entries are passed on the final day of the financial year to transfer balances of all nominal accounts (expenses, purchases, sales, revenues) to the Trading and Profit & Loss Account to ascertain net income.",
+        solHi: "<strong>व्याख्या:</strong> वित्तीय वर्ष के अंतिम दिन समस्त आय और व्यय के खातों को व्यापार एवं लाभ-हानि खाते में स्थानांतरित कर बंद करने हेतु अंतिम प्रविष्टियाँ की जाती हैं।"
+      },
+      // Q1 (xix)
+      {
+        id: "1_19", qNum: "Q1 (xix)", section: "mcq", marks: "1 Mark", topic: "Dishonour of Cheque & Reversal",
+        qEn: "A cheque of ₹ 10,000 received from Shiv in full settlement of a debt of ₹ 10,500 was dishonoured. The reversal of discount allowed will be recorded in:",
+        qHi: "शिव से ₹ 10,500 के पूर्ण भुगतान में प्राप्त ₹ 10,000 का चेक अनादरित (Dishonour) हो गया। बट्टे (Discount) को निरस्त करने की प्रविष्टि किसमें दर्ज होगी?",
+        options: [
+          { key: "A", text: "Cash Book (रोकड़ बही)" },
+          { key: "B", text: "Journal Proper (मुख्य रोज़नामचा)" },
+          { key: "C", text: "Pass Book (पासबुक)" },
+          { key: "D", text: "Bank Statement (बैंक विवरण)" }
+        ],
+        ansKey: "B",
+        ansTitle: "Correct Option: (B) Journal Proper",
+        solEn: "<strong>Journal Entry for Discount Reversal:</strong><br><code>Shiv Dr. ₹ 500<br>&nbsp;&nbsp;To Discount Allowed A/c ₹ 500</code><br><strong>Explanation:</strong> The cancellation of cheque of ₹ 10,000 is credited in Cash Book bank column. However, the reversal of discount of ₹ 500 does not involve any cash/bank flow, hence it is recorded exclusively in <strong>Journal Proper</strong>.",
+        solHi: "<strong>व्याख्या:</strong> चेक अनादर पर ₹ 500 का बट्टा निरस्त करने की प्रविष्टि (Shiv Dr. To Discount Allowed) गैर-रोकड़ होने के कारण मुख्य रोज़नामचे (Journal Proper) में दर्ज की जाती है।"
+      },
+      // Q1 (xx)
+      {
+        id: "1_20", qNum: "Q1 (xx)", section: "mcq", marks: "1 Mark", topic: "Trade vs Cash Discount Numerical",
+        qEn: "Sameer sold goods of List Price ₹ 50,000 @ 10% Trade Discount and 2% Cash Discount. The amounts of Trade Discount and Cash Discount will be:",
+        qHi: "समीर ने ₹ 50,000 सूची मूल्य का माल 10% व्यापारिक बट्टे और 2% नकद बट्टे पर बेचा। व्यापारिक बट्टे और नकद बट्टे की राशि क्रमशः होगी:",
+        options: [
+          { key: "A", text: "₹ 5,000 and ₹ 1,000" },
+          { key: "B", text: "₹ 4,500 and ₹ 900" },
+          { key: "C", text: "₹ 5,000 and ₹ 900" },
+          { key: "D", text: "None of these" }
+        ],
+        ansKey: "C",
+        ansTitle: "Correct Option: (C) ₹ 5,000 and ₹ 900",
+        solEn: "<strong>Step-by-Step Calculation:</strong><br>1. List Price = ₹ 50,000<br>2. Trade Discount @ 10% = 10% of ₹ 50,000 = <strong>₹ 5,000</strong><br>3. Invoice Price = ₹ 50,000 - ₹ 5,000 = ₹ 45,000<br>4. Cash Discount @ 2% = 2% of ₹ 45,000 = <strong>₹ 900</strong><br>Net Cash Received = ₹ 45,000 - ₹ 900 = ₹ 44,100.",
+        solHi: "<strong>गणना:</strong><br>1. सूची मूल्य = ₹ 50,000<br>2. व्यापारिक बट्टा (10%) = ₹ 5,000<br>3. शुद्ध मूल्य = ₹ 45,000<br>4. नकद बट्टा (2% of ₹ 45,000) = ₹ 900।"
+      },
+
+      // Q2
+      {
+        id: "2", qNum: "Q2", section: "short", marks: "3 Marks", topic: "Accounting Equation",
+        qEn: "Show the Accounting Equation for the following transactions:<br>(i) Started business with cash ₹ 50,000<br>(ii) Salaries paid ₹ 2,000<br>(iii) Wages outstanding ₹ 200<br>(iv) Rent paid in advance ₹ 100<br>(v) Interest due but not paid ₹ 150<br>(vi) Interest on capital ₹ 100",
+        qHi: "निम्नलिखित लेन-देन के लिए लेखांकन समीकरण (Accounting Equation) तैयार कीजिए:<br>(i) ₹ 50,000 नकद से व्यापार प्रारंभ किया<br>(ii) ₹ 2,000 वेतन का भुगतान किया<br>(iii) ₹ 200 अदत्त मजदूरी (Wages outstanding)<br>(iv) ₹ 100 पूर्वदत्त किराया (Rent paid in advance)<br>(v) ₹ 150 देय ब्याज जिसका भुगतान नहीं हुआ (Interest due but not paid)<br>(vi) ₹ 100 पूँजी पर ब्याज (Interest on capital)",
+        ansTitle: "Final Balanced Accounting Equation: Total Assets (₹ 48,000) = Total Liabilities (₹ 350) + Capital (₹ 47,650)",
+        solEn: `<div class="acc-table-wrapper">
+          <table class="acc-table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Transaction</th>
+                <th>Assets (Cash + Prepaid Rent)</th>
+                <th>=</th>
+                <th>Liabilities (O/S Exp)</th>
+                <th>+</th>
+                <th>Capital</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>(i)</td>
+                <td>Started business with cash</td>
+                <td>+ 50,000 (Cash)</td>
+                <td>=</td>
+                <td>0</td>
+                <td>+</td>
+                <td>+ 50,000</td>
+              </tr>
+              <tr>
+                <td>(ii)</td>
+                <td>Salaries paid ₹ 2,000</td>
+                <td>- 2,000 (Cash)</td>
+                <td>=</td>
+                <td>0</td>
+                <td>+</td>
+                <td>- 2,000</td>
+              </tr>
+              <tr style="background:rgba(56,189,248,0.08);">
+                <td colspan="2"><strong>New Equation:</strong></td>
+                <td>Cash ₹ 48,000</td>
+                <td>=</td>
+                <td>₹ 0</td>
+                <td>+</td>
+                <td>₹ 48,000</td>
+              </tr>
+              <tr>
+                <td>(iii)</td>
+                <td>Wages outstanding ₹ 200</td>
+                <td>0</td>
+                <td>=</td>
+                <td>+ 200 (O/S Wages)</td>
+                <td>+</td>
+                <td>- 200</td>
+              </tr>
+              <tr style="background:rgba(56,189,248,0.08);">
+                <td colspan="2"><strong>New Equation:</strong></td>
+                <td>Cash ₹ 48,000</td>
+                <td>=</td>
+                <td>O/S Wages ₹ 200</td>
+                <td>+</td>
+                <td>₹ 47,800</td>
+              </tr>
+              <tr>
+                <td>(iv)</td>
+                <td>Rent paid in advance ₹ 100</td>
+                <td>- 100 (Cash) + 100 (Prepaid Rent)</td>
+                <td>=</td>
+                <td>0</td>
+                <td>+</td>
+                <td>0</td>
+              </tr>
+              <tr style="background:rgba(56,189,248,0.08);">
+                <td colspan="2"><strong>New Equation:</strong></td>
+                <td>Cash ₹ 47,900 + Prepaid Rent ₹ 100</td>
+                <td>=</td>
+                <td>O/S Wages ₹ 200</td>
+                <td>+</td>
+                <td>₹ 47,800</td>
+              </tr>
+              <tr>
+                <td>(v)</td>
+                <td>Interest due but not paid ₹ 150</td>
+                <td>0</td>
+                <td>=</td>
+                <td>+ 150 (O/S Interest)</td>
+                <td>+</td>
+                <td>- 150</td>
+              </tr>
+              <tr style="background:rgba(56,189,248,0.08);">
+                <td colspan="2"><strong>New Equation:</strong></td>
+                <td>Cash ₹ 47,900 + Prepaid Rent ₹ 100</td>
+                <td>=</td>
+                <td>O/S Wages ₹ 200 + O/S Int ₹ 150</td>
+                <td>+</td>
+                <td>₹ 47,650</td>
+              </tr>
+              <tr>
+                <td>(vi)</td>
+                <td>Interest on capital ₹ 100</td>
+                <td>0</td>
+                <td>=</td>
+                <td>0</td>
+                <td>+</td>
+                <td>+ 100 (Gain) - 100 (Exp) = 0</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="2"><strong>Final Equation:</strong></td>
+                <td><strong>Assets = ₹ 48,000</strong><br>(Cash 47,900 + Prepaid Rent 100)</td>
+                <td><strong>=</strong></td>
+                <td><strong>Liabilities = ₹ 350</strong><br>(O/S Wages 200 + O/S Int 150)</td>
+                <td><strong>+</strong></td>
+                <td><strong>Capital = ₹ 47,650</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wn-box">
+          <div class="wn-title">🔍 Verification Note:</div>
+          Total Assets (₹ 48,000) = Total Liabilities (₹ 350) + Capital (₹ 47,650) = <strong>₹ 48,000</strong>. Perfectly verified!
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong><br>1. वेतन भुगतान से रोकड़ ₹ 2,000 कम हुई और पूँजी ₹ 2,000 घटी।<br>2. अदत्त मजदूरी देयता में ₹ 200 बढ़ाती है और व्यय होने से पूँजी ₹ 200 घटती है।<br>3. पूर्वदत्त किराया रोकड़ ₹ 100 घटाकर नई संपत्ति (पूर्वदत्त किराया) ₹ 100 बनाता है (पूँजी अपरिवर्तित)।<br>4. अदत्त ब्याज देयता में ₹ 150 जोड़ता है और पूँजी ₹ 150 घटाता है।<br>5. पूँजी पर ब्याज व्यापार का व्यय है (-100) और स्वामी की आय है (+100), अतः पूँजी पर शुद्ध प्रभाव शून्य है।"
+      },
+
+      // Q3
+      {
+        id: "3", qNum: "Q3", section: "short", marks: "3 Marks", topic: "Classification of Accounts",
+        qEn: "Classify the following into Assets, Liabilities, Capital, Expenses, and Revenue:<br>(a) Land<br>(b) Investment<br>(c) Interest received<br>(d) Salary<br>(e) Capital<br>(f) Creditors",
+        qHi: "निम्नलिखित को परिसंपत्तियाँ (Assets), देयताएँ (Liabilities), पूँजी (Capital), व्यय (Expenses) तथा आगम (Revenue) में वर्गीकृत कीजिए:<br>(a) भूमि (Land)<br>(b) विनियोग (Investment)<br>(c) ब्याज प्राप्त (Interest received)<br>(d) वेतन (Salary)<br>(e) पूँजी (Capital)<br>(f) लेनदार (Creditors)",
+        ansTitle: "Classification Table (Modern Approach)",
+        solEn: `<div class="acc-table-wrapper">
+          <table class="acc-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Description / Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>(a) Land</strong></td>
+                <td><span style="color:#38bdf8; font-weight:700;">Asset (Non-Current)</span></td>
+                <td>Tangible fixed property owned by business for long-term operations.</td>
+              </tr>
+              <tr>
+                <td><strong>(b) Investment</strong></td>
+                <td><span style="color:#38bdf8; font-weight:700;">Asset</span></td>
+                <td>Financial resource held to generate interest, dividend, or capital appreciation.</td>
+              </tr>
+              <tr>
+                <td><strong>(c) Interest received</strong></td>
+                <td><span style="color:#34d399; font-weight:700;">Revenue</span></td>
+                <td>Income earned by the firm on its surplus funds/deposits.</td>
+              </tr>
+              <tr>
+                <td><strong>(d) Salary</strong></td>
+                <td><span style="color:#f87171; font-weight:700;">Expense</span></td>
+                <td>Routine operating cost incurred for employee services.</td>
+              </tr>
+              <tr>
+                <td><strong>(e) Capital</strong></td>
+                <td><span style="color:#fcd34d; font-weight:700;">Capital</span></td>
+                <td>Owner's equity / residual claim against the assets of the business.</td>
+              </tr>
+              <tr>
+                <td><strong>(f) Creditors</strong></td>
+                <td><span style="color:#fb923c; font-weight:700;">Liability (Current)</span></td>
+                <td>Amount payable to suppliers for goods/services purchased on credit.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>`,
+        solHi: "<strong>वर्गीकरण:</strong><br>(a) भूमि $\\to$ <strong>परिसंपत्ति (Asset)</strong><br>(b) विनियोग $\\to$ <strong>परिसंपत्ति (Asset)</strong><br>(c) प्राप्त ब्याज $\\to$ <strong>आगम / आय (Revenue)</strong><br>(d) वेतन $\\to$ <strong>व्यय (Expense)</strong><br>(e) पूँजी $\\to$ <strong>पूँजी (Capital)</strong><br>(f) लेनदार $\\to$ <strong>देयता (Liability)</strong>"
+      },
+
+      // Q4
+      {
+        id: "4", qNum: "Q4", section: "short", marks: "4 Marks", topic: "Rules of Debit and Credit",
+        qEn: "On which side will the increase in the following Accounts be recorded? Also, state the nature of the account:<br>(i) Furniture A/c<br>(ii) Mohan (proprietor)<br>(iii) Salary A/c<br>(iv) Purchase A/c<br>(v) Sohan (creditor)<br>(vi) Ram (debtor)<br>(vii) Wages A/c<br>(viii) Land and Building A/c",
+        qHi: "निम्नलिखित खातों में वृद्धि को किस पक्ष (Debit या Credit) में अभिलिखित किया जाएगा? साथ ही प्रत्येक खाते की प्रकृति (Nature) भी बताइए:<br>(i) फर्नीचर खाता<br>(ii) मोहन (स्वामी)<br>(iii) वेतन खाता<br>(iv) क्रय खाता<br>(v) सोहन (लेनदार)<br>(vi) राम (देनदार)<br>(vii) मजदूरी खाता<br>(viii) भूमि एवं भवन खाता",
+        ansTitle: "Rules of Debit & Credit Classification Table",
+        solEn: `<div class="acc-table-wrapper">
+          <table class="acc-table">
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th>Nature of Account</th>
+                <th>Side of Increase</th>
+                <th>Side of Decrease (Reference)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>(i) Furniture A/c</td>
+                <td>Asset</td>
+                <td><strong style="color:#38bdf8;">Debit (Dr.)</strong></td>
+                <td>Credit (Cr.)</td>
+              </tr>
+              <tr>
+                <td>(ii) Mohan (proprietor)</td>
+                <td>Capital</td>
+                <td><strong style="color:#fcd34d;">Credit (Cr.)</strong></td>
+                <td>Debit (Dr.)</td>
+              </tr>
+              <tr>
+                <td>(iii) Salary A/c</td>
+                <td>Expense</td>
+                <td><strong style="color:#38bdf8;">Debit (Dr.)</strong></td>
+                <td>Credit (Cr.)</td>
+              </tr>
+              <tr>
+                <td>(iv) Purchase A/c</td>
+                <td>Expense</td>
+                <td><strong style="color:#38bdf8;">Debit (Dr.)</strong></td>
+                <td>Credit (Cr.)</td>
+              </tr>
+              <tr>
+                <td>(v) Sohan (creditor)</td>
+                <td>Liability</td>
+                <td><strong style="color:#fcd34d;">Credit (Cr.)</strong></td>
+                <td>Debit (Dr.)</td>
+              </tr>
+              <tr>
+                <td>(vi) Ram (debtor)</td>
+                <td>Asset</td>
+                <td><strong style="color:#38bdf8;">Debit (Dr.)</strong></td>
+                <td>Credit (Cr.)</td>
+              </tr>
+              <tr>
+                <td>(vii) Wages A/c</td>
+                <td>Expense</td>
+                <td><strong style="color:#38bdf8;">Debit (Dr.)</strong></td>
+                <td>Credit (Cr.)</td>
+              </tr>
+              <tr>
+                <td>(viii) Land and Building A/c</td>
+                <td>Asset</td>
+                <td><strong style="color:#38bdf8;">Debit (Dr.)</strong></td>
+                <td>Credit (Cr.)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wn-box">
+          <div class="wn-title">💡 Modern Rule Mnemonic:</div>
+          • <strong>Assets & Expenses:</strong> Increase $\\to$ <strong>Debit</strong> | Decrease $\\to$ Credit<br>
+          • <strong>Liabilities, Capital & Revenues:</strong> Increase $\\to$ <strong>Credit</strong> | Decrease $\\to$ Debit
+        </div>`,
+        solHi: "<strong>आधुनिक नियम:</strong> संपत्तियों और व्ययों में वृद्धि होने पर <strong>नाम (Debit)</strong> किया जाता है, जबकि दायित्व, पूँजी और आय में वृद्धि होने पर <strong>जमा (Credit)</strong> किया जाता है।"
+      },
+
+      // Q5
+      {
+        id: "5", qNum: "Q5", section: "theory", marks: "4 Marks", topic: "Accounting Principles & Concepts",
+        qEn: "Explain any two of the following accounting concepts:<br>(A) Money measurement concept<br>(B) Dual Aspect concept<br>(C) Business Entity concept",
+        qHi: "निम्नलिखित लेखांकन संकल्पनाओं में से किन्हीं दो की व्याख्या कीजिए:<br>(A) मुद्रा मापन संकल्पना (Money Measurement Concept)<br>(B) द्विपक्षीय संकल्पना (Dual Aspect Concept)<br>(C) व्यावसायिक इकाई संकल्पना (Business Entity Concept)",
+        ansTitle: "Detailed Explanations of All Three Fundamental Concepts",
+        solEn: `<div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="background:rgba(255,255,255,0.03); padding:14px; border-radius:10px; border-left:3px solid #38bdf8;">
+            <h4 style="color:#38bdf8; margin-bottom:6px;">(A) Money Measurement Concept (मुद्रा मापन संकल्पना)</h4>
+            <p><strong>Definition:</strong> According to this concept, only those transactions and events are recorded in the books of account which can be expressed in terms of money (a common monetary denominator such as Indian Rupee ₹).</p>
+            <p><strong>Key Significance:</strong> Even if an event is of vital importance to the business (such as a conflict between managers, the appointment of an exceptional CEO, or high employee morale), it cannot be recorded in financial accounting books because its value cannot be objectively quantified in monetary terms.</p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03); padding:14px; border-radius:10px; border-left:3px solid #34d399;">
+            <h4 style="color:#34d399; margin-bottom:6px;">(B) Dual Aspect Concept (द्विपक्षीय संकल्पना)</h4>
+            <p><strong>Definition:</strong> The Dual Aspect concept is the cornerstone of Double Entry Bookkeeping. It states that every business transaction affects at least two accounts in opposite directions — with an equal Debit and Credit.</p>
+            <p><strong>Core Mathematical Equation:</strong><br>
+            <code style="background:rgba(16,185,129,0.2); padding:3px 8px; border-radius:4px; color:#34d399; font-weight:700;">Assets = Liabilities + Capital</code><br>
+            For example, when goods are bought for cash, Assets (Stock) increase and Assets (Cash) decrease by identical amounts.</p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03); padding:14px; border-radius:10px; border-left:3px solid #fcd34d;">
+            <h4 style="color:#fcd34d; margin-bottom:6px;">(C) Business Entity Concept (व्यावसायिक इकाई संकल्पना)</h4>
+            <p><strong>Definition:</strong> Under this principle, the business unit is treated as a separate distinct economic and legal entity, completely separate from its owner(s)/proprietor.</p>
+            <p><strong>Practical Application:</strong>
+            1. Capital invested by the owner is treated as an <em>internal liability</em> of the business towards the owner.<br>
+            2. Personal expenses of the proprietor paid from business funds are treated as <em>Drawings</em> (reducing capital), not as business operating expenses.</p>
+          </div>
+        </div>`,
+        solHi: "<strong>मुख्य बिंदु:</strong><br>• <strong>मुद्रा मापन:</strong> केवल वही लेन-देन लिखे जाते हैं जिन्हें मुद्रा (₹) में मापा जा सके।<br>• <strong>द्विपक्षीय:</strong> प्रत्येक लेन-देन के दो पक्ष होते हैं - एक नाम (Debit) और दूसरा जमा (Credit)। संपत्तियां = देयताएं + पूँजी।<br>• <strong>व्यावसायिक इकाई:</strong> व्यापार और उसका स्वामी दो अलग-अलग अस्तित्व रखते हैं। स्वामी की पूँजी व्यापार के लिए आंतरिक दायित्व है।"
+      },
+
+      // Q6
+      {
+        id: "6", qNum: "Q6", section: "theory", marks: "4 Marks", topic: "Meaning & Limitations of Accounting",
+        qEn: "What do you mean by Accounting? Explain any three limitations of Accounting.",
+        qHi: "लेखांकन से आपका क्या अभिप्राय है? लेखांकन की किन्हीं तीन सीमाओं (Limitations) की व्याख्या कीजिए।",
+        ansTitle: "Comprehensive Definition & 3 Limitations of Accounting",
+        solEn: `<div style="margin-bottom:14px;">
+          <h4 style="color:#38bdf8; margin-bottom:6px;">1. Meaning of Accounting:</h4>
+          <p>Accounting is the systematic process of <strong>identifying</strong>, <strong>measuring</strong> (in monetary terms), <strong>recording</strong>, <strong>classifying</strong> (in ledger accounts), <strong>summarizing</strong> (in Trial Balance & Financial Statements), and <strong>communicating</strong> financial information to interested users (management, investors, creditors, tax authorities) for rational decision-making.</p>
+        </div>
+        <div>
+          <h4 style="color:#fcd34d; margin-bottom:8px;">2. Any Three Limitations of Accounting:</h4>
+          <ol style="padding-left:20px; line-height:1.8;">
+            <li><strong>Ignores Non-Monetary / Qualitative Factors:</strong> Accounting records only financial transactions. Critical qualitative factors such as staff competence, industrial harmony, customer satisfaction, and managerial leadership are omitted.</li>
+            <li><strong>Historical Cost Basis (Ignores Price Level Changes):</strong> Assets are recorded at their historical cost rather than replacement or current market value. In times of continuous inflation, financial statements understate asset values and overstate profits.</li>
+            <li><strong>Subject to Personal Judgement & Window Dressing:</strong> Estimates for depreciation lifespan, salvage values, and provisions for doubtful debts depend on subjective opinions. Furthermore, accounts can be artificially manipulated (window dressed) to present a rosier financial picture than reality.</li>
+          </ol>
+        </div>`,
+        solHi: "<strong>1. लेखांकन का अर्थ:</strong> वित्तीय प्रकृति के लेन-देन को पहचानना, मुद्रा में मापना, बहियों में दर्ज करना, वर्गीकृत करना, संक्षेपण करना तथा वित्तीय परिणामों को उपयोगकर्ताओं तक संप्रेषित करना लेखांकन कहलाता है।<br><br><strong>2. लेखांकन की 3 सीमाएँ:</strong><br>1. <strong>गुणात्मक तत्वों की उपेक्षा:</strong> कर्मचारियों की ईमानदारी या कुशलता जैसे गैर-मौद्रिक तथ्यों को नहीं लिखा जाता।<br>2. <strong>मूल्य स्तर परिवर्तनों की अनदेखी:</strong> संपत्तियां ऐतिहासिक लागत पर दिखाई जाती हैं, मुद्रास्फीति का प्रभाव नहीं दिखता।<br>3. <strong>दिखावटीपन (Window Dressing):</strong> व्यक्तिगत अनुमानों व आंकड़ों में फेरबदल करके वित्तीय स्थिति को भ्रामक रूप से बेहतर दिखाया जा सकता है।"
+      },
+
+      // Q7
+      {
+        id: "7", qNum: "Q7", section: "theory", marks: "6 Marks", topic: "Preparation of Debit Vouchers",
+        qEn: "Following Transactions took place in M/s Sultan Chand & Sons, Delhi. Prepare the Debit Vouchers:<br>(i) January 1, 2025: Bought Accountancy books against Cash vide Cash Memo No. 328 ₹ 10,000.<br>(ii) January 8, 2025: Paid wages for the month of December 2024 of ₹ 5,000.",
+        qHi: "मैसर्स सुल्तान चंद एंड संस, दिल्ली में निम्नलिखित लेन-देन हुए। डेबिट प्रमाणक (Debit Vouchers) तैयार कीजिए:<br>(i) 1 जनवरी, 2025: रोकड़ मीमो संख्या 328 के अनुसार नकद ₹ 10,000 की लेखांकन की पुस्तकें खरीदीं।<br>(ii) 8 जनवरी, 2025: दिसंबर 2024 माह के लिए ₹ 5,000 मजदूरी का नकद भुगतान किया।",
+        ansTitle: "Official Accounting Debit Vouchers (Cash Payment Vouchers)",
+        solEn: `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:16px;">
+          <!-- Voucher 1 -->
+          <div class="voucher-card">
+            <div class="voucher-header">
+              <div class="voucher-firm">M/s SULTAN CHAND & SONS, DELHI</div>
+              <div class="voucher-type">DEBIT VOUCHER (FOR CASH PAYMENT)</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:8px;">
+              <span><strong>Voucher No.:</strong> 101</span>
+              <span><strong>Date:</strong> 01 January 2025</span>
+            </div>
+            <div style="font-size:13px; line-height:1.7;">
+              <div><strong>Debit:</strong> Purchases A/c (Books)</div>
+              <div><strong>Credit:</strong> Cash A/c</div>
+              <div><strong>Amount:</strong> ₹ 10,000 (Rupees Ten Thousand only)</div>
+              <div style="margin-top:6px; font-style:italic; color:var(--text-muted);">
+                Narration: Being Accountancy books bought against cash vide Cash Memo No. 328.
+              </div>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-top:16px; font-size:11px; border-top:1px dashed rgba(255,255,255,0.15); padding-top:6px;">
+              <span>Sd/- Prepared By</span>
+              <span>Sd/- Manager / Approved</span>
+            </div>
+          </div>
+
+          <!-- Voucher 2 -->
+          <div class="voucher-card">
+            <div class="voucher-header">
+              <div class="voucher-firm">M/s SULTAN CHAND & SONS, DELHI</div>
+              <div class="voucher-type">DEBIT VOUCHER (FOR CASH PAYMENT)</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:8px;">
+              <span><strong>Voucher No.:</strong> 102</span>
+              <span><strong>Date:</strong> 08 January 2025</span>
+            </div>
+            <div style="font-size:13px; line-height:1.7;">
+              <div><strong>Debit:</strong> Wages A/c</div>
+              <div><strong>Credit:</strong> Cash A/c</div>
+              <div><strong>Amount:</strong> ₹ 5,000 (Rupees Five Thousand only)</div>
+              <div style="margin-top:6px; font-style:italic; color:var(--text-muted);">
+                Narration: Being wages paid in cash for the month of December 2024.
+              </div>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-top:16px; font-size:11px; border-top:1px dashed rgba(255,255,255,0.15); padding-top:6px;">
+              <span>Sd/- Prepared By</span>
+              <span>Sd/- Manager / Approved</span>
+            </div>
+          </div>
+        </div>`,
+        solHi: "<strong>डेबिट प्रमाणक (Debit Voucher):</strong> जब फर्म नकद भुगतान करती है तो डेबिट वाउचर तैयार किया जाता है। इसमें नाम (Debit) किए जाने वाले खाते, राशि, तिथि तथा अधिकृत हस्ताक्षर सम्मिलित होते हैं।"
+      },
+
+      // Q8
+      {
+        id: "8", qNum: "Q8", section: "long", marks: "6 Marks", topic: "Journal Entries",
+        qEn: "Journalise the following Transactions:<br><strong>2025</strong><br>April 1: Harish started business with cash ₹ 1,00,000<br>April 2: Deposited in bank ₹ 70,000<br>April 3: Bought goods for cash ₹ 5,000<br>April 7: Drew Cash from bank for office use ₹ 1,000<br>April 8: Goods sold to Krishna ₹ 1,500<br>April 15: Paid salary ₹ 3,000",
+        qHi: "निम्नलिखित लेन-देन की रोजनामचा प्रविष्टियाँ (Journal Entries) कीजिए:<br><strong>2025</strong><br>1 अप्रैल: हरीश ने ₹ 1,00,000 नकद से व्यापार प्रारंभ किया<br>2 अप्रैल: बैंक में ₹ 70,000 जमा किए<br>3 अप्रैल: ₹ 5,000 का नकद माल खरीदा<br>7 अप्रैल: कार्यालय उपयोग के लिए बैंक से ₹ 1,000 निकाले<br>8 अप्रैल: कृष्णा को ₹ 1,500 का माल बेचा<br>15 अप्रैल: ₹ 3,000 वेतन का भुगतान किया",
+        ansTitle: "Journal of Harish (Total: ₹ 1,80,500)",
+        solEn: `<div class="acc-table-wrapper">
+          <table class="acc-table">
+            <thead>
+              <tr>
+                <th style="width:100px;">Date</th>
+                <th>Particulars</th>
+                <th style="width:50px;">L.F.</th>
+                <th class="text-right" style="width:110px;">Debit (₹)</th>
+                <th class="text-right" style="width:110px;">Credit (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>2025<br>April 1</strong></td>
+                <td>
+                  <strong>Cash A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Capital A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being business started with cash)</em>
+                </td>
+                <td></td>
+                <td class="text-right">1,00,000</td>
+                <td class="text-right">1,00,000</td>
+              </tr>
+              <tr>
+                <td><strong>April 2</strong></td>
+                <td>
+                  <strong>Bank A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Cash A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being cash deposited into bank)</em>
+                </td>
+                <td></td>
+                <td class="text-right">70,000</td>
+                <td class="text-right">70,000</td>
+              </tr>
+              <tr>
+                <td><strong>April 3</strong></td>
+                <td>
+                  <strong>Purchases A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Cash A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being goods bought for cash)</em>
+                </td>
+                <td></td>
+                <td class="text-right">5,000</td>
+                <td class="text-right">5,000</td>
+              </tr>
+              <tr>
+                <td><strong>April 7</strong></td>
+                <td>
+                  <strong>Cash A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Bank A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being cash withdrawn from bank for office use)</em>
+                </td>
+                <td></td>
+                <td class="text-right">1,000</td>
+                <td class="text-right">1,000</td>
+              </tr>
+              <tr>
+                <td><strong>April 8</strong></td>
+                <td>
+                  <strong>Krishna&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Sales A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being goods sold on credit to Krishna)</em>
+                </td>
+                <td></td>
+                <td class="text-right">1,500</td>
+                <td class="text-right">1,500</td>
+              </tr>
+              <tr>
+                <td><strong>April 15</strong></td>
+                <td>
+                  <strong>Salaries A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Cash A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being salary paid in cash)</em>
+                </td>
+                <td></td>
+                <td class="text-right">3,000</td>
+                <td class="text-right">3,000</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="2"><strong>TOTAL</strong></td>
+                <td></td>
+                <td class="text-right"><strong>₹ 1,80,500</strong></td>
+                <td class="text-right"><strong>₹ 1,80,500</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong> व्यापार प्रारंभ करने पर Cash A/c Dr. To Capital A/c; बैंक में जमा करने पर Bank Dr. To Cash; नकद माल खरीदने पर Purchases Dr. To Cash; बैंक से कार्यालय के लिए निकालने पर Cash Dr. To Bank; उधार बेचने पर Krishna Dr. To Sales; वेतन देने पर Salaries Dr. To Cash।"
+      },
+
+      // Q9
+      {
+        id: "9", qNum: "Q9", section: "long", marks: "6 Marks", topic: "Ledger Posting from Journal",
+        qEn: "Posting into Ledger of above transactions of (Question no 8) from Journal entries.",
+        qHi: "प्रश्न संख्या 8 की रोजनामचा प्रविष्टियों की खाता बही (Ledger) में खतौनी (Posting) कीजिए।",
+        ansTitle: "Complete Ledger Accounts in the Books of Harish",
+        solEn: `<div style="display:flex; flex-direction:column; gap:16px;">
+          <!-- Cash Account -->
+          <div class="acc-table-wrapper">
+            <h4 style="padding:8px 12px; background:var(--table-header); color:#38bdf8; font-family:'Plus Jakarta Sans';">Dr.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CASH ACCOUNT</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cr.</h4>
+            <table class="acc-table">
+              <thead><tr><th>Date</th><th>Particulars</th><th>Amount (₹)</th><th>Date</th><th>Particulars</th><th>Amount (₹)</th></tr></thead>
+              <tbody>
+                <tr><td>2025 Apr 1</td><td>To Capital A/c</td><td class="text-right">1,00,000</td><td>2025 Apr 2</td><td>By Bank A/c</td><td class="text-right">70,000</td></tr>
+                <tr><td>Apr 7</td><td>To Bank A/c</td><td class="text-right">1,000</td><td>Apr 3</td><td>By Purchases A/c</td><td class="text-right">5,000</td></tr>
+                <tr><td></td><td></td><td></td><td>Apr 15</td><td>By Salaries A/c</td><td class="text-right">3,000</td></tr>
+                <tr><td></td><td></td><td></td><td>Apr 30</td><td>By Balance c/d</td><td class="text-right"><strong>23,000</strong></td></tr>
+                <tr class="total-row"><td></td><td><strong>Total</strong></td><td class="text-right"><strong>1,01,000</strong></td><td></td><td><strong>Total</strong></td><td class="text-right"><strong>1,01,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Bank Account -->
+          <div class="acc-table-wrapper">
+            <h4 style="padding:8px 12px; background:var(--table-header); color:#38bdf8; font-family:'Plus Jakarta Sans';">Dr.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BANK ACCOUNT</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cr.</h4>
+            <table class="acc-table">
+              <thead><tr><th>Date</th><th>Particulars</th><th>Amount (₹)</th><th>Date</th><th>Particulars</th><th>Amount (₹)</th></tr></thead>
+              <tbody>
+                <tr><td>2025 Apr 2</td><td>To Cash A/c</td><td class="text-right">70,000</td><td>2025 Apr 7</td><td>By Cash A/c</td><td class="text-right">1,000</td></tr>
+                <tr><td></td><td></td><td></td><td>Apr 30</td><td>By Balance c/d</td><td class="text-right"><strong>69,000</strong></td></tr>
+                <tr class="total-row"><td></td><td><strong>Total</strong></td><td class="text-right"><strong>70,000</strong></td><td></td><td><strong>Total</strong></td><td class="text-right"><strong>70,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Capital Account -->
+          <div class="acc-table-wrapper">
+            <h4 style="padding:8px 12px; background:var(--table-header); color:#fcd34d; font-family:'Plus Jakarta Sans';">Dr.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>CAPITAL ACCOUNT</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cr.</h4>
+            <table class="acc-table">
+              <thead><tr><th>Date</th><th>Particulars</th><th>Amount (₹)</th><th>Date</th><th>Particulars</th><th>Amount (₹)</th></tr></thead>
+              <tbody>
+                <tr><td>2025 Apr 30</td><td>To Balance c/d</td><td class="text-right"><strong>1,00,000</strong></td><td>2025 Apr 1</td><td>By Cash A/c</td><td class="text-right">1,00,000</td></tr>
+                <tr class="total-row"><td></td><td><strong>Total</strong></td><td class="text-right"><strong>1,00,000</strong></td><td></td><td><strong>Total</strong></td><td class="text-right"><strong>1,00,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Purchases & Sales Accounts -->
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:12px;">
+            <div class="acc-table-wrapper">
+              <h4 style="padding:8px 12px; background:var(--table-header); color:#38bdf8;"><strong>PURCHASES ACCOUNT</strong></h4>
+              <table class="acc-table">
+                <tbody>
+                  <tr><td>2025 Apr 3</td><td>To Cash A/c</td><td class="text-right">5,000</td></tr>
+                  <tr><td>Apr 30</td><td>By Balance c/d</td><td class="text-right"><strong>5,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="acc-table-wrapper">
+              <h4 style="padding:8px 12px; background:var(--table-header); color:#34d399;"><strong>SALES ACCOUNT</strong></h4>
+              <table class="acc-table">
+                <tbody>
+                  <tr><td>2025 Apr 30</td><td>To Balance c/d</td><td class="text-right"><strong>1,500</strong></td></tr>
+                  <tr><td>Apr 8</td><td>By Krishna</td><td class="text-right">1,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Krishna & Salaries Accounts -->
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:12px;">
+            <div class="acc-table-wrapper">
+              <h4 style="padding:8px 12px; background:var(--table-header); color:#c084fc;"><strong>KRISHNA'S ACCOUNT</strong></h4>
+              <table class="acc-table">
+                <tbody>
+                  <tr><td>2025 Apr 8</td><td>To Sales A/c</td><td class="text-right">1,500</td></tr>
+                  <tr><td>Apr 30</td><td>By Balance c/d</td><td class="text-right"><strong>1,500</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="acc-table-wrapper">
+              <h4 style="padding:8px 12px; background:var(--table-header); color:#f87171;"><strong>SALARIES ACCOUNT</strong></h4>
+              <table class="acc-table">
+                <tbody>
+                  <tr><td>2025 Apr 15</td><td>To Cash A/c</td><td class="text-right">3,000</td></tr>
+                  <tr><td>Apr 30</td><td>By Balance c/d</td><td class="text-right"><strong>3,000</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>`,
+        solHi: "<strong>खाता बही (Ledger):</strong> सभी संबंधित खाते - रोकड़ खाता, बैंक खाता, पूँजी खाता, क्रय खाता, विक्रय खाता, कृष्णा का खाता एवं वेतन खाता मानक 'T' प्रारूप में तैयार किए गए हैं।"
+      },
+
+      // Q10
+      {
+        id: "10", qNum: "Q10", section: "long", marks: "6 Marks", topic: "Subsidiary Books - Sales Book",
+        qEn: "Verma Bros. carry on Business as wholesale cloth dealer. From the following, write up their sales Book for January 2025:<br><strong>2025</strong><br>Jan 3: Sold to M/s Birla & Son, Delhi: 100 pieces long cloth @ ₹ 800 each; 50 pieces shirting @ ₹ 500 each. At Trade Discount @ 5%.<br>Jan 8: Sold for cash to M/s Ram Lal & Sons, Delhi: 50 pieces Long cloth @ ₹ 1000 each.<br>Jan 15: Sold to M/s Haris Bros., Delhi: 20 pieces coating @ ₹ 2000 each; 10 pieces shirting @ ₹ 500 each. At Trade discount @ 10%.<br>Jan 20: Purchase from M/s Bharat Computer Ltd, Delhi: 5 printers @ ₹ 4,400 each.",
+        qHi: "वर्मा ब्रदर्स थोक कपड़ा व्यापारी हैं। जनवरी 2025 के लिए उनकी विक्रय बही (Sales Book) तैयार कीजिए:<br>3 जन.: मैसर्स बिड़ला एंड संस, दिल्ली को बेचा: 100 थान लट्ठा (Long cloth) @ ₹ 800 प्रत्येक; 50 थान शर्टिंग @ ₹ 500 प्रत्येक। 5% व्यापारिक बट्टा।<br>8 जन.: मैसर्स राम लाल एंड संस, दिल्ली को नकद बेचा: 50 थान लट्ठा @ ₹ 1,000 प्रत्येक।<br>15 जन.: मैसर्स हरिस ब्रदर्स, दिल्ली को बेचा: 20 थान कोटिंग @ ₹ 2,000 प्रत्येक; 10 थान शर्टिंग @ ₹ 500 प्रत्येक। 10% व्यापारिक बट्टा।<br>20 जन.: मैसर्स भारत कंप्यूटर लिमिटेड, दिल्ली से 5 प्रिंटर @ ₹ 4,400 प्रत्येक खरीदे।",
+        ansTitle: "Sales Book of Verma Bros. (Total: ₹ 1,40,250)",
+        solEn: `<div class="acc-table-wrapper">
+          <table class="acc-table">
+            <thead>
+              <tr>
+                <th style="width:90px;">Date</th>
+                <th>Particulars (Name of Customer & Details)</th>
+                <th style="width:70px;">Inv. No.</th>
+                <th style="width:40px;">L.F.</th>
+                <th class="text-right" style="width:110px;">Details (₹)</th>
+                <th class="text-right" style="width:110px;">Amount (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>2025<br>Jan 3</strong></td>
+                <td>
+                  <strong>M/s Birla & Son, Delhi</strong><br>
+                  100 pieces long cloth @ ₹ 800 each<br>
+                  50 pieces shirting @ ₹ 500 each<br>
+                  <em>Gross Total:</em><br>
+                  Less: Trade Discount @ 5%
+                </td>
+                <td></td>
+                <td></td>
+                <td class="text-right">
+                  <br>
+                  80,000<br>
+                  25,000<br>
+                  1,05,000<br>
+                  (-) 5,250
+                </td>
+                <td class="text-right" style="vertical-align:bottom;"><strong>99,750</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Jan 15</strong></td>
+                <td>
+                  <strong>M/s Haris Bros., Delhi</strong><br>
+                  20 pieces coating @ ₹ 2000 each<br>
+                  10 pieces shirting @ ₹ 500 each<br>
+                  <em>Gross Total:</em><br>
+                  Less: Trade Discount @ 10%
+                </td>
+                <td></td>
+                <td></td>
+                <td class="text-right">
+                  <br>
+                  40,000<br>
+                  5,000<br>
+                  45,000<br>
+                  (-) 4,500
+                </td>
+                <td class="text-right" style="vertical-align:bottom;"><strong>40,500</strong></td>
+              </tr>
+              <tr class="total-row">
+                <td><strong>Jan 31</strong></td>
+                <td colspan="4"><strong>Sales Account Cr. (Total of Sales Book)</strong></td>
+                <td class="text-right"><strong>₹ 1,40,250</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wn-box">
+          <div class="wn-title">📌 Important Exclusion Working Notes:</div>
+          1. <strong>Jan 8 Cash Sale:</strong> Cash sales of goods to M/s Ram Lal & Sons (₹ 50,000) are recorded in the <strong>Cash Book</strong>, NEVER in the Sales Book (Sales book is exclusively for credit sale of goods).<br>
+          2. <strong>Jan 20 Purchase of Printers:</strong> This is a purchase of an office asset (equipment), NOT a sale of cloth. It will be recorded in <strong>Journal Proper</strong>, NOT in the Sales Book.
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong><br>1. विक्रय बही में केवल <strong>उधार में बेचे गए व्यापारिक माल</strong> को लिखा जाता है।<br>2. 8 जनवरी का नकद विक्रय रोकड़ बही (Cash Book) में जाएगा।<br>3. 20 जनवरी को कंप्यूटर प्रिंटर (संपत्ति) खरीदे गए हैं, यह क्रय मुख्य रोज़नामचे (Journal Proper) में जाएगा।<br>4. <strong>कुल विक्रय बही = ₹ 99,750 + ₹ 40,500 = ₹ 1,40,250</strong>।"
+      },
+
+      // Q11
+      {
+        id: "11", qNum: "Q11", section: "long", marks: "6 Marks", topic: "Two-Column Cash Book (Cash & Bank)",
+        qEn: "Record the following Transactions in cash book with bank column and balance the Book on 31st March, 2025:<br><strong>2025</strong><br>March 1: Cash in hand ₹ 1,27,500; Cash at bank ₹ 72,400<br>March 4: Received from Asha cash ₹ 1,200 and a cheque for ₹ 3,200, allowed Discount ₹ 400<br>March 7: Paid by cheque salary of staff ₹ 25,600<br>March 9: Withdrawal cash from bank for office use ₹ 20,000<br>March 12: Interest paid by bank ₹ 1,200<br>March 16: Purchase furniture ₹ 16,500<br>March 21: Paid to Mohan & Co. by cheque ₹ 10,900, discount received ₹ 100<br>March 24: Cash withdrawal from office for personal use ₹ 11,600<br>March 29: Sold goods to Manoj for cash ₹ 14,800<br>March 31: Deposited into bank ₹ 21,200",
+        qHi: "निम्नलिखित लेन-देन को बैंक खाने वाली द्विस्तंभीय रोकड़ बही में अभिलिखित कीजिए तथा 31 मार्च, 2025 को शेष निकालिए:<br>1 मार्च: हस्तस्थ रोकड़ ₹ 1,27,500; बैंक में रोकड़ ₹ 72,400<br>4 मार्च: आशा से ₹ 1,200 नकद एवं ₹ 3,200 का चेक प्राप्त हुआ, बट्टा दिया ₹ 400<br>7 मार्च: कर्मचारियों के वेतन का चेक द्वारा भुगतान किया ₹ 25,600<br>9 मार्च: कार्यालय उपयोग हेतु बैंक से नकद निकाले ₹ 20,000 (Contra Entry)<br>12 मार्च: बैंक द्वारा ब्याज दिया गया ₹ 1,200<br>16 मार्च: फर्नीचर खरीदा ₹ 16,500<br>21 मार्च: मोहन एंड कंपनी को चेक द्वारा ₹ 10,900 चुकाए, बट्टा मिला ₹ 100<br>24 मार्च: निजी उपयोग हेतु कार्यालय से नकद निकाले ₹ 11,600<br>29 मार्च: मनोज को नकद माल बेचा ₹ 14,800<br>31 मार्च: बैंक में नकद जमा किए ₹ 21,200 (Contra Entry)",
+        ansTitle: "Two-Column Cash Book (Closing Balance: Cash ₹ 1,14,200 | Bank ₹ 41,500)",
+        solEn: `<div class="acc-table-wrapper">
+          <table class="acc-table">
+            <thead>
+              <tr>
+                <th colspan="5" style="text-align:center; background:#065f46; color:#a7f3d0;">RECEIPTS (DEBIT SIDE)</th>
+                <th colspan="5" style="text-align:center; background:#881337; color:#fecdd3;">PAYMENTS (CREDIT SIDE)</th>
+              </tr>
+              <tr>
+                <th>Date</th>
+                <th>Particulars</th>
+                <th>L.F.</th>
+                <th class="text-right">Cash (₹)</th>
+                <th class="text-right">Bank (₹)</th>
+                <th>Date</th>
+                <th>Particulars</th>
+                <th>L.F.</th>
+                <th class="text-right">Cash (₹)</th>
+                <th class="text-right">Bank (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mar 1</td>
+                <td>To Balance b/d</td>
+                <td></td>
+                <td class="text-right">1,27,500</td>
+                <td class="text-right">72,400</td>
+                <td>Mar 7</td>
+                <td>By Salaries A/c</td>
+                <td></td>
+                <td class="text-right">-</td>
+                <td class="text-right">25,600</td>
+              </tr>
+              <tr>
+                <td>Mar 4</td>
+                <td>To Asha (Cheque deposited)</td>
+                <td></td>
+                <td class="text-right">1,200</td>
+                <td class="text-right">3,200</td>
+                <td>Mar 9</td>
+                <td>By Cash A/c (Office)</td>
+                <td><strong>C</strong></td>
+                <td class="text-right">-</td>
+                <td class="text-right">20,000</td>
+              </tr>
+              <tr>
+                <td>Mar 9</td>
+                <td>To Bank A/c (Withdrawal)</td>
+                <td><strong>C</strong></td>
+                <td class="text-right">20,000</td>
+                <td class="text-right">-</td>
+                <td>Mar 16</td>
+                <td>By Furniture A/c</td>
+                <td></td>
+                <td class="text-right">16,500</td>
+                <td class="text-right">-</td>
+              </tr>
+              <tr>
+                <td>Mar 12</td>
+                <td>To Interest A/c</td>
+                <td></td>
+                <td class="text-right">-</td>
+                <td class="text-right">1,200</td>
+                <td>Mar 21</td>
+                <td>By Mohan & Co.</td>
+                <td></td>
+                <td class="text-right">-</td>
+                <td class="text-right">10,900</td>
+              </tr>
+              <tr>
+                <td>Mar 29</td>
+                <td>To Sales A/c</td>
+                <td></td>
+                <td class="text-right">14,800</td>
+                <td class="text-right">-</td>
+                <td>Mar 24</td>
+                <td>By Drawings A/c</td>
+                <td></td>
+                <td class="text-right">11,600</td>
+                <td class="text-right">-</td>
+              </tr>
+              <tr>
+                <td>Mar 31</td>
+                <td>To Cash A/c (Deposit)</td>
+                <td><strong>C</strong></td>
+                <td class="text-right">-</td>
+                <td class="text-right">21,200</td>
+                <td>Mar 31</td>
+                <td>By Bank A/c (Deposit)</td>
+                <td><strong>C</strong></td>
+                <td class="text-right">21,200</td>
+                <td class="text-right">-</td>
+              </tr>
+              <tr>
+                <td></td><td></td><td></td><td></td><td></td>
+                <td>Mar 31</td>
+                <td><strong>By Balance c/d</strong></td>
+                <td></td>
+                <td class="text-right" style="color:#34d399; font-weight:800;">1,14,200</td>
+                <td class="text-right" style="color:#34d399; font-weight:800;">41,500</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="3"><strong>TOTAL</strong></td>
+                <td class="text-right"><strong>₹ 1,63,500</strong></td>
+                <td class="text-right"><strong>₹ 98,000</strong></td>
+                <td colspan="3"><strong>TOTAL</strong></td>
+                <td class="text-right"><strong>₹ 1,63,500</strong></td>
+                <td class="text-right"><strong>₹ 98,000</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wn-box">
+          <div class="wn-title">💡 Working Notes:</div>
+          1. <strong>March 4 Cheque from Asha:</strong> Assumed deposited into bank on the same day as per standard convention. Discount allowed ₹ 400 is recorded in Journal Proper.<br>
+          2. <strong>March 9 & March 31:</strong> Marked with <strong>'C' (Contra Entry)</strong> since both Cash and Bank accounts are mutually affected.<br>
+          3. <strong>March 21 Discount Received:</strong> Discount received of ₹ 100 is recorded in Journal Proper (<code>Mohan & Co. Dr. 100 To Discount Received A/c 100</code>).
+        </div>`,
+        solHi: "<strong>रोकड़ बही शेष:</strong><br>• हस्तस्थ रोकड़ का अंतिम शेष (Cash Balance c/d) = <strong>₹ 1,14,200</strong><br>• बैंक का अंतिम शेष (Bank Balance c/d) = <strong>₹ 41,500</strong><br>• 9 मार्च और 31 मार्च की प्रविष्टियां उभय पक्षीय प्रविष्टि (Contra Entry 'C') हैं।"
+      },
+
+      // Q12
+      {
+        id: "12", qNum: "Q12", section: "long", marks: "6 Marks", topic: "Adjustment Journal Entries",
+        qEn: "Pass necessary Adjustment Journal Entries:<br>(i) Salary outstanding ₹ 10,000<br>(ii) Goods given as free sample of ₹ 2,000<br>(iii) Depreciation on furniture by ₹ 8,000<br>(iv) Goods destroyed by fire ₹ 5,000<br>(v) Insurance prepaid ₹ 3,000<br>(vi) Wages paid by cheque of ₹ 2,000",
+        qHi: "आवश्यक समायोजन रोजनामचा प्रविष्टियाँ (Adjustment Journal Entries) कीजिए:<br>(i) अदत्त वेतन (Salary outstanding) ₹ 10,000<br>(ii) मुफ्त नमूने के रूप में दिया गया माल ₹ 2,000<br>(iii) फर्नीचर पर ₹ 8,000 मूल्यह्रास लगाया गया<br>(iv) आग से माल नष्ट हुआ ₹ 5,000<br>(v) पूर्वदत्त बीमा (Insurance prepaid) ₹ 3,000<br>(vi) चेक द्वारा ₹ 2,000 मजदूरी का भुगतान किया गया",
+        ansTitle: "Adjustment Journal Entries (Total: ₹ 30,000)",
+        solEn: `<div class="acc-table-wrapper">
+          <table class="acc-table">
+            <thead>
+              <tr>
+                <th style="width:70px;">Item</th>
+                <th>Particulars</th>
+                <th style="width:50px;">L.F.</th>
+                <th class="text-right" style="width:110px;">Debit (₹)</th>
+                <th class="text-right" style="width:110px;">Credit (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>(i)</td>
+                <td>
+                  <strong>Salaries A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Salary Outstanding A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being salary due but not paid provided for)</em>
+                </td>
+                <td></td>
+                <td class="text-right">10,000</td>
+                <td class="text-right">10,000</td>
+              </tr>
+              <tr>
+                <td>(ii)</td>
+                <td>
+                  <strong>Advertisement A/c (or Samples A/c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Purchases A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being goods distributed as free samples for sales promotion)</em>
+                </td>
+                <td></td>
+                <td class="text-right">2,000</td>
+                <td class="text-right">2,000</td>
+              </tr>
+              <tr>
+                <td>(iii)</td>
+                <td>
+                  <strong>Depreciation A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Furniture A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being depreciation charged on furniture)</em>
+                </td>
+                <td></td>
+                <td class="text-right">8,000</td>
+                <td class="text-right">8,000</td>
+              </tr>
+              <tr>
+                <td>(iv)</td>
+                <td>
+                  <strong>Loss by Fire A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Purchases A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being cost of goods destroyed by accidental fire)</em>
+                </td>
+                <td></td>
+                <td class="text-right">5,000</td>
+                <td class="text-right">5,000</td>
+              </tr>
+              <tr>
+                <td>(v)</td>
+                <td>
+                  <strong>Prepaid Insurance A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Insurance Premium A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being unexpired/prepaid insurance carried forward)</em>
+                </td>
+                <td></td>
+                <td class="text-right">3,000</td>
+                <td class="text-right">3,000</td>
+              </tr>
+              <tr>
+                <td>(vi)</td>
+                <td>
+                  <strong>Wages A/c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;To Bank A/c<br>
+                  <em style="color:var(--text-muted); font-size:12px;">(Being wages paid by cheque)</em>
+                </td>
+                <td></td>
+                <td class="text-right">2,000</td>
+                <td class="text-right">2,000</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="2"><strong>TOTAL</strong></td>
+                <td></td>
+                <td class="text-right"><strong>₹ 30,000</strong></td>
+                <td class="text-right"><strong>₹ 30,000</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>`,
+        solHi: "<strong>समायोजन प्रविष्टियाँ:</strong><br>(i) Salaries Dr. To Salary Outstanding (व्यय बढ़ा, देयता बढ़ी)<br>(ii) Advertisement Dr. To Purchases (क्रय लागत घटी)<br>(iii) Depreciation Dr. To Furniture (संपत्ति घटी)<br>(iv) Loss by Fire Dr. To Purchases (क्रय लागत घटी)<br>(v) Prepaid Insurance Dr. To Insurance Premium (संपत्ति बनी)<br>(vi) Wages Dr. To Bank (बैंक से भुगतान हुआ)"
+      },
+
+      // Q13 (Both Options Solved Fully!)
+      {
+        id: "13", qNum: "Q13", section: "long", marks: "6 Marks", topic: "Bank Reconciliation Statement (Theory & Practical)",
+        qEn: `<strong>Option 1 (Theory):</strong> What do you mean by Bank Reconciliation Statement? Explain the need and importance of Bank Reconciliation Statement.<br><br>
+        <strong>OR Option 2 (Practical Numerical):</strong><br>
+        On 31st March, 2025, the cash book of Preeti showed Debit Balance of ₹ 49,000. Bank statement or Bank pass book showed credit Balance of ₹ 37,400. Entries in Cash book and bank pass book were compared and the following differences were identified:<br>
+        (i) Cheque of Vijay ₹ 9,000 and of Rahul ₹ 15,000 were deposited but were not collected upto 31st March, 2025.<br>
+        (ii) Ramesh, a debtor deposited a cheque of ₹ 8,000 directly into bank.<br>
+        (iii) Bank allowed an interest ₹ 500.<br>
+        (iv) Cheque for ₹ 10,000 issued to Ramesh was not presented for payment.<br>
+        (v) Bank debited ₹ 6,000, being insurance premium paid as per standing instructions.<br>
+        (vi) Bank debited ₹ 100, being bank charges.<br>
+        Prepare Bank Reconciliation Statement as on 31st March, 2025.`,
+        qHi: `<strong>विकल्प 1 (सैद्धांतिक):</strong> बैंक समाधान विवरण (BRS) से आप क्या समझते हैं? बैंक समाधान विवरण की आवश्यकता एवं महत्व को समझाइए।<br><br>
+        <strong>अथवा विकल्प 2 (व्यावहारिक प्रश्न):</strong><br>
+        31 मार्च, 2025 को प्रीति की रोकड़ बही ₹ 49,000 का नाम शेष (Debit Balance) दर्शाती है। बैंक पासबुक ₹ 37,400 का जमा शेष (Credit Balance) दर्शाती है। दोनों की तुलना करने पर निम्नलिखित अंतर पाए गए:<br>
+        (i) विजय का ₹ 9,000 और राहुल का ₹ 15,000 का चेक बैंक में जमा कराया गया किन्तु 31 मार्च तक संग्रहित नहीं हुआ।<br>
+        (ii) देनदार रमेश ने सीधे बैंक में ₹ 8,000 का चेक जमा किया।<br>
+        (iii) बैंक ने ₹ 500 ब्याज दिया।<br>
+        (iv) रमेश को जारी किया गया ₹ 10,000 का चेक भुगतान के लिए प्रस्तुत नहीं हुआ।<br>
+        (v) बैंक ने स्थायी आदेश के अनुसार ₹ 6,000 बीमा प्रीमियम का भुगतान किया।<br>
+        (vi) बैंक ने ₹ 100 बैंक प्रभार (Bank Charges) नाम किए।<br>
+        31 मार्च, 2025 को बैंक समाधान विवरण तैयार कीजिए।`,
+        ansTitle: "Both Theory & Practical Problem Solved 100% (Pass Book Match: ₹ 37,400)",
+        solEn: `<div style="display:flex; flex-direction:column; gap:20px;">
+          <!-- Option 2 Numerical Solution -->
+          <div>
+            <h3 style="color:#38bdf8; margin-bottom:10px;">⭐ Solution to Practical Numerical (Option 2):</h3>
+            <div class="acc-table-wrapper">
+              <h4 style="padding:10px 14px; background:#0f172a; color:#fcd34d; font-family:'Plus Jakarta Sans'; text-align:center;">
+                In the Books of Preeti<br><strong>BANK RECONCILIATION STATEMENT</strong> as on 31st March, 2025
+              </h4>
+              <table class="acc-table">
+                <thead>
+                  <tr>
+                    <th>Particulars</th>
+                    <th class="text-right" style="width:130px;">Amount (₹)</th>
+                    <th class="text-right" style="width:130px;">Amount (₹)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Debit Balance as per Cash Book</strong></td>
+                    <td class="text-right"></td>
+                    <td class="text-right"><strong>49,000</strong></td>
+                  </tr>
+                  <tr style="background:rgba(16,185,129,0.06);">
+                    <td colspan="3"><strong style="color:#34d399;">ADD:</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(iv) Cheque issued to Ramesh but not presented for payment</td>
+                    <td class="text-right">10,000</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>(ii) Cheque directly deposited by customer (Ramesh) into bank</td>
+                    <td class="text-right">8,000</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>(iii) Interest allowed / credited by bank</td>
+                    <td class="text-right">500</td>
+                    <td></td>
+                  </tr>
+                  <tr style="border-top:1px solid rgba(255,255,255,0.1);">
+                    <td><em>Sub-total of Additions</em></td>
+                    <td></td>
+                    <td class="text-right" style="color:#34d399;"><strong>+ 18,500</strong></td>
+                  </tr>
+                  <tr style="background:rgba(56,189,248,0.05);">
+                    <td colspan="2"><strong>Sub-total:</strong></td>
+                    <td class="text-right"><strong>67,500</strong></td>
+                  </tr>
+                  <tr style="background:rgba(244,63,94,0.06);">
+                    <td colspan="3"><strong style="color:#f87171;">LESS:</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(i) Cheques deposited but not collected / credited by bank:<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;• Vijay: ₹ 9,000<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;• Rahul: ₹ 15,000
+                    </td>
+                    <td class="text-right"><br>24,000</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>(v) Insurance premium paid by bank as per standing instructions</td>
+                    <td class="text-right">6,000</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>(vi) Bank charges debited by bank</td>
+                    <td class="text-right">100</td>
+                    <td></td>
+                  </tr>
+                  <tr style="border-top:1px solid rgba(255,255,255,0.1);">
+                    <td><em>Sub-total of Deductions</em></td>
+                    <td></td>
+                    <td class="text-right" style="color:#f87171;"><strong>(-) 30,100</strong></td>
+                  </tr>
+                  <tr class="total-row">
+                    <td><strong>Credit Balance as per Bank Pass Book (Bank Statement)</strong></td>
+                    <td></td>
+                    <td class="text-right"><strong>₹ 37,400</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="wn-box">
+              <div class="wn-title">🎯 Exact Reconciliation Match:</div>
+              ₹ 67,500 - ₹ 30,100 = <strong>₹ 37,400</strong>. This perfectly matches the Pass Book balance stated in the question paper!
+            </div>
+          </div>
+
+          <!-- Option 1 Theory Solution -->
+          <div style="background:rgba(255,255,255,0.02); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+            <h3 style="color:#fcd34d; margin-bottom:8px;">📘 Solution to Theory Question (Option 1):</h3>
+            <p><strong>1. Meaning of Bank Reconciliation Statement (BRS):</strong><br>
+            A Bank Reconciliation Statement is a schedule prepared periodically by an account holder to reconcile and explain the causes of differences between the bank balance shown in the business's Cash Book (bank column) and the balance shown in the Bank Pass Book / Bank Statement on a particular date.</p>
+            <p style="margin-top:10px;"><strong>2. Need and Importance of BRS:</strong></p>
+            <ul style="padding-left:20px; line-height:1.8;">
+              <li><strong>Detection of Errors:</strong> It detects clerical mistakes, omissions, or arithmetic errors committed in either the Cash Book or Pass Book.</li>
+              <li><strong>Ascertaining True Bank Balance:</strong> It reveals the exact funds available in the bank, preventing cheques from being dishonoured due to overdrawing.</li>
+              <li><strong>Fraud Prevention & Embezzlement Check:</strong> Regular reconciliation discourages fraud, delayed banking of cheques, or misappropriation of cash by employees.</li>
+              <li><strong>Tracking In-Transit Transactions:</strong> Identifies unpresented cheques, uncleared deposits, direct debits (standing orders), and direct credits (interest/customer deposits).</li>
+            </ul>
+          </div>
+        </div>`,
+        solHi: "<strong>व्याख्या:</strong><br>• <strong>रोकड़ बही का डेबिट शेष:</strong> ₹ 49,000<br>• <strong>जोड़ें (Add):</strong> चेक जारी किए किन्तु प्रस्तुत नहीं हुए (₹ 10,000) + सीधे ग्राहक द्वारा जमा (₹ 8,000) + बैंक द्वारा दिया गया ब्याज (₹ 500) = <strong>+ ₹ 18,500</strong> (योग = ₹ 67,500)<br>• <strong>घटाएं (Less):</strong> चेक जमा किए किन्तु संग्रहित नहीं हुए (₹ 24,000) + बैंक द्वारा चुकाया गया बीमा (₹ 6,000) + बैंक प्रभार (₹ 100) = <strong>- ₹ 30,100</strong><br>• <strong>पासबुक के अनुसार जमा शेष:</strong> ₹ 67,500 - ₹ 30,100 = <strong>₹ 37,400</strong> (प्रश्न से 100% सत्यापित!)"
+      }
+    ];
+
+    // Render Questions
+    function renderQuestions(filter = 'all') {
+      const container = document.getElementById('questionsContainer');
+      container.innerHTML = '';
+
+      const filtered = questionsData.filter(item => {
+        if (filter === 'all') return true;
+        return item.section === filter;
+      });
+
+      filtered.forEach(q => {
+        const card = document.createElement('article');
+        card.className = 'q-card';
+        card.id = `card_${q.id}`;
+
+        let optionsHtml = '';
+        if (q.options && q.options.length > 0) {
+          optionsHtml = `<div class="mcq-options">` +
+            q.options.map(opt => `
+              <div class="mcq-opt">
+                <span class="opt-key">${opt.key}</span>
+                <span>${opt.text}</span>
+              </div>
+            `).join('') + `</div>`;
+        }
+
+        card.innerHTML = `
+          <div class="q-header">
+            <div class="q-meta-left">
+              <span class="q-badge">${q.qNum}</span>
+              <span class="topic-badge">${q.topic}</span>
+            </div>
+            <span class="marks-badge">${q.marks}</span>
+          </div>
+
+          <div class="q-body">
+            <div class="q-en">${q.qEn}</div>
+            <div class="q-hi">${q.qHi}</div>
+            ${optionsHtml}
+          </div>
+
+          <div class="action-row">
+            <button class="sol-toggle-btn" id="btn_${q.id}" onclick="toggleSolution('${q.id}')">
+              💡 Reveal Solution / उत्तर देखें
+            </button>
+          </div>
+
+          <div class="sol-drawer" id="sol_${q.id}">
+            <div class="ans-highlight-pill">✓ ${q.ansTitle}</div>
+            <div class="sol-en">${q.solEn}</div>
+            <div class="sol-hi" style="margin-top:10px; border-top:1px dashed rgba(255,255,255,0.1); padding-top:10px; color:#cbd5e1;">${q.solHi}</div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      // Re-apply language filter
+      setLanguage(currentLang, document.querySelector(`.controls-panel .pill-btn.active`) || document.querySelector(`.controls-panel .pill-btn`));
+    }
+
+    // Toggle individual solution
+    function toggleSolution(id) {
+      const drawer = document.getElementById(`sol_${id}`);
+      const btn = document.getElementById(`btn_${id}`);
+      if (!drawer || !btn) return;
+
+      const isHidden = window.getComputedStyle(drawer).display === 'none';
+      if (isHidden) {
+        drawer.style.display = 'block';
+        btn.classList.add('revealed');
+        btn.innerHTML = '🔒 Hide Solution / उत्तर छिपाएं';
+        try {
+          confetti({ particleCount: 25, spread: 60, origin: { y: 0.85 } });
+        } catch (e) {}
+      } else {
+        drawer.style.display = 'none';
+        btn.classList.remove('revealed');
+        btn.innerHTML = '💡 Reveal Solution / उत्तर देखें';
+      }
+    }
+
+    // Master expand/collapse
+    let allRevealed = false;
+    function toggleAllSolutions() {
+      expandAll(!allRevealed);
+    }
+
+    function expandAll(show) {
+      allRevealed = show;
+      document.querySelectorAll('.sol-drawer').forEach(el => el.style.display = show ? 'block' : 'none');
+      document.querySelectorAll('.sol-toggle-btn').forEach(btn => {
+        if (show) {
+          btn.classList.add('revealed');
+          btn.innerHTML = '🔒 Hide Solution / उत्तर छिपाएं';
+        } else {
+          btn.classList.remove('revealed');
+          btn.innerHTML = '💡 Reveal Solution / उत्तर देखें';
+        }
+      });
+      const masterBtn = document.getElementById('masterToggleBtn');
+      if (masterBtn) {
+        masterBtn.innerHTML = show ? '🔒 Hide All' : '👁️ Reveal All';
+      }
+      if (show) {
+        try {
+          confetti({ particleCount: 60, spread: 80, origin: { y: 0.6 } });
+        } catch(e) {}
+      }
+    }
+
+    // Filter section tabs
+    function filterQuestions(section, tabBtn) {
+      document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+      tabBtn.classList.add('active');
+      renderQuestions(section);
+    }
+
+    // Initial render
+    renderQuestions('all');
+  </script>
+</body>
+</html>

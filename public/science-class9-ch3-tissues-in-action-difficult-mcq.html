@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 9 Science Ch 3: Tissues in Action — 20 HOTS Difficult Exam MCQs (Bilingual)</title>
+  <meta name="description" content="Master 20 difficult, HOTS-level MCQs from NCERT Class 9 Science (Exploration) Chapter 3: Tissues in Action. Bilingual English & Hindi with randomized options, instant answer reveal, and in-depth scientific solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #060c18;
+      --card-bg: #0c1328;
+      --card-border: rgba(16, 185, 129, 0.25);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-emerald: #10b981;
+      --accent-cyan: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-red: #ef4444;
+      --accent-purple: #a855f7;
+      --header-surface: rgba(6, 12, 24, 0.95);
+      --font-body: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: rgba(5, 150, 105, 0.25);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-emerald: #059669;
+      --accent-cyan: #0284c7;
+      --accent-gold: #d97706;
+      --accent-red: #dc2626;
+      --accent-purple: #9333ea;
+      --header-surface: rgba(255, 255, 255, 0.95);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    /* Top Breadcrumb Bar */
+    .top-breadcrumb-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb-trail a {
+      color: var(--accent-emerald);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .breadcrumb-trail a:hover {
+      text-decoration: underline;
+      color: var(--accent-cyan);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    .breadcrumb-current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill-btn {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .pill-btn:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--accent-emerald);
+      transform: translateY(-1px);
+    }
+
+    .pill-btn.active {
+      background: var(--accent-emerald);
+      color: #060c18;
+      border-color: var(--accent-emerald);
+    }
+
+    /* Container */
+    .main-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(12, 19, 40, 0.95) 0%, rgba(6, 78, 59, 0.4) 100%);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .badge-danger {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--accent-red);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    .badge-purple {
+      background: rgba(168, 85, 247, 0.15);
+      color: var(--accent-purple);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+    }
+
+    .hero-title {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    /* Score & Filter Bar */
+    .control-dashboard {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .score-meter-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .score-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(56, 189, 248, 0.2) 100%);
+      border: 2px solid var(--accent-emerald);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .score-details {
+      flex: 1;
+    }
+
+    .score-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .progress-bar-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-emerald), var(--accent-cyan));
+      border-radius: 9999px;
+      transition: width 0.4s ease;
+    }
+
+    .filter-tabs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .filter-btn:hover {
+      color: var(--text-main);
+      border-color: var(--accent-emerald);
+    }
+
+    .filter-btn.active {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border-color: var(--accent-emerald);
+    }
+
+    /* MCQ Question Cards */
+    .mcq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .mcq-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px 20px;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .mcq-card:hover {
+      border-color: rgba(16, 185, 129, 0.45);
+    }
+
+    .mcq-card.answered-correct {
+      border-color: var(--accent-emerald);
+      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(16, 185, 129, 0.05) 100%);
+    }
+
+    .mcq-card.answered-wrong {
+      border-color: var(--accent-red);
+      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(239, 68, 68, 0.05) 100%);
+    }
+
+    .mcq-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .mcq-qnum-badge {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+    }
+
+    .difficulty-badge {
+      font-size: 0.72rem;
+      font-weight: 900;
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .mcq-topic-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .mcq-question-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.55;
+      margin-bottom: 6px;
+    }
+
+    .mcq-question-text-hi {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    /* Options List */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1.5px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .option-btn:hover:not(:disabled) {
+      background: rgba(16, 185, 129, 0.08);
+      border-color: var(--accent-emerald);
+      transform: translateX(3px);
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-content {
+      flex: 1;
+    }
+
+    .opt-en {
+      display: block;
+      color: var(--text-main);
+      margin-bottom: 3px;
+    }
+
+    .opt-hi {
+      display: block;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Selected Correct */
+    .option-btn.opt-correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: var(--accent-emerald) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+    }
+
+    .option-btn.opt-correct .opt-letter {
+      background: var(--accent-emerald);
+      color: #060c18;
+    }
+
+    /* Selected Wrong */
+    .option-btn.opt-wrong {
+      background: rgba(239, 68, 68, 0.18) !important;
+      border-color: var(--accent-red) !important;
+      color: #ffffff !important;
+      animation: shake 0.4s ease;
+    }
+
+    .option-btn.opt-wrong .opt-letter {
+      background: var(--accent-red);
+      color: #ffffff;
+    }
+
+    /* Revealed Correct */
+    .option-btn.opt-revealed-correct {
+      background: rgba(16, 185, 129, 0.12) !important;
+      border: 2px dashed var(--accent-emerald) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.3);
+    }
+
+    .option-btn.opt-revealed-correct .opt-letter {
+      background: var(--accent-emerald);
+      color: #060c18;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    /* Solution Box */
+    .solution-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      display: none;
+    }
+
+    .solution-box.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .solution-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .solution-text {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.55;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bottom Bar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--card-border);
+      padding: 12px 16px;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .bottom-stats {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .bottom-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Language display overrides */
+    body.lang-en-only .opt-hi,
+    body.lang-en-only .mcq-question-text-hi {
+      display: none !important;
+    }
+
+    body.lang-hi-only .opt-en,
+    body.lang-hi-only .mcq-question-text:not(.mcq-question-text-hi) {
+      display: none !important;
+    }
+
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; padding-bottom: 0; }
+      .top-breadcrumb-bar, .control-dashboard, .bottom-bar, .pill-btn, .filter-tabs { display: none !important; }
+      .mcq-card { border: 1px solid #ccc !important; background: #fff !important; page-break-inside: avoid; }
+      .option-btn { border: 1px solid #ddd !important; background: #fff !important; color: #000 !important; }
+      .solution-box { display: block !important; background: #f0fdf4 !important; border: 1px solid #86efac !important; color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Breadcrumb Bar -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb Navigation">
+    <div class="breadcrumb-trail">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=9">Class 9</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=9&subject=c9-science">Science (Exploration)</a>
+      <span class="breadcrumb-separator">❯</span>
+      <span class="breadcrumb-current">Ch 3: Tissues in Action (HOTS Difficult MCQs)</span>
+    </div>
+
+    <div class="top-actions">
+      <!-- Shuffle Options Button -->
+      <button class="pill-btn" onclick="shuffleAllOptions()" title="Randomize option order for fresh practice">
+        🔀 <span id="shuffle-label">Shuffle Options</span>
+      </button>
+
+      <!-- Language Toggle -->
+      <button id="lang-toggle-btn" class="pill-btn" onclick="cycleLanguage()" title="Switch Language">
+        🌐 <span id="lang-label">Bilingual (English / हिंदी)</span>
+      </button>
+
+      <!-- Theme Switcher -->
+      <button id="theme-toggle-btn" class="pill-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        🌙 <span id="theme-label">Dark</span>
+      </button>
+
+      <!-- View PDF -->
+      <a href="/pdf/Class 09/9th science_NEW/Exploration/iesc1dd/iesc103.pdf" target="_blank" rel="noopener noreferrer" class="pill-btn" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+        📖 Open Chapter PDF
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- Hero Card -->
+    <header class="hero-card">
+      <div class="hero-badge-row">
+        <span class="badge-tag badge-emerald">NCERT Grade 9 Science (Exploration)</span>
+        <span class="badge-tag badge-danger">High-Order Thinking (HOTS)</span>
+        <span class="badge-tag badge-purple">Randomized Options</span>
+      </div>
+      <h1 class="hero-title">Chapter 3: Tissues in Action (ऊतक: कार्यप्रणाली में)</h1>
+      <p class="hero-subtitle">
+        20 Analytical &amp; Difficult-Level Exam MCQs: Vacuolar absence in meristems, tree debarking physiology, sugarcane intercalary sprouting, annual ring dendrochronology, sieve-tube companion cell dependency, living/dead vascular components, and musculoskeletal joint biomechanics.
+      </p>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button class="pill-btn active" onclick="window.print()">
+          🖨️ Print Exam Worksheet (A4 / A5)
+        </button>
+        <button class="pill-btn" onclick="shuffleAllOptions()">
+          🔀 Re-Shuffle All Options
+        </button>
+        <button class="pill-btn" onclick="resetAllMcqs()">
+          🔄 Reset Practice
+        </button>
+      </div>
+    </header>
+
+    <!-- Score & Filter Dashboard -->
+    <section class="control-dashboard">
+      <div class="score-meter-wrap">
+        <div class="score-circle">
+          <span id="score-val">0</span>
+          <span style="font-size: 0.65rem; opacity: 0.7;">/ 20</span>
+        </div>
+        <div class="score-details">
+          <div class="score-label">
+            <span>HOTS Exam Readiness</span>
+            <span id="score-pct">0% (0/20 Answered)</span>
+          </div>
+          <div class="progress-bar-track">
+            <div id="score-bar" class="progress-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterQuestions('all', this)">All (20)</button>
+        <button class="filter-btn" onclick="filterQuestions('plant', this)">Plant Tissues (Q1–Q8)</button>
+        <button class="filter-btn" onclick="filterQuestions('epithelial', this)">Epithelial & Connective (Q9–Q11)</button>
+        <button class="filter-btn" onclick="filterQuestions('musculo', this)">Muscular & Nervous (Q12–Q16)</button>
+        <button class="filter-btn" onclick="filterQuestions('assertion', this)">Assertion-Reason & Biotech (Q17–Q20)</button>
+      </div>
+    </section>
+
+    <!-- MCQs List Container -->
+    <div id="mcq-container" class="mcq-list"></div>
+
+  </main>
+
+  <!-- Sticky Bottom Bar -->
+  <footer class="bottom-bar">
+    <div class="bottom-stats">
+      <span id="bottom-score-text">Answered: 0 / 20 • Score: 0 / 20</span>
+    </div>
+    <div class="bottom-actions">
+      <button class="pill-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+        ⬆️ Top
+      </button>
+      <button class="pill-btn" onclick="toggleTheme()">
+        <span id="bottom-theme-icon">🌙 Mode</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Question Data and Interactive Logic -->
+  <script>
+    // Master Raw Questions with Explicit Correct Identifiers
+    const RAW_MCQ_DATA = [
+      {
+        id: 1,
+        category: 'plant',
+        topic: 'Meristematic Cytology',
+        qEn: 'Actively dividing meristematic cells have dense cytoplasm, thin cellulosic primary walls, and prominent nuclei, but they completely lack vacuoles. What is the fundamental physiological rationale for this absence?',
+        qHi: 'सक्रिय रूप से विभाजित होने वाली विभज्योतक (meristematic) कोशिकाओं में सघन कोशिकाद्रव्य, पतली सेल्यूलोस भित्ति तथा स्पष्ट केंद्रक होते हैं, परंतु इनमें रसधानियाँ (vacuoles) पूर्णतः अनुपस्थित होती हैं। इसका मुख्य कार्यिकीय कारण क्या है?',
+        options: [
+          { en: 'They store nutrients in mitochondria instead of vacuoles.', hi: 'वे रसधानियों के बजाय माइटोकॉन्ड्रिया में पोषक तत्व संचित करती हैं।', isCorrect: false },
+          { en: 'Vacuoles primarily store sap and metabolic waste while providing hydrostatic rigidity; actively dividing cells have no storage/waste requirement and need compact, unobstructed cytoplasm for rapid mitosis.', hi: 'रसधानियाँ मुख्यतः कोशिका रस व अपशिष्ट संचित करती हैं और स्फीति प्रदान करती हैं; सक्रिय विभाजित कोशिकाओं को संचय की आवश्यकता नहीं होती और उन्हें तीव्र समसूत्री विभाजन हेतु सघन साइटोप्लाज्म चाहिए होता है।', isCorrect: true },
+          { en: 'Their cell walls are impermeable to water molecules, preventing vacuole inflation.', hi: 'उनकी कोशिका भित्ति जल के लिए अपारगम्य होती है, जिससे रसधानी फूल नहीं पाती।', isCorrect: false },
+          { en: 'Vacuoles are destroyed by the high concentrations of chlorophyll present in root meristems.', hi: 'मूल शीर्ष में उपस्थित क्लोरोफिल की उच्च सांद्रता द्वारा रसधानियों का क्षय हो जाता है।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.2.1 notes: Meristematic cells divide continuously. Vacuoles function in nutrient/waste storage and turgidity maintenance in mature cells. Meristems have high metabolic turnover, negligible storage needs, and need high nuclear-to-cytoplasmic volume for rapid spindle formation and cytokinesis.',
+        expHi: 'पाठ्यपुस्तक खंड 3.2.1 के अनुसार: विभज्योतक कोशिकाएँ निरंतर विभाजित होती हैं। रसधानियाँ परिपक्व कोशिकाओं में भोजन संचय व अपशिष्ट प्रबंधन करती हैं। विभाजी कोशिकाओं को तीव्र विभाजन हेतु सघन कोशिकाद्रव्य व बड़े केंद्रक की आवश्यकता होती है, अतः रसधानियों की कोई आवश्यकता नहीं होती।'
+      },
+      {
+        id: 2,
+        category: 'plant',
+        topic: 'Intercalary Regeneration (Fig. 3.23)',
+        qEn: 'In Sohan\'s experiment on sugarcane regeneration (Fig. 3.23 / Q10), cutting \'B\' developed into mature plants whereas cutting \'A\' completely failed to sprout. What is the precise cellular basis for this difference?',
+        qHi: 'गन्ने के पुनर्जनन प्रयोग (चित्र 3.23 / प्रश्न 10) में, सोहन की कलम \'B\' नए पौधे में विकसित हो गई जबकि कलम \'A\' में कोई अंकुरण नहीं हुआ। इस अंतर का सटीक कोशिकीय आधार क्या है?',
+        options: [
+          { en: 'Cutting \'A\' lacked chlorophyll in its internodal parenchyma.', hi: 'कलम \'A\' के पोर (internode) के पैरेन्काइमा में क्लोरोफिल नहीं था।', isCorrect: false },
+          { en: 'Cutting \'A\' was taken only from an internode consisting of permanently differentiated cells, whereas cutting \'B\' included a node possessing intercalary meristem and axillary buds capable of active division.', hi: 'कलम \'A\' केवल स्थायी विभेदित कोशिकाओं वाले पोर (internode) से ली गई थी, जबकि कलम \'B\' में पर्वसंधि (node) थी जिसमें सक्रिय विभाजनशील अंतर्वेशी विभज्योतक (intercalary meristem) व कलिकाएँ उपस्थित थीं।', isCorrect: true },
+          { en: 'Cutting \'B\' absorbed water via lateral cork cambium present exclusively at cut ends.', hi: 'कलम \'B\' ने अपने कटे सिरों पर उपस्थित कॉर्क कैम्बियम द्वारा जल अवशोषित किया।', isCorrect: false },
+          { en: 'Cutting \'A\' had severed xylem vessels while cutting \'B\' had no xylem.', hi: 'कलम \'A\' की जाइलम वाहिकाएँ कट चुकी थीं जबकि कलम \'B\' में जाइलम नहीं था।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.2.3 & Exercise Q10: Sugarcane internodes contain differentiated permanent parenchyma and vascular bundles incapable of cell division. The nodes contain intercalary meristem and axillary root/shoot buds, which divide to initiate new vegetative shoots and roots.',
+        expHi: 'गन्ने के पोर (internode) में केवल स्थायी ऊतक होते हैं जो विभाजित नहीं हो सकते। पर्वसंधियों (nodes) में अंतर्वेशी विभज्योतक (intercalary meristem) तथा कलिकाएँ होती हैं, जो सक्रिय रूप से विभाजित होकर नई जड़ें व तने उत्पन्न करती हैं।'
+      },
+      {
+        id: 3,
+        category: 'plant',
+        topic: 'Tree Debarking Physiology (Fig. 3.22)',
+        qEn: 'An elephant strips the entire outer ring of bark around a tree trunk down to the wood (girdling / debarking - Fig. 3.22 / Q8). What is the primary physiological mechanism causing the eventual death of the tree?',
+        qHi: 'एक हाथी पेड़ के तने की छाल की बाहरी वलय को लकड़ी तक पूरी तरह छील देता है (गर्डलिंग / डिबार्किंग - चित्र 3.22 / प्रश्न 8)। पेड़ की अंततः मृत्यु होने का प्राथमिक कार्यिकीय कारण क्या है?',
+        options: [
+          { en: 'Upward water conduction through central xylem stops immediately, desiccating leaves within hours.', hi: 'केंद्रीय जाइलम द्वारा ऊपर की ओर जल संवहन तुरंत रुक जाता है, जिससे पत्तियाँ कुछ ही घंटों में सूख जाती हैं।', isCorrect: false },
+          { en: 'Transpiration through lenticels increases hundred-fold, causing systemic cavitation.', hi: 'वातछिद्रों द्वारा वाष्पोत्सर्जन 100 गुना बढ़ जाता है, जिससे गुहायन हो जाता है।', isCorrect: false },
+          { en: 'Debarking removes the secondary phloem beneath the cork, blocking downward translocation of photosynthesized sucrose to the roots; starved roots fail to generate ATP for active mineral absorption, eventually killing the entire plant.', hi: 'छाल छीलने से कॉर्क के नीचे स्थित द्वितीयक फ्लोएम हट जाता है, जिससे पत्तियों से जड़ों तक सुक्रोज का संवहन रुक जाता है; भुखमरी से जड़ें ATP नहीं बना पातीं और सक्रिय अवशोषण रुकने से पूरा पौधा नष्ट हो जाता है।', isCorrect: true },
+          { en: 'Fungal spores instantly liquefy heartwood lignins.', hi: 'कवक के बीजाणु तुरंत अंतःकाष्ठ के लिग्निन को विघटित कर देते हैं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Exercise Q8: Bark consists of cork, phellogen, phelloderm, and secondary phloem. The deep xylem carrying water upwards is left intact initially, so leaves stay green for some days. However, downward translocation of food through phloem is severed. Roots starve, ATP-driven active transport collapses, and root decay ultimately causes tree death.',
+        expHi: 'छाल के ठीक नीचे फ्लोएम होता है। छाल हटने से भोजन का नीचे जड़ों की ओर संवहन रुक जाता है। जड़ों को ऊर्जा (ATP) नहीं मिलती, जिससे खनिज व जल का सक्रिय अवशोषण बंद हो जाता है और पेड़ सूखकर मर जाता है।'
+      },
+      {
+        id: 4,
+        category: 'plant',
+        topic: 'Annual Rings & Secondary Growth (Table 3.7)',
+        qEn: 'Based on Table 3.7 (Teak tree DBH, age, and annual rings), which specialized tissue is directly responsible for increasing stem girth, and what causes the formation of distinct annual rings?',
+        qHi: 'तालिका 3.7 (सागौन के तने का व्यास, आयु तथा वार्षिक वलय) के आधार पर बताइए कि तने की मोटाई (girth) बढ़ाने के लिए कौन सा विशिष्ट ऊतक उत्तरदायी है, तथा स्पष्ट वार्षिक वलय बनने का क्या कारण है?',
+        options: [
+          { en: 'Apical meristem producing alternating layers of sclerenchyma and collenchyma.', hi: 'शीर्षस्थ विभज्योतक जो बारी-बारी से स्क्लेरेन्काइमा व कोलेन्काइमा बनाता है।', isCorrect: false },
+          { en: 'Lateral meristem (vascular cambium) producing wider, low-density secondary xylem in spring and narrow, dense xylem in autumn due to seasonal climatic variations.', hi: 'पार्श्वीय विभज्योतक (संवहन कैम्बियम) जो मौसमी बदलावों के कारण वसंत में चौड़ी/हल्की जाइलम वाहिकाएँ तथा शरद में संकरी/सघन जाइलम वाहिकाएँ बनाता है।', isCorrect: true },
+          { en: 'Intercalary meristem depositing calcium carbonate crystals yearly.', hi: 'अंतर्वेशी विभज्योतक जो प्रतिवर्ष कैल्शियम कार्बोनेट क्रिस्टल जमा करता है।', isCorrect: false },
+          { en: 'Epidermis shedding layers like reptilian skin annually.', hi: 'बाह्यत्वचा (एपिडर्मिस) जो प्रतिवर्ष छिलके की तरह उतरती है।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.2.2 & Table 3.7: The lateral meristem (cambium) increases stem girth by producing secondary vascular tissues. In temperate/seasonal zones, cambial activity varies: rapid growth in favorable spring produces light, wide-vessel "spring wood", while slower growth in autumn/winter produces dark, dense "autumn wood". Together, they form one annual ring per year.',
+        expHi: 'पार्श्वीय विभज्योतक (संवहनी कैम्बियम) तने की मोटाई बढ़ाता है। वसंत ऋतु में कैम्बियम अधिक सक्रिय होकर बड़े व्यास वाली वाहिकाएँ बनाता है (वसंत काष्ठ), जबकि शरद ऋतु में संकरी वाहिकाएँ बनती हैं (शरद काष्ठ)। इन दोनों वलयों के संयोजन से प्रतिवर्ष एक स्पष्ट वार्षिक वलय बनता है।'
+      },
+      {
+        id: 5,
+        category: 'plant',
+        topic: 'Vascular Tissues Living vs Dead Status',
+        qEn: 'In complex permanent tissues of plants, which component is the ONLY living cellular element in Xylem, and which component is the ONLY dead element in Phloem?',
+        qHi: 'पौधों के जटिल स्थायी ऊतकों में, जाइलम (Xylem) का एकमात्र जीवित कोशिकीय घटक कौन सा है, तथा फ्लोएम (Phloem) का एकमात्र मृत घटक कौन सा है?',
+        options: [
+          { en: 'Xylem living: Tracheids; Phloem dead: Companion cells', hi: 'जाइलम जीवित: वाहिनिकाएँ; फ्लोएम मृत: सहचर कोशिकाएँ', isCorrect: false },
+          { en: 'Xylem living: Vessels; Phloem dead: Sieve tubes', hi: 'जाइलम जीवित: वाहिकाएँ; फ्लोएम मृत: चालनी नलिकाएँ', isCorrect: false },
+          { en: 'Xylem living: Xylem parenchyma; Phloem dead: Phloem fibres (bast fibres)', hi: 'जाइलम जीवित: जाइलम पैरेन्काइमा; फ्लोएम मृत: फ्लोएम रेशे (बास्ट फाइबर्स)', isCorrect: true },
+          { en: 'Xylem living: Xylem fibres; Phloem dead: Phloem parenchyma', hi: 'जाइलम जीवित: जाइलम रेशे; फ्लोएम मृत: फ्लोएम पैरेन्काइमा', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.2.4: Xylem consists of tracheids, vessels, xylem fibres (all three are DEAD and lignified at maturity for mechanical strength & hollow conduction), and xylem parenchyma (the ONLY living component). Phloem consists of sieve tubes, companion cells, phloem parenchyma (all three are LIVING), and phloem fibres (the ONLY dead component, providing tensile support like jute/flax).',
+        expHi: 'जाइलम में वाहिनिकाएँ, वाहिकाएँ और जाइलम रेशे मृत होते हैं; केवल जाइलम पैरेन्काइमा ही जीवित होता है। इसके विपरीत फ्लोएम में चालनी नलिकाएँ, सहचर कोशिकाएँ और फ्लोएम पैरेन्काइमा जीवित होते हैं; केवल फ्लोएम रेशे (जैसे पटसन/जूट) ही मृत होते हैं।'
+      },
+      {
+        id: 6,
+        category: 'plant',
+        topic: 'Phloem Cytological Specialization',
+        qEn: 'Mature sieve tube elements lack a nucleus, ribosomes, and a large vacuole, yet remain metabolically active. How do they maintain vital cellular functions and translocate sucrose?',
+        qHi: 'परिपक्व चालनी नलिका (sieve tube) तत्वों में केंद्रक, राइबोसोम और बड़ी रसधानी नहीं होती, फिर भी वे उपापचयी रूप से जीवित रहती हैं। वे अपने जीवन और सुक्रोज संवहन को कैसे बनाए रखती हैं?',
+        options: [
+          { en: 'They rely on continuous ATP and cytoplasmic regulatory signals supplied by adjacent nucleated companion cells through dense plasmodesmata.', hi: 'वे सघन जीवद्रव्यतंतुओं (plasmodesmata) द्वारा जुड़ी निकटवर्ती केंद्रकयुक्त सहचर कोशिकाओं (companion cells) से ATP और नियामक संकेतों पर निर्भर रहती हैं।', isCorrect: true },
+          { en: 'Their cell sap undergoes spontaneous anaerobic combustion to generate energy.', hi: 'उनका कोशिका रस स्वतः अवायवीय दहन करके ऊर्जा बनाता है।', isCorrect: false },
+          { en: 'Adjacent dead xylem vessels inject ATP molecules through pit pairs.', hi: 'निकटवर्ती मृत जाइलम वाहिकाएं गर्तों द्वारा उनमें ATP पहुँचाती हैं।', isCorrect: false },
+          { en: 'They absorb nuclear enzymes directly from soil moisture.', hi: 'वे मृदा की नमी से सीधे केंद्रकीय एंजाइम अवशोषित करती हैं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.2.4: Sieve tube elements are enucleated to provide a low-resistance path for mass flow of organic nutrients. They are ontogenetically and functionally paired with companion cells, which retain active nuclei and high mitochondrial densities to perform metabolic maintenance and sucrose loading for the sieve tubes.',
+        expHi: 'चालनी नलिकाओं से केंद्रक इसलिए लुप्त हो जाता है ताकि भोजन के बहाव में न्यूनतम अवरोध हो। इनके पार्श्व में केंद्रकयुक्त सहचर कोशिकाएं होती हैं, जो जीवद्रव्यतंतुओं द्वारा जुड़कर चालनी नलिका को आवश्यक ATP व प्रोटीन उपलब्ध कराती हैं।'
+      },
+      {
+        id: 7,
+        category: 'plant',
+        topic: 'Collenchyma Biomechanics (Exercise Q9 & Q12)',
+        qEn: 'Aamrapali observed that a young mango sapling\'s stem bends flexibly during severe monsoon winds without snapping (Q9). If a genetic defect caused this flexible supporting tissue to be entirely substituted with sclerenchyma, what would occur?',
+        qHi: 'आम्रपाली ने देखा कि मानसून की तेज हवाओं में आम के छोटे पौधे की टहनी बिना टूटे लचीले ढंग से झुक जाती है (प्रश्न 9)। यदि किसी आनुवंशिक उत्परिवर्तन से यह लचीला सहारा देने वाला ऊतक पूर्णतः दृढ़ोतक (sclerenchyma) से बदल जाए, तो क्या होगा?',
+        options: [
+          { en: 'The stems would become super-elastic and coil around neighboring trees like tendrils.', hi: 'तने अत्यधिक लचीले हो जाएंगे और पड़ोस के पेड़ों पर प्रतान की तरह लिपट जाएंगे।', isCorrect: false },
+          { en: 'The stems would lose tensile flexibility and snap brittlely under strong gusts because lignified sclerenchyma provides rigid compressive strength but lacks shear elasticity.', hi: 'तने अपना लचीलापन खो देंगे और तेज हवा में चटककर टूट जाएंगे, क्योंकि लिग्निनयुक्त दृढ़ोतक कठोरता तो देता है परंतु उसमें झुकाव सहने की प्रत्यास्थता नहीं होती।', isCorrect: true },
+          { en: 'The rate of photosynthesis in the stem cortex would increase ten-fold.', hi: 'तने के कॉर्टेक्स में प्रकाश संश्लेषण की दर 10 गुना बढ़ जाएगी।', isCorrect: false },
+          { en: 'The roots would immediately dissociate from the soil.', hi: 'जड़ें तुरंत मिट्टी से अलग हो जाएंगी।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.2.4 & Exercise Q9: Collenchyma is a living tissue characterized by localized pectin-cellulose thickenings at cell corners, providing mechanical tensile flexibility that allows young stems and petioles to bend without breaking. Sclerenchyma consists of dead cells with uniformly thick, heavily lignified walls; it confers hardness and rigidity (like coconut husk or walnut shell), making stems brittle under bending strain.',
+        expHi: 'कोलेन्काइमा (स्थूलकोण ऊतक) जीवित कोशिकाओं का बना होता है जिसके कोनों पर पेक्टिन का जमाव होता है, जो पौधों को लचीलापन देता है। यदि इसके स्थान पर मृत व लिग्निनयुक्त स्क्लेरेन्काइमा आ जाए, तो तने कठोर तो होंगे परंतु हवा के दबाव में झुकने के बजाय टूट जाएंगे।'
+      },
+      {
+        id: 8,
+        category: 'plant',
+        topic: 'Cork & Protective Tissues',
+        qEn: 'As aerial tree branches mature and undergo secondary growth, the outer epidermis is replaced by multilayered cork (phellem). How does cork prevent pathogen entry and desiccation while permitting respiration in internal living cells?',
+        qHi: 'जैसे-जैसे वृक्ष की शाखाएं परिपक्व होती हैं, बाहरी बाह्यत्वचा बहुस्तरीय कॉर्क (phellem) द्वारा प्रतिस्थापित हो जाती है। कॉर्क रोगाणुओं व जल-हानि को रोकते हुए आंतरिक जीवित कोशिकाओं के श्वसन को कैसे संभव बनाता है?',
+        options: [
+          { en: 'Cork cells are living and actively pump oxygen into the phloem via endocytosis.', hi: 'कॉर्क कोशिकाएँ जीवित होती हैं और एंडोसाइटोसिस द्वारा ऑक्सीजन को फ्लोएम में भेजती हैं।', isCorrect: false },
+          { en: 'Cork cell walls are impregnated with suberin making them impervious to water and pathogens, while aerating pores called lenticels provide localized passages for gaseous exchange.', hi: 'कॉर्क कोशिकाओं की भित्ति पर सुबेरिन (suberin) का जमाव होता है जो जल व रोगाणुओं हेतु अपारगम्य है, जबकि वातछिद्र (lenticels) नामक छिद्र गैसीय विनिमय हेतु मार्ग प्रदान करते हैं।', isCorrect: true },
+          { en: 'Cork is composed of porous collenchyma that dissolves during rain.', hi: 'कॉर्क छिद्रयुक्त कोलेन्काइमा का बना होता है जो बारिश में घुल जाता है।', isCorrect: false },
+          { en: 'Cuticle layers open and close like miniature stomata along the whole trunk surface.', hi: 'क्यूटिकल की परतें पूरे तने पर छोटे रंध्रों की तरह खुलती और बंद होती हैं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.2.4: Cork cells are compactly arranged without intercellular spaces and become dead at maturity. Their walls contain suberin, a waxy hydrophobic substance that makes them impervious to gases and water, protecting internal tissues against desiccation, mechanical injury, and infection. Specialized aerating breaks called lenticels permit requisite respiratory gas exchange.',
+        expHi: 'कॉर्क कोशिकाएं मृत और बिना अंतःकोशिकीय स्थान के सटी होती हैं। इनकी भित्तियों पर सुबेरिन नामक रसायन जमा होता है जो जल और गैसों को रोकता है। आंतरिक जीवित कोशिकाओं के श्वसन हेतु छाल में वातछिद्र (lenticels) उपस्थित होते हैं।'
+      },
+      {
+        id: 9,
+        category: 'epithelial',
+        topic: 'Epithelial Diffusion Barrier (Exercise Q3 & Q6A)',
+        qEn: 'Why are the epithelial tissues lining pulmonary alveoli and capillary walls composed strictly of simple squamous epithelium rather than stratified or columnar epithelium (Q3 & Q6A)?',
+        qHi: 'फेफड़ों की वायु-कूपिकाओं (alveoli) तथा रक्त वाहिकाओं की आंतरिक परत बहुस्तरीय या स्तंभाकार उपकला के बजाय केवल सरल शल्की उपकला (simple squamous epithelium) की ही क्यों बनी होती है (प्रश्न 3 व 6A)?',
+        options: [
+          { en: 'Stratified layers secrete excessive mucus that neutralizes inhaled carbon dioxide.', hi: 'बहुस्तरीय उपकला अत्यधिक श्लेष्मा स्रावित करती है जो कार्बन डाइऑक्साइड को निष्प्रभावी कर देती है।', isCorrect: false },
+          { en: 'Simple squamous cells consist of a single layer of extremely thin, flattened polygonal plates, minimizing the diffusion distance to ensure rapid Fickian exchange of O2 and CO2 across the respiratory membrane.', hi: 'सरल शल्की उपकला अत्यधिक पतली, चपटी कोशिकाओं की एकल परत होती है, जो विसरण दूरी को न्यूनतम कर O2 और CO2 के तीव्र गैसीय विनिमय को सुगम बनाती है।', isCorrect: true },
+          { en: 'Simple squamous epithelium has high glycogen storage capacity for lung inflation.', hi: 'सरल शल्की उपकला में फेफड़ों को फुलाने हेतु उच्च ग्लाइकोजन संचय क्षमता होती है।', isCorrect: false },
+          { en: 'Thick columnar cells would burst under normal pulmonary blood pressure.', hi: 'मोटी स्तंभाकार कोशिकाएँ सामान्य फुफ्फुसीय रक्तचाप में फट जाएँगी।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.3.1, Exercise Q3 & Q6A: Gas diffusion rate is inversely proportional to barrier thickness (Fick\'s First Law). Simple squamous epithelium provides a razor-thin lining (<0.5 μm with basement membrane), allowing passive diffusion of oxygen and carbon dioxide within milliseconds. Stratified or tall columnar cells would impose an insurmountable diffusion barrier.',
+        expHi: 'विसरण की दर झिल्ली की मोटाई के व्युत्क्रमानुपाती होती है। सरल शल्की उपकला अत्यंत पतली और चपटी होती है, जिससे गैसों (ऑक्सीजन व CO2) का विसरण अत्यंत सुगमता और तीव्रता से होता है। बहुस्तरीय उपकला विसरण को धीमा कर देगी।'
+      },
+      {
+        id: 10,
+        category: 'epithelial',
+        topic: 'Bone vs Cartilage Matrix (Activity 3.3 & Table 3.4)',
+        qEn: 'Contrasting your physical experiences with the elbow joint and ear pinna (Activity 3.3 / Table 3.4), what fundamental biochemical difference distinguishes bone matrix from cartilage matrix?',
+        qHi: 'कोहनी की कठोरता और कान के बाहरी सिरे (pinna) के लचीलेपन की तुलना करते हुए (क्रियाकलाप 3.3 / तालिका 3.4), अस्थि (Bone) और उपास्थि (Cartilage) के आधात्री (matrix) में मुख्य जैव-रासायनिक अंतर क्या है?',
+        options: [
+          { en: 'Bone matrix is non-vascularized and purely lipidic, while cartilage is rich in hemoglobin.', hi: 'अस्थि आधात्री संवहनहीन व शुद्ध वसीय होती है, जबकि उपास्थि में हीमोग्लोबिन प्रचुर होता है।', isCorrect: false },
+          { en: 'Bone matrix is impregnated with mineralized calcium and phosphorus salts providing rigid compressive hardness, whereas cartilage matrix consists of chondroitin sulfate proteins and sugars providing cushioning elasticity.', hi: 'अस्थि आधात्री में कैल्शियम व फास्फोरस के खनिज लवण होते हैं जो इसे कठोरता व मजबूती देते हैं, जबकि उपास्थि आधात्री में प्रोटीन व शर्करा (कॉन्ड्रोइटिन सल्फेट) होते हैं जो इसे लचीलापन और झटका सहने की क्षमता देते हैं।', isCorrect: true },
+          { en: 'Bone contains dead osteocytes without nuclei, while cartilage cells constantly divide by meiosis.', hi: 'अस्थि में मृत कोशिकाएं होती हैं, जबकि उपास्थि कोशिकाएं अर्धसूत्री विभाजन करती हैं।', isCorrect: false },
+          { en: 'Cartilage is reinforced with keratin while bone is reinforced with cellulose.', hi: 'उपास्थि किरेटिन से मजबूत होती है जबकि अस्थि सेल्यूलोस से।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.3.2 & Table 3.4: Bone is a strong, non-flexible connective tissue embedded in a hard matrix of calcium phosphate and carbonate compounds. Cartilage has widely spaced chondrocyte cells in a solid yet pliable matrix composed of proteins and chondroitin sugars, cushioning joint surfaces and maintaining structural shape (ear pinna, nose tip, trachea).',
+        expHi: 'अस्थि का मैट्रिक्स कैल्शियम और फास्फोरस के यौगिकों से बना अत्यंत कठोर व अप्रत्यास्थ होता है। उपास्थि का मैट्रिक्स प्रोटीन और शर्करा से बना अर्ध-ठोस व लचीला होता है, जो जोड़ों पर झटकों को अवशोषित करता है।'
+      },
+      {
+        id: 11,
+        category: 'epithelial',
+        topic: 'Ligament vs Tendon Strain Mechanics',
+        qEn: 'During a sports sprint, an athlete experiences a severe ankle roll. The doctor diagnoses a ligament rupture rather than a tendon tear (Table 3.4 & Journey Beyond). Which functional connection was injured, and why is recovery prolonged?',
+        qHi: 'खेल के दौरान धावक का टखना मुड़ जाता है और डॉक्टर टेंडन के बजाय लिगामेंट फटने (rupture) का निदान करते हैं (तालिका 3.4 व आगे की यात्रा)। कौन सा कार्यात्मक जोड़ क्षतिग्रस्त हुआ है, और इसके ठीक होने में अधिक समय क्यों लगता है?',
+        options: [
+          { en: 'A tendon connects muscle to bone and has no blood supply.', hi: 'टेंडन पेशी को अस्थि से जोड़ता है और इसमें कोई रक्त प्रवाह नहीं होता।', isCorrect: false },
+          { en: 'Ligaments connect bone to bone to stabilize joints and limit excessive displacement; they have high elasticity but very sparse direct vascularity, resulting in slow fibroblastic collagen remodeling.', hi: 'लिगामेंट अस्थि को अस्थि से जोड़ते हैं जो जोड़ों को स्थिरता देते हैं; इनमें प्रत्यास्थता अधिक होती है परंतु रक्त संचार अत्यंत कम होने के कारण इनके ऊतक पुनर्निर्माण में अधिक समय लगता है।', isCorrect: true },
+          { en: 'Ligaments are voluntary muscles that must be re-educated by nervous impulses.', hi: 'लिगामेंट ऐच्छिक पेशियां हैं जिन्हें तंत्रिका संकेतों द्वारा पुनः प्रशिक्षित करना होता है।', isCorrect: false },
+          { en: 'Ligaments dissolve completely upon mechanical strain into synovial fluid.', hi: 'खिंचाव आने पर लिगामेंट पूरी तरह साइनोवियल द्रव में घुल जाते हैं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.3.2, Table 3.4 & "The Journey Beyond": Tendons connect skeletal muscle to bone, transmitting tensile force with high strength and limited flexibility. Ligaments connect bone to bone across joints, containing elastic fibers with little matrix to restrict abnormal joint excursions. Because ligaments have poor direct blood supply, cellular repair and collagen synthesis take substantially longer than vascularized skeletal fractures.',
+        expHi: 'लिगामेंट दो अस्थियों को आपस में जोड़ते हैं और जोड़ों को स्थिरता प्रदान करते हैं। इनमें रक्त वाहिकाओं का संचरण बहुत कम होने के कारण पोषक तत्व व कोशिकाएं धीमी गति से पहुंचती हैं, जिससे लिगामेंट की चोट ठीक होने में लंबा समय लगता है।'
+      },
+      {
+        id: 12,
+        category: 'musculo',
+        topic: 'Cardiac Muscle Resistance to Fatigue (Exercise Q6B)',
+        qEn: 'Cardiac muscle tissue beats rhythmically over 3 billion times in a human lifespan without ever stopping or suffering muscle cramps (Exercise Q6B). What cytological adaptations account for this ceaseless activity?',
+        qHi: 'हृदय पेशी ऊतक (cardiac muscle) मानव जीवन काल में बिना थके या ऐंठन के 3 अरब से अधिक बार धड़कता है (प्रश्न 6B)। इस निरंतर कार्यप्रणाली के लिए कौन से कोशिकीय अनुकूलन उत्तरदायी हैं?',
+        options: [
+          { en: 'Cardiac cells undergo continuous anaerobic glycolysis that generates protective lactic acid buffers.', hi: 'हृदय कोशिकाएं निरंतर अवायवीय श्वसन करती हैं जो लैक्टिक एसिड बफर बनाता है।', isCorrect: false },
+          { en: 'Cardiac muscle cells possess an exceptionally high density of mitochondria (~40% of cell volume), abundant coronary capillary perfusion for uninterrupted aerobic ATP generation, and intercalated discs with gap junctions for synchronized contraction.', hi: 'हृदय पेशी कोशिकाओं में माइटोकॉन्ड्रिया की अत्यधिक सघनता (कोशिका आयतन का ~40%), निरंतर एरोबिक ATP हेतु प्रचुर रक्त आपूर्ति तथा तालमेल युक्त संकुचन हेतु अंतर्विष्ट पट्टियाँ (intercalated discs) होती हैं।', isCorrect: true },
+          { en: 'They lack contractile actin and myosin filaments, relying instead on hydrostatic lymph pressure.', hi: 'इनमें संकुचनशील एक्टिन व मायोसिन नहीं होते, बल्कि ये लसिका दाब पर कार्य करती हैं।', isCorrect: false },
+          { en: 'Cardiac cells are multinucleate syncytia that sleep in alternating 12-hour shifts.', hi: 'हृदय कोशिकाएँ बहुकेंद्रकी होती हैं जो 12-12 घंटे की बारी-बारी से नींद लेती हैं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.3.3 & Exercise Q6B: Skeletal muscle fatigues because glycogen stores deplete and lactic acid accumulates during anaerobic effort. Cardiac muscle cells are branched, uninucleate, interconnected by intercalated discs, and strictly aerobic: packed with mitochondria and fed by dense coronary capillaries, ensuring continuous ATP production without accumulating lactic acid.',
+        expHi: 'कंकाल पेशियों में अवायवीय श्वसन से लैक्टिक अम्ल जमा होने पर थकान होती है। हृदय पेशी में माइटोकॉन्ड्रिया की प्रचुर संख्या और सघन रक्त आपूर्ति होती है, जिससे यह पूर्णतः वायवीय (aerobic) श्वसन द्वारा ऊर्जा बनाती है और बिना थके जीवनपर्यंत धड़कती रहती है।'
+      },
+      {
+        id: 13,
+        category: 'musculo',
+        topic: 'Neuron Structure & Impulse Propagation',
+        qEn: 'In nervous tissue (Sec 3.3.4), what is the correct anatomical sequence of nerve impulse conduction through a neuron, and what functional advantage does the myelin sheath confer?',
+        qHi: 'तंत्रिका ऊतक (खंड 3.3.4) में, एक न्यूरॉन के माध्यम से तंत्रिका आवेग (nerve impulse) के संचरण का सही शारीरिक क्रम क्या है, तथा माइलिन आवरण (myelin sheath) का क्या कार्यात्मक लाभ है?',
+        options: [
+          { en: 'Axon terminal -> Axon -> Cyton -> Dendrite; myelin slows impulses to prevent electrical overheating.', hi: 'एक्सॉन सिरा -> एक्सॉन -> कोशिकाकाय -> द्रुमाक्ष्य; माइलिन आवेग को धीमा करता है ताकि गर्मी न बढ़े।', isCorrect: false },
+          { en: 'Dendrite -> Cyton (cell body) -> Axon -> Axon terminal; the lipid-rich myelin sheath acts as an electrical insulator, forcing the impulse to jump across Nodes of Ranvier via rapid saltatory conduction.', hi: 'द्रुमाक्ष्य (Dendrite) -> कोशिकाकाय (Cyton) -> तंत्रिकाक्ष (Axon) -> तंत्रिका सिरा; लिपिड युक्त माइलिन आवरण विद्युत रोधक का कार्य करता है, जिससे आवेग तीव्र गति से छलांग लगाते हुए (saltatory) संचरित होता है।', isCorrect: true },
+          { en: 'Cyton -> Dendrite -> Synapse -> Axon; myelin stores memory proteins.', hi: 'कोशिकाकाय -> द्रुमाक्ष्य -> सिनेप्स -> एक्सॉन; माइलिन स्मृति प्रोटीन संचित करता है।', isCorrect: false },
+          { en: 'Axon -> Nucleus -> Mitochondria -> Dendrite; myelin generates neurotransmitters.', hi: 'एक्सॉन -> केंद्रक -> माइटोकॉन्ड्रिया -> द्रुमाक्ष्य; माइलिन न्यूरोट्रांसमीटर बनाता है।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.3.4: A neuron receives stimuli at its branched dendrites, relays the electrical depolarization through the cell body (cyton/soma), and propagates the action potential down the elongated axon to the terminal end arborization. The insulating myelin sheath accelerates conduction velocity over 50-fold by allowing ions to cross only at unmyelinated Nodes of Ranvier.',
+        expHi: 'तंत्रिका आवेग सबसे पहले द्रुमाक्ष्य (dendrite) द्वारा ग्रहण किया जाता है, फिर कोशिकाकाय (cyton) से होते हुए लंबे तंत्रिकाक्ष (axon) के अंतिम सिरे तक पहुँचता है। माइलिन आवरण विद्युत रोधन प्रदान कर संकेत संचरण की गति को कई गुना बढ़ा देता है।'
+      },
+      {
+        id: 14,
+        category: 'musculo',
+        topic: 'Adipose Tissue Thermoregulation',
+        qEn: 'Whales, seals, and polar bears survive in freezing sub-zero arctic waters without hypothermia due to a thick subcutaneous layer of blubber. Which animal tissue constitutes blubber, and what dual biological functions does it fulfill?',
+        qHi: 'व्हेल, सील और ध्रुवीय भालू अत्यधिक ठंडे आर्कटिक जल में बिना हाइपोथर्मिया के जीवित रहते हैं क्योंकि उनकी त्वचा के नीचे "ब्लबर" की मोटी परत होती है। ब्लबर किस जंतु ऊतक से बना है, और इसके दो मुख्य कार्य क्या हैं?',
+        options: [
+          { en: 'Areolar connective tissue acting as a water reservoir and shock absorber.', hi: 'एरिओलर ऊतक जो जल संचय व आघात अवशोषक का कार्य करता है।', isCorrect: false },
+          { en: 'Adipose connective tissue whose adipocytes store lipid globules, serving simultaneously as a major metabolic energy reserve and an exceptional thermal insulator against heat loss.', hi: 'वसीय संयोजी ऊतक (Adipose tissue) जिसकी कोशिकाएं वसा कणिकाओं का संचय करती हैं, जो दीर्घकालिक ऊर्जा भंडार तथा शरीर की ऊष्मा हानि रोकने वाले उत्कृष्ट ऊष्मारोधी (thermal insulator) का कार्य करती हैं।', isCorrect: true },
+          { en: 'Stratified keratinized epidermis providing waterproof shielding against ice crystals.', hi: 'बहुस्तरीय शल्की बाह्यत्वचा जो बर्फ के कणों से सुरक्षा देती है।', isCorrect: false },
+          { en: 'Striated skeletal muscle undergoing continuous shivering micro-contractions.', hi: 'कंकाल पेशी ऊतक जो निरंतर सूक्ष्म कंपन (shivering) करता रहता है।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.3.2: Adipose tissue is situated below the skin (subcutaneous) and between internal organs. Its cells (adipocytes) are filled with fat globules. Because stored triglycerides have extremely low thermal conductivity, adipose acts as an insulator preventing body heat dissipation, while storing twice as much metabolic ATP energy per gram as carbohydrates.',
+        expHi: 'वसीय ऊतक (Adipose tissue) त्वचा के नीचे और आंतरिक अंगों के बीच पाया जाता है। इसकी कोशिकाओं में वसा की बूँदें भरी होती हैं। वसा ऊष्मा की कुचालक होती है, इसलिए यह आंतरिक गर्मी को बाहर जाने से रोककर ऊष्मारोधी का कार्य करती है तथा ऊर्जा संचित रखती है।'
+      },
+      {
+        id: 15,
+        category: 'musculo',
+        topic: 'Blood Centrifugation Partitioning (Fig. 3.12a)',
+        qEn: 'When fresh anticoagulated blood is centrifuged in a hematocrit tube (Fig. 3.12a), it partitions into three distinct fractions. Which statement accurately describes the relative volume and content of these layers?',
+        qHi: 'जब थक्कारोधी मिले रक्त को सेंट्रीफ्यूज किया जाता है (चित्र 3.12a), तो यह तीन अलग परतों में विभाजित हो जाता है। इन परतों के आयतन और घटकों का सही वर्णन कौन सा है?',
+        options: [
+          { en: 'Top 55% is liquid Plasma containing proteins and dissolved nutrients; the thin middle "buffy coat" (<1%) contains WBCs and Platelets; the bottom ~45% pellet contains dense Red Blood Cells (RBCs).', hi: 'शीर्ष 55% द्रव प्लाज्मा है जिसमें प्रोटीन व पोषक तत्व होते हैं; पतली मध्य \'बफी कोट\' (<1%) में WBC और प्लेटलेट्स होते हैं; निचली ~45% परत में सघन लाल रक्त कोशिकाएँ (RBC) होती हैं।', isCorrect: true },
+          { en: 'Top layer is pure hemoglobin; middle layer is plasma; bottom layer is white blood cells.', hi: 'शीर्ष परत शुद्ध हीमोग्लोबिन है; मध्य परत प्लाज्मा है; निचली परत श्वेत रक्त कोशिकाएं हैं।', isCorrect: false },
+          { en: 'RBCs float on top because their iron content makes them lighter than water.', hi: 'RBC तैरकर ऊपर आ जाती हैं क्योंकि उनका लोहा पानी से हल्का होता है।', isCorrect: false },
+          { en: 'Blood separates into 90% formed elements and 10% water.', hi: 'रक्त 90% ठोस कोशिकाओं और 10% जल में विभाजित होता है।', isCorrect: false }
+        ],
+        expEn: 'Textbook Fig. 3.12a: Blood is a fluid connective tissue composed of 55% fluid matrix (plasma) and 45% formed elements. Upon centrifugation, high-density erythrocytes (RBCs with hemoglobin) settle to the bottom (~45%), leukocytes (WBCs) and thrombocytes (platelets) form a thin grayish-white intermediate "buffy coat", and yellowish liquid plasma floats on top.',
+        expHi: 'रक्त में 55% प्लाज्मा और 45% संगठित तत्व (कोशिकाएं) होते हैं। सेंट्रीफ्यूज करने पर भारी लाल रक्त कोशिकाएं (RBC) सबसे नीचे बैठ जाती हैं, बीच में WBC व प्लेटलेट्स की पतली \'बफी कोट\' बनती है, और हल्का प्लाज्मा सबसे ऊपर रहता है।'
+      },
+      {
+        id: 16,
+        category: 'musculo',
+        topic: 'Joint Biomechanics & Impulse (Fig. 3.21 / Q4)',
+        qEn: 'In the jump investigation (Fig. 3.21 / Exercise Q4), landing from a straight-leg jump creates severe jarring impact forces on articular cartilage and vertebrae, whereas landing with bent knees feels smooth. What biomechanical law explains this?',
+        qHi: 'कूद के परीक्षण (चित्र 3.21 / प्रश्न 4) में, सीधे घुटनों के बल कूदने (straight-leg jump) पर रीढ़ और उपास्थि पर भीषण झटका लगता है, जबकि घुटने मोड़कर कूदने पर झटका नहीं लगता। कौन सा जैव-यांत्रिकीय नियम इसे समझाता है?',
+        options: [
+          { en: 'Straight knees decrease the gravitational acceleration g of the Earth.', hi: 'सीधे घुटने पृथ्वी के गुरुत्वीय त्वरण g को कम कर देते हैं।', isCorrect: false },
+          { en: 'Bending the knees (hinge joints) and ankles extends the deceleration time interval (Δt) during landing; by Newton\'s second law (F = Δp / Δt), increasing impact time drastically reduces peak impulse impact force transmitted through bones.', hi: 'घुटनों (कब्जा संधि) और टखनों को मोड़ने से रुकने का समय (Δt) बढ़ जाता है; न्यूटन के द्वितीय नियम (F = Δp / Δt) के अनुसार, समय बढ़ने से हड्डियों और जोड़ों पर लगने वाला आघात बल (force) अत्यधिक घट जाता है।', isCorrect: true },
+          { en: 'Synovial fluid evaporates when knees are bent.', hi: 'घुटने मोड़ने पर साइनोवियल द्रव वाष्पीकृत हो जाता है।', isCorrect: false },
+          { en: 'Knee flexion converts cartilage instantly into spongy bone.', hi: 'घुटना मुड़ने से उपास्थि तुरंत स्पंजी अस्थि में बदल जाती है।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.4.1 & Exercise Q4: When knees are kept rigid, impact deceleration occurs in a few milliseconds, subjecting the articular cartilage of knee and hip hinge/ball-and-socket joints to massive peak forces. Flexing knees activates the quadriceps tendon eccentrically, lengthening the deceleration duration (Δt) and absorbing the momentum change smoothly.',
+        expHi: 'जब हम घुटने मोड़कर उतरते हैं, तो शरीर के संवेग परिवर्तन का समय (Δt) बढ़ जाता है। न्यूटन के गति के दूसरे नियम (F = Δp / Δt) के अनुसार समय बढ़ने से जोड़ों और रीढ़ पर लगने वाला झटका (आघात बल) बहुत कम हो जाता है।'
+      },
+      {
+        id: 17,
+        category: 'assertion',
+        topic: 'Assertion-Reason: Alveolar Gas Exchange (Q6A)',
+        qEn: 'Evaluate the Assertion (A) and Reason (R) based on Exercise Question 6A:\nAssertion (A): Simple squamous epithelium is ideally suited for gas exchange in the alveoli of lungs.\nReason (R): It consists of multiple layers of tall columnar cells that slow down diffusion.',
+        qHi: 'अभ्यास प्रश्न 6A के आधार पर अभिकथन (A) और कारण (R) का मूल्यांकन कीजिए:\nअभिकथन (A): सरल शल्की उपकला फेफड़ों की वायु-कूपिकाओं में गैस विनिमय के लिए सर्वथा उपयुक्त है।\nकारण (R): इसमें लंबी स्तंभाकार कोशिकाओं की कई परतें होती हैं जो विसरण को धीमा करती हैं।',
+        options: [
+          { en: 'Both (A) and (R) are true, and (R) is the correct explanation of (A).', hi: 'दोनों (A) और (R) सत्य हैं, और (R), (A) की सही व्याख्या है।', isCorrect: false },
+          { en: 'Both (A) and (R) are true, but (R) is not the correct explanation of (A).', hi: 'दोनों (A) और (R) सत्य हैं, परंतु (R), (A) की सही व्याख्या नहीं है।', isCorrect: false },
+          { en: '(A) is true, but (R) is false.', hi: '(A) सत्य है, परंतु (R) असत्य है।', isCorrect: true },
+          { en: '(A) is false, but (R) is true.', hi: '(A) असत्य है, परंतु (R) सत्य है।', isCorrect: false }
+        ],
+        expEn: 'Textbook Exercise Q6A: Assertion (A) is TRUE: simple squamous epithelium is single-layered and extremely flat, facilitating rapid oxygen and carbon dioxide diffusion across alveolar walls. Reason (R) is FALSE: it consists of a single delicate layer of thin flat cells, NOT multiple layers of tall columnar cells.',
+        expHi: 'अभिकथन (A) सत्य है: सरल शल्की उपकला फेफड़ों में तीव्र गैसीय विनिमय हेतु आदर्श है। कारण (R) असत्य है: यह कोशिकाओं की एक पतली चपटी परत होती है, न कि कई परतों वाली स्तंभाकार उपकला।'
+      },
+      {
+        id: 18,
+        category: 'assertion',
+        topic: 'Assertion-Reason: Tendon Function (Q6C)',
+        qEn: 'Evaluate the Assertion (A) and Reason (R) based on Exercise Question 6C:\nAssertion (A): Tendons connect bone to bone and allow joint movement.\nReason (R): Tendons are made of tough fibrous connective tissue that transmits force from muscle to bone.',
+        qHi: 'अभ्यास प्रश्न 6C के आधार पर अभिकथन (A) और कारण (R) का मूल्यांकन कीजिए:\nअभिकथन (A): टेंडन अस्थि को अस्थि से जोड़ते हैं और जोड़ों को गति देते हैं।\nकारण (R): टेंडन मजबूत रेशेदार संयोजी ऊतक के बने होते हैं जो पेशी के बल को अस्थि तक संचरित करते हैं।',
+        options: [
+          { en: 'Both (A) and (R) are true, and (R) is the correct explanation of (A).', hi: 'दोनों (A) और (R) सत्य हैं, और (R), (A) की सही व्याख्या है।', isCorrect: false },
+          { en: '(A) is false, but (R) is true.', hi: '(A) असत्य है, परंतु (R) सत्य है।', isCorrect: true },
+          { en: '(A) is true, but (R) is false.', hi: '(A) सत्य है, परंतु (R) असत्य है।', isCorrect: false },
+          { en: 'Both (A) and (R) are false.', hi: 'दोनों (A) और (R) असत्य हैं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Exercise Q6C: Assertion (A) is FALSE: Ligaments connect bone to bone, whereas Tendons connect muscle to bone. Reason (R) is TRUE: Tendons are dense fibrous connective tissues with high tensile strength that transmit muscular contractile forces to bones to produce movement.',
+        expHi: 'अभिकथन (A) असत्य है क्योंकि अस्थि को अस्थि से लिगामेंट जोड़ते हैं, टेंडन नहीं। कारण (R) सत्य है क्योंकि टेंडन मजबूत रेशेदार ऊतक होते हैं जो पेशियों के संकुचन बल को हड्डियों तक पहुँचाकर गति उत्पन्न करते हैं।'
+      },
+      {
+        id: 19,
+        category: 'assertion',
+        topic: 'Plant Tissue Culture & Totipotency (Table 3.6)',
+        qEn: 'In plant tissue culture (Table 3.6), an undifferentiated callus formed from a leaf explant can regenerate into whole fertile plants under controlled hormones. Why is this whole-organism regeneration from somatic cells routine in plants but extremely restricted in adult mammals?',
+        qHi: 'पादप ऊतक संवर्धन (तालिका 3.6) में, पत्ती के टुकड़े से बना अविभेदित कैलस (callus) पूरे पौधे में विकसित हो सकता है। यह पूर्ण पुनर्जनन पौधों की कायिक कोशिकाओं में तो सामान्य है परंतु वयस्क स्तनधारियों में अत्यंत सीमित क्यों है?',
+        options: [
+          { en: 'Plant parenchyma cells retain cellular totipotency and can de-differentiate back into meristematic activity, whereas differentiated adult animal cells undergo irreversible epigenetic lineage commitment.', hi: 'पादप पैरेन्काइमा कोशिकाएँ पूर्णशक्तता (totipotency) बनाए रखती हैं और पुनः विभज्योतक बन सकती हैं, जबकि वयस्क जंतु कोशिकाएँ अपरिवर्तनीय रूप से विशिष्ट हो जाती हैं।', isCorrect: true },
+          { en: 'Animal cells lack DNA in their differentiated somatic states.', hi: 'जंतु कोशिकाओं में विभेदन के बाद DNA समाप्त हो जाता है।', isCorrect: false },
+          { en: 'Plant cells absorb chloroplasts from air to form new organs.', hi: 'पौधे की कोशिकाएँ हवा से क्लोरोप्लास्ट अवशोषित करके नए अंग बना लेती हैं।', isCorrect: false },
+          { en: 'Animal cells cannot divide in artificial Petri dish media.', hi: 'जंतु कोशिकाएं कृत्रिम पेट्री डिश में विभाजित नहीं हो सकतीं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Table 3.6 & "The Quest Continues": Plant cells exhibit totipotency: mature living cells like parenchyma can de-differentiate into meristematic callus and re-differentiate into xylem, phloem, roots, and shoots under auxin/cytokinin regulation. In adult animals, cellular differentiation involves permanent chromatin silencing and nuclear reprogramming barriers.',
+        expHi: 'पौधों की जीवित कोशिकाएं पूर्णशक्त (totipotent) होती हैं, अर्थात वे दोबारा विभाजित होकर पूरा नया पौधा बना सकती हैं। इसके विपरीत वयस्क जंतुओं की विभेदित कोशिकाएं अपनी मूल पहचान को नहीं बदल सकतीं।'
+      },
+      {
+        id: 20,
+        category: 'assertion',
+        topic: 'Ciliated Epithelium & Smoker\'s Cough',
+        qEn: 'Long-term cigarette smokers frequently suffer from chronic early morning coughing ("smoker\'s cough"). Which respiratory epithelial specialization is paralyzed by toxic smoke constituents, necessitating mechanical coughing for clearance?',
+        qHi: 'धूम्रपान करने वाले व्यक्तियों को अक्सर सुबह के समय पुरानी खाँसी (\'smoker\'s cough\') होती है। जहरीले धुएं से श्वसन उपकला की कौन सी विशिष्ट संरचना पंगु (paralyzed) हो जाती है, जिससे फेफड़ों को साफ करने हेतु खाँसना ही एकमात्र उपाय रह जाता है?',
+        options: [
+          { en: 'Villi of cuboidal nephron epithelium.', hi: 'वृक्क की घनाकार उपकला के विलाई।', isCorrect: false },
+          { en: 'Hair-like cilia on ciliated columnar epithelium lining the respiratory tract are immobilized, stopping the rhythmic mucociliary escalator from sweeping trapped particulates and mucus upward.', hi: 'श्वसन मार्ग की पक्ष्माभी स्तंभाकार उपकला (ciliated columnar epithelium) पर उपस्थित पक्ष्माभ (cilia) गतिहीन हो जाते हैं, जिससे धूल और श्लेष्मा को बाहर धकेलने वाली प्रणाली रुक जाती है।', isCorrect: true },
+          { en: 'Stratified squamous cells shed excessively into the bronchi.', hi: 'बहुस्तरीय शल्की कोशिकाएं अत्यधिक मात्रा में श्वसनी में झड़ने लगती हैं।', isCorrect: false },
+          { en: 'Smooth muscle cells transform permanently into cardiac cells.', hi: 'चिकनी पेशी कोशिकाएं स्थायी रूप से हृदय पेशियों में बदल जाती हैं।', isCorrect: false }
+        ],
+        expEn: 'Textbook Sec 3.3.1 (Table 3.2): The respiratory tract is lined by ciliated columnar epithelium. Rhythmic beating of cilia pushes mucus loaded with trapped dust and microbes towards the pharynx. Toxic components in smoke paralyze and destroy cilia. Mucus pools in airways overnight, and the body can only expel it by forceful spasmodic coughing.',
+        expHi: 'श्वासनली की भीतरी सतह पर पक्ष्माभी स्तंभाकार उपकला (ciliated columnar epithelium) होती है जिसके बारीक रोम (cilia) श्लेष्मा को बाहर धकेलते हैं। धुएँ से ये पक्ष्माभ निष्क्रिय हो जाते हैं, जिससे बलगम फेफड़ों में जमा हो जाता है और केवल खाँसकर ही बाहर निकाला जा सकता है।'
+      }
+    ];
+
+    // State Variables
+    let currentQuestions = [];
+    let userAnswers = {};
+    let currentFilter = 'all';
+    let currentLang = 'bilingual';
+    let currentTheme = localStorage.getItem('nextsem_theme') || 'dark';
+
+    // Theme Management
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeUI();
+
+    function toggleTheme() {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('nextsem_theme', currentTheme);
+      updateThemeUI();
+    }
+
+    function updateThemeUI() {
+      const isDark = currentTheme === 'dark';
+      const label = isDark ? 'Dark' : 'Light';
+      const icon = isDark ? '🌙' : '☀️';
+      document.getElementById('theme-label').textContent = label;
+      document.getElementById('theme-toggle-btn').innerHTML = `${icon} <span id="theme-label">${label}</span>`;
+      document.getElementById('bottom-theme-icon').textContent = `${icon} ${label}`;
+    }
+
+    // Language Toggle
+    function cycleLanguage() {
+      if (currentLang === 'bilingual') {
+        currentLang = 'en';
+        document.body.className = 'lang-en-only';
+        document.getElementById('lang-label').textContent = 'English Only';
+      } else if (currentLang === 'en') {
+        currentLang = 'hi';
+        document.body.className = 'lang-hi-only';
+        document.getElementById('lang-label').textContent = 'हिंदी केवल';
+      } else {
+        currentLang = 'bilingual';
+        document.body.className = '';
+        document.getElementById('lang-label').textContent = 'Bilingual (English / हिंदी)';
+      }
+    }
+
+    // Shuffle Array Utility (Fisher-Yates)
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    // Initialize Questions with Randomized Option Order
+    function initQuestions(shuffle = true) {
+      currentQuestions = RAW_MCQ_DATA.map(q => {
+        const shuffledOpts = shuffle ? shuffleArray(q.options) : [...q.options];
+        const correctIndex = shuffledOpts.findIndex(opt => opt.isCorrect);
+        return {
+          ...q,
+          options: shuffledOpts,
+          correct: correctIndex
+        };
+      });
+      userAnswers = {};
+      renderMcqs();
+    }
+
+    function shuffleAllOptions() {
+      initQuestions(true);
+      triggerConfettiMini();
+    }
+
+    // Render MCQs
+    function renderMcqs() {
+      const container = document.getElementById('mcq-container');
+      container.innerHTML = '';
+
+      currentQuestions.forEach((q, idx) => {
+        const isVisible = currentFilter === 'all' || q.category === currentFilter;
+        if (!isVisible) return;
+
+        const card = document.createElement('article');
+        card.className = 'mcq-card';
+        card.id = `mcq-card-${q.id}`;
+
+        const answered = userAnswers[q.id];
+        if (answered !== undefined) {
+          card.classList.add(answered === q.correct ? 'answered-correct' : 'answered-wrong');
+        }
+
+        const letters = ['A', 'B', 'C', 'D'];
+
+        const optionsHtml = q.options.map((opt, optIdx) => {
+          let extraClasses = '';
+          if (answered !== undefined) {
+            if (optIdx === q.correct) {
+              extraClasses = (answered === q.correct) ? 'opt-correct' : 'opt-revealed-correct';
+            } else if (optIdx === answered) {
+              extraClasses = 'opt-wrong';
+            }
+          }
+          const disabledAttr = answered !== undefined ? 'disabled' : '';
+
+          return `
+            <button 
+              type="button" 
+              class="option-btn ${extraClasses}" 
+              onclick="handleOptionClick(${q.id}, ${optIdx})"
+              ${disabledAttr}
+            >
+              <span class="opt-letter">${letters[optIdx]}</span>
+              <div class="opt-content">
+                <span class="opt-en">${opt.en}</span>
+                <span class="opt-hi">${opt.hi}</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+
+        const solutionShown = answered !== undefined ? 'show' : '';
+
+        card.innerHTML = `
+          <div class="mcq-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="mcq-qnum-badge">Q${q.id} / 20</span>
+              <span class="difficulty-badge">DIFFICULT • HOTS</span>
+            </div>
+            <span class="mcq-topic-tag">${q.topic}</span>
+          </div>
+          <div class="mcq-question-text">${q.qEn}</div>
+          <div class="mcq-question-text-hi">${q.qHi}</div>
+          <div class="options-grid">
+            ${optionsHtml}
+          </div>
+          <div class="solution-box ${solutionShown}" id="sol-${q.id}">
+            <div class="solution-title">
+              <span>🔬 Detailed NCERT Scientific Explanation:</span>
+            </div>
+            <div class="solution-text">
+              <p style="margin-bottom: 6px;"><strong>English:</strong> ${q.expEn}</p>
+              <p style="color: var(--accent-cyan);"><strong>हिंदी:</strong> ${q.expHi}</p>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      updateScoreDashboard();
+    }
+
+    // Handle Option Selection
+    function handleOptionClick(qid, selectedIndex) {
+      if (userAnswers[qid] !== undefined) return;
+
+      userAnswers[qid] = selectedIndex;
+      const question = currentQuestions.find(q => q.id === qid);
+      const isCorrect = (selectedIndex === question.correct);
+
+      if (isCorrect) {
+        triggerConfettiMini();
+      }
+
+      renderMcqs();
+
+      // Check for completion
+      const answeredCount = Object.keys(userAnswers).length;
+      if (answeredCount === 20) {
+        let correctCount = 0;
+        currentQuestions.forEach(q => {
+          if (userAnswers[q.id] === q.correct) correctCount++;
+        });
+        if (correctCount >= 14) {
+          triggerGrandConfetti();
+        }
+      }
+    }
+
+    function updateScoreDashboard() {
+      let correctCount = 0;
+      let totalAnswered = 0;
+
+      currentQuestions.forEach(q => {
+        if (userAnswers[q.id] !== undefined) {
+          totalAnswered++;
+          if (userAnswers[q.id] === q.correct) correctCount++;
+        }
+      });
+
+      const pct = Math.round((correctCount / 20) * 100);
+      document.getElementById('score-val').textContent = correctCount;
+      document.getElementById('score-pct').textContent = `${pct}% (${totalAnswered}/20 Answered)`;
+      document.getElementById('score-bar').style.width = `${pct}%`;
+      document.getElementById('bottom-score-text').textContent = `Answered: ${totalAnswered} / 20 • Score: ${correctCount} / 20 (${pct}%)`;
+    }
+
+    function filterQuestions(category, btn) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderMcqs();
+    }
+
+    function resetAllMcqs() {
+      if (confirm('Reset all your responses and start fresh?')) {
+        userAnswers = {};
+        renderMcqs();
+      }
+    }
+
+    function triggerConfettiMini() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 28,
+          spread: 55,
+          origin: { y: 0.8 },
+          colors: ['#10b981', '#38bdf8', '#f59e0b']
+        });
+      }
+    }
+
+    function triggerGrandConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 120,
+          spread: 100,
+          origin: { y: 0.5 },
+          colors: ['#10b981', '#38bdf8', '#f59e0b', '#a855f7']
+        });
+      }
+    }
+
+    // Initial Load with Shuffled Options
+    initQuestions(true);
+  </script>
+</body>
+</html>

@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIOS Class 12 Chemistry (313) - Guided Question Paper</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --secondary: #0d9488;
+      --secondary-light: #f0fdfa;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+      --hint-bg: #fffbeb;
+      --hint-border: #fde68a;
+      --hint-text: #92400e;
+      --teacher-bg: #f8fafc;
+      --teacher-border: #cbd5e1;
+      --student-bg: #fefce8;
+      --student-border: #fef08a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: #f3f4f6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 3px double var(--primary);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .header h2 {
+      font-size: 1.3rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .header .meta {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      padding-top: 0.5rem;
+    }
+
+    .instructions {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .instructions ul {
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .section-title {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .part-title {
+      background: var(--secondary);
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+    }
+
+    .question-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .question-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .q-number {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .q-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      margin-left: 0.5rem;
+    }
+
+    .badge-mcq {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .badge-subjective {
+      background: #f3e8ff;
+      color: #6b21a8;
+    }
+
+    .q-marks {
+      font-weight: 700;
+      color: #b91c1c;
+      font-size: 0.95rem;
+    }
+
+    .q-text {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+
+    .option-item {
+      background: #f9fafb;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.6rem 0.8rem;
+      font-weight: 500;
+    }
+
+    .hint-box {
+      background-color: var(--hint-bg);
+      border: 1px solid var(--hint-border);
+      border-left: 4px solid #f59e0b;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      color: var(--hint-text);
+    }
+
+    .hint-box strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #b45309;
+    }
+
+    .scaffold-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .teacher-box {
+      background: var(--teacher-bg);
+      border: 1px solid var(--teacher-border);
+      border-left: 4px solid #3b82f6;
+      border-radius: 6px;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .teacher-box h4 {
+      color: #1d4ed8;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .student-box {
+      background: #fafaf9;
+      border: 1.5px dashed #a8a29e;
+      border-left: 4px solid #10b981;
+      border-radius: 6px;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .student-box h4 {
+      color: #047857;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .blank-fill {
+      display: inline-block;
+      min-width: 120px;
+      border-bottom: 2px solid #6b7280;
+      margin: 0 4px;
+      text-align: center;
+      color: #6b7280;
+      font-weight: normal;
+    }
+
+    .chem-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+    }
+
+    .chem-table th, .chem-table td {
+      border: 1px solid #cbd5e1;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+
+    .chem-table th {
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    pre {
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 0.75rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .question-card {
+        break-inside: avoid;
+        border-color: #9ca3af;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>National Institute of Open Schooling (NIOS)</h1>
+    <h2>Senior Secondary Course (Class XII) &bull; Chemistry (313)</h2>
+    <p style="font-weight: 600; color: #4b5563;">SAMPLE QUESTION PAPER (LEARNING & PRACTICE EDITION)</p>
+    <div class="meta">
+      <span>Time: 3 Hours</span>
+      <span>Max Marks: 80</span>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <strong>Instructions & Guided Study Feature:</strong>
+    <ul>
+      <li><strong>Section A</strong> is compulsory for all candidates (Questions 1 to 20, 64 Marks).</li>
+      <li><strong>Section B</strong> contains two optional modules: <em>Part-I (Environmental Chemistry)</em> and <em>Part-II (Chemistry and Industry)</em>. Choose any <strong>ONE</strong> option (16 Marks).</li>
+      <li><strong>MCQ Questions:</strong> Formatted with 4 choices, an analytical hint, and the verified correct answer.</li>
+      <li><strong>Writing Questions:</strong> Formatted with a conceptual <strong>Hint</strong>, a <strong>Teacher's Part Answer (Foundation)</strong>, and a <strong>Student's Part (Guided Task)</strong> to complete.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION A -->
+  <div class="section-title">
+    <span>SECTION - A (Compulsory)</span>
+    <span>64 Marks</span>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 1</span>
+        <span class="q-badge badge-mcq">MCQ Type</span>
+      </div>
+      <span class="q-marks">[1 Mark]</span>
+    </div>
+    <div class="q-text">What is the molar mass of \(\text{NH}_3\)?</div>
+    <div class="options-grid">
+      <div class="option-item">(A) \(14\text{ g mol}^{-1}\)</div>
+      <div class="option-item">(B) \(15\text{ g mol}^{-1}\)</div>
+      <div class="option-item">(C) \(17\text{ g mol}^{-1}\)</div>
+      <div class="option-item">(D) \(28\text{ g mol}^{-1}\)</div>
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Add the standard molar atomic masses of constituent atoms: \(\text{N} = 14\text{ g mol}^{-1}\), \(\text{H} = 1\text{ g mol}^{-1}\).
+    </div>
+    <div class="teacher-box">
+      <h4>✍️ Solution & Verification:</h4>
+      \(\text{Molar mass} = 1 \times 14 + 3 \times 1 = 17\text{ g mol}^{-1}\). <strong>Correct Option: (C)</strong>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 2</span>
+        <span class="q-badge badge-mcq">MCQ Type</span>
+      </div>
+      <span class="q-marks">[1 Mark]</span>
+    </div>
+    <div class="q-text">A sample of nitrogen gas consists of \(4.63 \times 10^{22}\) nitrogen atoms. How many moles of \(\text{N}\) atoms are there?</div>
+    <div class="options-grid">
+      <div class="option-item">(A) \(0.0769\text{ mol}\)</div>
+      <div class="option-item">(B) \(0.769\text{ mol}\)</div>
+      <div class="option-item">(C) \(1.30\text{ mol}\)</div>
+      <div class="option-item">(D) \(7.69\text{ mol}\)</div>
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Use \(n = \frac{N}{N_A}\) where Avogadro constant \(N_A = 6.022 \times 10^{23}\text{ atoms mol}^{-1}\).
+    </div>
+    <div class="teacher-box">
+      <h4>✍️ Solution & Verification:</h4>
+      \(n = \frac{4.63 \times 10^{22}}{6.022 \times 10^{23}} = 0.07688\text{ mol} \approx 0.0769\text{ mol}\). <strong>Correct Option: (A)</strong>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 3</span>
+        <span class="q-badge badge-mcq">MCQ Type</span>
+      </div>
+      <span class="q-marks">[1 Mark]</span>
+    </div>
+    <div class="q-text">What is the lowest possible temperature in Kelvin units?</div>
+    <div class="options-grid">
+      <div class="option-item">(A) \(-273.15\text{ K}\)</div>
+      <div class="option-item">(B) \(0\text{ K}\)</div>
+      <div class="option-item">(C) \(273.15\text{ K}\)</div>
+      <div class="option-item">(D) \(-459.67\text{ K}\)</div>
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Absolute zero is the zero point of thermodynamic temperature scale where molecular kinetic energy is minimal. Absolute Kelvin cannot be negative.
+    </div>
+    <div class="teacher-box">
+      <h4>✍️ Solution & Verification:</h4>
+      The lowest possible temperature is absolute zero, corresponding to \(0\text{ K}\) (\(-273.15^\circ\text{C}\)). <strong>Correct Option: (B)</strong>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 4</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Derive SI units for: (i) Force &nbsp;&nbsp; (ii) Pressure</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Express physical formulas in base SI units: \(\text{Force} = \text{mass} \times \text{acceleration}\), \(\text{Pressure} = \frac{\text{Force}}{\text{Area}}\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation (Part 1 Solved):</h4>
+        <strong>(i) For Force:</strong><br>
+        \(\text{Force} = \text{mass} \times \text{acceleration}\)<br>
+        Base SI unit of mass \(= \text{kg}\), and acceleration \(= \text{m s}^{-2}\).<br>
+        \(\therefore \text{SI base unit of Force} = \mathbf{\text{kg m s}^{-2}}\) (or Newton, \(\text{N}\)).
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Complete Part 2):</h4>
+        <strong>(ii) For Pressure:</strong><br>
+        \(\text{Pressure} = \frac{\text{Force}}{\text{Area}}\)<br>
+        Substitute the base SI unit of Force and SI unit of Area (\(\text{m}^2\)):<br>
+        \(\text{SI unit of Pressure} = \frac{\text{kg m s}^{-2}}{\text{<span class="blank-fill">Area unit</span>}} = \mathbf{\text{<span class="blank-fill">derived base unit</span>}}\) (also designated as <span class="blank-fill">symbol</span>).
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 5</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Explain the geometry of the following using VSEPR theory: (i) \(\text{NH}_3\) &nbsp;&nbsp; (ii) \(\text{BF}_3\)</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Determine steric number (bond pairs + lone pairs). Lone pairs cause distortion because \(\text{lp-bp}\) repulsion is greater than \(\text{bp-bp}\) repulsion.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation (Part 1 Solved):</h4>
+        <strong>(i) \(\text{NH}_3\) (Ammonia):</strong><br>
+        - Valence electrons of \(\text{N} = 5\). Forms 3 \(\sigma\)-bonds with H and retains 1 lone pair (\(3\text{ bp} + 1\text{ lp} = 4\), \(sp^3\) hybridized).<br>
+        - Due to \(\text{lp-bp}\) repulsion, bond angle contracts from \(109.5^\circ\) to \(107^\circ\).<br>
+        - <strong>Geometry / Shape:</strong> <strong>Trigonal Pyramidal</strong>.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Complete Part 2):</h4>
+        <strong>(ii) \(\text{BF}_3\) (Boron trifluoride):</strong><br>
+        - Valence electrons on Boron = <span class="blank-fill">electrons</span>, Bond pairs = <span class="blank-fill">pairs</span>, Lone pairs = <span class="blank-fill">pairs</span>.<br>
+        - Hybridization of central B atom = <span class="blank-fill">hybridization</span>.<br>
+        - Because all three electron domains repel equally in a single plane, the bond angle is <span class="blank-fill">angle</span> and the geometry is <span class="blank-fill">geometry name</span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 6</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">A sample of nitrogen gas weighing \(9.3\text{ g}\) at a pressure of \(0.99\text{ atm}\) occupies a volume of \(12.4\text{ litres}\) at \(55\text{ K}\) temperature. What do you expect its volume to be when the temperature is \(220\text{ K}\)? Assume that pressure stays constant.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      At constant pressure and amount of gas, Charles's Law states: \(\frac{V_1}{T_1} = \frac{V_2}{T_2}\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation (Formula & Setup):</h4>
+        Given: \(V_1 = 12.4\text{ L}\), \(T_1 = 55\text{ K}\), \(T_2 = 220\text{ K}\), \(P = \text{constant}\).<br>
+        According to Charles's Law:
+        $$V_2 = V_1 \times \frac{T_2}{T_1} = 12.4 \times \frac{220}{55}$$
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Compute the Result):</h4>
+        Calculate the ratio: \(\frac{220}{55} = \) <span class="blank-fill">ratio</span><br>
+        Final volume \(V_2 = 12.4 \times \) <span class="blank-fill">factor</span> \( = \) <span class="blank-fill">final volume</span> \(\text{Litres}\).<br>
+        State the qualitative relationship: When absolute temperature increases 4-fold at constant pressure, volume <span class="blank-fill">increases / decreases</span> 4-fold.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 7</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">What is the relationship between the standard free energy change (\(\Delta G^\circ\)) and the equilibrium constant (\(K\)) of a reaction?</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Remember \(\Delta G^\circ = -RT \ln K\). Natural log converts to \(\log_{10}\) through multiplication by \(2.303\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        The relationship is given by the van 't Hoff thermodynamic isotherm:
+        $$\Delta G^\circ = -RT \ln K \quad \Longleftrightarrow \quad \Delta G^\circ = -2.303 RT \log_{10} K$$
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Define Variables & Spontaneity):</h4>
+        - \(R\) is the <span class="blank-fill">gas constant name</span> (\(= 8.314\text{ J K}^{-1}\text{ mol}^{-1}\)).<br>
+        - \(T\) is the <span class="blank-fill">temperature in Kelvin</span>.<br>
+        - When \(K > 1\), \(\log K\) is positive, making \(\Delta G^\circ\) <span class="blank-fill">positive / negative</span>, which signifies a <span class="blank-fill">spontaneous / non-spontaneous</span> reaction under standard conditions.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 8</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Calculate the enthalpy change for: \(2\text{H}_2(\text{g}) + \text{O}_2(\text{g}) \to 2\text{H}_2\text{O}(\text{g})\).<br>
+    Given bond energies: \(\text{H}-\text{H} = 436\text{ kJ mol}^{-1}\), \(\text{O}-\text{H} = 423\text{ kJ mol}^{-1}\), \(\text{O}=\text{O} = 496.4\text{ kJ mol}^{-1}\).</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      \(\Delta H_{\text{rxn}} = \sum \text{BE}(\text{bonds broken}) - \sum \text{BE}(\text{bonds formed})\). Note that each \(\text{H}_2\text{O}\) has two \(\text{O}-\text{H}\) bonds.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>Bonds broken:</strong> \(2 \times (\text{H}-\text{H}) + 1 \times (\text{O}=\text{O}) = 2(436) + 496.4 = 872 + 496.4 = 1368.4\text{ kJ}\).<br>
+        - <strong>Bonds formed:</strong> In \(2\text{H}_2\text{O}\), there are \(2 \times 2 = 4\) moles of \(\text{O}-\text{H}\) bonds.<br>
+        Energy released \(= 4 \times 423 = 1692\text{ kJ}\).
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        Compute \(\Delta H_{\text{rxn}}\):
+        $$\Delta H_{\text{rxn}} = 1368.4\text{ kJ} - \text{<span class="blank-fill">energy formed</span>} = \mathbf{\text{<span class="blank-fill">calculated value</span>}}\text{ kJ}$$
+        Since \(\Delta H < 0\), the reaction is <span class="blank-fill">exothermic / endothermic</span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 9</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Arrange the following oxides in the increasing order of acidic property. Justify your answer: \(\text{Al}_2\text{O}_3, \text{CO}_2, \text{SO}_2, \text{B}_2\text{O}_3\).</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Acidic nature increases with the non-metallic character and electronegativity of the central element: Metallic/Amphoteric &lt; Metalloid oxide &lt; Non-metallic oxide.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - \(\text{Al}_2\text{O}_3\) is amphoteric (reacts with both acids and bases; least acidic).<br>
+        - \(\text{B}_2\text{O}_3\) is weakly acidic (boric anhydride).<br>
+        - \(\text{CO}_2\) is moderately acidic (forms \(\text{H}_2\text{CO}_3\)).<br>
+        - \(\text{SO}_2\) is strongly acidic (forms \(\text{H}_2\text{SO}_3\)).<br>
+        <strong>Increasing Order:</strong> \(\mathbf{\text{Al}_2\text{O}_3 < \text{B}_2\text{O}_3 < \text{CO}_2 < \text{SO}_2}\)
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Justification):</h4>
+        Complete the periodic justification:<br>
+        "Across a period, electronegativity and non-metallic character <span class="blank-fill">increase / decrease</span>, making oxides more <span class="blank-fill">acidic / basic</span>. Larger cation size and metallic character promote basicity. Therefore, the most acidic oxide is <span class="blank-fill">formula</span> and the amphoteric oxide is <span class="blank-fill">formula</span>."
+      </div>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 10</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">Draw the chemical structures of: (i) \(\text{H}_3\text{PO}_3\) &nbsp;&nbsp; (ii) \(\text{P}_4\text{O}_{10}\) &nbsp;&nbsp; (iii) \(\text{H}_2\text{S}_2\text{O}_3\) &nbsp;&nbsp; (iv) \(\text{ClO}_2\).</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      \(\text{H}_3\text{PO}_3\) contains one \(\text{P}-\text{H}\) bond and two \(\text{P}-\text{OH}\) bonds. \(\text{P}_4\text{O}_{10}\) is a tetrahedral cage with 6 bridging and 4 terminal oxygens. \(\text{ClO}_2\) is an odd-electron angular radical.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation (Structures i & ii):</h4>
+        <strong>(i) \(\text{H}_3\text{PO}_3\) (Phosphorous Acid):</strong>
+<pre>
+       O
+       ||
+   H - P - OH
+       |
+       OH   (Dibasic acid)
+</pre>
+        <strong>(ii) \(\text{P}_4\text{O}_{10}\):</strong> 4 P atoms at tetrahedral corners, each connected to 3 others through bridging \(\text{P}-\text{O}-\text{P}\) bonds (6 bridges), plus 1 terminal \(\text{P}=\text{O}\) double bond on each phosphorus.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Describe & Draw iii & iv):</h4>
+        <strong>(iii) \(\text{H}_2\text{S}_2\text{O}_3\) (Thiosulfuric Acid):</strong><br>
+        Central sulfur has one double bond to <span class="blank-fill">atom</span>, one double bond to <span class="blank-fill">atom</span>, and two single bonds to <span class="blank-fill">group</span>.<br><br>
+        <strong>(iv) \(\text{ClO}_2\) (Chlorine Dioxide):</strong><br>
+        Chlorine has 7 valence electrons. It forms two coordinate/double bonds with oxygen. Molecular shape is <span class="blank-fill">linear / bent</span>, and due to an unpaired electron, it is <span class="blank-fill">paramagnetic / diamagnetic</span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 11</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">Explain giving suitable scientific reasons:
+      <ol style="margin-left: 1.5rem; margin-top: 0.25rem;">
+        <li>\(\text{BF}_3\) is a weaker Lewis acid as compared to \(\text{BCl}_3\).</li>
+        <li>\(\text{CCl}_4\) does not hydrolyse but \(\text{SiCl}_4\) does.</li>
+        <li>\(\text{N}_2\) is chemically inert at room temperature.</li>
+        <li>\(\text{SF}_6\) is known, but \(\text{SCl}_6\) is not.</li>
+      </ol>
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Consider \(p\pi-p\pi\) back bonding in Boron halides; availability of empty \(d\)-orbitals in Silicon; triple bond enthalpy in Nitrogen; steric crowd in sulfur hexahalides.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation (Parts 1 & 2):</h4>
+        <strong>1. \(\text{BF}_3\) vs \(\text{BCl}_3\):</strong> In \(\text{BF}_3\), Boron's empty \(2p\)-orbital overlaps strongly with Fluorine's filled \(2p\)-orbital (\(p\pi-p\pi\) back bonding), reducing boron's electron deficiency. In \(\text{BCl}_3\), large size mismatch (\(2p\) of B and \(3p\) of Cl) makes back bonding negligible. Thus, \(\text{BCl}_3\) is a stronger Lewis acid.<br><br>
+        <strong>2. \(\text{CCl}_4\) inertness:</strong> Carbon lacks vacant \(d\)-orbitals in its second shell, so it cannot accept incoming water lone pairs.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Complete Parts 3 & 4):</h4>
+        <strong>Complete for \(\text{SiCl}_4\):</strong> Silicon has accessible vacant <span class="blank-fill">d-orbitals</span> which permit coordination with water.<br>
+        <strong>3. \(\text{N}_2\) inertness:</strong> The \(\text{N}\equiv\text{N}\) triple bond has a very high bond dissociation enthalpy of <span class="blank-fill">946 kJ/mol</span>, making it <span class="blank-fill">unreactive</span> at room temperature.<br>
+        <strong>4. \(\text{SF}_6\) vs \(\text{SCl}_6\):</strong> Six bulky Chlorine atoms cannot be accommodated around the sulfur atom due to severe <span class="blank-fill">steric hindrance</span>, and chlorine cannot oxidize sulfur to its +6 state.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q12 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 12</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">
+      (i) State Le Chatelier’s principle.<br>
+      (ii) For the reaction: \(\text{C}_2\text{H}_4(\text{g}) + \text{I}_2(\text{g}) \to \text{C}_2\text{H}_4\text{I}_2(\text{g})\), the rate law is \(\text{Rate} = k [\text{C}_2\text{H}_4][\text{I}_2]^{3/2}\).<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;(a) Order with respect to each reactant? &nbsp;&nbsp;(b) Overall order? &nbsp;&nbsp;(c) Units of \(k\) in \(\text{mol dm}^{-3}\) and \(\text{s}\)?
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Order is the exponent in the rate equation. Overall order is the sum of exponents. \(\text{Unit of } k = (\text{concentration})^{1 - n}\text{ time}^{-1}\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>(i) Le Chatelier's Principle:</strong> When a system in chemical equilibrium is perturbed by changes in concentration, temperature, or pressure, the equilibrium position shifts in the direction that opposes or counteracts that disturbance.<br>
+        - <strong>(ii)(a) Order:</strong> Order with respect to \(\text{C}_2\text{H}_4 = 1\); Order with respect to \(\text{I}_2 = 1.5\) (or \(\frac{3}{2}\)).
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - <strong>(b) Overall order (\(n\)):</strong> \(1 + 1.5 = \) <span class="blank-fill">overall order</span>.<br>
+        - <strong>(c) Unit of \(k\):</strong>
+          $$\text{Unit} = \frac{\text{mol dm}^{-3}\text{ s}^{-1}}{(\text{mol dm}^{-3})^{2.5}} = (\text{mol dm}^{-3})^{1 - 2.5}\text{ s}^{-1} = \mathbf{\text{<span class="blank-fill">calculated unit</span>}}$$
+      </div>
+    </div>
+  </div>
+
+  <!-- Q13 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 13</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) A cell is set up: \(\text{Cr}(\text{s}) \mid \text{Cr}^{3+}(\text{aq}) \parallel \text{Cu}^{2+}(\text{aq}) \mid \text{Cu}(\text{s})\). Calculate standard e.m.f. if \(E^\circ(\text{Cr}^{3+}/\text{Cr}) = -0.74\text{ V}\) and \(E^\circ(\text{Cu}^{2+}/\text{Cu}) = +0.34\text{ V}\).<br>
+      (b) Calculate \(K_p\) for \(\text{COCl}_2(\text{g}) \rightleftharpoons \text{CO}(\text{g}) + \text{Cl}_2(\text{g})\) in \(\text{atm}\) and \(\text{N m}^{-2}\) (Equilibrium pressures: \(\text{COCl}_2 = 0.20\text{ atm}\), \(\text{CO} = 0.16\text{ atm}\), \(\text{Cl}_2 = 0.26\text{ atm}\); \(1\text{ atm} = 101,300\text{ N m}^{-2}\)).
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      \(E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}\). For equilibrium constant, \(K_p = \frac{P_{\text{CO}} \cdot P_{\text{Cl}_2}}{P_{\text{COCl}_2}}\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        <strong>(a) Standard cell potential:</strong>
+        Cathode (\(\text{Cu}\)): \(+0.34\text{ V}\); Anode (\(\text{Cr}\)): \(-0.74\text{ V}\).<br>
+        $$E^\circ_{\text{cell}} = +0.34 - (-0.74) = \mathbf{+1.08\text{ V}}$$<br>
+        <strong>(b) Formula for \(K_p\):</strong>
+        $$K_p = \frac{0.16 \times 0.26}{0.20}$$
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Calculate \(K_p\) in \(\text{atm}\): \(K_p = \frac{0.0416}{0.20} = \) <span class="blank-fill">value in atm</span> \(\text{atm}\).<br>
+        - Convert \(K_p\) into \(\text{N m}^{-2}\):
+          $$K_p = \text{<span class="blank-fill">atm value</span>} \times 101,300\text{ N m}^{-2} = \mathbf{\text{<span class="blank-fill">value</span>}}\text{ N m}^{-2}$$
+      </div>
+    </div>
+  </div>
+
+  <!-- Q14 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 14</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">(a) Write down the ideal gas equation and state how it is derived.<br>(b) Give three different values of \(R\) with proper units.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Combine Boyle's, Charles's, and Avogadro's laws. Express \(R\) in \(\text{J K}^{-1}\text{ mol}^{-1}\), \(\text{L atm K}^{-1}\text{ mol}^{-1}\), and \(\text{cal K}^{-1}\text{ mol}^{-1}\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        <strong>(a) Ideal Gas Equation:</strong>
+        $$PV = nRT$$
+        Derived by combining \(V \propto \frac{1}{P}\) (Boyle), \(V \propto T\) (Charles), and \(V \propto n\) (Avogadro).<br>
+        <strong>(b) Value 1 (SI Units):</strong> \(R = \mathbf{8.314\text{ J K}^{-1}\text{ mol}^{-1}}\)
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Fill in Values 2 & 3):</h4>
+        - <strong>Value 2 (in L&middot;atm):</strong> \(R = \) <span class="blank-fill">0.0821</span> \(\text{L atm K}^{-1}\text{ mol}^{-1}\).<br>
+        - <strong>Value 3 (in calories):</strong> \(R = \) <span class="blank-fill">1.987</span> \(\text{cal K}^{-1}\text{ mol}^{-1}\).<br>
+        - <em>(Bonus CGS units)</em>: \(R = \) <span class="blank-fill">8.314 &times; 10^7</span> \(\text{erg K}^{-1}\text{ mol}^{-1}\).
+      </div>
+    </div>
+  </div>
+
+  <!-- Q15 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 15</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) Write IUPAC names of: (i) \(\text{CH}_3-\text{C}(\text{CH}_3)(\text{OH})-\text{CH}_3\) &nbsp;&nbsp; (ii) \(\text{CH}_3-\text{CH}(\text{CH}_3)-\text{CH}_2-\text{CH}_2-\text{COOH}\) &nbsp;&nbsp; (iii) Cyclohexene &nbsp;&nbsp; (iv) 1-bromo-3-chlorobenzene.<br>
+      (b) Define any TWO: (i) Electrophiles (ii) Nucleophiles (iii) Catenation (iv) Isomerism.
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Longest chain with highest-priority functional group determines the root name. Electrophiles accept electron pairs; nucleophiles donate electron pairs.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>(a)(i):</strong> <strong>2-methylpropan-2-ol</strong><br>
+        - <strong>(a)(ii):</strong> <strong>4-methylpentanoic acid</strong><br>
+        - <strong>(b)(i) Electrophiles:</strong> Electron-deficient species (such as \(\text{H}^+, \text{NO}_2^+, \text{AlCl}_3\)) that seek electron-rich centers and accept a pair of electrons.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Name structure (iii): <span class="blank-fill">Cyclohexene</span>.<br>
+        - Name structure (iv): <span class="blank-fill">1-bromo-3-chlorobenzene</span>.<br>
+        - Define (ii) Nucleophiles: "An electron-rich species possessing a lone pair that attacks <span class="blank-fill">electron-deficient</span> centers. Example: <span class="blank-fill">OH- / NH3</span>."
+      </div>
+    </div>
+  </div>
+
+  <!-- Q16 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 16</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) What is an electrovalent bond? Explain lattice energy. How is the enthalpy of formation of \(\text{NaCl}\) calculated using the Born-Haber cycle?<br>
+      (b) Why is a \(\sigma\) bond stronger than a \(\pi\) bond?
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Born-Haber cycle uses Hess's law: \(\Delta H_f = \Delta H_{\text{sub}} + \text{IE} + \frac{1}{2}\Delta H_{\text{diss}} - \text{EA} + U\). Axial overlap gives greater electron cloud overlap than sideways overlap.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>Electrovalent Bond:</strong> Bond formed through electrostatic attraction after complete electron transfer from electropositive metal to electronegative non-metal.<br>
+        - <strong>Lattice Energy (\(U\)):</strong> Energy released when 1 mole of solid ionic crystal forms from its separated gaseous ions: \(\text{Na}^+(\text{g}) + \text{Cl}^-(\text{g}) \to \text{NaCl}(\text{s}) + U\).
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Complete the Born-Haber equation:
+          $$\Delta H_f = \Delta H_{\text{sub}} + \text{IE} + \text{<span class="blank-fill">1/2 Dissociation</span>} - \text{<span class="blank-fill">Electron Affinity</span>} + U$$
+        - Explain why \(\sigma\)-bond is stronger: "\(\sigma\)-bonds involve <span class="blank-fill">head-on / axial</span> overlap leading to <span class="blank-fill">greater</span> overlap area, whereas \(\pi\)-bonds involve <span class="blank-fill">sideways</span> overlap with less orbital penetration."
+      </div>
+    </div>
+  </div>
+
+  <!-- Q17 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 17</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) \(0.0663\text{ g}\) of an organic compound on combustion gave \(0.0621\text{ g}\) of \(\text{CO}_2\) and \(0.0381\text{ g}\) of \(\text{H}_2\text{O}\). Calculate \(\% \text{C}\) and \(\% \text{H}\).<br>
+      (b) What is the ratio of the masses of oxygen that combine with \(1.0\text{ g}\) of Carbon in \(\text{CO}\) and \(\text{CO}_2\)? Which law does this prove?
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      \(\% \text{C} = \frac{12}{44} \times \frac{m_{\text{CO}_2}}{m_{\text{compound}}} \times 100\). In \(\text{CO}\) and \(\text{CO}_2\), fixed mass of carbon is compared.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - \(\% \text{C} = \frac{12}{44} \times \frac{0.0621}{0.0663} \times 100 = \mathbf{25.54\%}\).<br>
+        - Mass of O per \(1\text{ g}\) C in \(\text{CO} = \frac{16}{12} = 1.33\text{ g}\).<br>
+        - Mass of O per \(1\text{ g}\) C in \(\text{CO}_2 = \frac{32}{12} = 2.67\text{ g}\).
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Calculate \(\% \text{H} = \frac{2}{18} \times \frac{0.0381}{0.0663} \times 100 = \) <span class="blank-fill">6.38%</span>.<br>
+        - Ratio of oxygen masses: \(\frac{1.33}{2.67} = \) <span class="blank-fill">1 : 2</span>.<br>
+        - Law illustrated: Law of <span class="blank-fill">Multiple Proportions</span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q18 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 18</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[6 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) Write the de Broglie expression.<br>
+      (b) Write down the Rydberg/Balmer formula. What is the wavelength of light emitted when an electron jumps from \(n_2 = 4\) to \(n_1 = 1\)? (\(R_{\text{H}} = 109,677\text{ cm}^{-1}\)).
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      de Broglie wavelength: \(\lambda = \frac{h}{p}\). Rydberg formula: \(\frac{1}{\lambda} = R_{\text{H}} (\frac{1}{n_1^2} - \frac{1}{n_2^2})\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>(a) de Broglie Expression:</strong> \(\lambda = \frac{h}{p} = \frac{h}{mv}\).<br>
+        - <strong>(b) Wavenumber calculation:</strong>
+          $$\frac{1}{\lambda} = 109,677 \left[ \frac{1}{1^2} - \frac{1}{4^2} \right] = 109,677 \times \frac{15}{16} = 102,822.19\text{ cm}^{-1}$$
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Calculate \(\lambda = \frac{1}{102,822.19} = \) <span class="blank-fill">9.72 &times; 10^-6</span> \(\text{cm}\).<br>
+        - Convert to nanometers: \(\lambda = \) <span class="blank-fill">97.2</span> \(\text{nm}\).<br>
+        - Radiation belongs to the <span class="blank-fill">Lyman</span> series in the <span class="blank-fill">Ultraviolet</span> region.
+      </div>
+    </div>
+  </div>
+
+  <!-- Q19 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 19</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[6 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) Define 'Entropy' and give its SI units. Predict the sign of \(\Delta S\) for \(2\text{SO}_3(\text{g}) \to 2\text{SO}_2(\text{g}) + \text{O}_2(\text{g})\). What is the significance of \(T\Delta S\) in \(\Delta G = \Delta H - T\Delta S\)?<br>
+      (b) Combustion of glucose: \(\text{C}_6\text{H}_{12}\text{O}_6(\text{s}) + 6\text{O}_2(\text{g}) \to 6\text{CO}_2(\text{g}) + 6\text{H}_2\text{O}(\text{l}), \Delta H = -2840\text{ kJ}\). How much energy is required to produce \(1.08\text{ g}\) of glucose? (Molar mass \(= 180\text{ g mol}^{-1}\)).
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Entropy is molecular disorder. Gaseous moles increase from 2 to 3. Producing glucose absorbs \(+2840\text{ kJ}\) per \(180\text{ g}\).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>Entropy:</strong> Measure of disorder or randomness. SI Unit: \(\text{J K}^{-1}\text{ mol}^{-1}\).<br>
+        - \(\Delta n_g = (2+1) - 2 = +1 > 0\); hence \(\Delta S\) is <strong>positive</strong>.<br>
+        - Energy to form 1 mole (\(180\text{ g}\)) of glucose \(= +2840\text{ kJ}\).
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Physical meaning of \(T\Delta S\): "Represents the energy <span class="blank-fill">unavailable</span> for doing work due to disorder."<br>
+        - Energy for \(1.08\text{ g}\) glucose:
+          $$\text{Energy} = \frac{2840\text{ kJ}}{180\text{ g}} \times 1.08\text{ g} = \mathbf{\text{<span class="blank-fill">17.04</span>}}\text{ kJ}$$
+      </div>
+    </div>
+  </div>
+
+  <!-- Q20 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 20</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[6 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) Explain why Phenol is more acidic than alcohols using resonance structures.<br>
+      (b) Identify A, B, and C in:
+      $$\text{CH}_3\text{CHO} \xrightarrow{\text{oxidation/NaOH}} \mathbf{A} \xrightarrow{\text{NaOH/CaO, }\Delta} \mathbf{B} \xrightarrow{\text{Cl}_2 / h\nu} \mathbf{C}$$
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong>
+      Phenoxide ion is resonance stabilized by delocalizing charge into the ortho/para positions. Decarboxylation of sodium acetate produces methane.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>(a) Acidity:</strong> Alkoxide ion (\(\text{R}-\text{O}^-\)) has localized charge destabilized by \(+I\) effect. Phenoxide ion (\(\text{C}_6\text{H}_5\text{O}^-\)) disperses its negative charge over ortho and para positions of the benzene ring across 5 resonance structures.<br>
+        - <strong>(b) Compound A:</strong> \(\mathbf{\text{CH}_3\text{COONa}}\) (Sodium acetate)<br>
+        - <strong>Compound B:</strong> \(\text{CH}_3\text{COONa} + \text{NaOH} \xrightarrow{\text{CaO}} \mathbf{\text{CH}_4}\) (Methane)
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Identify <strong>Compound C</strong> from free radical chlorination of methane:
+          $$\text{CH}_4 + \text{Cl}_2 \xrightarrow{h\nu} \mathbf{\text{<span class="blank-fill">CH3Cl</span>}} + \text{HCl}$$
+        - IUPAC Name of C: <span class="blank-fill">Chloromethane</span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION B -->
+  <div class="section-title">
+    <span>SECTION - B (Optional Modules)</span>
+    <span>16 Marks</span>
+  </div>
+  <p style="margin-bottom: 1rem; font-style: italic; color: var(--text-muted);">Note: Attempt all questions from either Part-I OR Part-II.</p>
+
+  <div class="part-title">PART - I: ENVIRONMENTAL CHEMISTRY</div>
+
+  <!-- B1-1 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 1 (Part I)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">(a) Define any TWO: (i) Pollutant (ii) Biosphere (iii) Eutrophication (iv) BOD.<br>(b) List four adverse effects of acid rain.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Eutrophication is excessive nutrient loading. BOD measures oxygen demand by aerobic microbes. Acid rain damages marble (\(\text{CaCO}_3\)) and lowers water pH.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>Pollutant:</strong> Any undesirable substance that contaminates air, water, or soil and disrupts ecosystems.<br>
+        - <strong>Effects of Acid rain (1 & 2):</strong>
+          1. Corrodes stone and marble monuments (\(\text{CaCO}_3 + \text{H}_2\text{SO}_4 \to \text{CaSO}_4 + \text{H}_2\text{O} + \text{CO}_2\)).<br>
+          2. Causes soil acidification and leaches vital nutrients.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Define <strong>BOD:</strong> "Amount of dissolved oxygen consumed by <span class="blank-fill">aerobic bacteria</span> to decompose organic matter in water."<br>
+        - State effects 3 & 4 of acid rain on <span class="blank-fill">aquatic life (fish mortality)</span> and <span class="blank-fill">forest vegetation / human respiration</span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- B1-2 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 2 (Part I)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[6 Marks]</span>
+    </div>
+    <div class="q-text">Describe with the help of a flow diagram the three stages of treatment of waste water: Primary, Secondary, and Tertiary treatment.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Primary = physical settlement; Secondary = biological microbial decomposition; Tertiary = chemical disinfection (chlorination/ozonation).
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>Primary Treatment:</strong> Screens and grit chambers remove floating debris, followed by sedimentation to remove settling solids.<br>
+        - <strong>Secondary Treatment:</strong> Aeration tank where aerobic microorganisms digest organic matter, drastically lowering BOD.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn (Describe Tertiary Treatment):</h4>
+        - Advanced chemical treatment using <span class="blank-fill">Chlorine / Ozone / UV</span> to kill pathogens.<br>
+        - Precipitants are added to remove excess nutrients like <span class="blank-fill">phosphates</span> and <span class="blank-fill">nitrates</span> before discharge.
+      </div>
+    </div>
+  </div>
+
+  <!-- B1-3 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 3 (Part I)</span>
+        <span class="q-badge badge-mcq">MCQ Type</span>
+      </div>
+      <span class="q-marks">[1 Mark]</span>
+    </div>
+    <div class="q-text">How does carbon return to the environment from dead organic matter?</div>
+    <div class="options-grid">
+      <div class="option-item">(A) By photosynthesis of green plants</div>
+      <div class="option-item">(B) Through decay and decomposition by microorganisms</div>
+      <div class="option-item">(C) By sedimentation into volcanic lava</div>
+      <div class="option-item">(D) By plant transpiration</div>
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Fungi and bacteria break down complex organic matter, releasing \(\text{CO}_2\).
+    </div>
+    <div class="teacher-box">
+      <h4>✍️ Solution & Verification:</h4>
+      Decay and microbial decomposition release carbon back into atmosphere as \(\text{CO}_2\). <strong>Correct Option: (B)</strong>
+    </div>
+  </div>
+
+  <!-- B1-4 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 4 (Part I)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Show diagrammatically how heavy metals enter into the ecosystem.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Trace heavy metals (\(\text{Hg, Pb, Cd}\)) from industrial effluents into aquatic bodies and food chains.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        Pathway: Industrial discharge &rarr; River/Soil &rarr; Phytoplankton &rarr; Small fish &rarr; Large fish &rarr; Humans.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        Explain why these metals persist: "Heavy metals cannot be broken down because they are non-<span class="blank-fill">biodegradable</span> and accumulate in <span class="blank-fill">fatty tissues</span>."
+      </div>
+    </div>
+  </div>
+
+  <!-- B1-5 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 5 (Part I)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Arrange the following into a correct food chain showing Biomagnification: Mosquito, Marshy plant, Bird, Fish. Label each trophic role.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Plants are primary producers; birds are top predators.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        Food chain sequence: \(\text{Marshy Plant} \to \text{Mosquito} \to \text{Fish} \to \text{Bird}\).
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - Marshy plant = <span class="blank-fill">Producer</span><br>
+        - Mosquito = <span class="blank-fill">Primary Consumer</span><br>
+        - Fish = <span class="blank-fill">Secondary Consumer</span><br>
+        - Bird = <span class="blank-fill">Tertiary Consumer</span><br>
+        - Which organism has highest toxic concentration? <span class="blank-fill">Bird</span>.
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">PART - II: CHEMISTRY AND INDUSTRY</div>
+
+  <!-- B2-1 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 1 (Part II)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">Define any FOUR: Dyes, Drugs/medicines, Paints, Mother glass, Petrochemicals, Polymerisation.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Dyes impart permanent color; paints prevent corrosion; petrochemicals originate from crude oil.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        - <strong>Dyes:</strong> Organic compounds containing chromophores and auxochromes that bind permanently to fibers.<br>
+        - <strong>Petrochemicals:</strong> Useful chemical compounds derived from petroleum hydrocarbons.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - <strong>Polymerisation:</strong> "Process of combining simple reactive molecules (<span class="blank-fill">monomers</span>) into long macromolecules (<span class="blank-fill">polymers</span>)."<br>
+        - <strong>Paints:</strong> "Fluid suspension containing pigments, binders, and solvents applied to prevent <span class="blank-fill">rusting / corrosion</span>."
+      </div>
+    </div>
+  </div>
+
+  <!-- B2-2 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 2 (Part II)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[4 Marks]</span>
+    </div>
+    <div class="q-text">
+      (a) Distinguish between thermoplastic and thermosetting polymers. (2 Marks)<br>
+      (b) Differentiate between analgesics and antipyretics. (1 Mark)<br>
+      (c) Differentiate between antiseptics and disinfectants. (1 Mark)
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Thermoplastics melt repeatedly; thermosets harden permanently. Analgesics ease pain; antipyretics lower fever.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        <table class="chem-table">
+          <tr><th>Feature</th><th>Thermoplastic</th><th>Thermosetting</th></tr>
+          <tr><td>Heat effect</td><td>Softens on heating, remouldable</td><td>Permanently cross-links, cannot be remelted</td></tr>
+          <tr><td>Examples</td><td>Polythene, PVC</td><td>Bakelite, Melamine</td></tr>
+        </table>
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        - <strong>Analgesics vs Antipyretics:</strong> Analgesics relieve <span class="blank-fill">pain</span>; Antipyretics reduce <span class="blank-fill">body temperature / fever</span>.<br>
+        - <strong>Antiseptics vs Disinfectants:</strong> Antiseptics are safe for <span class="blank-fill">living tissues</span> (e.g. Dettol); Disinfectants are applied to <span class="blank-fill">non-living surfaces</span> (e.g. 1% Phenol).
+      </div>
+    </div>
+  </div>
+
+  <!-- B2-3 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 3 (Part II)</span>
+        <span class="q-badge badge-mcq">MCQ Type</span>
+      </div>
+      <span class="q-marks">[1 Mark]</span>
+    </div>
+    <div class="q-text">What do you understand by Reinforced Concrete Construction (RCC)?</div>
+    <div class="options-grid">
+      <div class="option-item">(A) Concrete mixed with timber fibers</div>
+      <div class="option-item">(B) Concrete embedded with steel bars/mesh for tensile strength</div>
+      <div class="option-item">(C) Baked pure cement blocks</div>
+      <div class="option-item">(D) Polymer mortar coating</div>
+    </div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Concrete handles compression while steel handles tension.
+    </div>
+    <div class="teacher-box">
+      <h4>✍️ Solution & Verification:</h4>
+      Embedding steel rods in concrete produces composite RCC with high tensile and compressive strength. <strong>Correct Option: (B)</strong>
+    </div>
+  </div>
+
+  <!-- B2-4 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 4 (Part II)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Show the formation of polymer using 3 monomer units each: (i) \(\text{CH}_2=\text{CH}-\text{Cl}\) &nbsp;&nbsp; (ii) \(\text{CH}_2=\text{C}(\text{CH}_3)-\text{COOCH}_3\).</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> In addition polymerization, the double bond opens up into single bonds linking consecutive monomers.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        <strong>(i) Polyvinyl Chloride (PVC):</strong>
+<pre>
+- CH2 - CH(Cl) - CH2 - CH(Cl) - CH2 - CH(Cl) -
+</pre>
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        <strong>(ii) Polymethyl methacrylate (PMMA):</strong><br>
+        Connect 3 units of \(\text{CH}_2=\text{C}(\text{CH}_3)(\text{COOCH}_3)\):
+<pre>
+- CH2 - C(CH3)(COOCH3) - CH2 - C(CH3)(<span class="blank-fill">COOCH3</span>) - CH2 - C(CH3)(<span class="blank-fill">COOCH3</span>) -
+</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- B2-5 -->
+  <div class="question-card">
+    <div class="q-header">
+      <div>
+        <span class="q-number">Question 5 (Part II)</span>
+        <span class="q-badge badge-subjective">Writing / Subjective</span>
+      </div>
+      <span class="q-marks">[2 Marks]</span>
+    </div>
+    <div class="q-text">Justify the superiority of the Allopathic system of medicine over alternative systems of medicine by giving at least two advantages.</div>
+    <div class="hint-box">
+      <strong>💡 Hint:</strong> Think of rapid clinical emergency interventions and evidence-based clinical diagnostics.
+    </div>
+    <div class="scaffold-container">
+      <div class="teacher-box">
+        <h4>✍️ Teacher's Foundation:</h4>
+        <strong>Advantage 1: Rapid Emergency Action:</strong> Allopathic drugs have chemically standardized active compounds with validated pharmacological kinetics, delivering immediate life-saving intervention during acute trauma and critical infections.
+      </div>
+      <div class="student-box">
+        <h4>📝 Your Turn:</h4>
+        <strong>Advantage 2: Advanced Diagnostics & Surgery:</strong> "Allopathy is backed by scientific imaging tools like <span class="blank-fill">MRI / CT scans / X-rays</span> and sterile <span class="blank-fill">surgical</span> procedures to precisely cure complex anatomical diseases."
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class 10 Mathematics: Trigonometric Ratios (Easy Level - CBSE PYQs)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 9.5mm 12mm 9mm 12mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Top Assessment Banner */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 5px;
+      padding: 6px 10px;
+      background: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 4px;
+      margin-bottom: 5px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .badge-icon {
+      width: 34px;
+      height: 34px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      line-height: 1.15;
+    }
+
+    .title-area p {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.2px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 5px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2px 7px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7.5px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 11px;
+      font-weight: 800;
+      color: #000000;
+    }
+
+    /* Student Info Box */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr 1fr 1.1fr;
+      gap: 7px;
+      font-size: 10px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 8.5px;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    .info-line {
+      flex: 1;
+      border-bottom: 1.8px solid #000000;
+      min-height: 13px;
+    }
+
+    /* Instructions Strip */
+    .instruction-strip {
+      border: 1.5px solid #000000;
+      padding: 3px 8px;
+      font-size: 8.5px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      background: #ffffff;
+    }
+
+    /* Section Header Banner */
+    .section-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3.5px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      margin-top: 2px;
+      border-radius: 3px;
+    }
+
+    .section-title {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .section-weight {
+      font-size: 9px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 1px 5px;
+      border-radius: 2px;
+    }
+
+    /* Section A: Objective & VSA (2-Column) */
+    .obj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 9px;
+      row-gap: 5px;
+      margin-bottom: 6px;
+    }
+
+    .q-card {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 5px 7px;
+      background: #ffffff;
+      font-size: 9px;
+      line-height: 1.3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .q-title {
+      font-weight: 700;
+      margin-bottom: 3.5px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .q-num {
+      font-weight: 800;
+      margin-right: 3px;
+    }
+
+    .pyq-tag {
+      font-size: 7.5px;
+      font-weight: 800;
+      background: #000000;
+      color: #ffffff;
+      padding: 0 4px;
+      border-radius: 2px;
+      margin-left: 4px;
+    }
+
+    .q-mark {
+      font-weight: 800;
+      font-size: 8px;
+      border: 1px solid #000000;
+      padding: 0 3px;
+      border-radius: 2px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5px 6px;
+      font-size: 8.5px;
+      font-weight: 600;
+    }
+
+    .opt-box {
+      display: inline-block;
+      width: 9.5px;
+      height: 9.5px;
+      border: 1.3px solid #000000;
+      border-radius: 2px;
+      margin-right: 3px;
+      vertical-align: middle;
+    }
+
+    /* Question & Work Area Box */
+    .qa-box {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 5px 8px;
+      background: #ffffff;
+      margin-bottom: 5.5px;
+    }
+
+    .qa-head {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9.3px;
+      font-weight: 700;
+      margin-bottom: 3.5px;
+    }
+
+    .write-rule {
+      border-bottom: 1.8px solid #000000;
+      height: 14px;
+      margin-top: 3px;
+    }
+
+    .work-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .diagram-qa-layout {
+      display: grid;
+      grid-template-columns: 105px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .diagram-box {
+      border: 1.4px solid #000000;
+      border-radius: 3px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+    }
+
+    .step-box {
+      border: 1.3px solid #000000;
+      border-radius: 3px;
+      padding: 4px 6px;
+      background: #ffffff;
+      min-height: 48px;
+    }
+
+    .step-label {
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* Footer & Evaluation */
+    .eval-footer {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin-top: 2px;
+      background: #ffffff;
+    }
+
+    .eval-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.5px;
+      font-weight: 700;
+    }
+
+    .score-matrix {
+      display: flex;
+      gap: 5px;
+    }
+
+    .score-cell {
+      border: 1.4px solid #000000;
+      border-radius: 3px;
+      padding: 1px 6px;
+      text-align: center;
+    }
+
+    .score-cell span {
+      display: block;
+      font-size: 7px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .score-cell strong {
+      font-size: 9.5px;
+      font-weight: 800;
+    }
+
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1.5px solid #000000;
+      padding-top: 3px;
+      font-size: 8px;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .math {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page" id="page1">
+    <div>
+      <!-- Header -->
+      <div class="test-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon">X</div>
+            <div class="title-area">
+              <h1>Class X Mathematics: Trigonometric Ratios (Easy Level)</h1>
+              <p>CBSE Previous Years Questions (PYQs) &bull; Chapter 8: Introduction to Trigonometry</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill">
+              <span>Time Allowed</span>
+              <strong>45 Mins</strong>
+            </div>
+            <div class="meta-pill">
+              <span>Max Marks</span>
+              <strong>20 Marks</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <span class="info-label">Student Name:</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Roll No:</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Section:</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">Date:</span>
+            <div class="info-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions Strip -->
+      <div class="instruction-strip">
+        <span>&bull; All 10 questions are compulsory.</span>
+        <span>&bull; Section A: Q1&ndash;Q4 (1 Mark each) &bull; Section B: Q5&ndash;Q7 (2 Marks each) &bull; Section C &amp; D on Page 2</span>
+        <span>&bull; Show step-by-step working clearly.</span>
+      </div>
+
+      <!-- SECTION A: OBJECTIVE & VSA QUESTIONS (1 MARK EACH) -->
+      <div class="section-header">
+        <span class="section-title">Section A &bull; Objective & Very Short Answer Questions (CBSE PYQs)</span>
+        <span class="section-weight">4 Marks (4 &times; 1M)</span>
+      </div>
+
+      <div class="obj-grid">
+        <!-- Q1 -->
+        <div class="q-card">
+          <div class="q-title">
+            <span><span class="q-num">1.</span> If <span class="math">cos &theta; = 4/5</span>, then the value of <span class="math">tan &theta;</span> is: <span class="pyq-tag">CBSE 2023</span></span>
+            <span class="q-mark">1M</span>
+          </div>
+          <div class="options-grid">
+            <div><span class="opt-box"></span> (A) 3/5</div>
+            <div><span class="opt-box"></span> (B) 3/4</div>
+            <div><span class="opt-box"></span> (C) 4/3</div>
+            <div><span class="opt-box"></span> (D) 5/3</div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="q-card">
+          <div class="q-title">
+            <span><span class="q-num">2.</span> If <span class="math">sin &theta; = cos &theta;</span> for acute angle <span class="math">&theta;</span>, then <span class="math">&theta;</span> equals: <span class="pyq-tag">CBSE 2020</span></span>
+            <span class="q-mark">1M</span>
+          </div>
+          <div class="options-grid">
+            <div><span class="opt-box"></span> (A) 30&deg;</div>
+            <div><span class="opt-box"></span> (B) 45&deg;</div>
+            <div><span class="opt-box"></span> (C) 60&deg;</div>
+            <div><span class="opt-box"></span> (D) 90&deg;</div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="q-card">
+          <div class="q-title">
+            <span><span class="q-num">3.</span> Evaluate the numerical value of: <span class="math">2 tan 45&deg; &times; cos 60&deg;</span> <span class="pyq-tag">CBSE 2019</span></span>
+            <span class="q-mark">1M</span>
+          </div>
+          <div style="font-size: 8.5px; margin-top: 3px;">
+            Working: <span style="border-bottom: 1.8px solid #000000; display: inline-block; width: 140px;"></span> &nbsp; Answer = <span style="border-bottom: 1.8px solid #000000; display: inline-block; width: 40px;"></span>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="q-card">
+          <div class="q-title">
+            <span><span class="q-num">4.</span> If <span class="math">&radic;3 tan &theta; = 1</span>, find the acute angle <span class="math">&theta;</span>. <span class="pyq-tag">CBSE 2021</span></span>
+            <span class="q-mark">1M</span>
+          </div>
+          <div style="font-size: 8.5px; margin-top: 3px;">
+            Working: <span class="math">tan &theta; =</span> <span style="border-bottom: 1.8px solid #000000; display: inline-block; width: 60px;"></span> &nbsp;&rArr;&nbsp; <span class="math">&theta; =</span> <span style="border-bottom: 1.8px solid #000000; display: inline-block; width: 50px;"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION B: SHORT ANSWER QUESTIONS (2 MARKS EACH) -->
+      <div class="section-header">
+        <span class="section-title">Section B &bull; Short Answer Questions (CBSE PYQs)</span>
+        <span class="section-weight">6 Marks (3 &times; 2M)</span>
+      </div>
+
+      <!-- Q5 -->
+      <div class="qa-box">
+        <div class="qa-head">
+          <span><strong>5. Given that <span class="math">15 cot A = 8</span>, find the values of <span class="math">sin A</span> and <span class="math">sec A</span>.</strong> <span class="pyq-tag">CBSE 2018 / NCERT</span></span>
+          <span class="q-mark">2M</span>
+        </div>
+        <div class="work-grid-2">
+          <div class="step-box">
+            <div class="step-label">Step 1: Write cot A and find Hypotenuse (k):</div>
+            <div class="write-rule"></div>
+            <div class="write-rule"></div>
+          </div>
+          <div class="step-box">
+            <div class="step-label">Step 2: Determine sin A and sec A:</div>
+            <div class="write-rule"></div>
+            <div class="write-rule"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="qa-box">
+        <div class="qa-head">
+          <span><strong>6. Evaluate the exact numerical value of: <span class="math">2 tan<sup>2</sup> 45&deg; + cos<sup>2</sup> 30&deg; &minus; sin<sup>2</sup> 60&deg;</span></strong> <span class="pyq-tag">CBSE 2020</span></span>
+          <span class="q-mark">2M</span>
+        </div>
+        <div class="step-box" style="min-height: 46px;">
+          <div class="step-label">Substitute table values and simplify:</div>
+          <div class="write-rule"></div>
+          <div class="write-rule"></div>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="qa-box">
+        <div class="qa-head">
+          <span><strong>7. In right &Delta;ABC, right-angled at B, <span class="math">AB = 5 cm</span> and <span class="math">&ang;ACB = 30&deg;</span>. Find lengths <span class="math">BC</span> and <span class="math">AC</span>.</strong> <span class="pyq-tag">CBSE 2022</span></span>
+          <span class="q-mark">2M</span>
+        </div>
+        <div class="diagram-qa-layout">
+          <div class="diagram-box">
+            <!-- Triangle ABC SVG -->
+            <svg width="95" height="74" viewBox="0 0 110 85" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="15,70 95,70 15,15" fill="none" stroke="#000000" stroke-width="2"/>
+              <!-- Right angle mark at B -->
+              <rect x="15" y="58" width="12" height="12" fill="none" stroke="#000000" stroke-width="1.4"/>
+              <!-- Labels -->
+              <text x="8" y="12" font-size="8.5" font-weight="bold" fill="#000000">A</text>
+              <text x="5" y="76" font-size="8.5" font-weight="bold" fill="#000000">B</text>
+              <text x="98" y="74" font-size="8.5" font-weight="bold" fill="#000000">C</text>
+              <text x="2" y="44" font-size="7.5" font-weight="bold" fill="#000000">5 cm</text>
+              <text x="68" y="65" font-size="7.5" font-weight="bold" fill="#000000">30&deg;</text>
+            </svg>
+          </div>
+          <div>
+            <div class="step-box" style="min-height: 48px;">
+              <div class="step-label">Use trigonometric ratios (sin 30&deg; or tan 30&deg;) to find BC and AC:</div>
+              <div class="write-rule"></div>
+              <div class="write-rule"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div class="page-footer">
+      <span>Class X Mathematics &bull; Introduction to Trigonometry (Easy Level)</span>
+      <span>Confidential Test Paper &bull; Page 1 of 2</span>
+      <span>Turn Over to Page 2 &rarr;</span>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page" id="page2">
+    <div>
+      <!-- Page 2 Header Strip -->
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.8px solid #000000; padding-bottom: 4px; margin-bottom: 6px;">
+        <span style="font-size: 10px; font-weight: 800; text-transform: uppercase;">Class X Mathematics Test &bull; Page 2</span>
+        <span style="font-size: 9px; font-weight: 700;">Roll No: <span style="display: inline-block; width: 60px; border-bottom: 1.5px solid #000000;"></span></span>
+        <span style="font-size: 9px; font-weight: 800;">Max Marks for Page 2: 10 Marks</span>
+      </div>
+
+      <!-- SECTION C: SHORT ANSWER QUESTIONS (3 MARKS EACH) -->
+      <div class="section-header">
+        <span class="section-title">Section C &bull; Conceptual Application Questions (CBSE PYQs)</span>
+        <span class="section-weight">6 Marks (2 &times; 3M)</span>
+      </div>
+
+      <!-- Q8 -->
+      <div class="qa-box">
+        <div class="qa-head">
+          <span><strong>8. If <span class="math">tan &theta; = 4/3</span>, evaluate the value of the algebraic trigonometric expression:</strong> <span class="pyq-tag">CBSE 2019 / 2020</span></span>
+          <span class="q-mark">3M</span>
+        </div>
+        <p style="font-size: 9px; margin-bottom: 4px; font-weight: 700; text-align: center;">
+          Expression: &nbsp; <span class="math">(4 sin &theta; &minus; 3 cos &theta;) / (4 sin &theta; + 3 cos &theta;)</span>
+        </p>
+        <div class="step-box" style="min-height: 75px;">
+          <div class="step-label">Method 1 (Divide numerator & denominator by cos &theta;) OR Method 2 (Find sin &theta; & cos &theta;):</div>
+          <div class="write-rule"></div>
+          <div class="write-rule"></div>
+          <div class="write-rule"></div>
+          <div class="write-rule"></div>
+        </div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="qa-box">
+        <div class="qa-head">
+          <span><strong>9. If <span class="math">sin(A &minus; B) = 1/2</span> and <span class="math">cos(A + B) = 1/2</span>, where <span class="math">0&deg; &lt; A + B &le; 90&deg;</span> and <span class="math">A &gt; B</span>, find the values of acute angles <span class="math">A</span> and <span class="math">B</span>.</strong> <span class="pyq-tag">CBSE 2016 / 2020 / 2023</span></span>
+          <span class="q-mark">3M</span>
+        </div>
+        <div class="step-box" style="min-height: 75px;">
+          <div class="step-label">Step 1: Form linear equations using standard angle table values:</div>
+          <div class="write-rule"></div>
+          <div class="write-rule"></div>
+          <div class="step-label" style="margin-top: 4px;">Step 2: Solve the simultaneous equations to find A and B:</div>
+          <div class="write-rule"></div>
+          <div class="write-rule"></div>
+        </div>
+      </div>
+
+      <!-- SECTION D: LONG ANSWER APPLICATION QUESTION (4 MARKS) -->
+      <div class="section-header">
+        <span class="section-title">Section D &bull; Right Triangle & Multi-Ratio Problem (CBSE PYQs)</span>
+        <span class="section-weight">4 Marks (1 &times; 4M)</span>
+      </div>
+
+      <!-- Q10 -->
+      <div class="qa-box" style="margin-bottom: 6px;">
+        <div class="qa-head">
+          <span><strong>10. In &Delta;PQR, right-angled at Q, <span class="math">PQ = 5 cm</span> and <span class="math">PR + QR = 25 cm</span>.</strong> <span class="pyq-tag">CBSE 2018 / 2022</span></span>
+          <span class="q-mark">4M</span>
+        </div>
+        <div class="diagram-qa-layout" style="grid-template-columns: 110px 1fr; margin-bottom: 4px;">
+          <div class="diagram-box">
+            <!-- Triangle PQR SVG -->
+            <svg width="100" height="85" viewBox="0 0 115 95" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="18,80 102,80 18,15" fill="none" stroke="#000000" stroke-width="2"/>
+              <rect x="18" y="67" width="13" height="13" fill="none" stroke="#000000" stroke-width="1.4"/>
+              <text x="12" y="12" font-size="9" font-weight="bold" fill="#000000">P</text>
+              <text x="8" y="87" font-size="9" font-weight="bold" fill="#000000">Q</text>
+              <text x="105" y="84" font-size="9" font-weight="bold" fill="#000000">R</text>
+              <text x="3" y="48" font-size="8" font-weight="bold" fill="#000000">5 cm</text>
+              <text x="50" y="40" font-size="7.5" font-weight="bold" fill="#000000">PR</text>
+              <text x="55" y="90" font-size="7.5" font-weight="bold" fill="#000000">QR</text>
+            </svg>
+          </div>
+          <div>
+            <div class="step-box" style="min-height: 52px;">
+              <div class="step-label">(a) Let QR = x. By Pythagoras Theorem (PR<sup>2</sup> = PQ<sup>2</sup> + QR<sup>2</sup>), find QR and PR:</div>
+              <div class="write-rule"></div>
+              <div class="write-rule"></div>
+            </div>
+          </div>
+        </div>
+        <div class="step-box" style="min-height: 48px;">
+          <div class="step-label">(b) Hence, determine the values of sin P, cos P, and tan P:</div>
+          <div class="write-rule"></div>
+          <div class="write-rule"></div>
+        </div>
+      </div>
+
+      <!-- EVALUATION MATRIX & SCORING SUMMARY -->
+      <div class="eval-footer">
+        <div class="eval-row">
+          <span style="font-size: 8.5px; font-weight: 800; text-transform: uppercase;">Teacher's Evaluation Matrix:</span>
+          <div class="score-matrix">
+            <div class="score-cell">
+              <span>Sec A (4M)</span>
+              <strong>/ 4</strong>
+            </div>
+            <div class="score-cell">
+              <span>Sec B (6M)</span>
+              <strong>/ 6</strong>
+            </div>
+            <div class="score-cell">
+              <span>Sec C (6M)</span>
+              <strong>/ 6</strong>
+            </div>
+            <div class="score-cell">
+              <span>Sec D (4M)</span>
+              <strong>/ 4</strong>
+            </div>
+            <div class="score-cell" style="background: #000000; color: #ffffff;">
+              <span style="color: #ffffff;">Total (20M)</span>
+              <strong>/ 20</strong>
+            </div>
+          </div>
+          <div style="font-size: 8.5px; font-weight: 700;">
+            Examiner Sign: <span style="display: inline-block; width: 75px; border-bottom: 1.5px solid #000000;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2 Footer -->
+    <div class="page-footer">
+      <span>Class X Mathematics &bull; Introduction to Trigonometry (Easy Level)</span>
+      <span>End of Test Paper &bull; Total Marks: 20</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </div>
+
+</body>
+</html>

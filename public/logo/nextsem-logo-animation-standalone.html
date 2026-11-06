@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nextsem Logo Animation — Standalone Preview</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #17181c;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: #0c1328;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      max-width: 650px;
+      width: 100%;
+      text-align: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(4, 170, 109, 0.15);
+      border: 1px solid rgba(4, 170, 109, 0.4);
+      color: #04AA6D;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #04AA6D;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #04AA6D;
+    }
+    .stage {
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      width: 100%;
+    }
+    .letter {
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .letter.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .locked-emblem {
+      display: none;
+      animation: scaleIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.85); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .replay-btn {
+      background: #04AA6D;
+      color: #ffffff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(4, 170, 109, 0.4);
+    }
+    .replay-btn:hover {
+      background: #039861;
+      transform: translateY(-1px);
+    }
+    .subtitle {
+      color: #94a3b8;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Official Nextsem SVG Animation
+    </div>
+
+    <div class="stage" id="stage">
+      <!-- FULL NEXTSEM TRACING SEQUENCE -->
+      <svg id="sequenceSvg" viewBox="0 0 540 130" style="width: 100%; max-width: 480px; height: auto;">
+        <!-- N -->
+        <g id="l-1" class="letter">
+          <path d="M 20 115 V 15 L 75 115 V 15" fill="none" stroke="#04AA6D" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <!-- e -->
+        <g id="l-2" class="letter" transform="translate(100, 0)">
+          <path d="M 15 78 H 60 C 60 48, 15 48, 15 78 C 15 115, 60 115, 65 98" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+        </g>
+        <!-- x -->
+        <g id="l-3" class="letter" transform="translate(175, 0)">
+          <path d="M 15 50 L 60 115 M 60 50 L 15 115" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+        </g>
+        <!-- t -->
+        <g id="l-4" class="letter" transform="translate(250, 0)">
+          <path d="M 15 62 H 60 M 37 35 V 102 C 37 115, 55 115, 62 110" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+        </g>
+        <!-- s -->
+        <g id="l-5" class="letter" transform="translate(325, 0)">
+          <path d="M 55 62 C 55 50, 15 50, 15 66 C 15 84, 55 84, 55 100 C 55 115, 15 115, 15 102" fill="none" stroke="#04AA6D" stroke-width="16" stroke-linecap="round" />
+        </g>
+        <!-- e -->
+        <g id="l-6" class="letter" transform="translate(400, 0)">
+          <path d="M 15 78 H 60 C 60 48, 15 48, 15 78 C 15 115, 60 115, 65 98" fill="none" stroke="#04AA6D" stroke-width="16" stroke-linecap="round" />
+        </g>
+        <!-- m -->
+        <g id="l-7" class="letter" transform="translate(475, 0)">
+          <path d="M 10 115 V 50 M 10 70 C 10 50, 42 50, 42 70 V 115 M 42 70 C 42 50, 74 50, 74 70 V 115" fill="none" stroke="#04AA6D" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </svg>
+
+      <!-- LOCKED FINAL NS BADGE -->
+      <div id="lockedBadge" class="locked-emblem">
+        <svg viewBox="0 0 160 110" style="width: 140px; height: auto;">
+          <path d="M 15 95 V 15 L 65 95 V 15" fill="none" stroke="#04AA6D" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 145 32 C 145 15, 95 15, 95 38 C 95 60, 145 60, 145 82 C 145 95, 95 95, 95 82" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <h2 style="font-size: 20px; font-weight: 800; color: #ffffff;">Nextsem Animation & ➔ NS Emblem Lock</h2>
+    <p class="subtitle">Traces N-e-x-t-s-e-m sequentially in 1.8 seconds, then collapses into the signature NS Badge.</p>
+
+    <button class="replay-btn" onclick="runSequence()">↻ Replay Animation</button>
+  </div>
+
+  <script>
+    function runSequence() {
+      const seqSvg = document.getElementById('sequenceSvg');
+      const lockedBadge = document.getElementById('lockedBadge');
+      
+      seqSvg.style.display = 'block';
+      lockedBadge.style.display = 'none';
+
+      // Reset all letters
+      for (let i = 1; i <= 7; i++) {
+        const el = document.getElementById('l-' + i);
+        if (el) el.classList.remove('active');
+      }
+
+      // Step by step letter reveal
+      const delay = 160;
+      for (let i = 1; i <= 7; i++) {
+        setTimeout(() => {
+          const el = document.getElementById('l-' + i);
+          if (el) el.classList.add('active');
+        }, delay * i);
+      }
+
+      // Step 8: Lock into NS badge
+      setTimeout(() => {
+        seqSvg.style.display = 'none';
+        lockedBadge.style.display = 'block';
+      }, delay * 8.5);
+    }
+
+    // Auto-start on load
+    window.addEventListener('DOMContentLoaded', runSequence);
+  </script>
+</body>
+</html>

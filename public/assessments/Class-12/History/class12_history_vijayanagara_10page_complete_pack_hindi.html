@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>कक्षा 12 इतिहास संपूर्ण मूल्यांकन संकलन (20 पृष्ठ): प्रश्न पत्र एवं आदर्श उत्तर कुंजी</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 5mm 8.5mm 4mm 8.5mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Page Running Top Bar */
+    .page-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 5px;
+    }
+
+    .pt-title {
+      font-size: 9.8px;
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .pt-meta {
+      font-size: 8.5px;
+      font-weight: 600;
+    }
+
+    /* Assessment Header */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 4px;
+      padding: 5px 10px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 4px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 13.8px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    .title-area p {
+      font-size: 8.8px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.1px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2.5px 8px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #000000;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Student Info Grid */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr 1fr 1.1fr;
+      gap: 8px;
+      font-size: 8.8px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-weight: 800;
+      font-size: 8.2px;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    .info-line {
+      flex: 1;
+      border-bottom: 1.5px solid #000000;
+      min-height: 11px;
+    }
+
+    /* Instructions Strip */
+    .hint-strip {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 3.5px 8px;
+      font-size: 8.2px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+      line-height: 1.35;
+    }
+
+    .hint-title {
+      font-weight: 800;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 1.5px;
+      font-size: 8.4px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .hint-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 2px 10px;
+      font-weight: 600;
+    }
+
+    /* Topic Card */
+    .topic-card {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .topic-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3.5px 9px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topic-title {
+      font-size: 9.6px;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .topic-weight {
+      font-size: 8.4px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .topic-body {
+      padding: 7px 9.5px;
+      font-size: 10.4px;
+      line-height: 2.15;
+      text-align: justify;
+      color: #000000;
+      font-weight: 500;
+    }
+
+    .focus-note {
+      margin-top: 4px;
+      padding: 3px 6px;
+      background: #f7f7f7;
+      border-left: 3px solid #000000;
+      font-size: 8.4px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    /* Blank Style inside Paragraphs */
+    .blank-box {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 2.5px;
+      vertical-align: baseline;
+      margin: 0 1.5px;
+    }
+
+    .b-num {
+      font-size: 8.5px;
+      font-weight: 800;
+      color: #000000;
+      background: #f0f0f0;
+      border: 1.2px solid #000000;
+      border-radius: 2px;
+      padding: 0 3px;
+      line-height: 1.1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .b-line {
+      display: inline-block;
+      border-bottom: 1.8px solid #000000;
+      height: 17px;
+    }
+
+    /* Page 10 Cumulative Score Matrix */
+    .eval-box {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 4.5px 8px;
+      background: #ffffff;
+      margin-top: 3.5px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .score-matrix-row {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-bottom: 3.5px;
+    }
+
+    .score-cell {
+      border: 1.3px solid #000000;
+      border-radius: 3px;
+      padding: 2px 4px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .score-cell span {
+      display: block;
+      font-size: 6.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .score-cell strong {
+      font-size: 10px;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .remarks-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+      font-size: 7.8px;
+      font-weight: 700;
+    }
+
+    .remarks-strip {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .remarks-line {
+      flex: 1;
+      border-bottom: 1.2px solid #000000;
+      min-height: 11px;
+    }
+
+    .rubric-pill-box {
+      border: 1.2px solid #000000;
+      border-radius: 3px;
+      padding: 3.5px 6px;
+      font-size: 7.4px;
+      line-height: 1.35;
+      background: #fafafa;
+    }
+
+    .rubric-pill-box strong {
+      font-weight: 800;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1.5px solid #000000;
+      padding-top: 3px;
+      font-size: 7.8px;
+      font-weight: 700;
+      color: #000000;
+    }
+  
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 5mm 8.5mm 4mm 8.5mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Page Running Top Bar */
+    .page-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 5px;
+    }
+
+    .pt-title {
+      font-size: 9.8px;
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .pt-meta {
+      font-size: 8.5px;
+      font-weight: 600;
+    }
+
+    /* Assessment Header */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 4px;
+      padding: 5px 10px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+    }
+
+    .key-header {
+      background: #fafafa;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 3.5px;
+      margin-bottom: 4px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 13.8px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    .title-area p {
+      font-size: 8.8px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.1px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2.5px 8px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #000000;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Student Info Grid */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1.6fr 1.3fr 1.1fr;
+      gap: 8px;
+      font-size: 8.8px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-weight: 800;
+      font-size: 8.2px;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    /* Instructions Strip */
+    .hint-strip {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 3.5px 8px;
+      font-size: 8.2px;
+      background: #ffffff;
+      margin-bottom: 4.5px;
+      line-height: 1.35;
+    }
+
+    .hint-title {
+      font-weight: 800;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 1.5px;
+      font-size: 8.4px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .hint-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 2px 10px;
+      font-weight: 600;
+    }
+
+    /* Topic Card */
+    .topic-card {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .topic-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3.5px 9px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topic-title {
+      font-size: 9.6px;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .topic-weight {
+      font-size: 8.4px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .topic-body {
+      padding: 7px 9.5px;
+      font-size: 10.4px;
+      line-height: 2.15;
+      text-align: justify;
+      color: #000000;
+      font-weight: 500;
+    }
+
+    .focus-note {
+      margin-top: 4px;
+      padding: 3px 6px;
+      background: #f7f7f7;
+      border-left: 3px solid #000000;
+      font-size: 8.4px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    /* Answer Key Styling inside Paragraphs */
+    .ans-box {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 2.5px;
+      margin: 0 1.5px;
+    }
+
+    .ans-num {
+      font-size: 8.2px;
+      font-weight: 800;
+      color: #000000;
+      background: #e2e2e2;
+      border: 1.2px solid #000000;
+      border-radius: 2px;
+      padding: 0 3px;
+      line-height: 1.1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .ans-word {
+      display: inline-block;
+      font-weight: 800;
+      color: #000000;
+      border-bottom: 2px solid #000000;
+      padding: 0 2px;
+      background: #efefef;
+    }
+
+    /* Page 10 Cumulative Score Matrix */
+    .eval-box {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 4.5px 8px;
+      background: #ffffff;
+      margin-top: 3.5px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .score-matrix-row {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-bottom: 3.5px;
+    }
+
+    .score-cell {
+      border: 1.3px solid #000000;
+      border-radius: 3px;
+      padding: 2px 4px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .score-cell span {
+      display: block;
+      font-size: 6.8px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .score-cell strong {
+      font-size: 10px;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .remarks-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+      font-size: 7.8px;
+      font-weight: 700;
+    }
+
+    .remarks-strip {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .rubric-pill-box {
+      border: 1.2px solid #000000;
+      border-radius: 3px;
+      padding: 3.5px 6px;
+      font-size: 7.4px;
+      line-height: 1.35;
+      background: #fafafa;
+    }
+
+    .rubric-pill-box strong {
+      font-weight: 800;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    /* Page Footer */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1.5px solid #000000;
+      padding-top: 3px;
+      font-size: 7.8px;
+      font-weight: 700;
+      color: #000000;
+    }
+  
+  </style>
+</head>
+<body>
+  
+  
+    <!-- ==================== PAGE 1 ==================== -->
+    <div class="page" id="page1">
+      <div>
+        
+      <!-- Master Assessment Header -->
+      <div class="test-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon">विज</div>
+            <div class="title-area">
+              <h1>कक्षा 12 इतिहास मास्टर मूल्यांकन परीक्षा: एक साम्राज्य की राजधानी - विजयनगर</h1>
+              <p>विषय 7 (NCERT भाग-II) • संपूर्ण 10-पृष्ठीय प्रकरण-आधारित रिक्त स्थान परीक्षा (पूर्णांक: 100 अंक)</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill">
+              <span>समय सीमा</span>
+              <strong>180 मिनट</strong>
+            </div>
+            <div class="meta-pill">
+              <span>अधिकतम अंक</span>
+              <strong>100 अंक</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <span class="info-label">परीक्षार्थी का नाम:</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">अनुक्रमांक (Roll No):</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">कक्षा व वर्ग:</span>
+            <div class="info-line"></div>
+          </div>
+          <div class="info-field">
+            <span class="info-label">दिनांक:</span>
+            <div class="info-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- General Instructions Strip (No Word Bank Provided) -->
+      <div class="hint-strip">
+        <div class="hint-title">
+          <span>• सामान्य परीक्षा निर्देश (NCERT कक्षा 12 इतिहास विषय 7) •</span>
+        </div>
+        <div class="hint-grid">
+          <div><strong>1. परीक्षा प्रारूप:</strong> 10 पृष्ठों में 10 विषयगत मॉड्यूल व 30 प्रकरण अनुच्छेदों में 100 रिक्त स्थान हैं। स्मृति के आधार पर भरें (कोई शब्द बैंक नहीं है)।</div>
+          <div><strong>2. अंकन योजना:</strong> प्रत्येक रिक्त स्थान हेतु 1 अंक (कुल = 100 अंक)। सटीक ऐतिहासिक नाम, तिथियाँ, राजवंश, उपाधियाँ व स्थापत्य शब्द लिखें।</div>
+        </div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 1.1 • विजयनगर साम्राज्य की स्थापना, क्षेत्रीय विस्तार एवं पम्पादेवी तीर्थ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          विजयनगर अथवा "विजय का शहर" मध्यकालीन भारत के एक अत्यंत समृद्ध महानगर और विशाल साम्राज्य दोनों का ऐतिहासिक नाम था। ऐतिहासिक परंपराओं एवं समकालीन अभिलेखों के अनुसार, इस साम्राज्य की स्थापना चौदहवीं सदी में सन् <span class="blank-box"><span class="b-num">1</span><span class="b-line" style="width: 135px;"></span></span> में दो भाइयों <span class="blank-box"><span class="b-num">2</span><span class="b-line" style="width: 135px;"></span></span> द्वारा की गई थी। अपने राजनीतिक चरमोत्कर्ष पर यह साम्राज्य उत्तर में कृष्णा नदी से लेकर सुदूर दक्षिण प्रायद्वीप तक विस्तृत था। स्थानीय मान्यता के अनुसार, राजधानी का नामकरण स्थानीय मातृदेवी <span class="blank-box"><span class="b-num">3</span><span class="b-line" style="width: 135px;"></span></span> के नाम पर हुआ था, जिनका प्राचीन मंदिर पथरीली <span class="blank-box"><span class="b-num">4</span><span class="b-line" style="width: 135px;"></span></span> नदी के तट पर साम्राज्य की स्थापना से सदियों पूर्व से स्थित था।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> ऐतिहासिक विश्लेषण: तुंगभद्रा नदी के चारों ओर स्थित ग्रेनाइट की दुर्गम पहाड़ियाँ नगर को प्राकृतिक रक्षा प्राचीर प्रदान करती थीं।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 1.2 • कॉलिन मैकेन्ज़ी का प्रारंभिक सर्वेक्षण एवं आधिकारिक पद</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          हम्पी के विस्तृत भग्नावशेषों को सर्वप्रथम सन् 1800 में एक ब्रिटिश अभियंता, सर्वेक्षक एवं पुराविद् <span class="blank-box"><span class="b-num">5</span><span class="b-line" style="width: 135px;"></span></span> द्वारा प्रकाश में लाया गया। मैकेन्ज़ी ने इस ऐतिहासिक स्थल का पहला विस्तृत सर्वेक्षण मानचित्र तैयार किया तथा स्थानीय पुरोहितों से मौखिक परंपराएँ संकलित कीं। उनकी उत्कृष्ट प्रशासनिक एवं मानचित्रण योग्यता को देखते हुए ब्रिटिश ईस्ट इंडिया कंपनी ने 1815 में उन्हें <span class="blank-box"><span class="b-num">6</span><span class="b-line" style="width: 135px;"></span></span> नियुक्त किया, जिस पद पर वे अपनी मृत्यु सन् <span class="blank-box"><span class="b-num">7</span><span class="b-line" style="width: 135px;"></span></span> तक आसीन रहे।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> इतिहास-लेखन संदर्भ: कॉलिन मैकेन्ज़ी का मूल उद्देश्य स्थानीय संस्थाओं, रीति-रिवाजों और कानूनों को समझकर ब्रिटिश प्रशासन को सुगम बनाना था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 1.3 • विरूपाक्ष मंदिर के अभिलेख, छायाचित्रण एवं यूनेस्को (UNESCO) मान्यता</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          मैकेन्ज़ी की आरंभिक जानकारियाँ मुख्य रूप से प्रसिद्ध <span class="blank-box"><span class="b-num">8</span><span class="b-line" style="width: 135px;"></span></span> मंदिर और पम्पादेवी के देवालय के पुजारियों की स्मृतियों पर आधारित थीं। इसके पश्चात् <span class="blank-box"><span class="b-num">9</span><span class="b-line" style="width: 135px;"></span></span> से छायाचित्रकारों जैसे अलेक्जेंडर ग्रीनला ने स्मारकों के विस्तृत चित्र संकलित किए तथा पुरालेखविदों ने मंदिर की दीवारों से दर्जनों अभिलेख एकत्र किए। अंततः सन् <span class="blank-box"><span class="b-num">10</span><span class="b-line" style="width: 135px;"></span></span> में हम्पी को इसके अद्वितीय स्थापत्य और सार्वभौमिक ऐतिहासिक मूल्य के कारण यूनेस्को (UNESCO) द्वारा विश्व धरोहर स्थल घोषित किया गया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> पुरातात्विक विधि: तेलुगु, कन्नड़, तमिल व संस्कृत स्रोतों का विदेशी यात्रा वृत्तांतों से मिलान कर लुप्त राजधानी का इतिहास पुनः लिखा गया।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 1 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <div class="page" id="page2">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 2 / 10</strong> — मॉड्यूल 2: चार राजवंश, क्षेत्रीय सीमांत प्रतिद्वंद्विता एवं राजसी उपाधियाँ</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 11 से 20)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 2.1 • चारों राजवंशों का ऐतिहासिक कालक्रम एवं सत्ता परिवर्तन</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          विजयनगर की सत्ता पर केवल वंशानुगत राजाओं का ही नहीं, अपितु महत्वाकांक्षी सैनिक सेनापतियों का भी अधिकार रहा। साम्राज्य का संस्थापक राजवंश <span class="blank-box"><span class="b-num">11</span><span class="b-line" style="width: 135px;"></span></span> कहलाया, जिसने 1485 ई. तक शासन किया। संगम शासकों को सन् <span class="blank-box"><span class="b-num">12</span><span class="b-line" style="width: 135px;"></span></span> में सैनिक कमांडरों <span class="blank-box"><span class="b-num">13</span><span class="b-line" style="width: 135px;"></span></span> द्वारा अपदस्थ कर दिया गया, जो 1503 तक सत्ता में रहे। इसके उपरांत सत्ता <span class="blank-box"><span class="b-num">14</span><span class="b-line" style="width: 135px;"></span></span> के हाथों में आई, जिसके काल में साम्राज्य ने अभूतपूर्व सांस्कृतिक व सैन्य गौरव प्राप्त किया। अंततः चौथा और अंतिम राजवंश <span class="blank-box"><span class="b-num">15</span><span class="b-line" style="width: 135px;"></span></span> था।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> राजनीतिक विश्लेषण: केंद्रीय शक्ति के शिथिल पड़ते ही प्रांतीय सेनापतियों (सालुव और बाद में तुलुव) ने राजसत्ता पर बलपूर्वक अधिकार जमाया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 2.2 • सीमांत संघर्ष: दक्कन के सुल्तान, उड़ीसा के गजपति एवं उपाधियाँ</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          साम्राज्य की उत्तरी सीमाओं पर विजयनगर का निरंतर संघर्ष दक्कन के सुल्तानों तथा <span class="blank-box"><span class="b-num">16</span><span class="b-line" style="width: 135px;"></span></span> के गजपति शासकों (हाथियों के स्वामी) के साथ होता रहा। समकालीन लोक-साहित्य व परंपराओं में दक्कन के सुल्तानों को <span class="blank-box"><span class="b-num">17</span><span class="b-line" style="width: 135px;"></span></span> (घोड़ों के स्वामी) की उपाधि दी गई, जबकि विजयनगर के राय शासकों को <span class="blank-box"><span class="b-num">18</span><span class="b-line" style="width: 135px;"></span></span> (लोगों के स्वामी) कहा जाता था। इन संघर्षों का प्रमुख कारण कृष्णा-तुंगभद्रा दोआब की उर्वर भूमि और समुद्री व्यापार से प्राप्त राजस्व पर नियंत्रण था।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> प्रतीकात्मक उपाधियाँ: शासकों ने स्वयं को अपनी सेना के मुख्य अंग—उड़ीसा में हाथी, दक्कन में अश्व और विजयनगर में विशाल जनबल—से अभिव्यक्त किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 2.3 • समकालीन अभिलेखीय नाम 'कर्नाटक साम्राज्यमु' एवं चोल-होयसल विरासत</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          यद्यपि आधुनिक इतिहासकार इस साम्राज्य को विजयनगर कहते हैं, किंतु समकालीन राजकीय अभिलेखों में इस राज्य को <span class="blank-box"><span class="b-num">19</span><span class="b-line" style="width: 135px;"></span></span> की संज्ञा दी गई थी। विजयनगर के राय शासकों ने अपने से पूर्ववर्ती महान दक्षिणी राज्यों, विशेषकर तमिलनाडु के चोलों और कर्नाटक के <span class="blank-box"><span class="b-num">20</span><span class="b-line" style="width: 135px;"></span></span> नरेशों की धार्मिक, प्रशासनिक और भव्य मंदिर निर्माण परंपराओं को आत्मसात कर उन्हें अत्यधिक उन्नत व विशाल रूप प्रदान किया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> राजकीय विरासत: तंजावुर के बृहदेश्वर और बेलूर के चेन्नाकेशव मंदिरों की भव्य स्थापत्य परंपराओं को विजयनगर के शासकों ने नई ऊँचाइयों पर पहुँचाया।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 2 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 3 ==================== -->
+    <div class="page" id="page3">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 3 / 10</strong> — मॉड्यूल 3: कृष्णदेव राय का गौरवशाली स्वर्णकाल (1509–1529 ई.)</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 21 से 30)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 3.1 • सैन्य विजयें, भू-क्षेत्रीय विस्तार एवं रायचूर दोआब</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          तुलुव वंश के प्रतापी सम्राट कृष्णदेव राय का शासनकाल <span class="blank-box"><span class="b-num">21</span><span class="b-line" style="width: 135px;"></span></span> तक रहा, जो साम्राज्य के चरमोत्कर्ष और सुदृढ़ीकरण का काल था। उन्होंने सन् <span class="blank-box"><span class="b-num">22</span><span class="b-line" style="width: 135px;"></span></span> में कृष्णा और तुंगभद्रा नदियों के मध्य स्थित अत्यंत उर्वर <span class="blank-box"><span class="b-num">23</span><span class="b-line" style="width: 135px;"></span></span> पर निर्णायक अधिकार कर लिया। इसके अतिरिक्त उन्होंने 1514 में उड़ीसा के गजपति शासकों को पराजित किया तथा 1520 में <span class="blank-box"><span class="b-num">24</span><span class="b-line" style="width: 135px;"></span></span> के सुल्तान को करारी शिकस्त देकर प्रायद्वीप में विजयनगर की अप्रतिरोध्य सैन्य श्रेष्ठता सिद्ध की।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> रणनीतिक भूगोल: रायचूर दोआब अपनी कृषि संपन्नता और हीरों की खदानों के कारण दक्कनी सुल्तानों और विजयनगर के मध्य निरंतर युद्ध का केंद्र बना रहा।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 3.2 • साहित्यिक योगदान: तेलुगु राजव्यवस्था ग्रंथ 'आमुक्तमाल्यद'</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          कृष्णदेव राय केवल एक अजेय योद्धा ही नहीं, बल्कि उच्च कोटि के विद्वान भी थे। उन्होंने <span class="blank-box"><span class="b-num">25</span><span class="b-line" style="width: 135px;"></span></span> भाषा में शासनकला, कूटनीति और विदेशी वाणिज्य पर आधारित एक अनुपम ग्रंथ <span class="blank-box"><span class="b-num">26</span><span class="b-line" style="width: 135px;"></span></span> की रचना की। इस ग्रंथ में उन्होंने राजा को परामर्श दिया कि वह अपने बंदरगाहों का सुधार करे तथा संकट में पड़े विदेशी <span class="blank-box"><span class="b-num">27</span><span class="b-line" style="width: 135px;"></span></span> को विशेष संरक्षण प्रदान करे, जिससे युद्धक अश्व और बहुमूल्य रत्न केवल उसी के राजकीय कोष में आएँ।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> मूल स्रोत विश्लेषण: आमुक्तमाल्यद दर्शाता है कि मध्यकालीन प्रायद्वीपीय राजनीति में समुद्री व्यापार केवल आर्थिक लाभ नहीं, बल्कि राज्य के अस्तित्व की धुरी था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 3.3 • उपनगरीय नगर नगलपुरम एवं रायगोपुरम स्थापत्य</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          अपनी पूज्य माता नागला देवी की स्मृति में कृष्णदेव राय ने विजयनगर के समीप एक समृद्ध उपनगर <span class="blank-box"><span class="b-num">28</span><span class="b-line" style="width: 135px;"></span></span> की स्थापना की। इसके अतिरिक्त, वे दक्षिण भारत के प्रमुख मंदिरों के महान संरक्षक थे, जहाँ उन्होंने देवालयों के सम्मुख गगनचुंबी प्रवेश द्वार बनवाए जिन्हें <span class="blank-box"><span class="b-num">29</span><span class="b-line" style="width: 135px;"></span></span> कहा जाता है। उन्होंने शाही अनुष्ठानों हेतु प्रसिद्ध विशाल मंच का भी विस्तार किया जिसे पुर्तगाली स्रोतों में <span class="blank-box"><span class="b-num">30</span><span class="b-line" style="width: 135px;"></span></span> कहा गया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> धार्मिक राजनीति: मीलों दूर से दिखने वाले विशाल रायगोपुरम राजा की असीम शक्ति, धन-संपदा और देवताओं के प्रति उनकी अनन्य भक्ति का प्रतीक थे।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 3 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 4 ==================== -->
+    <div class="page" id="page4">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 4 / 10</strong> — मॉड्यूल 4: अश्व व्यापार, पुर्तगाली आग्नेयास्त्र एवं अमर-नायक व्यवस्था</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 31 से 40)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 4.1 • अरबी अश्व आयात एवं स्थानीय 'कुदिरै चेट्टि' व्यापारिक संघ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          मध्यकालीन प्रायद्वीपीय युद्धों में सैन्य सफलता तीव्रगामी <span class="blank-box"><span class="b-num">31</span><span class="b-line" style="width: 135px;"></span></span> पर निर्भर करती थी, अतः अरब तथा मध्य एशिया से उत्तम नस्ल के घोड़ों का आयात अनिवार्य था। इस व्यापार पर आरंभ में अरब सौदागरों का वर्चस्व था, किंतु स्थानीय व्यापारी जिन्हें <span class="blank-box"><span class="b-num">32</span><span class="b-line" style="width: 135px;"></span></span> (घोड़ों के सौदागर) कहा जाता था, भी सक्रिय थे। सन् <span class="blank-box"><span class="b-num">33</span><span class="b-line" style="width: 135px;"></span></span> में पश्चिमी तट पर <span class="blank-box"><span class="b-num">34</span><span class="b-line" style="width: 135px;"></span></span> व्यापारियों का पदार्पण हुआ, जिन्होंने व्यापारिक समीकरणों में नया मोड़ ला दिया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> आर्थिक विवशता: दक्षिण भारत की उष्णकटिबंधीय जलवायु उच्च नस्ल के घोड़ों के प्रजनन हेतु उपयुक्त न होने के कारण विदेशी आयात पर पूर्ण निर्भरता थी।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 4.2 • यूरोपीय आग्नेयास्त्रों का पदार्पण एवं पुर्तगाली सामरिक संबंध</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          पुर्तगालियों ने पश्चिमी तट पर अपनी बस्तियाँ स्थापित कीं और श्रेष्ठ सैन्य तकनीक, विशेषकर नौसैनिक तोपों और <span class="blank-box"><span class="b-num">35</span><span class="b-line" style="width: 135px;"></span></span> का उपयोग किया। युद्धक अश्वों और आधुनिक हथियारों पर उनके नियंत्रण ने उन्हें विजयनगर के <span class="blank-box"><span class="b-num">36</span><span class="b-line" style="width: 135px;"></span></span> का महत्वपूर्ण सैन्य सहयोगी बना दिया, जिससे दक्कन की पारंपरिक युद्ध शैलियों में क्रांतिकारी बदलाव आया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> सैन्य क्रांति: बारूदी बंदूकों और मैचलॉक बंदूकों के आगमन ने मध्यकालीन युद्धों को घुड़सवारों के सीधे टकराव से हटाकर आग्नेयास्त्र-आधारित बना दिया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 4.3 • अमर-नायक प्रणाली: प्रांतीय प्रशासन एवं सैनिक जागीरदारी</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          <span class="blank-box"><span class="b-num">37</span><span class="b-line" style="width: 135px;"></span></span> प्रणाली विजयनगर का प्रमुख राजनीतिक नवाचार थी, जिसके अनेक तत्व दिल्ली सल्तनत की <span class="blank-box"><span class="b-num">38</span><span class="b-line" style="width: 135px;"></span></span> से मिलते-जुलते थे। 'अमर' शब्द की उत्पत्ति संस्कृत भाषा के शब्द <span class="blank-box"><span class="b-num">39</span><span class="b-line" style="width: 135px;"></span></span> से मानी जाती है, जिसका अर्थ युद्ध होता है। नायक अपने क्षेत्रों से कर वसूलते और राजा हेतु सैनिक रखते थे, किंतु <span class="blank-box"><span class="b-num">40</span><span class="b-line" style="width: 135px;"></span></span> में अनेक नायकों ने विद्रोह कर स्वतंत्र राज्यों की स्थापना कर ली।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> संस्थागत द्वंद्व: अमर-नायकों ने केंद्र को विशाल सेना तो प्रदान की, किंतु उनकी स्वायत्तता और महत्वाकांक्षा ने अंततः साम्राज्य को विखंडित कर दिया।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 4 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 5 ==================== -->
+    <div class="page" id="page5">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 5 / 10</strong> — मॉड्यूल 5: तालिकोटा का विध्वंसकारी युद्ध (1565 ई.) एवं राजधानी का पतन</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 41 से 50)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 5.1 • उत्तराधिकार संघर्ष एवं प्रधानमंत्री राम राय की कूटनीति</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सन् <span class="blank-box"><span class="b-num">41</span><span class="b-line" style="width: 135px;"></span></span> में कृष्णदेव राय की मृत्यु के पश्चात राजदरबार में आंतरिक सत्ता संघर्ष छिड़ गया। इस काल में शक्तिशाली प्रधानमंत्री <span class="blank-box"><span class="b-num">42</span><span class="b-line" style="width: 135px;"></span></span> ने शासन की वास्तविक बागडोर संभाली। उन्होंने दक्कन के सुल्तानों को एक-दूसरे के विरुद्ध लड़ाने की आक्रामक नीति अपनाई। इस कूटनीति से रुष्ट होकर बीजापुर, अहमदनगर और <span class="blank-box"><span class="b-num">43</span><span class="b-line" style="width: 135px;"></span></span> के सुल्तानों ने एकजुट होकर <span class="blank-box"><span class="b-num">44</span><span class="b-line" style="width: 135px;"></span></span> के विरुद्ध एक शक्तिशाली संयुक्त मोर्चा गठित किया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> कूटनीतिक भूल: राम राय के अति-आत्मविश्वास और सुल्तानों के आंतरिक मामलों में अत्यधिक हस्तक्षेप ने सभी सल्तनतों को संयुक्त आक्रमण हेतु प्रेरित किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 5.2 • राक्षसी-तांगड़ी (तालिकोटा) का ऐतिहासिक एवं निर्णायक संग्राम</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          जनवरी 1565 में विजयनगर की सेना का सामना सुल्तानों की संयुक्त सेना से <span class="blank-box"><span class="b-num">45</span><span class="b-line" style="width: 135px;"></span></span> (जिसे सामान्यतः तालिकोटा कहा जाता है) के मैदान में हुआ। विरोधी मोर्चे ने भारी <span class="blank-box"><span class="b-num">46</span><span class="b-line" style="width: 135px;"></span></span> और अनुशासित अश्वदल का समन्वित प्रयोग किया, जिससे विजयनगर की सेना बुरी तरह पराजित हुई। वृद्ध प्रधानमंत्री राम राय को <span class="blank-box"><span class="b-num">47</span><span class="b-line" style="width: 135px;"></span></span> में ही बंदी बनाकर मार डाला गया, जिससे सेना में भगदड़ मच गई।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> युद्धनीति: सुल्तानों ने केंद्र में भारी तोपों को लोहे की जंजीरों से जोड़कर भीषण गोलाबारी की, जिसने विजयनगर के पैदल सैनिकों को पस्त कर दिया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 5.3 • राजधानी का विनाश एवं पेनुकोंडा-चंद्रगिरि में सत्ता स्थानांतरण</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सन् <span class="blank-box"><span class="b-num">48</span><span class="b-line" style="width: 135px;"></span></span> की इस पराजय के पश्चात विजयी सेनाओं ने विजयनगर शहर पर धावा बोलकर कई महीनों तक उसे लूटा और जलाकर खंडहर बना दिया। आरविदु वंश ने राजधानी को तुंगभद्रा से पूर्व की ओर <span class="blank-box"><span class="b-num">49</span><span class="b-line" style="width: 135px;"></span></span> स्थानांतरित किया तथा बाद में <span class="blank-box"><span class="b-num">50</span><span class="b-line" style="width: 135px;"></span></span> (तिरुपति के निकट) से शासन संचालित किया, जबकि मदुरै व मैसूर के नायकों ने स्वतंत्र सत्ता स्थापित कर ली।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> नगरीय विध्वंस: तालिकोटा के पश्चात विजयनगर का विनाश विश्व इतिहास में किसी महानगर के सबसे त्वरित और संपूर्ण विनाश का उदाहरण है।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 5 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 6 ==================== -->
+    <div class="page" id="page6">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 6 / 10</strong> — मॉड्यूल 6: जल संपदा प्रबंधन, सिंचाई स्थापत्य एवं हिरिया नहर</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 51 से 60)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 6.1 • तुंगभद्रा नदी की प्राकृतिक द्रोणी एवं जल संग्रहण प्रणालियाँ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          विजयनगर की भौगोलिक स्थिति की प्रमुख विशेषता <span class="blank-box"><span class="b-num">51</span><span class="b-line" style="width: 135px;"></span></span> नदी द्वारा निर्मित प्राकृतिक द्रोणी थी, जो उत्तर-पूर्व दिशा में बहती है। यह नगर चारों ओर से विशाल <span class="blank-box"><span class="b-num">52</span><span class="b-line" style="width: 135px;"></span></span> की पहाड़ियों से घिरा था जो प्राकृतिक परकोटे का कार्य करती थीं। चूँकि यह क्षेत्र अत्यंत शुष्क था, अतः पहाड़ियों से बहने वाले नालों पर विशाल <span class="blank-box"><span class="b-num">53</span><span class="b-line" style="width: 135px;"></span></span> बनाकर वर्षा जल को संचित करने हेतु बड़े-बड़े <span class="blank-box"><span class="b-num">54</span><span class="b-line" style="width: 135px;"></span></span> का निर्माण किया गया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> पर्यावरणीय अनुकूलन: नगर योजनाकारों ने ग्रेनाइट पहाड़ियों की प्राकृतिक ढलानों का उपयोग कर वर्षा के बहते जल को बड़े कुंडों में एकत्र किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 6.2 • पंद्रहवीं सदी का कमलापुरम जलाशय एवं नगर की जल आपूर्ति</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          पंद्रहवीं सदी के आरंभिक वर्षों में निर्मित जलाशयों में सबसे महत्वपूर्ण <span class="blank-box"><span class="b-num">55</span><span class="b-line" style="width: 135px;"></span></span> जलाशय था। इस जलाशय के जल से न केवल आसपास के उपजाऊ खेतों की सिंचाई की जाती थी, बल्कि एक पक्की चिनाई वाली <span class="blank-box"><span class="b-num">56</span><span class="b-line" style="width: 135px;"></span></span> के माध्यम से पानी को सीधे <span class="blank-box"><span class="b-num">57</span><span class="b-line" style="width: 135px;"></span></span> तक ले जाया जाता था, जिससे महलों की दैनिक और अनुष्ठानिक आवश्यकताएँ पूरी होती थीं।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> बहुउद्देशीय जल संरचना: कमलापुरम जलाशय एक साथ कृषि भूमि की सिंचाई और ढकी हुई पाषाण नालियों द्वारा महलों तक पेयजल पहुँचाने का कार्य करता था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 6.3 • ऐतिहासिक हिरिया नहर एवं अंतःनगरीय कृषि क्षेत्र</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सर्वाधिक उल्लेखनीय बची हुई जल संरचनाओं में <span class="blank-box"><span class="b-num">58</span><span class="b-line" style="width: 135px;"></span></span> है, जिसमें तुंगभद्रा पर बने एक विशाल बाँध से पानी लाया जाता था। इसका निर्माण <span class="blank-box"><span class="b-num">59</span><span class="b-line" style="width: 135px;"></span></span> के राजाओं द्वारा कराया गया था। यह नहर धार्मिक केंद्र को <span class="blank-box"><span class="b-num">60</span><span class="b-line" style="width: 135px;"></span></span> से अलग करने वाली उपजाऊ घाटी को सिंचित करती थी, जिससे परकोटे के अंदर ही बारहमासी सघन खेती संभव हो सकी।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> सुरक्षित कृषि: हिरिया नहर ने यह सुनिश्चित किया कि बाहरी घेराबंदी के समय भी परकोटे के भीतर की फसलें लहलहाती रहें और भुखमरी न फैले।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 6 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 7 ==================== -->
+    <div class="page" id="page7">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 7 / 10</strong> — मॉड्यूल 7: सात परकोटे, संकेंद्रित प्राचीरें एवं कृषि क्षेत्रों की किलेबंदी</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 61 से 70)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 7.1 • फारसी राजदूत अब्दुर रज्जाक का विवरण एवं सात पंक्तियाँ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          1440 के दशक में कालीकट से विजयनगर आए ईरानी (फारसी) दूत <span class="blank-box"><span class="b-num">61</span><span class="b-line" style="width: 135px;"></span></span> यहाँ के रक्षा प्राचीरों को देखकर चकित रह गया। उसने लिखा कि यह महानगर <span class="blank-box"><span class="b-num">62</span><span class="b-line" style="width: 135px;"></span></span> संकेंद्रित दीवारों से सुरक्षित था। सबसे अनूठी बात यह थी कि सबसे बाहरी दीवार शहर के साथ-साथ विस्तृत <span class="blank-box"><span class="b-num">63</span><span class="b-line" style="width: 135px;"></span></span>, बगीचों और जंगलों को भी घेरती थी, ताकि शत्रु द्वारा लंबी <span class="blank-box"><span class="b-num">64</span><span class="b-line" style="width: 135px;"></span></span> किए जाने पर भी रसद का अभाव न हो।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> सैन्य रणनीति: मध्यकालीन युद्धों में शहर प्रायः भुखमरी के कारण आत्मसमर्पण करते थे, किंतु विजयनगर ने खेतों को भीतर रखकर इस संकट का स्थायी समाधान किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 7.2 • बिना गारे की शुष्क चिनाई एवं फन्नीनुमा (Wedge) पत्थर</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          इन विशाल दीवारों के निर्माण में चूने अथवा <span class="blank-box"><span class="b-num">65</span><span class="b-line" style="width: 135px;"></span></span> का बिल्कुल उपयोग नहीं किया गया था। इसके स्थान पर पत्थरों को विशेष <span class="blank-box"><span class="b-num">66</span><span class="b-line" style="width: 135px;"></span></span> आकारों में तराशा गया था जो बिना किसी गारे के परस्पर खांचों में कस जाते थे। दीवारों को अतिरिक्त मजबूती प्रदान करने हेतु बाहर की ओर निकले हुए वर्गाकार तथा आयताकार <span class="blank-box"><span class="b-num">67</span><span class="b-line" style="width: 135px;"></span></span> का निर्माण किया गया था।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> स्थापत्य तकनीक: शुष्क पाषाण चिनाई की यह विशेषता थी कि तोपों के आघात अथवा भूकंप के झटकों से पत्थर टूटने के स्थान पर और सघनता से बैठ जाते थे।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 7.3 • मेहराबदार सुरक्षित प्रवेश द्वार एवं भारत-इस्लामी स्थापत्य शैली</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          किलेबंद परिधि में प्रवेश नियंत्रित विशाल द्वारों से होता था जिनमें बने नुकीले मेहराब और गुंबद <span class="blank-box"><span class="b-num">68</span><span class="b-line" style="width: 135px;"></span></span> स्थापत्य कला के गहरे प्रभाव को दर्शाते हैं। ये मुख्य मार्ग पहाड़ियों के मध्य प्राकृतिक <span class="blank-box"><span class="b-num">69</span><span class="b-line" style="width: 135px;"></span></span> से होकर गुजरते थे, जो बाहरी प्रवेश द्वारों को सीधे नगर के प्रमुख मंदिर <span class="blank-box"><span class="b-num">70</span><span class="b-line" style="width: 135px;"></span></span> से जोड़ते थे, जिससे व्यापार और आवागमन सुव्यवस्थित रहता था।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> सांस्कृतिक संश्लेषण: प्रवेश द्वारों में तुर्की मेहराब व गुंबद के साथ पारंपरिक धरन-कोष्ठक शैली का संगम मध्यकालीन कलात्मक समन्वय का प्रमाण है।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 7 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 8 ==================== -->
+    <div class="page" id="page8">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 8 / 10</strong> — मॉड्यूल 8: राजकीय केंद्र, सभामंडप एवं महानवमी डिब्बा</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 71 से 80)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 8.1 • राजकीय केंद्र की स्थिति एवं 'राजा का भवन' परिसर</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          राजकीय केंद्र महानगर के <span class="blank-box"><span class="b-num">71</span><span class="b-line" style="width: 135px;"></span></span> भाग में स्थित था और इसमें साठ से अधिक मंदिर विद्यमान थे। इस केंद्र का सबसे विशाल प्रशासनिक व आवासीय परिसर <span class="blank-box"><span class="b-num">72</span><span class="b-line" style="width: 135px;"></span></span> कहलाता है, जिसके भीतर दो अत्यंत भव्य चबूतरे स्थित थे: विशाल स्तंभों वाला <span class="blank-box"><span class="b-num">73</span><span class="b-line" style="width: 135px;"></span></span> (Audience Hall) तथा अत्यंत ऊँचा अनुष्ठानिक मंच <span class="blank-box"><span class="b-num">74</span><span class="b-line" style="width: 135px;"></span></span>, जो दोहरी पत्थर की दीवारों से घिरे थे।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> पवित्र एवं धर्मनिरपेक्ष संगम: राजकीय केंद्र में 60 से अधिक मंदिरों की स्थापना यह दर्शाती है कि राजसत्ता को वैधता केवल धार्मिक संरक्षण से ही मिलती थी।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 8.2 • सभामंडप का जटिल स्तंभ-विन्यास एवं पुरातात्विक पहेली</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सभामंडप एक ऊँचा मंच था जिस पर पास-पास बने खांचों में <span class="blank-box"><span class="b-num">75</span><span class="b-line" style="width: 135px;"></span></span> खड़े किए गए थे जो संभवतः एक ऊपरी मंजिल को सहारा देते थे। दूसरी मंजिल तक जाने हेतु सीढ़ियाँ बनी थीं, किंतु खंभों के अत्यधिक पास होने के कारण खुला स्थान बहुत कम था, जिससे इसका वास्तविक <span class="blank-box"><span class="b-num">76</span><span class="b-line" style="width: 135px;"></span></span> आज भी <span class="blank-box"><span class="b-num">77</span><span class="b-line" style="width: 135px;"></span></span> के लिए एक गंभीर विचारणीय पहेली बना हुआ है।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> पुरातात्विक रहस्य: खंभों के सघन विन्यास से प्रतीत होता है कि सभामंडप कोई सार्वजनिक सभा स्थल न होकर सुरक्षित राजकीय कोष या गोपनीय कक्ष रहा होगा।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 8.3 • महानवमी डिब्बा: विशाल चबूतरा एवं दस-दिवसीय दशहरा पर्व</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          महानवमी डिब्बा 11,000 वर्ग फीट के आधार से लगभग <span class="blank-box"><span class="b-num">78</span><span class="b-line" style="width: 135px;"></span></span> की ऊँचाई तक उठता है। यह मंच आश्विन मास के प्रसिद्ध दस-दिवसीय शरद उत्सव <span class="blank-box"><span class="b-num">79</span><span class="b-line" style="width: 135px;"></span></span> (दशहरा) का मुख्य केंद्र था, जिसे पुर्तगाली यात्री डोमिंगो पेस ने <span class="blank-box"><span class="b-num">80</span><span class="b-line" style="width: 135px;"></span></span> नाम दिया था, जहाँ अधीनस्थ अमर-नायक सम्राट के समक्ष अपनी वार्षिक भेंट और राजस्व प्रस्तुत करते थे।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> अनुष्ठान एवं संप्रभुता: उत्सव के अंतिम दिन राजकीय अश्वों, अस्त्र-शस्त्रों की पूजा और सैन्य परेड द्वारा सम्राट अपनी सर्वोच्च शक्ति का सार्वजनिक प्रदर्शन करते थे।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 8 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 9 ==================== -->
+    <div class="page" id="page9">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 9 / 10</strong> — मॉड्यूल 9: लोटस महल (कमल महल), गजशाला एवं हजारा राम मंदिर</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 81 से 90)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 9.1 • लोटस महल (कमल महल) एवं दरबारी स्थापत्य का समन्वय</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          राजकीय केंद्र के सबसे सुंदर एवं चर्चित भवनों में <span class="blank-box"><span class="b-num">81</span><span class="b-line" style="width: 135px;"></span></span> है, जिसका यह नाम <span class="blank-box"><span class="b-num">82</span><span class="b-line" style="width: 135px;"></span></span> में आए अंग्रेज अधिकारियों द्वारा रखा गया था। कॉलिन मैकेन्ज़ी के मानचित्र के अनुसार यह एक <span class="blank-box"><span class="b-num">83</span><span class="b-line" style="width: 135px;"></span></span> था जहाँ राजा अपने प्रमुख मंत्रियों से मंत्रणा करते थे। इसमें नौ पिरामिडीय शिखर तथा सुंदर मेहराब हैं जो <span class="blank-box"><span class="b-num">84</span><span class="b-line" style="width: 135px;"></span></span> स्थापत्य शैली के उत्कृष्ट समन्वय का प्रतीक हैं।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> दरबारी सौंदर्यशास्त्र: लोटस महल उस समन्वयवादी दरबारी संस्कृति को दर्शाता है जहाँ इस्लामी मेहराब व पलस्तर के काम को हिंदू शिखरों के साथ संयोजित किया गया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 9.2 • हाथियों का विशाल अस्तबल (गजशाला)</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          लोटस महल के प्रांगण के समीप पत्थरों से निर्मित <span class="blank-box"><span class="b-num">85</span><span class="b-line" style="width: 135px;"></span></span> गुंबददार विशाल कक्षों की एक कतार खड़ी है जिसे <span class="blank-box"><span class="b-num">86</span><span class="b-line" style="width: 135px;"></span></span> कहा जाता है। यह विशाल उपयोगी संरचना सम्राट के सबसे मूल्यवान युद्धक <span class="blank-box"><span class="b-num">87</span><span class="b-line" style="width: 135px;"></span></span> को रखने हेतु बनाई गई थी, जिसकी ऊँची मेहराबदार छतें इंडो-इस्लामी शैली के गुंबदों से आच्छादित हैं।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> सामरिक प्रतिष्ठा: राजकीय हाथियों के लिए इतने भव्य और विशाल कक्षों का निर्माण मध्यकालीन युद्ध प्रणाली में गजसेना के रणनीतिक महत्व को दर्शाता है।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 9.3 • हजारा राम मंदिर एवं रामायण के भित्ति-शिल्प</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          राजकीय केंद्र में स्थित <span class="blank-box"><span class="b-num">88</span><span class="b-line" style="width: 135px;"></span></span> मंदिर संभवतः केवल <span class="blank-box"><span class="b-num">89</span><span class="b-line" style="width: 135px;"></span></span> के सदस्यों के व्यक्तिगत पूजन हेतु आरक्षित था। इस मंदिर की आंतरिक एवं बाहरी दीवारों पर हिंदू महाकाव्य <span class="blank-box"><span class="b-num">90</span><span class="b-line" style="width: 135px;"></span></span> के विभिन्न प्रसंगों को सजीव पाषाण मूर्तियों व उत्कीर्ण फलकों के माध्यम से दर्शाया गया है, जो विजयनगर की मूर्तिकला का सर्वोत्कृष्ट उदाहरण हैं।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> दैवीय राजत्व: मर्यादा पुरुषोत्तम राम के जीवन प्रसंगों को अपने निजी देवालय में उकेरकर विजयनगर के शासक स्वयं को धर्मपरायण आदर्श राजा के रूप में प्रस्तुत करते थे।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 9 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 10 ==================== -->
+    <div class="page" id="page10">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास परीक्षा • पृष्ठ 10 / 10</strong> — मॉड्यूल 10: धार्मिक केंद्र, विट्ठल मंदिर, आधुनिक पुरातात्विक सर्वेक्षण एवं मूल्यांकन</div>
+        <div class="pt-meta">अनुक्रमांक: <span style="display:inline-block; width:75px; border-bottom:1.5px solid #000;"></span> &nbsp;|&nbsp; <strong>पृष्ठ अंक: 10 अंक (रिक्त स्थान 91 से 100)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 10.1 • धार्मिक केंद्र, विरूपाक्ष देव एवं 'हिंदू सुरत्राण' उपाधि</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          धार्मिक केंद्र तुंगभद्रा नदी के उत्तरी पथरीले तट पर स्थित था। यहाँ के मुख्य संरक्षक देव <span class="blank-box"><span class="b-num">91</span><span class="b-line" style="width: 135px;"></span></span> थे, जिन्हें भगवान <span class="blank-box"><span class="b-num">92</span><span class="b-line" style="width: 135px;"></span></span> का रूप माना जाता था। सभी राजकीय आदेशों पर कन्नड़ लिपि में <span class="blank-box"><span class="b-num">93</span><span class="b-line" style="width: 135px;"></span></span> शब्द अंकित होता था, और राजाओं ने समकालीन राजनीतिक शब्दावली को अपनाते हुए स्वयं को <span class="blank-box"><span class="b-num">94</span><span class="b-line" style="width: 135px;"></span></span> (अर्थात् हिंदू सुल्तान) की प्रतिष्ठित उपाधि से विभूषित किया।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> सांस्कृतिक शब्दावली: 'हिंदू सुरत्राण' की उपाधि यह दर्शाती है कि राय शासकों ने सार्वभौमिक प्रतिष्ठा हेतु समकालीन इस्लामी राजसी शब्दावली को निसंकोच अपनाया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 10.2 • विट्ठल मंदिर परिसर, एकाश्म पाषाण रथ एवं रथ वीथिकाएँ</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          धार्मिक केंद्र का एक अन्य भव्य देवालय विट्ठल मंदिर है, जिसके मुख्य देवता <span class="blank-box"><span class="b-num">95</span><span class="b-line" style="width: 135px;"></span></span> थे, जो मूलतः <span class="blank-box"><span class="b-num">96</span><span class="b-line" style="width: 135px;"></span></span> में पूजे जाने वाले भगवान विष्णु के रूप थे। इस मंदिर परिसर का प्रमुख आकर्षण इसका विश्वप्रसिद्ध <span class="blank-box"><span class="b-num">97</span><span class="b-line" style="width: 135px;"></span></span> है, तथा मंदिर के मुख्य गोपुरम के सामने चौड़ी रथ गलियाँ थीं जो संपन्न व्यापारिक <span class="blank-box"><span class="b-num">98</span><span class="b-line" style="width: 135px;"></span></span> के रूप में कार्य करती थीं।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> सांस्कृतिक समावेशन: महाराष्ट्र के विट्ठल देव की उपासना को राजधानी में स्थापित करना विभिन्न क्षेत्रीय आस्थाओं को समेटने की साम्राज्यवादी नीति का अंग था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 10.3 • 1980 के दशक का सर्वेक्षण एवं 25 वर्गाकार ग्रिड प्रणाली</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          1980 के दशक में भारतीय पुरातत्व सर्वेक्षण (ASI) तथा अंतरराष्ट्रीय विशेषज्ञों द्वारा संपूर्ण स्थल को <span class="blank-box"><span class="b-num">99</span><span class="b-line" style="width: 135px;"></span></span> में विभाजित किया गया, जिन्हें अंग्रेजी वर्णमाला के अक्षरों से नामांकित किया गया। इस वैज्ञानिक पद्धति से दशकों के शोध में हजारों खड़े स्मारकों व भू-गर्भित <span class="blank-box"><span class="b-num">100</span><span class="b-line" style="width: 135px;"></span></span> का अत्यंत सूक्ष्म और प्रामाणिक मानचित्रण संपन्न हुआ।
+          <div class="focus-note"><strong>ऐतिहासिक विश्लेषण / संदर्भ:</strong> मानचित्रण पद्धति: ग्रिड प्रणाली ने विशाल मंदिरों से लेकर छोटी से छोटी खरल व स्तंभ-छिद्रों तक का वैज्ञानिक दस्तावेजीकरण संभव बनाया।</div>
+        </div>
+      </div>
+        
+      <!-- Teacher's Cumulative Diagnostic Scorecard -->
+      <div class="eval-box">
+        <div class="eval-grid">
+          <div>
+            <div class="score-matrix-row">
+              <span style="font-size: 8px; font-weight: 800; min-width: 80px;">मॉड्यूल प्राप्तांक:</span>
+              <div class="score-cell"><span>P1-2 (20अंक)</span><strong>/ 20</strong></div>
+              <div class="score-cell"><span>P3-4 (20अंक)</span><strong>/ 20</strong></div>
+              <div class="score-cell"><span>P5-6 (20अंक)</span><strong>/ 20</strong></div>
+              <div class="score-cell"><span>P7-8 (20अंक)</span><strong>/ 20</strong></div>
+              <div class="score-cell"><span>P9-10 (20अंक)</span><strong>/ 20</strong></div>
+              <div class="score-cell" style="background:#000; color:#fff;"><span style="color:#fff;">कुल (100)</span><strong>/ 100</strong></div>
+            </div>
+            <div class="remarks-block">
+              <div class="remarks-strip">
+                <span>नैदानिक समीक्षा (सशक्त विषयगत क्षेत्र):</span>
+                <div class="remarks-line"></div>
+              </div>
+              <div class="remarks-strip">
+                <span>उपचारात्मक कार्ययोजना (पुनरावृत्ति हेतु लक्षित विषय):</span>
+                <div class="remarks-line"></div>
+                <span style="white-space:nowrap; margin-left:8px;">परीक्षक हस्ताक्षर: ______________</span>
+              </div>
+            </div>
+          </div>
+          <div class="rubric-pill-box">
+            <strong>मानक ग्रेडिंग पैमाना:</strong>
+            <div>[ ] A+ (90-100) &bull; [ ] A (80-89)</div>
+            <div>[ ] B+ (70-79) &bull; [ ] B (60-69)</div>
+            <div>[ ] C (50-59) &bull; [ ] उपचारात्मक (&lt;50)</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>संपूर्ण प्रकरण-आधारित रिक्त स्थान परीक्षा &bull; 100 अंक</span>
+        <span>पृष्ठ 10 / 10</span>
+      </div>
+    </div>
+
+
+  
+  
+    <!-- ==================== PAGE 1 ==================== -->
+    <div class="page" id="page1">
+      <div>
+        
+      <!-- Master Answer Key Header -->
+      <div class="test-header key-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon" style="background:#000;">उत्तर</div>
+            <div class="title-area">
+              <h1>कक्षा 12 इतिहास आधिकारिक आदर्श उत्तर कुंजी: एक साम्राज्य की राजधानी - विजयनगर</h1>
+              <p>विषय 7 (NCERT भाग-II) • 10-पृष्ठीय संपूर्ण परीक्षा आदर्श उत्तर तालिका (100/100 प्रामाणिक उत्तर)</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill" style="background:#000; color:#fff;">
+              <span style="color:#fff;">दस्तावेज प्रकार</span>
+              <strong style="color:#fff;">आदर्श उत्तर</strong>
+            </div>
+            <div class="meta-pill">
+              <span>कुल अंक</span>
+              <strong>100 अंक</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <span class="info-label">मूल्यांकनकर्ता:</span>
+            <span style="font-weight:700; font-size:8.5px;">वरिष्ठ विषय परीक्षक (इतिहास संकाय)</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">मान्यता:</span>
+            <span style="font-weight:700; font-size:8.5px;">NCERT कक्षा 12 इतिहास पाठ्यपुस्तक</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">कुल मॉड्यूल:</span>
+            <span style="font-weight:700; font-size:8.5px;">10 मॉड्यूल (100 रिक्त स्थान)</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">अंकन व्यवस्था:</span>
+            <span style="font-weight:700; font-size:8.5px;">1 अंक प्रति शुद्ध उत्तर</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evaluation Guidance Strip -->
+      <div class="hint-strip" style="background:#f4f4f4;">
+        <div class="hint-title">
+          <span>• परीक्षक मूल्यांकन मार्गदर्शिका एवं अंकन निर्देश •</span>
+        </div>
+        <div class="hint-grid">
+          <div><strong>1. उत्तर सत्यापन:</strong> नीचे दिए गए प्रत्येक रिक्त स्थान का उत्तर NCERT इतिहास पाठ्यपुस्तक के प्रामाणिक संदर्भ से संकलित है।</div>
+          <div><strong>2. वर्तनी सहिष्णुता:</strong> ऐतिहासिक नामों (जैसे 'कुदिरै चेट्टि', 'आमुक्तमाल्यद') में मामूली मात्रागत अशुद्धि पर अंक न काटें।</div>
+        </div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 1.1 • विजयनगर साम्राज्य की स्थापना, क्षेत्रीय विस्तार एवं पम्पादेवी तीर्थ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          विजयनगर अथवा "विजय का शहर" मध्यकालीन भारत के एक अत्यंत समृद्ध महानगर और विशाल साम्राज्य दोनों का ऐतिहासिक नाम था। ऐतिहासिक परंपराओं एवं समकालीन अभिलेखों के अनुसार, इस साम्राज्य की स्थापना चौदहवीं सदी में सन् <span class="ans-box"><span class="ans-num">1</span><span class="ans-word">1336 ईस्वी</span></span> में दो भाइयों <span class="ans-box"><span class="ans-num">2</span><span class="ans-word">हरिहर और बुक्का</span></span> द्वारा की गई थी। अपने राजनीतिक चरमोत्कर्ष पर यह साम्राज्य उत्तर में कृष्णा नदी से लेकर सुदूर दक्षिण प्रायद्वीप तक विस्तृत था। स्थानीय मान्यता के अनुसार, राजधानी का नामकरण स्थानीय मातृदेवी <span class="ans-box"><span class="ans-num">3</span><span class="ans-word">पम्पादेवी</span></span> के नाम पर हुआ था, जिनका प्राचीन मंदिर पथरीली <span class="ans-box"><span class="ans-num">4</span><span class="ans-word">तुंगभद्रा</span></span> नदी के तट पर साम्राज्य की स्थापना से सदियों पूर्व से स्थित था।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> ऐतिहासिक विश्लेषण: तुंगभद्रा नदी के चारों ओर स्थित ग्रेनाइट की दुर्गम पहाड़ियाँ नगर को प्राकृतिक रक्षा प्राचीर प्रदान करती थीं।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 1.2 • कॉलिन मैकेन्ज़ी का प्रारंभिक सर्वेक्षण एवं आधिकारिक पद</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          हम्पी के विस्तृत भग्नावशेषों को सर्वप्रथम सन् 1800 में एक ब्रिटिश अभियंता, सर्वेक्षक एवं पुराविद् <span class="ans-box"><span class="ans-num">5</span><span class="ans-word">कॉलिन मैकेन्ज़ी</span></span> द्वारा प्रकाश में लाया गया। मैकेन्ज़ी ने इस ऐतिहासिक स्थल का पहला विस्तृत सर्वेक्षण मानचित्र तैयार किया तथा स्थानीय पुरोहितों से मौखिक परंपराएँ संकलित कीं। उनकी उत्कृष्ट प्रशासनिक एवं मानचित्रण योग्यता को देखते हुए ब्रिटिश ईस्ट इंडिया कंपनी ने 1815 में उन्हें <span class="ans-box"><span class="ans-num">6</span><span class="ans-word">भारत का पहला सर्वेयर जनरल</span></span> नियुक्त किया, जिस पद पर वे अपनी मृत्यु सन् <span class="ans-box"><span class="ans-num">7</span><span class="ans-word">1821</span></span> तक आसीन रहे।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> इतिहास-लेखन संदर्भ: कॉलिन मैकेन्ज़ी का मूल उद्देश्य स्थानीय संस्थाओं, रीति-रिवाजों और कानूनों को समझकर ब्रिटिश प्रशासन को सुगम बनाना था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 1.3 • विरूपाक्ष मंदिर के अभिलेख, छायाचित्रण एवं यूनेस्को (UNESCO) मान्यता</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          मैकेन्ज़ी की आरंभिक जानकारियाँ मुख्य रूप से प्रसिद्ध <span class="ans-box"><span class="ans-num">8</span><span class="ans-word">विरूपाक्ष</span></span> मंदिर और पम्पादेवी के देवालय के पुजारियों की स्मृतियों पर आधारित थीं। इसके पश्चात् <span class="ans-box"><span class="ans-num">9</span><span class="ans-word">1856</span></span> से छायाचित्रकारों जैसे अलेक्जेंडर ग्रीनला ने स्मारकों के विस्तृत चित्र संकलित किए तथा पुरालेखविदों ने मंदिर की दीवारों से दर्जनों अभिलेख एकत्र किए। अंततः सन् <span class="ans-box"><span class="ans-num">10</span><span class="ans-word">1986</span></span> में हम्पी को इसके अद्वितीय स्थापत्य और सार्वभौमिक ऐतिहासिक मूल्य के कारण यूनेस्को (UNESCO) द्वारा विश्व धरोहर स्थल घोषित किया गया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> पुरातात्विक विधि: तेलुगु, कन्नड़, तमिल व संस्कृत स्रोतों का विदेशी यात्रा वृत्तांतों से मिलान कर लुप्त राजधानी का इतिहास पुनः लिखा गया।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 1 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <div class="page" id="page2">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 2 / 10</strong> — मॉड्यूल 2: चार राजवंश, क्षेत्रीय सीमांत प्रतिद्वंद्विता एवं राजसी उपाधियाँ</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 11 से 20 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 2.1 • चारों राजवंशों का ऐतिहासिक कालक्रम एवं सत्ता परिवर्तन</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          विजयनगर की सत्ता पर केवल वंशानुगत राजाओं का ही नहीं, अपितु महत्वाकांक्षी सैनिक सेनापतियों का भी अधिकार रहा। साम्राज्य का संस्थापक राजवंश <span class="ans-box"><span class="ans-num">11</span><span class="ans-word">संगम वंश</span></span> कहलाया, जिसने 1485 ई. तक शासन किया। संगम शासकों को सन् <span class="ans-box"><span class="ans-num">12</span><span class="ans-word">1485</span></span> में सैनिक कमांडरों <span class="ans-box"><span class="ans-num">13</span><span class="ans-word">सालुव वंश</span></span> द्वारा अपदस्थ कर दिया गया, जो 1503 तक सत्ता में रहे। इसके उपरांत सत्ता <span class="ans-box"><span class="ans-num">14</span><span class="ans-word">तुलुव वंश</span></span> के हाथों में आई, जिसके काल में साम्राज्य ने अभूतपूर्व सांस्कृतिक व सैन्य गौरव प्राप्त किया। अंततः चौथा और अंतिम राजवंश <span class="ans-box"><span class="ans-num">15</span><span class="ans-word">आरविदु वंश</span></span> था।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> राजनीतिक विश्लेषण: केंद्रीय शक्ति के शिथिल पड़ते ही प्रांतीय सेनापतियों (सालुव और बाद में तुलुव) ने राजसत्ता पर बलपूर्वक अधिकार जमाया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 2.2 • सीमांत संघर्ष: दक्कन के सुल्तान, उड़ीसा के गजपति एवं उपाधियाँ</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          साम्राज्य की उत्तरी सीमाओं पर विजयनगर का निरंतर संघर्ष दक्कन के सुल्तानों तथा <span class="ans-box"><span class="ans-num">16</span><span class="ans-word">उड़ीसा</span></span> के गजपति शासकों (हाथियों के स्वामी) के साथ होता रहा। समकालीन लोक-साहित्य व परंपराओं में दक्कन के सुल्तानों को <span class="ans-box"><span class="ans-num">17</span><span class="ans-word">अश्वपति</span></span> (घोड़ों के स्वामी) की उपाधि दी गई, जबकि विजयनगर के राय शासकों को <span class="ans-box"><span class="ans-num">18</span><span class="ans-word">नरपति</span></span> (लोगों के स्वामी) कहा जाता था। इन संघर्षों का प्रमुख कारण कृष्णा-तुंगभद्रा दोआब की उर्वर भूमि और समुद्री व्यापार से प्राप्त राजस्व पर नियंत्रण था।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> प्रतीकात्मक उपाधियाँ: शासकों ने स्वयं को अपनी सेना के मुख्य अंग—उड़ीसा में हाथी, दक्कन में अश्व और विजयनगर में विशाल जनबल—से अभिव्यक्त किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 2.3 • समकालीन अभिलेखीय नाम 'कर्नाटक साम्राज्यमु' एवं चोल-होयसल विरासत</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          यद्यपि आधुनिक इतिहासकार इस साम्राज्य को विजयनगर कहते हैं, किंतु समकालीन राजकीय अभिलेखों में इस राज्य को <span class="ans-box"><span class="ans-num">19</span><span class="ans-word">कर्नाटक साम्राज्यमु</span></span> की संज्ञा दी गई थी। विजयनगर के राय शासकों ने अपने से पूर्ववर्ती महान दक्षिणी राज्यों, विशेषकर तमिलनाडु के चोलों और कर्नाटक के <span class="ans-box"><span class="ans-num">20</span><span class="ans-word">होयसल</span></span> नरेशों की धार्मिक, प्रशासनिक और भव्य मंदिर निर्माण परंपराओं को आत्मसात कर उन्हें अत्यधिक उन्नत व विशाल रूप प्रदान किया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> राजकीय विरासत: तंजावुर के बृहदेश्वर और बेलूर के चेन्नाकेशव मंदिरों की भव्य स्थापत्य परंपराओं को विजयनगर के शासकों ने नई ऊँचाइयों पर पहुँचाया।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 2 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 3 ==================== -->
+    <div class="page" id="page3">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 3 / 10</strong> — मॉड्यूल 3: कृष्णदेव राय का गौरवशाली स्वर्णकाल (1509–1529 ई.)</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 21 से 30 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 3.1 • सैन्य विजयें, भू-क्षेत्रीय विस्तार एवं रायचूर दोआब</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          तुलुव वंश के प्रतापी सम्राट कृष्णदेव राय का शासनकाल <span class="ans-box"><span class="ans-num">21</span><span class="ans-word">1509–1529</span></span> तक रहा, जो साम्राज्य के चरमोत्कर्ष और सुदृढ़ीकरण का काल था। उन्होंने सन् <span class="ans-box"><span class="ans-num">22</span><span class="ans-word">1512</span></span> में कृष्णा और तुंगभद्रा नदियों के मध्य स्थित अत्यंत उर्वर <span class="ans-box"><span class="ans-num">23</span><span class="ans-word">रायचूर दोआब</span></span> पर निर्णायक अधिकार कर लिया। इसके अतिरिक्त उन्होंने 1514 में उड़ीसा के गजपति शासकों को पराजित किया तथा 1520 में <span class="ans-box"><span class="ans-num">24</span><span class="ans-word">बीजापुर</span></span> के सुल्तान को करारी शिकस्त देकर प्रायद्वीप में विजयनगर की अप्रतिरोध्य सैन्य श्रेष्ठता सिद्ध की।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> रणनीतिक भूगोल: रायचूर दोआब अपनी कृषि संपन्नता और हीरों की खदानों के कारण दक्कनी सुल्तानों और विजयनगर के मध्य निरंतर युद्ध का केंद्र बना रहा।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 3.2 • साहित्यिक योगदान: तेलुगु राजव्यवस्था ग्रंथ 'आमुक्तमाल्यद'</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          कृष्णदेव राय केवल एक अजेय योद्धा ही नहीं, बल्कि उच्च कोटि के विद्वान भी थे। उन्होंने <span class="ans-box"><span class="ans-num">25</span><span class="ans-word">तेलुगु</span></span> भाषा में शासनकला, कूटनीति और विदेशी वाणिज्य पर आधारित एक अनुपम ग्रंथ <span class="ans-box"><span class="ans-num">26</span><span class="ans-word">आमुक्तमाल्यद</span></span> की रचना की। इस ग्रंथ में उन्होंने राजा को परामर्श दिया कि वह अपने बंदरगाहों का सुधार करे तथा संकट में पड़े विदेशी <span class="ans-box"><span class="ans-num">27</span><span class="ans-word">व्यापारियों</span></span> को विशेष संरक्षण प्रदान करे, जिससे युद्धक अश्व और बहुमूल्य रत्न केवल उसी के राजकीय कोष में आएँ।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> मूल स्रोत विश्लेषण: आमुक्तमाल्यद दर्शाता है कि मध्यकालीन प्रायद्वीपीय राजनीति में समुद्री व्यापार केवल आर्थिक लाभ नहीं, बल्कि राज्य के अस्तित्व की धुरी था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 3.3 • उपनगरीय नगर नगलपुरम एवं रायगोपुरम स्थापत्य</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          अपनी पूज्य माता नागला देवी की स्मृति में कृष्णदेव राय ने विजयनगर के समीप एक समृद्ध उपनगर <span class="ans-box"><span class="ans-num">28</span><span class="ans-word">नगलपुरम</span></span> की स्थापना की। इसके अतिरिक्त, वे दक्षिण भारत के प्रमुख मंदिरों के महान संरक्षक थे, जहाँ उन्होंने देवालयों के सम्मुख गगनचुंबी प्रवेश द्वार बनवाए जिन्हें <span class="ans-box"><span class="ans-num">29</span><span class="ans-word">रायगोपुरम</span></span> कहा जाता है। उन्होंने शाही अनुष्ठानों हेतु प्रसिद्ध विशाल मंच का भी विस्तार किया जिसे पुर्तगाली स्रोतों में <span class="ans-box"><span class="ans-num">30</span><span class="ans-word">विजय का भवन</span></span> कहा गया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> धार्मिक राजनीति: मीलों दूर से दिखने वाले विशाल रायगोपुरम राजा की असीम शक्ति, धन-संपदा और देवताओं के प्रति उनकी अनन्य भक्ति का प्रतीक थे।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 3 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 4 ==================== -->
+    <div class="page" id="page4">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 4 / 10</strong> — मॉड्यूल 4: अश्व व्यापार, पुर्तगाली आग्नेयास्त्र एवं अमर-नायक व्यवस्था</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 31 से 40 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 4.1 • अरबी अश्व आयात एवं स्थानीय 'कुदिरै चेट्टि' व्यापारिक संघ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          मध्यकालीन प्रायद्वीपीय युद्धों में सैन्य सफलता तीव्रगामी <span class="ans-box"><span class="ans-num">31</span><span class="ans-word">अश्वसेना (घुड़सवार सेना)</span></span> पर निर्भर करती थी, अतः अरब तथा मध्य एशिया से उत्तम नस्ल के घोड़ों का आयात अनिवार्य था। इस व्यापार पर आरंभ में अरब सौदागरों का वर्चस्व था, किंतु स्थानीय व्यापारी जिन्हें <span class="ans-box"><span class="ans-num">32</span><span class="ans-word">कुदिरै चेट्टि</span></span> (घोड़ों के सौदागर) कहा जाता था, भी सक्रिय थे। सन् <span class="ans-box"><span class="ans-num">33</span><span class="ans-word">1498</span></span> में पश्चिमी तट पर <span class="ans-box"><span class="ans-num">34</span><span class="ans-word">पुर्तगाली</span></span> व्यापारियों का पदार्पण हुआ, जिन्होंने व्यापारिक समीकरणों में नया मोड़ ला दिया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> आर्थिक विवशता: दक्षिण भारत की उष्णकटिबंधीय जलवायु उच्च नस्ल के घोड़ों के प्रजनन हेतु उपयुक्त न होने के कारण विदेशी आयात पर पूर्ण निर्भरता थी।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 4.2 • यूरोपीय आग्नेयास्त्रों का पदार्पण एवं पुर्तगाली सामरिक संबंध</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          पुर्तगालियों ने पश्चिमी तट पर अपनी बस्तियाँ स्थापित कीं और श्रेष्ठ सैन्य तकनीक, विशेषकर नौसैनिक तोपों और <span class="ans-box"><span class="ans-num">35</span><span class="ans-word">बंदूकों (आग्नेयास्त्रों)</span></span> का उपयोग किया। युद्धक अश्वों और आधुनिक हथियारों पर उनके नियंत्रण ने उन्हें विजयनगर के <span class="ans-box"><span class="ans-num">36</span><span class="ans-word">राय शासकों</span></span> का महत्वपूर्ण सैन्य सहयोगी बना दिया, जिससे दक्कन की पारंपरिक युद्ध शैलियों में क्रांतिकारी बदलाव आया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> सैन्य क्रांति: बारूदी बंदूकों और मैचलॉक बंदूकों के आगमन ने मध्यकालीन युद्धों को घुड़सवारों के सीधे टकराव से हटाकर आग्नेयास्त्र-आधारित बना दिया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 4.3 • अमर-नायक प्रणाली: प्रांतीय प्रशासन एवं सैनिक जागीरदारी</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          <span class="ans-box"><span class="ans-num">37</span><span class="ans-word">अमर-नायक</span></span> प्रणाली विजयनगर का प्रमुख राजनीतिक नवाचार थी, जिसके अनेक तत्व दिल्ली सल्तनत की <span class="ans-box"><span class="ans-num">38</span><span class="ans-word">इक्ता प्रणाली</span></span> से मिलते-जुलते थे। 'अमर' शब्द की उत्पत्ति संस्कृत भाषा के शब्द <span class="ans-box"><span class="ans-num">39</span><span class="ans-word">समर</span></span> से मानी जाती है, जिसका अर्थ युद्ध होता है। नायक अपने क्षेत्रों से कर वसूलते और राजा हेतु सैनिक रखते थे, किंतु <span class="ans-box"><span class="ans-num">40</span><span class="ans-word">सत्रहवीं सदी</span></span> में अनेक नायकों ने विद्रोह कर स्वतंत्र राज्यों की स्थापना कर ली।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> संस्थागत द्वंद्व: अमर-नायकों ने केंद्र को विशाल सेना तो प्रदान की, किंतु उनकी स्वायत्तता और महत्वाकांक्षा ने अंततः साम्राज्य को विखंडित कर दिया।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 4 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 5 ==================== -->
+    <div class="page" id="page5">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 5 / 10</strong> — मॉड्यूल 5: तालिकोटा का विध्वंसकारी युद्ध (1565 ई.) एवं राजधानी का पतन</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 41 से 50 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 5.1 • उत्तराधिकार संघर्ष एवं प्रधानमंत्री राम राय की कूटनीति</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सन् <span class="ans-box"><span class="ans-num">41</span><span class="ans-word">1529</span></span> में कृष्णदेव राय की मृत्यु के पश्चात राजदरबार में आंतरिक सत्ता संघर्ष छिड़ गया। इस काल में शक्तिशाली प्रधानमंत्री <span class="ans-box"><span class="ans-num">42</span><span class="ans-word">राम राय</span></span> ने शासन की वास्तविक बागडोर संभाली। उन्होंने दक्कन के सुल्तानों को एक-दूसरे के विरुद्ध लड़ाने की आक्रामक नीति अपनाई। इस कूटनीति से रुष्ट होकर बीजापुर, अहमदनगर और <span class="ans-box"><span class="ans-num">43</span><span class="ans-word">गोलकुंडा</span></span> के सुल्तानों ने एकजुट होकर <span class="ans-box"><span class="ans-num">44</span><span class="ans-word">विजयनगर</span></span> के विरुद्ध एक शक्तिशाली संयुक्त मोर्चा गठित किया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> कूटनीतिक भूल: राम राय के अति-आत्मविश्वास और सुल्तानों के आंतरिक मामलों में अत्यधिक हस्तक्षेप ने सभी सल्तनतों को संयुक्त आक्रमण हेतु प्रेरित किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 5.2 • राक्षसी-तांगड़ी (तालिकोटा) का ऐतिहासिक एवं निर्णायक संग्राम</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          जनवरी 1565 में विजयनगर की सेना का सामना सुल्तानों की संयुक्त सेना से <span class="ans-box"><span class="ans-num">45</span><span class="ans-word">राक्षसी-तांगड़ी</span></span> (जिसे सामान्यतः तालिकोटा कहा जाता है) के मैदान में हुआ। विरोधी मोर्चे ने भारी <span class="ans-box"><span class="ans-num">46</span><span class="ans-word">तोपखाने</span></span> और अनुशासित अश्वदल का समन्वित प्रयोग किया, जिससे विजयनगर की सेना बुरी तरह पराजित हुई। वृद्ध प्रधानमंत्री राम राय को <span class="ans-box"><span class="ans-num">47</span><span class="ans-word">युद्धभूमि</span></span> में ही बंदी बनाकर मार डाला गया, जिससे सेना में भगदड़ मच गई।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> युद्धनीति: सुल्तानों ने केंद्र में भारी तोपों को लोहे की जंजीरों से जोड़कर भीषण गोलाबारी की, जिसने विजयनगर के पैदल सैनिकों को पस्त कर दिया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 5.3 • राजधानी का विनाश एवं पेनुकोंडा-चंद्रगिरि में सत्ता स्थानांतरण</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सन् <span class="ans-box"><span class="ans-num">48</span><span class="ans-word">1565</span></span> की इस पराजय के पश्चात विजयी सेनाओं ने विजयनगर शहर पर धावा बोलकर कई महीनों तक उसे लूटा और जलाकर खंडहर बना दिया। आरविदु वंश ने राजधानी को तुंगभद्रा से पूर्व की ओर <span class="ans-box"><span class="ans-num">49</span><span class="ans-word">पेनुकोंडा</span></span> स्थानांतरित किया तथा बाद में <span class="ans-box"><span class="ans-num">50</span><span class="ans-word">चंद्रगिरि</span></span> (तिरुपति के निकट) से शासन संचालित किया, जबकि मदुरै व मैसूर के नायकों ने स्वतंत्र सत्ता स्थापित कर ली।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> नगरीय विध्वंस: तालिकोटा के पश्चात विजयनगर का विनाश विश्व इतिहास में किसी महानगर के सबसे त्वरित और संपूर्ण विनाश का उदाहरण है।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 5 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 6 ==================== -->
+    <div class="page" id="page6">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 6 / 10</strong> — मॉड्यूल 6: जल संपदा प्रबंधन, सिंचाई स्थापत्य एवं हिरिया नहर</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 51 से 60 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 6.1 • तुंगभद्रा नदी की प्राकृतिक द्रोणी एवं जल संग्रहण प्रणालियाँ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          विजयनगर की भौगोलिक स्थिति की प्रमुख विशेषता <span class="ans-box"><span class="ans-num">51</span><span class="ans-word">तुंगभद्रा</span></span> नदी द्वारा निर्मित प्राकृतिक द्रोणी थी, जो उत्तर-पूर्व दिशा में बहती है। यह नगर चारों ओर से विशाल <span class="ans-box"><span class="ans-num">52</span><span class="ans-word">ग्रेनाइट</span></span> की पहाड़ियों से घिरा था जो प्राकृतिक परकोटे का कार्य करती थीं। चूँकि यह क्षेत्र अत्यंत शुष्क था, अतः पहाड़ियों से बहने वाले नालों पर विशाल <span class="ans-box"><span class="ans-num">53</span><span class="ans-word">बाँध (तटबंध)</span></span> बनाकर वर्षा जल को संचित करने हेतु बड़े-बड़े <span class="ans-box"><span class="ans-num">54</span><span class="ans-word">जलाशयों (हौज़ों)</span></span> का निर्माण किया गया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> पर्यावरणीय अनुकूलन: नगर योजनाकारों ने ग्रेनाइट पहाड़ियों की प्राकृतिक ढलानों का उपयोग कर वर्षा के बहते जल को बड़े कुंडों में एकत्र किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 6.2 • पंद्रहवीं सदी का कमलापुरम जलाशय एवं नगर की जल आपूर्ति</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          पंद्रहवीं सदी के आरंभिक वर्षों में निर्मित जलाशयों में सबसे महत्वपूर्ण <span class="ans-box"><span class="ans-num">55</span><span class="ans-word">कमलापुरम</span></span> जलाशय था। इस जलाशय के जल से न केवल आसपास के उपजाऊ खेतों की सिंचाई की जाती थी, बल्कि एक पक्की चिनाई वाली <span class="ans-box"><span class="ans-num">56</span><span class="ans-word">नहरों (जलप्रणालियों)</span></span> के माध्यम से पानी को सीधे <span class="ans-box"><span class="ans-num">57</span><span class="ans-word">राजकीय केंद्र</span></span> तक ले जाया जाता था, जिससे महलों की दैनिक और अनुष्ठानिक आवश्यकताएँ पूरी होती थीं।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> बहुउद्देशीय जल संरचना: कमलापुरम जलाशय एक साथ कृषि भूमि की सिंचाई और ढकी हुई पाषाण नालियों द्वारा महलों तक पेयजल पहुँचाने का कार्य करता था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 6.3 • ऐतिहासिक हिरिया नहर एवं अंतःनगरीय कृषि क्षेत्र</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सर्वाधिक उल्लेखनीय बची हुई जल संरचनाओं में <span class="ans-box"><span class="ans-num">58</span><span class="ans-word">हिरिया नहर</span></span> है, जिसमें तुंगभद्रा पर बने एक विशाल बाँध से पानी लाया जाता था। इसका निर्माण <span class="ans-box"><span class="ans-num">59</span><span class="ans-word">संगम वंश</span></span> के राजाओं द्वारा कराया गया था। यह नहर धार्मिक केंद्र को <span class="ans-box"><span class="ans-num">60</span><span class="ans-word">शहरी केंद्र</span></span> से अलग करने वाली उपजाऊ घाटी को सिंचित करती थी, जिससे परकोटे के अंदर ही बारहमासी सघन खेती संभव हो सकी।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> सुरक्षित कृषि: हिरिया नहर ने यह सुनिश्चित किया कि बाहरी घेराबंदी के समय भी परकोटे के भीतर की फसलें लहलहाती रहें और भुखमरी न फैले।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 6 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 7 ==================== -->
+    <div class="page" id="page7">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 7 / 10</strong> — मॉड्यूल 7: सात परकोटे, संकेंद्रित प्राचीरें एवं कृषि क्षेत्रों की किलेबंदी</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 61 से 70 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 7.1 • फारसी राजदूत अब्दुर रज्जाक का विवरण एवं सात पंक्तियाँ</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          1440 के दशक में कालीकट से विजयनगर आए ईरानी (फारसी) दूत <span class="ans-box"><span class="ans-num">61</span><span class="ans-word">अब्दुर रज्जाक</span></span> यहाँ के रक्षा प्राचीरों को देखकर चकित रह गया। उसने लिखा कि यह महानगर <span class="ans-box"><span class="ans-num">62</span><span class="ans-word">सात (7)</span></span> संकेंद्रित दीवारों से सुरक्षित था। सबसे अनूठी बात यह थी कि सबसे बाहरी दीवार शहर के साथ-साथ विस्तृत <span class="ans-box"><span class="ans-num">63</span><span class="ans-word">कृषि क्षेत्रों (खेतों)</span></span>, बगीचों और जंगलों को भी घेरती थी, ताकि शत्रु द्वारा लंबी <span class="ans-box"><span class="ans-num">64</span><span class="ans-word">घेराबंदी</span></span> किए जाने पर भी रसद का अभाव न हो।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> सैन्य रणनीति: मध्यकालीन युद्धों में शहर प्रायः भुखमरी के कारण आत्मसमर्पण करते थे, किंतु विजयनगर ने खेतों को भीतर रखकर इस संकट का स्थायी समाधान किया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 7.2 • बिना गारे की शुष्क चिनाई एवं फन्नीनुमा (Wedge) पत्थर</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          इन विशाल दीवारों के निर्माण में चूने अथवा <span class="ans-box"><span class="ans-num">65</span><span class="ans-word">गारे (मोर्टार)</span></span> का बिल्कुल उपयोग नहीं किया गया था। इसके स्थान पर पत्थरों को विशेष <span class="ans-box"><span class="ans-num">66</span><span class="ans-word">फन्नीनुमा (फानाकार)</span></span> आकारों में तराशा गया था जो बिना किसी गारे के परस्पर खांचों में कस जाते थे। दीवारों को अतिरिक्त मजबूती प्रदान करने हेतु बाहर की ओर निकले हुए वर्गाकार तथा आयताकार <span class="ans-box"><span class="ans-num">67</span><span class="ans-word">बुर्जों</span></span> का निर्माण किया गया था।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> स्थापत्य तकनीक: शुष्क पाषाण चिनाई की यह विशेषता थी कि तोपों के आघात अथवा भूकंप के झटकों से पत्थर टूटने के स्थान पर और सघनता से बैठ जाते थे।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 7.3 • मेहराबदार सुरक्षित प्रवेश द्वार एवं भारत-इस्लामी स्थापत्य शैली</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          किलेबंद परिधि में प्रवेश नियंत्रित विशाल द्वारों से होता था जिनमें बने नुकीले मेहराब और गुंबद <span class="ans-box"><span class="ans-num">68</span><span class="ans-word">भारत-इस्लामी</span></span> स्थापत्य कला के गहरे प्रभाव को दर्शाते हैं। ये मुख्य मार्ग पहाड़ियों के मध्य प्राकृतिक <span class="ans-box"><span class="ans-num">69</span><span class="ans-word">घाटियों</span></span> से होकर गुजरते थे, जो बाहरी प्रवेश द्वारों को सीधे नगर के प्रमुख मंदिर <span class="ans-box"><span class="ans-num">70</span><span class="ans-word">बाजारों</span></span> से जोड़ते थे, जिससे व्यापार और आवागमन सुव्यवस्थित रहता था।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> सांस्कृतिक संश्लेषण: प्रवेश द्वारों में तुर्की मेहराब व गुंबद के साथ पारंपरिक धरन-कोष्ठक शैली का संगम मध्यकालीन कलात्मक समन्वय का प्रमाण है।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 7 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 8 ==================== -->
+    <div class="page" id="page8">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 8 / 10</strong> — मॉड्यूल 8: राजकीय केंद्र, सभामंडप एवं महानवमी डिब्बा</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 71 से 80 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 8.1 • राजकीय केंद्र की स्थिति एवं 'राजा का भवन' परिसर</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          राजकीय केंद्र महानगर के <span class="ans-box"><span class="ans-num">71</span><span class="ans-word">दक्षिण-पश्चिमी</span></span> भाग में स्थित था और इसमें साठ से अधिक मंदिर विद्यमान थे। इस केंद्र का सबसे विशाल प्रशासनिक व आवासीय परिसर <span class="ans-box"><span class="ans-num">72</span><span class="ans-word">राजा का भवन</span></span> कहलाता है, जिसके भीतर दो अत्यंत भव्य चबूतरे स्थित थे: विशाल स्तंभों वाला <span class="ans-box"><span class="ans-num">73</span><span class="ans-word">सभामंडप</span></span> (Audience Hall) तथा अत्यंत ऊँचा अनुष्ठानिक मंच <span class="ans-box"><span class="ans-num">74</span><span class="ans-word">महानवमी डिब्बा</span></span>, जो दोहरी पत्थर की दीवारों से घिरे थे।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> पवित्र एवं धर्मनिरपेक्ष संगम: राजकीय केंद्र में 60 से अधिक मंदिरों की स्थापना यह दर्शाती है कि राजसत्ता को वैधता केवल धार्मिक संरक्षण से ही मिलती थी।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 8.2 • सभामंडप का जटिल स्तंभ-विन्यास एवं पुरातात्विक पहेली</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          सभामंडप एक ऊँचा मंच था जिस पर पास-पास बने खांचों में <span class="ans-box"><span class="ans-num">75</span><span class="ans-word">लकड़ी के स्तंभ</span></span> खड़े किए गए थे जो संभवतः एक ऊपरी मंजिल को सहारा देते थे। दूसरी मंजिल तक जाने हेतु सीढ़ियाँ बनी थीं, किंतु खंभों के अत्यधिक पास होने के कारण खुला स्थान बहुत कम था, जिससे इसका वास्तविक <span class="ans-box"><span class="ans-num">76</span><span class="ans-word">कार्य (उद्देश्य)</span></span> आज भी <span class="ans-box"><span class="ans-num">77</span><span class="ans-word">इतिहासकारों (विद्वानों)</span></span> के लिए एक गंभीर विचारणीय पहेली बना हुआ है।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> पुरातात्विक रहस्य: खंभों के सघन विन्यास से प्रतीत होता है कि सभामंडप कोई सार्वजनिक सभा स्थल न होकर सुरक्षित राजकीय कोष या गोपनीय कक्ष रहा होगा।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 8.3 • महानवमी डिब्बा: विशाल चबूतरा एवं दस-दिवसीय दशहरा पर्व</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          महानवमी डिब्बा 11,000 वर्ग फीट के आधार से लगभग <span class="ans-box"><span class="ans-num">78</span><span class="ans-word">40 फीट</span></span> की ऊँचाई तक उठता है। यह मंच आश्विन मास के प्रसिद्ध दस-दिवसीय शरद उत्सव <span class="ans-box"><span class="ans-num">79</span><span class="ans-word">महानवमी</span></span> (दशहरा) का मुख्य केंद्र था, जिसे पुर्तगाली यात्री डोमिंगो पेस ने <span class="ans-box"><span class="ans-num">80</span><span class="ans-word">विजय का भवन</span></span> नाम दिया था, जहाँ अधीनस्थ अमर-नायक सम्राट के समक्ष अपनी वार्षिक भेंट और राजस्व प्रस्तुत करते थे।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> अनुष्ठान एवं संप्रभुता: उत्सव के अंतिम दिन राजकीय अश्वों, अस्त्र-शस्त्रों की पूजा और सैन्य परेड द्वारा सम्राट अपनी सर्वोच्च शक्ति का सार्वजनिक प्रदर्शन करते थे।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 8 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 9 ==================== -->
+    <div class="page" id="page9">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 9 / 10</strong> — मॉड्यूल 9: लोटस महल (कमल महल), गजशाला एवं हजारा राम मंदिर</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 81 से 90 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 9.1 • लोटस महल (कमल महल) एवं दरबारी स्थापत्य का समन्वय</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          राजकीय केंद्र के सबसे सुंदर एवं चर्चित भवनों में <span class="ans-box"><span class="ans-num">81</span><span class="ans-word">लोटस महल (कमल महल)</span></span> है, जिसका यह नाम <span class="ans-box"><span class="ans-num">82</span><span class="ans-word">उन्नीसवीं सदी</span></span> में आए अंग्रेज अधिकारियों द्वारा रखा गया था। कॉलिन मैकेन्ज़ी के मानचित्र के अनुसार यह एक <span class="ans-box"><span class="ans-num">83</span><span class="ans-word">परिषदीय सदन</span></span> था जहाँ राजा अपने प्रमुख मंत्रियों से मंत्रणा करते थे। इसमें नौ पिरामिडीय शिखर तथा सुंदर मेहराब हैं जो <span class="ans-box"><span class="ans-num">84</span><span class="ans-word">भारत-इस्लामी</span></span> स्थापत्य शैली के उत्कृष्ट समन्वय का प्रतीक हैं।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> दरबारी सौंदर्यशास्त्र: लोटस महल उस समन्वयवादी दरबारी संस्कृति को दर्शाता है जहाँ इस्लामी मेहराब व पलस्तर के काम को हिंदू शिखरों के साथ संयोजित किया गया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 9.2 • हाथियों का विशाल अस्तबल (गजशाला)</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          लोटस महल के प्रांगण के समीप पत्थरों से निर्मित <span class="ans-box"><span class="ans-num">85</span><span class="ans-word">ग्यारह (11)</span></span> गुंबददार विशाल कक्षों की एक कतार खड़ी है जिसे <span class="ans-box"><span class="ans-num">86</span><span class="ans-word">हाथियों का अस्तबल (गजशाला)</span></span> कहा जाता है। यह विशाल उपयोगी संरचना सम्राट के सबसे मूल्यवान युद्धक <span class="ans-box"><span class="ans-num">87</span><span class="ans-word">हाथियों</span></span> को रखने हेतु बनाई गई थी, जिसकी ऊँची मेहराबदार छतें इंडो-इस्लामी शैली के गुंबदों से आच्छादित हैं।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> सामरिक प्रतिष्ठा: राजकीय हाथियों के लिए इतने भव्य और विशाल कक्षों का निर्माण मध्यकालीन युद्ध प्रणाली में गजसेना के रणनीतिक महत्व को दर्शाता है।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 9.3 • हजारा राम मंदिर एवं रामायण के भित्ति-शिल्प</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          राजकीय केंद्र में स्थित <span class="ans-box"><span class="ans-num">88</span><span class="ans-word">हजारा राम</span></span> मंदिर संभवतः केवल <span class="ans-box"><span class="ans-num">89</span><span class="ans-word">शाही परिवार</span></span> के सदस्यों के व्यक्तिगत पूजन हेतु आरक्षित था। इस मंदिर की आंतरिक एवं बाहरी दीवारों पर हिंदू महाकाव्य <span class="ans-box"><span class="ans-num">90</span><span class="ans-word">रामायण</span></span> के विभिन्न प्रसंगों को सजीव पाषाण मूर्तियों व उत्कीर्ण फलकों के माध्यम से दर्शाया गया है, जो विजयनगर की मूर्तिकला का सर्वोत्कृष्ट उदाहरण हैं।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> दैवीय राजत्व: मर्यादा पुरुषोत्तम राम के जीवन प्रसंगों को अपने निजी देवालय में उकेरकर विजयनगर के शासक स्वयं को धर्मपरायण आदर्श राजा के रूप में प्रस्तुत करते थे।</div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 9 / 10</span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 10 ==================== -->
+    <div class="page" id="page10">
+      <div>
+        
+      <!-- Page Running Header Strip -->
+      <div class="page-top-bar">
+        <div class="pt-title"><strong>कक्षा 12 इतिहास उत्तर कुंजी • पृष्ठ 10 / 10</strong> — मॉड्यूल 10: धार्मिक केंद्र, विट्ठल मंदिर, आधुनिक पुरातात्विक सर्वेक्षण एवं मूल्यांकन</div>
+        <div class="pt-meta"><strong>पृष्ठ उत्तर: रिक्त स्थान 91 से 100 (10 अंक)</strong></div>
+      </div>
+        
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 10.1 • धार्मिक केंद्र, विरूपाक्ष देव एवं 'हिंदू सुरत्राण' उपाधि</span>
+          <span class="topic-weight">4 अंक (4 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          धार्मिक केंद्र तुंगभद्रा नदी के उत्तरी पथरीले तट पर स्थित था। यहाँ के मुख्य संरक्षक देव <span class="ans-box"><span class="ans-num">91</span><span class="ans-word">विरूपाक्ष</span></span> थे, जिन्हें भगवान <span class="ans-box"><span class="ans-num">92</span><span class="ans-word">शिव</span></span> का रूप माना जाता था। सभी राजकीय आदेशों पर कन्नड़ लिपि में <span class="ans-box"><span class="ans-num">93</span><span class="ans-word">श्री विरूपाक्ष</span></span> शब्द अंकित होता था, और राजाओं ने समकालीन राजनीतिक शब्दावली को अपनाते हुए स्वयं को <span class="ans-box"><span class="ans-num">94</span><span class="ans-word">हिंदू सुरत्राण</span></span> (अर्थात् हिंदू सुल्तान) की प्रतिष्ठित उपाधि से विभूषित किया।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> सांस्कृतिक शब्दावली: 'हिंदू सुरत्राण' की उपाधि यह दर्शाती है कि राय शासकों ने सार्वभौमिक प्रतिष्ठा हेतु समकालीन इस्लामी राजसी शब्दावली को निसंकोच अपनाया।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 10.2 • विट्ठल मंदिर परिसर, एकाश्म पाषाण रथ एवं रथ वीथिकाएँ</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          धार्मिक केंद्र का एक अन्य भव्य देवालय विट्ठल मंदिर है, जिसके मुख्य देवता <span class="ans-box"><span class="ans-num">95</span><span class="ans-word">विट्ठल</span></span> थे, जो मूलतः <span class="ans-box"><span class="ans-num">96</span><span class="ans-word">महाराष्ट्र</span></span> में पूजे जाने वाले भगवान विष्णु के रूप थे। इस मंदिर परिसर का प्रमुख आकर्षण इसका विश्वप्रसिद्ध <span class="ans-box"><span class="ans-num">97</span><span class="ans-word">पाषाण रथ (पत्थर का रथ)</span></span> है, तथा मंदिर के मुख्य गोपुरम के सामने चौड़ी रथ गलियाँ थीं जो संपन्न व्यापारिक <span class="ans-box"><span class="ans-num">98</span><span class="ans-word">बाजारों</span></span> के रूप में कार्य करती थीं।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> सांस्कृतिक समावेशन: महाराष्ट्र के विट्ठल देव की उपासना को राजधानी में स्थापित करना विभिन्न क्षेत्रीय आस्थाओं को समेटने की साम्राज्यवादी नीति का अंग था।</div>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 10.3 • 1980 के दशक का सर्वेक्षण एवं 25 वर्गाकार ग्रिड प्रणाली</span>
+          <span class="topic-weight">3 अंक (3 × 1M)</span>
+        </div>
+        <div class="topic-body">
+          1980 के दशक में भारतीय पुरातत्व सर्वेक्षण (ASI) तथा अंतरराष्ट्रीय विशेषज्ञों द्वारा संपूर्ण स्थल को <span class="ans-box"><span class="ans-num">99</span><span class="ans-word">25 वर्गाकार ग्रिड</span></span> में विभाजित किया गया, जिन्हें अंग्रेजी वर्णमाला के अक्षरों से नामांकित किया गया। इस वैज्ञानिक पद्धति से दशकों के शोध में हजारों खड़े स्मारकों व भू-गर्भित <span class="ans-box"><span class="ans-num">100</span><span class="ans-word">संरचनाओं</span></span> का अत्यंत सूक्ष्म और प्रामाणिक मानचित्रण संपन्न हुआ।
+          <div class="focus-note"><strong>प्रामाणिक संदर्भ / विश्लेषण:</strong> मानचित्रण पद्धति: ग्रिड प्रणाली ने विशाल मंदिरों से लेकर छोटी से छोटी खरल व स्तंभ-छिद्रों तक का वैज्ञानिक दस्तावेजीकरण संभव बनाया।</div>
+        </div>
+      </div>
+        
+      <!-- Teacher's Grading Rubric & Validation Sign-off -->
+      <div class="eval-box">
+        <div class="eval-grid">
+          <div>
+            <div class="score-matrix-row">
+              <span style="font-size: 8px; font-weight: 800; min-width: 80px;">अंक वितरण सारणी:</span>
+              <div class="score-cell"><span>P1-2 (20अंक)</span><strong>100% NCERT</strong></div>
+              <div class="score-cell"><span>P3-4 (20अंक)</span><strong>100% NCERT</strong></div>
+              <div class="score-cell"><span>P5-6 (20अंक)</span><strong>100% NCERT</strong></div>
+              <div class="score-cell"><span>P7-8 (20अंक)</span><strong>100% NCERT</strong></div>
+              <div class="score-cell"><span>P9-10 (20अंक)</span><strong>100% NCERT</strong></div>
+              <div class="score-cell" style="background:#000; color:#fff;"><span style="color:#fff;">पूर्णांक (100)</span><strong>सत्यापित</strong></div>
+            </div>
+            <div class="remarks-block">
+              <div class="remarks-strip">
+                <span>अंतिम सत्यापन टिप्पणी:</span>
+                <span style="font-size:7.5px; font-weight:600;">सभी 100 प्रश्नों के उत्तर NCERT कक्षा 12 इतिहास विषय 7 से पूर्णतः सत्यापित हैं।</span>
+              </div>
+              <div class="remarks-strip">
+                <span>प्रमाणीकरण:</span>
+                <span style="font-size:7.5px; font-weight:600;">आधिकारिक मूल्यांकन कुंजी &bull; संपूर्ण 10-पृष्ठ संग्रह</span>
+                <span style="white-space:nowrap; margin-left:auto;">मुख्य परीक्षक हस्ताक्षर: ______________</span>
+              </div>
+            </div>
+          </div>
+          <div class="rubric-pill-box">
+            <strong>ग्रेडिंग मार्गदर्शिका:</strong>
+            <div>&bull; 90-100: उत्कृष्ट ऐतिहासिक समझ</div>
+            <div>&bull; 75-89: उत्तम तथ्यात्मक पकड़</div>
+            <div>&bull; &lt;50: उपचारात्मक पुनरावृत्ति अपेक्षित</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="page-footer">
+        <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर (विषय 7)</span>
+        <span>आधिकारिक आदर्श उत्तर कुंजी &bull; 100/100 अंक</span>
+        <span>पृष्ठ 10 / 10</span>
+      </div>
+    </div>
+
+
+</body>
+</html>

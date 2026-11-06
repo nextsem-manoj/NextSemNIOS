@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBSE कक्षा 12 इतिहास प्रश्न-पत्र 2024 (हल सहित) - अभ्यास एवं परीक्षा मोड</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #060c18;
+      --card-bg: #0c1427;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-gold: #f59e0b;
+      --accent-orange: #ea580c;
+      --accent-emerald: #10b981;
+      --accent-cyan: #06b6d4;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-heading: 'Outfit', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .nav-breadcrumbs a {
+      color: var(--accent-emerald);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, #111e38 0%, #080f1e 100%);
+      border-bottom: 2px solid rgba(245, 158, 11, 0.3);
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .header-subtitle {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 800px;
+      margin: 0 auto 16px auto;
+    }
+
+    .meta-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    .meta-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 12px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Global Mode Toolbar */
+    .mode-toolbar {
+      background: #0d1830;
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .mode-status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #f59e0b;
+      box-shadow: 0 0 10px #f59e0b;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    .mode-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-toggle-global {
+      background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+      color: #000000;
+      border: none;
+      font-weight: 800;
+      font-size: 0.88rem;
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-toggle-global:hover {
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-reset {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #cbd5e1;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-reset:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+    }
+
+    /* Section navigation */
+    .section-selector {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 0;
+      margin-bottom: 24px;
+      position: sticky;
+      top: 60px;
+      z-index: 900;
+      background: rgba(6, 12, 24, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .sec-btn {
+      padding: 8px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #0c1427;
+      color: #cbd5e1;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .sec-btn:hover, .sec-btn.active {
+      background: #f59e0b;
+      color: #000000;
+      border-color: #f59e0b;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+
+    .section-card {
+      background: #0c1427;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-marks {
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .question-block {
+      background: #111a33;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .question-block:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+
+    .q-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .q-number {
+      font-weight: 900;
+      color: #38bdf8;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    .q-text {
+      font-size: 1.02rem;
+      color: #f8fafc;
+      font-weight: 600;
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+
+    .q-badge {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* MCQ Option styles */
+    .mcq-options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    @media (min-width: 640px) {
+      .mcq-options {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .opt-card {
+      background: #091022;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .opt-card:hover {
+      border-color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      color: #ffffff;
+    }
+
+    .opt-card.correct {
+      border-color: #10b981 !important;
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .opt-card.wrong {
+      border-color: #ef4444 !important;
+      background: rgba(239, 68, 68, 0.2) !important;
+      color: #f87171 !important;
+    }
+
+    .opt-indicator {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    /* Toggle Answer Button */
+    .toggle-ans-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 14px;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .toggle-ans-btn:hover {
+      background: rgba(245, 158, 11, 0.22);
+      border-color: #f59e0b;
+      transform: translateY(-1px);
+    }
+
+    .toggle-ans-btn.active {
+      background: rgba(16, 185, 129, 0.16);
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    /* Hidden Answer Containers */
+    .solution-box {
+      display: none; /* HIDDEN BY DEFAULT */
+      margin-top: 14px;
+      padding: 14px 18px;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid #10b981;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+
+    .solution-title {
+      font-weight: 800;
+      color: #34d399;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+
+    .theory-box {
+      display: none; /* HIDDEN BY DEFAULT */
+      margin-top: 14px;
+      background: #080f20;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      line-height: 1.7;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .theory-box h4 {
+      color: #f59e0b;
+      margin: 12px 0 6px 0;
+      font-size: 0.98rem;
+    }
+
+    .theory-box ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    .theory-box li {
+      margin-bottom: 6px;
+    }
+
+    .source-quote {
+      background: rgba(245, 158, 11, 0.06);
+      border-left: 4px solid #f59e0b;
+      padding: 16px;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      color: #fef3c7;
+      margin: 12px 0 18px 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .map-display {
+      background: #070e1e;
+      border: 1.5px solid rgba(56, 189, 248, 0.3);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .map-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .map-place-card {
+      background: #111a33;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 18px;
+      text-align: left;
+    }
+
+    .map-place-card h4 {
+      font-size: 1rem;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .map-place-card p {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #64748b;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top Breadcrumb Header -->
+  <nav class="top-nav">
+    <div class="nav-breadcrumbs">
+      <a href="/?class=12">🏠 Class 12 Home</a>
+      <span>❯</span>
+      <a href="/?class=12&subject=c12-history">History Books (इतिहास)</a>
+      <span>❯</span>
+      <span style="color: #ffffff; font-weight: 700;">CBSE 2024 Question Paper (61/4/2)</span>
+    </div>
+    <div>
+      <a href="/?class=12&subject=c12-history" style="padding: 6px 14px; font-size: 0.8rem; background: #0c1427; color: #10b981; border: 1px solid #10b981; border-radius: 8px; text-decoration: none; font-weight: 800;">
+        ← Back to History Hub
+      </a>
+    </div>
+  </nav>
+
+  <!-- Banner Header -->
+  <header class="header-banner">
+    <div class="badge-pill">👑 CBSE BOARD EXAM 2024 • CODE: 61/4/2 (SET ~ 2)</div>
+    <h1 class="header-title">CBSE 12वीं इतिहास प्रश्न-पत्र (2024)</h1>
+    <p class="header-subtitle">अभ्यास एवं स्व-मूल्यांकन मोड: <strong>सभी उत्तर डिफ़ॉल्ट रूप से छिपे हुए हैं</strong>। पहले स्वयं हल करें, फिर 'उत्तर देखें' पर क्लिक करके अपना उत्तर सत्यापित करें।</p>
+    <div class="meta-tags">
+      <div class="meta-tag">⏱️ समय: 3 घंटे</div>
+      <div class="meta-tag">🎯 पूर्णांक: 80</div>
+      <div class="meta-tag">📚 कुल प्रश्न: 34</div>
+      <div class="meta-tag" id="score-counter" style="color: #34d399; font-weight: 800;">🏆 MCQ स्कोर: 0 / 21</div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Global Practice Mode Toolbar -->
+    <div class="mode-toolbar">
+      <div class="mode-status-indicator">
+        <div class="status-dot" id="status-dot"></div>
+        <span id="mode-status" style="color: #f59e0b;">🔒 अभ्यास मोड (सभी उत्तर छिपे हैं)</span>
+      </div>
+      <div class="mode-btns">
+        <button class="btn-toggle-global" id="btn-toggle-all" onclick="toggleAllAnswers()">
+          👁️ सभी उत्तर दिखाएं (Show All)
+        </button>
+        <button class="btn-reset" onclick="resetPractice()">
+          🔄 रीसेट करें (Reset Test)
+        </button>
+      </div>
+    </div>
+
+    <!-- Sticky Section Navigation -->
+    <div class="section-selector">
+      <button class="sec-btn active" onclick="scrollToSection('sec-a')">खण्ड क: बहुविकल्पीय (21 अंक)</button>
+      <button class="sec-btn" onclick="scrollToSection('sec-b')">खण्ड ख: लघु-उत्तरीय (18 अंक)</button>
+      <button class="sec-btn" onclick="scrollToSection('sec-c')">खण्ड ग: दीर्घ-उत्तरीय (24 अंक)</button>
+      <button class="sec-btn" onclick="scrollToSection('sec-d')">खण्ड घ: स्रोत-आधारित (12 अंक)</button>
+      <button class="sec-btn" onclick="scrollToSection('sec-e')">खण्ड ङ: मानचित्र कार्य (5 अंक)</button>
+    </div>
+
+    <!-- ==================== खण्ड क (SECTION A) ==================== -->
+    <div id="sec-a" class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🎯 खण्ड क: बहुविकल्पीय प्रश्न (MCQs)</span>
+        </div>
+        <div class="section-marks">प्र. 1 से 21 • 21 × 1 = 21 अंक</div>
+      </div>
+
+      <!-- Q1 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 1</span>
+          <div class="q-text">
+            निम्नलिखित जानकारी की सहायता से उन्नीसवीं शताब्दी के भारतीय समाज सुधारक की पहचान कीजिए और सही विकल्प का चयन कीजिए :
+            <ul style="margin-top: 8px; font-weight: normal; color: #cbd5e1; list-style-type: square; padding-left: 20px;">
+              <li>वे महाराष्ट्र से थे।</li>
+              <li>उन्होंने दलित वर्गों की पीड़ा का सवाल उठाया।</li>
+              <li>उन्होंने आर्थिक और सामाजिक न्याय की माँग की।</li>
+            </ul>
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q1">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q1', 'q1')"><span class="opt-indicator">A</span> (A) श्री नारायण गुरु</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q1', 'q1')"><span class="opt-indicator">B</span> (B) ज्योतिबा फुले</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q1', 'q1')"><span class="opt-indicator">C</span> (C) राजा राम मोहन राय</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q1', 'q1')"><span class="opt-indicator">D</span> (D) स्वामी विवेकानंद</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q1" onclick="toggleAnswer('sol-q1', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q1" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (B) ज्योतिबा फुले</div>
+          ज्योतिबा फुले महाराष्ट्र के महान समाज सुधारक थे। उन्होंने 1873 में 'सत्यशोधक समाज' की स्थापना की तथा अपनी प्रसिद्ध पुस्तक 'गुलामगिरी' (1873) में जातिगत उत्पीड़न, दलित वर्गों की दुर्दशा और सामाजिक-आर्थिक न्याय का सशक्त समर्थन किया।
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 2</span>
+          <div class="q-text">
+            नीचे दो कथन दिए गए हैं, अभिकथन (A) और कारण (R)। इनको ध्यानपूर्वक पढ़िए और सही विकल्प का चयन कीजिए :<br>
+            <strong>अभिकथन (A):</strong> 1850 के दशक में अवध को 'बंगाल की सेना की पौधशाला (नर्सरी)' कहा जाता था।<br>
+            <strong>कारण (R):</strong> सम्पूर्ण भारत से यहाँ अधिकांश संख्या में सिपाहियों की भर्ती की जाती थी।
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q2">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q2', 'q2')"><span class="opt-indicator">A</span> (A) (A) और (R) दोनों सत्य हैं और (R), (A) की सही व्याख्या है</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q2', 'q2')"><span class="opt-indicator">B</span> (B) (A) और (R) दोनों सत्य हैं, परन्तु (R), (A) की सही व्याख्या नहीं है</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q2', 'q2')"><span class="opt-indicator">C</span> (C) अभिकथन (A) सत्य है, परन्तु कारण (R) असत्य है</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q2', 'q2')"><span class="opt-indicator">D</span> (D) अभिकथन (A) असत्य है, परन्तु कारण (R) सत्य है</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q2" onclick="toggleAnswer('sol-q2', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q2" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (C) अभिकथन (A) सत्य है, परन्तु कारण (R) असत्य है</div>
+          अवध को बंगाल सेना की नर्सरी इसलिए कहा जाता था क्योंकि बंगाल सेना के 75,000 से अधिक सिपाही अकेले अवध क्षेत्र (वर्तमान पूर्वी उत्तर प्रदेश) से भर्ती किए गए थे, न कि सम्पूर्ण भारत से। अतः कारण (R) असत्य है।
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 3</span>
+          <div class="q-text">
+            संविधान सभा की प्रमुख समितियों एवं उनके अध्यक्षों के संबंध में स्तंभ A का स्तंभ B से मिलान कीजिए और सही विकल्प का चयन कीजिए :<br>
+            <table style="width: 100%; margin-top: 8px; font-size: 0.9rem; border-collapse: collapse;">
+              <tr><td style="padding: 4px; color: #f59e0b;"><strong>स्तंभ A (समिति)</strong></td><td style="padding: 4px; color: #f59e0b;"><strong>स्तंभ B (अध्यक्ष)</strong></td></tr>
+              <tr><td>a. मूल अधिकार उप-समिति</td><td>i. राजेंद्र प्रसाद</td></tr>
+              <tr><td>b. राज्य समिति</td><td>ii. बी.आर. आंबेडकर</td></tr>
+              <tr><td>c. प्रारूप समिति</td><td>iii. जवाहरलाल नेहरू</td></tr>
+              <tr><td>d. संचालन समिति</td><td>iv. जे.बी. कृपलानी</td></tr>
+            </table>
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q3">
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q3', 'q3')"><span class="opt-indicator">A</span> (A) a - iv, b - iii, c - ii, d - i</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q3', 'q3')"><span class="opt-indicator">B</span> (B) a - i, b - ii, c - iv, d - iii</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q3', 'q3')"><span class="opt-indicator">C</span> (C) a - ii, b - iv, c - i, d - iii</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q3', 'q3')"><span class="opt-indicator">D</span> (D) a - iv, b - i, c - iii, d - ii</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q3" onclick="toggleAnswer('sol-q3', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q3" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (A) a - iv, b - iii, c - ii, d - i</div>
+          • मूल अधिकार उप-समिति: जे.बी. कृपलानी<br>
+          • राज्य समिति: पं. जवाहरलाल नेहरू<br>
+          • प्रारूप समिति: डॉ. बी.आर. आंबेडकर<br>
+          • संचालन समिति: डॉ. राजेंद्र प्रसाद।
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 4</span>
+          <div class="q-text">
+            भारत के राष्ट्रवादी नेताओं के क्षेत्रों के संबंध में, निम्नलिखित में से सही विकल्प का चयन कर रिक्त स्थान की पूर्ति कीजिए :<br>
+            <strong>बाल गंगाधर तिलक : महाराष्ट्र ; बिपिन चंद्र पाल : ____________</strong>
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q4">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q4', 'q4')"><span class="opt-indicator">A</span> (A) पंजाब</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q4', 'q4')"><span class="opt-indicator">B</span> (B) बिहार</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q4', 'q4')"><span class="opt-indicator">C</span> (C) बंगाल</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q4', 'q4')"><span class="opt-indicator">D</span> (D) दिल्ली</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q4" onclick="toggleAnswer('sol-q4', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q4" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (C) बंगाल</div>
+          उग्रवादी राष्ट्रवादी त्रिमूर्ति 'लाल-बाल-पाल' में लाला लाजपत राय पंजाब से, बाल गंगाधर तिलक महाराष्ट्र से, और बिपिन चंद्र पाल बंगाल से संबंधित थे।
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 5</span>
+          <div class="q-text">निम्नलिखित क्षेत्रों में से कौन-सा 1857 के विद्रोह का प्रमुख केंद्र नहीं था?</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q5">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q5', 'q5')"><span class="opt-indicator">A</span> (A) कानपुर</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q5', 'q5')"><span class="opt-indicator">B</span> (B) मेरठ</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q5', 'q5')"><span class="opt-indicator">C</span> (C) लखनऊ</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q5', 'q5')"><span class="opt-indicator">D</span> (D) मैसूर</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q5" onclick="toggleAnswer('sol-q5', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q5" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (D) मैसूर</div>
+          1857 का विद्रोह मुख्य रूप से उत्तरी और मध्य भारत में सक्रिय था; दक्षिण भारत में मैसूर और मद्रास प्रेसीडेंसी शांत रहे।
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 6</span>
+          <div class="q-text">निम्नलिखित में से संथाल विद्रोह (1855-56) का नेता कौन था?</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q6">
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q6', 'q6')"><span class="opt-indicator">A</span> (A) सिद्धू मांझी</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q6', 'q6')"><span class="opt-indicator">B</span> (B) बिरसा मुंडा</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q6', 'q6')"><span class="opt-indicator">C</span> (C) अल्लूरी सीताराम राजू</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q6', 'q6')"><span class="opt-indicator">D</span> (D) जात्रा भगत</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q6" onclick="toggleAnswer('sol-q6', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q6" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (A) सिद्धू मांझी</div>
+          1855-56 में राजमहल की पहाड़ियों में हुए संथाल विद्रोह का नेतृत्व सिद्धू मांझी और उनके भाई कान्हू मांझी ने किया था।
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 7</span>
+          <div class="q-text">
+            इब्न बतूता के यात्रा के अनुभव के संबंध में निम्नलिखित कथनों को पढ़िए और सही विकल्प का चयन कीजिए :<br>
+            I. उसकी यात्रा असुरक्षित थी, क्योंकि कई बार उसे लूटा गया।<br>
+            II. वह साथियों के साथ कारवाँ में यात्रा करता था।<br>
+            III. लंबी दूरी के कारण उसकी यात्रा कई महीनों तक चलती थी।<br>
+            IV. उसने अपनी यात्रा के अनुभव फारसी में लिखे थे।
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q7">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q7', 'q7')"><span class="opt-indicator">A</span> (A) I, II और IV सही हैं</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q7', 'q7')"><span class="opt-indicator">B</span> (B) I, II और III सही हैं</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q7', 'q7')"><span class="opt-indicator">C</span> (C) I, III और IV सही हैं</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q7', 'q7')"><span class="opt-indicator">D</span> (D) II, III और IV सही हैं</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q7" onclick="toggleAnswer('sol-q7', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q7" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (B) I, II और III सही हैं</div>
+          कथन IV गलत है क्योंकि इब्न बतूता ने अपने यात्रा वृत्तांत 'किताब-उल-रिहला' को <strong>अरबी भाषा</strong> में लिखा था, न कि फारसी में।
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 8</span>
+          <div class="q-text">सिख गुरुओं के संबंध में विषम (Odd one out) की पहचान कीजिए :</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q8">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q8', 'q8')"><span class="opt-indicator">A</span> (A) गुरु नानक देव</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q8', 'q8')"><span class="opt-indicator">B</span> (B) गुरु अंगद देव</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q8', 'q8')"><span class="opt-indicator">C</span> (C) गुरु रैदास</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q8', 'q8')"><span class="opt-indicator">D</span> (D) गुरु अर्जुन देव</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q8" onclick="toggleAnswer('sol-q8', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q8" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (C) गुरु रैदास</div>
+          गुरु नानक देव, गुरु अंगद देव और गुरु अर्जुन देव सिख धर्म के दस प्रामाणिक गुरुओं में शामिल हैं; जबकि संत रैदास भक्ति काल के निर्गुण संत-कवि थे।
+        </div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 9</span>
+          <div class="q-text">अकबर के भूमि-वर्गीकरण के अनुसार निम्नलिखित में से किस श्रेणी की भूमि को पाँच वर्षों से अधिक खाली छोड़ा जाता था?</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q9">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q9', 'q9')"><span class="opt-indicator">A</span> (A) पोलज</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q9', 'q9')"><span class="opt-indicator">B</span> (B) चंचर</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q9', 'q9')"><span class="opt-indicator">C</span> (C) परौती</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q9', 'q9')"><span class="opt-indicator">D</span> (D) बंजर</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q9" onclick="toggleAnswer('sol-q9', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q9" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (D) बंजर</div>
+          आइने-अकबरी के अनुसार: पोलज (प्रतिवर्ष खेती), परौती (1-2 वर्ष खाली), चंचर (3-4 वर्ष खाली), और बंजर (5 या अधिक वर्षों से बिना जुती)।
+        </div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 10</span>
+          <div class="q-text">नीचे दिए गए विकल्पों में से उचित शब्द से रिक्त स्थान की पूर्ति कीजिए :<br><strong>आइन-ए-अकबरी एक विशाल इतिहास का हिस्सा था, जिसे ________ नामा कहा जाता था।</strong></div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q10">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q10', 'q10')"><span class="opt-indicator">A</span> (A) बाबर</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q10', 'q10')"><span class="opt-indicator">B</span> (B) अकबर</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q10', 'q10')"><span class="opt-indicator">C</span> (C) जहाँगीर</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q10', 'q10')"><span class="opt-indicator">D</span> (D) शाहजहाँ</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q10" onclick="toggleAnswer('sol-q10', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q10" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (B) अकबर (अकबरनामा)</div>
+          अबुल फज़्ल द्वारा रचित 'अकबरनामा' तीन जिल्दों में बंटी है; इसकी तीसरी जिल्द 'आइन-ए-अकबरी' है।
+        </div>
+      </div>
+
+      <!-- Q11 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 11</span>
+          <div class="q-text">निम्नलिखित में से कौन-सा क्षेत्र 'रायचूर दोआब' के नाम से जाना जाता था, जिसको विजयनगर साम्राज्य ने 1512 में जीता था?</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q11">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q11', 'q11')"><span class="opt-indicator">A</span> (A) नर्मदा और कावेरी नदियों के बीच का क्षेत्र</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q11', 'q11')"><span class="opt-indicator">B</span> (B) गोदावरी और कृष्णा नदियों के बीच का क्षेत्र</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q11', 'q11')"><span class="opt-indicator">C</span> (C) तापी और नर्मदा नदियों के बीच का क्षेत्र</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q11', 'q11')"><span class="opt-indicator">D</span> (D) कृष्णा और तुंगभद्रा नदियों के बीच का क्षेत्र</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q11" onclick="toggleAnswer('sol-q11', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q11" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (D) कृष्णा और तुंगभद्रा नदियों के बीच का क्षेत्र</div>
+          तुंगभद्रा और कृष्णा नदी के बीच स्थित उपजाऊ 'रायचूर दोआब' को 1512 में महाराज कृष्णदेव राय ने विजित किया था।
+        </div>
+      </div>
+
+      <!-- Q12 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 12</span>
+          <div class="q-text">
+            निम्नलिखित में से कौन-से कथन 'मीराबाई' के बारे में सही हैं?<br>
+            I. उनका विवाह मेवाड़ के सिसोदिया वंश में हुआ था।<br>
+            II. उन्होंने कृष्ण को अपना दैविक प्रेमी माना था।<br>
+            III. उनके आध्यात्मिक गुरु रामानंद थे।<br>
+            IV. उन्होंने अनुयायियों के एक समूह के साथ एक संप्रदाय की स्थापना की थी।
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q12">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q12', 'q12')"><span class="opt-indicator">A</span> (A) केवल II और III सही हैं</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q12', 'q12')"><span class="opt-indicator">B</span> (B) केवल I और II सही हैं</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q12', 'q12')"><span class="opt-indicator">C</span> (C) केवल III और IV सही हैं</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q12', 'q12')"><span class="opt-indicator">D</span> (D) केवल II और IV सही हैं</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q12" onclick="toggleAnswer('sol-q12', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q12" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (B) केवल I और II सही हैं</div>
+          मीराबाई का विवाह मेवाड़ के सिसोदिया राजपरिवार में हुआ था और वे श्रीकृष्ण की अनन्य प्रेमिका थीं। उनके गुरु संत रैदास थे, और उन्होंने कोई अलग संप्रदाय नहीं बनाया था।
+        </div>
+      </div>
+
+      <!-- Q13 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 13</span>
+          <div class="q-text">निम्नलिखित में से कौन-सा युग्म सुमेलित है?</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q13">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q13', 'q13')"><span class="opt-indicator">A</span> (A) अफानासी निकितिन — स्पेन</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q13', 'q13')"><span class="opt-indicator">B</span> (B) ज्यौं-बैप्टिस्ट टैवर्नियर — नीदरलैंड</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q13', 'q13')"><span class="opt-indicator">C</span> (C) मार्को पोलो — इटली</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q13', 'q13')"><span class="opt-indicator">D</span> (D) पेसर्टा — पुर्तगाल</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q13" onclick="toggleAnswer('sol-q13', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q13" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (C) मार्को पोलो — इटली</div>
+          मार्को पोलो 13वीं शताब्दी का वेनिस (इटली) का प्रसिद्ध यात्री था।
+        </div>
+      </div>
+
+      <!-- Q14 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 14</span>
+          <div class="q-text">धर्मशास्त्रों के अनुसार निम्नलिखित में से कौन-सा स्त्री के स्वामित्व वाला 'स्त्रीधन' होता था?</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q14">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q14', 'q14')"><span class="opt-indicator">A</span> (A) राजा और ब्राह्मणों से प्राप्त भूमि का अनुदान</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q14', 'q14')"><span class="opt-indicator">B</span> (B) विवाह के समय और रिश्तेदारों से प्राप्त उपहार</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q14', 'q14')"><span class="opt-indicator">C</span> (C) वर और वधू के परिवारों द्वारा दिए गए उपहारों का आदान-प्रदान</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q14', 'q14')"><span class="opt-indicator">D</span> (D) पैतृक संपत्ति और संसाधनों में बराबरी का हिस्सा</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q14" onclick="toggleAnswer('sol-q14', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q14" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (B) विवाह के समय और रिश्तेदारों से प्राप्त उपहार</div>
+          मनुस्मृति के अनुसार विवाह के अवसर पर वधू को माता-पिता तथा सगे-संबंधियों द्वारा दिए गए उपहारों पर केवल स्त्री का अधिकार होता था।
+        </div>
+      </div>
+
+      <!-- Q15 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 15</span>
+          <div class="q-text">
+            स्तंभ A का स्तंभ B से मिलान कीजिए और सही विकल्प का चयन कीजिए :<br>
+            <table style="width: 100%; margin-top: 8px; font-size: 0.9rem; border-collapse: collapse;">
+              <tr><td style="padding: 4px; color: #f59e0b;"><strong>स्तंभ A (पुरातत्वविद)</strong></td><td style="padding: 4px; color: #f59e0b;"><strong>स्तंभ B (योगदान)</strong></td></tr>
+              <tr><td>a. दया राम साहनी</td><td>i. मोहनजोदड़ो में मुहरें खोजीं</td></tr>
+              <tr><td>b. राखाल दास बनर्जी</td><td>ii. हड़प्पा में मुहरें खोजीं</td></tr>
+              <tr><td>c. आर.ई.एम. व्हीलर</td><td>iii. 'द स्टोरी ऑफ़ इंडियन आर्कियोलॉजी' लिखी</td></tr>
+              <tr><td>d. एस.एन. रॉय</td><td>iv. पुरातत्व में सैनिक परिशुद्धता का समावेश</td></tr>
+            </table>
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q15">
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q15', 'q15')"><span class="opt-indicator">A</span> (A) a - ii, b - i, c - iv, d - iii</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q15', 'q15')"><span class="opt-indicator">B</span> (B) a - iii, b - ii, c - i, d - iv</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q15', 'q15')"><span class="opt-indicator">C</span> (C) a - iv, b - iii, c - ii, d - i</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q15', 'q15')"><span class="opt-indicator">D</span> (D) a - i, b - iv, c - iii, d - ii</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q15" onclick="toggleAnswer('sol-q15', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q15" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (A) a - ii, b - i, c - iv, d - iii</div>
+          दया राम साहनी (हड़प्पा 1921), राखाल दास बनर्जी (मोहनजोदड़ो 1922), व्हीलर (सैनिक परिशुद्धता 1944), एस.एन. रॉय ('द स्टोरी ऑफ़ इंडियन आर्कियोलॉजी')।
+        </div>
+      </div>
+
+      <!-- Q16 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 16</span>
+          <div class="q-text">प्रथम शताब्दी ई. के बुद्ध के चित्र को देखकर प्राचीन भारतीय कला शैली की पहचान कीजिए :</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q16">
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q16', 'q16')"><span class="opt-indicator">A</span> (A) गांधार कला शैली</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q16', 'q16')"><span class="opt-indicator">B</span> (B) अमरावती कला शैली</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q16', 'q16')"><span class="opt-indicator">C</span> (C) सारनाथ कला शैली</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q16', 'q16')"><span class="opt-indicator">D</span> (D) मथुरा कला शैली</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q16" onclick="toggleAnswer('sol-q16', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q16" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (A) गांधार कला शैली</div>
+          प्रथम शताब्दी ई. में कुषाण काल के दौरान पश्चिमोत्तर भारत में गांधार कला शैली में ग्रीक-रोमन प्रभाव से बुद्ध की पहली मानवीय मूर्तियां गढ़ी गईं।<br>
+          <em>(दृष्टिबाधित परीक्षार्थियों हेतु: हीनयान बौद्ध धर्म का दूसरा नाम: <strong>(C) थेरवाद</strong>)</em>
+        </div>
+      </div>
+
+      <!-- Q17 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 17</span>
+          <div class="q-text">
+            निम्नलिखित जानकारी की सहायता से महाभारत के पात्र की पहचान कीजिए और सही विकल्प का चयन कीजिए :
+            <ul style="margin-top: 8px; font-weight: normal; color: #cbd5e1; list-style-type: square; padding-left: 20px;">
+              <li>वह स्वयं को द्रोणाचार्य का शिष्य मानता था।</li>
+              <li>उसने गुरु दक्षिणा के रूप में अपने दाहिने हाथ का अँगूठा देकर अपने गुरु को सम्मान दिया।</li>
+              <li>उसने स्वयं अभ्यास के माध्यम से धनुर्विद्या में निपुणता प्राप्त की।</li>
+            </ul>
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q17">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q17', 'q17')"><span class="opt-indicator">A</span> (A) नकुल</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q17', 'q17')"><span class="opt-indicator">B</span> (B) कर्ण</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q17', 'q17')"><span class="opt-indicator">C</span> (C) अर्जुन</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q17', 'q17')"><span class="opt-indicator">D</span> (D) एकलव्य</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q17" onclick="toggleAnswer('sol-q17', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q17" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (D) एकलव्य</div>
+          निषाद राजकुमार एकलव्य ने द्रोणाचार्य को अपना गुरु मानकर दाहिने हाथ का अंगूठा दक्षिणा में दिया था।
+        </div>
+      </div>
+
+      <!-- Q18 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 18</span>
+          <div class="q-text">
+            निम्नलिखित साहित्यिक रचनाओं को कालक्रमानुसार व्यवस्थित कीजिए और सही विकल्प का चयन कीजिए :<br>
+            I. पाणिनि की अष्टाध्यायी (लगभग 500 ई.पू.)<br>
+            II. बाणभट्ट का हर्षचरित (7वीं शताब्दी ईस्वी)<br>
+            III. कौटिल्य का अर्थशास्त्र (लगभग चौथी/तीसरी सदी ई.पू.)<br>
+            IV. भरत का नाट्यशास्त्र (लगभग 100 ई.पू. - 100 ईस्वी)
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q18">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q18', 'q18')"><span class="opt-indicator">A</span> (A) II, III, I, IV</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q18', 'q18')"><span class="opt-indicator">B</span> (B) III, I, II, IV</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q18', 'q18')"><span class="opt-indicator">C</span> (C) I, IV, III, II</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q18', 'q18')"><span class="opt-indicator">D</span> (D) I, III, IV, II</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q18" onclick="toggleAnswer('sol-q18', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q18" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (D) I, III, IV, II</div>
+          पाणिनि की अष्टाध्यायी (500 ई.पू.) → कौटिल्य का अर्थशास्त्र (~300 ई.पू.) → भरत का नाट्यशास्त्र (~100 ई.) → बाणभट्ट का हर्षचरित (7वीं सदी ई.)।
+        </div>
+      </div>
+
+      <!-- Q19 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 19</span>
+          <div class="q-text">
+            नीचे दो कथन दिए गए हैं, अभिकथन (A) और कारण (R)। इनको ध्यानपूर्वक पढ़िए और सही विकल्प का चयन कीजिए :<br>
+            <strong>अभिकथन (A):</strong> अशोक वह पहला शासक था जिसने अपने संदेश अपनी प्रजा के लिए पत्थरों और स्तंभों पर लिखवाए थे।<br>
+            <strong>कारण (R):</strong> अशोक ने यह सुनिश्चित किया कि धम्म का संदेश जितना संभव हो सके अधिक से अधिक लोगों तक पहुँचे।
+          </div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q19">
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q19', 'q19')"><span class="opt-indicator">A</span> (A) (A) और (R) दोनों सत्य हैं और (R), (A) की सही व्याख्या करता है</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q19', 'q19')"><span class="opt-indicator">B</span> (B) (A) और (R) दोनों सत्य हैं, परन्तु (R), (A) की सही व्याख्या नहीं करता है</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q19', 'q19')"><span class="opt-indicator">C</span> (C) (A) सत्य है, परन्तु (R) असत्य है</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q19', 'q19')"><span class="opt-indicator">D</span> (D) (A) असत्य है, परन्तु (R) सत्य है</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q19" onclick="toggleAnswer('sol-q19', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q19" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (A) दोनों सत्य हैं और (R), (A) की सही व्याख्या करता है</div>
+          सम्राट अशोक ने प्राकृत, ग्रीक और अरामेक जैसी जनभाषाओं में शिलाओं और स्तंभों पर धम्म के संदेश खुदवाए ताकि आम नागरिक इन्हें आसानी से पढ़ व समझ सकें।
+        </div>
+      </div>
+
+      <!-- Q20 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 20</span>
+          <div class="q-text">"मेसोपोटामिया के लेखों में मेलुहा के साथ संपर्कों का उल्लेख है।" निम्नलिखित में से कौन-सा कथन इसके संबंध में पुरातात्विक व्याख्याओं द्वारा समर्थित है?</div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q20">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q20', 'q20')"><span class="opt-indicator">A</span> (A) मेलुहा का संबंध दक्षिण भारतीय महापाषाण संस्कृति से था</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q20', 'q20')"><span class="opt-indicator">B</span> (B) मेलुहा भगवान शिव द्वारा शासित एक प्राचीन साम्राज्य था</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q20', 'q20')"><span class="opt-indicator">C</span> (C) मेलुहा प्राचीन मिस्र का दूसरा नाम था</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q20', 'q20')"><span class="opt-indicator">D</span> (D) मेलुहा हड़प्पा के व्यापारिक क्षेत्र को संदर्भित करता था</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q20" onclick="toggleAnswer('sol-q20', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q20" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (D) मेलुहा हड़प्पा के व्यापारिक क्षेत्र को संदर्भित करता था</div>
+          मेसोपोटामियाई अभिलेखों में 'मेलुहा' को नाविकों का देश कहा गया है जो सिंधु घाटी (हड़प्पा) क्षेत्र का ही नाम था।
+        </div>
+      </div>
+
+      <!-- Q21 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 21</span>
+          <div class="q-text">नीचे दिए गए विकल्पों में से उचित शब्द से रिक्त स्थान की पूर्ति कीजिए :<br><strong>भारत सरकार ने ________ की सरकार पर दबाव डाला कि वह 'दक्कन के दंगों' के कारणों की छानबीन के लिए एक जाँच आयोग बैठाए।</strong></div>
+          <span class="q-badge">1 अंक</span>
+        </div>
+        <div class="mcq-options" data-qid="q21">
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q21', 'q21')"><span class="opt-indicator">A</span> (A) कलकत्ता</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q21', 'q21')"><span class="opt-indicator">B</span> (B) मद्रास</div>
+          <div class="opt-card" onclick="checkOption(this, false, 'sol-q21', 'q21')"><span class="opt-indicator">C</span> (C) दिल्ली</div>
+          <div class="opt-card" data-correct="true" onclick="checkOption(this, true, 'sol-q21', 'q21')"><span class="opt-indicator">D</span> (D) बम्बई</div>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q21" onclick="toggleAnswer('sol-q21', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q21" class="solution-box">
+          <div class="solution-title">💡 सही उत्तर: (D) बम्बई</div>
+          1875 में साहूकारों के विरुद्ध हुए दक्कन विद्रोह की जांच हेतु बम्बई सरकार ने 1878 में 'दक्कन दंगा आयोग रिपोर्ट' प्रस्तुत की थी।
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== खण्ड ख (SECTION B) ==================== -->
+    <div id="sec-b" class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>📝 खण्ड ख: लघु-उत्तरीय प्रश्न (Short Answer)</span>
+        </div>
+        <div class="section-marks">प्र. 22 से 27 • 6 × 3 = 18 अंक (शब्द सीमा: 60-80 शब्द)</div>
+      </div>
+
+      <!-- Q22 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 22 (क)</span>
+          <div class="q-text">कल्पना कीजिए कि आप हड़प्पा की कृषि पर एक शोध परियोजना लिख रहे हैं। पुरातात्विक साक्ष्यों की कौन-सी तीन जानकारियां आप इसे समझाने के लिए उद्धृत करेंगे?</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q22a" onclick="toggleAnswer('sol-q22a', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q22a" class="theory-box">
+          <h4>📌 मॉडल उत्तर (तीन प्रमुख पुरातात्विक साक्ष्य):</h4>
+          <ul>
+            <li><strong>1. जुते हुए खेत का प्रमाण (कालीबंगन):</strong> राजस्थान के कालीबंगन में प्राक्-हड़प्पा स्तर से जुते हुए खेत का साक्ष्य मिला है जिसमें समकोण पर काटती हल-रेखाएं मिली हैं, जो दर्शाती हैं कि एक साथ दो फसलें उगाई जाती थीं।</li>
+            <li><strong>2. मिट्टी के हल के प्रतिरूप (Terracotta Plows):</strong> चोलिस्तान और हरियाणा के <em>बनावली</em> से पकी मिट्टी के बने हल के मॉडल मिले हैं, जो यह सिद्ध करते हैं कि खेत जोतने के लिए बैलों व हल का प्रयोग होता था।</li>
+            <li><strong>3. प्राचीन नहरें एवं जलाशय (सिंचाई साक्ष्य):</strong> अफगानिस्तान के <em>शोर्तुघई</em> से नहरों के अवशेष मिले हैं, तथा गुजरात के <em>धोलावीरा</em> में जल संचयन हेतु पत्थरों से तराशे गए विशाल जलाशय मिले हैं।</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="question-block" style="border-left: 3px solid #f59e0b;">
+        <div class="q-head">
+          <span class="q-number">प्र. 22 (ख) [अथवा]</span>
+          <div class="q-text">कल्पना कीजिए कि आपका विद्यालय हड़प्पा सभ्यता पर एक प्रदर्शनी आयोजित कर रहा है और आप उसमें हड़प्पा लिपि से जुड़े अनुभाग के लिए उत्तरदायी हैं। आप आगंतुकों को इसके कौन-से तीन पहलू स्पष्ट करेंगे?</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q22b" onclick="toggleAnswer('sol-q22b', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q22b" class="theory-box">
+          <h4>📌 मॉडल उत्तर (हड़प्पा लिपि के तीन प्रमुख पहलू):</h4>
+          <ul>
+            <li><strong>1. भाव-चित्रात्मक एवं रहस्यमयी प्रकृति:</strong> यह लिपि वर्णमाला पर आधारित न होकर चित्रात्मक थी। इसमें 375 से 400 के बीच चिह्न थे। यह लिपि आज तक पढ़ी नहीं जा सकी है।</li>
+            <li><strong>2. दाईं से बाईं ओर लेखन:</strong> मुहरों पर दाईं ओर चौड़ा व बाईं ओर संकुचित स्थान यह सिद्ध करता है कि यह लिपि दाईं ओर से बाईं ओर लिखी जाती थी।</li>
+            <li><strong>3. विभिन्न प्रकार की वस्तुओं पर व्यापक साक्ष्य:</strong> यह लिपि मुहरों, तांबे के औजारों, बर्तनों, आभूषणों और धोलावीरा के प्रवेश द्वार पर मिले विशाल काष्ठ सूचना-पट्ट (Signboard) पर पाई गई है।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q23 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 23</span>
+          <div class="q-text">प्राचीन सिक्कों की किन्हीं तीन विशेषताओं का वर्णन कीजिए।</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q23" onclick="toggleAnswer('sol-q23', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q23" class="theory-box">
+          <h4>📌 मॉडल उत्तर (प्राचीन सिक्कों की तीन विशेषताएं):</h4>
+          <ul>
+            <li><strong>1. आहत सिक्के (Punch-Marked Coins):</strong> ईसा पूर्व छठी सदी में चांदी और तांबे के आहत सिक्के प्रचलन में आए, जिन पर विशिष्ट प्रतीकों के ठप्पे मारे जाते थे।</li>
+            <li><strong>2. शासकों की प्रतिमा व नाम वाले सिक्के:</strong> भारत में सर्वप्रथम दूसरी सदी ई.पू. में हिंद-यूनानी (Indo-Greek) शासकों ने सिक्कों पर राजाओं के नाम और चित्र उत्कीर्ण करवाए।</li>
+            <li><strong>3. स्वर्ण मुद्राएं (कुषाण व गुप्त काल):</strong> कुषाणों ने बड़े पैमाने पर रोमन सिक्कों के समकक्ष तथा गुप्त शासकों ने अत्यंत कलात्मक, उच्च धातु-शुद्धता वाले सोने के सिक्के चलाए।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q24 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 24</span>
+          <div class="q-text">भारतीय समाज को समझने में अल-बिरूनी के सामने आई बाधाओं की व्याख्या कीजिए।</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q24" onclick="toggleAnswer('sol-q24', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q24" class="theory-box">
+          <h4>📌 मॉडल उत्तर (अल-बिरूनी द्वारा वर्णित 3 प्रमुख बाधाएं):</h4>
+          <ul>
+            <li><strong>1. संस्कृत भाषा की जटिलता:</strong> अल-बिरूनी के अनुसार संस्कृत व्याकरण और दार्शनिक शब्दावली अरबी-फारसी से इतनी भिन्न थी कि इसका सटीक अनुवाद अत्यंत कठिन था।</li>
+            <li><strong>2. धार्मिक आस्था एवं सामाजिक प्रथाओं में अंतर:</strong> भारतीय जाति व्यवस्था, पवित्रता-अपवित्रता के नियम और रीति-रिवाज इस्लामी मान्यताओं से नितांत भिन्न थे।</li>
+            <li><strong>3. स्थानीय निवासियों का संकीर्ण दृष्टिकोण:</strong> यहाँ के विद्वान और ब्राह्मण अपने ज्ञान को श्रेष्ठ मानते थे और ज्ञान को विदेशियों (म्लेच्छों) के साथ साझा करने से कतराते थे।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q25 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 25 (क)</span>
+          <div class="q-text">सिख धर्म में गुरु गोविंद सिंह की भूमिका की व्याख्या कीजिए।</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q25a" onclick="toggleAnswer('sol-q25a', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q25a" class="theory-box">
+          <h4>📌 मॉडल उत्तर (गुरु गोविंद सिंह जी की भूमिका):</h4>
+          <ul>
+            <li><strong>1. खालसा पंथ की स्थापना (1699):</strong> बैसाखी पर आनंदपुर साहिब में 'खालसा' (सैनिक-संत समुदाय) की नींव रखी और अत्याचार के विरुद्ध प्रतिरोध को कर्तव्य बनाया।</li>
+            <li><strong>2. पाँच ककार का विधान:</strong> प्रत्येक सिख हेतु पांच अनिवार्य प्रतीक निर्धारित किए—केश, कंघा, कड़ा, कच्छा और कृपाण।</li>
+            <li><strong>3. गुरु ग्रंथ साहिब को शाश्वत गुरु घोषित करना:</strong> उन्होंने देहधारी गुरु परंपरा समाप्त कर 'गुरु ग्रंथ साहिब' को ही सिखों का शाश्वत गुरु माना।</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="question-block" style="border-left: 3px solid #f59e0b;">
+        <div class="q-head">
+          <span class="q-number">प्र. 25 (ख) [अथवा]</span>
+          <div class="q-text">कबीर के दर्शन में 'परम सत्य' के सिद्धांत की व्याख्या कीजिए।</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q25b" onclick="toggleAnswer('sol-q25b', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q25b" class="theory-box">
+          <h4>📌 मॉडल उत्तर (कबीर के दर्शन में 'परम सत्य'):</h4>
+          <ul>
+            <li><strong>1. निराकार एवं अद्वितीय ईश्वर:</strong> कबीर ने परम सत्य को निराकार, निर्गुण और सर्वव्यापी माना जो मंदिर-मस्जिद में नहीं बल्कि अंतःकरण में बसता है।</li>
+            <li><strong>2. विविध परंपराओं के नामों का समन्वय:</strong> उन्होंने अल्लाह, खुदा, हजरत, पीर, राम, रहीम, ब्रह्म, शून्य और अलख को एक ही सत्य के नाम बताया।</li>
+            <li><strong>3. बाह्य पाखंड का खंडन:</strong> मूर्तिपूजा, तीर्थाटन और कर्मकांडों को निरर्थक बताकर सच्चे प्रेम व सदाचरण पर बल दिया।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q26 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 26</span>
+          <div class="q-text">अंग्रेजों ने बंगाल में इस्तमरारी बंदोबस्त (Permanent Settlement) की शुरुआत क्यों की थी? स्पष्ट कीजिए।</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q26" onclick="toggleAnswer('sol-q26', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q26" class="theory-box">
+          <h4>📌 मॉडल उत्तर (इस्तमरारी बंदोबस्त लागू करने के कारण):</h4>
+          <ul>
+            <li><strong>1. नियमित एवं निश्चित राजस्व:</strong> कंपनी को अपने प्रशासनिक, सैन्य तथा व्यापारिक खर्चों के लिए एक निश्चित वार्षिक आय चाहिए थी।</li>
+            <li><strong>2. कृषि में पूंजी निवेश की आशा:</strong> लॉर्ड कॉर्नवालिस का विचार था कि स्थायी राजस्व होने पर जमींदारों को भूमि सुधार में पूंजी लगाने की प्रेरणा मिलेगी।</li>
+            <li><strong>3. निष्ठावान समर्थक जमींदार वर्ग:</strong> ब्रिटिश सत्ता भारत में एक ऐसा संपन्न जमींदार वर्ग खड़ा करना चाहती थी जो राज के प्रति वफादार रहे।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q27 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 27</span>
+          <div class="q-text">राष्ट्रीय भाषा के संबंध में महात्मा गाँधी के विचारों की परख कीजिए।</div>
+          <span class="q-badge">3 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q27" onclick="toggleAnswer('sol-q27', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q27" class="theory-box">
+          <h4>📌 मॉडल उत्तर (महात्मा गांधी के राष्ट्रभाषा संबंधी विचार):</h4>
+          <ul>
+            <li><strong>1. 'हिंदुस्तानी' का समर्थन:</strong> गांधीजी का मत था कि स्वतंत्र भारत की संपर्क भाषा हिंदी और उर्दू का सरल मिश्रण 'हिंदुस्तानी' होनी चाहिए।</li>
+            <li><strong>2. बहुसांस्कृतिक समन्वय का प्रतीक:</strong> हिंदुस्तानी को विभिन्न बोलियों को समाहित कर राष्ट्रीय एकता सुदृढ़ करने वाली भाषा मानते थे।</li>
+            <li><strong>3. भाषाई सांप्रदायिकता का विरोध:</strong> भाषा को अत्यधिक संस्कृतनिष्ठ या बहुत फारसीकृत बनाकर लोगों से दूर करने का विरोध किया।</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== खण्ड ग (SECTION C) ==================== -->
+    <div id="sec-c" class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>📖 खण्ड ग: दीर्घ-उत्तरीय प्रश्न (Long Answer)</span>
+        </div>
+        <div class="section-marks">प्र. 28 से 30 • 3 × 8 = 24 अंक (शब्द सीमा: 300-350 शब्द)</div>
+      </div>
+
+      <!-- Q28 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 28 (क)</span>
+          <div class="q-text">उन उदाहरणों का वर्णन कीजिए जो भारत के प्रारंभिक ऐतिहासिक काल में बंधुत्व, विवाह और शासक वंश-संबंधी ब्राह्मणीय नियमों का सर्वत्र अनुसरण न होने को दर्शाते हैं।</div>
+          <span class="q-badge">8 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q28a" onclick="toggleAnswer('sol-q28a', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q28a" class="theory-box">
+          <h4>📌 विस्तृत मॉडल उत्तर (8 अंक हेतु पूर्ण विश्लेषण):</h4>
+          <p>धर्मशास्त्रों में बंधुत्व, विवाह, जाति और शासक वंश के कड़े नियम प्रतिपादित थे, किंतु ऐतिहासिक साक्ष्य यह सिद्ध करते हैं कि समाज में इन नियमों का सर्वत्र पालन नहीं होता था:</p>
+          
+          <h4>1. शासक वंश संबंधी नियमों का विचलन (गैर-क्षत्रिय राजा):</h4>
+          <ul>
+            <li><strong>ब्राह्मणीय नियम:</strong> केवल क्षत्रिय ही राजा बन सकते थे।</li>
+            <li><strong>वास्तविक विचलन:</strong>
+              <ul>
+                <li><strong>मौर्य वंश:</strong> बौद्ध ग्रंथ उन्हें क्षत्रिय मानते हैं, जबकि ब्राह्मणीय ग्रंथ उन्हें 'निम्न कुल' का बताते हैं।</li>
+                <li><strong>शुंग और कण्व:</strong> मौर्यों के उत्तराधिकारी शुंग और कण्व शासक ब्राह्मण थे।</li>
+                <li><strong>शक और कुषाण:</strong> मध्य एशिया से आए शक शासकों को ब्राह्मण 'म्लेच्छ' और बर्बर मानते थे, किंतु उन्होंने शक्तिशाली साम्राज्य स्थापित किया (जैसे रुद्रदामन)।</li>
+                <li><strong>सातवाहन:</strong> प्रसिद्ध सातवाहन राजा गौतमी-पुत्र सातकर्णि ने स्वयं को 'अनोखा ब्राह्मण' और क्षत्रियों के दर्प को तोड़ने वाला कहा।</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4>2. विवाह और गोत्र संबंधी नियमों का उल्लंघन:</h4>
+          <ul>
+            <li><strong>ब्राह्मणीय नियम:</strong> समान गोत्र में विवाह वर्जित था (बहिर्विवाह अनिवार्य था), तथा विवाह उपरांत कन्या को पति का गोत्र अपनाना होता था।</li>
+            <li><strong>वास्तविक विचलन (सातवाहन साक्ष्य):</strong> सातवाहन रानियों के अभिलेखीय नामों (गौतमी और वासिष्ठी) से स्पष्ट है कि विवाह के बाद भी उन्होंने अपने पिता के गोत्र को बनाए रखा; तथा सातवाहनों में कुल के भीतर ही अंतर्विवाह (Endogamy) का प्रचलन था।</li>
+          </ul>
+
+          <h4>3. बहुपति प्रथा का अपवाद:</h4>
+          <ul>
+            <li>महाभारत में द्रौपदी का पांचों पांडवों के साथ विवाह (बहुपति प्रथा) ब्राह्मणीय आदर्शों के सर्वथा विपरीत और अनोखा था।</li>
+          </ul>
+
+          <h4>4. संपत्ति अधिकार और पितृवंशिकता में अपवाद:</h4>
+          <ul>
+            <li>वाकाटक महारानी <strong>प्रभावती गुप्त</strong> (चंद्रगुप्त द्वितीय की पुत्री) ने स्वतंत्र रूप से भूमि का स्वामित्व रखा और धार्मिक दान दिए, जो धर्मशास्त्रों के नियमों का स्पष्ट अपवाद है।</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="question-block" style="border-left: 3px solid #f59e0b;">
+        <div class="q-head">
+          <span class="q-number">प्र. 28 (ख) [अथवा]</span>
+          <div class="q-text">महाभारत के समालोचनात्मक संस्करण को तैयार करने में वी.एस. सुकथांकर और उनकी टीम द्वारा अपनाई गई प्रक्रिया का वर्णन कीजिए।</div>
+          <span class="q-badge">8 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q28b" onclick="toggleAnswer('sol-q28b', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q28b" class="theory-box">
+          <h4>📌 विस्तृत मॉडल उत्तर (सुकथांकर परियोजना का मूल्यांकन):</h4>
+          <h4>1. परियोजना का शुभारंभ एवं उद्देश्य (1919):</h4>
+          <p>1919 में प्रसिद्ध संस्कृत विद्वान <strong>वी.एस. सुकथांकर</strong> के नेतृत्व में पुणे के 'भांडारकर प्राच्य विद्या शोध संस्थान' (BORI) द्वारा महाभारत का समालोचनात्मक संस्करण तैयार करने का कार्य प्रारंभ हुआ।</p>
+
+          <h4>2. पांडुलिपियों का राष्ट्रव्यापी संकलन:</h4>
+          <p>कश्मीर और नेपाल से लेकर दक्षिण भारत में केरल व तमिलनाडु तक से विभिन्न लिपियों (शारदा, देवनागरी, बंगाली, ग्रंथ, मलयालम) में लिखी सैकड़ों पांडुलिपियां एकत्रित की गईं।</p>
+
+          <h4>3. तुलनात्मक पद्धति:</h4>
+          <p>टीम ने प्रत्येक पांडुलिपि के प्रत्येक श्लोक की तुलना की और केवल उन्हीं श्लोकों को मुख्य पाठ में रखा जो सभी पांडुलिपियों में समान रूप से पाए गए।</p>
+
+          <h4>4. पूर्णता एवं निष्कर्ष:</h4>
+          <p>यह परियोजना 47 वर्षों में 1966 में 13,000 पृष्ठों में प्रकाशित हुई। इसने सिद्ध किया कि पूरे भारत में महाभारत की मूल कथा में एकता थी, जबकि पाद-टिप्पणियों में क्षेत्रीय विविधताओं का अद्भुत दस्तावेजीकरण हुआ।</p>
+        </div>
+      </div>
+
+      <!-- Q29 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 29 (क)</span>
+          <div class="q-text">“कृष्णदेव राय के शासन की चारित्रिक विशेषता विस्तार, दृढ़ीकरण और स्थापत्य कला का विकास था।” इस कथन की उदाहरणों सहित व्याख्या कीजिए।</div>
+          <span class="q-badge">8 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q29a" onclick="toggleAnswer('sol-q29a', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q29a" class="theory-box">
+          <h4>📌 विस्तृत मॉडल उत्तर (कृष्णदेव राय का शासनकाल 1509–1529):</h4>
+          <h4>1. साम्राज्य विस्तार (Territorial Expansion):</h4>
+          <ul>
+            <li><strong>रायचूर दोआब विजय (1512):</strong> तुंगभद्रा और कृष्णा नदी के मध्य उपजाऊ क्षेत्र जीता।</li>
+            <li><strong>ओडिशा के गजपतियों की पराजय (1514):</strong> उदयगिरि और कोंडाविडु के अजेय दुर्ग जीते।</li>
+            <li><strong>बीजापुर के सुल्तान की पराजय (1520):</strong> इस्माइल आदिल शाह को निर्णायक रूप से हराया।</li>
+          </ul>
+
+          <h4>2. आंतरिक सुदृढ़ीकरण एवं कूटनीति:</h4>
+          <ul>
+            <li>विद्रोही नायकों को नियंत्रित किया।</li>
+            <li>पुर्तगालियों से मित्रता कर उत्कृष्ट अरबी घोड़ों और बंदूकों की आपूर्ति सुनिश्चित की।</li>
+          </ul>
+
+          <h4>3. भव्य स्थापत्य कला:</h4>
+          <ul>
+            <li>दक्षिण के प्रमुख मंदिरों में भव्य 'रायगोपुरम' (विशाल प्रवेश द्वार) बनवाए।</li>
+            <li>विरूपाक्ष मंदिर में सुंदर नक्काशीदार खंभों वाला सभा मंडप बनवाया।</li>
+            <li>विट्ठल स्वामी मंदिर में प्रसिद्ध 'पत्थर का रथ' और 56 संगीतमय स्तंभ बनवाए।</li>
+            <li>माता की स्मृति में 'नागलपुरम' नगर और सिंचाई हेतु 'कमलापुरम जलाशय' बनवाया।</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="question-block" style="border-left: 3px solid #f59e0b;">
+        <div class="q-head">
+          <span class="q-number">प्र. 29 (ख) [अथवा]</span>
+          <div class="q-text">“महानवमी डिब्बा की संरचना अपने भवनों के साथ-साथ अपने कार्यों के लिए भी महत्वपूर्ण थी।” इस कथन की उदाहरणों सहित व्याख्या कीजिए।</div>
+          <span class="q-badge">8 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q29b" onclick="toggleAnswer('sol-q29b', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q29b" class="theory-box">
+          <h4>📌 विस्तृत मॉडल उत्तर (महानवमी डिब्बा: वास्तुशिल्प और राजकीय अनुष्ठान):</h4>
+          <h4>1. भौतिक संरचना:</h4>
+          <ul>
+            <li>शाही केंद्र के सर्वोच्च धरातल पर स्थित 11,000 वर्ग फीट आधार और 40 फीट ऊंचा विशाल मंच।</li>
+            <li>दीवारों पर हाथी, घोड़े, सैनिक, नर्तकियों और दरबारी दृश्यों की सजीव नक्काशी (Relief Carvings)।</li>
+          </ul>
+
+          <h4>2. धार्मिक एवं अनुष्ठानिक कार्य:</h4>
+          <ul>
+            <li>10-दिवसीय शरद नवरात्रि (महानवमी/दशहरा) के राजकीय अनुष्ठानों का केंद्र।</li>
+            <li>राज्य के अश्वों की पूजा, शस्त्र पूजा और बलि के अनुष्ठान संपन्न होते थे।</li>
+          </ul>
+
+          <h4>3. राजनीतिक शक्ति और कर समर्पण:</h4>
+          <ul>
+            <li>सर्वोच्च मंच से राजा द्वारा भव्य सैन्य परेड का निरीक्षण।</li>
+            <li>साम्राज्य के नायकों और अमरनायकों द्वारा राजा को औपचारिक निष्ठा और वार्षिक कर (भेंट) का समर्पण।</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Q30 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 30 (क)</span>
+          <div class="q-text">भारत छोड़ो आंदोलन (1942) के कारणों और घटनाओं की परख कीजिए।</div>
+          <span class="q-badge">8 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q30a" onclick="toggleAnswer('sol-q30a', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q30a" class="theory-box">
+          <h4>📌 विस्तृत मॉडल उत्तर (भारत छोड़ो आंदोलन: कारण एवं घटनाएं):</h4>
+          <h4>1. आंदोलन के प्रमुख कारण:</h4>
+          <ul>
+            <li><strong>क्रिप्स मिशन की विफलता (1942):</strong> भारतीयों को वास्तविक सत्ता हस्तांतरण न होने से देश में घोर असंतोष फैला।</li>
+            <li><strong>जापानी आक्रमण का भय:</strong> दक्षिण-पूर्व एशिया जीतने के बाद जापानी सेना भारत की सीमा पर आ पहुंची थी।</li>
+            <li><strong>युद्धकालीन महंगाई व शोषण:</strong> खाद्यान्न संकट और आवश्यक वस्तुओं की कमी से उपजा जन-रोष।</li>
+          </ul>
+
+          <h4>2. प्रमुख घटनाएं:</h4>
+          <ul>
+            <li><strong>'करो या मरो' का नारा (8 अगस्त 1942):</strong> बंबई के ग्वालिया टैंक मैदान में ऐतिहासिक प्रस्ताव पारित।</li>
+            <li><strong>नेताओं की त्वरित गिरफ्तारी:</strong> 9 अगस्त की भोर में शीर्ष नेताओं की गिरफ्तारी से आंदोलन स्वतःस्फूर्त जनक्रांति बन गया।</li>
+            <li><strong>समानांतर सरकारें:</strong> बलिया (चित्तू पांडे), तामलुक (ताम्रलिप्त सरकार), और सतारा (नाना पाटिल) में स्वतंत्र सरकारें स्थापित हुईं।</li>
+            <li><strong>भूमिगत प्रतिरोध:</strong> जयप्रकाश नारायण, लोहिया, अरुणा आसफ अली और उषा मेहता (गुप्त रेडियो) द्वारा संचालन।</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="question-block" style="border-left: 3px solid #f59e0b;">
+        <div class="q-head">
+          <span class="q-number">प्र. 30 (ख) [अथवा]</span>
+          <div class="q-text">भारत की स्वतंत्रता पर महात्मा गाँधी के दर्शन की परख कीजिए।</div>
+          <span class="q-badge">8 अंक</span>
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q30b" onclick="toggleAnswer('sol-q30b', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q30b" class="theory-box">
+          <h4>📌 विस्तृत मॉडल उत्तर (गांधीजी का स्वाधीनता दर्शन):</h4>
+          <h4>1. सत्य और अहिंसा:</h4>
+          <p>गांधीजी के लिए स्वतंत्रता केवल सत्ता हस्तांतरण नहीं थी; साधन की शुद्धि अनिवार्य थी और अहिंसा के बिना प्राप्त की गई आजादी स्थायी नहीं हो सकती।</p>
+
+          <h4>2. 'हिंद स्वराज' और ग्राम स्वराज:</h4>
+          <p>पश्चिमी अनियंत्रित मशीनी सभ्यता के स्थान पर नैतिक मूल्यों और आत्मनिर्भर स्वायत्त ग्राम गणराज्यों की स्थापना पर बल दिया।</p>
+
+          <h4>3. विभाजन का विरोध और सांप्रदायिक सौहार्द:</h4>
+          <p>15 अगस्त 1947 को उत्सवों में शामिल न होकर कलकत्ता और नोआखली में दंगा पीड़ितों के बीच अनशन और प्रार्थना कर शांति स्थापित की।</p>
+
+          <h4>4. सर्वोदय:</h4>
+          <p>समाज के सबसे निर्धन, वंचित (हरिजन) और अंतिम व्यक्ति के उत्थान को स्वाधीनता की वास्तविक कसौटी माना।</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== खण्ड घ (SECTION D) ==================== -->
+    <div id="sec-d" class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>📜 खण्ड घ: स्रोत आधारित प्रश्न (Source-Based)</span>
+        </div>
+        <div class="section-marks">प्र. 31 से 33 • 3 × 4 = 12 अंक</div>
+      </div>
+
+      <!-- Q31 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 31</span>
+          <div class="q-text">दिए गए स्रोत को ध्यानपूर्वक पढ़िए और इसके नीचे दिए गए प्रश्नों के उत्तर दीजिए : (1+1+2 = 4 अंक)</div>
+          <span class="q-badge">4 अंक</span>
+        </div>
+        <div class="source-quote">
+          <strong>"सिपाही क्या सोचते थे — विद्रोही सिपाहियों की एक अर्जी जो बच गई :"</strong><br>
+          "एक सदी पहले अंग्रेज हिंदुस्तान आए और धीरे-धीरे यहाँ फौजी टुकड़ियां बनाने लगे... हमारे पुरखों ने सदा उनकी सेवा की है और हम भी उनकी नौकरी में आए... लेकिन सन् 1857 में अंग्रेजों ने ये हुक्म जारी कर दिया कि अब सिपाहियों को इंग्लैंड से नए कारतूस और बंदूकें दी जाएंगी। नए कारतूसों में गाय और सूअर की चर्बी मिली हुई है और गेहूं के आटे में हड्डियों का चूरा मिलाकर खिलाया जा रहा है... अगर एक हिंदू या मुसलमान का धर्म ही नष्ट हो गया तो दुनिया में बचेगा क्या?"
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q31" onclick="toggleAnswer('sol-q31', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q31" class="theory-box">
+          <h4>(31.1) सिपाहियों ने 'अर्जी' में अपने विद्रोह को कैसे उचित ठहराया? (1 अंक)</h4>
+          <p><strong>उत्तर:</strong> सिपाहियों ने कहा कि उन्होंने एक सदी तक अंग्रेजों की निष्ठापूर्वक सेवा की, परंतु जब गाय-सूअर की चर्बी लगे कारतूसों से उनके धर्म व आस्था (अकायद व मजहब) को नष्ट करने का षड्यंत्र रचा गया, तो अपनी आस्था की रक्षा के लिए हथियार उठाना अनिवार्य हो गया।</p>
+
+          <h4>(31.2) अंग्रेजों ने नए कारतूसों को कैसे प्रस्तुत किया? (1 अंक)</h4>
+          <p><strong>उत्तर:</strong> अंग्रेजों ने थर्ड लाइट कैवेलरी के घुड़सवारों को नए कारतूस दांतों से खींचने का हुक्म दिया और मना करने पर 84 सिपाहियों को हथकड़ियां-बेड़ियां डालकर 10 वर्ष की जेल में डाल दिया।</p>
+
+          <h4>(31.3) सिपाहियों और भारतीय मुखियाओं ने साथ मिलकर कार्य क्यों किया? (2 अंक)</h4>
+          <p><strong>उत्तर:</strong> सिपाहियों और भारतीय राजाओं-मुखियाओं दोनों की सत्ता और धर्म पर ब्रिटिश राज का साझा खतरा था। राजाओं के राज्य छीने जा रहे थे और सिपाहियों का धर्म भ्रष्ट किया जा रहा था; अतः दोनों ने मिलकर दो वर्ष तक अपनी संप्रभुता व संस्कृति बचाने हेतु साझा संघर्ष किया।</p>
+        </div>
+      </div>
+
+      <!-- Q32 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 32</span>
+          <div class="q-text">दिए गए स्रोत को ध्यानपूर्वक पढ़िए और इसके नीचे दिए गए प्रश्नों के उत्तर दीजिए : (1+1+2 = 4 अंक)</div>
+          <span class="q-badge">4 अंक</span>
+        </div>
+        <div class="source-quote">
+          <strong>"बौद्ध ग्रंथ किस प्रकार तैयार और संकलित किए जाते थे :"</strong><br>
+          "बुद्ध चर्चा और बातचीत करते हुए मौखिक शिक्षा देते थे... बुद्ध के किसी भी संभाषण को उनके जीवन काल में लिखा नहीं गया। उनकी मृत्यु के बाद (पाँचवीं-चौथी सदी ई.पू.) उनके शिष्यों ने वैशाली (वेसाली) में ज्येष्ठों की एक सभा बुलाई। वहाँ पर ही उनकी शिक्षाओं का संकलन किया गया। इन संग्रहों को 'त्रिपिटक' कहा जाता था..."
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q32" onclick="toggleAnswer('sol-q32', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q32" class="theory-box">
+          <h4>(32.1) बुद्ध के संभाषणों को उनके जीवन-काल में क्यों नहीं लिखा गया? स्पष्ट कीजिए। (1 अंक)</h4>
+          <p><strong>उत्तर:</strong> बुद्ध मौखिक संवाद व बातचीत द्वारा जन-सामान्य को उपदेश देते थे, तथा प्राचीन भारतीय परंपरा में ज्ञान को कंठस्थ रखना और मौखिक रूप से संप्रेषित करना अधिक स्वाभाविक माना जाता था।</p>
+
+          <h4>(32.2) संरक्षण के लिए लिखने से पहले मौखिक रूप से प्रेषित करने के प्रभाव का आकलन कीजिए। (1 अंक)</h4>
+          <p><strong>उत्तर:</strong> मौखिक संप्रेषण से शिक्षाएं जन-जन तक सीधे पहुंचीं, परंतु कालान्तर में व्यक्तिगत मतभेदों से बचने हेतु वैशाली संगीति में 'त्रिपिटक' का संकलन हुआ।</p>
+
+          <h4>(32.3) विनय पिटक और सुत्त पिटक के बीच अंतर स्पष्ट कीजिए। (2 अंक)</h4>
+          <p><strong>उत्तर:</strong> विनय पिटक में भिक्षुओं व संघ के नियम हैं; जबकि सुत्त पिटक में बुद्ध की मूल शिक्षाएं व उपदेश संकलित हैं।</p>
+        </div>
+      </div>
+
+      <!-- Q33 -->
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 33</span>
+          <div class="q-text">दिए गए स्रोत को ध्यानपूर्वक पढ़िए और इसके नीचे दिए गए प्रश्नों के उत्तर दीजिए : (1+1+2 = 4 अंक)</div>
+          <span class="q-badge">4 अंक</span>
+        </div>
+        <div class="source-quote">
+          <strong>"पहाड़ी कबीलों और मैदानों के बीच व्यापार, लगभग 1595 (आइन-ए-अकबरी) :"</strong><br>
+          "अवध सूबे के मैदानी इलाकों और पहाड़ी कबीलों के बीच होने वाले लेन-देन के बारे में अबुल फज़्ल ने कुछ इस तरह लिखा है : उत्तर के पहाड़ों से सोना, तांबा, सीसा, कस्तूरी, सुरागाय (याक) की पूंछ, शहद, चुक, अनारदाना, मजीठ की जड़ें, सुहागा, जदवार, मोम, ऊनी कपड़े, चील, बाज... इसके बदले, वे सफेद और रंगीन कपड़े, कहरुबा, नमक, हींग, गहने और शीशे व मिट्टी के बर्तन वापस ले जाते हैं।"
+        </div>
+        <button class="toggle-ans-btn" data-target="sol-q33" onclick="toggleAnswer('sol-q33', this)">👁️ उत्तर देखें (Show Answer)</button>
+        <div id="sol-q33" class="theory-box">
+          <h4>(33.1) पहाड़ों और मैदानों के बीच का व्यापार मुगल अर्थव्यवस्था के लिए क्यों महत्वपूर्ण था? (1 अंक)</h4>
+          <p><strong>उत्तर:</strong> यह व्यापार मैदानों को हिमालयी क्षेत्रों से सोना, तांबा, सीसा, औषधियां, कस्तूरी और ऊनी उत्पाद उपलब्ध कराता था।</p>
+
+          <h4>(33.2) मैदानी लोगों को पहाड़ी जनजातियों के साथ व्यापार से कैसे लाभ हुआ? (1 अंक)</h4>
+          <p><strong>उत्तर:</strong> मैदानी व्यापारियों को बहुमूल्य कच्चा माल मिला, जिसके बदले वे मैदानों के अतिरिक्त सूती वस्त्र, नमक, मसाले (हींग) और बर्तन बेचकर उच्च लाभ कमाते थे।</p>
+
+          <h4>(33.3) अबुल फज़्ल ने पहाड़ी जनजातियों द्वारा ले जाए जाने वाले माल की विविधता का वर्णन किस प्रकार किया? (2 अंक)</h4>
+          <p><strong>उत्तर:</strong> पहाड़ी लोग सोना, तांबा, सीसा, कस्तूरी, याक की पूंछ, शहद, मजीठ की जड़ें, शिकारी बाज लाते थे और बदले में कपड़े, नमक, हींग, गहने तथा कांच व मिट्टी के बर्तन लेकर जाते थे।</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== खण्ड ङ (SECTION E) ==================== -->
+    <div id="sec-e" class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🗺️ खण्ड ङ: मानचित्र-आधारित प्रश्न (Map Work)</span>
+        </div>
+        <div class="section-marks">प्र. 34 • 3 + 2 = 5 अंक</div>
+      </div>
+
+      <div class="question-block">
+        <div class="q-head">
+          <span class="q-number">प्र. 34</span>
+          <div class="q-text">
+            (34.1) भारत के दिए गए राजनीतिक रेखा-मानचित्र में निम्नलिखित स्थानों को उपयुक्त चिह्नों से अंकित कीजिए और उनके नाम लिखिए : (3 × 1 = 3 अंक)<br>
+            (i) <strong>धोलावीरा</strong> – विकसित हड़प्पा स्थल<br>
+            (ii) <strong>नागार्जुनकोंडा</strong> – प्राचीन बौद्ध स्थल<br>
+            (iii) (क) <strong>आगरा</strong> – मुगलों के अधीन क्षेत्र <em>अथवा</em> (ख) <strong>बीजापुर</strong> – मध्यकालीन राज्य<br><br>
+            (34.2) भारत के इसी राजनीतिक रेखा-मानचित्र पर, भारतीय राष्ट्रीय आंदोलन से संबंधित केंद्रों को 'A' और 'B' दो स्थानों के रूप में अंकित किया गया है। उनको पहचानिए और उनके सही नाम लिखिए : (2 × 1 = 2 अंक)
+          </div>
+          <span class="q-badge">5 अंक</span>
+        </div>
+
+        <button class="toggle-ans-btn" data-target="sol-map" onclick="toggleAnswer('sol-map', this)">👁️ मानचित्र उत्तर देखें (Show Map Solution)</button>
+
+        <div id="sol-map" class="theory-box" style="padding: 10px;">
+          <div class="map-display">
+            <h3 style="color: #f59e0b; margin-bottom: 12px;">🇮🇳 मानचित्र कार्य समाधान (भारत का राजनीतिक रेखा-मानचित्र)</h3>
+            
+            <div class="map-grid">
+              <div class="map-place-card" style="border-left: 4px solid #38bdf8;">
+                <h4>📍 स्थान 'A' (पहचान कार्य)</h4>
+                <p><strong style="color: #38bdf8; font-size: 1.1rem;">चंपारण (Champaran)</strong> — <em>बिहार</em></p>
+                <p style="margin-top: 4px;">गांधीजी का भारत में पहला सफल सत्याग्रह (1917), जहाँ उन्होंने तीनकठिया पद्धति के विरुद्ध नील किसानों के अधिकारों की रक्षा की।</p>
+              </div>
+
+              <div class="map-place-card" style="border-left: 4px solid #ea580c;">
+                <h4>📍 स्थान 'B' (पहचान कार्य)</h4>
+                <p><strong style="color: #ea580c; font-size: 1.1rem;">अमृतसर (Amritsar)</strong> — <em>पंजाब</em></p>
+                <p style="margin-top: 4px;">13 अप्रैल 1919 को जलियांवाला बाग का नृशंस नरसंहार और रॉलेट एक्ट के विरुद्ध राष्ट्रव्यापी सत्याग्रह का प्रमुख केंद्र।</p>
+              </div>
+
+              <div class="map-place-card" style="border-left: 4px solid #10b981;">
+                <h4>📌 34.1 (i) धोलावीरा (Dholavira)</h4>
+                <p><strong style="color: #10b981;">कच्छ जिला, गुजरात</strong> (खदिर बेट द्वीप)</p>
+                <p style="margin-top: 4px;">त्रि-स्तरीय नगर योजना, उन्नत जल संचयन जलाशय और 10 बड़े अक्षरों वाला हड़प्पाई सूचना-पट्ट।</p>
+              </div>
+
+              <div class="map-place-card" style="border-left: 4px solid #a855f7;">
+                <h4>📌 34.1 (ii) नागार्जुनकोंडा (Nagarjunakonda)</h4>
+                <p><strong style="color: #a855f7;">गुंटूर/पलनाडु जिला, आंध्र प्रदेश</strong> (कृष्णा नदी घाटी)</p>
+                <p style="margin-top: 4px;">इक्ष्वाकु वंश के काल का प्रसिद्ध बौद्ध स्तूप, महाविहार एवं प्राचीन बौद्ध तीर्थ स्थल।</p>
+              </div>
+
+              <div class="map-place-card" style="border-left: 4px solid #f59e0b;">
+                <h4>📌 34.1 (iii)(क) आगरा (Agra)</h4>
+                <p><strong style="color: #f59e0b;">उत्तर प्रदेश</strong> (यमुना नदी तट)</p>
+                <p style="margin-top: 4px;">अकबर, जहाँगीर और शाहजहाँ के काल में मुगल साम्राज्य की भव्य राजधानी।</p>
+              </div>
+
+              <div class="map-place-card" style="border-left: 4px solid #ec4899;">
+                <h4>📌 34.1 (iii)(ख) बीजापुर (Bijapur)</h4>
+                <p><strong style="color: #ec4899;">उत्तरी कर्नाटक</strong> (दक्कन क्षेत्र)</p>
+                <p style="margin-top: 4px;">मध्यकालीन आदिलशाही सल्तनत की राजधानी (गोल गुम्बज)।</p>
+              </div>
+            </div>
+
+            <!-- Blind candidates section -->
+            <div style="margin-top: 24px; padding: 16px; background: rgba(255, 255, 255, 0.04); border-radius: 12px; text-align: left; font-size: 0.9rem;">
+              <strong style="color: #f59e0b;">♿ दृष्टिबाधित परीक्षार्थियों के लिए वैकल्पिक प्रश्नों के उत्तर :</strong>
+              <ul style="margin-top: 8px; padding-left: 20px; line-height: 1.8;">
+                <li><strong>(34.1) वर्तमान पाकिस्तान में विकसित हड़प्पा पुरास्थल:</strong> हड़प्पा (पंजाब) या मोहनजोदड़ो (सिंध)।</li>
+                <li><strong>(34.2) पूर्वी भारत में स्थित प्राचीन बौद्ध स्थल:</strong> बोधगया (बिहार) या नालंदा महाविहार।</li>
+                <li><strong>(34.3)(क) मुगलों के अधीन क्षेत्र:</strong> आगरा / दिल्ली / लाहौर।</li>
+                <li><strong>(34.3)(ख) विजयनगर साम्राज्य का पड़ोसी राज्य:</strong> बीजापुर / गोलकुंडा / ओडिशा का गजपति राज्य।</li>
+                <li><strong>(34.4) भारतीय राष्ट्रीय आंदोलन के दो केंद्र:</strong> चंपारण (बिहार) और अमृतसर (पंजाब)।</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Nextsem Academy • सीबीएसई कक्षा 12 इतिहास सम्पूर्ण बोर्ड प्रश्न-पत्र समाधान • अभ्यास एवं स्व-मूल्यांकन मोड</p>
+  </footer>
+
+  <script>
+    let allShown = false;
+    let score = 0;
+    const attemptedQids = new Set();
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.querySelectorAll('.sec-btn').forEach(btn => btn.classList.remove('active'));
+        if (event && event.target) event.target.classList.add('active');
+      }
+    }
+
+    function toggleAnswer(id, btnElement) {
+      const box = document.getElementById(id);
+      if (!box) return;
+      const isVisible = box.style.display === 'block';
+      if (isVisible) {
+        box.style.display = 'none';
+        if (btnElement) {
+          btnElement.classList.remove('active');
+          btnElement.innerHTML = '👁️ उत्तर देखें (Show Answer)';
+        }
+      } else {
+        box.style.display = 'block';
+        if (btnElement) {
+          btnElement.classList.add('active');
+          btnElement.innerHTML = '🙈 उत्तर छिपाएं (Hide Answer)';
+        }
+      }
+    }
+
+    function checkOption(card, isCorrect, solId, qid) {
+      const parent = card.parentElement;
+      if (attemptedQids.has(qid)) return; // prevent multiple scoring
+      attemptedQids.add(qid);
+
+      // Highlight correct/wrong
+      if (isCorrect) {
+        card.classList.add('correct');
+        score++;
+      } else {
+        card.classList.add('wrong');
+        // also show which was correct
+        const correctCard = parent.querySelector('[data-correct="true"]');
+        if (correctCard) correctCard.classList.add('correct');
+      }
+
+      // Automatically reveal solution box
+      const solBox = document.getElementById(solId);
+      if (solBox) solBox.style.display = 'block';
+
+      const btn = document.querySelector(`[data-target="${solId}"]`);
+      if (btn) {
+        btn.classList.add('active');
+        btn.innerHTML = '🙈 उत्तर छिपाएं (Hide Answer)';
+      }
+
+      // Update score display
+      document.getElementById('score-counter').innerText = `🏆 MCQ स्कोर: ${score} / 21`;
+    }
+
+    function toggleAllAnswers() {
+      allShown = !allShown;
+      const allBoxes = document.querySelectorAll('.solution-box, .theory-box');
+      const allBtns = document.querySelectorAll('.toggle-ans-btn');
+      const statusEl = document.getElementById('mode-status');
+      const dotEl = document.getElementById('status-dot');
+      const mainBtn = document.getElementById('btn-toggle-all');
+
+      allBoxes.forEach(box => {
+        box.style.display = allShown ? 'block' : 'none';
+      });
+
+      allBtns.forEach(btn => {
+        if (allShown) {
+          btn.classList.add('active');
+          btn.innerHTML = '🙈 उत्तर छिपाएं (Hide Answer)';
+        } else {
+          btn.classList.remove('active');
+          btn.innerHTML = '👁️ उत्तर देखें (Show Answer)';
+        }
+      });
+
+      // Highlight or clear correct options
+      document.querySelectorAll('.opt-card[data-correct="true"]').forEach(c => {
+        const qid = c.parentElement.getAttribute('data-qid');
+        if (allShown) {
+          c.classList.add('correct');
+        } else if (!attemptedQids.has(qid)) {
+          c.classList.remove('correct');
+        }
+      });
+
+      if (allShown) {
+        statusEl.innerText = '📖 अध्ययन मोड (सभी उत्तर प्रदर्शित हैं)';
+        statusEl.style.color = '#34d399';
+        dotEl.style.background = '#34d399';
+        dotEl.style.boxShadow = '0 0 10px #34d399';
+        mainBtn.innerHTML = '🙈 सभी उत्तर छिपाएं (Hide All)';
+      } else {
+        statusEl.innerText = '🔒 अभ्यास मोड (सभी उत्तर छिपे हैं)';
+        statusEl.style.color = '#f59e0b';
+        dotEl.style.background = '#f59e0b';
+        dotEl.style.boxShadow = '0 0 10px #f59e0b';
+        mainBtn.innerHTML = '👁️ सभी उत्तर दिखाएं (Show All)';
+      }
+    }
+
+    function resetPractice() {
+      allShown = false;
+      score = 0;
+      attemptedQids.clear();
+
+      document.querySelectorAll('.opt-card').forEach(c => {
+        c.classList.remove('correct', 'wrong');
+      });
+
+      document.querySelectorAll('.solution-box, .theory-box').forEach(box => {
+        box.style.display = 'none';
+      });
+
+      document.querySelectorAll('.toggle-ans-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.innerHTML = '👁️ उत्तर देखें (Show Answer)';
+      });
+
+      const statusEl = document.getElementById('mode-status');
+      const dotEl = document.getElementById('status-dot');
+      const mainBtn = document.getElementById('btn-toggle-all');
+      statusEl.innerText = '🔒 अभ्यास मोड (सभी उत्तर छिपे हैं)';
+      statusEl.style.color = '#f59e0b';
+      dotEl.style.background = '#f59e0b';
+      dotEl.style.boxShadow = '0 0 10px #f59e0b';
+      mainBtn.innerHTML = '👁️ सभी उत्तर दिखाएं (Show All)';
+
+      document.getElementById('score-counter').innerText = '🏆 MCQ स्कोर: 0 / 21';
+    }
+  </script>
+</body>
+</html>

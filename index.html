@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#17181c" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>StudyGuide by Nextsem — NCERT &amp; NIOS Solutions Hub</title>
+    <link rel="canonical" href="https://nextsem-ncert-2403.web.app/" />
+    <meta name="description" content="StudyGuide by Nextsem: Access 100% free NCERT &amp; NIOS Textbooks, chapter-wise notes, and step-by-step exercise solutions for Classes 1 to 12." />
+    <meta name="keywords" content="StudyGuide, StudyGuide by Nextsem, NCERT Solutions, NIOS Books, Nextsem Academy, NCERT Books, NEP 2020, Class 10 Maths, Class 12 Physics, Accountancy Solutions, nextsem-ncert-2403.web.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nextsem-ncert-2403.web.app/" />
+    <meta property="og:title" content="StudyGuide by Nextsem — NCERT &amp; NIOS Solutions Hub" />
+    <meta property="og:description" content="Free NCERT &amp; NIOS Textbooks, Chapter Notes, and Step-by-Step Exercise Solutions by StudyGuide by Nextsem." />
+    <meta property="og:image" content="/app-icon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // ═══════════════════════════════════════════════════════════════════════
+      // 🚀 REAL-TIME LIVE UPDATE & CACHE INVALIDATION ENGINE
+      // ═══════════════════════════════════════════════════════════════════════
+      if ('serviceWorker' in navigator) {
+        let refreshing = false;
+
+        // Auto-refresh when new service worker takes control
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (!refreshing) {
+            refreshing = true;
+            console.log('[StudyGuide Auto-Update] Active version updated — refreshing app...');
+            window.location.reload();
+          }
+        });
+
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => {
+              console.log('[StudyGuide PWA] Service Worker registered:', reg.scope);
+              window.__NEXTSEM_SW_REG__ = reg;
+
+              // Check for update immediately on launch
+              reg.update().catch(() => {});
+
+              // Periodic update check every 60 seconds
+              setInterval(() => {
+                reg.update().catch(() => {});
+              }, 60000);
+
+              // If a waiting worker already exists, prompt it to take control
+              if (reg.waiting) {
+                reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+              }
+
+              // Listen for newly installed service workers
+              reg.addEventListener('updatefound', () => {
+                const newWorker = reg.installing;
+                if (newWorker) {
+                  newWorker.addEventListener('statechange', () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                      console.log('[StudyGuide PWA] New update ready — applying...');
+                      newWorker.postMessage({ type: 'SKIP_WAITING' });
+                    }
+                  });
+                }
+              });
+            })
+            .catch((err) => console.warn('[StudyGuide PWA] SW registration notice:', err));
+        });
+
+        // Trigger update check when user returns to tab / unlocks phone
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible' && window.__NEXTSEM_SW_REG__) {
+            window.__NEXTSEM_SW_REG__.update().catch(() => {});
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

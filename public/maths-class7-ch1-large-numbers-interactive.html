@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Large Numbers Around Us - NCERT Class 7 Maths Chapter 1 | Nextsem</title>
+  <meta name="description" content="NCERT Class 7 Mathematics (Ganita Prakash) Chapter 1: Large Numbers Around Us - Interactive Practice, Place Value Tools, Shortcuts & Full Step-by-Step Exercise Solutions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --border-card: rgba(56, 189, 248, 0.25);
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: #fff;
+    }
+
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-links { display: flex; gap: 10px; align-items: center; }
+
+    .nav-btn {
+      color: #94a3b8; text-decoration: none; font-size: 13px;
+      padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      color: #fff; border-color: var(--accent-sky);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    .container {
+      position: relative; max-width: 980px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(16, 185, 129, 0.1));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8; font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 32px; font-weight: 800; color: #ffffff;
+      margin-bottom: 8px; letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle { color: #cbd5e1; font-size: 16px; }
+
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px; padding: 24px;
+      margin-bottom: 24px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .section-icon {
+      font-size: 24px; width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255, 255, 255, 0.05); border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .section-title { font-size: 20px; font-weight: 700; color: #ffffff; }
+
+    /* Interactive Box */
+    .interactive-tool {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px; padding: 20px; margin-bottom: 16px;
+    }
+
+    .tool-input-row {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+
+    .tool-input {
+      flex: 1; min-width: 200px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px; padding: 10px 14px;
+      color: #fff; font-size: 15px;
+    }
+
+    .tool-btn {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; border: none; padding: 10px 20px;
+      border-radius: 8px; font-weight: 700; cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tool-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    .tool-output {
+      background: rgba(2, 132, 199, 0.1);
+      border: 1px solid rgba(2, 132, 199, 0.3);
+      padding: 14px; border-radius: 10px; color: #38bdf8;
+      font-size: 15px; line-height: 1.8;
+    }
+
+    /* Q&A Accordion */
+    .qa-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px; padding: 16px; margin-bottom: 14px;
+    }
+
+    .qa-title {
+      font-size: 16px; font-weight: 700; color: #fcd34d;
+      margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px;
+    }
+
+    .qa-body { font-size: 14px; color: #cbd5e1; line-height: 1.8; }
+
+    .qa-solution-btn {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399; font-size: 13px; font-weight: 700;
+      padding: 6px 14px; border-radius: 6px; cursor: pointer;
+      margin-top: 10px; display: inline-block;
+    }
+
+    .qa-solution-btn:hover { background: rgba(16, 185, 129, 0.25); }
+
+    .solution-box {
+      display: none; margin-top: 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border-left: 3px solid #10b981;
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      color: #e2e8f0; font-size: 14px; line-height: 1.8;
+    }
+
+    .fact-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px; margin-top: 14px;
+    }
+
+    .fact-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 16px;
+    }
+
+    .fact-header { color: #38bdf8; font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+    .fact-val { color: #34d399; font-weight: 800; font-size: 16px; }
+    .fact-desc { color: #94a3b8; font-size: 13px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">Class 7 Maths</span>
+      <span style="font-weight: 700; font-size: 15px;">Ganita Prakash</span>
+    </a>
+    <div class="nav-links">
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+      <a href="/docs/class7_maths_ganita_prakash_ch1_large_numbers_questions_solutions.md" class="nav-btn" target="_blank">📄 Full Notes MD</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">✨ NEP 2020 • NCERT Class 7 Ganita Prakash</div>
+      <h1 class="hero-title">Chapter 1: Large Numbers Around Us</h1>
+      <p class="hero-subtitle">Interactive Number Explorers, Estimation Tools, Shortcuts & Complete Step-by-Step Exercise Solutions</p>
+    </header>
+
+    <!-- Interactive Tool 1: Place Value Converter -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <div>
+          <h2 class="section-title">1. Place Value System Converter (Indian vs International)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">Type any large number to convert between Lakhs/Crores/Arabs and Millions/Billions</p>
+        </div>
+      </div>
+
+      <div class="interactive-tool">
+        <div class="tool-input-row">
+          <input type="number" id="numInput" class="tool-input" placeholder="Enter number e.g. 9876501234" value="9876501234">
+          <button class="tool-btn" onclick="convertNumber()">Convert & Read 🚀</button>
+        </div>
+        <div class="tool-output" id="converterOutput">
+          <strong>🇮🇳 Indian System:</strong> 9,87,65,01,234 (9 Arab, 87 Crore, 65 Lakh, 1 Thousand, 234)<br>
+          <strong>🌐 International System:</strong> 9,876,501,234 (9 Billion, 876 Million, 501 Thousand, 234)<br>
+          <strong>📊 Total Digits:</strong> 10 Digits
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Tool 2: Digits in Product Predictor -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">✖️</div>
+        <div>
+          <h2 class="section-title">2. Product Digits Predictor</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">Theorem: An m-digit number × n-digit number produces (m+n-1) or (m+n) digits</p>
+        </div>
+      </div>
+
+      <div class="interactive-tool">
+        <div class="tool-input-row">
+          <input type="number" id="mDigits" class="tool-input" placeholder="Digits of first number (m)" value="5" min="1">
+          <input type="number" id="nDigits" class="tool-input" placeholder="Digits of second number (n)" value="5" min="1">
+          <button class="tool-btn" onclick="predictProductDigits()">Predict Digits 🎯</button>
+        </div>
+        <div class="tool-output" id="productDigitOutput">
+          For a <strong>5-digit</strong> × <strong>5-digit</strong> multiplication:<br>
+          👉 Possible number of digits: <strong>9 digits</strong> (m+n-1) or <strong>10 digits</strong> (m+n).
+        </div>
+      </div>
+    </section>
+
+    <!-- Real World Fascinating Facts -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🌍</div>
+        <div>
+          <h2 class="section-title">3. Fascinating Facts about Large Numbers in Science</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">Real-world calculations from the chapter</p>
+        </div>
+      </div>
+
+      <div class="fact-grid">
+        <div class="fact-card">
+          <div class="fact-header">☀️ Earth-Sun Distance</div>
+          <div class="fact-val">14,70,00,000 km</div>
+          <div class="fact-desc">2100 × 70,000 = 14.7 Crore km (147 Million km)</div>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-header">🌊 Amazon River Water Flow</div>
+          <div class="fact-val">40,00,00,000 Litres/sec</div>
+          <div class="fact-desc">6400 × 62,500 = 40 Crore L/s (400 Million L/s) into ocean</div>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-header">🚆 Trans-Siberian Railway</div>
+          <div class="fact-val">9,300 km</div>
+          <div class="fact-desc">13,95,000 ÷ 150 = World's longest single-train route (7 days)</div>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-header">🐋 Blue Whale Max Weight</div>
+          <div class="fact-val">1,50,000 kg (150 Tonnes)</div>
+          <div class="fact-desc">10,50,00,000 ÷ 700 = Weight of adult blue whale</div>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-header">♻️ 2021 Global Plastic Waste</div>
+          <div class="fact-val">40,00,00,000 Tonnes</div>
+          <div class="fact-desc">52,00,00,00,000 ÷ 130 = 40 Crore Tonnes plastic waste</div>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-header">🎵 Purandaradāsa Kīrtanas</div>
+          <div class="fact-val">4,75,000 Songs</div>
+          <div class="fact-desc">1250 × 380 = 4.75 Lakh devotional songs composed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Chapter Exercises (Figure it Out) -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📝</div>
+        <div>
+          <h2 class="section-title">4. Complete Exercise Solutions (Figure it Out)</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">Click on any problem to reveal the step-by-step reasoning</p>
+        </div>
+      </div>
+
+      <!-- Exercise 1 -->
+      <div class="qa-card">
+        <div class="qa-title"><span>Q1.</span> 10-Digit Extremes using Digits 0 to 9 Exactly Once</div>
+        <div class="qa-body">Using all digits 0-9 exactly once (first digit cannot be 0), find: (a) Largest multiple of 5, (b) Smallest even number.</div>
+        <button class="qa-solution-btn" onclick="toggleSolution('sol1')">Show Solution 💡</button>
+        <div class="solution-box" id="sol1">
+          <strong>(a) Largest multiple of 5:</strong> Arrange descending digits with 0 at the end:<br>
+          👉 <strong>9,876,543,210</strong><br><br>
+          <strong>(b) Smallest even number:</strong> Start with 1, then 0, followed by ascending digits ending in even digit 8:<br>
+          👉 <strong>1,023,456,798</strong>
+        </div>
+      </div>
+
+      <!-- Exercise 3 -->
+      <div class="qa-card">
+        <div class="qa-title"><span>Q3.</span> 9-Digit Swapping Invariant Property</div>
+        <div class="qa-body">Write a 9-digit number where exchanging any two digits always results in a strictly bigger number. How many such numbers exist?</div>
+        <button class="qa-solution-btn" onclick="toggleSolution('sol3')">Show Solution 💡</button>
+        <div class="solution-box" id="sol3">
+          For any swap to yield a larger number, the digits must be in strictly ascending order ($d_1 < d_2 < \dots < d_9$).<br>
+          With 9 non-zero digits (1 to 9), there is only <strong>1 unique number</strong>:<br>
+          👉 <strong>123,456,789</strong> (Total count = <strong>1</strong>).
+        </div>
+      </div>
+
+      <!-- Exercise 4 -->
+      <div class="qa-card">
+        <div class="qa-title"><span>Q4.</span> Strike Out 10 Digits from 20-Digit Stream</div>
+        <div class="qa-body">Strike out 10 digits from <code>12345123451234512345</code> so the remaining 10-digit number is as large as possible.</div>
+        <button class="qa-solution-btn" onclick="toggleSolution('sol4')">Show Solution 💡</button>
+        <div class="solution-box" id="sol4">
+          Strike out 1,2,3,4 from 1st block (4 digits), strike 1,2,3,4 from 2nd block (4 digits), strike 1,2 from 3rd block (2 digits). Total struck = 10 digits.<br>
+          Remaining maximum number:<br>
+          👉 <strong>5534512345</strong>
+        </div>
+      </div>
+
+      <!-- Exercise 6 -->
+      <div class="qa-card">
+        <div class="qa-title"><span>Q6.</span> Finding the 1000th Digit in Continuous Number Stream</div>
+        <div class="qa-body">Writing numbers 1, 2, 3, 4, ... 10, 11... What is the 1000th digit written, and at which number does it occur?</div>
+        <button class="qa-solution-btn" onclick="toggleSolution('sol6')">Show Solution 💡</button>
+        <div class="solution-box" id="sol6">
+          • 1-digit numbers (1-9): 9 digits (Positions 1 to 9)<br>
+          • 2-digit numbers (10-99): 90 × 2 = 180 digits (Positions 10 to 189)<br>
+          • Total up to 99 = 189 digits.<br>
+          • Remaining to reach 1000th digit = 1000 - 189 = 811 digits.<br>
+          • 3-digit numbers take 3 digits each: 811 ÷ 3 = 270 with remainder 1.<br>
+          • Number = 100 + 270 = <strong>370</strong>. Remainder 1 points to the 1st digit of 370.<br>
+          👉 The 1000th digit is <strong>3</strong>, occurring in the number <strong>370</strong>.
+        </div>
+      </div>
+
+      <!-- Exercise 11 -->
+      <div class="qa-card">
+        <div class="qa-title"><span>Q11.</span> Coin Stack to Match Statue of Unity</div>
+        <div class="qa-body">How many 1 mm thick coins must be stacked to reach the height of the Statue of Unity (182 metres)?</div>
+        <button class="qa-solution-btn" onclick="toggleSolution('sol11')">Show Solution 💡</button>
+        <div class="solution-box" id="sol11">
+          Height = 182 m = 182 × 1000 mm = 1,82,000 mm.<br>
+          Thickness of 1 coin = 1 mm.<br>
+          👉 Total coins = <strong>1,82,000 coins</strong> (1 Lakh 82 Thousand coins).
+        </div>
+      </div>
+
+      <!-- Exercise 13 -->
+      <div class="qa-card">
+        <div class="qa-title"><span>Q13.</span> Bar-Tailed Godwit Non-Stop Flight Record</div>
+        <div class="qa-body">A bar-tailed godwit flew 13,560 km non-stop in 11 days from Alaska to Australia. Find daily and hourly average speed.</div>
+        <button class="qa-solution-btn" onclick="toggleSolution('sol13')">Show Solution 💡</button>
+        <div class="solution-box" id="sol13">
+          👉 <strong>Distance per day:</strong> 13,560 ÷ 11 ≈ <strong>1,232.7 km/day</strong><br>
+          👉 <strong>Distance per hour:</strong> 1,232.7 ÷ 24 ≈ <strong>51.36 km/hour</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Matchstick Puzzles -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🪵</div>
+        <div>
+          <h2 class="section-title">5. Matchstick / Toothpick Logic Puzzles</h2>
+          <p style="color: var(--text-muted); font-size: 13px;">7-segment display logic rules</p>
+        </div>
+      </div>
+
+      <div class="interactive-tool">
+        <div style="color: #cbd5e1; font-size: 14px; line-height: 1.8;">
+          • Stick counts: <code>0</code>(6), <code>1</code>(2), <code>2</code>(5), <code>3</code>(5), <code>4</code>(4), <code>5</code>(5), <code>6</code>(6), <code>7</code>(3), <code>8</code>(7), <code>9</code>(6).<br><br>
+          • <strong>Largest number with 24 sticks:</strong> Use digit '1' (2 sticks) 12 times ➔ <strong style="color:#34d399;">111,111,111,111</strong> (Twelve 1s).<br>
+          • <strong>Smallest number with 24 sticks:</strong> Maximize sticks per digit ➔ <strong style="color:#34d399;">2,288</strong> or <strong style="color:#34d399;">6,888</strong>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function formatIndian(numStr) {
+      let x = numStr.toString();
+      let lastThree = x.substring(x.length - 3);
+      let otherNumbers = x.substring(0, x.length - 3);
+      if (otherNumbers != '') lastThree = ',' + lastThree;
+      return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+    }
+
+    function formatInternational(numStr) {
+      return numStr.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function convertNumber() {
+      const val = document.getElementById('numInput').value.trim();
+      if (!val) return;
+      const indian = formatIndian(val);
+      const intl = formatInternational(val);
+      document.getElementById('converterOutput').innerHTML = `
+        <strong>🇮🇳 Indian System:</strong> ${indian}<br>
+        <strong>🌐 International System:</strong> ${intl}<br>
+        <strong>📊 Total Digits:</strong> ${val.length} Digits
+      `;
+      confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+    }
+
+    function predictProductDigits() {
+      const m = parseInt(document.getElementById('mDigits').value);
+      const n = parseInt(document.getElementById('nDigits').value);
+      if (!m || !n) return;
+      const minD = m + n - 1;
+      const maxD = m + n;
+      document.getElementById('productDigitOutput').innerHTML = `
+        For a <strong>${m}-digit</strong> × <strong>${n}-digit</strong> multiplication:<br>
+        👉 Possible number of digits in product: <strong>${minD} digits</strong> (m+n-1) or <strong>${maxD} digits</strong> (m+n).
+      `;
+      confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+    }
+
+    function toggleSolution(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+        confetti({ particleCount: 40, spread: 60, origin: { y: 0.7 } });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 10 Science Unit 9: Light – Reflection and Refraction (English & हिंदी) | Complete Topic-Wise Notes, CBSE PYQs & Solved Numericals Studio</title>
+  <meta name="description" content="NCERT Class 10 Science Chapter 9 Light – Reflection and Refraction in English & Hindi (हिंदी माध्यम): complete topic-wise notes, mirror & lens formula derivations, sign convention tables, CBSE previous years questions (PYQs), and step-by-step solved numericals.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX for Scientific & Mathematical Equations rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-color: rgba(6, 182, 212, 0.25);
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-green-link: #04AA6D;
+      --formula-bg: #090e1f;
+      --formula-border: #1e293b;
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    body.light-theme, body.light-mode {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-color: #cbd5e1;
+      --accent-cyan: #0284c7;
+      --accent-blue: #1d4ed8;
+      --accent-emerald: #059669;
+      --accent-gold: #d97706;
+      --accent-purple: #7c3aed;
+      --accent-rose: #e11d48;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-green-link: #04AA6D;
+      --formula-bg: #f8fafc;
+      --formula-border: #e2e8f0;
+      --shadow-card: 0 4px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      padding-bottom: 80px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Brand Navbar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(12, 19, 40, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 16px;
+    }
+    body.light-theme .top-nav, body.light-mode .top-nav {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom-color: #e2e8f0;
+    }
+
+    .top-nav-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo-img {
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--accent-cyan);
+    }
+
+    /* Language Switcher */
+    .lang-switch-box {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1.5px solid var(--border-color);
+      border-radius: 9999px;
+      padding: 2px;
+      gap: 2px;
+    }
+    body.light-theme .lang-switch-box, body.light-mode .lang-switch-box {
+      background: #e2e8f0;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    body.light-theme .lang-btn.active, body.light-mode .lang-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    /* Desktop Full Breadcrumb Trail */
+    .top-breadcrumb-bar {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 10px 16px 0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+    }
+    .top-breadcrumb-bar a {
+      color: var(--text-green-link);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* Hero Header */
+    .hero-banner {
+      background: linear-gradient(135deg, #0c1a36 0%, #172554 50%, #0c1328 100%);
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      margin-top: 0.75rem;
+      margin-bottom: 1.75rem;
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    body.light-theme .hero-banner, body.light-mode .hero-banner {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%);
+      border-color: #3b82f6;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(6, 182, 212, 0.2);
+      color: #67e8f9;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      margin-bottom: 10px;
+    }
+    body.light-theme .hero-tag, body.light-mode .hero-tag {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #ffffff !important;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-desc {
+      font-size: 0.92rem;
+      color: #e2e8f0;
+      line-height: 1.6;
+      max-width: 820px;
+    }
+
+    /* Quick Jump Navigation Pill Bar */
+    .jump-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 0 12px;
+      margin-bottom: 1.5rem;
+      scrollbar-width: thin;
+    }
+    .jump-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .jump-pill:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    /* Topic Module Card */
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s ease;
+    }
+    .module-card:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .module-num {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+      color: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .module-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .module-subtitle {
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Content Typography */
+    h3.sub-heading {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 18px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p.content-p {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    .concept-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+    .concept-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .concept-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--accent-cyan);
+      font-weight: 900;
+      font-size: 0.85rem;
+    }
+
+    /* Formula Box */
+    .formula-box {
+      background: var(--formula-bg);
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .formula-header {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .formula-math {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      letter-spacing: 0.02em;
+    }
+    body.light-theme .formula-math, body.light-mode .formula-math {
+      color: #0284c7;
+    }
+    .formula-notes {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Comparison & Ray Table */
+    .custom-table-wrapper {
+      overflow-x: auto;
+      margin: 14px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    .custom-table th {
+      background: rgba(6, 182, 212, 0.12);
+      color: var(--text-main);
+      font-weight: 800;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+    body.light-theme .custom-table th, body.light-mode .custom-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .custom-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+    .custom-table tr:last-child td {
+      border-bottom: none;
+    }
+    .custom-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    body.light-theme .custom-table tr:hover td, body.light-mode .custom-table tr:hover td {
+      background: #f8fafc;
+    }
+
+    /* Solved Numericals Studio Cards */
+    .numerical-card {
+      background: var(--bg-card);
+      border: 1.5px solid rgba(16, 185, 129, 0.35);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+    body.light-theme .numerical-card, body.light-mode .numerical-card {
+      border-color: #86efac;
+      background: #ffffff;
+    }
+
+    .pyq-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-gold);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      margin-bottom: 8px;
+    }
+    body.light-theme .pyq-badge, body.light-mode .pyq-badge {
+      background: #fef3c7;
+      color: #b45309;
+      border-color: #fcd34d;
+    }
+
+    .numerical-question {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+
+    .given-data-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      font-size: 0.84rem;
+      border: 1px solid var(--border-color);
+    }
+    body.light-theme .given-data-grid, body.light-mode .given-data-grid {
+      background: #f8fafc;
+    }
+
+    .step-box {
+      margin-top: 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent-emerald);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .step-item {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.55;
+    }
+
+    .final-answer-badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.18);
+      border: 1.5px solid var(--accent-emerald);
+      color: #34d399;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    body.light-theme .final-answer-badge, body.light-mode .final-answer-badge {
+      background: #ecfdf5;
+      color: #065f46;
+      border-color: #10b981;
+    }
+
+    /* Interactive Quiz & Fill-in-the-Blanks */
+    .interactive-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    .interactive-row {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    body.light-theme .interactive-row, body.light-mode .interactive-row {
+      background: #f8fafc;
+    }
+
+    .q-text {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .blank-input {
+      background: var(--bg-body);
+      border: 1.5px solid var(--border-color);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 7px 12px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 320px;
+      outline: none;
+      transition: all 0.15s ease;
+    }
+    .blank-input:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+    }
+    .blank-input.correct {
+      border-color: var(--accent-emerald) !important;
+      background: rgba(16, 185, 129, 0.1) !important;
+    }
+    .blank-input.incorrect {
+      border-color: var(--accent-rose) !important;
+      background: rgba(244, 63, 94, 0.1) !important;
+    }
+
+    .btn-action-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-check {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border: none;
+      padding: 7px 16px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .btn-check:hover {
+      background: var(--accent-blue);
+      transform: translateY(-1px);
+    }
+
+    .btn-hint {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn-hint:hover {
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    .hint-drawer {
+      display: none;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 3px solid var(--accent-gold);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      color: var(--accent-gold);
+    }
+
+    .feedback-msg {
+      margin-top: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+    .feedback-msg.correct {
+      color: var(--accent-emerald);
+    }
+    .feedback-msg.incorrect {
+      color: var(--accent-rose);
+    }
+
+    .answer-badge {
+      display: inline-block;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+
+    /* Score HUD */
+    .score-hud {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+      border: 1.5px solid var(--accent-cyan);
+      border-radius: 12px;
+      padding: 12px 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 800;
+      font-size: 0.92rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Theme Switcher Button */
+    .btn-theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-theme-toggle:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: #4f46e5;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: #4338ca;
+    }
+
+    /* Bilingual Switching Classes */
+    body.lang-hindi .en-text {
+      display: none !important;
+    }
+    body.lang-english .hi-text {
+      display: none !important;
+    }
+
+    /* KaTeX equation enhancements */
+    .katex {
+      font-size: 1.05em !important;
+    }
+    .katex-display {
+      margin: 0.5em 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.4rem;
+      }
+      .module-card {
+        padding: 16px;
+      }
+      .formula-math {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="lang-english">
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="/" class="brand-box">
+        <img src="/image-20.png" alt="NextSem Academy Logo" class="brand-logo-img">
+        <div>
+          <div style="font-weight: 900; font-size: 0.95rem; line-height: 1.1;">STUDY GUIDE</div>
+          <div style="font-size: 0.68rem; font-weight: 800; color: var(--accent-cyan); letter-spacing: 0.05em;">NEXTSEM ACADEMY</div>
+        </div>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <!-- Bilingual Switcher -->
+        <div class="lang-switch-box">
+          <button id="btnEn" class="lang-btn active" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button id="btnHi" class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिंदी</button>
+        </div>
+
+        <button id="themeToggleBtn" class="btn-theme-toggle" title="Toggle Light / Dark Mode">
+          <span id="themeIcon">☀️</span>
+          <span id="themeLabel">Light</span>
+        </button>
+        <a href="/?class=10&subject=c10-science&book=part-1" class="btn-primary">
+          <span class="en-text">📚 Class 10 Science</span>
+          <span class="hi-text">📚 कक्षा १० विज्ञान</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Complete Desktop Breadcrumb Navigation Trail -->
+  <div class="top-breadcrumb-bar">
+    <a href="/">Home</a>
+    <span class="sep">❯</span>
+    <a href="/?class=10"><span class="en-text">Class 10</span><span class="hi-text">कक्षा १०</span></a>
+    <span class="sep">❯</span>
+    <a href="/?class=10&subject=c10-science"><span class="en-text">Science</span><span class="hi-text">विज्ञान</span></a>
+    <span class="sep">❯</span>
+    <a href="/?class=10&subject=c10-science&book=part-1"><span class="en-text">Book Part 1</span><span class="hi-text">भाग १</span></a>
+    <span class="sep">❯</span>
+    <span style="color: var(--text-main);">
+      <span class="en-text">Unit 9: Light – Reflection and Refraction</span>
+      <span class="hi-text">इकाई ९: प्रकाश – परावर्तन तथा अपवर्तन</span>
+    </span>
+  </div>
+
+  <main class="container">
+
+    <!-- Hero Header Banner -->
+    <header class="hero-banner">
+      <div class="hero-tag">
+        <span class="en-text">🔬 NCERT Class 10 Science • Unit 9 (Physics)</span>
+        <span class="hi-text">🔬 NCERT कक्षा १० विज्ञान • इकाई ९ (भौतिकी)</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="en-text">Light – Reflection and Refraction</span>
+        <span class="hi-text">प्रकाश – परावर्तन तथा अपवर्तन</span>
+      </h1>
+      <p class="hero-desc">
+        <span class="en-text">
+          Complete topic-wise comprehensive notes, ray diagram master rules, Cartesian sign conventions, mirror & lens formula derivations, CBSE previous years questions (PYQs 2018–2025), and step-by-step solved numerical calculation studio in English and Hindi.
+        </span>
+        <span class="hi-text">
+          पूर्ण विषयवार विस्तृत नोट्स, किरण आरेख के स्वर्णिम नियम, कार्तीय चिन्ह परिपाटी, दर्पण व लेंस सूत्र, CBSE बोर्ड के पिछले वर्षों के प्रश्न (PYQs 2018–2025), तथा हल सहित संख्यात्मक प्रश्न स्टूडियो।
+        </span>
+      </p>
+    </header>
+
+    <!-- Quick Jump Navigation Bar -->
+    <div class="jump-nav">
+      <a href="#topic1" class="jump-pill">
+        <span class="en-text">⚡ Topic 1: Reflection & Laws</span>
+        <span class="hi-text">⚡ विषय १: परावर्तन व नियम</span>
+      </a>
+      <a href="#topic2" class="jump-pill">
+        <span class="en-text">🪞 Topic 2: Spherical Mirrors</span>
+        <span class="hi-text">🪞 विषय २: गोलीय दर्पण</span>
+      </a>
+      <a href="#topic3" class="jump-pill">
+        <span class="en-text">📐 Topic 3: Mirror Formula & Sign</span>
+        <span class="hi-text">📐 विषय ३: दर्पण सूत्र व चिन्ह</span>
+      </a>
+      <a href="#topic4" class="jump-pill">
+        <span class="en-text">🌊 Topic 4: Refraction & Snell's Law</span>
+        <span class="hi-text">🌊 विषय ४: अपवर्तन व स्नेल नियम</span>
+      </a>
+      <a href="#topic5" class="jump-pill">
+        <span class="en-text">🔍 Topic 5: Spherical Lenses</span>
+        <span class="hi-text">🔍 विषय ५: गोलीय लेंस</span>
+      </a>
+      <a href="#topic6" class="jump-pill">
+        <span class="en-text">🔋 Topic 6: Lens Formula & Power</span>
+        <span class="hi-text">🔋 विषय ६: लेंस सूत्र व क्षमता</span>
+      </a>
+      <a href="#cbse-numericals" class="jump-pill" style="border-color: #10b981; color: #10b981;">
+        <span class="en-text">🧮 Solved CBSE PYQ Numericals</span>
+        <span class="hi-text">🧮 हल सहित संख्यात्मक प्रश्न</span>
+      </a>
+      <a href="#interactive-practice" class="jump-pill" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+        <span class="en-text">🎯 Interactive Practice</span>
+        <span class="hi-text">🎯 अभ्यास व प्रश्नोत्तरी</span>
+      </a>
+      <a href="/class10-science-ch9-light-reflection-refraction-mcq-quiz.html" class="jump-pill" style="border-color: #38bdf8; color: #38bdf8; background: rgba(56, 189, 248, 0.1);">
+        <span class="en-text">⚡ 20 High-Yield MCQs Quiz</span>
+        <span class="hi-text">⚡ २० बहुविकल्पीय प्रश्न (MCQ)</span>
+      </a>
+    </div>
+
+    <!-- ==========================================
+         TOPIC 1: REFLECTION OF LIGHT & LAWS
+         ========================================== -->
+    <section id="topic1" class="module-card">
+      <div class="module-header">
+        <div class="module-num">1</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Foundation Concept</span>
+            <span class="hi-text">मूलभूत अवधारणा</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Reflection of Light & Laws of Reflection</span>
+            <span class="hi-text">प्रकाश का परावर्तन एवं परावर्तन के नियम</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <p class="content-p">
+          <strong>Light</strong> is an electromagnetic radiation that produces the sensation of vision in our eyes. It travels in straight lines in a homogeneous transparent medium (known as the <em>rectilinear propagation of light</em>). When light falls on a polished, shiny surface (like a silvered glass mirror), most of it bounces back into the same medium. This phenomenon is called <strong>Reflection of Light</strong>.
+        </p>
+
+        <h3 class="sub-heading">📜 The Two Fundamental Laws of Reflection</h3>
+        <ul class="concept-list">
+          <li><strong>First Law:</strong> The angle of incidence ($\angle i$) is always equal to the angle of reflection ($\angle r$). That is, <strong>$$\angle i = \angle r$$</strong>.</li>
+          <li><strong>Second Law:</strong> The incident ray, the reflected ray, and the normal to the reflecting surface at the point of incidence, all lie in the <strong>same plane</strong>.</li>
+          <li><em>Universal Applicability:</em> These laws apply to <strong>all types of reflecting surfaces</strong>, including plane mirrors and curved spherical mirrors.</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">💡 Properties of Image Formed by a Plane Mirror</div>
+          <div class="formula-notes">
+            1. <strong>Virtual and Erect:</strong> Cannot be caught on a physical screen.<br>
+            2. <strong>Same Size:</strong> Size of image = Size of object ($h' = h \implies m = +1$).<br>
+            3. <strong>Same Distance:</strong> Image distance behind mirror ($v$) = Object distance in front of mirror ($u$).<br>
+            4. <strong>Laterally Inverted:</strong> The left side of the object appears as the right side of the image (e.g., why 'AMBULANCE' is written inverted on emergency vehicles).
+          </div>
+        </div>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <p class="content-p">
+          <strong>प्रकाश (Light)</strong> एक प्रकार की ऊर्जा (विद्युत-चुंबकीय विकिरण) है जो हमारी आँखों में दृष्टि की संवेदना उत्पन्न करती है। प्रकाश किसी समांगी पारदर्शी माध्यम में सरल रेखा में गमन करता है (इसे <em>प्रकाश का सरल रेखीय संचरण</em> कहते हैं)। जब प्रकाश किसी चमकदार अथवा पॉलिशदार सतह (जैसे समतल दर्पण) पर आपतित होता है, तो उसका अधिकांश भाग उसी माध्यम में वापस लौट जाता है। इस परिघटना को <strong>प्रकाश का परावर्तन (Reflection of Light)</strong> कहते हैं।
+        </p>
+
+        <h3 class="sub-heading">📜 प्रकाश के परावर्तन के दो मौलिक नियम</h3>
+        <ul class="concept-list">
+          <li><strong>प्रथम नियम:</strong> आपतन कोण ($\angle i$) का मान सदैव परावर्तन कोण ($\angle r$) के बराबर होता है। अर्थात्, <strong>$$\angle i = \angle r$$</strong>.</li>
+          <li><strong>द्वितीय नियम:</strong> आपतित किरण, परावर्तित किरण तथा आपतन बिंदु पर अभिलंब—तीनों <strong>एक ही तल</strong> में स्थित होते हैं।</li>
+          <li><em>सार्वभौमिकता:</em> परावर्तन के ये नियम समतल एवं गोलीय (अवतल व उत्तल) सभी प्रकार के परावर्तक पृष्ठों पर समान रूप से लागू होते हैं।</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">💡 समतल दर्पण द्वारा बने प्रतिबिंब की विशेषताएँ</div>
+          <div class="formula-notes">
+            १. <strong>आभासी एवं सीधा (Virtual & Erect):</strong> इसे पर्दे पर प्राप्त नहीं किया जा सकता।<br>
+            २. <strong>वस्तु के बराबर आकार:</strong> प्रतिबिंब का आकार वस्तु के आकार के बराबर होता है ($h' = h \implies m = +1$)।<br>
+            ३. <strong>समान दूरी:</strong> दर्पण के पीछे प्रतिबिंब की दूरी ($v$) = दर्पण के आगे वस्तु की दूरी ($u$)।<br>
+            ४. <strong>पार्श्व परावर्तित (Laterally Inverted):</strong> वस्तु का बायां भाग प्रतिबिंब में दायां और दायां भाग बायां दिखाई देता है (इसीलिए एम्बुलेंस पर 'AMBULANCE' उल्टा लिखा जाता है)।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 2: SPHERICAL MIRRORS & RAY RULES
+         ========================================== -->
+    <section id="topic2" class="module-card">
+      <div class="module-header">
+        <div class="module-num">2</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Curved Surfaces</span>
+            <span class="hi-text">वक्र पृष्ठ</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Spherical Mirrors: Concave & Convex Optics</span>
+            <span class="hi-text">गोलीय दर्पण: अवतल एवं उत्तल दर्पण</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <p class="content-p">
+          A <strong>spherical mirror</strong> is a mirror whose reflecting surface is part of a hollow sphere of glass.
+        </p>
+        <ul class="concept-list">
+          <li><strong>Concave Mirror (Converging Mirror):</strong> Reflecting surface is curved inwards (facing toward the centre of the sphere). Parallel light rays converge at a real focus $F$ in front of it.</li>
+          <li><strong>Convex Mirror (Diverging Mirror):</strong> Reflecting surface is curved outwards (bulging towards the light source). Parallel rays diverge and appear to meet at a virtual focus $F$ behind the mirror.</li>
+        </ul>
+
+        <h3 class="sub-heading">🔑 Key Anatomical Terms of Spherical Mirrors</h3>
+        <ul class="concept-list">
+          <li><strong>Pole ($P$):</strong> The geometric centre of the reflecting surface of the mirror. Lies on the surface.</li>
+          <li><strong>Centre of Curvature ($C$):</strong> The centre of the hollow glass sphere of which the mirror forms a part. ($C$ is in front for concave; behind for convex).</li>
+          <li><strong>Radius of Curvature ($R$):</strong> The radius of the sphere ($PC = R$).</li>
+          <li><strong>Principal Axis:</strong> The straight line passing through the Pole $P$ and Centre of Curvature $C$.</li>
+          <li><strong>Principal Focus ($F$):</strong> The point on the principal axis where rays parallel to the principal axis meet (concave) or appear to diverge from (convex) after reflection.</li>
+          <li><strong>Focal Length ($f$):</strong> The distance between the Pole $P$ and Principal Focus $F$ ($PF = f$).</li>
+          <li><strong>Aperture:</strong> The effective diameter of the circular reflecting surface.</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">📐 Fundamental Relationship for Small Aperture Mirrors</div>
+          <div class="formula-math">$$R = 2f \quad \Longleftrightarrow \quad f = \frac{R}{2}$$</div>
+          <div class="formula-notes">The principal focus $F$ lies exactly midway between the pole $P$ and centre of curvature $C$.</div>
+        </div>
+
+        <h3 class="sub-heading">🎯 4 Standard Rules for Drawing Ray Diagrams (Mirrors)</h3>
+        <ul class="concept-list">
+          <li><strong>Rule 1:</strong> A ray parallel to the principal axis, after reflection, passes through the principal focus $F$ (concave) or appears to diverge from $F$ (convex).</li>
+          <li><strong>Rule 2:</strong> A ray passing through the principal focus $F$ (concave) or directed towards $F$ (convex), after reflection, emerges <strong>parallel to the principal axis</strong>.</li>
+          <li><strong>Rule 3:</strong> A ray passing through the centre of curvature $C$ (concave) or directed towards $C$ (convex), retraces its path back along the same line because it falls normally ($\angle i = 0^\circ \implies \angle r = 0^\circ$).</li>
+          <li><strong>Rule 4:</strong> A ray incident obliquely at the pole $P$ is reflected obliquely making equal angles with the principal axis ($\angle i = \angle r$).</li>
+        </ul>
+
+        <h3 class="sub-heading">📊 Master Summary: 6 Cases of Image Formation by Concave Mirror</h3>
+        <div class="custom-table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Object Position</th>
+                <th>Image Position</th>
+                <th>Size of Image</th>
+                <th>Nature of Image</th>
+                <th>Practical Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>At Infinity</strong></td>
+                <td>At Focus $F$</td>
+                <td>Highly diminished (point-sized)</td>
+                <td>Real and Inverted</td>
+                <td>Solar Furnaces, Satellite Dishes</td>
+              </tr>
+              <tr>
+                <td><strong>Beyond $C$</strong></td>
+                <td>Between $F$ and $C$</td>
+                <td>Diminished</td>
+                <td>Real and Inverted</td>
+                <td>Optical Projection systems</td>
+              </tr>
+              <tr>
+                <td><strong>At $C$</strong></td>
+                <td>At $C$</td>
+                <td>Same size ($h' = h$)</td>
+                <td>Real and Inverted</td>
+                <td>1:1 Photocopying mechanisms</td>
+              </tr>
+              <tr>
+                <td><strong>Between $C$ and $F$</strong></td>
+                <td>Beyond $C$</td>
+                <td>Enlarged (Magnified)</td>
+                <td>Real and Inverted</td>
+                <td>Cinema Projectors</td>
+              </tr>
+              <tr>
+                <td><strong>At Focus $F$</strong></td>
+                <td>At Infinity</td>
+                <td>Highly Enlarged</td>
+                <td>Real and Inverted</td>
+                <td>Torches, Searchlights, Headlights</td>
+              </tr>
+              <tr>
+                <td><strong>Between $P$ and $F$</strong></td>
+                <td>Behind the Mirror</td>
+                <td>Enlarged (Magnified)</td>
+                <td><strong>Virtual and Erect</strong></td>
+                <td>Shaving/Makeup Mirror, Dentist Mirror</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">🚗 Uses of Spherical Mirrors in Daily Life (CBSE High-Yield)</h3>
+        <ul class="concept-list">
+          <li><strong>Why Concave Mirrors are used in Headlights &amp; Torches:</strong> When a bulb is placed at the principal focus $F$ of a concave reflector, the reflected rays emerge as a powerful, parallel beam of light over long distances.</li>
+          <li><strong>Why Concave Mirrors are used by Dentists:</strong> When placed close to teeth (between $P$ and $F$), it forms a virtual, erect, and magnified image of teeth for inspection.</li>
+          <li><strong>Why Convex Mirrors are used as Rear-View Mirrors in Vehicles:</strong>
+            <br>1. Always form an <strong>erect and diminished image</strong>.
+            <br>2. Have a <strong>much wider field of view</strong> because they are curved outwards, allowing the driver to view a large traffic area behind.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <p class="content-p">
+          ऐसा दर्पण जिसका परावर्तक पृष्ठ कांच के किसी खोखले गोले का एक भाग होता है, <strong>गोलीय दर्पण (Spherical Mirror)</strong> कहलाता है।
+        </p>
+        <ul class="concept-list">
+          <li><strong>अवतल दर्पण (Concave / Converging Mirror):</strong> जिसका परावर्तक पृष्ठ अंदर की ओर (गोले के केंद्र की ओर) वक्रित होता है। यह समानांतर प्रकाश किरणों को अपने वास्तविक मुख्य फोकस $F$ पर अभिसरित (एकत्रित) करता है।</li>
+          <li><strong>उत्तल दर्पण (Convex / Diverging Mirror):</strong> जिसका परावर्तक पृष्ठ बाहर की ओर उभरा होता है। यह समानांतर किरणों को अपसारित (फैलाता) करता है जो दर्पण के पीछे आभासी फोकस $F$ से आती प्रतीत होती हैं।</li>
+        </ul>
+
+        <h3 class="sub-heading">🔑 गोलीय दर्पण से संबंधित प्रमुख पारिभाषिक शब्द</h3>
+        <ul class="concept-list">
+          <li><strong>ध्रुव ($P$):</strong> गोलीय दर्पण के परावर्तक पृष्ठ के केंद्र को दर्पण का ध्रुव कहते हैं। यह दर्पण के पृष्ठ पर स्थित होता है।</li>
+          <li><strong>वक्रता केंद्र ($C$):</strong> उस खोखले गोले का केंद्र जिसका दर्पण एक भाग है। (अवतल के लिए आगे, उत्तल के लिए पीछे स्थित होता है)।</li>
+          <li><strong>वक्रता त्रिज्या ($R$):</strong> उस गोले की त्रिज्या ($PC = R$)।</li>
+          <li><strong>मुख्य अक्ष (Principal Axis):</strong> ध्रुव $P$ तथा वक्रता केंद्र $C$ से गुजरने वाली सीधी रेखा।</li>
+          <li><strong>मुख्य फोकस ($F$):</strong> मुख्य अक्ष पर वह बिंदु जहाँ मुख्य अक्ष के समानांतर किरणें परावर्तन के पश्चात मिलती हैं (अवतल) अथवा मिलती हुई प्रतीत होती हैं (उत्तल)।</li>
+          <li><strong>फोकस दूरी ($f$):</strong> ध्रुव $P$ तथा मुख्य फोकस $F$ के बीच की दूरी ($PF = f$)।</li>
+          <li><strong>द्वारक (Aperture):</strong> गोलीय दर्पण के वृत्ताकार सीमा रेखा का प्रभावी व्यास।</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">📐 छोटे द्वारक के दर्पणों के लिए संबंध</div>
+          <div class="formula-math">$$R = 2f \quad \Longleftrightarrow \quad f = \frac{R}{2}$$</div>
+          <div class="formula-notes">गोलीय दर्पण का मुख्य फोकस $F$ उसके ध्रुव $P$ तथा वक्रता केंद्र $C$ के ठीक मध्य में स्थित होता है।</div>
+        </div>
+
+        <h3 class="sub-heading">🎯 किरण आरेख खींचने के ४ मुख्य नियम (दर्पण)</h3>
+        <ul class="concept-list">
+          <li><strong>नियम १:</strong> मुख्य अक्ष के समानांतर किरण, परावर्तन के पश्चात मुख्य फोकस $F$ से होकर जाती है (अवतल) अथवा फोकस से आती हुई प्रतीत होती है (उत्तल)।</li>
+          <li><strong>नियम २:</strong> मुख्य फोकस से गुजरने वाली किरण परावर्तन के पश्चात <strong>मुख्य अक्ष के समानांतर</strong> निकलती है।</li>
+          <li><strong>नियम ३:</strong> वक्रता केंद्र $C$ से गुजरने वाली किरण उसी मार्ग पर विपरीत दिशा में वापस लौट जाती है क्योंकि यह दर्पण पर लंबवत आपतित होती है ($\angle i = 0^\circ \implies \angle r = 0^\circ$)।</li>
+          <li><strong>नियम ४:</strong> ध्रुव $P$ पर तिर्यक आपतित किरण समान कोण बनाते हुए तिर्यक रूप से ही परावर्तित होती है ($\angle i = \angle r$)।</li>
+        </ul>
+
+        <h3 class="sub-heading">📊 अवतल दर्पण द्वारा प्रतिबिंब निर्माण की ६ स्थितियाँ</h3>
+        <div class="custom-table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>वस्तु की स्थिति</th>
+                <th>प्रतिबिंब की स्थिति</th>
+                <th>प्रतिबिंब का आकार</th>
+                <th>प्रतिबिंब की प्रकृति</th>
+                <th>दैनिक उपयोग / अनुप्रयोग</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>अनंत पर</strong></td>
+                <td>फोकस $F$ पर</td>
+                <td>अत्यधिक छोटा (बिंदु आकार)</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>सौर भट्ठी, डिश एंटीना</td>
+              </tr>
+              <tr>
+                <td><strong>$C$ से परे (परे दूरी पर)</strong></td>
+                <td>$F$ तथा $C$ के बीच</td>
+                <td>छोटा</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>प्रोजेक्शन सिस्टम</td>
+              </tr>
+              <tr>
+                <td><strong>वक्रता केंद्र $C$ पर</strong></td>
+                <td>वक्रता केंद्र $C$ पर</td>
+                <td>वस्तु के बराबर ($h' = h$)</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>फोटोकॉपी प्रणाली</td>
+              </tr>
+              <tr>
+                <td><strong>$C$ तथा $F$ के बीच</strong></td>
+                <td>$C$ से परे</td>
+                <td>बड़ा (विवर्धित)</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>सिनेमा प्रोजेक्टर</td>
+              </tr>
+              <tr>
+                <td><strong>फोकस $F$ पर</strong></td>
+                <td>अनंत पर</td>
+                <td>अत्यधिक बड़ा (विशाल)</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>टॉर्च, सर्चलाइट, वाहनों की हेडलाइट</td>
+              </tr>
+              <tr>
+                <td><strong>ध्रुव $P$ तथा फोकस $F$ के बीच</strong></td>
+                <td>दर्पण के पीछे</td>
+                <td>बड़ा (विवर्धित)</td>
+                <td><strong>आभासी तथा सीधा</strong></td>
+                <td>शेविंग/मेकअप दर्पण, दंत चिकित्सक दर्पण</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">🚗 दैनिक जीवन में गोलीय दर्पणों के प्रमुख उपयोग</h3>
+        <ul class="concept-list">
+          <li><strong>हेडलाइट एवं टॉर्च में अवतल दर्पण:</strong> जब बल्ब को अवतल परावर्तक के मुख्य फोकस $F$ पर रखा जाता है, तो परावर्तित किरणें शक्तिशाली समानांतर प्रकाश पुंज उत्पन्न करती हैं।</li>
+          <li><strong>दंत चिकित्सकों द्वारा अवतल दर्पण:</strong> दांत को $P$ तथा $F$ के मध्य रखने पर दांत का सीधा, आभासी और बड़ा प्रतिबिंब दिखाई देता है।</li>
+          <li><strong>वाहनों के पश्च-दृश्य (Side/Rear-View) दर्पण में उत्तल दर्पण:</strong>
+            <br>१. यह सदैव <strong>सीधा तथा छोटा प्रतिबिंब</strong> बनाता है।
+            <br>२. बाहर की ओर वक्रित होने के कारण इसका <strong>दृष्टि-क्षेत्र (Field of view) बहुत व्यापक</strong> होता है, जिससे चालक पीछे के बड़े ट्रैफिक क्षेत्र को देख पाता है।
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 3: SIGN CONVENTION & MIRROR FORMULA
+         ========================================== -->
+    <section id="topic3" class="module-card">
+      <div class="module-header">
+        <div class="module-num">3</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Mathematical Optics</span>
+            <span class="hi-text">गणितीय प्रकाशिकी</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">New Cartesian Sign Convention &amp; Mirror Formula</span>
+            <span class="hi-text">नई कार्तीय चिन्ह परिपाटी एवं दर्पण सूत्र</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <p class="content-p">
+          To solve numerical problems accurately without sign errors, we follow the <strong>New Cartesian Sign Convention</strong> taking the Pole ($P$) as the origin $(0,0)$ and the Principal Axis as the X-axis:
+        </p>
+
+        <ul class="concept-list">
+          <li><strong>Rule 1:</strong> The object is always placed to the <strong>left</strong> of the mirror. (Light travels from left to right).</li>
+          <li><strong>Rule 2:</strong> All distances are measured from the <strong>Pole ($P$)</strong> of the mirror.</li>
+          <li><strong>Rule 3:</strong> Distances measured in the direction of incident light (along $+X$ axis, to the right) are taken as <strong>Positive ($+$)</strong>.</li>
+          <li><strong>Rule 4:</strong> Distances measured against the direction of incident light (along $-X$ axis, to the left) are taken as <strong>Negative ($-$)</strong>.</li>
+          <li><strong>Rule 5:</strong> Heights measured upward and perpendicular to the principal axis ($+Y$ axis) are <strong>Positive ($+$)</strong>.</li>
+          <li><strong>Rule 6:</strong> Heights measured downward ($-Y$ axis) are <strong>Negative ($-$)</strong>.</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">📌 Sign Checklist for Mirrors</div>
+          <div class="formula-notes">
+            • Object distance $u$ is <strong>ALWAYS NEGATIVE ($-$)</strong> for both concave and convex mirrors.<br>
+            • Focal length $f$ and Radius of Curvature $R$ for <strong>Concave Mirror = Negative ($-$)</strong>.<br>
+            • Focal length $f$ and Radius of Curvature $R$ for <strong>Convex Mirror = Positive ($+$)</strong>.<br>
+            • Real image distance $v$ (in front of mirror) = <strong>Negative ($-$)</strong>.<br>
+            • Virtual image distance $v$ (behind mirror) = <strong>Positive ($+$)</strong>.
+          </div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula-header">🪞 Mirror Formula &amp; Linear Magnification</div>
+          <div class="formula-math">$$\frac{1}{f} = \frac{1}{v} + \frac{1}{u}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$m = \frac{h'}{h} = -\frac{v}{u}$$</div>
+          <div class="formula-notes">
+            Where: $f$ = Focal length, $v$ = Image distance, $u$ = Object distance, $h'$ = Height of image, $h$ = Height of object ($+ve$).
+          </div>
+        </div>
+
+        <h3 class="sub-heading">🧐 Deciphering the Sign and Magnitude of Magnification ($m$)</h3>
+        <div class="custom-table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Magnification Value</th>
+                <th>Nature of Image</th>
+                <th>Orientation</th>
+                <th>Size Relative to Object</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>$m = -1$</td>
+                <td>Real</td>
+                <td>Inverted</td>
+                <td>Same size ($h' = h$) [Object at $C$ of concave mirror]</td>
+              </tr>
+              <tr>
+                <td>$m = -2.5$ ($|m| > 1$, negative)</td>
+                <td>Real</td>
+                <td>Inverted</td>
+                <td>Magnified ($2.5\times$ bigger)</td>
+              </tr>
+              <tr>
+                <td>$m = -0.5$ ($|m| < 1$, negative)</td>
+                <td>Real</td>
+                <td>Inverted</td>
+                <td>Diminished ($0.5\times$ of object)</td>
+              </tr>
+              <tr>
+                <td>$m = +1$</td>
+                <td>Virtual</td>
+                <td>Erect</td>
+                <td>Same size [Plane mirror]</td>
+              </tr>
+              <tr>
+                <td>$m = +3.0$ ($|m| > 1$, positive)</td>
+                <td>Virtual</td>
+                <td>Erect</td>
+                <td>Magnified [Concave mirror when object between $P$ &amp; $F$]</td>
+              </tr>
+              <tr>
+                <td>$m = +0.4$ ($|m| < 1$, positive)</td>
+                <td>Virtual</td>
+                <td>Erect</td>
+                <td>Diminished [Always for Convex mirror]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <p class="content-p">
+          संख्यात्मक प्रश्नों को त्रुटिहीन हल करने हेतु हम <strong>नई कार्तीय चिन्ह परिपाटी (New Cartesian Sign Convention)</strong> का पालन करते हैं, जिसमें दर्पण के ध्रुव ($P$) को मूल बिंदु $(0,0)$ तथा मुख्य अक्ष को X-अक्ष माना जाता है:
+        </p>
+
+        <ul class="concept-list">
+          <li><strong>नियम १:</strong> बिंब (वस्तु) को सदैव दर्पण के <strong>बाईं ओर</strong> रखा जाता है (आपतित प्रकाश बाएं से दाएं चलता है)।</li>
+          <li><strong>नियम २:</strong> मुख्य अक्ष के समानांतर सभी दूरियाँ दर्पण के <strong>ध्रुव ($P$)</strong> से मापी जाती हैं।</li>
+          <li><strong>नियम ३:</strong> आपतित प्रकाश की दिशा में मापी गई दूरियाँ ($+X$ अक्ष की ओर, दाईं तरफ) <strong>धनात्मक ($+$)</strong> ली जाती हैं।</li>
+          <li><strong>नियम ४:</strong> आपतित प्रकाश की विपरीत दिशा में मापी गई दूरियाँ ($-X$ अक्ष की ओर, बाईं तरफ) <strong>ऋणात्मक ($-$)</strong> ली जाती हैं।</li>
+          <li><strong>नियम ५:</strong> मुख्य अक्ष के लंबवत ऊपर की ओर ($+Y$ अक्ष) मापी गई ऊँचाई <strong>धनात्मक ($+$)</strong> होती है।</li>
+          <li><strong>नियम ६:</strong> मुख्य अक्ष के लंबवत नीचे की ओर ($-Y$ अक्ष) मापी गई ऊँचाई <strong>ऋणात्मक ($-$)</strong> होती है।</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">📌 दर्पणों के लिए चिन्ह तालिका</div>
+          <div class="formula-notes">
+            • बिंब दूरी ($u$) दोनों दर्पणों (अवतल व उत्तल) के लिए <strong>सदैव ऋणात्मक ($-$)</strong> होती है।<br>
+            • अवतल दर्पण की फोकस दूरी ($f$) तथा वक्रता त्रिज्या ($R$) = <strong>ऋणात्मक ($-$)</strong>।<br>
+            • उत्तल दर्पण की फोकस दूरी ($f$) तथा वक्रता त्रिज्या ($R$) = <strong>धनात्मक ($+$)</strong>।<br>
+            • वास्तविक प्रतिबिंब की दूरी ($v$, दर्पण के आगे) = <strong>ऋणात्मक ($-$)</strong>।<br>
+            • आभासी प्रतिबिंब की दूरी ($v$, दर्पण के पीछे) = <strong>धनात्मक ($+$)</strong>।
+          </div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula-header">🪞 दर्पण सूत्र एवं रेखीय आवर्धन</div>
+          <div class="formula-math">$$\frac{1}{f} = \frac{1}{v} + \frac{1}{u}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$m = \frac{h'}{h} = -\frac{v}{u}$$</div>
+          <div class="formula-notes">
+            जहाँ: $f$ = फोकस दूरी, $v$ = प्रतिबिंब दूरी, $u$ = बिंब दूरी, $h'$ = प्रतिबिंब की ऊँचाई, $h$ = बिंब की ऊँचाई।
+          </div>
+        </div>
+
+        <h3 class="sub-heading">🧐 आवर्धन ($m$) के चिन्ह व परिमाण का विश्लेषण</h3>
+        <div class="custom-table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>आवर्धन का मान ($m$)</th>
+                <th>प्रतिबिंब की प्रकृति</th>
+                <th>अभिविन्यास</th>
+                <th>आकार (बिंब की तुलना में)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>$m = -1$</td>
+                <td>वास्तविक</td>
+                <td>उल्टा</td>
+                <td>वस्तु के बराबर ($h' = h$) [अवतल दर्पण में वस्तु $C$ पर]</td>
+              </tr>
+              <tr>
+                <td>$m = -2.5$ ($|m| > 1$, ऋणात्मक)</td>
+                <td>वास्तविक</td>
+                <td>उल्टा</td>
+                <td>बड़ा (विवर्धित - २.५ गुना)</td>
+              </tr>
+              <tr>
+                <td>$m = -0.5$ ($|m| < 1$, ऋणात्मक)</td>
+                <td>वास्तविक</td>
+                <td>उल्टा</td>
+                <td>छोटा (आधा आकार)</td>
+              </tr>
+              <tr>
+                <td>$m = +1$</td>
+                <td>आभासी</td>
+                <td>सीधा</td>
+                <td>बराबर आकार [समतल दर्पण]</td>
+              </tr>
+              <tr>
+                <td>$m = +3.0$ ($|m| > 1$, धनात्मक)</td>
+                <td>आभासी</td>
+                <td>सीधा</td>
+                <td>बड़ा (विवर्धित) [अवतल दर्पण में $P$ व $F$ के बीच]</td>
+              </tr>
+              <tr>
+                <td>$m = +0.4$ ($|m| < 1$, धनात्मक)</td>
+                <td>आभासी</td>
+                <td>सीधा</td>
+                <td>छोटा [उत्तल दर्पण में सदैव]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 4: REFRACTION OF LIGHT & SNELL'S LAW
+         ========================================== -->
+    <section id="topic4" class="module-card">
+      <div class="module-header">
+        <div class="module-num">4</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Wave &amp; Ray Transmission</span>
+            <span class="hi-text">प्रकाश का संचरण</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Refraction of Light, Refractive Index &amp; Glass Slab</span>
+            <span class="hi-text">प्रकाश का अपवर्तन, अपवर्तनांक एवं कांच का गुटका</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <p class="content-p">
+          When a ray of light travelling in one transparent medium enters obliquely into another transparent medium, it changes its direction of propagation at the boundary separating the two media. This bending phenomenon is known as <strong>Refraction of Light</strong>.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula-header">⚡ Why Does Light Refract?</div>
+          <div class="formula-notes">
+            Refraction occurs because the <strong>speed of light is different in different media</strong>. Light travels fastest in vacuum/air ($c \approx 3 \times 10^8\text{ m/s}$), slower in water ($2.25 \times 10^8\text{ m/s}$), and even slower in glass ($2 \times 10^8\text{ m/s}$).
+          </div>
+        </div>
+
+        <ul class="concept-list">
+          <li><strong>Rarer to Denser Medium:</strong> Speed decreases $\implies$ Ray bends <strong>TOWARDS the normal</strong> ($\angle i > \angle r$).</li>
+          <li><strong>Denser to Rarer Medium:</strong> Speed increases $\implies$ Ray bends <strong>AWAY FROM the normal</strong> ($\angle i < \angle r$).</li>
+          <li><strong>Normal Incidence ($\angle i = 0^\circ$):</strong> The ray passes through straight without any deviation ($\angle r = 0^\circ$), though its speed changes.</li>
+        </ul>
+
+        <h3 class="sub-heading">📜 The Two Laws of Refraction &amp; Snell's Law</h3>
+        <ul class="concept-list">
+          <li><strong>First Law:</strong> The incident ray, the refracted ray, and the normal to the interface of two transparent media at the point of incidence, all lie in the <strong>same plane</strong>.</li>
+          <li><strong>Second Law (Snell's Law):</strong> The ratio of the sine of angle of incidence to the sine of angle of refraction is a <strong>constant</strong> for the light of a given colour and for the given pair of media.</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">📐 Snell's Law &amp; Refractive Index Formula</div>
+          <div class="formula-math">$$\frac{\sin i}{\sin r} = \text{constant} = n_{21} = \frac{n_2}{n_1}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$\text{Absolute Refractive Index: } n = \frac{c}{v}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$\text{Relative Refractive Index: } n_{21} = \frac{v_1}{v_2} = \frac{n_2}{n_1}$$</div>
+          <div class="formula-notes">
+            • $c = 3 \times 10^8\text{ m/s}$ (speed of light in vacuum/air), $v$ = speed of light in the medium.<br>
+            • Refractive index is a <strong>pure ratio and has NO UNITS</strong>.<br>
+            • Optical density is not the same as mass density. For example, <em>kerosene is optically denser than water ($n_{\text{kerosene}} = 1.44 > n_{\text{water}} = 1.33$)</em>, but its mass density is less than water (kerosene floats on water).
+          </div>
+        </div>
+
+        <h3 class="sub-heading">🧱 Refraction through a Rectangular Glass Slab (Lateral Shift)</h3>
+        <ul class="concept-list">
+          <li>At the air-glass interface ($AB$), light bends towards the normal.</li>
+          <li>At the glass-air interface ($CD$), light bends away from the normal by the exact same amount.</li>
+          <li>Hence, the <strong>Emergent Ray is strictly parallel to the Incident Ray</strong> ($\angle i = \angle e$).</li>
+          <li><strong>Lateral Displacement ($d$):</strong> The perpendicular distance between the original path of the incident ray and the emergent ray.</li>
+        </ul>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <p class="content-p">
+          जब प्रकाश की किरण एक पारदर्शी माध्यम से दूसरे पारदर्शी माध्यम में तिरछी प्रवेश करती है, तो दोनों माध्यमों को पृथक करने वाले पृष्ठ पर वह अपने मूल मार्ग से मुड़ जाती है। इस परिघटना को <strong>प्रकाश का अपवर्तन (Refraction of Light)</strong> कहते हैं।
+        </p>
+
+        <div class="formula-box">
+          <div class="formula-header">⚡ प्रकाश का अपवर्तन क्यों होता है?</div>
+          <div class="formula-notes">
+            अपवर्तन का मूल कारण <strong>विभिन्न माध्यमों में प्रकाश की चाल का भिन्न-भिन्न होना</strong> है। निर्वात/वायु में प्रकाश सबसे तीव्र गति ($c \approx 3 \times 10^8\text{ m/s}$) से चलता है, जल में $2.25 \times 10^8\text{ m/s}$, तथा कांच में $2 \times 10^8\text{ m/s}$ की चाल से चलता है।
+          </div>
+        </div>
+
+        <ul class="concept-list">
+          <li><strong>विरल से सघन माध्यम में:</strong> चाल घटती है $\implies$ किरण <strong>अभिलंब की ओर</strong> झुकती है ($\angle i > \angle r$)।</li>
+          <li><strong>सघन से विरल माध्यम में:</strong> चाल बढ़ती है $\implies$ किरण <strong>अभिलंब से दूर</strong> हटती है ($\angle i < \angle r$)।</li>
+          <li><strong>लंबवत आपतन ($\angle i = 0^\circ$):</strong> किरण बिना किसी विचलन के सीधे निकल जाती है ($\angle r = 0^\circ$), यद्यपि चाल में परिवर्तन होता है।</li>
+        </ul>
+
+        <h3 class="sub-heading">📜 अपवर्तन के दो नियम एवं स्नेल का नियम</h3>
+        <ul class="concept-list">
+          <li><strong>प्रथम नियम:</strong> आपतित किरण, अपवर्तित किरण तथा दोनों माध्यमों को पृथक करने वाले पृष्ठ के आपतन बिंदु पर अभिलंब—तीनों <strong>एक ही तल</strong> में स्थित होते हैं।</li>
+          <li><strong>द्वितीय नियम (स्नेल का नियम):</strong> प्रकाश के किसी निश्चित रंग तथा निश्चित माध्यमों के युग्म के लिए, आपतन कोण की ज्या ($\sin i$) तथा अपवर्तन कोण की ज्या ($\sin r$) का अनुपात एक <strong>स्थिरांक</strong> होता है।</li>
+        </ul>
+
+        <div class="formula-box">
+          <div class="formula-header">📐 स्नेल का नियम एवं अपवर्तनांक सूत्र</div>
+          <div class="formula-math">$$\frac{\sin i}{\sin r} = \text{स्थिरांक} = n_{21} = \frac{n_2}{n_1}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$\text{निरपेक्ष अपवर्तनांक: } n = \frac{c}{v}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$\text{सापेक्ष अपवर्तनांक: } n_{21} = \frac{v_1}{v_2} = \frac{n_2}{n_1}$$</div>
+          <div class="formula-notes">
+            • $c = 3 \times 10^8\text{ m/s}$ (निर्वात में प्रकाश की चाल), $v$ = माध्यम में प्रकाश की चाल।<br>
+            • अपवर्तनांक एक शुद्ध अनुपात है तथा इसका <strong>कोई मात्रक (इकाई) नहीं होता</strong>।<br>
+            • प्रकाशिक घनत्व और द्रव्यमान घनत्व समान नहीं होते (उदा. मिट्टी का तेल पानी की तुलना में प्रकाशिक रूप से अधिक सघन $n = 1.44$ है, परंतु द्रव्यमान घनत्व कम होने के कारण पानी पर तैरता है)।
+          </div>
+        </div>
+
+        <h3 class="sub-heading">🧱 कांच की आयताकार सिल्ली (Slab) से अपवर्तन एवं पार्श्व विस्थापन</h3>
+        <ul class="concept-list">
+          <li>वायु-कांच पृष्ठ पर प्रकाश अभिलंब की ओर झुकता है।</li>
+          <li>कांच-वायु पृष्ठ पर प्रकाश ठीक उसी कोण से अभिलंब से दूर हटता है।</li>
+          <li>अतः <strong>निर्गत किरण (Emergent Ray) सदैव आपतित किरण की दिशा के समानांतर</strong> होती है ($\angle i = \angle e$)।</li>
+          <li><strong>पार्श्व विस्थापन (Lateral Displacement):</strong> आपतित किरण के मूल पथ तथा निर्गत किरण के मध्य की लंबवत दूरी।</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 5: SPHERICAL LENSES & RAY RULES
+         ========================================== -->
+    <section id="topic5" class="module-card">
+      <div class="module-header">
+        <div class="module-num">5</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Refracting Media</span>
+            <span class="hi-text">अपवर्तक माध्यम</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Spherical Lenses: Convex &amp; Concave Optics</span>
+            <span class="hi-text">गोलीय लेंस: उत्तल एवं अवतल लेंस</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <p class="content-p">
+          A <strong>lens</strong> is a transparent optical medium bounded by two surfaces, of which at least one is spherical.
+        </p>
+        <ul class="concept-list">
+          <li><strong>Convex Lens (Double Convex / Converging Lens):</strong> Thicker at the middle than at the edges. Converges parallel incident light rays to a real focus on the other side.</li>
+          <li><strong>Concave Lens (Double Concave / Diverging Lens):</strong> Thicker at the edges than at the middle. Diverges parallel incident rays so they appear to originate from a virtual focus on the same side.</li>
+          <li><strong>Optical Centre ($O$):</strong> The central point of the lens. A ray of light passing through $O$ emerges <strong>without any deviation</strong>.</li>
+          <li><strong>Principal Focus ($F_1, F_2$):</strong> Lenses have two principal foci, one on each side equidistant from the optical centre.</li>
+        </ul>
+
+        <h3 class="sub-heading">🎯 3 Standard Rules for Drawing Ray Diagrams (Lenses)</h3>
+        <ul class="concept-list">
+          <li><strong>Rule 1:</strong> A ray parallel to the principal axis passes through the principal focus $F_2$ on the other side (convex lens) or appears to diverge from focus $F_1$ on the same side (concave lens).</li>
+          <li><strong>Rule 2:</strong> A ray passing through principal focus $F_1$ (convex) or directed towards focus $F_2$ (concave) emerges <strong>parallel to the principal axis</strong>.</li>
+          <li><strong>Rule 3:</strong> A ray passing through the <strong>Optical Centre ($O$)</strong> passes straight through without suffering any deviation.</li>
+        </ul>
+
+        <h3 class="sub-heading">📊 Master Summary: 6 Cases of Image Formation by Convex Lens</h3>
+        <div class="custom-table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Object Position</th>
+                <th>Image Position</th>
+                <th>Size of Image</th>
+                <th>Nature of Image</th>
+                <th>Practical Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>At Infinity</strong></td>
+                <td>At Focus $F_2$</td>
+                <td>Highly diminished (point)</td>
+                <td>Real and Inverted</td>
+                <td>Burning glass, Telescope objective</td>
+              </tr>
+              <tr>
+                <td><strong>Beyond $2F_1$</strong></td>
+                <td>Between $F_2$ and $2F_2$</td>
+                <td>Diminished</td>
+                <td>Real and Inverted</td>
+                <td>Photographic Camera lens</td>
+              </tr>
+              <tr>
+                <td><strong>At $2F_1$</strong></td>
+                <td>At $2F_2$</td>
+                <td>Same size ($h' = h$)</td>
+                <td>Real and Inverted</td>
+                <td>Terrestrial Telescope erector</td>
+              </tr>
+              <tr>
+                <td><strong>Between $F_1$ and $2F_1$</strong></td>
+                <td>Beyond $2F_2$</td>
+                <td>Magnified (Enlarged)</td>
+                <td>Real and Inverted</td>
+                <td>Slide / Film Projector</td>
+              </tr>
+              <tr>
+                <td><strong>At Focus $F_1$</strong></td>
+                <td>At Infinity</td>
+                <td>Infinitely Large</td>
+                <td>Real and Inverted</td>
+                <td>Collimator in Spectrometer</td>
+              </tr>
+              <tr>
+                <td><strong>Between $O$ and $F_1$</strong></td>
+                <td>On same side as object</td>
+                <td>Magnified (Enlarged)</td>
+                <td><strong>Virtual and Erect</strong></td>
+                <td>Simple Microscope (Magnifying Glass)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">🔍 Image Formation by Concave Lens (Diverging)</h3>
+        <p class="content-p">
+          A concave lens <strong>ALWAYS forms a Virtual, Erect, and Diminished image</strong> on the same side as the object, regardless of where the object is placed in front of it. It is widely used to correct <strong>Myopia (Short-sightedness)</strong>.
+        </p>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <p class="content-p">
+          दो पृष्ठों से घिरा हुआ कोई पारदर्शी माध्यम जिसका एक या दोनों पृष्ठ गोलीय हों, <strong>लेंस</strong> कहलाता है।
+        </p>
+        <ul class="concept-list">
+          <li><strong>उत्तल लेंस (Convex / Converging Lens):</strong> किनारों की अपेक्षा बीच में मोटा होता है। यह समानांतर प्रकाश किरणों को दूसरी ओर वास्तविक फोकस पर अभिसरित करता है।</li>
+          <li><strong>अवतल लेंस (Concave / Diverging Lens):</strong> बीच की अपेक्षा किनारों पर मोटा होता है। यह समानांतर किरणों को अपसारित (फैलाता) करता है जो उसी ओर आभासी फोकस से आती प्रतीत होती हैं।</li>
+          <li><strong>प्रकाशिक केंद्र ($O$):</strong> लेंस का केंद्रीय बिंदु। प्रकाशिक केंद्र से गुजरने वाली प्रकाश किरण <strong>बिना किसी विचलन के सीधे निकल जाती है</strong>।</li>
+          <li><strong>मुख्य फोकस ($F_1, F_2$):</strong> प्रत्येक लेंस के दो मुख्य फोकस होते हैं जो प्रकाशिक केंद्र से दोनों ओर समान दूरी पर स्थित होते हैं।</li>
+        </ul>
+
+        <h3 class="sub-heading">🎯 लेंसों द्वारा किरण आरेख खींचने के ३ मुख्य नियम</h3>
+        <ul class="concept-list">
+          <li><strong>नियम १:</strong> मुख्य अक्ष के समानांतर किरण अपवर्तन के पश्चात उत्तल लेंस के द्वितीय फोकस $F_2$ से गुजरती है अथवा अवतल लेंस के प्रथम फोकस $F_1$ से अपसारित होती प्रतीत होती है।</li>
+          <li><strong>नियम २:</strong> प्रथम फोकस से गुजरने वाली किरण (उत्तल) अथवा द्वितीय फोकस की ओर निर्देशित किरण (अवतल) अपवर्तन के पश्चात <strong>मुख्य अक्ष के समानांतर</strong> निकलती है।</li>
+          <li><strong>नियम ३:</strong> <strong>प्रकाशिक केंद्र ($O$)</strong> से गुजरने वाली प्रकाश किरण बिना किसी विचलन के सीधे निकल जाती है।</li>
+        </ul>
+
+        <h3 class="sub-heading">📊 उत्तल लेंस द्वारा प्रतिबिंब निर्माण की ६ स्थितियाँ</h3>
+        <div class="custom-table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>वस्तु की स्थिति</th>
+                <th>प्रतिबिंब की स्थिति</th>
+                <th>प्रतिबिंब का आकार</th>
+                <th>प्रतिबिंब की प्रकृति</th>
+                <th>दैनिक अनुप्रयोग</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>अनंत पर</strong></td>
+                <td>फोकस $F_2$ पर</td>
+                <td>अत्यधिक छोटा (बिंदु आकार)</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>दूरबीन का अभिदृश्यक</td>
+              </tr>
+              <tr>
+                <td><strong>$2F_1$ से परे</strong></td>
+                <td>$F_2$ तथा $2F_2$ के बीच</td>
+                <td>छोटा</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>कैमरा लेंस</td>
+              </tr>
+              <tr>
+                <td><strong>$2F_1$ पर</strong></td>
+                <td>$2F_2$ पर</td>
+                <td>वस्तु के बराबर ($h' = h$)</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>समरूप आवर्धन</td>
+              </tr>
+              <tr>
+                <td><strong>$F_1$ तथा $2F_1$ के बीच</strong></td>
+                <td>$2F_2$ से परे</td>
+                <td>बड़ा (विवर्धित)</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>सिनेमा / स्लाइड प्रोजेक्टर</td>
+              </tr>
+              <tr>
+                <td><strong>फोकस $F_1$ पर</strong></td>
+                <td>अनंत पर</td>
+                <td>अत्यधिक बड़ा</td>
+                <td>वास्तविक तथा उल्टा</td>
+                <td>समानांतर किरण पुंज जनित्र</td>
+              </tr>
+              <tr>
+                <td><strong>प्रकाशिक केंद्र $O$ तथा $F_1$ के बीच</strong></td>
+                <td>वस्तु की ओर ही</td>
+                <td>बड़ा (विवर्धित)</td>
+                <td><strong>आभासी तथा सीधा</strong></td>
+                <td>सरल सूक्ष्मदर्शी (आवर्धक कांच)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">🔍 अवतल लेंस द्वारा प्रतिबिंब निर्माण</h3>
+        <p class="content-p">
+          अवतल लेंस के सामने वस्तु को कहीं भी रखने पर वह <strong>सदैव आभासी, सीधा तथा छोटा प्रतिबिंब</strong> बनाता है। इसका व्यापक उपयोग <strong>निकट-दृष्टि दोष (Myopia)</strong> के निवारण में किया जाता है।
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOPIC 6: LENS FORMULA, MAGNIFICATION & POWER
+         ========================================== -->
+    <section id="topic6" class="module-card">
+      <div class="module-header">
+        <div class="module-num">6</div>
+        <div>
+          <div class="module-subtitle">
+            <span class="en-text">Optical Formulas</span>
+            <span class="hi-text">प्रकाशिक सूत्र</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">Lens Formula, Magnification &amp; Power of Lens</span>
+            <span class="hi-text">लेंस सूत्र, आवर्धन एवं लेंस की क्षमता</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- English Content -->
+      <div class="en-text">
+        <div class="formula-box">
+          <div class="formula-header">📐 Lens Formula &amp; Linear Magnification</div>
+          <div class="formula-math">$$\frac{1}{f} = \frac{1}{v} - \frac{1}{u}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$m = \frac{h'}{h} = +\frac{v}{u}$$</div>
+          <div class="formula-notes">
+            • <strong>Notice the Difference:</strong> Mirror formula has $+ \left(\frac{1}{v} + \frac{1}{u}\right)$ and magnification $-\frac{v}{u}$. Lens formula has $- \left(\frac{1}{v} - \frac{1}{u}\right)$ and magnification $+\frac{v}{u}$.<br>
+            • <strong>Convex Lens Focal Length:</strong> ALWAYS <strong>POSITIVE ($+f$)</strong>.<br>
+            • <strong>Concave Lens Focal Length:</strong> ALWAYS <strong>NEGATIVE ($-f$)</strong>.<br>
+            • Object distance $u$ is ALWAYS <strong>NEGATIVE ($-u$)</strong>.
+          </div>
+        </div>
+
+        <h3 class="sub-heading">⚡ Power of a Lens ($P$) &amp; Unit Dioptre ($D$)</h3>
+        <p class="content-p">
+          The <strong>Power of a Lens</strong> is a measure of the degree of convergence or divergence of light rays achieved by it. It is defined as the <strong>reciprocal of its focal length in metres</strong>.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula-header">🔋 Power Formula &amp; Combinations</div>
+          <div class="formula-math">$$P = \frac{1}{f\text{ (in metres)}} = \frac{100}{f\text{ (in cm)}}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$\text{Net Power: } P = P_1 + P_2 + P_3 + \dots$$</div>
+          <div class="formula-notes">
+            • <strong>SI Unit of Power:</strong> <strong>Dioptre ($D$)</strong> where $1\text{ D} = 1\text{ m}^{-1}$.<br>
+            • <strong>1 Dioptre Definition:</strong> $1\text{ Dioptre}$ is the power of a lens whose focal length is $1\text{ metre}$.<br>
+            • <strong>Convex Lens:</strong> $f$ is $+ \implies$ Power $P$ is <strong>Positive ($+$)</strong> (e.g., $+2.5\text{ D}$).<br>
+            • <strong>Concave Lens:</strong> $f$ is $- \implies$ Power $P$ is <strong>Negative ($-$)</strong> (e.g., $-1.5\text{ D}$).<br>
+            • Net focal length of combination: $\frac{1}{F} = \frac{1}{f_1} + \frac{1}{f_2} + \dots$
+          </div>
+        </div>
+      </div>
+
+      <!-- Hindi Content -->
+      <div class="hi-text">
+        <div class="formula-box">
+          <div class="formula-header">📐 लेंस सूत्र एवं रेखीय आवर्धन</div>
+          <div class="formula-math">$$\frac{1}{f} = \frac{1}{v} - \frac{1}{u}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$m = \frac{h'}{h} = +\frac{v}{u}$$</div>
+          <div class="formula-notes">
+            • <strong>दर्पण व लेंस में अंतर:</strong> दर्पण सूत्र में $\frac{1}{v} + \frac{1}{u}$ तथा $m = -\frac{v}{u}$ होता है; जबकि लेंस सूत्र में $\frac{1}{v} - \frac{1}{u}$ तथा $m = +\frac{v}{u}$ होता है।<br>
+            • <strong>उत्तल लेंस की फोकस दूरी:</strong> सदैव <strong>धनात्मक ($+f$)</strong> होती है।<br>
+            • <strong>अवतल लेंस की फोकस दूरी:</strong> सदैव <strong>ऋणात्मक ($-f$)</strong> होती है।<br>
+            • बिंब दूरी ($u$) सदैव <strong>ऋणात्मक ($-u$)</strong> होती है।
+          </div>
+        </div>
+
+        <h3 class="sub-heading">⚡ लेंस की क्षमता ($P$) एवं डाइऑप्टर ($D$)</h3>
+        <p class="content-p">
+          किसी लेंस द्वारा प्रकाश किरणों को अभिसारित अथवा अपसारित करने की मात्रा को उसकी <strong>क्षमता (Power of a Lens)</strong> कहते हैं। इसे <strong>मीटर में व्यक्त फोकस दूरी के व्युत्क्रम</strong> द्वारा परिभाषित किया जाता है।
+        </p>
+
+        <div class="formula-box">
+          <div class="formula-header">🔋 लेंस की क्षमता का सूत्र</div>
+          <div class="formula-math">$$P = \frac{1}{f\text{ (मीटर में)}} = \frac{100}{f\text{ (सेमी में)}}$$</div>
+          <div class="formula-math" style="margin-top: 6px;">$$\text{कुल क्षमता: } P = P_1 + P_2 + P_3 + \dots$$</div>
+          <div class="formula-notes">
+            • <strong>SI मात्रक:</strong> <strong>डाइऑप्टर (Dioptre - $D$)</strong> जहाँ $1\text{ D} = 1\text{ m}^{-1}$।<br>
+            • <strong>१ डाइऑप्टर की परिभाषा:</strong> १ डाइऑप्टर उस लेंस की क्षमता है जिसकी फोकस दूरी $1\text{ मीटर}$ हो।<br>
+            • <strong>उत्तल लेंस की क्षमता:</strong> सदैव <strong>धनात्मक ($+$)</strong> होती है (उदा. $+2.0\text{ D}$)।<br>
+            • <strong>अवतल लेंस की क्षमता:</strong> सदैव <strong>ऋणात्मक ($-$)</strong> होती है (उदा. $-1.5\text{ D}$)।<br>
+            • लेंसों के संयोजन की कुल फोकस दूरी: $\frac{1}{F} = \frac{1}{f_1} + \frac{1}{f_2} + \dots$
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: SOLVED CBSE PREVIOUS YEARS NUMERICALS
+         ========================================== -->
+    <section id="cbse-numericals" class="module-card" style="border-color: rgba(16, 185, 129, 0.45);">
+      <div class="module-header">
+        <div class="module-num" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">🧮</div>
+        <div>
+          <div class="module-subtitle" style="color: #10b981;">
+            <span class="en-text">CBSE Board Exam Engine</span>
+            <span class="hi-text">बोर्ड परीक्षा संख्यात्मक स्टूडियो</span>
+          </div>
+          <h2 class="module-title">
+            <span class="en-text">CBSE Previous Years Solved Numericals Studio</span>
+            <span class="hi-text">CBSE बोर्ड परीक्षा के हल सहित संख्यात्मक प्रश्न</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Problem 1 -->
+      <div class="numerical-card">
+        <div class="pyq-badge">
+          <span class="en-text">CBSE 2023 / 2019 • 3 Marks • Convex Rear-View Mirror</span>
+          <span class="hi-text">CBSE २०२३ / २०१९ • ३ अंक • उत्तल पश्च-दृश्य दर्पण</span>
+        </div>
+        <div class="numerical-question">
+          <span class="en-text">Q1. A convex mirror used for rear-view on an automobile has a radius of curvature of $3.00\text{ m}$. If a bus is located at $5.00\text{ m}$ from this mirror, find the position, nature and size of the image.</span>
+          <span class="hi-text">प्र. १. किसी स्वचालित वाहन में पीछे का दृश्य देखने के लिए उपयोग होने वाले उत्तल दर्पण की वक्रता त्रिज्या $3.00\text{ m}$ है। यदि एक बस इस दर्पण से $5.00\text{ m}$ की दूरी पर स्थित है, तो प्रतिबिंब की स्थिति, प्रकृति तथा आकार ज्ञात कीजिए।</span>
+        </div>
+        <div class="given-data-grid">
+          <div>• Radius of Curvature: $R = +3.00\text{ m}$</div>
+          <div>• Focal Length: $f = +R/2 = +1.50\text{ m}$</div>
+          <div>• Object Distance: $u = -5.00\text{ m}$</div>
+          <div>• To Find: Image distance $v$, Magnification $m$</div>
+        </div>
+        <div class="step-box">
+          <div class="step-item"><strong><span class="en-text">Step 1 (Mirror Formula):</span><span class="hi-text">चरण १ (दर्पण सूत्र):</span></strong> $$\frac{1}{v} + \frac{1}{u} = \frac{1}{f} \implies \frac{1}{v} = \frac{1}{f} - \frac{1}{u}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 2 (Substitute values):</span><span class="hi-text">चरण २ (मान रखने पर):</span></strong> $$\frac{1}{v} = \frac{1}{+1.50} - \frac{1}{-5.00} = \frac{1}{1.50} + \frac{1}{5.00} = \frac{10}{15} + \frac{1}{5} = \frac{2}{3} + \frac{1}{5} = \frac{13}{15}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 3 (Calculate $v$):</span><span class="hi-text">चरण ३ ($v$ का मान):</span></strong> $$v = +\frac{15}{13} = \mathbf{+1.15\text{ m}}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 4 (Magnification):</span><span class="hi-text">चरण ४ (आवर्धन):</span></strong> $$m = -\frac{v}{u} = -\frac{+1.15}{-5.00} = \mathbf{+0.23}$$</div>
+        </div>
+        <div class="final-answer-badge">
+          <span class="en-text">✓ Final Result: The image is formed at a distance of **$+1.15\text{ m}$ behind the mirror**. It is **Virtual, Erect**, and diminished to **$0.23\times$** the size of the bus.</span>
+          <span class="hi-text">✓ अंतिम उत्तर: प्रतिबिंब दर्पण के पीछे **$+1.15\text{ m}$** की दूरी पर बनता है। यह **आभासी, सीधा** तथा बस के आकार का **०.२३ गुना छोटा** है।</span>
+        </div>
+      </div>
+
+      <!-- Problem 2 -->
+      <div class="numerical-card">
+        <div class="pyq-badge">
+          <span class="en-text">CBSE 2024 / 2020 • 3 Marks • Concave Mirror &amp; Screen Placement</span>
+          <span class="hi-text">CBSE २०२४ / २०२० • ३ अंक • अवतल दर्पण व पर्दा स्थिति</span>
+        </div>
+        <div class="numerical-question">
+          <span class="en-text">Q2. An object $4.0\text{ cm}$ in size is placed at $25.0\text{ cm}$ in front of a concave mirror of focal length $15.0\text{ cm}$. At what distance from the mirror should a screen be placed in order to obtain a sharp image? Find the nature and the size of the image.</span>
+          <span class="hi-text">प्र. २. $4.0\text{ cm}$ आकार का कोई बिंब किसी $15.0\text{ cm}$ फोकस दूरी के अवतल दर्पण से $25.0\text{ cm}$ दूरी पर रखा गया है। दर्पण से कितनी दूरी पर किसी पर्दे को रखा जाए कि स्पष्ट प्रतिबिंब प्राप्त हो सके? प्रतिबिंब की प्रकृति तथा आकार भी ज्ञात कीजिए।</span>
+        </div>
+        <div class="given-data-grid">
+          <div>• Object Height: $h = +4.0\text{ cm}$</div>
+          <div>• Object Distance: $u = -25.0\text{ cm}$</div>
+          <div>• Focal Length: $f = -15.0\text{ cm}$ (Concave)</div>
+          <div>• To Find: Screen distance $v$, Image height $h'$</div>
+        </div>
+        <div class="step-box">
+          <div class="step-item"><strong><span class="en-text">Step 1 (Mirror Formula):</span><span class="hi-text">चरण १ (दर्पण सूत्र):</span></strong> $$\frac{1}{v} = \frac{1}{f} - \frac{1}{u} = \frac{1}{-15.0} - \frac{1}{-25.0} = -\frac{1}{15} + \frac{1}{25}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 2 (LCM of 15 &amp; 25 is 75):</span><span class="hi-text">चरण २ (ल.स. ७५):</span></strong> $$\frac{1}{v} = \frac{-5 + 3}{75} = -\frac{2}{75} \implies v = -\frac{75}{2} = \mathbf{-37.5\text{ cm}}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 3 (Image Height via Magnification):</span><span class="hi-text">चरण ३ (आवर्धन से ऊँचाई):</span></strong> $$m = \frac{h'}{h} = -\frac{v}{u} \implies h' = -\frac{v}{u} \times h = -\left(\frac{-37.5}{-25.0}\right) \times (+4.0) = -(1.5) \times 4.0 = \mathbf{-6.0\text{ cm}}$$</div>
+        </div>
+        <div class="final-answer-badge">
+          <span class="en-text">✓ Final Result: The screen should be placed at **$37.5\text{ cm}$ in front of the mirror**. The image is **Real, Inverted**, and enlarged with height **$6.0\text{ cm}$**.</span>
+          <span class="hi-text">✓ अंतिम उत्तर: पर्दे को दर्पण के आगे **$37.5\text{ cm}$** की दूरी पर रखना चाहिए। प्रतिबिंब **वास्तविक, उल्टा** तथा **$6.0\text{ cm}$ लंबा (विवर्धित)** होगा।</span>
+        </div>
+      </div>
+
+      <!-- Problem 3 -->
+      <div class="numerical-card">
+        <div class="pyq-badge">
+          <span class="en-text">CBSE 2022 / 2018 • 3 Marks • Concave Lens &amp; Virtual Image</span>
+          <span class="hi-text">CBSE २०२२ / २०१८ • ३ अंक • अवतल लेंस व आभासी प्रतिबिंब</span>
+        </div>
+        <div class="numerical-question">
+          <span class="en-text">Q3. A concave lens has a focal length of $15\text{ cm}$. At what distance should the object from the lens be placed so that it forms an image at $10\text{ cm}$ from the lens? Also, find the magnification produced by the lens.</span>
+          <span class="hi-text">प्र. ३. किसी अवतल लेंस की फोकस दूरी $15\text{ cm}$ है। बिंब को लेंस से कितनी दूरी पर रखें कि इसके द्वारा बिंब का लेंस से $10\text{ cm}$ दूरी पर प्रतिबिंब बने? लेंस द्वारा उत्पन्न आवर्धन भी ज्ञात कीजिए।</span>
+        </div>
+        <div class="given-data-grid">
+          <div>• Focal Length: $f = -15\text{ cm}$ (Concave)</div>
+          <div>• Image Distance: $v = -10\text{ cm}$ (Virtual)</div>
+          <div>• To Find: Object distance $u$, Magnification $m$</div>
+        </div>
+        <div class="step-box">
+          <div class="step-item"><strong><span class="en-text">Step 1 (Lens Formula):</span><span class="hi-text">चरण १ (लेंस सूत्र):</span></strong> $$\frac{1}{f} = \frac{1}{v} - \frac{1}{u} \implies \frac{1}{u} = \frac{1}{v} - \frac{1}{f}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 2 (Substitute values):</span><span class="hi-text">चरण २ (मान रखने पर):</span></strong> $$\frac{1}{u} = \frac{1}{-10} - \frac{1}{-15} = -\frac{1}{10} + \frac{1}{15} = \frac{-3 + 2}{30} = -\frac{1}{30}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 3 (Calculate $u$):</span><span class="hi-text">चरण ३ ($u$ का मान):</span></strong> $$u = \mathbf{-30\text{ cm}}$$</div>
+          <div class="step-item"><strong><span class="en-text">Step 4 (Magnification for Lens):</span><span class="hi-text">चरण ४ (लेंस का आवर्धन):</span></strong> $$m = +\frac{v}{u} = \frac{-10}{-30} = \mathbf{+\frac{1}{3} \approx +0.33}$$</div>
+        </div>
+        <div class="final-answer-badge">
+          <span class="en-text">✓ Final Result: The object must be placed at **$30\text{ cm}$ in front of the concave lens**. Magnification is **$+0.33$**, meaning the image is **Virtual, Erect**, and $1/3^{\text{rd}}$ of the object's height.</span>
+          <span class="hi-text">✓ अंतिम उत्तर: बिंब को अवतल लेंस के आगे **$30\text{ cm}$** की दूरी पर रखना होगा। आवर्धन **$+0.33$** है, जिसका अर्थ है कि प्रतिबिंब **आभासी, सीधा** तथा वस्तु के आकार का एक-तिहाई ($1/3$) है।</span>
+        </div>
+      </div>
+
+      <!-- Problem 4 -->
+      <div class="numerical-card">
+        <div class="pyq-badge">
+          <span class="en-text">CBSE 2023 / 2020 • 2 Marks • Lens Power &amp; Combination</span>
+          <span class="hi-text">CBSE २०२३ / २०२० • २ अंक • लेंस की क्षमता एवं संयोजन</span>
+        </div>
+        <div class="numerical-question">
+          <span class="en-text">Q4. (a) A doctor has prescribed a corrective lens of power $+2.0\text{ D}$. Find the focal length of the lens. Is the prescribed lens diverging or converging?<br>(b) Two thin lenses of power $+3.5\text{ D}$ and $-1.5\text{ D}$ are placed in optical contact. What is the power and focal length of the combination?</span>
+          <span class="hi-text">प्र. ४. (क) किसी डॉक्टर ने $+2.0\text{ D}$ क्षमता का संशोधक लेंस निर्धारित किया है। लेंस की फोकस दूरी ज्ञात कीजिए। क्या यह अभिसारी है अथवा अपसारी?<br>(ख) $+3.5\text{ D}$ तथा $-1.5\text{ D}$ क्षमता के दो पतले लेंस परस्पर संपर्क में रखे हैं। संयोजन की कुल क्षमता तथा फोकस दूरी क्या होगी?</span>
+        </div>
+        <div class="step-box">
+          <div class="step-item"><strong>Part (a):</strong> $$P = \frac{1}{f(\text{m})} \implies f = \frac{1}{P} = \frac{1}{+2.0} = \mathbf{+0.5\text{ m}} = \mathbf{+50\text{ cm}}$$</div>
+          <div class="step-item"><span class="en-text">Since $f$ and $P$ are positive ($+$), the lens is a <strong>Convex (Converging) Lens</strong> used to correct Hypermetropia.</span><span class="hi-text">क्योंकि $f$ और $P$ धनात्मक हैं, अतः यह <strong>उत्तल (अभिसारी) लेंस</strong> है जिसका उपयोग दूर-दृष्टि दोष में होता है।</span></div>
+          <div class="step-item"><strong>Part (b):</strong> $$P_{\text{net}} = P_1 + P_2 = (+3.5\text{ D}) + (-1.5\text{ D}) = \mathbf{+2.0\text{ D}}$$</div>
+          <div class="step-item">$$F_{\text{net}} = \frac{1}{P_{\text{net}}} = \frac{1}{+2.0} = \mathbf{+0.5\text{ m}} = \mathbf{+50\text{ cm}}$$</div>
+        </div>
+        <div class="final-answer-badge">
+          <span class="en-text">✓ Final Result: (a) $f = +50\text{ cm}$, Converging lens. (b) Net Power = $+2.0\text{ D}$, Net Focal Length = $+50\text{ cm}$.</span>
+          <span class="hi-text">✓ अंतिम उत्तर: (क) $f = +50\text{ cm}$, अभिसारी लेंस। (ख) कुल क्षमता = $+2.0\text{ D}$, कुल फोकस दूरी = $+50\text{ cm}$।</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: INTERACTIVE PRACTICE
+         ========================================== -->
+    <section id="interactive-practice" class="interactive-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <div style="font-size: 0.8rem; font-weight: 800; color: var(--accent-gold); text-transform: uppercase;">
+            <span class="en-text">Active Recall &amp; Formula Memory</span>
+            <span class="hi-text">स्मृति परीक्षण एवं अभ्यास</span>
+          </div>
+          <h2 style="font-size: 1.25rem; font-weight: 900; color: var(--text-main); margin: 0;">
+            <span class="en-text">Light Optics Fill-in-the-Blanks Test</span>
+            <span class="hi-text">प्रकाशिकी रिक्त स्थान एवं प्रश्नोत्तरी</span>
+          </h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button onclick="checkAllBlanks()" class="btn-check">
+            <span class="en-text">Check All</span>
+            <span class="hi-text">सभी जांचें</span>
+          </button>
+          <button onclick="resetAllBlanks()" class="btn-hint">
+            <span class="en-text">Reset</span>
+            <span class="hi-text">रीसेट</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="scoreDisplay" class="score-hud">
+        <span class="en-text">📊 Ready to test: Type your answers below.</span>
+        <span class="hi-text">📊 अभ्यास हेतु तैयार: नीचे उत्तर लिखें और जांचें।</span>
+        <span>Accuracy: --%</span>
+      </div>
+
+      <!-- Blank 1 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">1. For small aperture spherical mirrors, the relationship between radius of curvature $R$ and focal length $f$ is $R = $ __________.</span>
+          <span class="hi-text">१. छोटे द्वारक के गोलीय दर्पणों के लिए वक्रता त्रिज्या $R$ तथा फोकस दूरी $f$ में संबंध $R = $ __________ होता है।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="1" data-answers="2f,2*f,2 f,two f,2focal length,२f" data-display-answer="2f (या R = 2f)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint1')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint1" class="hint-drawer">
+          <span class="en-text">💡 The focus is exactly halfway between the pole and centre of curvature.</span>
+          <span class="hi-text">💡 मुख्य फोकस ध्रुव और वक्रता केंद्र के ठीक बीच में होता है।</span>
+        </div>
+        <div id="fb-1" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 2 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">2. In vehicles, __________ mirrors are used as rear-view mirrors because they always give an erect, diminished image and a wider field of view.</span>
+          <span class="hi-text">२. वाहनों में पश्च-दृश्य के लिए __________ दर्पण का उपयोग किया जाता है क्योंकि यह सदैव सीधा, छोटा प्रतिबिंब तथा विस्तृत दृष्टि क्षेत्र देता है।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="2" data-answers="convex,convex mirror,उत्तल,उत्तल दर्पण" data-display-answer="Convex Mirror (उत्तल दर्पण)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint2')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint2" class="hint-drawer">
+          <span class="en-text">💡 Curving outwards enables a driver to view a much larger traffic panorama.</span>
+          <span class="hi-text">💡 बाहर की ओर वक्रित होने से दृष्टि क्षेत्र बहुत बढ़ जाता है।</span>
+        </div>
+        <div id="fb-2" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 3 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">3. According to Snell's Law of refraction, the ratio of $\sin i$ to $\sin r$ is a constant known as the __________ index ($n_{21}$).</span>
+          <span class="hi-text">३. स्नेल के नियम के अनुसार $\sin i$ तथा $\sin r$ का अनुपात एक स्थिरांक होता है जिसे __________ ($n_{21}$) कहते हैं।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="3" data-answers="refractive,refractive index,अपवर्तनांक" data-display-answer="Refractive Index (अपवर्तनांक)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint3')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint3" class="hint-drawer">
+          <span class="en-text">💡 Measures the light-bending ability and ratio of speed of light between media.</span>
+          <span class="hi-text">💡 यह माध्यमों में प्रकाश की चाल का अनुपात दर्शाता है।</span>
+        </div>
+        <div id="fb-3" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 4 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">4. The SI unit of the Power of a lens is __________ (symbol: $D$).</span>
+          <span class="hi-text">४. लेंस की क्षमता का SI मात्रक __________ (प्रतीक: $D$) होता है।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="4" data-answers="dioptre,diopter,dioptres,डाइऑप्टर,डाइओप्टर" data-display-answer="Dioptre (डाइऑप्टर - D)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint4')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint4" class="hint-drawer">
+          <span class="en-text">💡 Equal to $1\text{ m}^{-1}$. Power of a lens with $1\text{ metre}$ focal length.</span>
+          <span class="hi-text">💡 $1\text{ मीटर}$ फोकस दूरी वाले लेंस की क्षमता १ डाइऑप्टर होती है।</span>
+        </div>
+        <div id="fb-4" class="feedback-msg"></div>
+      </div>
+
+      <!-- Blank 5 -->
+      <div class="interactive-row">
+        <div class="q-text">
+          <span class="en-text">5. If the magnification produced by a mirror is negative ($m = -2$), the image is always __________ and inverted.</span>
+          <span class="hi-text">५. यदि किसी दर्पण का आवर्धन ऋणात्मक ($m = -2$) है, तो प्रतिबिंब सदैव __________ तथा उल्टा होता है।</span>
+        </div>
+        <input type="text" class="blank-input" data-id="5" data-answers="real,real image,वास्तविक" data-display-answer="Real (वास्तविक)" placeholder="Type answer / उत्तर लिखें...">
+        <div class="btn-action-row">
+          <button onclick="checkBlank(this)" class="btn-check">Check / जांचें</button>
+          <button onclick="toggleHint('hint5')" class="btn-hint">Hint / संकेत</button>
+        </div>
+        <div id="hint5" class="hint-drawer">
+          <span class="en-text">💡 Negative sign of $m$ means the image is inverted below the principal axis, which is always real for mirrors.</span>
+          <span class="hi-text">💡 ऋणात्मक चिन्ह दर्शाता है कि प्रतिबिंब मुख्य अक्ष के नीचे उल्टा व वास्तविक है।</span>
+        </div>
+        <div id="fb-5" class="feedback-msg"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Initialize KaTeX Auto-render
+    function renderMath() {
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError: false
+        });
+      }
+    }
+    document.addEventListener("DOMContentLoaded", renderMath);
+
+    // Language Switcher Logic
+    function setLanguage(lang) {
+      if (lang === 'hi') {
+        document.body.classList.remove('lang-english');
+        document.body.classList.add('lang-hindi');
+        document.getElementById('btnHi').classList.add('active');
+        document.getElementById('btnEn').classList.remove('active');
+        localStorage.setItem('nextsem_lang', 'hi');
+      } else {
+        document.body.classList.remove('lang-hindi');
+        document.body.classList.add('lang-english');
+        document.getElementById('btnEn').classList.add('active');
+        document.getElementById('btnHi').classList.remove('active');
+        localStorage.setItem('nextsem_lang', 'en');
+      }
+      renderMath();
+    }
+
+    // Initialize Language from localStorage
+    const savedLang = localStorage.getItem('nextsem_lang') || 'en';
+    setLanguage(savedLang);
+
+    // Theme Management
+    function initTheme() {
+      const savedTheme = localStorage.getItem('nextsem_theme') || 'dark';
+      const isLight = savedTheme === 'light';
+      if (isLight) {
+        document.body.classList.add('light-theme');
+        document.body.classList.add('light-mode');
+        document.getElementById('themeIcon').textContent = '🌙';
+        document.getElementById('themeLabel').textContent = 'Dark';
+      } else {
+        document.body.classList.remove('light-theme');
+        document.body.classList.remove('light-mode');
+        document.getElementById('themeIcon').textContent = '☀️';
+        document.getElementById('themeLabel').textContent = 'Light';
+      }
+    }
+
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      document.body.classList.toggle('light-mode', isLight);
+      const newTheme = isLight ? 'light' : 'dark';
+      localStorage.setItem('nextsem_theme', newTheme);
+      document.getElementById('themeIcon').textContent = isLight ? '🌙' : '☀️';
+      document.getElementById('themeLabel').textContent = isLight ? 'Dark' : 'Light';
+    }
+
+    document.getElementById('themeToggleBtn').addEventListener('click', toggleTheme);
+    initTheme();
+
+    // Fill in the blanks logic
+    function normalizeStr(str) {
+      return (str || '').toLowerCase().trim().replace(/[\s\-_]+/g, ' ');
+    }
+
+    function checkBlank(btn) {
+      const row = btn.closest('.interactive-row');
+      const input = row.querySelector('.blank-input');
+      const id = input.getAttribute('data-id');
+      const userVal = normalizeStr(input.value);
+      const acceptedAnswers = input.getAttribute('data-answers').split(',').map(normalizeStr);
+      const displayAnswer = input.getAttribute('data-display-answer');
+      const fb = document.getElementById('fb-' + id);
+
+      if (!userVal) {
+        fb.innerHTML = '⚠️ <span style="color: var(--accent-gold);">Please type an answer before checking / उत्तर लिखें।</span>';
+        return;
+      }
+
+      const isMatch = acceptedAnswers.some(ans => userVal.includes(ans) || ans.includes(userVal));
+
+      if (isMatch) {
+        input.classList.remove('incorrect');
+        input.classList.add('correct');
+        fb.className = 'feedback-msg correct';
+        fb.innerHTML = '✓ <strong>Correct! / सही उत्तर!</strong> <span style="margin-left: 6px;">Answer: <span class="answer-badge">' + displayAnswer + '</span></span>';
+      } else {
+        input.classList.remove('correct');
+        input.classList.add('incorrect');
+        fb.className = 'feedback-msg incorrect';
+        fb.innerHTML = '✗ <strong>Not quite / पुनः प्रयास करें।</strong> <span style="margin-left: 6px;">Correct Answer: <span class="answer-badge">' + displayAnswer + '</span></span>';
+      }
+
+      updateScore();
+    }
+
+    function toggleHint(hintId) {
+      const el = document.getElementById(hintId);
+      if (el) {
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    function checkAllBlanks() {
+      document.querySelectorAll('.btn-check').forEach(btn => btn.click());
+    }
+
+    function resetAllBlanks() {
+      document.querySelectorAll('.blank-input').forEach(input => {
+        input.value = '';
+        input.classList.remove('correct', 'incorrect');
+      });
+      document.querySelectorAll('.feedback-msg').forEach(fb => {
+        fb.innerHTML = '';
+        fb.className = 'feedback-msg';
+      });
+      document.querySelectorAll('.hint-drawer').forEach(hd => {
+        hd.style.display = 'none';
+      });
+      updateScore();
+    }
+
+    function updateScore() {
+      const inputs = document.querySelectorAll('.blank-input');
+      const correctInputs = document.querySelectorAll('.blank-input.correct');
+      const total = inputs.length;
+      const correct = correctInputs.length;
+      const pct = Math.round((correct / total) * 100);
+      const display = document.getElementById('scoreDisplay');
+      if (display) {
+        display.innerHTML = `<span>📊 Correct / सही: ${correct} / ${total}</span><span>Accuracy / सटीकता: ${pct}%</span>`;
+      }
+    }
+  </script>
+</body>
+</html>

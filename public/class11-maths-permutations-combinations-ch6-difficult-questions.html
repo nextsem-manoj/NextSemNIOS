@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 11 Maths Chapter 6: Permutations and Combinations — Exercise 6.2 (Advanced & Difficult Problems)</title>
+  <meta name="description" content="Master advanced level problems based on NCERT Class 11 Mathematics Chapter 6 Exercise 6.2 (Factorial Notation, Permutations, Diophantine & Prime Exponents) with interactive step-by-step solutions and instant feedback.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX for beautiful, fast Math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #070d1e;
+      --bg-card: #0e182e;
+      --bg-card-hover: #152342;
+      --bg-inner: #0a1122;
+      --bg-hud: rgba(14, 24, 46, 0.88);
+      --border-card: rgba(255, 255, 255, 0.1);
+      --border-glow: rgba(56, 189, 248, 0.35);
+
+      --brand-cyan: #38bdf8;
+      --brand-indigo: #6366f1;
+      --brand-purple: #a855f7;
+      --brand-gold: #fbbf24;
+      --brand-emerald: #10b981;
+      --brand-rose: #f43f5e;
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --color-correct: #10b981;
+      --color-wrong: #ef4444;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-inner: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.92);
+      --border-card: #e2e8f0;
+      --border-glow: rgba(56, 189, 248, 0.4);
+
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+    }
+
+    /* Top Navbar with Complete Breadcrumb */
+    .top-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--brand-cyan);
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-badge span {
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb-item {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .breadcrumb-item:hover {
+      color: var(--brand-cyan);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+    .breadcrumb-active {
+      color: var(--brand-gold);
+      font-weight: 700;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-icon {
+      background: var(--bg-inner);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-icon:hover {
+      border-color: var(--brand-cyan);
+      transform: translateY(-1px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1050px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(99, 102, 241, 0.18));
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--brand-cyan);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(to right, #ffffff, #93c5fd, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.light-theme .hero-banner {
+      background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%) !important;
+      border: 1.5px solid #bfdbfe !important;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08) !important;
+    }
+
+    body.light-theme .hero-badge {
+      background: #dbeafe !important;
+      color: #1d4ed8 !important;
+      border-color: #bfdbfe !important;
+    }
+
+    body.light-theme .hero-title {
+      background: linear-gradient(to right, #0f172a, #1e40af, #6b21a8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.light-theme .hero-subtitle {
+      color: #334155 !important;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 780px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .stat-pill {
+      background: var(--bg-hud);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 0.6rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .stat-pill strong {
+      color: var(--brand-cyan);
+      font-size: 1.1rem;
+    }
+
+    /* Section Header */
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin: 2.5rem 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.4em;
+      background: linear-gradient(to bottom, var(--brand-cyan), var(--brand-indigo));
+      border-radius: 4px;
+    }
+
+    /* Question Cards */
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .q-card:hover {
+      border-color: var(--border-glow);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.2rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .q-number-box {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .q-badge {
+      background: linear-gradient(135deg, var(--brand-indigo), var(--brand-purple));
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.03em;
+    }
+
+    .q-meta {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      background: var(--bg-inner);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-card);
+    }
+
+    .q-difficulty {
+      color: var(--brand-rose);
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .q-stem {
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .q-subproblem {
+      background: var(--bg-inner);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .sub-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--brand-cyan);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .interactive-box {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .input-ans {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-sm);
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
+      min-width: 140px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .input-ans:focus {
+      border-color: var(--brand-cyan);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    .btn-check {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-check:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .feedback-msg {
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+    }
+
+    .feedback-msg.correct {
+      color: var(--color-correct);
+    }
+
+    .feedback-msg.wrong {
+      color: var(--color-wrong);
+    }
+
+    /* Expandable Solution Block */
+    .solution-toggle {
+      margin-top: 1.25rem;
+      border-top: 1px dashed var(--border-card);
+      padding-top: 1rem;
+    }
+
+    .btn-toggle-sol {
+      background: none;
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle-sol:hover {
+      color: var(--brand-cyan);
+      border-color: var(--brand-cyan);
+    }
+
+    .solution-content {
+      display: none;
+      margin-top: 1rem;
+      background: var(--bg-inner);
+      border-left: 3px solid var(--brand-indigo);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .solution-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-item {
+      margin-bottom: 0.75rem;
+    }
+
+    .formula-tag {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #a5b4fc;
+      font-size: 0.8rem;
+      font-family: 'Fira Code', monospace;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin: 0.3rem 0;
+    }
+
+    /* Comparison Box (Original vs Advanced) */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 650px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .comp-box {
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-card);
+    }
+
+    .comp-original {
+      background: rgba(100, 116, 139, 0.1);
+      border-left: 3px solid var(--text-dim);
+    }
+
+    .comp-advanced {
+      background: rgba(56, 189, 248, 0.1);
+      border-left: 3px solid var(--brand-cyan);
+    }
+
+    .comp-title {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Key Takeaway Box */
+    .takeaway-card {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.05));
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .takeaway-title {
+      color: var(--brand-gold);
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Footer */
+    .page-footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-card);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Complete Breadcrumbs (User Rule Compliant) -->
+  <header class="top-navbar">
+    <div class="nav-left">
+      <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+
+      <!-- Desktop Breadcrumb Navigation Trail -->
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation" id="desktop-breadcrumbs">
+        <a href="/" class="breadcrumb-item">Home</a>
+        <span class="breadcrumb-separator">❯</span>
+        <a href="/?class=11" class="breadcrumb-item">Class 11</a>
+        <span class="breadcrumb-separator">❯</span>
+        <a href="/?class=11&subject=maths" class="breadcrumb-item">Mathematics</a>
+        <span class="breadcrumb-separator">❯</span>
+        <a href="/?class=11&subject=maths&chapter=6" class="breadcrumb-item">Ch 6: Permutations &amp; Combinations</a>
+        <span class="breadcrumb-separator">❯</span>
+        <span class="breadcrumb-item breadcrumb-active">Exercise 6.2 Advanced Questions</span>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <button class="btn-icon" id="theme-toggle" title="Toggle Light/Dark Theme">
+        <span id="theme-icon">🌙</span> <span id="theme-text">Dark</span>
+      </button>
+      <a href="/?class=11&subject=maths" class="btn-icon">
+        <span>← Back to Chapters</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Header -->
+    <section class="hero-banner">
+      <div class="hero-badge">⚡ Advanced Olympiad &amp; JEE Foundation Level</div>
+      <h1 class="hero-title">Factorial Algebra &amp; Permutations</h1>
+      <p class="hero-subtitle">
+        Challenging variations corresponding to NCERT Class 11 Chapter 6 Exercise 6.2 (Permutations &amp; Combinations). Dive into modular arithmetic, telescoping factorial series, and prime powers.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <span>Target Class:</span> <strong>Class 11 / JEE Prep</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Chapter:</span> <strong>Ch 6 (Ex 6.2 Equivalent)</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Difficulty:</span> <strong>Hard / Master Level</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Score:</span> <strong id="score-display">0 / 5 Solved</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Question 1 -->
+    <article class="q-card" id="q1">
+      <div class="q-header">
+        <div class="q-number-box">
+          <span class="q-badge">Question 1</span>
+          <span class="q-meta">Ref: Exercise 6.2 — Q1 (Factorial Arithmetic)</span>
+        </div>
+        <div class="q-difficulty">🔥 Hard • Number Theory</div>
+      </div>
+
+      <div class="q-stem">
+        Algebraic factorization &amp; Modular Divisibility with Factorials:
+      </div>
+
+      <!-- Subpart (i) -->
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (i): Simplify the exact value</span>
+          <span class="formula-tag">Factorization</span>
+        </div>
+        <p>Evaluate the exact integer value of:</p>
+        <div style="font-size: 1.15rem; margin: 0.6rem 0;">
+          $$\frac{100! - 99!}{98!} - \frac{99! - 98!}{97!}$$
+        </div>
+
+        <div class="interactive-box">
+          <input type="number" class="input-ans" id="ans-1-1" placeholder="Enter integer answer...">
+          <button class="btn-check" onclick="checkQ1_1()">Check Answer</button>
+          <span class="feedback-msg" id="fb-1-1"></span>
+        </div>
+      </div>
+
+      <!-- Subpart (ii) -->
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (ii): Modular Remainder</span>
+          <span class="formula-tag">Mod 15</span>
+        </div>
+        <p>Find the remainder when the following sum $S$ is divided by $15$:</p>
+        <div style="font-size: 1.15rem; margin: 0.6rem 0;">
+          $$S = 1! + 2! + 3! + 4! + 5! + \dots + 2026!$$
+        </div>
+
+        <div class="interactive-box">
+          <input type="number" class="input-ans" id="ans-1-2" placeholder="Remainder (0-14)...">
+          <button class="btn-check" onclick="checkQ1_2()">Check Answer</button>
+          <span class="feedback-msg" id="fb-1-2"></span>
+        </div>
+      </div>
+
+      <!-- Comparison with Original -->
+      <div class="comparison-grid">
+        <div class="comp-box comp-original">
+          <div class="comp-title">Textbook Exercise 6.2 Q1:</div>
+          Evaluate (i) $8!$ and (ii) $4! - 3!$
+        </div>
+        <div class="comp-box comp-advanced">
+          <div class="comp-title">Why this version is challenging:</div>
+          Tests difference of squares over factorial quotients and modular residue cutoff where $n! \equiv 0 \pmod{15}$ for $n \ge 5$.
+        </div>
+      </div>
+
+      <!-- Solution Toggle -->
+      <div class="solution-toggle">
+        <button class="btn-toggle-sol" onclick="toggleSolution('sol-1')">
+          <span>👁️ Show Step-by-Step Solution</span>
+        </button>
+        <div class="solution-content" id="sol-1">
+          <div class="step-item">
+            <strong>Part (i) Solution:</strong><br>
+            1. $\frac{100! - 99!}{98!} = \frac{99!(100 - 1)}{98!} = \frac{99 \times 98! \times 99}{98!} = 99^2$.<br>
+            2. $\frac{99! - 98!}{97!} = \frac{98!(99 - 1)}{97!} = \frac{98 \times 97! \times 98}{97!} = 98^2$.<br>
+            3. Difference: $99^2 - 98^2 = (99 - 98)(99 + 98) = 1 \times 197 = \mathbf{197}$.
+          </div>
+          <div class="step-item" style="margin-top: 1rem;">
+            <strong>Part (ii) Solution:</strong><br>
+            For any $n \ge 5$, $n! = n \times (n-1) \times \dots \times 5 \times 4 \times 3 \times 2 \times 1$. Since it contains factors $3 \times 5 = 15$, $n!$ is a multiple of $15$ for all $n \ge 5$.<br>
+            Hence $S \equiv 1! + 2! + 3! + 4! = 1 + 2 + 6 + 24 = 33 \pmod{15}$.<br>
+            Since $33 = 2 \times 15 + 3$, the **Remainder = $\mathbf{3}$**.
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Question 2 -->
+    <article class="q-card" id="q2">
+      <div class="q-header">
+        <div class="q-number-box">
+          <span class="q-badge">Question 2</span>
+          <span class="q-meta">Ref: Exercise 6.2 — Q2 (Factorial Equation)</span>
+        </div>
+        <div class="q-difficulty">🔥 Hard • Diophantine Equations</div>
+      </div>
+
+      <div class="q-stem">
+        Factorial Addition &amp; Non-Linear Properties:
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (i): Find integer pairs $(a, b)$</span>
+          <span class="formula-tag">Diophantine</span>
+        </div>
+        <p>Find all pairs of positive integers $(a, b)$ such that:</p>
+        <div style="font-size: 1.15rem; margin: 0.6rem 0;">
+          $$a! + b! = (a + b)!$$
+        </div>
+        <div class="interactive-box">
+          <button class="btn-check" onclick="checkQ2_1('(1,1)')">Pair: (1, 1)</button>
+          <button class="btn-check" style="background: var(--bg-card); border: 1px solid var(--border-card); color: var(--text-main);" onclick="checkQ2_1('none')">No solution</button>
+          <button class="btn-check" style="background: var(--bg-card); border: 1px solid var(--border-card); color: var(--text-main);" onclick="checkQ2_1('(2,2)')">Pair: (2, 2)</button>
+          <span class="feedback-msg" id="fb-2-1"></span>
+        </div>
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (ii): Consecutive Factorial Square</span>
+          <span class="formula-tag">Perfect Square</span>
+        </div>
+        <p>Find a positive integer $n$ such that $n! + (n+1)!$ is a perfect square $k^2$ ($k \in \mathbb{N}$).</p>
+        <div class="interactive-box">
+          <input type="number" class="input-ans" id="ans-2-2" placeholder="Value of n...">
+          <button class="btn-check" onclick="checkQ2_2()">Check Value of n</button>
+          <span class="feedback-msg" id="fb-2-2"></span>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comp-box comp-original">
+          <div class="comp-title">Textbook Exercise 6.2 Q2:</div>
+          Is $3! + 4! = 7!$ ? (Answer: No)
+        </div>
+        <div class="comp-box comp-advanced">
+          <div class="comp-title">Why this version is challenging:</div>
+          Asks whether ANY positive integers satisfy $a! + b! = (a+b)!$, requiring rigorous bounding proofs.
+        </div>
+      </div>
+
+      <div class="solution-toggle">
+        <button class="btn-toggle-sol" onclick="toggleSolution('sol-2')">
+          <span>👁️ Show Step-by-Step Solution</span>
+        </button>
+        <div class="solution-content" id="sol-2">
+          <div class="step-item">
+            <strong>Part (i) Solution:</strong><br>
+            Assume $1 \le a \le b$. Divide by $b!$: $\frac{a!}{b!} + 1 = \frac{(a+b)!}{b!} = (b+1)(b+2)\cdots(a+b)$.<br>
+            If $a = 1$: $1 + 1 = b + 1 \implies b = 1$. Thus $(1, 1)$ is a solution ($1! + 1! = 2 = 2!$).<br>
+            If $a \ge 2$: LHS $\le 1 + 1 = 2$, but RHS $\ge (2+1)(2+2) = 12 > 2$. Hence no other solutions exist.<br>
+            <strong>Answer: $(a, b) = (1, 1)$</strong>
+          </div>
+          <div class="step-item" style="margin-top: 1rem;">
+            <strong>Part (ii) Solution:</strong><br>
+            Factor out $n!$: $n! + (n+1)! = n!(1 + n + 1) = n!(n + 2)$.<br>
+            For $n = 4$: $4!(4 + 2) = 24 \times 6 = 144 = 12^2$.<br>
+            <strong>Answer: $n = \mathbf{4}$</strong>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Question 3 -->
+    <article class="q-card" id="q3">
+      <div class="q-header">
+        <div class="q-number-box">
+          <span class="q-badge">Question 3</span>
+          <span class="q-meta">Ref: Exercise 6.2 — Q3 (Factorial Quotient)</span>
+        </div>
+        <div class="q-difficulty">🔥 Hard • Legendre's Formula</div>
+      </div>
+
+      <div class="q-stem">
+        Even/Odd Factorial Splitting &amp; Prime Exponentiation:
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (i): Power of 2 Factor</span>
+          <span class="formula-tag">Double Factorials</span>
+        </div>
+        <p>If $\frac{(2n)!}{n! \cdot [1 \cdot 3 \cdot 5 \cdots (2n-1)]} = 2^k$, what is the value of $k$ in terms of $n$?</p>
+        <div class="interactive-box">
+          <button class="btn-check" onclick="checkQ3_1('n')">$k = n$</button>
+          <button class="btn-check" style="background: var(--bg-card); border: 1px solid var(--border-card); color: var(--text-main);" onclick="checkQ3_1('2n')">$k = 2n$</button>
+          <button class="btn-check" style="background: var(--bg-card); border: 1px solid var(--border-card); color: var(--text-main);" onclick="checkQ3_1('n-1')">$k = n-1$</button>
+          <span class="feedback-msg" id="fb-3-1"></span>
+        </div>
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (ii): Highest Power of 3 (Legendre's Formula)</span>
+          <span class="formula-tag">Exponent $E_3$</span>
+        </div>
+        <p>Find the highest power of $3$ that completely divides the central binomial coefficient $\frac{60!}{(30!)^2}$:</p>
+        <div class="interactive-box">
+          <input type="number" class="input-ans" id="ans-3-2" placeholder="Exponent of 3...">
+          <button class="btn-check" onclick="checkQ3_2()">Check Exponent</button>
+          <span class="feedback-msg" id="fb-3-2"></span>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comp-box comp-original">
+          <div class="comp-title">Textbook Exercise 6.2 Q3:</div>
+          Compute $\frac{8!}{6! \times 2!}$ (Answer: 28)
+        </div>
+        <div class="comp-box comp-advanced">
+          <div class="comp-title">Why this version is challenging:</div>
+          Generalizes to $(2n)! / (n!)^2$ and asks for prime factorization valuation $v_p(\binom{2n}{n})$ via Legendre's theorem.
+        </div>
+      </div>
+
+      <div class="solution-toggle">
+        <button class="btn-toggle-sol" onclick="toggleSolution('sol-3')">
+          <span>👁️ Show Step-by-Step Solution</span>
+        </button>
+        <div class="solution-content" id="sol-3">
+          <div class="step-item">
+            <strong>Part (i) Solution:</strong><br>
+            $(2n)! = [1 \cdot 3 \cdot 5 \cdots (2n-1)] \times [2 \cdot 4 \cdot 6 \cdots 2n] = [1 \cdot 3 \cdot 5 \cdots (2n-1)] \times 2^n(1 \cdot 2 \cdots n) = [1 \cdot 3 \cdot 5 \cdots (2n-1)] \cdot 2^n \cdot n!$.<br>
+            Dividing yields $2^n$, so $k = \mathbf{n}$.
+          </div>
+          <div class="step-item" style="margin-top: 1rem;">
+            <strong>Part (ii) Solution:</strong><br>
+            By Legendre's formula $E_3(N!) = \sum \lfloor N/3^k \rfloor$:<br>
+            - $E_3(60!) = \lfloor 60/3 \rfloor + \lfloor 60/9 \rfloor + \lfloor 60/27 \rfloor = 20 + 6 + 2 = 28$.<br>
+            - $E_3(30!) = \lfloor 30/3 \rfloor + \lfloor 30/9 \rfloor + \lfloor 30/27 \rfloor = 10 + 3 + 1 = 14$.<br>
+            - $E_3\left(\frac{60!}{(30!)^2}\right) = 28 - 2(14) = \mathbf{0}$.
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Question 4 -->
+    <article class="q-card" id="q4">
+      <div class="q-header">
+        <div class="q-number-box">
+          <span class="q-badge">Question 4</span>
+          <span class="q-meta">Ref: Exercise 6.2 — Q4 (Reciprocal Equation)</span>
+        </div>
+        <div class="q-difficulty">🔥 Hard • Telescoping Series</div>
+      </div>
+
+      <div class="q-stem">
+        Weighted Reciprocal Factorials &amp; Sums:
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (i): Solve for $x$</span>
+          <span class="formula-tag">Linear Equation</span>
+        </div>
+        <p>If $\frac{1}{7!} + \frac{2}{8!} + \frac{3}{9!} = \frac{x}{9!}$, find the integer value of $x$:</p>
+        <div class="interactive-box">
+          <input type="number" class="input-ans" id="ans-4-1" placeholder="Enter x...">
+          <button class="btn-check" onclick="checkQ4_1()">Check x</button>
+          <span class="feedback-msg" id="fb-4-1"></span>
+        </div>
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (ii): Closed Form of $\sum_{r=1}^n \frac{r}{(r+1)!}$</span>
+          <span class="formula-tag">Telescoping</span>
+        </div>
+        <p>Simplify $S_n = \frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \dots + \frac{n}{(n+1)!}$:</p>
+        <div class="interactive-box">
+          <button class="btn-check" onclick="checkQ4_2('correct')">$1 - \frac{1}{(n+1)!}$</button>
+          <button class="btn-check" style="background: var(--bg-card); border: 1px solid var(--border-card); color: var(--text-main);" onclick="checkQ4_2('wrong1')">$1 - \frac{1}{n!}$</button>
+          <button class="btn-check" style="background: var(--bg-card); border: 1px solid var(--border-card); color: var(--text-main);" onclick="checkQ4_2('wrong2')">$\frac{n}{(n+1)!}$</button>
+          <span class="feedback-msg" id="fb-4-2"></span>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comp-box comp-original">
+          <div class="comp-title">Textbook Exercise 6.2 Q4:</div>
+          If $\frac{1}{6!} + \frac{1}{7!} = \frac{x}{8!}$, find $x$ (Answer: 64)
+        </div>
+        <div class="comp-box comp-advanced">
+          <div class="comp-title">Why this version is challenging:</div>
+          Introduces variable multipliers in numerators $\frac{r}{(r+1)!}$ which telescope into $\frac{1}{r!} - \frac{1}{(r+1)!}$.
+        </div>
+      </div>
+
+      <div class="solution-toggle">
+        <button class="btn-toggle-sol" onclick="toggleSolution('sol-4')">
+          <span>👁️ Show Step-by-Step Solution</span>
+        </button>
+        <div class="solution-content" id="sol-4">
+          <div class="step-item">
+            <strong>Part (i) Solution:</strong><br>
+            Multiply through by $9!$:<br>
+            $x = 9 \times 8 \times 1 + 9 \times 2 + 3 = 72 + 18 + 3 = \mathbf{93}$.
+          </div>
+          <div class="step-item" style="margin-top: 1rem;">
+            <strong>Part (ii) Solution:</strong><br>
+            $\frac{r}{(r+1)!} = \frac{(r+1)-1}{(r+1)!} = \frac{1}{r!} - \frac{1}{(r+1)!}$.<br>
+            Expanding $S_n$: $(\frac{1}{1!} - \frac{1}{2!}) + (\frac{1}{2!} - \frac{1}{3!}) + \dots + (\frac{1}{n!} - \frac{1}{(n+1)!}) = \mathbf{1 - \frac{1}{(n+1)!}}$.
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Question 5 -->
+    <article class="q-card" id="q5">
+      <div class="q-header">
+        <div class="q-number-box">
+          <span class="q-badge">Question 5</span>
+          <span class="q-meta">Ref: Exercise 6.2 — Q5 (Permutation Ratios)</span>
+        </div>
+        <div class="q-difficulty">🔥 Hard • Polynomial Factorial Equations</div>
+      </div>
+
+      <div class="q-stem">
+        Solving Non-linear Equations with Factorials:
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (i): Solve for $n$</span>
+          <span class="formula-tag">Ratio Proportion</span>
+        </div>
+        <p>If $\frac{(2n)!}{3!(2n-3)!} : \frac{n!}{2!(n-2)!} = 44 : 3$, find the natural number $n$:</p>
+        <div class="interactive-box">
+          <input type="number" class="input-ans" id="ans-5-1" placeholder="Value of n...">
+          <button class="btn-check" onclick="checkQ5_1()">Check n</button>
+          <span class="feedback-msg" id="fb-5-1"></span>
+        </div>
+      </div>
+
+      <div class="q-subproblem">
+        <div class="sub-title">
+          <span>Part (ii): Quadratic Reduction</span>
+          <span class="formula-tag">Difference of Products</span>
+        </div>
+        <p>If $\frac{(n+2)!}{n!} - \frac{(n+1)!}{(n-1)!} = 28$, find $n$ ($n \in \mathbb{N}$):</p>
+        <div class="interactive-box">
+          <input type="number" class="input-ans" id="ans-5-2" placeholder="Value of n...">
+          <button class="btn-check" onclick="checkQ5_2()">Check n</button>
+          <span class="feedback-msg" id="fb-5-2"></span>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comp-box comp-original">
+          <div class="comp-title">Textbook Exercise 6.2 Q5:</div>
+          Evaluate $\frac{n!}{(n-r)!}$ for $n=6, r=2$ and $n=9, r=5$.
+        </div>
+        <div class="comp-box comp-advanced">
+          <div class="comp-title">Why this version is challenging:</div>
+          Instead of plug-in values, solves higher-order algebraic ratios that reduce quadratics and cancel $(n-1)$ factors.
+        </div>
+      </div>
+
+      <div class="solution-toggle">
+        <button class="btn-toggle-sol" onclick="toggleSolution('sol-5')">
+          <span>👁️ Show Step-by-Step Solution</span>
+        </button>
+        <div class="solution-content" id="sol-5">
+          <div class="step-item">
+            <strong>Part (i) Solution:</strong><br>
+            $\frac{\frac{2n(2n-1)(2n-2)}{6}}{\frac{n(n-1)}{2}} = \frac{44}{3} \implies \frac{4n(2n-1)(n-1)}{6} \times \frac{2}{n(n-1)} = \frac{44}{3}$.<br>
+            $\frac{4(2n-1)}{3} = \frac{44}{3} \implies 2n - 1 = 11 \implies 2n = 12 \implies \mathbf{n = 6}$.
+          </div>
+          <div class="step-item" style="margin-top: 1rem;">
+            <strong>Part (ii) Solution:</strong><br>
+            $(n+2)(n+1) - (n+1)n = 28 \implies (n^2 + 3n + 2) - (n^2 + n) = 28 \implies 2n + 2 = 28 \implies 2n = 26 \implies \mathbf{n = 13}$.
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Key Takeaway -->
+    <div class="takeaway-card">
+      <div class="takeaway-title">💡 Master Formula Cheatsheet for Factorials</div>
+      <ul style="padding-left: 1.25rem; color: var(--text-main); line-height: 1.8;">
+        <li><strong>Factorial Definition:</strong> $n! = n \times (n-1)!$ with $0! = 1$.</li>
+        <li><strong>Telescoping Splitting:</strong> $\frac{r}{(r+1)!} = \frac{1}{r!} - \frac{1}{(r+1)!}$ and $r \cdot r! = (r+1)! - r!$.</li>
+        <li><strong>Legendre's Formula:</strong> Highest power of prime $p$ in $n!$ is $E_p(n!) = \sum_{k=1}^\infty \lfloor \frac{n}{p^k} \rfloor$.</li>
+        <li><strong>Double Factorial / Even-Odd Split:</strong> $(2n)! = 2^n \cdot n! \cdot [1 \cdot 3 \cdot 5 \cdots (2n-1)]$.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>NCERT Solutions &amp; Advanced Practice Bank &copy; Nextsem Academy. Built for Conceptual Clarity.</p>
+  </footer>
+
+  <script>
+    // Theme toggle & persistent sync
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      const isDarkPref = localStorage.getItem('nextsem_dark_mode');
+      if (savedTheme === 'light' || isDarkPref === 'false') {
+        document.body.classList.add('light-theme');
+        if (themeIcon) themeIcon.textContent = '☀️';
+        if (themeText) themeText.textContent = 'Light';
+      }
+    } catch (e) {}
+
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        if (themeIcon) themeIcon.textContent = isLight ? '☀️' : '🌙';
+        if (themeText) themeText.textContent = isLight ? 'Light' : 'Dark';
+        try {
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+          localStorage.setItem('nextsem_dark_mode', (!isLight).toString());
+        } catch (e) {}
+      });
+    }
+
+    // Score Tracking
+    let solvedCount = 0;
+    const solvedSet = new Set();
+
+    function markSolved(id) {
+      if (!solvedSet.has(id)) {
+        solvedSet.add(id);
+        solvedCount = solvedSet.size;
+        document.getElementById('score-display').textContent = `${solvedCount} / 5 Mastered`;
+        confetti({
+          particleCount: 50,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      }
+    }
+
+    // Toggle solution display
+    function toggleSolution(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('active');
+    }
+
+    // Question Checkers
+    function checkQ1_1() {
+      const val = document.getElementById('ans-1-1').value.trim();
+      const fb = document.getElementById('fb-1-1');
+      if (val === '197') {
+        fb.textContent = '✓ Correct! (99² - 98² = 197)';
+        fb.className = 'feedback-msg correct';
+        markSolved('q1');
+      } else {
+        fb.textContent = '✗ Incorrect. Factor out 99! and 98! first.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ1_2() {
+      const val = document.getElementById('ans-1-2').value.trim();
+      const fb = document.getElementById('fb-1-2');
+      if (val === '3') {
+        fb.textContent = '✓ Correct! 33 mod 15 = 3.';
+        fb.className = 'feedback-msg correct';
+        markSolved('q1');
+      } else {
+        fb.textContent = '✗ Incorrect. Note that n! is divisible by 15 for n ≥ 5.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ2_1(choice) {
+      const fb = document.getElementById('fb-2-1');
+      if (choice === '(1,1)') {
+        fb.textContent = '✓ Correct! (1, 1) is the only solution.';
+        fb.className = 'feedback-msg correct';
+        markSolved('q2');
+      } else {
+        fb.textContent = '✗ Incorrect. Test a=1, b=1: 1! + 1! = 2 = 2!.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ2_2() {
+      const val = document.getElementById('ans-2-2').value.trim();
+      const fb = document.getElementById('fb-2-2');
+      if (val === '4') {
+        fb.textContent = '✓ Correct! 4!(4+2) = 24 × 6 = 144 = 12².';
+        fb.className = 'feedback-msg correct';
+        markSolved('q2');
+      } else {
+        fb.textContent = '✗ Try smaller values like n = 4.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ3_1(choice) {
+      const fb = document.getElementById('fb-3-1');
+      if (choice === 'n') {
+        fb.textContent = '✓ Correct! k = n (from 2ⁿ factoring).';
+        fb.className = 'feedback-msg correct';
+        markSolved('q3');
+      } else {
+        fb.textContent = '✗ Incorrect. 2 is factored from n even numbers.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ3_2() {
+      const val = document.getElementById('ans-3-2').value.trim();
+      const fb = document.getElementById('fb-3-2');
+      if (val === '0') {
+        fb.textContent = '✓ Correct! E₃(60!) = 28 and 2 × E₃(30!) = 28, so 28 - 28 = 0.';
+        fb.className = 'feedback-msg correct';
+        markSolved('q3');
+      } else {
+        fb.textContent = '✗ Apply Legendre\'s formula: 20+6+2 = 28 for 60!.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ4_1() {
+      const val = document.getElementById('ans-4-1').value.trim();
+      const fb = document.getElementById('fb-4-1');
+      if (val === '93') {
+        fb.textContent = '✓ Correct! 72 + 18 + 3 = 93.';
+        fb.className = 'feedback-msg correct';
+        markSolved('q4');
+      } else {
+        fb.textContent = '✗ Multiply both sides by 9!.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ4_2(choice) {
+      const fb = document.getElementById('fb-4-2');
+      if (choice === 'correct') {
+        fb.textContent = '✓ Correct! Telescopes to 1 - 1/(n+1)!.';
+        fb.className = 'feedback-msg correct';
+        markSolved('q4');
+      } else {
+        fb.textContent = '✗ Write r/(r+1)! as 1/r! - 1/(r+1)!.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ5_1() {
+      const val = document.getElementById('ans-5-1').value.trim();
+      const fb = document.getElementById('fb-5-1');
+      if (val === '6') {
+        fb.textContent = '✓ Correct! n = 6.';
+        fb.className = 'feedback-msg correct';
+        markSolved('q5');
+      } else {
+        fb.textContent = '✗ Expand and cancel (n-1): 4(2n-1)/3 = 44/3.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    function checkQ5_2() {
+      const val = document.getElementById('ans-5-2').value.trim();
+      const fb = document.getElementById('fb-5-2');
+      if (val === '13') {
+        fb.textContent = '✓ Correct! 2n + 2 = 28 ⇒ n = 13.';
+        fb.className = 'feedback-msg correct';
+        markSolved('q5');
+      } else {
+        fb.textContent = '✗ Expand: (n+2)(n+1) - (n+1)n = 2n + 2 = 28.';
+        fb.className = 'feedback-msg wrong';
+      }
+    }
+
+    // Auto-render math with KaTeX on load
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof renderMathInElement !== 'undefined') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError : false
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 7 Maths Ganita Prakash Ch 5: Parallel & Intersecting Lines — Interactive MCQs & Lab (Bilingual)</title>
+  <meta name="description" content="NCERT Class 7 Maths Ganita Prakash Chapter 5: Parallel and Intersecting Lines (समांतर और प्रतिच्छेदी रेखाएँ) — Interactive geometry lab, angles rules, transversal properties, and 8 high-yield MCQs with instant feedback.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --accent-green: #04AA6D;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-body); color: var(--text-main); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; line-height: 1.6; padding-bottom: 90px; }
+    .top-nav { position: sticky; top: 0; background: rgba(6, 12, 24, 0.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+    .breadcrumb-trail { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+    .breadcrumb-trail a { color: #38bdf8; text-decoration: none; font-weight: 700; }
+    .action-pill-btn { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); color: var(--text-main); padding: 6px 14px; border-radius: 9999px; font-size: 0.82rem; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .action-pill-btn.primary { background: linear-gradient(135deg, #10b981, #059669); color: #ffffff; border: none; }
+    .container { max-width: 850px; margin: 24px auto; padding: 0 16px; }
+    .hero-card { background: linear-gradient(135deg, #0c1328 0%, #1e1b4b 100%); border: 1.5px solid rgba(56, 189, 248, 0.3); border-radius: 20px; padding: 28px 24px; margin-bottom: 24px; text-align: center; }
+    .badge-pill { display: inline-block; padding: 4px 12px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; border-radius: 9999px; font-weight: 800; font-size: 0.75rem; margin-bottom: 12px; }
+    h1 { font-size: 1.8rem; font-weight: 900; margin-bottom: 10px; color: #ffffff; }
+    .score-card { background: rgba(56, 189, 248, 0.1); border: 1.5px solid #38bdf8; border-radius: 16px; padding: 16px; margin: 20px 0; display: flex; justify-content: space-around; text-align: center; }
+    .score-num { font-size: 1.6rem; font-weight: 900; color: #38bdf8; }
+    .score-lbl { font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; }
+    .q-card { background: var(--bg-card); border: 1.5px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
+    .q-num { font-size: 0.8rem; font-weight: 800; color: var(--accent-sky); margin-bottom: 6px; }
+    .q-text { font-size: 1.02rem; font-weight: 700; margin-bottom: 14px; }
+    .opt-grid { display: flex; flex-direction: column; gap: 8px; }
+    .opt-btn { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 10px; padding: 12px 16px; color: var(--text-main); font-size: 0.92rem; cursor: pointer; text-align: left; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+    .opt-btn:hover { background: rgba(255, 255, 255, 0.1); }
+    .opt-btn.correct { background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #34d399; font-weight: 800; }
+    .opt-btn.wrong { background: rgba(244, 63, 94, 0.2); border-color: #f43f5e; color: #fb7185; }
+    .explanation { margin-top: 12px; padding: 12px; border-radius: 8px; background: rgba(56, 189, 248, 0.08); border-left: 4px solid #38bdf8; font-size: 0.88rem; display: none; }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="breadcrumb-trail">
+      <a href="/">🏠 Home</a> <span>❯</span>
+      <a href="/?class=7">Class 7</a> <span>❯</span>
+      <a href="/?class=7&subject=maths">Ganita Prakash</a> <span>❯</span>
+      <span>Ch 5: Parallel & Intersecting Lines</span>
+    </div>
+    <div class="nav-actions">
+      <button class="action-pill-btn" onclick="document.body.classList.toggle('light-theme')">🌓 Theme</button>
+      <a href="/?class=7&subject=maths&chapter=5&view=pdf" class="action-pill-btn primary">📖 Open Chapter PDF</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero-card">
+      <span class="badge-pill">NCERT CLASS 7 GANITA PRAKASH • CHAPTER 5</span>
+      <h1>Parallel & Intersecting Lines (समांतर और प्रतिच्छेदी रेखाएँ)</h1>
+      <p style="color: var(--text-muted)">Angles, Transversals, Vertically Opposite Angles, & Parallelism Tests</p>
+      
+      <div class="score-card">
+        <div><div class="score-num" id="correctScore">0</div><div class="score-lbl">Correct</div></div>
+        <div><div class="score-num" id="totalAttempted">0 / 8</div><div class="score-lbl">Completed</div></div>
+        <div><div class="score-num" id="accuracy">0%</div><div class="score-lbl">Accuracy</div></div>
+      </div>
+    </div>
+
+    <div id="questionsContainer"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        q: "1. When two straight lines intersect each other, which angles are ALWAYS equal? (जब दो सीधी रेखाएँ प्रतिच्छेद करती हैं, तो कौन से कोण सदैव बराबर होते हैं?)",
+        opts: ["Adjacent angles (आसन्न कोण)", "Vertically opposite angles (शीर्षाभिमुख कोण)", "Supplementary angles (संपूरक कोण)", "Complementary angles (पूरक कोण)"],
+        ans: 1,
+        exp: "Vertically opposite angles formed by two intersecting lines are always equal to each other."
+      },
+      {
+        q: "2. If two intersecting lines form four equal angles, each angle must measure: (यदि दो प्रतिच्छेदी रेखाएँ चार बराबर कोण बनाती हैं, तो प्रत्येक कोण का माप क्या होगा?)",
+        opts: ["45°", "60°", "90°", "180°"],
+        ans: 2,
+        exp: "The sum of all four angles around a point is 360°. Since all four are equal: 360° / 4 = 90°. The lines are perpendicular."
+      },
+      {
+        q: "3. If a transversal intersects two parallel lines, which of the following angle pairs are EQUAL? (यदि तिर्यक रेखा दो समांतर रेखाओं को काटती है, तो कौन सा युग्म बराबर होता है?)",
+        opts: ["Alternate interior angles (एकांतर अंतः कोण)", "Corresponding angles (संगत कोण)", "Alternate exterior angles (एकांतर बाह्य कोण)", "All of the above (उपर्युक्त सभी)"],
+        ans: 3,
+        exp: "When two lines are parallel, corresponding angles, alternate interior angles, and alternate exterior angles are all equal!"
+      },
+      {
+        q: "4. If two parallel lines are cut by a transversal, the sum of interior angles on the same side of the transversal is: (तिर्यक रेखा के एक ही ओर के अंतः कोणों का योग कितना होता है?)",
+        opts: ["90°", "180°", "270°", "360°"],
+        ans: 1,
+        exp: "Consecutive interior angles on the same side of the transversal are supplementary, summing to 180°."
+      },
+      {
+        q: "5. In two parallel lines cut by a transversal, if one interior angle is 70°, what is the measure of the alternate interior angle? (यदि एक अंतः कोण 70° है, तो एकांतर अंतः कोण का मान क्या होगा?)",
+        opts: ["110°", "70°", "90°", "20°"],
+        ans: 1,
+        exp: "Alternate interior angles between parallel lines are equal, so it must also be 70°."
+      },
+      {
+        q: "6. Can two straight lines intersect at more than one point on a flat plane? (क्या दो सीधी रेखाएँ एक समतल पर एक से अधिक बिंदुओं पर प्रतिच्छेद कर सकती हैं?)",
+        opts: ["Yes, at two points", "No, at most at one point", "Yes, at three points", "Only if lines are curved"],
+        ans: 1,
+        exp: "Two distinct straight lines can intersect at at most ONE point on a plane."
+      },
+      {
+        q: "7. Two lines in the same plane that never meet no matter how far they are extended are called: (वे रेखाएँ जो कभी नहीं मिलतीं, क्या कहलाती हैं?)",
+        opts: ["Intersecting lines", "Perpendicular lines", "Parallel lines (समांतर रेखाएँ)", "Curved lines"],
+        ans: 2,
+        exp: "Parallel lines maintain a constant perpendicular distance and never meet in a plane."
+      },
+      {
+        q: "8. If a pair of alternate interior angles is found to be 75° and 75°, what can you conclude about the two lines? (यदि एकांतर अंतः कोण 75° और 75° हैं, तो रेखाओं के बारे में क्या निष्कर्ष निकलता है?)",
+        opts: ["The lines are perpendicular", "The lines are parallel (रेखाएँ समांतर हैं)", "The lines intersect at 90°", "No conclusion can be made"],
+        ans: 1,
+        exp: "If a transversal intersects two lines such that a pair of alternate interior angles is equal, then the two lines are parallel."
+      }
+    ];
+
+    let correctCount = 0;
+    let answeredSet = new Set();
+
+    function renderQuestions() {
+      const c = document.getElementById('questionsContainer');
+      c.innerHTML = '';
+      questions.forEach((item, idx) => {
+        const qCard = document.createElement('div');
+        qCard.className = 'q-card';
+        qCard.id = 'qc_' + idx;
+
+        const qNum = document.createElement('div');
+        qNum.className = 'q-num';
+        qNum.innerText = 'PROBLEM ' + (idx + 1) + ' OF ' + questions.length;
+
+        const qText = document.createElement('div');
+        qText.className = 'q-text';
+        qText.innerText = item.q;
+
+        const optGrid = document.createElement('div');
+        optGrid.className = 'opt-grid';
+
+        item.opts.forEach((opt, optIdx) => {
+          const btn = document.createElement('button');
+          btn.className = 'opt-btn';
+          btn.innerHTML = '<span>' + String.fromCharCode(65 + optIdx) + '. ' + opt + '</span>';
+          btn.onclick = () => checkAnswer(idx, optIdx, btn);
+          optGrid.appendChild(btn);
+        });
+
+        const exp = document.createElement('div');
+        exp.className = 'explanation';
+        exp.id = 'exp_' + idx;
+        exp.innerHTML = '<strong>💡 Theorem & Solution:</strong><br>' + item.exp;
+
+        qCard.appendChild(qNum);
+        qCard.appendChild(qText);
+        qCard.appendChild(optGrid);
+        qCard.appendChild(exp);
+        c.appendChild(qCard);
+      });
+    }
+
+    function checkAnswer(qIdx, optIdx, btn) {
+      if (answeredSet.has(qIdx)) return;
+      answeredSet.add(qIdx);
+
+      const qCard = document.getElementById('qc_' + qIdx);
+      const allBtns = qCard.querySelectorAll('.opt-btn');
+      const correctIdx = questions[qIdx].ans;
+      const exp = document.getElementById('exp_' + qIdx);
+
+      if (optIdx === correctIdx) {
+        btn.classList.add('correct');
+        btn.innerHTML += ' <span>✓ Correct!</span>';
+        correctCount++;
+        confetti({ particleCount: 40, spread: 60, origin: { y: 0.8 } });
+      } else {
+        btn.classList.add('wrong');
+        btn.innerHTML += ' <span>✗ Your Choice</span>';
+        allBtns[correctIdx].classList.add('correct');
+        allBtns[correctIdx].innerHTML += ' <span>✓ Correct Answer</span>';
+      }
+
+      exp.style.display = 'block';
+      document.getElementById('correctScore').innerText = correctCount;
+      document.getElementById('totalAttempted').innerText = answeredSet.size + ' / ' + questions.length;
+      document.getElementById('accuracy').innerText = Math.round((correctCount / answeredSet.size) * 100) + '%';
+    }
+
+    renderQuestions();
+  </script>
+</body>
+</html>

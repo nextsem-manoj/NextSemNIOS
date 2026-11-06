@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 3 Maths Ch 6: House of Hundreds – I (सैकड़ों का घर - I) Worksheet | StudyGuide by Nextsem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #060e1a;
+      --card-bg: #0c1a2e;
+      --card-border: rgba(14, 165, 233, 0.25);
+      --text: #f0f9ff;
+      --text-muted: #94a3b8;
+      --accent: #0ea5e9;
+      --accent-glow: rgba(14, 165, 233, 0.35);
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --input-bg: #081426;
+      --input-border: #1e3a5f;
+    }
+    body.light {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: rgba(14, 165, 233, 0.2);
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --accent: #0284c7;
+      --accent-glow: rgba(2, 132, 199, 0.15);
+      --input-bg: #f1f5f9;
+      --input-border: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+      padding-bottom: 5rem;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .header-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(6, 14, 26, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    body.light .header-bar {
+      background: rgba(255, 255, 255, 0.85);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0c4a6e 100%);
+      border-radius: 20px;
+      padding: 24px;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::after {
+      content: '🏛️';
+      position: absolute;
+      right: 15px;
+      bottom: -15px;
+      font-size: 5.5rem;
+      opacity: 0.18;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--accent);
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .hindi-text {
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+    body.light .hindi-text {
+      color: #0369a1;
+    }
+    .pill-btn {
+      background: rgba(14, 165, 233, 0.15);
+      border: 1.5px solid var(--accent);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: var(--accent);
+      color: #041226;
+      box-shadow: 0 0 14px var(--accent-glow);
+    }
+    .number-box {
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1rem;
+      width: 90px;
+      text-align: center;
+    }
+    .number-box:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .tile-grid {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    .tile-step {
+      min-width: 50px;
+      height: 50px;
+      background: var(--input-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    .tile-step.empty {
+      border: 2px dashed var(--accent);
+      background: rgba(14, 165, 233, 0.08);
+    }
+    .tile-step input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      text-align: center;
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+    .tile-step input:focus {
+      outline: none;
+    }
+    .action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .check-btn {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .feedback {
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: none;
+    }
+    .feedback.correct {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--success);
+    }
+    .feedback.incorrect {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--danger);
+    }
+    .flag-game-box {
+      background: rgba(2, 132, 199, 0.1);
+      border: 2px dashed #0284c7;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .number-line-strip {
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      margin: 15px 0;
+    }
+    .number-line-strip::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 50%;
+      height: 3px;
+      background: var(--accent);
+      z-index: 1;
+    }
+    .line-tick {
+      position: relative;
+      z-index: 2;
+      background: var(--card-bg);
+      border: 2px solid var(--accent);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.72rem;
+    }
+    .building-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 4px;
+      max-width: 500px;
+      margin: 10px auto;
+    }
+    .building-cell {
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .building-cell.shaded {
+      background: #f59e0b;
+      color: #041226;
+      font-weight: 900;
+    }
+    .building-cell.delivered {
+      background: #10b981;
+      color: #ffffff;
+      font-weight: 900;
+    }
+    @media print {
+      .header-bar, .check-btn, .pill-btn { display: none !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .card { border: 1px solid #000 !important; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <div class="header-bar">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <a href="/?class=3&subject=c3-maths" style="text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 0.9rem;">
+        <span>←</span> <span>Class 3 Maths</span>
+      </a>
+      <span style="opacity: 0.4;">|</span>
+      <span style="font-weight: 900; font-size: 0.9rem; color: var(--accent);">Chapter 6 Worksheet</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <button class="pill-btn" onclick="toggleLang()" id="langToggle">हिंदी / ENG</button>
+      <button class="pill-btn" onclick="toggleTheme()" id="themeToggle">🌓 Mode</button>
+      <button class="pill-btn" onclick="window.print()">🖨️ Print</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="badge">NCERT Maths Mela • NEP 2026 Edition</div>
+      <h1 style="font-size: 1.65rem; font-weight: 900; margin-bottom: 6px;">
+        Chapter 6: House of Hundreds – I
+      </h1>
+      <div style="font-size: 1.05rem; font-weight: 700; color: #bae6fd; margin-bottom: 10px;">
+        अध्याय 6: सैकड़ों का घर – भाग 1 (201 से 500 तक की संख्याएँ)
+      </div>
+      <p style="font-size: 0.85rem; opacity: 0.95; max-width: 650px;">
+        Join Ajji, Teji, Jojo, and Farooq Chacha at the Mela! Master 3-digit numbers, place value (Hundreds, Tens, Ones), number lines, apartment grids, and sweet box packing.
+      </p>
+    </div>
+
+    <!-- Activity 1: Torans, Bangles & Toffees at the Mela (Pages 64-65) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🎪</span> <span>Activity 1: Mela Torans, Bangles &amp; Toffees (मेले की तोरण, चूड़ियाँ और टॉफियाँ)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Ajji, Teji, and Jojo arrive at the mela and count items beyond 200 in groups of 10s and 100s.
+        <br><span class="hindi-text">अज्जी, तेजी और जोजो मेले में 200 से आगे की संख्याएँ 10-10 और 100-100 के समूहों में गिनते हैं।</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 14px;">
+        <!-- Q1: Torans -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.84rem; font-weight: 800; margin-bottom: 6px;">
+            1. Total Triangles in Torans: 200 and 50 more = ?
+            <br><span class="hindi-text">तोरण में कुल त्रिभुज: 200 से 50 अधिक = ?</span>
+          </div>
+          <input type="number" id="q1_toran" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_q1_toran"></span>
+        </div>
+
+        <!-- Q2: Bangles -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.84rem; font-weight: 800; margin-bottom: 6px;">
+            2. Total Bangles: 200 and 80 more = ?
+            <br><span class="hindi-text">कुल चूड़ियाँ: 200 और 80 अधिक = ?</span>
+          </div>
+          <input type="number" id="q1_bangles" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_q1_bangles"></span>
+        </div>
+
+        <!-- Q3: Jojo's Toffees -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.84rem; font-weight: 800; margin-bottom: 6px;">
+            3. Jojo has 298 toffees. +1 more = 299. +1 more = ?
+            <br><span class="hindi-text">298 + 1 = 299; 299 + 1 = ?</span>
+          </div>
+          <input type="number" id="q1_toffees" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_q1_toffees"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Textbook Pages 64–65</span>
+        <button class="check-btn" onclick="checkActivity1()">Check Answers ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 2: Jojo's Jumping Tiles & Number Line (Pages 66-67) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🐸</span> <span>Activity 2: Jojo's Tiled Path Jump (टाइल वाले रास्ते पर छलाँग)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Jojo jumps on a tiled path in the mela. Fill in the missing numbers on the empty tiles!
+        <br><span class="hindi-text">जोजो मेले में टाइल वाले रास्ते पर कूद रहा है। खाली टाइलों में सही संख्या भरें!</span>
+      </p>
+
+      <!-- Path 1 -->
+      <div style="margin-bottom: 12px;">
+        <div style="font-size: 0.82rem; font-weight: 800; margin-bottom: 4px;">Path A (211 to 216):</div>
+        <div class="tile-grid">
+          <div class="tile-step">211</div>
+          <div class="tile-step">212</div>
+          <div class="tile-step empty"><input type="number" id="tile_a1" placeholder="?"></div>
+          <div class="tile-step empty"><input type="number" id="tile_a2" placeholder="?"></div>
+          <div class="tile-step empty"><input type="number" id="tile_a3" placeholder="?"></div>
+          <div class="tile-step">216</div>
+        </div>
+      </div>
+
+      <!-- Path B -->
+      <div style="margin-bottom: 12px;">
+        <div style="font-size: 0.82rem; font-weight: 800; margin-bottom: 4px;">Path B (294 to 300):</div>
+        <div class="tile-grid">
+          <div class="tile-step">294</div>
+          <div class="tile-step">295</div>
+          <div class="tile-step empty"><input type="number" id="tile_b1" placeholder="?"></div>
+          <div class="tile-step empty"><input type="number" id="tile_b2" placeholder="?"></div>
+          <div class="tile-step empty"><input type="number" id="tile_b3" placeholder="?"></div>
+          <div class="tile-step empty"><input type="number" id="tile_b4" placeholder="?"></div>
+          <div class="tile-step">300</div>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span class="feedback" id="fb_tiles"></span>
+        <button class="check-btn" onclick="checkTiles()">Verify Tiles ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 3: Interactive Flag Guessing Game (Page 69) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🚩</span> <span>Activity 3: The Secret Flag Game (झंडा खेल: 200 से 210 के बीच की संख्या)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Teji has thought of a secret number between 200 and 210. Guess it! The flag points RIGHT (👉) if the number is greater, or LEFT (👈) if it is smaller!
+        <br><span class="hindi-text">तेजी ने 200 से 210 के बीच एक गुप्त संख्या सोची है। झंडे के इशारे से सही संख्या पहचानें!</span>
+      </p>
+
+      <div class="flag-game-box">
+        <div style="font-size: 2.2rem; margin-bottom: 8px;" id="flagIcon">🚩</div>
+        <div style="font-size: 1rem; font-weight: 800; margin-bottom: 12px;" id="flagHint">
+          Guess a number between 200 and 210! (200 से 210 के बीच संख्या चुनें)
+        </div>
+        <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+          <input type="number" id="flagGuessInput" class="number-box" style="width: 120px;" placeholder="200-210" min="200" max="210">
+          <button class="check-btn" onclick="submitFlagGuess()">Submit Guess ➔</button>
+          <button class="pill-btn" onclick="resetFlagGame()">New Secret Number 🔄</button>
+        </div>
+        <div style="margin-top: 10px; font-size: 0.85rem; font-weight: 800;" id="flagResult"></div>
+      </div>
+    </div>
+
+    <!-- Activity 4: Magical Count (Page 70) -->
+    <div class="card">
+      <div class="card-title">
+        <span>✨</span> <span>Activity 4: The Magical Letter Count Mystery (जादुई गिनती)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 10px; color: var(--text-muted);">
+        Write any number name in English, count its letters, write the new number, and repeat. What number does it ALWAYS end with?
+        <br><span class="hindi-text">किसी भी संख्या का अंग्रेज़ी नाम लिखें और उसके अक्षरों को गिनते जाएँ। यह अंत में हमेशा किस संख्या पर रुकता है?</span>
+      </p>
+      
+      <div style="background: var(--input-bg); padding: 14px; border-radius: 12px; border: 1px solid var(--card-border); margin-bottom: 10px;">
+        <div style="font-size: 0.85rem; line-height: 1.8;">
+          • <strong>235</strong>: "Two hundred and thirty five" → <strong>23</strong> letters<br>
+          • <strong>23</strong>: "Twenty-three" → <strong>11</strong> letters<br>
+          • <strong>11</strong>: "Eleven" → <strong>6</strong> letters<br>
+          • <strong>6</strong>: "Six" → <strong>3</strong> letters<br>
+          • <strong>3</strong>: "Three" → <strong>5</strong> letters<br>
+          • <strong>5</strong>: "Five" → <strong>4</strong> letters<br>
+          • <strong>4</strong>: "Four" → <strong>?</strong> letters
+        </div>
+        <div style="margin-top: 10px; display: flex; align-items: center; gap: 8px;">
+          <span>How many letters in "FOUR"?</span>
+          <input type="number" id="q_magic_four" class="number-box" style="width: 70px;" placeholder="?">
+          <button class="check-btn" onclick="checkMagicFour()">Check ✓</button>
+          <span class="feedback" id="fb_magic_four"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 5: Farooq Chacha's Sweet Shop (Page 72) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🍬</span> <span>Activity 5: Farooq Chacha's Sweet Shop (फारूक चाचा की मिठाई की दुकान)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Farooq Chacha packs Mysore Pak and Laddoos in trays of 100 each.
+        <br><span class="hindi-text">फारूक चाचा 100-100 के बक्सों में मैसूर पाक और लड्डू रखते हैं।</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 12px;">
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            1. Chacha has 4 full trays of Mysore Pak (100 pieces each). Total = ?
+            <br><span class="hindi-text">100-100 के 4 पूरे डिब्बे = कुल कितने पीस?</span>
+          </div>
+          <input type="number" id="q_sweet_1" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_sweet_1"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            2. Chacha has 4 trays of 100 and 87 loose laddoos. Total = ?
+            <br><span class="hindi-text">4 सैकड़ा (400) + 87 खुले लड्डू = कुल कितने?</span>
+          </div>
+          <input type="number" id="q_sweet_2" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_sweet_2"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">400 + 87 = 487 Laddoos</span>
+        <button class="check-btn" onclick="checkSweets()">Check Sweets ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 6: "Who Am I?" 3-Digit Riddles (Page 75) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🕵️</span> <span>Activity 6: "Who Am I?" 3-Digit Riddles (पहेलियाँ: मैं कौन हूँ?)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Solve the NCERT textbook clues to uncover the secret 3-digit house numbers!
+        <br><span class="hindi-text">किताब की पहेलियों को हल कर गुप्त 3-अंकों वाली संख्याएँ खोजें!</span>
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <!-- Riddle 1 -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.85rem; margin-bottom: 4px;">
+            Riddle 1: "I have digits 9, 1 and 5. I am less than 200. I have 9 ones. Who am I?"
+            <br><span class="hindi-text">पहेली 1: मेरे अंक 9, 1 और 5 हैं। मैं 200 से छोटी हूँ और मेरी इकाई 9 है। मैं कौन हूँ?</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
+            <input type="number" id="riddle_1" class="number-box" placeholder="?">
+            <span class="feedback" id="fb_riddle_1"></span>
+          </div>
+        </div>
+
+        <!-- Riddle 2 -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.85rem; margin-bottom: 4px;">
+            Riddle 2: "I am greater than 300 but less than 400. I have no tens (0). My ones and hundreds digits are the same. Who am I?"
+            <br><span class="hindi-text">पहेली 2: मैं 300 से बड़ी और 400 से छोटी हूँ। मुझमें कोई दहाई नहीं है (0) और इकाई-सैकड़ा बराबर हैं। मैं कौन हूँ?</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
+            <input type="number" id="riddle_2" class="number-box" placeholder="?">
+            <span class="feedback" id="fb_riddle_2"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">Clues from NCERT Page 75</span>
+        <button class="check-btn" onclick="checkRiddles()">Solve Riddles ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 7: Comparing Greater Than & Less Than (> or <) (Page 79) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🐊</span> <span>Activity 7: Comparing Numbers with &gt; and &lt; (बड़ा या छोटा: तुलना करें)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        The crocodile's hungry mouth always opens towards the BIGGER number! (मगरमच्छ का मुँह हमेशा बड़ी संख्या की ओर खुलता है!)
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+        <div style="background: var(--input-bg); padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-weight: 800;">487</span>
+          <select id="cmp_1" style="background: var(--card-bg); color: var(--accent); font-weight: 900; font-size: 1.1rem; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--accent);">
+            <option value="">?</option>
+            <option value=">">&gt;</option>
+            <option value="<">&lt;</option>
+          </select>
+          <span style="font-weight: 800;">423</span>
+          <span class="feedback" id="fb_cmp_1"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-weight: 800;">321</span>
+          <select id="cmp_2" style="background: var(--card-bg); color: var(--accent); font-weight: 900; font-size: 1.1rem; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--accent);">
+            <option value="">?</option>
+            <option value=">">&gt;</option>
+            <option value="<">&lt;</option>
+          </select>
+          <span style="font-weight: 800;">231</span>
+          <span class="feedback" id="fb_cmp_2"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-weight: 800;">209</span>
+          <select id="cmp_3" style="background: var(--card-bg); color: var(--accent); font-weight: 900; font-size: 1.1rem; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--accent);">
+            <option value="">?</option>
+            <option value=">">&gt;</option>
+            <option value="<">&lt;</option>
+          </select>
+          <span style="font-weight: 800;">290</span>
+          <span class="feedback" id="fb_cmp_3"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-weight: 800;">199</span>
+          <select id="cmp_4" style="background: var(--card-bg); color: var(--accent); font-weight: 900; font-size: 1.1rem; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--accent);">
+            <option value="">?</option>
+            <option value=">">&gt;</option>
+            <option value="<">&lt;</option>
+          </select>
+          <span style="font-weight: 800;">201</span>
+          <span class="feedback" id="fb_cmp_4"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Page 79 Crocodile Rules</span>
+        <button class="check-btn" onclick="checkComparisons()">Check Comparisons ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 8: Making 3-Digit Numbers with 3, 2, 4 (Page 81) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🔢</span> <span>Activity 8: Building Numbers with Digits 3, 2, 4 (अंक 3, 2, 4 से संख्याएँ बनाएँ)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Using digits 3, 2, and 4 without repetition, what are the smallest and greatest 3-digit numbers?
+        <br><span class="hindi-text">अंक 3, 2 और 4 का एक बार प्रयोग कर सबसे छोटी और सबसे बड़ी संख्या बनाएँ:</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.85rem; margin-bottom: 4px;">Smallest Number (सबसे छोटी संख्या):</div>
+          <input type="number" id="digits_smallest" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_digits_small"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.85rem; margin-bottom: 4px;">Greatest Number (सबसे बड़ी संख्या):</div>
+          <input type="number" id="digits_greatest" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_digits_great"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Page 81 Challenge</span>
+        <button class="check-btn" onclick="checkDigits()">Check Numbers ✓</button>
+      </div>
+    </div>
+
+    <!-- Final Scoreboard -->
+    <div style="text-align: center; margin-top: 2rem; padding: 20px; background: rgba(14, 165, 233, 0.1); border-radius: 16px; border: 1px solid var(--card-border);">
+      <h3 style="font-size: 1.2rem; font-weight: 900; margin-bottom: 6px;">🎉 Congratulations on Exploring House of Hundreds – I!</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+        You have mastered 3-digit counting, grouping by 10s and 100s, number lines, riddles, and place value.
+      </p>
+      <button class="check-btn" style="padding: 10px 24px; font-size: 1rem;" onclick="checkAllAndCelebrate()">
+        Celebrate Complete Worksheet 🎊
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    // Flag Game Secret
+    let secretFlagNumber = 207;
+
+    function resetFlagGame() {
+      secretFlagNumber = 201 + Math.floor(Math.random() * 9); // between 201 and 209
+      document.getElementById('flagResult').innerHTML = '<span style="color: var(--accent);">New secret number chosen! Take a guess!</span>';
+      document.getElementById('flagIcon').innerText = '🚩';
+      document.getElementById('flagGuessInput').value = '';
+    }
+
+    function submitFlagGuess() {
+      const val = parseInt(document.getElementById('flagGuessInput').value, 10);
+      const res = document.getElementById('flagResult');
+      const icon = document.getElementById('flagIcon');
+
+      if (isNaN(val)) {
+        res.innerHTML = '<span style="color: var(--danger);">Please enter a valid number!</span>';
+        return;
+      }
+
+      if (val === secretFlagNumber) {
+        icon.innerText = '🎯';
+        res.innerHTML = `<span style="color: var(--success); font-size: 1.1rem;">BINGO! ${val} is the EXACT secret number! 🎉</span>`;
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 60, spread: 70 });
+        }
+      } else if (val < secretFlagNumber) {
+        icon.innerText = '👉🚩';
+        res.innerHTML = `<span style="color: var(--warning);">The secret number is GREATER than ${val}! Flag points RIGHT 👉</span>`;
+      } else {
+        icon.innerText = '🚩👈';
+        res.innerHTML = `<span style="color: var(--warning);">The secret number is SMALLER than ${val}! Flag points LEFT 👈</span>`;
+      }
+    }
+
+    function checkActivity1() {
+      const toran = parseInt(document.getElementById('q1_toran').value, 10);
+      const bangles = parseInt(document.getElementById('q1_bangles').value, 10);
+      const toffees = parseInt(document.getElementById('q1_toffees').value, 10);
+
+      const fbT = document.getElementById('fb_q1_toran');
+      const fbB = document.getElementById('fb_q1_bangles');
+      const fbToff = document.getElementById('fb_q1_toffees');
+
+      fbT.className = toran === 250 ? 'feedback correct' : 'feedback incorrect';
+      fbT.innerText = toran === 250 ? '✓ Correct! 250' : '✗ Try again (200 + 50)';
+
+      fbB.className = bangles === 280 ? 'feedback correct' : 'feedback incorrect';
+      fbB.innerText = bangles === 280 ? '✓ Correct! 280' : '✗ Try again (200 + 80)';
+
+      fbToff.className = toffees === 300 ? 'feedback correct' : 'feedback incorrect';
+      fbToff.innerText = toffees === 300 ? '✓ Correct! 300' : '✗ Try again (299 + 1)';
+
+      if (toran === 250 && bangles === 280 && toffees === 300 && typeof confetti === 'function') {
+        confetti({ particleCount: 40 });
+      }
+    }
+
+    function checkTiles() {
+      const a1 = parseInt(document.getElementById('tile_a1').value, 10);
+      const a2 = parseInt(document.getElementById('tile_a2').value, 10);
+      const a3 = parseInt(document.getElementById('tile_a3').value, 10);
+
+      const b1 = parseInt(document.getElementById('tile_b1').value, 10);
+      const b2 = parseInt(document.getElementById('tile_b2').value, 10);
+      const b3 = parseInt(document.getElementById('tile_b3').value, 10);
+      const b4 = parseInt(document.getElementById('tile_b4').value, 10);
+
+      const fb = document.getElementById('fb_tiles');
+      const isACorrect = a1 === 213 && a2 === 214 && a3 === 215;
+      const isBCorrect = b1 === 296 && b2 === 297 && b3 === 298 && b4 === 299;
+
+      if (isACorrect && isBCorrect) {
+        fb.className = 'feedback correct';
+        fb.innerText = '✓ All jumping tiles are 100% correct! Great job!';
+        if (typeof confetti === 'function') confetti({ particleCount: 50 });
+      } else {
+        fb.className = 'feedback incorrect';
+        fb.innerText = '✗ Some tiles are incorrect. Follow +1 order carefully!';
+      }
+    }
+
+    function checkMagicFour() {
+      const val = parseInt(document.getElementById('q_magic_four').value, 10);
+      const fb = document.getElementById('fb_magic_four');
+      if (val === 4) {
+        fb.className = 'feedback correct';
+        fb.innerText = '✓ Correct! F-O-U-R has 4 letters! It stays at 4 forever!';
+        if (typeof confetti === 'function') confetti({ particleCount: 30 });
+      } else {
+        fb.className = 'feedback incorrect';
+        fb.innerText = '✗ Count letters in F-O-U-R.';
+      }
+    }
+
+    function checkSweets() {
+      const s1 = parseInt(document.getElementById('q_sweet_1').value, 10);
+      const s2 = parseInt(document.getElementById('q_sweet_2').value, 10);
+
+      const fb1 = document.getElementById('fb_sweet_1');
+      const fb2 = document.getElementById('fb_sweet_2');
+
+      fb1.className = s1 === 400 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = s1 === 400 ? '✓ 400 pieces' : '✗ 4 × 100 = 400';
+
+      fb2.className = s2 === 487 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = s2 === 487 ? '✓ 487 laddoos' : '✗ 400 + 87 = 487';
+    }
+
+    function checkRiddles() {
+      const r1 = parseInt(document.getElementById('riddle_1').value, 10);
+      const r2 = parseInt(document.getElementById('riddle_2').value, 10);
+
+      const fb1 = document.getElementById('fb_riddle_1');
+      const fb2 = document.getElementById('fb_riddle_2');
+
+      fb1.className = r1 === 159 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = r1 === 159 ? '✓ Correct: 159 (< 200, 9 ones)' : '✗ Try: digits 9, 1, 5 with 9 at the end and < 200';
+
+      fb2.className = r2 === 303 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = r2 === 303 ? '✓ Correct: 303 (3 hundreds, 0 tens, 3 ones)' : '✗ Try: between 300-400 with 0 tens and same ends';
+    }
+
+    function checkComparisons() {
+      const c1 = document.getElementById('cmp_1').value;
+      const c2 = document.getElementById('cmp_2').value;
+      const c3 = document.getElementById('cmp_3').value;
+      const c4 = document.getElementById('cmp_4').value;
+
+      document.getElementById('fb_cmp_1').className = c1 === '>' ? 'feedback correct' : 'feedback incorrect';
+      document.getElementById('fb_cmp_1').innerText = c1 === '>' ? '✓' : '✗';
+
+      document.getElementById('fb_cmp_2').className = c2 === '>' ? 'feedback correct' : 'feedback incorrect';
+      document.getElementById('fb_cmp_2').innerText = c2 === '>' ? '✓' : '✗';
+
+      document.getElementById('fb_cmp_3').className = c3 === '<' ? 'feedback correct' : 'feedback incorrect';
+      document.getElementById('fb_cmp_3').innerText = c3 === '<' ? '✓' : '✗';
+
+      document.getElementById('fb_cmp_4').className = c4 === '<' ? 'feedback correct' : 'feedback incorrect';
+      document.getElementById('fb_cmp_4').innerText = c4 === '<' ? '✓' : '✗';
+    }
+
+    function checkDigits() {
+      const s = parseInt(document.getElementById('digits_smallest').value, 10);
+      const g = parseInt(document.getElementById('digits_greatest').value, 10);
+
+      const fbS = document.getElementById('fb_digits_small');
+      const fbG = document.getElementById('fb_digits_great');
+
+      fbS.className = s === 234 ? 'feedback correct' : 'feedback incorrect';
+      fbS.innerText = s === 234 ? '✓ Correct: 234' : '✗ Smallest digit (2) goes first: 234';
+
+      fbG.className = g === 432 ? 'feedback correct' : 'feedback incorrect';
+      fbG.innerText = g === 432 ? '✓ Correct: 432' : '✗ Biggest digit (4) goes first: 432';
+
+      if (s === 234 && g === 432 && typeof confetti === 'function') {
+        confetti({ particleCount: 50 });
+      }
+    }
+
+    function checkAllAndCelebrate() {
+      checkActivity1();
+      checkTiles();
+      checkMagicFour();
+      checkSweets();
+      checkRiddles();
+      checkComparisons();
+      checkDigits();
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+
+    let isHindi = false;
+    function toggleLang() {
+      isHindi = !isHindi;
+      const hindiEls = document.querySelectorAll('.hindi-text');
+      hindiEls.forEach(el => {
+        el.style.display = isHindi ? 'block' : 'inline';
+      });
+      document.getElementById('langToggle').innerText = isHindi ? 'English ➔' : 'हिंदी / ENG';
+    }
+  </script>
+</body>
+</html>

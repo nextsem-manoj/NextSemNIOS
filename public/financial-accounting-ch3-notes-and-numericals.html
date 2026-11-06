@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NCERT Class 11 Financial Accounting Ch 3 (keac103): Advanced Pagewise Numericals & Study Notes</title>
+  <meta name="description" content="Advanced, Olympiad & CA-Foundation level pagewise study notes, rigorous accounting numericals (strict mode: zero hints), and 5-pair match-the-following challenge exercises based on NCERT Class 11 Financial Accounting Chapter 3 (keac103.pdf - Recording of Transactions - I).">
+  <link rel="icon" type="image/png" href="/image-20.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.88);
+      --border-card: rgba(255, 255, 255, 0.08);
+
+      --brand-emerald: #10b981;
+      --brand-emerald-hover: #059669;
+      --brand-cyan: #06b6d4;
+      --brand-gold: #e5b842;
+      --brand-gold-hover: #d4a632;
+      --brand-purple: #a855f7;
+      --brand-rose: #f43f5e;
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.92);
+      --border-card: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.65;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(229, 184, 66, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 90px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Navbar with Complete Breadcrumbs (Permanent Rule) */
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #e5b842, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-gold);
+      background: rgba(229, 184, 66, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-gold);
+      font-weight: 700;
+      background: rgba(229, 184, 66, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(229, 184, 66, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-gold);
+      color: var(--brand-gold);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Banner */
+    .hero-wrapper {
+      max-width: 1100px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #e5b842, #10b981, #06b6d4, #a855f7);
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-gold {
+      background: rgba(229, 184, 66, 0.15);
+      border: 1px solid rgba(229, 184, 66, 0.4);
+      color: var(--brand-gold);
+    }
+
+    .tag-badge-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--brand-emerald);
+    }
+
+    .tag-badge-rose {
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.4);
+      color: #fb7185;
+    }
+
+    .hero-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #e5b842 0%, #10b981 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 850px;
+      font-weight: 500;
+    }
+
+    /* Page Navigation Ribbon */
+    .page-nav-ribbon {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+      padding: 10px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .ribbon-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .ribbon-btn:hover {
+      background: var(--brand-gold);
+      color: #000000;
+      border-color: var(--brand-gold);
+    }
+
+    /* Page Card Container */
+    .page-section {
+      max-width: 1100px;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+    }
+
+    .study-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      position: relative;
+    }
+
+    .page-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .page-num-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--brand-gold);
+    }
+
+    .page-num-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(229, 184, 66, 0.15);
+      border: 1px solid rgba(229, 184, 66, 0.4);
+      color: var(--brand-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .page-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    /* Notes Box */
+    .notes-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--brand-emerald);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .notes-box h4 {
+      color: var(--brand-emerald);
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .notes-box ul {
+      margin-left: 20px;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .key-formula-pill {
+      display: inline-block;
+      padding: 3px 9px;
+      background: rgba(229, 184, 66, 0.12);
+      border: 1px solid rgba(229, 184, 66, 0.3);
+      color: var(--brand-gold);
+      border-radius: 6px;
+      font-family: ui-monospace, monospace;
+      font-weight: 700;
+      font-size: 0.84rem;
+      margin: 3px 0;
+    }
+
+    /* Fill in the blanks practice */
+    .fib-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--brand-gold);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      font-size: 0.9rem;
+      line-height: 1.85;
+    }
+
+    .fib-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .fib-title {
+      color: var(--brand-gold);
+      font-size: 0.95rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blank-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--brand-gold);
+      background: rgba(229, 184, 66, 0.15);
+      border: 1px solid rgba(229, 184, 66, 0.35);
+      border-radius: 4px;
+      padding: 0 4px;
+      margin: 0 2px;
+    }
+
+    .blank-line {
+      display: inline-block;
+      width: 80px;
+      border-bottom: 2px dashed rgba(229, 184, 66, 0.7);
+      vertical-align: middle;
+      margin: 0 4px;
+    }
+
+    /* Solution details dropdowns (No hints) */
+    details.ans-drop {
+      display: inline-block;
+      margin: 0 3px;
+      vertical-align: middle;
+    }
+
+    details.ans-drop > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      user-select: none;
+      transition: all 0.15s ease;
+      list-style: none;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #67e8f9;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.ans-drop > summary:hover {
+      background: rgba(6, 182, 212, 0.22);
+    }
+
+    details.ans-drop[open] > summary {
+      background: rgba(6, 182, 212, 0.3);
+      border-color: #67e8f9;
+    }
+
+    .reveal-pill {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      animation: popIn 0.2s ease;
+      background: rgba(16, 185, 129, 0.18);
+      color: #a7f3d0;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(-2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Match the Following Card */
+    .match-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--brand-purple);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .match-title {
+      color: var(--brand-purple);
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .match-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .match-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .match-left {
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .match-left-letter {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: var(--brand-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .match-select {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      outline: none;
+      flex: 1.6;
+      min-width: 260px;
+      transition: all 0.2s ease;
+    }
+
+    .match-select:focus {
+      border-color: var(--brand-purple);
+      box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.25);
+    }
+
+    .match-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-check-match {
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      background: var(--brand-purple);
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-check-match:hover {
+      background: #9333ea;
+      transform: translateY(-1px);
+    }
+
+    .match-feedback {
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .match-feedback.correct {
+      color: #34d399;
+    }
+
+    .match-feedback.wrong {
+      color: #f87171;
+    }
+
+    /* Bulk Buttons */
+    .bulk-btn {
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .bulk-btn:hover {
+      border-color: var(--brand-gold);
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Complete Breadcrumbs (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11" class="breadcrumb-link">Class 11</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy" class="breadcrumb-link">Financial Accounting-I</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=11&subject=accountancy&chapter=3" class="breadcrumb-link">Chapter 3 (keac103)</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">Advanced Pagewise Numericals & Notes</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="nav-btn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <a href="/financial-accounting-ch3-textbook-cases-test.html" class="nav-btn" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 800;">
+          <span>📑 Textbook Cases & Equation</span>
+        </a>
+        <a href="/financial-accounting-ch3-recording-transactions-numericals-only.html" class="nav-btn" style="background: rgba(229, 184, 66, 0.15); border-color: rgba(229, 184, 66, 0.4); color: var(--brand-gold); font-weight: 800;">
+          <span>🎯 50 Numericals Test</span>
+        </a>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div>
+        <div class="badge-row">
+          <span class="tag-badge tag-badge-gold">💼 NCERT Class 11 • Financial Accounting-I</span>
+          <span class="tag-badge tag-badge-rose">⚡ Advanced CA-Level Difficulty</span>
+          <span class="tag-badge tag-badge-emerald">🚫 Strict Mode: No Hints Provided</span>
+        </div>
+        <h1 class="hero-title" style="margin-top: 8px;">
+          Recording of Transactions - I <span class="hero-title-highlight">| Advanced Pagewise Challenge (keac103.pdf)</span>
+        </h1>
+        <p class="hero-subtitle">
+          Complete textbook breakdown with high-difficulty accounting calculations, multi-asset acquisitions, composite cash & trade discount splits, bad debts insolvency ratios, ledger balancing arithmetic, and 5-pair tricky matching exercises (Zero hints revealed).
+        </p>
+      </div>
+
+      <!-- Quick Global Actions -->
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; border-top: 1px solid var(--border-card); padding-top: 14px;">
+        <button class="bulk-btn" onclick="toggleAllAnswers(true)">👁️ Show All Step Solutions</button>
+        <button class="bulk-btn" onclick="hideAllDetails()">🔒 Hide All Solutions (Strict Test Mode)</button>
+        <button class="bulk-btn" onclick="resetAllMatches()">🔄 Reset All Matchings</button>
+        <a href="/financial-accounting-ch3-textbook-cases-test.html" class="bulk-btn" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: #10b981; font-weight: 800; text-decoration: none;">📑 Master Textbook Cases & Equation Worksheet</a>
+        <a href="/financial-accounting-ch3-recording-transactions-numericals-only.html" class="bulk-btn" style="background: rgba(229, 184, 66, 0.2); color: var(--brand-gold); border-color: var(--brand-gold); font-weight: 800; text-decoration: none;">🧮 50 Numericals Test Engine</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Navigation Ribbon -->
+  <nav class="page-nav-ribbon">
+    <span style="font-size: 0.75rem; font-weight: 800; color: var(--brand-gold); text-transform: uppercase; white-space: nowrap; margin-right: 4px;">📖 Jump to:</span>
+    <a href="#page1" class="ribbon-btn">Pg 1: Vouchers & Source Evidence</a>
+    <a href="#page2" class="ribbon-btn">Pg 2: Accounting Equation Fundamentals</a>
+    <a href="#page3" class="ribbon-btn">Pg 3: Opening/Closing Capital Algebra</a>
+    <a href="#page4" class="ribbon-btn">Pg 4: Modern Rules of Debit & Credit</a>
+    <a href="#page5" class="ribbon-btn">Pg 5: Trade & Cash Discount Splits</a>
+    <a href="#page6" class="ribbon-btn">Pg 6: Asset Costs & Compound Entries</a>
+    <a href="#page7" class="ribbon-btn">Pg 7: Bad Debts & Insolvency Recovery</a>
+    <a href="#page8" class="ribbon-btn">Pg 8: Bank Transactions & Drawings</a>
+    <a href="#page9" class="ribbon-btn">Pg 9: Ledger Posting Mechanics</a>
+    <a href="#page10" class="ribbon-btn">Pg 10: Ledger Balancing & Trial Figures</a>
+  </nav>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <section id="page1" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">1</div>
+          <span>NCERT Textbook pp. 49–54</span>
+        </div>
+        <h2 class="page-title">Source Documents, Accounting Vouchers & Transaction Evidence</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Source Documents:</strong> The primary written evidence supporting an accounting entry (Cash Memo for cash sales/purchases, Invoice/Bill for credit sales/purchases, Receipt for cash received, Pay-in-slip for bank deposits, Cheque for bank payments, Debit Note for returns to suppliers, Credit Note for returns from customers).</li>
+          <li><strong>Accounting Vouchers:</strong> Documents prepared by the accountant to authorize recording in books of original entry:
+            <br>• <strong>Debit Voucher (Payment Voucher):</strong> Prepared when cash or bank payments are made.
+            <br>• <strong>Credit Voucher (Receipt Voucher):</strong> Prepared when cash or cheques are received.
+            <br>• <strong>Transfer Voucher (Non-Cash Voucher / Journal Voucher):</strong> Prepared for non-cash transactions (credit purchases, depreciation, bad debts, returns).
+            <br>• <strong>Complex / Compound Voucher:</strong> Involves multiple debits and multiple credits.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. A trader purchases goods for ₹85,000 on credit and returns defective goods with a list price of ₹12,000 (subject to 10% trade discount). The net debit note amount issued to the supplier is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹10,800 [₹12,000 - 10% Trade Discount (₹1,200) = ₹10,800]</span></details>
+          <br>
+          2. A firm receives 3 cash payments on the same day: ₹18,000 from Rohit, ₹24,000 cash sales, and ₹6,000 interest. The total amount authorized on the credit cash vouchers for the day is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹48,000 [₹18,000 + ₹24,000 + ₹6,000 = ₹48,000]</span></details>
+          <br>
+          3. When goods worth ₹50,000 are sold for ₹65,000 on credit, the source document issued to the buyer is a 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>
+          showing an invoice amount of ₹65,000.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Sales Invoice / Bill</span></details>
+          <br>
+          4. When an accountant records a non-cash transaction of ₹35,000 for depreciation on machinery, the specific voucher prepared is a 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Transfer Voucher / Journal Voucher</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-1">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Source document for goods returned to supplier</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Debit Note (informing supplier that their account has been debited)</option>
+              <option value="2">Credit Note (informing customer that their account has been credited)</option>
+              <option value="3">Debit Voucher (authorized document for cash/bank disbursements)</option>
+              <option value="4">Credit Voucher (authorized document for cash/bank inflows)</option>
+              <option value="5">Pay-in-slip (counterfoil retained by account holder)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Source document for goods returned by customer</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Debit Note (informing supplier that their account has been debited)</option>
+              <option value="2">Credit Note (informing customer that their account has been credited)</option>
+              <option value="3">Debit Voucher (authorized document for cash/bank disbursements)</option>
+              <option value="4">Credit Voucher (authorized document for cash/bank inflows)</option>
+              <option value="5">Pay-in-slip (counterfoil retained by account holder)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Voucher prepared for payment of ₹25,000 rent</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Debit Note (informing supplier that their account has been debited)</option>
+              <option value="2">Credit Note (informing customer that their account has been credited)</option>
+              <option value="3">Debit Voucher (authorized document for cash/bank disbursements)</option>
+              <option value="4">Credit Voucher (authorized document for cash/bank inflows)</option>
+              <option value="5">Pay-in-slip (counterfoil retained by account holder)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Voucher prepared on receiving ₹40,000 from debtor</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Debit Note (informing supplier that their account has been debited)</option>
+              <option value="2">Credit Note (informing customer that their account has been credited)</option>
+              <option value="3">Debit Voucher (authorized document for cash/bank disbursements)</option>
+              <option value="4">Credit Voucher (authorized document for cash/bank inflows)</option>
+              <option value="5">Pay-in-slip (counterfoil retained by account holder)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Banking source document for cash deposit</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Debit Note (informing supplier that their account has been debited)</option>
+              <option value="2">Credit Note (informing customer that their account has been credited)</option>
+              <option value="3">Debit Voucher (authorized document for cash/bank disbursements)</option>
+              <option value="4">Credit Voucher (authorized document for cash/bank inflows)</option>
+              <option value="5">Pay-in-slip (counterfoil retained by account holder)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-1', 'match-feedback-1')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-1"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <section id="page2" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">2</div>
+          <span>NCERT Textbook pp. 55–60</span>
+        </div>
+        <h2 class="page-title">The Fundamental Accounting Equation ($A = L + C$)</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Dual Aspect Principle:</strong> Every business transaction exerts an equal and simultaneous effect on at least two accounts.</li>
+          <li><strong>The Balance Sheet Equation:</strong> <span class="key-formula-pill">\text{Total Assets } (A) = \text{External Liabilities } (L) + \text{Capital / Owner's Equity } (C)</span></li>
+          <li><strong>Transaction Net Impact on Capital:</strong>
+            <br>• Revenues & Gains increase Capital (+$R$).
+            <br>• Expenses & Losses decrease Capital (-$E$).
+            <br>• Fresh Capital introduced increases Capital (+$C_{\text{fresh}}$).
+            <br>• Drawings (cash or goods at cost) decrease Capital (-$D$).
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. A business commenced with Cash ₹1,50,000, Bank Balance ₹2,50,000, Stock ₹1,00,000, and Machinery ₹80,000. It took a loan of ₹1,80,000 from HDFC Bank. The proprietor's initial Capital is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹4,00,000 [Assets: 1,50,000 + 2,50,000 + 1,00,000 + 80,000 = ₹5,80,000; Capital = Assets - Loan (5,80,000 - 1,80,000) = ₹4,00,000]</span></details>
+          <br>
+          2. Goods costing ₹45,000 are sold for ₹60,000. The buyer pays 40% in cash and the remaining 60% on credit. The net increase in Capital resulting from this transaction is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹15,000 [Selling Price (₹60,000) - Cost Price (₹45,000) = ₹15,000 Profit increases Capital]</span></details>
+          <br>
+          3. Total assets of a business are ₹14,00,000. External liabilities are 30% of total assets. The owner's capital is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹9,80,000 [Liabilities = 30% of 14,00,000 = ₹4,20,000; Capital = 14,00,000 - 4,20,000 = ₹9,80,000]</span></details>
+          <br>
+          4. Proprietor withdrew ₹20,000 cash and goods costing ₹15,000 (sale price ₹22,000) for personal use. Total drawings deducted from Capital equal 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹35,000 [Cash (₹20,000) + Goods at Cost (₹15,000) = ₹35,000]</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-2">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Goods costing ₹80,000 sold for ₹72,000 on cash</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Cash increases by ₹72,000, Stock decreases by ₹80,000, Capital decreases by ₹8,000</option>
+              <option value="2">Cash decreases by ₹10,000, Outstanding Rent Liability increases by ₹4,000, Capital decreases by ₹14,000</option>
+              <option value="3">Cash increases by ₹12,000, Accrued Commission Asset increases by ₹3,000, Capital increases by ₹15,000</option>
+              <option value="4">Bank increases by ₹2,00,000, Bank Loan Liability increases by ₹2,00,000</option>
+              <option value="5">Machinery Asset increases by ₹50,000, Creditor Liability increases by ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Paid rent ₹10,000, outstanding rent ₹4,000</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Cash increases by ₹72,000, Stock decreases by ₹80,000, Capital decreases by ₹8,000</option>
+              <option value="2">Cash decreases by ₹10,000, Outstanding Rent Liability increases by ₹4,000, Capital decreases by ₹14,000</option>
+              <option value="3">Cash increases by ₹12,000, Accrued Commission Asset increases by ₹3,000, Capital increases by ₹15,000</option>
+              <option value="4">Bank increases by ₹2,00,000, Bank Loan Liability increases by ₹2,00,000</option>
+              <option value="5">Machinery Asset increases by ₹50,000, Creditor Liability increases by ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Commission received ₹12,000, accrued ₹3,000</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Cash increases by ₹72,000, Stock decreases by ₹80,000, Capital decreases by ₹8,000</option>
+              <option value="2">Cash decreases by ₹10,000, Outstanding Rent Liability increases by ₹4,000, Capital decreases by ₹14,000</option>
+              <option value="3">Cash increases by ₹12,000, Accrued Commission Asset increases by ₹3,000, Capital increases by ₹15,000</option>
+              <option value="4">Bank increases by ₹2,00,000, Bank Loan Liability increases by ₹2,00,000</option>
+              <option value="5">Machinery Asset increases by ₹50,000, Creditor Liability increases by ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Borrowed loan ₹2,00,000 from bank</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Cash increases by ₹72,000, Stock decreases by ₹80,000, Capital decreases by ₹8,000</option>
+              <option value="2">Cash decreases by ₹10,000, Outstanding Rent Liability increases by ₹4,000, Capital decreases by ₹14,000</option>
+              <option value="3">Cash increases by ₹12,000, Accrued Commission Asset increases by ₹3,000, Capital increases by ₹15,000</option>
+              <option value="4">Bank increases by ₹2,00,000, Bank Loan Liability increases by ₹2,00,000</option>
+              <option value="5">Machinery Asset increases by ₹50,000, Creditor Liability increases by ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Purchased machinery on credit ₹50,000</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Cash increases by ₹72,000, Stock decreases by ₹80,000, Capital decreases by ₹8,000</option>
+              <option value="2">Cash decreases by ₹10,000, Outstanding Rent Liability increases by ₹4,000, Capital decreases by ₹14,000</option>
+              <option value="3">Cash increases by ₹12,000, Accrued Commission Asset increases by ₹3,000, Capital increases by ₹15,000</option>
+              <option value="4">Bank increases by ₹2,00,000, Bank Loan Liability increases by ₹2,00,000</option>
+              <option value="5">Machinery Asset increases by ₹50,000, Creditor Liability increases by ₹50,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-2', 'match-feedback-2')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <section id="page3" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">3</div>
+          <span>NCERT Textbook pp. 61–65</span>
+        </div>
+        <h2 class="page-title">Advanced Capital Algebra: Opening & Closing Balances and Profit</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Master Capital Formula:</strong> <span class="key-formula-pill">C_{\text{Closing}} = C_{\text{Opening}} + C_{\text{Additional}} + \text{Net Profit} - \text{Drawings}</span></li>
+          <li><strong>Derived Net Profit Formula:</strong> <span class="key-formula-pill">\text{Net Profit} = C_{\text{Closing}} + \text{Drawings} - C_{\text{Additional}} - C_{\text{Opening}}</span></li>
+          <li><strong>Balance Sheet Closing Capital:</strong> <span class="key-formula-pill">C_{\text{Closing}} = \text{Total Assets}_{\text{Closing}} - \text{Total Liabilities}_{\text{Closing}}</span></li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. On 31st March 2026, a firm's Total Assets are ₹9,60,000 and Liabilities are ₹3,40,000. If Opening Capital on 1st April 2025 was ₹4,50,000, Additional Capital introduced was ₹70,000, and Drawings were ₹40,000, the Net Profit earned during the financial year is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹1,40,000 [Closing Capital = 9,60,000 - 3,40,000 = ₹6,20,000; Profit = 6,20,000 + 40,000 - 70,000 - 4,50,000 = ₹1,40,000]</span></details>
+          <br>
+          2. A business sustained a Net Loss of ₹65,000 during the year. If Closing Capital is ₹4,20,000, Drawings are ₹55,000, and Additional Capital is ₹40,000, the Opening Capital was 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹5,00,000 [Opening Capital = Closing Capital (4,20,000) + Drawings (55,000) + Net Loss (65,000) - Additional Capital (40,000) = ₹5,00,000]</span></details>
+          <br>
+          3. Total Assets of a trader are ₹18,00,000. Capital is 4 times the External Liabilities. The value of External Liabilities is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹3,60,000 [L + 4L = 18,00,000 ⇒ 5L = 18,00,000 ⇒ L = ₹3,60,000]</span></details>
+          <br>
+          4. In the previous problem, the amount of Capital in the business is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹14,40,000 [4 × 3,60,000 = ₹14,40,000]</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-3">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Net Profit calculation equation</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">$\text{Net Profit} = \text{Closing Capital} + \text{Drawings} - \text{Additional Capital} - \text{Opening Capital}$</option>
+              <option value="2">$\text{Closing Capital} = \text{Opening Capital} - \text{Net Loss} - \text{Drawings} + \text{Additional Capital}$</option>
+              <option value="3">$\text{Capital} = \text{Total Assets} - \text{Outside Liabilities}$</option>
+              <option value="4">$\text{Drawings} = \text{Opening Capital} + \text{Additional Capital} + \text{Profit} - \text{Closing Capital}$</option>
+              <option value="5">$\text{Opening Capital} = \text{Closing Capital} + \text{Drawings} - \text{Profit} - \text{Additional Capital}$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Closing Capital when business incurs loss</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">$\text{Net Profit} = \text{Closing Capital} + \text{Drawings} - \text{Additional Capital} - \text{Opening Capital}$</option>
+              <option value="2">$\text{Closing Capital} = \text{Opening Capital} - \text{Net Loss} - \text{Drawings} + \text{Additional Capital}$</option>
+              <option value="3">$\text{Capital} = \text{Total Assets} - \text{Outside Liabilities}$</option>
+              <option value="4">$\text{Drawings} = \text{Opening Capital} + \text{Additional Capital} + \text{Profit} - \text{Closing Capital}$</option>
+              <option value="5">$\text{Opening Capital} = \text{Closing Capital} + \text{Drawings} - \text{Profit} - \text{Additional Capital}$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Equity definition in Balance Sheet</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">$\text{Net Profit} = \text{Closing Capital} + \text{Drawings} - \text{Additional Capital} - \text{Opening Capital}$</option>
+              <option value="2">$\text{Closing Capital} = \text{Opening Capital} - \text{Net Loss} - \text{Drawings} + \text{Additional Capital}$</option>
+              <option value="3">$\text{Capital} = \text{Total Assets} - \text{Outside Liabilities}$</option>
+              <option value="4">$\text{Drawings} = \text{Opening Capital} + \text{Additional Capital} + \text{Profit} - \text{Closing Capital}$</option>
+              <option value="5">$\text{Opening Capital} = \text{Closing Capital} + \text{Drawings} - \text{Profit} - \text{Additional Capital}$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Algebraic formula for Drawings</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">$\text{Net Profit} = \text{Closing Capital} + \text{Drawings} - \text{Additional Capital} - \text{Opening Capital}$</option>
+              <option value="2">$\text{Closing Capital} = \text{Opening Capital} - \text{Net Loss} - \text{Drawings} + \text{Additional Capital}$</option>
+              <option value="3">$\text{Capital} = \text{Total Assets} - \text{Outside Liabilities}$</option>
+              <option value="4">$\text{Drawings} = \text{Opening Capital} + \text{Additional Capital} + \text{Profit} - \text{Closing Capital}$</option>
+              <option value="5">$\text{Opening Capital} = \text{Closing Capital} + \text{Drawings} - \text{Profit} - \text{Additional Capital}$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Algebraic formula for Opening Capital</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">$\text{Net Profit} = \text{Closing Capital} + \text{Drawings} - \text{Additional Capital} - \text{Opening Capital}$</option>
+              <option value="2">$\text{Closing Capital} = \text{Opening Capital} - \text{Net Loss} - \text{Drawings} + \text{Additional Capital}$</option>
+              <option value="3">$\text{Capital} = \text{Total Assets} - \text{Outside Liabilities}$</option>
+              <option value="4">$\text{Drawings} = \text{Opening Capital} + \text{Additional Capital} + \text{Profit} - \text{Closing Capital}$</option>
+              <option value="5">$\text{Opening Capital} = \text{Closing Capital} + \text{Drawings} - \text{Profit} - \text{Additional Capital}$</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-3', 'match-feedback-3')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-3"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 4 ==================== -->
+  <section id="page4" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">4</div>
+          <span>NCERT Textbook pp. 66–72</span>
+        </div>
+        <h2 class="page-title">Modern Rules of Debit and Credit (Classification of Accounts)</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Modern 5-Category Rule Matrix:</strong>
+            <br>• <strong>Assets:</strong> Increase $\rightarrow$ Debit (Dr), Decrease $\rightarrow$ Credit (Cr).
+            <br>• <strong>Liabilities:</strong> Increase $\rightarrow$ Credit (Cr), Decrease $\rightarrow$ Debit (Dr).
+            <br>• <strong>Capital:</strong> Increase $\rightarrow$ Credit (Cr), Decrease $\rightarrow$ Debit (Dr).
+            <br>• <strong>Expenses / Losses:</strong> Increase $\rightarrow$ Debit (Dr), Decrease $\rightarrow$ Credit (Cr).
+            <br>• <strong>Revenues / Gains:</strong> Increase $\rightarrow$ Credit (Cr), Decrease $\rightarrow$ Debit (Dr).
+          </li>
+          <li><strong>Traditional 3-Category Golden Rules:</strong>
+            <br>• <strong>Personal Accounts:</strong> Debit the Receiver, Credit the Giver.
+            <br>• <strong>Real Accounts:</strong> Debit what comes in, Credit what goes out.
+            <br>• <strong>Nominal Accounts:</strong> Debit all expenses and losses, Credit all incomes and gains.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. Paid ₹28,000 to creditor Mohan by cheque and received ₹2,000 discount. Under the modern rule, Mohan's Liability Account is debited with 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹30,000 [Full liability discharged: Bank Cr ₹28,000 + Discount Received Cr ₹2,000 = Mohan Dr ₹30,000]</span></details>
+          <br>
+          2. Interest on Capital at 10% is charged on a capital of ₹6,00,000. The amount debited to Interest on Capital (Expense) Account is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹60,000 [10% of ₹6,00,000 = ₹60,000]</span></details>
+          <br>
+          3. When ₹15,000 salary is due but unpaid at month end, Salary (Expense) Account is debited with ₹15,000 and Outstanding Salary (Liability) Account is credited with 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹15,000</span></details>
+          <br>
+          4. Sold old office furniture costing ₹12,000 (book value ₹8,000) for ₹9,500 cash. Profit on Sale of Asset credited to P&L is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹1,500 [Cash Received (₹9,500) - Book Value (₹8,000) = ₹1,500 Profit]</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-4">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Accrued Interest Account nature</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Asset Account (Debit balance, earned but not received)</option>
+              <option value="2">Liability Account (Credit balance, received in advance)</option>
+              <option value="3">Representative Personal Account (Credit balance, expense due)</option>
+              <option value="4">Capital Deduction Account (Debit balance, personal drawings)</option>
+              <option value="5">Nominal Gain Account (Credit balance, discount earned)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Unearned Rent Account nature</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Asset Account (Debit balance, earned but not received)</option>
+              <option value="2">Liability Account (Credit balance, received in advance)</option>
+              <option value="3">Representative Personal Account (Credit balance, expense due)</option>
+              <option value="4">Capital Deduction Account (Debit balance, personal drawings)</option>
+              <option value="5">Nominal Gain Account (Credit balance, discount earned)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Outstanding Wages Account nature</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Asset Account (Debit balance, earned but not received)</option>
+              <option value="2">Liability Account (Credit balance, received in advance)</option>
+              <option value="3">Representative Personal Account (Credit balance, expense due)</option>
+              <option value="4">Capital Deduction Account (Debit balance, personal drawings)</option>
+              <option value="5">Nominal Gain Account (Credit balance, discount earned)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Drawings Account nature</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Asset Account (Debit balance, earned but not received)</option>
+              <option value="2">Liability Account (Credit balance, received in advance)</option>
+              <option value="3">Representative Personal Account (Credit balance, expense due)</option>
+              <option value="4">Capital Deduction Account (Debit balance, personal drawings)</option>
+              <option value="5">Nominal Gain Account (Credit balance, discount earned)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Discount Received Account nature</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Asset Account (Debit balance, earned but not received)</option>
+              <option value="2">Liability Account (Credit balance, received in advance)</option>
+              <option value="3">Representative Personal Account (Credit balance, expense due)</option>
+              <option value="4">Capital Deduction Account (Debit balance, personal drawings)</option>
+              <option value="5">Nominal Gain Account (Credit balance, discount earned)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-4', 'match-feedback-4')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-4"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 5 ==================== -->
+  <section id="page5" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">5</div>
+          <span>NCERT Textbook pp. 73–78</span>
+        </div>
+        <h2 class="page-title">Composite Trade & Cash Discount Calculations (Journal Entries)</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Trade Discount:</strong> Allowed by wholesaler/manufacturer on catalogue list price. <strong>Never recorded in ledger or journal books</strong>; only net invoice price is recorded.</li>
+          <li><strong>Cash Discount:</strong> Allowed for prompt/immediate payment within credit terms. <strong>Always recorded in books</strong> (Discount Allowed Dr for seller / Discount Received Cr for buyer).</li>
+          <li><strong>Rule for Partial Payments:</strong> Cash discount is calculated <strong>ONLY on the cash/cheque portion actually paid</strong>, never on the credit portion!</li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. Sold goods of catalogue list price ₹1,20,000 at 20% trade discount and 5% cash discount. The customer pays 60% immediately in cash. The cash discount allowed to the customer is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹2,880 [Net Invoice = 1,20,000 - 20% (24,000) = ₹96,000; 60% Cash Portion = 0.60 × 96,000 = ₹57,600; Cash Discount = 5% of 57,600 = ₹2,880]</span></details>
+          <br>
+          2. In the previous transaction, the actual net cash received from the customer is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹54,720 [₹57,600 - ₹2,880 = ₹54,720]</span></details>
+          <br>
+          3. In the same transaction, the amount debited to the customer's personal debtor account for the remaining 40% credit balance is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹38,400 [40% of ₹96,000 = ₹38,400]</span></details>
+          <br>
+          4. Bought goods from Vikas for catalogue price ₹2,00,000 at 15% trade discount and 3% cash discount. Paid 50% immediately by cheque. The total amount debited to Purchases Account is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹1,70,000 [Purchases A/c is debited with net invoice price: 2,00,000 - 15% (30,000) = ₹1,70,000]</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-5">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Bought ₹80,000 goods at 10% TD, 2% CD (Full cash)</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Purchases Dr ₹72,000, Cash Cr ₹70,560, Discount Received Cr ₹1,440</option>
+              <option value="2">Cash Dr ₹82,450, Discount Allowed Dr ₹2,550, Sales Cr ₹85,000</option>
+              <option value="3">Debtor Dr ₹40,000, Cash Dr ₹38,400, Discount Allowed Dr ₹1,600, Sales Cr ₹80,000</option>
+              <option value="4">Deducted directly from catalogue price; not recorded in journal/ledger</option>
+              <option value="5">Recorded in Nominal Account; calculated solely on prompt cash payments</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Sold ₹1,00,000 goods at 15% TD, 3% CD (Full cash)</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Purchases Dr ₹72,000, Cash Cr ₹70,560, Discount Received Cr ₹1,440</option>
+              <option value="2">Cash Dr ₹82,450, Discount Allowed Dr ₹2,550, Sales Cr ₹85,000</option>
+              <option value="3">Debtor Dr ₹40,000, Cash Dr ₹38,400, Discount Allowed Dr ₹1,600, Sales Cr ₹80,000</option>
+              <option value="4">Deducted directly from catalogue price; not recorded in journal/ledger</option>
+              <option value="5">Recorded in Nominal Account; calculated solely on prompt cash payments</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Sold ₹1,00,000 goods at 20% TD, 4% CD (50% cash)</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Purchases Dr ₹72,000, Cash Cr ₹70,560, Discount Received Cr ₹1,440</option>
+              <option value="2">Cash Dr ₹82,450, Discount Allowed Dr ₹2,550, Sales Cr ₹85,000</option>
+              <option value="3">Debtor Dr ₹40,000, Cash Dr ₹38,400, Discount Allowed Dr ₹1,600, Sales Cr ₹80,000</option>
+              <option value="4">Deducted directly from catalogue price; not recorded in journal/ledger</option>
+              <option value="5">Recorded in Nominal Account; calculated solely on prompt cash payments</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Accounting treatment of Trade Discount</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Purchases Dr ₹72,000, Cash Cr ₹70,560, Discount Received Cr ₹1,440</option>
+              <option value="2">Cash Dr ₹82,450, Discount Allowed Dr ₹2,550, Sales Cr ₹85,000</option>
+              <option value="3">Debtor Dr ₹40,000, Cash Dr ₹38,400, Discount Allowed Dr ₹1,600, Sales Cr ₹80,000</option>
+              <option value="4">Deducted directly from catalogue price; not recorded in journal/ledger</option>
+              <option value="5">Recorded in Nominal Account; calculated solely on prompt cash payments</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Accounting treatment of Cash Discount</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Purchases Dr ₹72,000, Cash Cr ₹70,560, Discount Received Cr ₹1,440</option>
+              <option value="2">Cash Dr ₹82,450, Discount Allowed Dr ₹2,550, Sales Cr ₹85,000</option>
+              <option value="3">Debtor Dr ₹40,000, Cash Dr ₹38,400, Discount Allowed Dr ₹1,600, Sales Cr ₹80,000</option>
+              <option value="4">Deducted directly from catalogue price; not recorded in journal/ledger</option>
+              <option value="5">Recorded in Nominal Account; calculated solely on prompt cash payments</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-5', 'match-feedback-5')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-5"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 6 ==================== -->
+  <section id="page6" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">6</div>
+          <span>NCERT Textbook pp. 79–84</span>
+        </div>
+        <h2 class="page-title">Capital Expenditure on Assets & Compound Journal Entries</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Capitalization of Asset Acquisition Costs:</strong> All direct expenses incurred to bring an asset to working condition (freight, carriage inward, transit insurance, import duty, overhaul of second-hand machinery, installation wages, legal fees for title deed) are <strong>debited directly to the Asset Account</strong>, not to expense accounts!</li>
+          <li><strong>Compound Journal Entry:</strong> A single entry combining two or more accounts on the debit side or credit side for simultaneous related transactions.</li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. Purchased a second-hand plant for ₹2,40,000. Spent ₹25,000 on immediate overhaul, ₹8,000 on freight, ₹3,500 on installation wages, and ₹4,500 on insurance in transit. The total cost debited to Plant & Machinery Account is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹2,81,000 [₹2,40,000 + ₹25,000 + ₹8,000 + ₹3,500 + ₹4,500 = ₹2,81,000]</span></details>
+          <br>
+          2. Purchased land for ₹8,00,000. Paid 3% stamp duty and registration fee, ₹15,000 to lawyer for legal documentation, and ₹10,000 brokerage. Total Land Account debit is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹8,49,000 [₹8,00,000 + Stamp Duty (24,000) + Legal Fees (15,000) + Brokerage (10,000) = ₹8,49,000]</span></details>
+          <br>
+          3. Paid office staff salaries of ₹65,000, factory wages of ₹22,000, and office rent of ₹18,000 via a single combined banking RTGS transfer (RTGS charges ₹50). Total Bank Account credit is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹1,05,050 [₹65,000 + ₹22,000 + ₹18,000 + ₹50 = ₹1,05,050]</span></details>
+          <br>
+          4. Depreciation at 12% p.a. is charged on machinery costing ₹3,50,000 acquired on 1st October for the financial year ending 31st March (6 months). Depreciation amount debited to P&L is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹21,000 [₹3,50,000 × 12% × (6/12) = ₹21,000]</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-6">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Overhaul expenses on newly purchased old truck</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Capital Expenditure (Debited to Motor Vehicle / Truck Account)</option>
+              <option value="2">Revenue Expense (Debited to Repairs and Maintenance Account)</option>
+              <option value="3">Capital Expenditure (Debited to Building Account)</option>
+              <option value="4">Revenue Expense (Debited to Wages Expense Account)</option>
+              <option value="5">Capitalized into Machine Account (Readying asset for intended use)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Annual routine servicing of business delivery van</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Capital Expenditure (Debited to Motor Vehicle / Truck Account)</option>
+              <option value="2">Revenue Expense (Debited to Repairs and Maintenance Account)</option>
+              <option value="3">Capital Expenditure (Debited to Building Account)</option>
+              <option value="4">Revenue Expense (Debited to Wages Expense Account)</option>
+              <option value="5">Capitalized into Machine Account (Readying asset for intended use)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Construction costs of adding a second floor to office</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Capital Expenditure (Debited to Motor Vehicle / Truck Account)</option>
+              <option value="2">Revenue Expense (Debited to Repairs and Maintenance Account)</option>
+              <option value="3">Capital Expenditure (Debited to Building Account)</option>
+              <option value="4">Revenue Expense (Debited to Wages Expense Account)</option>
+              <option value="5">Capitalized into Machine Account (Readying asset for intended use)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Monthly wages paid to factory machine operators</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Capital Expenditure (Debited to Motor Vehicle / Truck Account)</option>
+              <option value="2">Revenue Expense (Debited to Repairs and Maintenance Account)</option>
+              <option value="3">Capital Expenditure (Debited to Building Account)</option>
+              <option value="4">Revenue Expense (Debited to Wages Expense Account)</option>
+              <option value="5">Capitalized into Machine Account (Readying asset for intended use)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Wages paid to technicians for erecting new heavy press</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Capital Expenditure (Debited to Motor Vehicle / Truck Account)</option>
+              <option value="2">Revenue Expense (Debited to Repairs and Maintenance Account)</option>
+              <option value="3">Capital Expenditure (Debited to Building Account)</option>
+              <option value="4">Revenue Expense (Debited to Wages Expense Account)</option>
+              <option value="5">Capitalized into Machine Account (Readying asset for intended use)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-6', 'match-feedback-6')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-6"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 7 ==================== -->
+  <section id="page7" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">7</div>
+          <span>NCERT Textbook pp. 85–90</span>
+        </div>
+        <h2 class="page-title">Bad Debts, Insolvency Recovery & Accidental Loss Settlements</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Bad Debts:</strong> An irrecoverable debt from a debtor due to bankruptcy or insolvency. Debited to <strong>Bad Debts A/c</strong> (Nominal Loss) and credited to the <strong>Debtor's Personal A/c</strong>.</li>
+          <li><strong>Recovery of Bad Debts:</strong> When an amount previously written off as bad debt is later recovered, it is credited to <strong>Bad Debts Recovered A/c</strong> (Nominal Gain), NEVER to the debtor's personal account!</li>
+          <li><strong>Goods Lost by Fire / Theft:</strong>
+            <br>• Total Cost of Lost Goods $\rightarrow$ Credited to Purchases A/c.
+            <br>• Insurance Claim Admitted $\rightarrow$ Debited to Insurance Company (Asset).
+            <br>• Uninsured Loss $\rightarrow$ Debited to Loss by Fire / Profit & Loss A/c.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. Debtor Harish owed ₹60,000. He became bankrupt and his estate pays an official dividend of 45 paise in a rupee. The amount written off as Bad Debts is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹33,000 [Cash Recovered = 45% of 60,000 = ₹27,000; Bad Debts Loss = 55% of 60,000 = ₹33,000]</span></details>
+          <br>
+          2. An amount of ₹18,000 written off as bad debt two years ago was unexpectedly recovered to the extent of 80% via bank draft. The amount credited to Bad Debts Recovered A/c is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹14,400 [80% of ₹18,000 = ₹14,400]</span></details>
+          <br>
+          3. Goods costing ₹75,000 were destroyed by an accidental fire. The insurance surveyor inspected the site and admitted a formal claim for 70%. The net amount debited to Loss by Fire Account in P&L is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹22,500 [Total Loss (₹75,000) - Insurance Claim Admitted (₹52,500) = ₹22,500 Uninsured Loss]</span></details>
+          <br>
+          4. In the previous fire insurance settlement, the total amount credited to Purchases Account is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹75,000 [Purchases A/c is credited with full cost value of goods destroyed]</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-7">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> ₹50,000 debt written off as irrecoverable</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Bad Debts Dr ₹50,000 to Debtor Personal Cr ₹50,000</option>
+              <option value="2">Cash/Bank Dr ₹20,000 to Bad Debts Recovered Cr ₹20,000</option>
+              <option value="3">Cash Dr ₹80,000, Insurance Co Dr ₹20,000, Loss by Fire Dr ₹10,000 to Purchases Cr ₹110,000</option>
+              <option value="4">Cash Dr ₹36,000, Bad Debts Dr ₹24,000 to Debtor Cr ₹60,000</option>
+              <option value="5">Cash Dr ₹47,500, Discount Allowed Dr ₹2,500 to Debtor Cr ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> ₹20,000 previously written off recovered in cash</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Bad Debts Dr ₹50,000 to Debtor Personal Cr ₹50,000</option>
+              <option value="2">Cash/Bank Dr ₹20,000 to Bad Debts Recovered Cr ₹20,000</option>
+              <option value="3">Cash Dr ₹80,000, Insurance Co Dr ₹20,000, Loss by Fire Dr ₹10,000 to Purchases Cr ₹110,000</option>
+              <option value="4">Cash Dr ₹36,000, Bad Debts Dr ₹24,000 to Debtor Cr ₹60,000</option>
+              <option value="5">Cash Dr ₹47,500, Discount Allowed Dr ₹2,500 to Debtor Cr ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Recovery of 60 paise in rupee from ₹60,000 debtor</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Bad Debts Dr ₹50,000 to Debtor Personal Cr ₹50,000</option>
+              <option value="2">Cash/Bank Dr ₹20,000 to Bad Debts Recovered Cr ₹20,000</option>
+              <option value="3">Cash Dr ₹80,000, Insurance Co Dr ₹20,000, Loss by Fire Dr ₹10,000 to Purchases Cr ₹110,000</option>
+              <option value="4">Cash Dr ₹36,000, Bad Debts Dr ₹24,000 to Debtor Cr ₹60,000</option>
+              <option value="5">Cash Dr ₹47,500, Discount Allowed Dr ₹2,500 to Debtor Cr ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Full settlement of ₹50,000 debt for ₹47,500 cash</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Bad Debts Dr ₹50,000 to Debtor Personal Cr ₹50,000</option>
+              <option value="2">Cash/Bank Dr ₹20,000 to Bad Debts Recovered Cr ₹20,000</option>
+              <option value="3">Cash Dr ₹80,000, Insurance Co Dr ₹20,000, Loss by Fire Dr ₹10,000 to Purchases Cr ₹110,000</option>
+              <option value="4">Cash Dr ₹36,000, Bad Debts Dr ₹24,000 to Debtor Cr ₹60,000</option>
+              <option value="5">Cash Dr ₹47,500, Discount Allowed Dr ₹2,500 to Debtor Cr ₹50,000</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Goods ₹1,10,000 burned; ₹20,000 claim admitted</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Bad Debts Dr ₹50,000 to Debtor Personal Cr ₹50,000</option>
+              <option value="2">Cash/Bank Dr ₹20,000 to Bad Debts Recovered Cr ₹20,000</option>
+              <option value="3">Cash Dr ₹80,000, Insurance Co Dr ₹20,000, Loss by Fire Dr ₹10,000 to Purchases Cr ₹110,000</option>
+              <option value="4">Cash Dr ₹36,000, Bad Debts Dr ₹24,000 to Debtor Cr ₹60,000</option>
+              <option value="5">Cash Dr ₹47,500, Discount Allowed Dr ₹2,500 to Debtor Cr ₹50,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-7', 'match-feedback-7')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-7"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 8 ==================== -->
+  <section id="page8" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">8</div>
+          <span>NCERT Textbook pp. 91–95</span>
+        </div>
+        <h2 class="page-title">Banking Operations, Overdraft Charges & Personal Drawings</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Distinction between Business Expense and Drawings:</strong>
+            <br>• Life Insurance Premium of Proprietor $\rightarrow$ Debited to <strong>Drawings A/c</strong>.
+            <br>• Income Tax of Sole Proprietor $\rightarrow$ Debited to <strong>Drawings A/c</strong> (as income tax is a personal liability).
+            <br>• Fire/Theft Insurance of Goods/Building $\rightarrow$ Debited to <strong>Insurance Expense A/c</strong>.
+            <br>• GST / Business Municipal Taxes $\rightarrow$ Debited to <strong>Rates & Taxes / GST Expense A/c</strong>.
+          </li>
+          <li><strong>Bank Deductions:</strong> Bank charges and overdraft interest reduce the bank balance immediately and are debited to <strong>Bank Charges / Interest A/c</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. A sole proprietor pays the following through a business cheque of ₹80,000: Proprietor's Life Insurance ₹25,000, Proprietor's Income Tax ₹30,000, and Business Warehouse Fire Insurance ₹25,000. Total amount debited to Drawings Account is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹55,000 [Life Insurance (₹25,000) + Income Tax (₹30,000) = ₹55,000]</span></details>
+          <br>
+          2. In the previous cheque payment, the amount debited to Business Insurance Expense Account is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹25,000</span></details>
+          <br>
+          3. Bank debits ₹850 as quarterly account maintenance charges and ₹3,150 as interest on bank overdraft. Total decrease in business bank balance is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹4,000 [₹850 + ₹3,150 = ₹4,000]</span></details>
+          <br>
+          4. Withdrew ₹40,000 from bank: ₹28,000 for office petty cash and ₹12,000 for domestic house electricity bill. The amount debited to Cash Account is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹28,000 [Personal bill ₹12,000 is debited to Drawings A/c]</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-8">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Payment of Proprietor's Income Tax via business bank</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Drawings Dr to Bank Cr (Personal tax liability of owner)</option>
+              <option value="2">Insurance Expense Dr to Bank Cr (Legitimate business protection)</option>
+              <option value="3">Cash Dr to Bank Cr (Contra entry increasing office vault liquidity)</option>
+              <option value="4">Drawings Dr to Bank Cr (Direct personal utility expense)</option>
+              <option value="5">Interest on Overdraft Dr to Bank Cr (Financial borrowing charge)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Payment of Shop Fire Insurance via business bank</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Drawings Dr to Bank Cr (Personal tax liability of owner)</option>
+              <option value="2">Insurance Expense Dr to Bank Cr (Legitimate business protection)</option>
+              <option value="3">Cash Dr to Bank Cr (Contra entry increasing office vault liquidity)</option>
+              <option value="4">Drawings Dr to Bank Cr (Direct personal utility expense)</option>
+              <option value="5">Interest on Overdraft Dr to Bank Cr (Financial borrowing charge)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Cash withdrawn from bank for office use</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Drawings Dr to Bank Cr (Personal tax liability of owner)</option>
+              <option value="2">Insurance Expense Dr to Bank Cr (Legitimate business protection)</option>
+              <option value="3">Cash Dr to Bank Cr (Contra entry increasing office vault liquidity)</option>
+              <option value="4">Drawings Dr to Bank Cr (Direct personal utility expense)</option>
+              <option value="5">Interest on Overdraft Dr to Bank Cr (Financial borrowing charge)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Payment of residential electricity bill from shop bank</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Drawings Dr to Bank Cr (Personal tax liability of owner)</option>
+              <option value="2">Insurance Expense Dr to Bank Cr (Legitimate business protection)</option>
+              <option value="3">Cash Dr to Bank Cr (Contra entry increasing office vault liquidity)</option>
+              <option value="4">Drawings Dr to Bank Cr (Direct personal utility expense)</option>
+              <option value="5">Interest on Overdraft Dr to Bank Cr (Financial borrowing charge)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Bank debits interest on temporary negative overdraft balance</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Drawings Dr to Bank Cr (Personal tax liability of owner)</option>
+              <option value="2">Insurance Expense Dr to Bank Cr (Legitimate business protection)</option>
+              <option value="3">Cash Dr to Bank Cr (Contra entry increasing office vault liquidity)</option>
+              <option value="4">Drawings Dr to Bank Cr (Direct personal utility expense)</option>
+              <option value="5">Interest on Overdraft Dr to Bank Cr (Financial borrowing charge)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-8', 'match-feedback-8')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-8"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 9 ==================== -->
+  <section id="page9" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">9</div>
+          <span>NCERT Textbook pp. 96–101</span>
+        </div>
+        <h2 class="page-title">Ledger Posting Mechanics, Folio Cross-References & T-Accounts</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>The Ledger:</strong> The principal book of accounts containing all personal, real, and nominal accounts.</li>
+          <li><strong>Posting Rules:</strong>
+            <br>• The account debited in the journal is debited in the ledger with the prefix <strong>"To [Credit Account Name]"</strong>.
+            <br>• The account credited in the journal is credited in the ledger with the prefix <strong>"By [Debit Account Name]"</strong>.
+          </li>
+          <li><strong>Cross-Referencing:</strong> Journal contains <strong>Ledger Folio (L.F.)</strong> column; Ledger contains <strong>Journal Folio (J.F.)</strong> column to facilitate audit tracing.</li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. A trader sells goods to Rajesh for ₹70,000. In Rajesh's personal ledger account, this entry is posted on the debit side with the exact narration prefix 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">To Sales A/c (₹70,000)</span></details>
+          <br>
+          2. Rajesh returns goods worth ₹8,000. In the Sales Return Ledger Account, this return is posted on the 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>
+          side with "To Rajesh A/c".
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Debit Side (Sales Return is a contra-revenue debit)</span></details>
+          <br>
+          3. Rajesh settles his remaining balance of ₹62,000 by paying ₹60,000 cash in full settlement. In Rajesh's Ledger Account, the credit side contains two entries: "By Cash A/c ₹60,000" and "By 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>
+          ₹2,000".
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">By Discount Allowed A/c</span></details>
+          <br>
+          4. After the above transactions, the closing balance in Rajesh's Ledger Account is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹0 (Account is completely settled and balanced with Debit Total = Credit Total = ₹70,000)</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-9">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Prefix used on the Debit side of any Ledger Account</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">"To [Credited Account Title]"</option>
+              <option value="2">"By [Debited Account Title]"</option>
+              <option value="3">Journal Folio (J.F.) indicating original journal page</option>
+              <option value="4">Ledger Folio (L.F.) indicating target ledger account page</option>
+              <option value="5">T-Account with left side Dr and right side Cr</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Prefix used on the Credit side of any Ledger Account</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">"To [Credited Account Title]"</option>
+              <option value="2">"By [Debited Account Title]"</option>
+              <option value="3">Journal Folio (J.F.) indicating original journal page</option>
+              <option value="4">Ledger Folio (L.F.) indicating target ledger account page</option>
+              <option value="5">T-Account with left side Dr and right side Cr</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Column in Ledger used to reference journal source</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">"To [Credited Account Title]"</option>
+              <option value="2">"By [Debited Account Title]"</option>
+              <option value="3">Journal Folio (J.F.) indicating original journal page</option>
+              <option value="4">Ledger Folio (L.F.) indicating target ledger account page</option>
+              <option value="5">T-Account with left side Dr and right side Cr</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Column in Journal used to reference ledger page</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">"To [Credited Account Title]"</option>
+              <option value="2">"By [Debited Account Title]"</option>
+              <option value="3">Journal Folio (J.F.) indicating original journal page</option>
+              <option value="4">Ledger Folio (L.F.) indicating target ledger account page</option>
+              <option value="5">T-Account with left side Dr and right side Cr</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Standard graphical shape of a ledger account</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">"To [Credited Account Title]"</option>
+              <option value="2">"By [Debited Account Title]"</option>
+              <option value="3">Journal Folio (J.F.) indicating original journal page</option>
+              <option value="4">Ledger Folio (L.F.) indicating target ledger account page</option>
+              <option value="5">T-Account with left side Dr and right side Cr</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-9', 'match-feedback-9')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-9"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 10 ==================== -->
+  <section id="page10" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">10</div>
+          <span>NCERT Textbook pp. 102–110</span>
+        </div>
+        <h2 class="page-title">Ledger Balancing Arithmetic & Extracting Trial Balances</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Balancing Mechanics:</strong>
+            <br>• If $\text{Debit Total} > \text{Credit Total}$, difference is inserted on the credit side as <strong>"By Balance c/d"</strong> (represents a <strong>Debit Balance</strong> brought down on debit side as "To Balance b/d").
+            <br>• If $\text{Credit Total} > \text{Debit Total}$, difference is inserted on the debit side as <strong>"To Balance c/d"</strong> (represents a <strong>Credit Balance</strong> brought down on credit side as "By Balance b/d").
+          </li>
+          <li><strong>Normal Account Balances:</strong>
+            <br>• Assets & Expenses $\rightarrow$ Always carry <strong>Debit Balances</strong>.
+            <br>• Liabilities, Capital & Incomes $\rightarrow$ Always carry <strong>Credit Balances</strong>.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Numericals (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Calculation Problems (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. Bank Account has debit side postings totalling ₹5,80,000 (receipts) and credit side postings totalling ₹6,45,000 (payments & charges). The closing balance of Bank Account is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>
+          representing a bank overdraft.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹65,000 Credit / Overdraft Balance [₹6,45,000 - ₹5,80,000 = ₹65,000 Cr]</span></details>
+          <br>
+          2. Creditor Ankit Account has credit entries of ₹1,80,000 (credit purchases). Debit entries are: Bank payment ₹1,10,000, Purchases Return ₹12,000, and Discount Received ₹3,000. Balance payable to Ankit is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹55,000 [₹1,80,000 - (₹1,10,000 + ₹12,000 + ₹3,000) = ₹55,000 Cr]</span></details>
+          <br>
+          3. Capital Account has an opening credit balance of ₹7,50,000. During the year, additional capital ₹1,50,000 was introduced, net profit was ₹2,10,000, and drawings were ₹90,000. The closing balance brought down (b/d) in Capital Account is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">₹10,20,000 Cr [₹7,50,000 + ₹1,50,000 + ₹2,10,000 - ₹90,000 = ₹10,20,000 Cr]</span></details>
+          <br>
+          4. In a Trial Balance, the sum of all debit balances must equal the sum of all credit balances, which is a mathematical verification of the 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>
+          aspect of accounting.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Dual Aspect / Double Entry Principle</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-10">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Cash in Hand Account closing balance nature</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Always a Debit Balance (can never be negative)</option>
+              <option value="2">Can be Debit (Favourable) or Credit (Overdraft)</option>
+              <option value="3">Always a Debit Balance (Asset representing amounts receivable)</option>
+              <option value="4">Always a Credit Balance (Liability representing amounts payable)</option>
+              <option value="5">Nominal accounts closed at year-end by transfer to Trading/P&L</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Bank Account closing balance nature</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Always a Debit Balance (can never be negative)</option>
+              <option value="2">Can be Debit (Favourable) or Credit (Overdraft)</option>
+              <option value="3">Always a Debit Balance (Asset representing amounts receivable)</option>
+              <option value="4">Always a Credit Balance (Liability representing amounts payable)</option>
+              <option value="5">Nominal accounts closed at year-end by transfer to Trading/P&L</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Sundry Debtors Account closing balance nature</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Always a Debit Balance (can never be negative)</option>
+              <option value="2">Can be Debit (Favourable) or Credit (Overdraft)</option>
+              <option value="3">Always a Debit Balance (Asset representing amounts receivable)</option>
+              <option value="4">Always a Credit Balance (Liability representing amounts payable)</option>
+              <option value="5">Nominal accounts closed at year-end by transfer to Trading/P&L</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Sundry Creditors Account closing balance nature</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Always a Debit Balance (can never be negative)</option>
+              <option value="2">Can be Debit (Favourable) or Credit (Overdraft)</option>
+              <option value="3">Always a Debit Balance (Asset representing amounts receivable)</option>
+              <option value="4">Always a Credit Balance (Liability representing amounts payable)</option>
+              <option value="5">Nominal accounts closed at year-end by transfer to Trading/P&L</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Nominal Accounts (Salaries, Rent, Sales) balancing</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Accounting Match --</option>
+              <option value="1">Always a Debit Balance (can never be negative)</option>
+              <option value="2">Can be Debit (Favourable) or Credit (Overdraft)</option>
+              <option value="3">Always a Debit Balance (Asset representing amounts receivable)</option>
+              <option value="4">Always a Credit Balance (Liability representing amounts payable)</option>
+              <option value="5">Nominal accounts closed at year-end by transfer to Trading/P&L</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-10', 'match-feedback-10')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-10"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Theme toggle
+    let isLightMode = false;
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    themeToggleBtn.addEventListener("click", () => {
+      isLightMode = !isLightMode;
+      document.body.classList.toggle("light-theme", isLightMode);
+      themeIcon.innerText = isLightMode ? "🌙" : "☀️";
+    });
+
+    // Bulk Solution Toggles
+    function toggleAllAnswers(openState) {
+      document.querySelectorAll("details.ans-drop").forEach(d => d.open = openState);
+    }
+
+    function hideAllDetails() {
+      document.querySelectorAll("details.ans-drop").forEach(d => d.open = false);
+    }
+
+    function resetAllMatches() {
+      document.querySelectorAll(".match-select").forEach(sel => {
+        sel.value = "";
+        sel.style.borderColor = "var(--border-card)";
+        sel.style.backgroundColor = "var(--bg-card-alt)";
+      });
+      document.querySelectorAll(".match-feedback").forEach(fb => {
+        fb.innerText = "";
+        fb.className = "match-feedback";
+      });
+    }
+
+    // Match Evaluation Engine
+    function evaluateMatch(gridId, feedbackId) {
+      const grid = document.getElementById(gridId);
+      const feedback = document.getElementById(feedbackId);
+      const selects = grid.querySelectorAll(".match-select");
+
+      let correctCount = 0;
+      let totalCount = selects.length;
+      let allAnswered = true;
+
+      selects.forEach(sel => {
+        const correctVal = sel.getAttribute("data-correct");
+        const userVal = sel.value;
+
+        if (!userVal) {
+          allAnswered = false;
+          sel.style.borderColor = "var(--border-card)";
+          sel.style.backgroundColor = "var(--bg-card-alt)";
+        } else if (userVal === correctVal) {
+          correctCount++;
+          sel.style.borderColor = "#10b981";
+          sel.style.backgroundColor = "rgba(16, 185, 129, 0.15)";
+        } else {
+          sel.style.borderColor = "#ef4444";
+          sel.style.backgroundColor = "rgba(239, 68, 68, 0.15)";
+        }
+      });
+
+      if (!allAnswered) {
+        feedback.className = "match-feedback wrong";
+        feedback.innerText = `Please select all 5 matches (${correctCount}/${totalCount} currently correct).`;
+        return;
+      }
+
+      if (correctCount === totalCount) {
+        feedback.className = "match-feedback correct";
+        feedback.innerText = `🎉 Perfect! All 5/5 Accounting Matches are Correct!`;
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 45, spread: 65, origin: { y: 0.8 } });
+        }
+      } else {
+        feedback.className = "match-feedback wrong";
+        feedback.innerText = `⚠️ ${correctCount} of ${totalCount} correct. Review red highlighted matches and re-calculate.`;
+      }
+    }
+  </script>
+</body>
+</html>

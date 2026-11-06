@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 9 Maths Chapter 5: Introduction to Euclid's Geometry - Interactive 5 Postulates Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #060c18;
+      --bg-card: #0c1527;
+      --bg-secondary: #111e38;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --primary: #059669;
+      --primary-hover: #10b981;
+      --accent-gold: #f59e0b;
+      --border: rgba(255, 255, 255, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      padding: 16px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .header-card {
+      background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%);
+      border-radius: 20px;
+      padding: 24px;
+      color: #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(5, 150, 105, 0.35);
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .tab-btn {
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4);
+    }
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .svg-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      margin: 14px 0;
+    }
+    .slider-box {
+      margin: 12px 0;
+    }
+    input[type=range] {
+      width: 100%;
+      accent-color: var(--primary);
+    }
+    .highlight-pill {
+      background: rgba(5, 150, 105, 0.15);
+      border: 1px solid var(--primary);
+      color: var(--primary-hover);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+    .info-box {
+      background: rgba(5, 150, 105, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-top: 12px;
+    }
+    .quiz-option {
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 8px;
+      text-align: left;
+      width: 100%;
+      transition: all 0.15s;
+    }
+    .quiz-option:hover {
+      border-color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navbar with Breadcrumbs -->
+  <header style="max-width: 800px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: space-between; padding: 10px 4px;">
+    <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+      <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+        <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+      </div>
+      <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+        <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: #f8fafc;">Study Guide</span>
+        <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+      </div>
+    </a>
+    <a href="/?class=9&subject=maths" class="back-btn" style="margin-bottom: 0;">
+      ← Back to Class 9 Maths
+    </a>
+  </header>
+
+<div class="container">
+  <!-- Header -->
+  <div class="header-card">
+    <a href="/?class=9&subject=c9-maths&book=part-1" class="back-btn">← Back to Class 9 Mathematics</a>
+    <div style="font-size: 0.75rem; font-weight: 900; letterSpacing: 0.05em; opacity: 0.9; margin-bottom: 4px;">NCERT CLASS 9 MATHEMATICS • CHAPTER 5 (iemh105)</div>
+    <h1 style="font-size: 1.4rem; font-weight: 900; margin-bottom: 6px;">Introduction to Euclid's Geometry</h1>
+    <p style="font-size: 0.85rem; opacity: 0.95;">Interactive 5 Postulates Lab, 7 Axioms Deck & Proposition 1.1 Construction</p>
+  </div>
+
+  <!-- Navigation Tabs -->
+  <div class="nav-grid">
+    <button class="tab-btn active" onclick="switchMainTab('postulates')">🌟 5 Postulates</button>
+    <button class="tab-btn" onclick="switchMainTab('construction')">📐 Proposition 1.1</button>
+    <button class="tab-btn" onclick="switchMainTab('axioms')">📜 7 Axioms</button>
+    <button class="tab-btn" onclick="switchMainTab('quiz')">⚡ Quiz Check</button>
+  </div>
+
+  <!-- TAB 1: 5 POSTULATES -->
+  <div id="tab-postulates">
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 16px;">
+      <button class="tab-btn active" id="pbtn-1" onclick="showPostulate(1)">Postulate 1</button>
+      <button class="tab-btn" id="pbtn-2" onclick="showPostulate(2)">Postulate 2</button>
+      <button class="tab-btn" id="pbtn-3" onclick="showPostulate(3)">Postulate 3</button>
+      <button class="tab-btn" id="pbtn-4" onclick="showPostulate(4)">Postulate 4</button>
+      <button class="tab-btn" id="pbtn-5" onclick="showPostulate(5)">Postulate 5</button>
+    </div>
+
+    <!-- POSTULATE 1 -->
+    <div class="card" id="postulate-1-view">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span class="highlight-pill">POSTULATE 1: LINE THROUGH 2 POINTS</span>
+        <span style="font-size: 0.72rem; color: var(--text-secondary);">Click canvas to move Point B</span>
+      </div>
+      <p style="font-weight: 700; margin-bottom: 12px; font-size: 0.92rem;">
+        "A straight line may be drawn from any one point to any other point."
+      </p>
+      <div class="svg-box">
+        <svg id="p1-svg" width="100%" height="220" viewBox="0 0 400 220" style="max-width: 400px; cursor: crosshair;" onclick="handleP1Click(event)">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(100, 116, 139, 0.15)" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="400" height="220" fill="url(#grid)" />
+          <line id="p1-line" x1="80" y1="140" x2="320" y2="70" stroke="#059669" stroke-width="3.5" stroke-linecap="round" />
+          <circle cx="80" cy="140" r="7" fill="#3b82f6" stroke="#ffffff" stroke-width="2" />
+          <text x="60" y="145" fill="#f8fafc" font-size="13" font-weight="bold">Point A</text>
+          <circle id="p1-pointB" cx="320" cy="70" r="7" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+          <text id="p1-textB" x="335" y="75" fill="#f8fafc" font-size="13" font-weight="bold">Point B (320, 70)</text>
+        </svg>
+      </div>
+      <div class="info-box">
+        <strong>Axiom 5.1:</strong> Given two distinct points, there is a <strong>unique straight line</strong> passing through them.
+      </div>
+    </div>
+
+    <!-- POSTULATE 2 -->
+    <div class="card" id="postulate-2-view" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span class="highlight-pill">POSTULATE 2: PRODUCING TERMINATED LINE</span>
+      </div>
+      <p style="font-weight: 700; margin-bottom: 12px; font-size: 0.92rem;">
+        "A terminated line can be produced indefinitely in both directions."
+      </p>
+      <div class="slider-box">
+        <label style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; margin-bottom: 6px;">
+          <span>Extend Infinite Ray:</span>
+          <span id="p2-len-val">240 px</span>
+        </label>
+        <input type="range" min="30" max="180" value="120" oninput="updateP2(this.value)">
+      </div>
+      <div class="svg-box">
+        <svg width="100%" height="160" viewBox="0 0 400 160" style="max-width: 400px;">
+          <line id="p2-ray" x1="80" y1="80" x2="320" y2="80" stroke="#10b981" stroke-width="3" stroke-dasharray="6 4" />
+          <line x1="140" y1="80" x2="260" y2="80" stroke="#059669" stroke-width="6" />
+          <circle cx="140" cy="80" r="7" fill="#3b82f6" stroke="#fff" stroke-width="2" />
+          <text x="134" y="60" fill="#f8fafc" font-size="13" font-weight="bold">A</text>
+          <circle cx="260" cy="80" r="7" fill="#ef4444" stroke="#fff" stroke-width="2" />
+          <text x="254" y="60" fill="#f8fafc" font-size="13" font-weight="bold">B</text>
+          <text x="165" y="115" fill="#059669" font-size="12" font-weight="bold">Terminated Line AB</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- POSTULATE 3 -->
+    <div class="card" id="postulate-3-view" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span class="highlight-pill">POSTULATE 3: CIRCLE WITH RADIUS</span>
+      </div>
+      <p style="font-weight: 700; margin-bottom: 12px; font-size: 0.92rem;">
+        "A circle can be drawn with any centre and any radius."
+      </p>
+      <div class="slider-box">
+        <label style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; margin-bottom: 6px;">
+          <span>Radius (r): <span id="p3-r-val">65 px</span></span>
+          <span style="color: #059669;">Diameter: <span id="p3-d-val">130 px</span></span>
+        </label>
+        <input type="range" min="20" max="95" value="65" oninput="updateP3(this.value)">
+      </div>
+      <div class="svg-box">
+        <svg width="100%" height="220" viewBox="0 0 400 220" style="max-width: 400px;">
+          <circle id="p3-circle" cx="200" cy="110" r="65" fill="rgba(5, 150, 105, 0.15)" stroke="#059669" stroke-width="3" />
+          <line id="p3-needle" x1="200" y1="110" x2="265" y2="110" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 2" />
+          <circle cx="200" cy="110" r="6" fill="#ef4444" stroke="#fff" stroke-width="2" />
+          <text x="190" y="95" fill="#f8fafc" font-size="13" font-weight="bold">Center O</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- POSTULATE 4 -->
+    <div class="card" id="postulate-4-view" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span class="highlight-pill">POSTULATE 4: ALL RIGHT ANGLES ARE EQUAL</span>
+      </div>
+      <p style="font-weight: 700; margin-bottom: 12px; font-size: 0.92rem;">
+        "All right angles are equal to one another (each measuring exactly 90°)."
+      </p>
+      <div class="slider-box">
+        <label style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; margin-bottom: 6px;">
+          <span>Rotate Right Angle Orientation: <span id="p4-rot-val">0°</span></span>
+        </label>
+        <input type="range" min="0" max="360" value="0" oninput="updateP4(this.value)">
+      </div>
+      <div class="svg-box">
+        <svg width="100%" height="180" viewBox="0 0 400 180" style="max-width: 400px;">
+          <g transform="translate(100, 100)">
+            <line x1="0" y1="0" x2="60" y2="0" stroke="#3b82f6" stroke-width="3.5" />
+            <line x1="0" y1="0" x2="0" y2="-60" stroke="#3b82f6" stroke-width="3.5" />
+            <rect x="0" y="-16" width="16" height="16" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" stroke-width="1.5" />
+            <text x="24" y="-24" fill="#3b82f6" font-size="12" font-weight="bold">90°</text>
+          </g>
+          <g id="p4-rot-group" transform="translate(280, 100) rotate(0)">
+            <line x1="0" y1="0" x2="60" y2="0" stroke="#10b981" stroke-width="3.5" />
+            <line x1="0" y1="0" x2="0" y2="-60" stroke="#10b981" stroke-width="3.5" />
+            <rect x="0" y="-16" width="16" height="16" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1.5" />
+            <text x="24" y="-24" fill="#10b981" font-size="12" font-weight="bold">90°</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- POSTULATE 5 -->
+    <div class="card" id="postulate-5-view" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span class="highlight-pill">POSTULATE 5: THE FAMOUS PARALLEL POSTULATE</span>
+        <span class="highlight-pill" id="p5-status-pill">INTERSECTS LEFT</span>
+      </div>
+      <p style="font-weight: 700; margin-bottom: 12px; font-size: 0.92rem;">
+        "If a straight line falling on two straight lines makes the interior angles on the same side less than two right angles (&lt; 180°), the two lines, if produced indefinitely, meet on that side."
+      </p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 12px;">
+        <div>
+          <label style="font-weight: 700; font-size: 0.8rem;">Interior ∠1: <span id="p5-a1-val">70°</span></label>
+          <input type="range" min="45" max="115" value="70" id="p5-slider-1" oninput="updateP5()">
+        </div>
+        <div>
+          <label style="font-weight: 700; font-size: 0.8rem;">Interior ∠2: <span id="p5-a2-val">85°</span></label>
+          <input type="range" min="45" max="115" value="85" id="p5-slider-2" oninput="updateP5()">
+        </div>
+      </div>
+      <div id="p5-calc-box" class="info-box" style="text-align: center; font-weight: 800;">
+        Sum = ∠1 + ∠2 = 70° + 85° = 155° (&lt; 180° ➔ Lines intersect on LEFT)
+      </div>
+      <div class="svg-box">
+        <svg id="p5-svg" width="100%" height="240" viewBox="0 0 400 240" style="max-width: 400px;">
+          <!-- Transversal Line -->
+          <line x1="200" y1="15" x2="200" y2="235" stroke="#f59e0b" stroke-width="3.5" />
+          <text x="208" y="28" fill="#f59e0b" font-size="12" font-weight="bold">Transversal (t)</text>
+          
+          <!-- Line 1 and Line 2 -->
+          <line id="p5-l1" x1="25" y1="138" x2="375" y2="12" stroke="#3b82f6" stroke-width="3.5" />
+          <text id="p5-l1-label" x="380" y="20" fill="#3b82f6" font-size="12" font-weight="bold">Line l</text>
+
+          <line id="p5-l2" x1="25" y1="145" x2="375" y2="205" stroke="#10b981" stroke-width="3.5" />
+          <text id="p5-l2-label" x="380" y="210" fill="#10b981" font-size="12" font-weight="bold">Line m</text>
+
+          <!-- Intersect Point Marker -->
+          <g id="p5-int-marker">
+            <circle id="p5-int-circle" cx="64" cy="138" r="9" fill="rgba(239, 68, 68, 0.25)" stroke="#ef4444" stroke-width="2.5" />
+            <circle id="p5-int-dot" cx="64" cy="138" r="4" fill="#ef4444" />
+            <text id="p5-int-text" x="78" y="132" fill="#ef4444" font-size="11" font-weight="bold">📍 Point P (Lines Meet)</text>
+          </g>
+
+          <!-- Transversal Intersect Points -->
+          <circle cx="200" cy="75" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
+          <circle cx="200" cy="175" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
+
+          <text id="p5-lbl1" x="145" y="102" fill="#f59e0b" font-size="12" font-weight="bold">∠1 = 70°</text>
+          <text id="p5-lbl2" x="145" y="162" fill="#f59e0b" font-size="12" font-weight="bold">∠2 = 85°</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: PROPOSITION 1.1 CONSTRUCTION -->
+  <div id="tab-construction" style="display: none;">
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <span class="highlight-pill">PROPOSITION 1.1: EQUILATERAL TRIANGLE</span>
+        <button class="tab-btn active" onclick="autoPlayConstruction()">▶ Play Construction</button>
+      </div>
+      <p style="font-weight: 700; margin-bottom: 14px; font-size: 0.92rem;">
+        "Construct an Equilateral Triangle on a given line segment AB using ruler and compass."
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 14px;">
+        <button class="tab-btn active" id="cstep-0" onclick="setConstructionStep(0)">1. Line AB</button>
+        <button class="tab-btn" id="cstep-1" onclick="setConstructionStep(1)">2. Circle A</button>
+        <button class="tab-btn" id="cstep-2" onclick="setConstructionStep(2)">3. Circle B</button>
+        <button class="tab-btn" id="cstep-3" onclick="setConstructionStep(3)">4. Form ΔABC</button>
+      </div>
+      <div class="svg-box">
+        <svg width="100%" height="260" viewBox="0 0 400 260" style="max-width: 400px;">
+          <circle id="c-circleA" cx="150" cy="180" r="100" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 3" style="display: none;" />
+          <circle id="c-circleB" cx="250" cy="180" r="100" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4 3" style="display: none;" />
+          <polygon id="c-poly" points="150,180 250,180 200,93.4" fill="rgba(5, 150, 105, 0.25)" stroke="#059669" stroke-width="3.5" style="display: none;" />
+          <line x1="150" y1="180" x2="250" y2="180" stroke="#059669" stroke-width="4" />
+          <circle cx="150" cy="180" r="6" fill="#3b82f6" stroke="#fff" stroke-width="2" />
+          <text x="135" y="202" fill="#f8fafc" font-size="13" font-weight="bold">A</text>
+          <circle cx="250" cy="180" r="6" fill="#10b981" stroke="#fff" stroke-width="2" />
+          <text x="255" y="202" fill="#f8fafc" font-size="13" font-weight="bold">B</text>
+          <g id="c-pointC" style="display: none;">
+            <circle cx="200" cy="93.4" r="6" fill="#ef4444" stroke="#fff" stroke-width="2" />
+            <text x="194" y="80" fill="#ef4444" font-size="13" font-weight="bold">C</text>
+          </g>
+        </svg>
+      </div>
+      <div id="c-desc" class="info-box">
+        <strong>Step 1:</strong> Start with a given line segment <strong>AB</strong>.
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: 7 AXIOMS -->
+  <div id="tab-axioms" style="display: none;">
+    <div class="card">
+      <h3 style="color: var(--primary-hover); margin-bottom: 12px;">Euclid's 7 Common Notions (Axioms)</h3>
+      <div style="display: grid; gap: 10px;">
+        <div class="card" style="padding: 14px; margin: 0;">
+          <strong>Axiom 1:</strong> Things equal to the same thing are equal to one another (If A=C, B=C ➔ A=B).
+        </div>
+        <div class="card" style="padding: 14px; margin: 0;">
+          <strong>Axiom 2:</strong> If equals are added to equals, the wholes are equal (If A=B ➔ A+C = B+C).
+        </div>
+        <div class="card" style="padding: 14px; margin: 0;">
+          <strong>Axiom 3:</strong> If equals are subtracted from equals, the remainders are equal.
+        </div>
+        <div class="card" style="padding: 14px; margin: 0;">
+          <strong>Axiom 4:</strong> Things which coincide with one another are equal to one another.
+        </div>
+        <div class="card" style="padding: 14px; margin: 0;">
+          <strong>Axiom 5:</strong> The whole is greater than the part (Whole &gt; Part).
+        </div>
+        <div class="card" style="padding: 14px; margin: 0;">
+          <strong>Axiom 6:</strong> Things which are double of the same things are equal to one another.
+        </div>
+        <div class="card" style="padding: 14px; margin: 0;">
+          <strong>Axiom 7:</strong> Things which are halves of the same things are equal to one another.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: QUIZ -->
+  <div id="tab-quiz" style="display: none;">
+    <div class="card">
+      <h3 style="margin-bottom: 14px;">Interactive Knowledge Check</h3>
+      <div id="q1-box" style="margin-bottom: 20px;">
+        <p style="font-weight: 800; margin-bottom: 10px;">1. Which postulate states that "All right angles are equal to one another"?</p>
+        <button class="quiz-option" onclick="checkQ(1, 0)">A. Postulate 1</button>
+        <button class="quiz-option" onclick="checkQ(1, 1)">B. Postulate 2</button>
+        <button class="quiz-option" onclick="checkQ(1, 2)">C. Postulate 4 (Correct)</button>
+        <button class="quiz-option" onclick="checkQ(1, 3)">D. Postulate 5</button>
+        <div id="q1-feed" class="info-box" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function switchMainTab(tabId) {
+    document.querySelectorAll('[id^="tab-"]').forEach(el => el.style.display = 'none');
+    document.getElementById('tab-' + tabId).style.display = 'block';
+    document.querySelectorAll('.nav-grid .tab-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+
+  function showPostulate(num) {
+    for (let i = 1; i <= 5; i++) {
+      document.getElementById('postulate-' + i + '-view').style.display = (i === num ? 'block' : 'none');
+      document.getElementById('pbtn-' + i).classList.toggle('active', i === num);
+    }
+  }
+
+  function handleP1Click(e) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = Math.round(e.clientX - rect.left);
+    const y = Math.round(e.clientY - rect.top);
+    document.getElementById('p1-line').setAttribute('x2', x);
+    document.getElementById('p1-line').setAttribute('y2', y);
+    document.getElementById('p1-pointB').setAttribute('cx', x);
+    document.getElementById('p1-pointB').setAttribute('cy', y);
+    document.getElementById('p1-textB').setAttribute('x', x + 15);
+    document.getElementById('p1-textB').setAttribute('y', y + 5);
+    document.getElementById('p1-textB').textContent = `Point B (${x}, ${y})`;
+  }
+
+  function updateP2(val) {
+    const v = Number(val);
+    document.getElementById('p2-len-val').textContent = (v * 2) + ' px';
+    document.getElementById('p2-ray').setAttribute('x1', 200 - v);
+    document.getElementById('p2-ray').setAttribute('x2', 200 + v);
+  }
+
+  function updateP3(val) {
+    const r = Number(val);
+    document.getElementById('p3-r-val').textContent = r + ' px';
+    document.getElementById('p3-d-val').textContent = (r * 2) + ' px';
+    document.getElementById('p3-circle').setAttribute('r', r);
+    document.getElementById('p3-needle').setAttribute('x2', 200 + r);
+  }
+
+  function updateP4(val) {
+    document.getElementById('p4-rot-val').textContent = val + '°';
+    document.getElementById('p4-rot-group').setAttribute('transform', `translate(280, 100) rotate(${val})`);
+  }
+
+  function updateP5() {
+    const s1 = document.getElementById('p5-slider-1');
+    const s2 = document.getElementById('p5-slider-2');
+    const a1 = Number(s1 ? s1.value : 70);
+    const a2 = Number(s2 ? s2.value : 85);
+
+    document.getElementById('p5-a1-val').textContent = a1 + '°';
+    document.getElementById('p5-a2-val').textContent = a2 + '°';
+    document.getElementById('p5-lbl1').textContent = '∠1 = ' + a1 + '°';
+    document.getElementById('p5-lbl2').textContent = '∠2 = ' + a2 + '°';
+
+    const sum = a1 + a2;
+    const isLeft = sum < 180;
+    const isPar = sum === 180;
+
+    document.getElementById('p5-status-pill').textContent = isPar ? 'PARALLEL (Sum = 180°)' : (isLeft ? 'INTERSECTS LEFT (Sum < 180°)' : 'INTERSECTS RIGHT (Sum > 180°)');
+    document.getElementById('p5-calc-box').innerHTML = `Sum = ∠1 + ∠2 = ${a1}° + ${a2}° = <span style="color: ${isLeft ? '#ef4444' : (isPar ? '#10b981' : '#3b82f6')}">${sum}°</span> ${isLeft ? '(&lt; 180° ➔ Lines meet on the LEFT side!)' : (isPar ? '(= 180° ➔ Lines are strictly PARALLEL!)' : '(&gt; 180° ➔ Lines meet on the RIGHT side!)')}`;
+
+    const cot1 = 1 / Math.tan((a1 * Math.PI) / 180);
+    const cot2 = 1 / Math.tan((a2 * Math.PI) / 180);
+    const cotSum = cot1 + cot2;
+
+    let intersectX = null;
+    let intersectY = null;
+    if (Math.abs(cotSum) > 0.0001) {
+      const deltaX = 100 / cotSum;
+      intersectX = 200 - deltaX;
+      intersectY = 75 + deltaX * cot1;
+    }
+
+    const l1_left_x = 25;
+    const l1_left_y = 75 + (200 - l1_left_x) * cot1;
+    const l1_right_x = 375;
+    const l1_right_y = 75 + (200 - l1_right_x) * cot1;
+
+    const l2_left_x = 25;
+    const l2_left_y = 175 - (200 - l2_left_x) * cot2;
+    const l2_right_x = 375;
+    const l2_right_y = 175 - (200 - l2_right_x) * cot2;
+
+    const l1 = document.getElementById('p5-l1');
+    const l2 = document.getElementById('p5-l2');
+    if (l1) {
+      l1.setAttribute('x1', l1_left_x);
+      l1.setAttribute('y1', l1_left_y);
+      l1.setAttribute('x2', l1_right_x);
+      l1.setAttribute('y2', l1_right_y);
+    }
+    if (l2) {
+      l2.setAttribute('x1', l2_left_x);
+      l2.setAttribute('y1', l2_left_y);
+      l2.setAttribute('x2', l2_right_x);
+      l2.setAttribute('y2', l2_right_y);
+    }
+
+    const marker = document.getElementById('p5-int-marker');
+    if (marker) {
+      if (intersectX !== null && intersectY !== null && intersectX >= -50 && intersectX <= 450) {
+        marker.style.display = 'block';
+        document.getElementById('p5-int-circle').setAttribute('cx', intersectX);
+        document.getElementById('p5-int-circle').setAttribute('cy', intersectY);
+        document.getElementById('p5-int-dot').setAttribute('cx', intersectX);
+        document.getElementById('p5-int-dot').setAttribute('cy', intersectY);
+        const txt = document.getElementById('p5-int-text');
+        txt.setAttribute('x', intersectX > 200 ? intersectX - 110 : intersectX + 12);
+        txt.setAttribute('y', intersectY - 8);
+      } else {
+        marker.style.display = 'none';
+      }
+    }
+  }
+
+  function setConstructionStep(step) {
+    for (let i = 0; i <= 3; i++) {
+      document.getElementById('cstep-' + i).classList.toggle('active', i === step);
+    }
+    document.getElementById('c-circleA').style.display = step >= 1 ? 'block' : 'none';
+    document.getElementById('c-circleB').style.display = step >= 2 ? 'block' : 'none';
+    document.getElementById('c-pointC').style.display = step >= 2 ? 'block' : 'none';
+    document.getElementById('c-poly').style.display = step >= 3 ? 'block' : 'none';
+
+    const desc = [
+      '<strong>Step 1:</strong> Start with a given line segment <strong>AB</strong>.',
+      '<strong>Step 2 (Postulate 3):</strong> Draw circle with center <strong>A</strong> and radius <strong>AB</strong>.',
+      '<strong>Step 3 (Postulate 3):</strong> Draw circle with center <strong>B</strong> and radius <strong>BA</strong>. Mark intersection point <strong>C</strong>.',
+      '<strong>Step 4 (Axiom 1):</strong> Connect AC and BC. Since AC = AB and BC = AB, <strong>AC = BC = AB</strong>. <strong>ΔABC is an Equilateral Triangle!</strong> 🏆'
+    ];
+    document.getElementById('c-desc').innerHTML = desc[step];
+  }
+
+  function autoPlayConstruction() {
+    let s = 0;
+    setConstructionStep(0);
+    const timer = setInterval(() => {
+      s++;
+      if (s > 3) {
+        clearInterval(timer);
+      } else {
+        setConstructionStep(s);
+      }
+    }, 1500);
+  }
+
+  function checkQ(qNum, optIdx) {
+    const feed = document.getElementById('q1-feed');
+    feed.style.display = 'block';
+    if (optIdx === 2) {
+      feed.style.borderColor = '#10b981';
+      feed.innerHTML = '🎉 <strong>Correct!</strong> Postulate 4 states that all right angles (90°) are equal to one another.';
+    } else {
+      feed.style.borderColor = '#ef4444';
+      feed.innerHTML = '❌ <strong>Incorrect.</strong> Postulate 4 is the right answer.';
+    }
+  }
+</script>
+</body>
+</html>

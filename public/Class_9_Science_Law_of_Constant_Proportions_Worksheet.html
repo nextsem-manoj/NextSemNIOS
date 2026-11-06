@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class 9 Chemistry Worksheet - Law of Constant Proportions</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 14mm 14mm 14mm 14mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.45;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    border-bottom: 2.5px solid #1e3a8a;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-left h1 {
+    font-size: 20px;
+    color: #1e3a8a;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .header-left .subtitle {
+    font-size: 13px;
+    color: #4b5563;
+    font-weight: 600;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 11.5px;
+    color: #4b5563;
+  }
+  .meta-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .concept-box {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 0 6px 6px 0;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+  .concept-box h3 {
+    margin: 0 0 4px 0;
+    color: #1e40af;
+    font-size: 13px;
+  }
+  .concept-box p {
+    margin: 2px 0;
+  }
+  .badge-grid {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .badge {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 11.5px;
+    color: #1e40af;
+  }
+  .section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #1e3a8a;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 14px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .q-block {
+    margin-bottom: 12px;
+    page-break-inside: avoid;
+  }
+  .q-text {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+    font-size: 12.5px;
+  }
+  .q-tag {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    text-transform: uppercase;
+  }
+  .solve-area {
+    border: 1.5px dashed #cbd5e1;
+    background: #fafafa;
+    border-radius: 6px;
+    margin-top: 4px;
+    padding: 6px 10px;
+    color: #94a3b8;
+    font-size: 10.5px;
+    font-weight: 500;
+  }
+  .solve-area.h-small { height: 60px; }
+  .solve-area.h-medium { height: 95px; }
+  .solve-area.h-large { height: 125px; }
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 4px 0 6px 0;
+    font-size: 12px;
+  }
+  .option-pill {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+  .table-key {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 11px;
+  }
+  .table-key th, .table-key td {
+    border: 1px solid #cbd5e1;
+    padding: 6px 8px;
+    text-align: left;
+  }
+  .table-key th {
+    background: #1e3a8a;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .table-key tr:nth-child(even) {
+    background: #f8fafc;
+  }
+  .footer-note {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 10px;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Class 9 Science (Chemistry)</h1>
+      <div class="subtitle">Chapter 3 / 9: Atoms & Molecules &bull; Topic 9.2: Law of Constant Proportions</div>
+    </div>
+    <div class="header-right">
+      <strong>Worksheet #01</strong><br>
+      Total Marks: 25
+    </div>
+  </div>
+
+  <!-- STUDENT META BAR -->
+  <div class="meta-bar">
+    <div>Student Name: ____________________________________</div>
+    <div>Date: _______________</div>
+    <div>Roll No: _______</div>
+    <div>Score: _____ / 25</div>
+  </div>
+
+  <!-- CONCEPT RECAP BOX -->
+  <div class="concept-box">
+    <h3>📌 Law of Constant Proportions (Joseph Proust, 1799)</h3>
+    <p><em>"In a chemical substance (compound), the elements are always present in definite proportions by mass, irrespective of its source or method of preparation."</em></p>
+    <div class="badge-grid">
+      <div class="badge">Water (H₂O) &rarr; H : O = 1 : 8</div>
+      <div class="badge">Ammonia (NH₃) &rarr; N : H = 14 : 3</div>
+      <div class="badge">Carbon Monoxide (CO) &rarr; C : O = 3 : 4</div>
+      <div class="badge">Salt (NaCl) &rarr; Na : Cl = 23 : 35.5</div>
+    </div>
+  </div>
+
+  <!-- SECTION A -->
+  <div class="section-title">Section A: Concept & Objective Check (1 Mark Each)</div>
+
+  <div class="q-block">
+    <div class="q-text">1. State the Law of Constant Proportions. Name the scientist who proposed this law. <span class="q-tag">1 Mark</span></div>
+    <div class="solve-area h-small">[ Space to write definition and scientist name in OneNote ]</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">2. What is the fixed mass ratio of Hydrogen and Oxygen in pure water? <span class="q-tag">1 Mark</span></div>
+    <div class="options-grid">
+      <div class="option-pill">(a) 1 : 2</div>
+      <div class="option-pill">(b) 1 : 8</div>
+      <div class="option-pill">(c) 8 : 1</div>
+      <div class="option-pill">(d) 2 : 1</div>
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">3. Complete the statement: <span class="q-tag">1 Mark</span></div>
+    <div style="font-size: 12px; margin: 4px 0 8px 10px;">
+      If <strong>9 g</strong> of pure water from any source is decomposed, it always yields ______ <strong>g</strong> of Hydrogen and ______ <strong>g</strong> of Oxygen.
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">4. The mineral cinnabar contains Mercury (86.22%) and Sulfur (13.78%) by mass. Is cinnabar a compound or a mixture? Why? <span class="q-tag">1 Mark</span></div>
+    <div class="solve-area h-small">[ Space for explanation ]</div>
+  </div>
+
+  <!-- SECTION B -->
+  <div class="section-title">Section B: Numerical Practice (Step-by-Step Solving)</div>
+
+  <div class="q-block">
+    <div class="q-text">5. [NCERT Example 9.3] Sodium chloride (NaCl) contains sodium and chlorine in the mass ratio of 23 : 35.5. If 46 g of sodium reacts completely, how much chlorine is needed to form NaCl? <span class="q-tag">2 Marks</span></div>
+    <div class="solve-area h-medium">[ Space for Step-by-Step Calculation in OneNote ]</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">6. [NCERT Pause and Ponder Q4] Carbon monoxide (CO) contains carbon and oxygen in the mass ratio of 3 : 4. How much oxygen will combine completely with 9 g of carbon to form carbon monoxide? <span class="q-tag">2 Marks</span></div>
+    <div class="solve-area h-medium">[ Space for Step-by-Step Calculation in OneNote ]</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">7. [NCERT Pause and Ponder Q3] A compound consists of 40% sulfur and 60% oxygen by mass. In a sample of the same compound containing 20 g of sulfur, what mass of oxygen must be present to satisfy the Law of Constant Proportions? <span class="q-tag">2 Marks</span></div>
+    <div class="solve-area h-medium">[ Space for Step-by-Step Calculation in OneNote ]</div>
+  </div>
+
+  <!-- PAGE BREAK FOR CLEAN PRINTING / ONENOTE -->
+  <div class="page-break"></div>
+
+  <!-- HEADER PAGE 2 -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Class 9 Science (Chemistry) &bull; Page 2</h1>
+      <div class="subtitle">Law of Constant Proportions &bull; Practice & HOTS Questions</div>
+    </div>
+    <div class="header-right">
+      Student Name: _______________________
+    </div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">8. When 3 g of carbon is burnt in 8 g of oxygen, 11 g of carbon dioxide is formed. What mass of carbon dioxide will be formed when 3 g of carbon is burnt in 50 g of oxygen? Which law of chemical combination governs your answer? <span class="q-tag">3 Marks</span></div>
+    <div class="solve-area h-large">[ Space for Calculation and Explanation of Excess Reactant ]</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">9. In an experiment, 36 g of pure water collected from a river is decomposed by passing an electric current (electrolysis): <span class="q-tag">3 Marks</span></div>
+    <div style="font-size: 12px; margin: 2px 0 4px 10px;">
+      (a) Calculate the mass of Hydrogen gas collected.<br>
+      (b) Calculate the mass of Oxygen gas collected.<br>
+      (c) Will water collected from a well yield the same mass ratio?
+    </div>
+    <div class="solve-area h-large">[ Space for Step-by-Step Calculation ]</div>
+  </div>
+
+  <!-- SECTION C -->
+  <div class="section-title">Section C: Conceptual Reasoning & HOTS (Higher-Order Thinking)</div>
+
+  <div class="q-block">
+    <div class="q-text">10. [NCERT Pause and Ponder Q6] Students X and Y both prepared an oxide of copper in the laboratory by combining copper and oxygen in the ratios of 4 : 1 and 8 : 2 respectively. Do their results justify the Law of Constant Proportions? Explain your reasoning mathematically. <span class="q-tag">3 Marks</span></div>
+    <div class="solve-area h-medium">[ Space for Ratio Simplification and Conclusion ]</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">11. [NCERT Pause and Ponder Q5] "The Law of Definite Proportions holds strictly true for chemical compounds, but NOT for mixtures." Give a scientific reason for this distinction. <span class="q-tag">2 Marks</span></div>
+    <div class="solve-area h-medium">[ Space for Explanation: Chemical Bonds vs Physical Mixing ]</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q-text">12. Which specific postulate of Dalton's Atomic Theory explains the Law of Constant Proportions? Quote or explain the postulate clearly. <span class="q-tag">2 Marks</span></div>
+    <div class="solve-area h-small">[ Space for Dalton Postulate ]</div>
+  </div>
+
+  <!-- TEACHER KEY -->
+  <div style="margin-top: 15px; border-top: 2px solid #cbd5e1; padding-top: 10px;">
+    <strong style="color: #1e3a8a; font-size: 13px;">🔑 Quick Reference Answer Key (For Live Class Solving):</strong>
+    <table class="table-key">
+      <tr>
+        <th style="width: 15%;">Q. No.</th>
+        <th style="width: 35%;">Final Answer</th>
+        <th style="width: 50%;">Method / Calculation Hint</th>
+      </tr>
+      <tr>
+        <td><strong>Q1 &ndash; Q4</strong></td>
+        <td>Q1: Proust | Q2: (b) 1:8 | Q3: 1g H, 8g O | Q4: Compound</td>
+        <td>Fixed percentage (86.22% Hg, 13.78% S) proves chemical bonding.</td>
+      </tr>
+      <tr>
+        <td><strong>Q5 (NaCl)</strong></td>
+        <td><strong>71 g Chlorine</strong></td>
+        <td>Mass Cl = (35.5 / 23) &times; 46 g = 71 g.</td>
+      </tr>
+      <tr>
+        <td><strong>Q6 (CO)</strong></td>
+        <td><strong>12 g Oxygen</strong></td>
+        <td>Mass O = (4 / 3) &times; 9 g = 12 g.</td>
+      </tr>
+      <tr>
+        <td><strong>Q7 (S &amp; O)</strong></td>
+        <td><strong>30 g Oxygen</strong></td>
+        <td>Ratio S:O = 40:60 = 2:3. Oxygen = (3 / 2) &times; 20 g = 30 g.</td>
+      </tr>
+      <tr>
+        <td><strong>Q8 (CO₂)</strong></td>
+        <td><strong>11 g CO₂</strong> (42 g O₂ unreacted)</td>
+        <td>Law of Constant Proportions dictates only 8 g O₂ reacts with 3 g C.</td>
+      </tr>
+      <tr>
+        <td><strong>Q9 (H₂O)</strong></td>
+        <td><strong>4 g H₂ and 32 g O₂</strong></td>
+        <td>Total parts = 1 + 8 = 9. H = (1/9)&times;36 = 4g; O = (8/9)&times;36 = 32g.</td>
+      </tr>
+      <tr>
+        <td><strong>Q10 (Cu &amp; O)</strong></td>
+        <td><strong>Yes, justified</strong></td>
+        <td>Student Y ratio 8 : 2 simplifies to 4 : 1, identical to Student X.</td>
+      </tr>
+      <tr>
+        <td><strong>Q11 &amp; Q12</strong></td>
+        <td>Compounds have fixed bonds; Mixtures do not.</td>
+        <td>Dalton: <em>"Relative number and kinds of atoms are constant in a given compound."</em></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="footer-note">
+    NextSem Education &bull; Class 9 Science Worksheet Series &bull; Clean OneNote / Printout Ready Edition
+  </div>
+
+</body>
+</html>

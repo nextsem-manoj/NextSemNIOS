@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextSem NCERT Study Guide Reader</title>
+  <meta name="description" content="Universal High-Resolution Markdown & Mathematics Study Guide Reader">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  
+  <!-- Marked.js for Markdown Parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- MathJax for KaTeX/LaTeX Mathematical Rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --border-card: rgba(56, 189, 248, 0.25);
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.8;
+      padding-bottom: 80px;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
+    .nav-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-links { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      color: #94a3b8; text-decoration: none; font-size: 13px;
+      padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s;
+    }
+    .nav-btn:hover { color: #fff; border-color: var(--accent-emerald); background: rgba(16, 185, 129, 0.1); }
+
+    .reader-container {
+      max-width: 960px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    .doc-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 640px) {
+      .doc-content { padding: 20px 16px; }
+    }
+
+    /* Markdown Typography */
+    .doc-content h1 { font-size: 28px; color: #ffffff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+    .doc-content h2 { font-size: 22px; color: #38bdf8; margin-top: 28px; margin-bottom: 14px; }
+    .doc-content h3 { font-size: 18px; color: #fcd34d; margin-top: 22px; margin-bottom: 10px; }
+    .doc-content h4 { font-size: 16px; color: #34d399; margin-top: 16px; margin-bottom: 8px; }
+    .doc-content p { margin-bottom: 14px; color: #cbd5e1; }
+    .doc-content strong { color: #ffffff; font-weight: 700; }
+    .doc-content em { color: #93c5fd; }
+    .doc-content blockquote {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 4px solid #38bdf8;
+      padding: 12px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 16px 0;
+      color: #e0f2fe;
+    }
+    .doc-content ul, .doc-content ol { padding-left: 24px; margin-bottom: 16px; color: #cbd5e1; }
+    .doc-content li { margin-bottom: 6px; }
+    .doc-content table {
+      width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 8px; overflow: hidden;
+    }
+    .doc-content th { background: rgba(255,255,255,0.08); color: #38bdf8; padding: 12px; text-align: left; }
+    .doc-content td { background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 12px; color: #e2e8f0; }
+    .doc-content code { background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 4px; color: #34d399; font-family: monospace; }
+
+    .loader {
+      text-align: center; padding: 40px; color: #38bdf8; font-size: 18px; font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">Study Guide Reader</span>
+      <span style="font-weight: 700; font-size: 15px;">NextSem Academy</span>
+    </a>
+    <div class="nav-links">
+      <a href="/maths-class9-ch5-circle-theorems-interactive-lab.html" class="nav-btn">🧪 Interactive Lab</a>
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+    </div>
+  </nav>
+
+  <div class="reader-container">
+    <div id="content" class="doc-content">
+      <div class="loader">⏳ Loading Study Guide Document...</div>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    let docPath = urlParams.get('doc') || 'docs/class9_maths_ganita_manjari_ch5_circle_theorems_60_questions_bank.md';
+    if (!docPath.startsWith('/') && !docPath.startsWith('http')) {
+      docPath = '/' + docPath;
+    }
+
+    fetch(docPath)
+      .then(res => {
+        if (!res.ok) throw new Error('Document not found at ' + docPath);
+        return res.text();
+      })
+      .then(text => {
+        document.getElementById('content').innerHTML = marked.parse(text);
+        if (window.MathJax) {
+          window.MathJax.typesetPromise();
+        }
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML = `
+          <h2 style="color: #f43f5e;">⚠️ Document Load Notice</h2>
+          <p>${err.message}</p>
+          <p>You can also view the direct interactive page at: <a href="/maths-class9-ch5-circle-theorems-interactive-lab.html" style="color: #38bdf8;">Class 9 Circle Geometry Lab</a></p>
+        `;
+      });
+  </script>
+</body>
+</html>

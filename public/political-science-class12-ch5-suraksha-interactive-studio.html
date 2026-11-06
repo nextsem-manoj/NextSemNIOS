@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>समकालीन विश्व में सुरक्षा (Security in the Contemporary World) | Class 12 Political Science Ch-5 Interactive Studio | StudyGuide by Nextsem</title>
+  <meta name="description" content="NCERT Class 12 Political Science (समकालीन विश्व राजनीति) Chapter 5: समकालीन विश्व में सुरक्षा - Interactive Bilingual Studio with Live PDF, Line-by-Line Notes, MCQs, Fill-in-the-Blanks, Cartoon Analysis & CBSE Solutions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #050b18;
+      --bg-card: #0c152a;
+      --bg-card-hover: #121f3d;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --accent-emerald: #04AA6D;
+      --accent-emerald-glow: rgba(4, 170, 109, 0.4);
+      --accent-sky: #38bdf8;
+      --accent-sky-glow: rgba(56, 189, 248, 0.35);
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-purple: #a855f7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-heading: #ffffff;
+      --highlight-bg: rgba(56, 189, 248, 0.12);
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-english: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --border-subtle: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-heading: #090e1a;
+      --highlight-bg: rgba(2, 132, 199, 0.09);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-devanagari);
+      line-height: 1.75;
+      padding-bottom: 95px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 8%, rgba(56, 189, 248, 0.1) 0%, transparent 55%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.07) 0%, transparent 45%),
+                  radial-gradient(circle at 15% 85%, rgba(4, 170, 109, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Navigation Bar with Permanent Breadcrumbs */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(5, 11, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+      gap: 12px;
+      transition: background 0.3s;
+    }
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .brand-group {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+    }
+    .brand-logo-emblem {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, #04AA6D 0%, #0284c7 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; box-shadow: 0 4px 14px var(--accent-emerald-glow);
+      flex-shrink: 0;
+    }
+    .brand-text-block { display: flex; flex-direction: column; }
+    .brand-name {
+      font-family: var(--font-english); font-size: 19px; font-weight: 900;
+      color: var(--text-heading); line-height: 1.15; letter-spacing: -0.5px;
+    }
+    .brand-sub {
+      font-family: var(--font-english); font-size: 10px; font-weight: 800;
+      color: var(--accent-sky); letter-spacing: 1.5px; text-transform: uppercase;
+    }
+
+    .desktop-breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 14px; border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      overflow-x: auto; white-space: nowrap;
+    }
+    body.light-theme .desktop-breadcrumb {
+      background: #f1f5f9; border-color: #cbd5e1;
+    }
+    .desktop-breadcrumb a {
+      color: var(--text-muted); text-decoration: none; transition: color 0.2s;
+    }
+    .desktop-breadcrumb a:hover { color: var(--accent-sky); text-decoration: underline; }
+    .desktop-breadcrumb .sep { color: #64748b; font-size: 11px; }
+    .desktop-breadcrumb .current { color: var(--accent-emerald); font-weight: 800; }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+    }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 7px 14px; border-radius: 9px;
+      font-size: 13px; font-weight: 700;
+      cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-1px);
+    }
+    .nav-btn.primary {
+      background: linear-gradient(135deg, #04AA6D, #059669);
+      color: #ffffff; border: none;
+      box-shadow: 0 4px 12px var(--accent-emerald-glow);
+    }
+    .nav-btn.pdf-launch {
+      background: rgba(239, 68, 68, 0.16);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+    .nav-btn.pdf-launch:hover {
+      background: rgba(239, 68, 68, 0.28); color: #ffffff;
+    }
+
+    /* Container */
+    .container {
+      position: relative; max-width: 1180px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(4, 170, 109, 0.12) 0%, rgba(56, 189, 248, 0.12) 50%, rgba(168, 85, 247, 0.08) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px 24px;
+      margin-bottom: 24px; text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      position: relative; overflow: hidden;
+    }
+    .hero-badge-row {
+      display: flex; justify-content: center; align-items: center;
+      gap: 10px; margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; border-radius: 9999px;
+      font-size: 12px; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-emerald {
+      background: rgba(4, 170, 109, 0.2); border: 1px solid var(--accent-emerald);
+      color: #34d399;
+    }
+    .badge-sky {
+      background: rgba(56, 189, 248, 0.2); border: 1px solid var(--accent-sky);
+      color: #7dd3fc;
+    }
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.2); border: 1px solid var(--accent-amber);
+      color: #fcd34d;
+    }
+
+    .hero-title {
+      font-size: clamp(24px, 4.5vw, 36px);
+      font-weight: 900; color: var(--text-heading);
+      line-height: 1.3; margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 15px; color: var(--text-muted);
+      max-width: 820px; margin: 0 auto 18px; line-height: 1.6;
+    }
+
+    /* Dual Language Filter & Mode Selectors */
+    .controls-strip {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px; background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 14px; padding: 12px 18px;
+      margin-bottom: 24px;
+    }
+    .control-group {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+    .control-label {
+      font-size: 12px; font-weight: 800; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .chip-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted); padding: 5px 12px; border-radius: 8px;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .chip-btn:hover { color: var(--text-main); background: rgba(255, 255, 255, 0.1); }
+    .chip-btn.active {
+      background: var(--accent-emerald); color: #ffffff;
+      border-color: var(--accent-emerald);
+      box-shadow: 0 0 10px var(--accent-emerald-glow);
+    }
+
+    /* Main Tab Navigation */
+    .tab-nav-bar {
+      display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px;
+      margin-bottom: 24px; scrollbar-width: thin;
+    }
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted); padding: 10px 18px; border-radius: 12px;
+      font-size: 14px; font-weight: 800; cursor: pointer;
+      display: flex; align-items: center; gap: 8px; white-space: nowrap;
+      transition: all 0.25s ease;
+    }
+    .tab-btn:hover {
+      background: var(--bg-card-hover); color: var(--text-main);
+      transform: translateY(-2px);
+    }
+    .tab-btn.active {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff; border-color: #38bdf8;
+      box-shadow: 0 4px 16px rgba(2, 132, 199, 0.4);
+    }
+
+    /* Tab Contents */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.3s ease-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Cards */
+    .section-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+    .section-head {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 12px; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;
+    }
+    .section-title {
+      font-size: 18px; font-weight: 800; color: var(--accent-sky);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .page-tag {
+      background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24; font-size: 11px; font-weight: 800;
+      padding: 3px 10px; border-radius: 6px;
+    }
+
+    /* Concept Comparison Grid */
+    .concept-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 16px; margin: 16px 0;
+    }
+    .concept-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px; padding: 16px;
+      position: relative;
+    }
+    .concept-card.highlight-emerald {
+      border-left: 4px solid var(--accent-emerald);
+    }
+    .concept-card.highlight-sky {
+      border-left: 4px solid var(--accent-sky);
+    }
+    .concept-card.highlight-amber {
+      border-left: 4px solid var(--accent-amber);
+    }
+    .concept-card.highlight-rose {
+      border-left: 4px solid var(--accent-rose);
+    }
+    .concept-h4 {
+      font-size: 15px; font-weight: 800; color: var(--text-heading);
+      margin-bottom: 6px;
+    }
+    .concept-desc-hi {
+      font-size: 14px; color: var(--text-main); margin-bottom: 6px;
+    }
+    .concept-desc-en {
+      font-size: 13px; color: var(--text-muted); font-family: var(--font-english);
+      border-top: 1px dashed var(--border-subtle); padding-top: 6px;
+    }
+
+    /* Treaty Timeline / Table */
+    .treaty-table {
+      width: 100%; border-collapse: collapse; margin: 16px 0;
+      font-size: 14px;
+    }
+    .treaty-table th, .treaty-table td {
+      border: 1px solid var(--border-subtle); padding: 10px 14px; text-align: left;
+    }
+    .treaty-table th {
+      background: rgba(255, 255, 255, 0.06); color: var(--accent-sky); font-weight: 800;
+    }
+    .treaty-table tr:hover { background: rgba(255, 255, 255, 0.02); }
+
+    /* Interactive Quiz Styles */
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    }
+    .quiz-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px; flex-wrap: wrap; gap: 8px;
+    }
+    .q-number {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff; font-weight: 800; font-size: 12px;
+      padding: 3px 10px; border-radius: 6px;
+    }
+    .q-topic {
+      font-size: 12px; font-weight: 700; color: var(--accent-emerald);
+    }
+    .q-text-hi {
+      font-size: 16px; font-weight: 700; color: var(--text-heading);
+      margin-bottom: 4px; line-height: 1.5;
+    }
+    .q-text-en {
+      font-size: 14px; color: var(--text-muted); font-family: var(--font-english);
+      margin-bottom: 16px;
+    }
+
+    .options-grid {
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+    }
+    @media (min-width: 680px) {
+      .options-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .opt-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 10px; padding: 12px 14px;
+      text-align: left; cursor: pointer;
+      font-size: 14px; color: var(--text-main);
+      display: flex; align-items: flex-start; gap: 10px;
+      transition: all 0.2s ease;
+    }
+    .opt-btn:hover:not(:disabled) {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.5);
+      transform: translateX(3px);
+    }
+    .opt-btn.correct {
+      background: rgba(4, 170, 109, 0.22) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+      font-weight: 700;
+    }
+    .opt-btn.wrong {
+      background: rgba(244, 63, 94, 0.2) !important;
+      border-color: #f43f5e !important;
+      color: #fca5a5 !important;
+      animation: shake 0.3s;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      75% { transform: translateX(4px); }
+    }
+    .opt-letter {
+      width: 24px; height: 24px; border-radius: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 800; flex-shrink: 0;
+    }
+
+    .q-explanation {
+      margin-top: 14px; padding: 12px 16px;
+      background: rgba(4, 170, 109, 0.1);
+      border-left: 3px solid var(--accent-emerald);
+      border-radius: 8px; font-size: 13px;
+      display: none; animation: fadeIn 0.3s;
+    }
+
+    /* Fill in the blanks with pills */
+    .fill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px;
+      margin-bottom: 20px;
+    }
+    .fill-sentence {
+      font-size: 16px; line-height: 2.2; margin-bottom: 16px;
+    }
+    .fill-blank-drop {
+      display: inline-block; min-width: 120px; border-bottom: 2px dashed var(--accent-sky);
+      padding: 0 10px; color: var(--accent-emerald); font-weight: 800;
+      text-align: center; cursor: pointer;
+    }
+    .fill-blank-drop.filled {
+      border-bottom: 2px solid var(--accent-emerald);
+      background: rgba(4, 170, 109, 0.15); border-radius: 6px;
+    }
+    .pill-rack {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;
+    }
+    .word-pill {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); padding: 5px 14px; border-radius: 999px;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .word-pill:hover {
+      background: var(--accent-sky); color: #041226; transform: scale(1.05);
+    }
+    .word-pill.used {
+      opacity: 0.3; pointer-events: none;
+    }
+
+    /* Cartoon & HOTS Section */
+    .cartoon-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px; margin-bottom: 22px;
+    }
+    .cartoon-emblem-box {
+      background: rgba(0, 0, 0, 0.4); border: 1px dashed var(--border-subtle);
+      border-radius: 12px; padding: 24px; text-align: center; margin-bottom: 16px;
+    }
+    .cartoon-icon-big {
+      font-size: 54px; margin-bottom: 8px;
+    }
+    .cartoon-caption {
+      font-size: 14px; font-weight: 700; color: var(--accent-amber);
+    }
+
+    /* Solutions Section Accordion */
+    .sol-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 14px; margin-bottom: 16px; overflow: hidden;
+    }
+    .sol-head {
+      padding: 16px 20px; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+      transition: background 0.2s;
+    }
+    .sol-head:hover { background: rgba(255, 255, 255, 0.06); }
+    .sol-title {
+      font-size: 15px; font-weight: 800; color: var(--text-heading);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .sol-body {
+      padding: 20px; border-top: 1px solid var(--border-subtle);
+      display: block; font-size: 14.5px; line-height: 1.8;
+    }
+    .sol-points-list {
+      margin: 12px 0 12px 20px;
+    }
+    .sol-points-list li { margin-bottom: 8px; }
+    .sol-takeaway {
+      background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--accent-amber);
+      padding: 8px 14px; border-radius: 6px; font-size: 13px; color: #fde68a;
+      margin-top: 12px;
+    }
+
+    /* Embedded PDF Split Container */
+    .pdf-embed-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .pdf-toolbar {
+      padding: 12px 18px; background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .pdf-frame {
+      width: 100%; height: 750px; border: none; background: #1e293b;
+    }
+
+    /* Score Bar & Floating Confetti */
+    .score-summary-bar {
+      position: sticky; top: 62px; z-index: 40;
+      background: rgba(12, 21, 42, 0.95); backdrop-filter: blur(12px);
+      border: 1px solid var(--border-card); border-radius: 12px;
+      padding: 10px 18px; margin-bottom: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    }
+    body.light-theme .score-summary-bar {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Mobile Bottom Navigation */
+    .mobile-bottom-nav {
+      position: fixed; bottom: 0; left: 0; width: 100%;
+      background: rgba(5, 11, 24, 0.96); backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border-subtle);
+      display: flex; justify-content: space-around; align-items: center;
+      padding: 8px 6px; z-index: 200;
+    }
+    body.light-theme .mobile-bottom-nav {
+      background: rgba(255, 255, 255, 0.96); border-top: 1px solid #cbd5e1;
+    }
+    .mob-nav-item {
+      display: flex; flex-direction: column; align-items: center;
+      color: var(--text-muted); font-size: 11px; font-weight: 700;
+      text-decoration: none; cursor: pointer; padding: 4px 8px;
+      border-radius: 8px; transition: color 0.2s;
+    }
+    .mob-nav-item.active {
+      color: var(--accent-emerald); font-weight: 800;
+    }
+    .mob-nav-icon { font-size: 18px; margin-bottom: 2px; }
+
+    /* Hide language classes depending on mode */
+    body.mode-hindi-only .lang-en { display: none !important; }
+    body.mode-english-only .lang-hi { display: none !important; }
+
+    @media (max-width: 768px) {
+      .desktop-breadcrumb { display: none; }
+      .hero-title { font-size: 22px; }
+      .pdf-frame { height: 500px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Navigation Bar with Interactive Breadcrumbs -->
+  <nav class="top-nav">
+    <a href="/" class="brand-group">
+      <div class="brand-logo-emblem">🛡️</div>
+      <div class="brand-text-block">
+        <span class="brand-name">StudyGuide</span>
+        <span class="brand-sub">by Nextsem</span>
+      </div>
+    </a>
+
+    <!-- Interactive Desktop Breadcrumb -->
+    <div class="desktop-breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">❯</span>
+      <a href="/?class=12">Class 12</a>
+      <span class="sep">❯</span>
+      <a href="/?class=12&subject=c12-political-science">Political Science</a>
+      <span class="sep">❯</span>
+      <a href="/?class=12&subject=c12-political-science&book=lhps1">समकालीन विश्व राजनीति</a>
+      <span class="sep">❯</span>
+      <span class="current">Ch-5 समकालीन विश्व में सुरक्षा</span>
+    </div>
+
+    <div class="nav-actions">
+      <a href="/?class=12&subject=c12-political-science&book=lhps1&chapter=c12-pol-ch5" class="nav-btn pdf-launch" title="Open inside Core StudyGuide PDF Reader">
+        <span>📖 In-App PDF</span>
+      </a>
+      <button class="nav-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        🌙 Dark
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Header Banner -->
+    <header class="hero-card">
+      <div class="hero-badge-row">
+        <span class="badge-pill badge-emerald">NCERT Book Code: lhps105</span>
+        <span class="badge-pill badge-sky">Class 12 Political Science (समकालीन विश्व राजनीति)</span>
+        <span class="badge-pill badge-amber">NEP 2020 Aligned & CBSE Board Ready</span>
+      </div>
+      <h1 class="hero-title">
+        समकालीन विश्व में सुरक्षा
+        <span style="display:block; font-size: 0.65em; font-weight: 700; color: var(--accent-sky); font-family: var(--font-english); margin-top: 4px;">
+          Security in the Contemporary World (Chapter 5)
+        </span>
+      </h1>
+      <p class="hero-subtitle">
+        पारंपरिक बनाम अपारंपरिक सुरक्षा धारणाएँ, सैन्य खतरे, शक्ति संतुलन, निरस्त्रीकरण व अस्त्र-नियंत्रण (BWC, CWC, NPT, ABM), आतंकवाद, मानव सुरक्षा, वैश्विक दरिद्रता एवं भारत की बहुआयामी 4-स्तंभ सुरक्षा रणनीति।
+      </p>
+
+      <!-- Language & Audio Control Bar -->
+      <div class="controls-strip">
+        <div class="control-group">
+          <span class="control-label">भाषा मोड (Language):</span>
+          <button class="chip-btn active" id="btnLangBi" onclick="setLanguageMode('bilingual', this)">🌐 द्विभाषी (Bilingual)</button>
+          <button class="chip-btn" id="btnLangHi" onclick="setLanguageMode('hindi', this)">🇮🇳 हिंदी केवल</button>
+          <button class="chip-btn" id="btnLangEn" onclick="setLanguageMode('english', this)">🇬🇧 English Only</button>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">ऑडियो वाचक (Audio Reader):</span>
+          <button class="chip-btn" id="audioToggleBtn" onclick="toggleAudioReader()">🔊 पाठ सुनें (Listen)</button>
+          <button class="chip-btn" onclick="triggerConfetti()">🎉 उत्सव</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Navigation Tabs -->
+    <div class="tab-nav-bar">
+      <button class="tab-btn active" onclick="switchMainTab('tab-notes', this)">
+        📑 1. लाइन-दर-लाइन नोट्स (Line Notes)
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('tab-mcq', this)">
+        🧪 2. बहुविकल्पीय परीक्षा (MCQs Quiz)
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('tab-fill', this)">
+        ✏️ 3. पिल फिल-अप्स (Pill Blanks)
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('tab-cartoons', this)">
+        🖼️ 4. कार्टून व केस व्याख्या (Cartoons/HOTS)
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('tab-solutions', this)">
+        📝 5. NCERT अभ्यास हल (Solutions)
+      </button>
+      <button class="tab-btn" onclick="switchMainTab('tab-pdf', this)">
+        📖 6. मूल NCERT PDF (Live PDF)
+      </button>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TAB 1: DETAILED NOTES & CONCEPTS           -->
+    <!-- ========================================== -->
+    <section id="tab-notes" class="tab-content active">
+
+      <!-- Section 1 -->
+      <div class="section-box">
+        <div class="section-head">
+          <h2 class="section-title">
+            <span>🛡️ 1. सुरक्षा का बुनियादी अर्थ एवं पारंपरिक धारणा: बाहरी सुरक्षा</span>
+          </h2>
+          <span class="page-tag">NCERT पृष्ठ 99–102</span>
+        </div>
+
+        <div class="lang-hi">
+          <p><strong>सुरक्षा का अर्थ:</strong> बुनियादी स्तर पर सुरक्षा का अर्थ है <em>'खतरों से आज़ादी'</em> (Freedom from threats)। यद्यपि जीवन में हर समय खतरे होते हैं, किंतु राजनीति विज्ञान में केवल उन खतरों को सुरक्षा के दायरे में लाया जाता है जो किसी देश के <strong>केंद्रीय मूल्यों (Core Values)</strong> जैसे संप्रभुता (Sovereignty), स्वतंत्रता (Independence) और क्षेत्रीय अखंडता (Territorial Integrity) को नष्ट करने का सामर्थ्य रखते हों।</p>
+        </div>
+        <div class="lang-en">
+          <p><strong>Meaning of Security:</strong> At its most basic, security implies <em>freedom from threats</em>. In international politics, security relates only to extremely severe threats that endanger core values—such as sovereignty, territorial integrity, and political independence.</p>
+        </div>
+
+        <div class="concept-grid">
+          <div class="concept-card highlight-rose">
+            <h4 class="concept-h4">युद्ध में सरकार के 3 विकल्प (3 Choices in War)</h4>
+            <div class="lang-hi concept-desc-hi">
+              1. <strong>आत्मसमर्पण (Surrender):</strong> युद्ध छेड़े बिना शत्रु की मांग स्वीकार कर लेना।<br>
+              2. <strong>अपरोध (Deterrence):</strong> युद्ध की विभीषिका दिखाकर शत्रु को आक्रमण करने से रोकना।<br>
+              3. <strong>रक्षा (Defence):</strong> जब युद्ध छिड़ जाए तो आक्रमणकारी को पराजित करना या उसके सैन्य उद्देश्य विफल करना।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Governments have 3 choices: Surrender, Deterrence (preventing attacks by raising unbearable costs), and Defence (defeating the invader when war breaks out).
+            </div>
+          </div>
+
+          <div class="concept-card highlight-sky">
+            <h4 class="concept-h4">शक्ति संतुलन (Balance of Power)</h4>
+            <div class="lang-hi concept-desc-hi">
+              कोई भी राज्य अपने पड़ोसी या संभावित विरोधी को इतना शक्तिशाली नहीं बनने देना चाहता कि वह मनमानी कर सके। इसके लिए राष्ट्र अपनी आर्थिक स्थिति, तकनीकी शक्ति और सैन्य क्षमता में निरंतर संतुलन बनाए रखते हैं।
+            </div>
+            <div class="lang-en concept-desc-en">
+              States constantly assess the relative military, economic, and technological strength of neighbours to ensure no single power becomes overwhelmingly dominant.
+            </div>
+          </div>
+
+          <div class="concept-card highlight-emerald">
+            <h4 class="concept-h4">गठबंधन निर्माण (Alliance Building)</h4>
+            <div class="lang-hi concept-desc-hi">
+              समान हितों वाले राष्ट्र सैन्य हमले से बचने या साझा मुकाबला करने के लिए औपचारिक लिखित संधियां करते हैं। उदाहरण: शीतयुद्ध में नाटो (NATO - 1949) और वारसॉ पैक्ट (Warsaw Pact - 1955)।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Coalition of states formalised in treaties to deter or defend against joint military assault. Examples: NATO and Warsaw Pact.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section-box">
+        <div class="section-head">
+          <h2 class="section-title">
+            <span>⚔️ 2. पारंपरिक सुरक्षा के तरीके: सहयोग व संधियाँ</span>
+          </h2>
+          <span class="page-tag">NCERT पृष्ठ 103–105</span>
+        </div>
+
+        <div class="lang-hi">
+          <p>पारंपरिक सुरक्षा में भी सहयोग की संभावनाओं को स्वीकार किया गया है। इसके प्रमुख तीन उपाय हैं: <strong>निरस्त्रीकरण (Disarmament)</strong>, <strong>अस्त्र नियंत्रण (Arms Control)</strong> और <strong>विश्वास बहाली (Confidence Building)</strong>।</p>
+        </div>
+        <div class="lang-en">
+          <p>Traditional security recognizes cooperation through disarmament, arms control agreements, and confidence-building measures (CBMs).</p>
+        </div>
+
+        <table class="treaty-table">
+          <thead>
+            <tr>
+              <th>संधि का नाम (Treaty)</th>
+              <th>वर्ष (Year)</th>
+              <th>उद्देश्य एवं प्रभाव (Objective & Key Mandate)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>BWC (जैविक हथियार संधि)</strong></td>
+              <td>1972</td>
+              <td>जैविक हथियारों के उत्पादन और रखने पर पूर्ण प्रतिबंध (155 से अधिक देशों ने हस्ताक्षर किए)।</td>
+            </tr>
+            <tr>
+              <td><strong>CWC (रासायनिक हथियार संधि)</strong></td>
+              <td>1992</td>
+              <td>रासायनिक हथियारों के निर्माण व भंडारण को प्रतिबंधित करना (181 से अधिक देश शामिल)।</td>
+            </tr>
+            <tr>
+              <td><strong>ABM संधि (Anti-Ballistic Missile)</strong></td>
+              <td>1972</td>
+              <td>अमेरिका और सोवियत संघ द्वारा बैलिस्टिक मिसाइल रक्षा प्रणाली को सीमित करना (अमेरिका 2002 में अलग हुआ)।</td>
+            </tr>
+            <tr>
+              <td><strong>NPT (परमाणु अप्रसार संधि)</strong></td>
+              <td>1968</td>
+              <td>केवल 1 जनवरी 1967 से पूर्व परमाणु परीक्षण करने वाले 5 देशों (P5) को परमाणु हथियार रखने की अनुमति दी; अन्य पर रोक। भारत ने इसे भेदभावपूर्ण मानकर हस्ताक्षर से मना किया।</td>
+            </tr>
+            <tr>
+              <td><strong>SALT-I & II / START-I & II</strong></td>
+              <td>1972–1993</td>
+              <td>अमेरिका और यूएसएसआर के रणनीतिक परमाणु हथियारों की संख्या को सीमित एवं कम करने की द्विपक्षीय संधियाँ।</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section-box">
+        <div class="section-head">
+          <h2 class="section-title">
+            <span>🌐 3. अपारंपरिक सुरक्षा: मानव सुरक्षा एवं वैश्विक सुरक्षा</span>
+          </h2>
+          <span class="page-tag">NCERT पृष्ठ 106–109</span>
+        </div>
+
+        <div class="concept-grid">
+          <div class="concept-card highlight-amber">
+            <h4 class="concept-h4">मानव सुरक्षा (Human Security)</h4>
+            <div class="lang-hi concept-desc-hi">
+              मानव सुरक्षा का केंद्र बिंदु <strong>'राज्य'</strong> नहीं बल्कि <strong>'व्यक्ति'</strong> है।<br>
+              • <em>संकीर्ण अवधारणा:</em> हिंसक खतरों से सुरक्षा (Freedom from fear).<br>
+              • <em>व्यापक अवधारणा:</em> भूख, महामारी और प्राकृतिक आपदाओं से मुक्ति (Freedom from want and hazard).
+            </div>
+            <div class="lang-en concept-desc-en">
+              Shifts focus from territorial defence of state to protection of individuals. Includes both freedom from fear and freedom from want.
+            </div>
+          </div>
+
+          <div class="concept-card highlight-purple">
+            <h4 class="concept-h4">वैश्विक सुरक्षा (Global Security)</h4>
+            <div class="lang-hi concept-desc-hi">
+              ऐसे वैश्विक खतरे जो किसी एक राष्ट्र की सीमाओं तक सीमित नहीं हैं और जिनका समाधान कोई एक देश अकेले नहीं कर सकता। उदाहरण: <strong>ग्लोबल वार्मिंग (Global Warming)</strong>, अंतरराष्ट्रीय आतंकवाद, एड्स/कोविड-19 महामारियाँ।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Threats of global nature requiring international cooperation: global warming, pandemics, trans-national cyber terrorism.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section-box">
+        <div class="section-head">
+          <h2 class="section-title">
+            <span>⚠️ 4. खतरों के नए स्रोत (New Sources of Threats)</span>
+          </h2>
+          <span class="page-tag">NCERT पृष्ठ 110–112</span>
+        </div>
+
+        <div class="concept-grid">
+          <div class="concept-card highlight-rose">
+            <h4 class="concept-h4">1. आतंकवाद (Terrorism)</h4>
+            <div class="lang-hi concept-desc-hi">
+              राजनीतिक उद्देश्यों की पूर्ति हेतु जानबूझकर निर्दोष नागरिकों को आतंकित करना। 11 सितंबर 2001 (9/11) अमेरिका के वर्ल्ड ट्रेड सेंटर पर हमला और 26/11 मुंबई हमला इसके ज्वलंत उदाहरण हैं।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Systematic political violence targeting civilians to terrorize societies (e.g., 9/11 in USA, 26/11 in Mumbai).
+            </div>
+          </div>
+
+          <div class="concept-card highlight-emerald">
+            <h4 class="concept-h4">2. मानवाधिकार हनन (Human Rights Violations)</h4>
+            <div class="lang-hi concept-desc-hi">
+              तानाशाही शासनों या जातीय संघर्षों में निर्दोष जनता का दमन। उदाहरण: 1994 में रवांडा में तुत्सी समुदाय का नरसंहार जहाँ कुछ ही सप्ताह में 5 लाख लोग मारे गए।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Genocide and suppression of basic civil liberties, such as the 1994 Rwandan genocide of Tutsis.
+            </div>
+          </div>
+
+          <div class="concept-card highlight-sky">
+            <h4 class="concept-h4">3. वैश्विक निर्धनता (Global Poverty)</h4>
+            <div class="lang-hi concept-desc-hi">
+              उत्तरी गोलार्ध (विकसित देश) धनवान है जबकि दक्षिणी गोलार्ध (विकासशील देश) तीव्र जनसंख्या वृद्धि और भीषण गरीबी से जूझ रहा है। इससे असुरक्षा और संघर्ष बढ़ते हैं।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Widening North-South divide; population growth in the Global South exacerbating resource scarcity and armed conflicts.
+            </div>
+          </div>
+
+          <div class="concept-card highlight-amber">
+            <h4 class="concept-h4">4. शरणार्थी बनाम अप्रवासी (Refugees vs Migrants)</h4>
+            <div class="lang-hi concept-desc-hi">
+              <strong>शरणार्थी (Refugees):</strong> वे लोग जो युद्ध, प्राकृतिक आपदा या राजनीतिक उत्पीड़न के भय से अपना देश छोड़ने पर विवश होते हैं (अंतरराष्ट्रीय कानून उन्हें संरक्षण देता है)।<br>
+              <strong>अप्रवासी (Migrants):</strong> जो अपनी मर्जी से बेहतर आजीविका के लिए दूसरे देश जाते हैं।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Refugees flee war/persecution involuntarily (protected under international conventions), while migrants move voluntarily for economic opportunities.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section-box">
+        <div class="section-head">
+          <h2 class="section-title">
+            <span>🇮🇳 5. भारत की सुरक्षा रणनीति के चार प्रमुख घटक (4 Pillars of India's Security)</span>
+          </h2>
+          <span class="page-tag">NCERT पृष्ठ 113–115</span>
+        </div>
+
+        <div class="concept-grid">
+          <div class="concept-card highlight-emerald">
+            <h4 class="concept-h4">घटक 1: सैन्य क्षमता का सुदृढ़ीकरण (Military Strength)</h4>
+            <div class="lang-hi concept-desc-hi">
+              भारत अपने पड़ोसियों (पाकिस्तान से 1947, 1965, 1971, 1999 और चीन से 1962 में युद्ध) से घिरे होने के कारण सैन्य दृष्टि से मजबूत बना। 1974 व 1998 में परमाणु परीक्षण इसी रणनीति का हिस्सा था।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Building robust defense capabilities and nuclear deterrence (1974 & 1998 tests) to counter regional threats.
+            </div>
+          </div>
+
+          <div class="concept-card highlight-sky">
+            <h4 class="concept-h4">घटक 2: अंतरराष्ट्रीय नियमों व संस्थाओं का संवर्धन (Global Norms)</h4>
+            <div class="lang-hi concept-desc-hi">
+              जवाहरलाल नेहरू द्वारा गुटनिरपेक्षता (NAM) का नेतृत्व, सार्वभौमिक निरस्त्रीकरण की मांग, क्योटो प्रोटोकॉल का समर्थन और संयुक्त राष्ट्र शांति सेना में भागीदारी।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Strengthening multilateral institutions (UN), advocating universal non-discriminatory disarmament, and Non-Aligned Movement.
+            </div>
+          </div>
+
+          <div class="concept-card highlight-amber">
+            <h4 class="concept-h4">घटक 3: आंतरिक सुरक्षा चुनौतियों का समाधान (Internal Unity)</h4>
+            <div class="lang-hi concept-desc-hi">
+              पूर्वोत्तर (नागालैंड, मिजोरम), पंजाब और कश्मीर में अलगाववादी आंदोलनों का सामना करते हुए लोकतांत्रिक प्रक्रियाओं के माध्यम से राष्ट्रीय एकता व अखंडता की रक्षा करना।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Safeguarding national cohesion by resolving separatist challenges in the Northeast, Punjab, and Jammu & Kashmir through constitutional democracy.
+            </div>
+          </div>
+
+          <div class="concept-card highlight-rose">
+            <h4 class="concept-h4">घटक 4: तीव्र एवं समावेशी आर्थिक विकास (Economic Upliftment)</h4>
+            <div class="lang-hi concept-desc-hi">
+              अर्थव्यवस्था को इस प्रकार विकसित करना कि विशाल जनसमूह को गरीबी और भूख से मुक्ति मिले और सामाजिक असमानता कम हो।
+            </div>
+            <div class="lang-en concept-desc-en">
+              Rapid economic development to eliminate poverty, ensure human security, and bridge domestic inequality.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: INTERACTIVE MCQS QUIZ               -->
+    <!-- ========================================== -->
+    <section id="tab-mcq" class="tab-content">
+      <div class="score-summary-bar">
+        <div>
+          <span style="font-weight: 800; color: var(--accent-emerald);">🎯 लाइव स्कोर:</span>
+          <span id="scoreDisplay" style="font-size: 18px; font-weight: 900; margin-left: 6px;">0 / 12</span>
+        </div>
+        <div style="font-size: 13px; color: var(--text-muted);">
+          सटीकता: <span id="accuracyPercent" style="color: var(--accent-sky); font-weight: 800;">0%</span>
+        </div>
+        <button class="chip-btn" onclick="resetQuiz()">🔄 रीसेट करें</button>
+      </div>
+
+      <div id="quizContainer">
+        <!-- MCQs will be injected or rendered here -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: FILL IN THE BLANKS WITH PILLS       -->
+    <!-- ========================================== -->
+    <section id="tab-fill" class="tab-content">
+      <div class="section-box">
+        <h3 style="color: var(--accent-amber); margin-bottom: 12px; font-size: 18px;">
+          ✏️ पिल-सिलेक्शन मोड: उपयुक्त शब्द पर क्लिक करके रिक्त स्थान भरें
+        </h3>
+        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">
+          नीचे दिए गए वाक्यों में खाली स्थान भरने के लिए दिए गए रंगीन पिल्स पर क्लिक करें। कोई टाइपिंग करने की आवश्यकता नहीं है!
+        </p>
+
+        <!-- Item 1 -->
+        <div class="fill-card">
+          <div class="fill-sentence">
+            1. जैविक हथियार संधि (BWC) वर्ष <span class="fill-blank-drop" id="blank1" onclick="clearBlank('blank1', 'pill_1972')">[____]</span> में हस्ताक्षरित हुई थी, जिसमें 155 से अधिक देश शामिल हैं।
+          </div>
+          <div class="pill-rack">
+            <button class="word-pill" id="pill_1972" onclick="fillBlank('blank1', '1972', 'pill_1972', true)">1972</button>
+            <button class="word-pill" id="pill_1992" onclick="fillBlank('blank1', '1992', 'pill_1992', false)">1992</button>
+            <button class="word-pill" id="pill_1968" onclick="fillBlank('blank1', '1968', 'pill_1968', false)">1968</button>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="fill-card">
+          <div class="fill-sentence">
+            2. युद्ध की आशंका को रोकने के लिए अपनी सैन्य क्षमता बढ़ाकर शत्रु को विवश करने की नीति को <span class="fill-blank-drop" id="blank2" onclick="clearBlank('blank2', 'pill_deter')">[____]</span> (Deterrence) कहा जाता है।
+          </div>
+          <div class="pill-rack">
+            <button class="word-pill" id="pill_deter" onclick="fillBlank('blank2', 'अपरोध', 'pill_deter', true)">अपरोध</button>
+            <button class="word-pill" id="pill_surr" onclick="fillBlank('blank2', 'आत्मसमर्पण', 'pill_surr', false)">आत्मसमर्पण</button>
+            <button class="word-pill" id="pill_allian" onclick="fillBlank('blank2', 'गठबंधन', 'pill_allian', false)">गठबंधन</button>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="fill-card">
+          <div class="fill-sentence">
+            3. रासायनिक हथियार संधि (CWC) वर्ष <span class="fill-blank-drop" id="blank3" onclick="clearBlank('blank3', 'pill_1992_cwc')">[____]</span> में सम्पन्न हुई जिसमें रासायनिक हथियारों पर रोक लगाई गई।
+          </div>
+          <div class="pill-rack">
+            <button class="word-pill" id="pill_1992_cwc" onclick="fillBlank('blank3', '1992', 'pill_1992_cwc', true)">1992</button>
+            <button class="word-pill" id="pill_1975_cwc" onclick="fillBlank('blank3', '1975', 'pill_1975_cwc', false)">1975</button>
+            <button class="word-pill" id="pill_2001_cwc" onclick="fillBlank('blank3', '2001', 'pill_2001_cwc', false)">2001</button>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="fill-card">
+          <div class="fill-sentence">
+            4. भारत ने वर्ष <span class="fill-blank-drop" id="blank4" onclick="clearBlank('blank4', 'pill_1998')">[____]</span> में पोखरण में सफल परमाणु परीक्षण कर अपनी न्यूनतम विश्वसनीय परमाणु निवारक क्षमता सिद्ध की।
+          </div>
+          <div class="pill-rack">
+            <button class="word-pill" id="pill_1998" onclick="fillBlank('blank4', '1998', 'pill_1998', true)">1998</button>
+            <button class="word-pill" id="pill_1991" onclick="fillBlank('blank4', '1991', 'pill_1991', false)">1991</button>
+            <button class="word-pill" id="pill_1985" onclick="fillBlank('blank4', '1985', 'pill_1985', false)">1985</button>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="fill-card">
+          <div class="fill-sentence">
+            5. युद्ध, हिंसा या उत्पीड़न के कारण मजबूरी में अपना देश छोड़कर भागने वाले व्यक्तियों को <span class="fill-blank-drop" id="blank5" onclick="clearBlank('blank5', 'pill_sharan')">[____]</span> कहा जाता है।
+          </div>
+          <div class="pill-rack">
+            <button class="word-pill" id="pill_sharan" onclick="fillBlank('blank5', 'शरणार्थी', 'pill_sharan', true)">शरणार्थी (Refugee)</button>
+            <button class="word-pill" id="pill_apravas" onclick="fillBlank('blank5', 'अप्रवासी', 'pill_apravas', false)">अप्रवासी (Migrant)</button>
+            <button class="word-pill" id="pill_tourist" onclick="fillBlank('blank5', 'पर्यटक', 'pill_tourist', false)">पर्यटक</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: CARTOONS & NEP 2020 COMPETENCY      -->
+    <!-- ========================================== -->
+    <section id="tab-cartoons" class="tab-content">
+      <!-- Cartoon 1 -->
+      <div class="cartoon-container">
+        <div class="section-head">
+          <h3 class="section-title">🖼️ NCERT कार्टून 1: विश्व सैन्य खर्च बनाम संयुक्त राष्ट्र का बजट</h3>
+          <span class="page-tag">NCERT पृष्ठ 101</span>
+        </div>
+        <div class="cartoon-emblem-box">
+          <div class="cartoon-icon-big">💰 💣 ⚖️ 🕊️</div>
+          <div class="cartoon-caption">"Military Budget Goliath vs UN Peacekeeping David"</div>
+        </div>
+        <div class="lang-hi">
+          <p><strong>कार्टून का संदेश:</strong> दुनिया भर के शक्तिशाली देश अपनी सेना और हथियारों पर अरबों-खरबों डॉलर खर्च करते हैं, जबकि संयुक्त राष्ट्र संघ (UNO) को वैश्विक शांति और भुखमरी मिटाने के लिए आवश्यक बजट का एक छोटा सा हिस्सा भी प्राप्त नहीं होता। यह दर्शाता है कि दुनिया आज भी अपारंपरिक मानवीय सुरक्षा के स्थान पर पारंपरिक हथियारों की होड़ को प्राथमिकता देती है।</p>
+          <div class="sol-takeaway">
+            💡 <strong>बोर्ड परीक्षा टिप:</strong> जब भी यह कार्टून पूछा जाए, 'सुरक्षा की पारंपरिक धारणा (सैन्य वर्चस्व)' और 'सहयोगी सुरक्षा (संयुक्त राष्ट्र की शांति स्थापना)' का तुलनात्मक उल्लेख करें।
+          </div>
+        </div>
+        <div class="lang-en">
+          <p><strong>Cartoon Interpretation:</strong> World powers allocate trillions toward destructive military weaponry while starvation, climate displacement, and UN peacekeeping face chronic underfunding. It critiques national priorities emphasizing traditional armament over cooperative human welfare.</p>
+        </div>
+      </div>
+
+      <!-- Cartoon 2 -->
+      <div class="cartoon-container">
+        <div class="section-head">
+          <h3 class="section-title">🖼️ NCERT कार्टून 2: आधुनिक आतंकवाद और अमेरिकी सुरक्षा बजट</h3>
+          <span class="page-tag">NCERT पृष्ठ 110</span>
+        </div>
+        <div class="cartoon-emblem-box">
+          <div class="cartoon-icon-big">🦅 🛡️ ✈️ 🌐</div>
+          <div class="cartoon-caption">"Global War on Terrorism & Civilian Liberties"</div>
+        </div>
+        <div class="lang-hi">
+          <p><strong>कार्टून का संदेश:</strong> 9/11 की घटना के बाद अमेरिका द्वारा शुरू किए गए 'आतंकवाद के खिलाफ वैश्विक युद्ध' (Global War on Terror) ने राष्ट्रीय सीमाओं को लांघ दिया। लेकिन आतंकवाद से निपटने के नाम पर मानवाधिकारों का उल्लंघन हुआ और ग्वानतानामो बे जैसे गैर-कानूनी बंदी गृह बनाए गए।</p>
+          <div class="sol-takeaway">
+            💡 <strong>HOTS प्रश्न:</strong> क्या आतंकवाद का मुकाबला करने के लिए अंतरराष्ट्रीय मानवाधिकार कानूनों को निलंबित किया जाना उचित है? उत्तर: नहीं, क्योंकि लोकतांत्रिक मूल्यों और मानवाधिकारों की रक्षा ही अंततः सुरक्षा का मूल उद्देश्य है।
+          </div>
+        </div>
+      </div>
+
+      <!-- Competency Assertion Reasoning -->
+      <div class="section-box">
+        <h3 style="color: var(--accent-sky); margin-bottom: 14px;">🎯 CBSE 2025–26 अभिकथन एवं तर्क (Assertion-Reasoning)</h3>
+        
+        <div class="concept-card highlight-rose" style="margin-bottom: 16px;">
+          <p><strong>अभिकथन (A):</strong> भारत ने 1968 की परमाणु अप्रसार संधि (NPT) पर हस्ताक्षर करने से इनकार कर दिया।</p>
+          <p><strong>कारण (R):</strong> भारत इस संधि को भेदभावपूर्ण मानता है क्योंकि यह 1 जनवरी 1967 से पूर्व परमाणु परीक्षण कर चुके 5 देशों (P5) को परमाणु हथियार रखने की छूट देती है और अन्य पर प्रतिबंध लगाती है।</p>
+          <div style="margin-top: 10px; font-size: 14px; color: #34d399; font-weight: 700;">
+            ✅ सही विकल्प: (A) और (R) दोनों सत्य हैं और (R), (A) की सही व्याख्या करता है।
+          </div>
+        </div>
+
+        <div class="concept-card highlight-emerald">
+          <p><strong>अभिकथन (A):</strong> सुरक्षा की अपारंपरिक धारणा में केवल सैन्य खतरों को शामिल किया जाता है।</p>
+          <p><strong>कारण (R):</strong> वैश्विक तापवृद्धि (ग्लोबल वार्मिंग) और महामारियों का समाधान कोई भी देश अकेले अपने सैन्य बल से नहीं कर सकता।</p>
+          <div style="margin-top: 10px; font-size: 14px; color: #f87171; font-weight: 700;">
+            ✅ सही विकल्प: अभिकथन (A) असत्य है, लेकिन कारण (R) सत्य है। (अपारंपरिक धारणा में मानव सुरक्षा, भूख, गरीबी, महामारियाँ शामिल हैं)।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: NCERT TEXTBOOK EXERCISE SOLUTIONS   -->
+    <!-- ========================================== -->
+    <section id="tab-solutions" class="tab-content">
+      <div class="section-box">
+        <h3 style="color: var(--accent-emerald); font-size: 19px; margin-bottom: 14px;">
+          📝 NCERT पाठ्यपुस्तक अभ्यास: विस्तृत प्रश्नोत्तर (Bilingual Solutions)
+        </h3>
+
+        <!-- Question 1 -->
+        <div class="sol-card">
+          <div class="sol-head" onclick="toggleAccordion('sol1')">
+            <span class="sol-title">📌 प्रश्न 1: सुरक्षा की पारंपरिक और अपारंपरिक धारणा में क्या अंतर है?</span>
+            <span id="sol1_icon">▼</span>
+          </div>
+          <div class="sol-body" id="sol1">
+            <div class="lang-hi">
+              <p><strong>उत्तर:</strong> सुरक्षा की पारंपरिक और अपारंपरिक धारणाओं में निम्नलिखित मुख्य अंतर हैं:</p>
+              <ul class="sol-points-list">
+                <li><strong>1. खतरे का स्रोत:</strong> पारंपरिक सुरक्षा में खतरा मुख्य रूप से बाहरी राष्ट्रों के सैन्य आक्रमण से होता है। जबकि अपारंपरिक सुरक्षा में खतरे आतंकवाद, गरीबी, पर्यावरण ह्रास, महामारियों और मानवाधिकार हनन जैसे गैर-सैन्य स्रोतों से आते हैं।</li>
+                <li><strong>2. सुरक्षा का केंद्र (केन्द्रीय मूल्य):</strong> पारंपरिक सुरक्षा का केंद्र 'राज्य' और उसकी क्षेत्रीय संप्रभुता होती है। अपारंपरिक सुरक्षा का केंद्र 'व्यक्ति' (मानव सुरक्षा) तथा समस्त मानवता (वैश्विक सुरक्षा) होती है।</li>
+                <li><strong>3. सुरक्षा के उपाय:</strong> पारंपरिक सुरक्षा में सेना, शक्ति संतुलन, गठबंधन और युद्ध की तैयारी मुख्य साधन हैं। अपारंपरिक सुरक्षा में अंतरराष्ट्रीय सहयोग, आर्थिक विकास, मानवीय सहायता और संयुक्त राष्ट्र की नीतियां प्रमुख हैं।</li>
+              </ul>
+              <div class="sol-takeaway">
+                🎯 <strong>Key Takeaway:</strong> Traditional security is state-centric and military-focused; Non-traditional security is human-centric and multi-dimensional.
+              </div>
+            </div>
+            <div class="lang-en">
+              <p><strong>English Translation:</strong> Traditional security deals with military threats to state sovereignty. Non-traditional security addresses transnational challenges like hunger, pandemics, and terrorism that endanger individual human survival.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="sol-card">
+          <div class="sol-head" onclick="toggleAccordion('sol2')">
+            <span class="sol-title">📌 प्रश्न 2: 'शक्ति संतुलन' क्या है? कोई देश इसे कैसे कायम करता है?</span>
+            <span id="sol2_icon">▼</span>
+          </div>
+          <div class="sol-body" id="sol2">
+            <div class="lang-hi">
+              <p><strong>उत्तर:</strong> 'शक्ति संतुलन' (Balance of Power) का अर्थ है कि कोई भी पड़ोसी देश या प्रतिद्वंद्वी इतना अधिक शक्तिशाली न हो जाए कि वह भविष्य में अन्य देशों की संप्रभुता को दबा सके।</p>
+              <p><strong>इसे कायम रखने के तरीके:</strong></p>
+              <ul class="sol-points-list">
+                <li><strong>1. सैन्य शक्ति का विस्तार:</strong> अपनी सेना, नौसेना व वायुसेना को आधुनिक हथियारों और प्रौद्योगिकी से सुसज्जित करना।</li>
+                <li><strong>2. आर्थिक विकास:</strong> आधुनिक युद्ध में आर्थिक शक्ति ही सैन्य शक्ति की रीढ़ होती है। मजबूत अर्थव्यवस्था से रक्षा बजट और संसाधन जुटाए जाते हैं।</li>
+                <li><strong>3. गठबंधन निर्माण:</strong> समान हित वाले मित्र राष्ट्रों के साथ द्विपक्षीय या बहुपक्षीय सैन्य समझौते करना।</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="sol-card">
+          <div class="sol-head" onclick="toggleAccordion('sol3')">
+            <span class="sol-title">📌 प्रश्न 3: सैन्य खतरे की स्थिति में किसी सरकार के पास क्या विकल्प होते हैं?</span>
+            <span id="sol3_icon">▼</span>
+          </div>
+          <div class="sol-body" id="sol3">
+            <div class="lang-hi">
+              <p><strong>उत्तर:</strong> पारंपरिक सुरक्षा के अंतर्गत युद्ध की स्थिति में किसी देश की सरकार के पास तीन बुनियादी विकल्प होते हैं:</p>
+              <ul class="sol-points-list">
+                <li><strong>1. आत्मसमर्पण करना (Surrender):</strong> युद्ध छेड़े बिना विरोधी देश की सभी शर्तें मान लेना (हालाँकि कोई भी स्वाभिमानी देश इसे अपनी घोषित नीति नहीं बनाता)।</li>
+                <li><strong>2. अपरोध की नीति (Deterrence):</strong> विरोधी देश को यह जताना कि युद्ध करने की स्थिति में उसे असहनीय विनाश और नुकसान झेलना पड़ेगा, जिससे वह युद्ध का इरादा ही छोड़ दे।</li>
+                <li><strong>3. रक्षा करना (Defence):</strong> यदि युद्ध शुरू हो ही जाए, तो अपनी सेना के दम पर आक्रमणकारी को हराना या उसकी सैन्य क्षमताओं को नष्ट करना ताकि वह अपने लक्ष्य में सफल न हो सके।</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="sol-card">
+          <div class="sol-head" onclick="toggleAccordion('sol4')">
+            <span class="sol-title">📌 प्रश्न 4: भारत की सुरक्षा नीति के चार प्रमुख घटकों का संक्षेप में वर्णन कीजिए।</span>
+            <span id="sol4_icon">▼</span>
+          </div>
+          <div class="sol-body" id="sol4">
+            <div class="lang-hi">
+              <p><strong>उत्तर:</strong> भारत की सुरक्षा नीति चार प्रमुख स्तंभों पर आधारित है:</p>
+              <ol class="sol-points-list">
+                <li><strong>सैन्य क्षमता सुदृढ़ करना:</strong> पाकिस्तान और चीन के आक्रमणों के कटु अनुभवों के बाद भारत ने अपनी रक्षा पंक्ति को सशक्त किया और 1974 व 1998 में परमाणु परीक्षण किए।</li>
+                <li><strong>अंतरराष्ट्रीय नियमों और संस्थाओं का समर्थन:</strong> गुटनिरपेक्षता की नीति का संचालन, सार्वभौमिक निःशस्त्रीकरण की मांग और संयुक्त राष्ट्र चार्टर का पालन करना।</li>
+                <li><strong>आंतरिक सुरक्षा और राष्ट्रीय एकता:</strong> मिजोरम, नागालैंड, पंजाब और कश्मीर जैसी आंतरिक अलगाववादी चुनौतियों को लोकतांत्रिक संवाद और संवैधानिक ढांचे के तहत हल करना।</li>
+                <li><strong>तीव्र आर्थिक विकास:</strong> देश के नागरिकों को गरीबी, बेरोजगारी और भुखमरी से मुक्ति दिलाकर एक समतामूलक और आत्मनिर्भर समाज बनाना।</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: EMBEDDED OFFICIAL NCERT PDF         -->
+    <!-- ========================================== -->
+    <section id="tab-pdf" class="tab-content">
+      <div class="pdf-embed-wrapper">
+        <div class="pdf-toolbar">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:20px;">📄</span>
+            <strong>NCERT Textbook Chapter 5: lhps105.pdf</strong>
+            <span class="page-tag">समकालीन विश्व में सुरक्षा</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href="/pdf/Class 12/12th Samkalin Vishwa Rajniti/lhps105.pdf" target="_blank" class="nav-btn primary">
+              ↗️ नए टैब में खोलें (Full Tab)
+            </a>
+            <a href="/pdf/Class 12/12th Samkalin Vishwa Rajniti/lhps105.pdf" download="NCERT_Class12_PolSci_Ch5_lhps105.pdf" class="nav-btn">
+              ⬇️ डाउनलोड PDF
+            </a>
+          </div>
+        </div>
+        <iframe
+          src="/pdf/Class 12/12th Samkalin Vishwa Rajniti/lhps105.pdf#toolbar=1&navpanes=0"
+          class="pdf-frame"
+          title="NCERT Class 12 Political Science Chapter 5 PDF"
+        ></iframe>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar with Theme Toggle -->
+  <div class="mobile-bottom-nav">
+    <a href="/" class="mob-nav-item">
+      <span class="mob-nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="/?class=12" class="mob-nav-item">
+      <span class="mob-nav-icon">📚</span>
+      <span>Class 12</span>
+    </a>
+    <div class="mob-nav-item active" onclick="switchMainTab('tab-notes', document.querySelectorAll('.tab-btn')[0])">
+      <span class="mob-nav-icon">🛡️</span>
+      <span>Ch-5 Studio</span>
+    </div>
+    <div class="mob-nav-item" onclick="switchMainTab('tab-mcq', document.querySelectorAll('.tab-btn')[1])">
+      <span class="mob-nav-icon">🧪</span>
+      <span>MCQs</span>
+    </div>
+    <div class="mob-nav-item" id="mobThemeToggleBtn" onclick="toggleTheme()">
+      <span class="mob-nav-icon" id="mobThemeIcon">🌙</span>
+      <span id="mobThemeText">थीम</span>
+    </div>
+  </div>
+
+  <!-- JavaScript Engine -->
+  <script>
+    // Theme Engine
+    const THEME_KEY = 'nextsem_ncert_theme';
+    function applyTheme(theme) {
+      const isLight = theme === 'light';
+      document.body.classList.toggle('light-theme', isLight);
+      localStorage.setItem(THEME_KEY, theme);
+      
+      const themeBtn = document.getElementById('themeToggleBtn');
+      if (themeBtn) themeBtn.textContent = isLight ? '☀️ Light' : '🌙 Dark';
+
+      const mobIcon = document.getElementById('mobThemeIcon');
+      const mobText = document.getElementById('mobThemeText');
+      if (mobIcon) mobIcon.textContent = isLight ? '☀️' : '🌙';
+      if (mobText) mobText.textContent = isLight ? 'Light' : 'Dark';
+    }
+
+    const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
+    applyTheme(savedTheme);
+
+    function toggleTheme() {
+      const isCurrentlyLight = document.body.classList.contains('light-theme');
+      applyTheme(isCurrentlyLight ? 'dark' : 'light');
+    }
+
+    // Language Modes: 'bilingual' | 'hindi' | 'english'
+    function setLanguageMode(mode, btn) {
+      document.querySelectorAll('.controls-strip .chip-btn').forEach(b => {
+        if (b.id && b.id.startsWith('btnLang')) b.classList.remove('active');
+      });
+      if (btn) btn.classList.add('active');
+
+      document.body.classList.remove('mode-hindi-only', 'mode-english-only');
+      if (mode === 'hindi') {
+        document.body.classList.add('mode-hindi-only');
+      } else if (mode === 'english') {
+        document.body.classList.add('mode-english-only');
+      }
+    }
+
+    // Main Tab Switcher
+    function switchMainTab(tabId, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      const activeContent = document.getElementById(tabId);
+      if (activeContent) activeContent.classList.add('active');
+
+      window.scrollTo({ top: 280, behavior: 'smooth' });
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(id) {
+      const body = document.getElementById(id);
+      const icon = document.getElementById(id + '_icon');
+      if (!body) return;
+      if (body.style.display === 'none' || body.classList.contains('collapsed')) {
+        body.style.display = 'block';
+        body.classList.remove('collapsed');
+        if (icon) icon.textContent = '▲';
+      } else {
+        body.style.display = 'none';
+        body.classList.add('collapsed');
+        if (icon) icon.textContent = '▼';
+      }
+    }
+
+    // Fill in the blanks logic
+    function fillBlank(blankId, text, pillId, isCorrect) {
+      const blank = document.getElementById(blankId);
+      const pill = document.getElementById(pillId);
+      if (!blank || !pill) return;
+
+      blank.textContent = text;
+      blank.classList.add('filled');
+      pill.classList.add('used');
+
+      if (isCorrect) {
+        blank.style.borderColor = '#10b981';
+        blank.style.color = '#34d399';
+        triggerConfetti(0.3);
+      } else {
+        blank.style.borderColor = '#f43f5e';
+        blank.style.color = '#f87171';
+      }
+    }
+
+    function clearBlank(blankId, pillId) {
+      const blank = document.getElementById(blankId);
+      const pill = document.getElementById(pillId);
+      if (blank) {
+        blank.textContent = '[____]';
+        blank.classList.remove('filled');
+        blank.style.borderColor = '';
+        blank.style.color = '';
+      }
+      if (pill) {
+        pill.classList.remove('used');
+      }
+    }
+
+    // Confetti Engine
+    function triggerConfetti(scalar = 1) {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: Math.floor(60 * scalar),
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    // Audio TTS Speech Synthesizer
+    let isSpeaking = false;
+    function toggleAudioReader() {
+      const synth = window.speechSynthesis;
+      const btn = document.getElementById('audioToggleBtn');
+      if (!synth) {
+        alert('Browser does not support Speech Synthesis.');
+        return;
+      }
+      if (isSpeaking) {
+        synth.cancel();
+        isSpeaking = false;
+        if (btn) btn.textContent = '🔊 पाठ सुनें (Listen)';
+        return;
+      }
+
+      const activeTab = document.querySelector('.tab-content.active');
+      const text = activeTab ? activeTab.innerText.substring(0, 800) : 'समकालीन विश्व में सुरक्षा';
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'hi-IN';
+      utterance.rate = 0.95;
+      utterance.onend = () => {
+        isSpeaking = false;
+        if (btn) btn.textContent = '🔊 पाठ सुनें (Listen)';
+      };
+      synth.speak(utterance);
+      isSpeaking = true;
+      if (btn) btn.textContent = '⏹️ रोकें (Stop)';
+    }
+
+    // Quiz Questions Data & Engine
+    const quizData = [
+      {
+        id: 'q1',
+        topic: 'सुरक्षा की बुनियादी अवधारणा',
+        qHi: 'सुरक्षा का सबसे बुनियादी और सर्वमान्य अर्थ क्या है?',
+        qEn: 'What is the most fundamental meaning of security?',
+        options: [
+          'केवल अत्यधिक सेना और अस्त्र-शस्त्र रखना',
+          'खतरों से आज़ादी (Freedom from threats)',
+          'अन्य देशों की अर्थव्यवस्था पर कब्जा करना',
+          'किसी भी अंतरराष्ट्रीय संधि पर हस्ताक्षर न करना'
+        ],
+        correct: 1,
+        exp: 'सुरक्षा का मूल अर्थ खतरों से आज़ादी है। हालाँकि राजनीति में केवल उन गंभीर खतरों को सुरक्षा माना जाता है जो संप्रभुता और अस्तित्व को चुनौती दें।'
+      },
+      {
+        id: 'q2',
+        topic: 'सैन्य खतरे से निपटने की नीतियां',
+        qHi: 'युद्ध की स्थिति में शत्रु को आक्रमण करने से रोकने के लिए विनाशकारी परिणाम की चेतावनी देने की नीति क्या कहलाती है?',
+        qEn: 'What policy prevents an enemy attack by demonstrating unacceptable punitive costs?',
+        options: [
+          'अपरोध (Deterrence)',
+          'आत्मसमर्पण (Surrender)',
+          'शक्ति संतुलन (Balance of Power)',
+          'तुष्टिकरण (Appeasement)'
+        ],
+        correct: 0,
+        exp: 'अपरोध (Deterrence) का उद्देश्य युद्ध को होने से पहले ही रोकना है, ताकि शत्रु जान ले कि हमले की कीमत अत्यधिक भारी होगी।'
+      },
+      {
+        id: 'q3',
+        topic: 'अस्त्र नियंत्रण संधियाँ',
+        qHi: 'जैविक हथियार संधि (BWC) किस वर्ष में सम्पन्न हुई थी?',
+        qEn: 'In which year was the Biological Weapons Convention (BWC) signed?',
+        options: [
+          '1968',
+          '1972',
+          '1992',
+          '2001'
+        ],
+        correct: 1,
+        exp: 'BWC पर 1972 में सहमति बनी थी जिसमें जैविक हथियारों के निर्माण और रखने पर पूर्ण पाबंदी लगाई गई।'
+      },
+      {
+        id: 'q4',
+        topic: 'रासायनिक हथियार संधि',
+        qHi: 'रासायनिक हथियार संधि (CWC) किस वर्ष हस्ताक्षरित हुई?',
+        qEn: 'In which year was the Chemical Weapons Convention (CWC) signed?',
+        options: [
+          '1972',
+          '1985',
+          '1992',
+          '1998'
+        ],
+        correct: 2,
+        exp: 'CWC 1992 में सम्पन्न हुई और 181 से अधिक देशों ने रासायनिक हथियारों को नष्ट व प्रतिबंधित करने का संकल्प लिया।'
+      },
+      {
+        id: 'q5',
+        topic: 'परमाणु अप्रसार संधि (NPT)',
+        qHi: 'भारत ने 1968 की परमाणु अप्रसार संधि (NPT) पर हस्ताक्षर क्यों नहीं किए?',
+        qEn: 'Why did India refuse to sign the 1968 Nuclear Non-Proliferation Treaty (NPT)?',
+        options: [
+          'क्योंकि भारत के पास उस समय पैसे नहीं थे',
+          'क्योंकि यह संधि P-5 देशों के पक्ष में अत्यंत भेदभावपूर्ण थी',
+          'क्योंकि संयुक्त राष्ट्र ने भारत को आमंत्रित नहीं किया था',
+          'क्योंकि भारत पारंपरिक हथियारों का समर्थक था'
+        ],
+        correct: 1,
+        exp: 'NPT 1 जनवरी 1967 से पूर्व परीक्षण करने वाले पाँच देशों (USA, USSR, UK, France, China) को परमाणु शक्ति मानती है और शेष देशों पर प्रतिबंध लगाती है। भारत इसे भेदभावपूर्ण मानता है।'
+      },
+      {
+        id: 'q6',
+        topic: 'मानव सुरक्षा (Human Security)',
+        qHi: 'सुरक्षा की अपारंपरिक धारणा में मुख्य रूप से किसकी सुरक्षा पर बल दिया जाता है?',
+        qEn: 'Whose security is primarily emphasized in the non-traditional notion of security?',
+        options: [
+          'केवल राज्य की सीमाओं की',
+          'सरकारों और राजनीतिक दलों की',
+          'व्यक्तियों और मानव समुदाय की (People/Humanity)',
+          'केवल बहुराष्ट्रीय कम्पनियों की'
+        ],
+        correct: 2,
+        exp: 'मानव सुरक्षा का केंद्र बिंदु राज्य के बजाय आम व्यक्ति होता है। इसमें अभाव से मुक्ति और भय से मुक्ति दोनों शामिल हैं।'
+      },
+      {
+        id: 'q7',
+        topic: 'खतरों के नए स्रोत: आतंकवाद',
+        qHi: 'संयुक्त राज्य अमेरिका के वर्ल्ड ट्रेड सेंटर पर ऐतिहासिक आतंकवादी हमला (9/11) किस वर्ष हुआ था?',
+        qEn: 'In which year did the 9/11 terrorist attacks take place in the United States?',
+        options: [
+          '1999',
+          '2000',
+          '2001',
+          '2008'
+        ],
+        correct: 2,
+        exp: '11 सितंबर 2001 को अलकायदा के आतंकवादियों ने अमेरिका में 4 विमानों का अपहरण कर वर्ल्ड ट्रेड सेंटर और पेंटागन पर हमला किया था।'
+      },
+      {
+        id: 'q8',
+        topic: 'शरणार्थी बनाम अप्रवासी',
+        qHi: 'शरणार्थियों (Refugees) और अप्रवासियों (Migrants) में मुख्य अंतर क्या है?',
+        qEn: 'What is the principal difference between refugees and migrants?',
+        options: [
+          'शरणार्थी अपनी मर्जी से पर्यटन के लिए जाते हैं',
+          'शरणार्थी युद्ध, हिंसा या उत्पीड़न से विवश होकर देश छोड़ते हैं जबकि अप्रवासी बेहतर जीवन के लिए स्वेच्छा से जाते हैं',
+          'अप्रवासियों को अंतरराष्ट्रीय कानून द्वारा शरण दी जाती है',
+          'दोनों में कोई अंतर नहीं है'
+        ],
+        correct: 1,
+        exp: 'शरणार्थी उत्पीड़न या युद्ध के कारण जान बचाने हेतु पलायन करते हैं (जिन्हें अंतरराष्ट्रीय संरक्षण मिलता है), जबकि अप्रवासी स्वेच्छा से आर्थिक अवसरों के लिए जाते हैं।'
+      },
+      {
+        id: 'q9',
+        topic: 'सहयोगी सुरक्षा',
+        qHi: 'सहयोगी सुरक्षा (Cooperative Security) में अंतिम उपाय के रूप में किसका प्रयोग मान्य है?',
+        qEn: 'What is accepted as a last resort in cooperative security?',
+        options: [
+          'आर्थिक प्रतिबंध',
+          'अंतरराष्ट्रीय कूटनीति',
+          'सामूहिक सैन्य बल (Collective Military Force under UN mandate)',
+          'परमाणु बम का प्रयोग'
+        ],
+        correct: 2,
+        exp: 'सहयोगी सुरक्षा में बातचीत, कूटनीति और समझौतों को प्राथमिकता दी जाती है; सैन्य बल का प्रयोग केवल अंतिम उपाय के रूप में अंतरराष्ट्रीय सहमति से होता है।'
+      },
+      {
+        id: 'q10',
+        topic: 'भारत की सुरक्षा रणनीति',
+        qHi: 'भारत ने अपना दूसरा सफल पोखरण परमाणु परीक्षण किस वर्ष किया?',
+        qEn: 'In which year did India conduct its second successful Pokhran nuclear tests?',
+        options: [
+          '1974',
+          '1991',
+          '1998',
+          '2004'
+        ],
+        correct: 2,
+        exp: 'मई 1998 में भारत ने पोखरण में 5 परमाणु परीक्षण किए और अपनी न्यूनतम विश्वसनीय परमाणु निवारक (Credible Minimum Deterrence) क्षमता की घोषणा की।'
+      },
+      {
+        id: 'q11',
+        topic: 'भारत की सुरक्षा रणनीति के 4 घटक',
+        qHi: 'निम्नलिखित में से कौन सा भारत की सुरक्षा रणनीति का एक घटक नहीं है?',
+        qEn: 'Which of the following is NOT one of the 4 pillars of India\'s security strategy?',
+        options: [
+          'सैन्य क्षमताओं को सुदृढ़ करना',
+          'दूसरे देशों के आंतरिक मामलों में बलपूर्वक सैन्य हस्तक्षेप करना',
+          'अंतरराष्ट्रीय नियमों और संस्थाओं को मजबूत करना',
+          'तीव्र आर्थिक विकास करना'
+        ],
+        correct: 1,
+        exp: 'भारत की नीति किसी देश के आंतरिक मामलों में हस्तक्षेप की नहीं बल्कि संप्रभुता के सम्मान और गुटनिरपेक्षता की रही है।'
+      },
+      {
+        id: 'q12',
+        topic: 'वैश्विक सुरक्षा मुद्दे',
+        qHi: 'निम्नलिखित में से कौन सा खतरा अपारंपरिक और वैश्विक सुरक्षा का उदाहरण है?',
+        qEn: 'Which of the following threats represents non-traditional and global security?',
+        options: [
+          'दो देशों के बीच सीमा पर तोप दागना',
+          'वैश्विक तापमान वृद्धि (ग्लोबल वार्मिंग) एवं एड्स/कोविड जैसी महामारियाँ',
+          'एक राष्ट्र की संसद में अविश्वास प्रस्ताव आना',
+          'सेना में नए सैनिकों की भर्ती'
+        ],
+        correct: 1,
+        exp: 'ग्लोबल वार्मिंग और संक्रामक महामारियां सीमाओं को पार करती हैं और पूरे विश्व की सुरक्षा को एक साथ खतरे में डालती हैं।'
+      }
+    ];
+
+    let userScore = 0;
+    let questionsAnswered = 0;
+
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      quizData.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'quiz-card';
+        card.id = 'qcard_' + index;
+
+        let optionsHtml = '';
+        item.options.forEach((opt, oIndex) => {
+          const letter = String.fromCharCode(65 + oIndex);
+          optionsHtml += `
+            <button class="opt-btn" onclick="selectAnswer(${index}, ${oIndex}, this)">
+              <span class="opt-letter">${letter}</span>
+              <span>${opt}</span>
+            </button>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="quiz-header">
+            <span class="q-number">प्रश्न ${index + 1} of ${quizData.length}</span>
+            <span class="q-topic">📌 ${item.topic}</span>
+          </div>
+          <div class="q-text-hi">${item.qHi}</div>
+          <div class="q-text-en">${item.qEn}</div>
+          <div class="options-grid">${optionsHtml}</div>
+          <div class="q-explanation" id="exp_${index}">
+            <strong>💡 व्याख्या (NCERT Concept):</strong> ${item.exp}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectAnswer(qIndex, selectedOpt, btn) {
+      const card = document.getElementById('qcard_' + qIndex);
+      const allBtns = card.querySelectorAll('.opt-btn');
+      allBtns.forEach(b => b.disabled = true);
+
+      const correctOpt = quizData[qIndex].correct;
+      const expBox = document.getElementById('exp_' + qIndex);
+
+      if (selectedOpt === correctOpt) {
+        btn.classList.add('correct');
+        userScore++;
+        triggerConfetti(0.4);
+      } else {
+        btn.classList.add('wrong');
+        allBtns[correctOpt].classList.add('correct');
+      }
+
+      questionsAnswered++;
+      if (expBox) expBox.style.display = 'block';
+
+      // Update score display
+      document.getElementById('scoreDisplay').textContent = `${userScore} / ${quizData.length}`;
+      const acc = Math.round((userScore / questionsAnswered) * 100);
+      document.getElementById('accuracyPercent').textContent = `${acc}%`;
+
+      if (questionsAnswered === quizData.length) {
+        setTimeout(() => {
+          triggerConfetti(2.0);
+          alert(`🎉 बधाई! आपने पूरी प्रश्नोत्तरी समाप्त कर ली है।\nआपका अंतिम स्कोर: ${userScore} / ${quizData.length} (${acc}%)`);
+        }, 500);
+      }
+    }
+
+    function resetQuiz() {
+      userScore = 0;
+      questionsAnswered = 0;
+      document.getElementById('scoreDisplay').textContent = `0 / ${quizData.length}`;
+      document.getElementById('accuracyPercent').textContent = '0%';
+      renderQuiz();
+    }
+
+    // Initialize quiz on load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderQuiz();
+    });
+  </script>
+</body>
+</html>

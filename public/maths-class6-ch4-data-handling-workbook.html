@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 6 Maths Chapter 4: Data Handling & Presentation Interactive Workbook | NextSem</title>
+  <meta name="description" content="NCERT Class 6 Mathematics (Ganita Prakash) Chapter 4: Data Handling and Presentation - Interactive Bilingual Workbook, Tally Lab, Pictograph Studio, Bar Graph Builder, Full Exercises & 20-Mark NEP Assessment.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --border-card: rgba(56, 189, 248, 0.25);
+      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-card: rgba(0, 0, 0, 0.12);
+      --accent-emerald: #059669;
+      --accent-gold: #d97706;
+      --accent-sky: #0284c7;
+      --accent-purple: #7c3aed;
+      --accent-rose: #e11d48;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Sticky Nav */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 18px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50; flex-wrap: wrap; gap: 10px;
+    }
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px; font-size: 0.85rem; flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--accent-sky); text-decoration: none; font-weight: 700;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span.sep { color: var(--text-muted); }
+    .breadcrumb span.current { color: var(--accent-emerald); font-weight: 800; }
+
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+
+    .btn-action {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; gap: 6px;
+      text-decoration: none;
+    }
+    body.light-theme .btn-action {
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .btn-action:hover {
+      background: rgba(56, 189, 248, 0.15); border-color: var(--accent-sky);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px; margin: 0 auto; padding: 20px 16px;
+    }
+
+    /* Hero */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(16, 185, 129, 0.1) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 28px 24px; text-align: center;
+      margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 0.78rem; font-weight: 800;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .hero-title {
+      font-size: 2.1rem; font-weight: 900; color: #ffffff; margin-bottom: 8px; letter-spacing: -0.02em;
+    }
+    body.light-theme .hero-title { color: #0f172a; }
+    .hero-sub {
+      font-size: 1.25rem; font-weight: 700; color: var(--accent-emerald); margin-bottom: 14px;
+    }
+    .hero-desc {
+      color: var(--text-muted); font-size: 0.92rem; max-width: 840px; margin: 0 auto; line-height: 1.6;
+    }
+
+    /* Tabs */
+    .tabs-bar {
+      display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 9px 16px; border-radius: 10px; font-weight: 700; font-size: 0.85rem;
+      cursor: pointer; white-space: nowrap; transition: all 0.2s;
+    }
+    body.light-theme .tab-btn {
+      background: rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .tab-btn.active {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff; border-color: var(--accent-sky);
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px; margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Tables */
+    table.data-table {
+      width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.88rem;
+    }
+    table.data-table th {
+      background: rgba(255, 255, 255, 0.05); color: var(--accent-sky);
+      padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    body.light-theme table.data-table th {
+      background: rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    table.data-table td {
+      padding: 10px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    body.light-theme table.data-table td {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* Tally Stroke Badge */
+    .tally-bundle {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 2px 8px; border-radius: 6px; font-family: monospace;
+      font-size: 1.15rem; font-weight: 900; letter-spacing: 2px; color: var(--accent-sky);
+      margin-right: 6px;
+    }
+    .tally-rem {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 2px 8px; border-radius: 6px; font-family: monospace;
+      font-size: 1.15rem; font-weight: 900; letter-spacing: 2px; color: var(--accent-emerald);
+    }
+
+    /* Exercise Items */
+    .ex-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px; padding: 14px; margin-top: 12px;
+    }
+    body.light-theme .ex-box {
+      background: rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .solution-box {
+      display: none; margin-top: 10px; background: rgba(16, 185, 129, 0.1);
+      border-left: 3px solid var(--accent-emerald); padding: 10px 14px;
+      border-radius: 4px; font-size: 0.85rem; color: #a7f3d0; line-height: 1.6;
+    }
+    body.light-theme .solution-box {
+      color: #065f46; background: rgba(16, 185, 129, 0.15);
+    }
+
+    /* Quiz Option */
+    .quiz-option {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px 14px; border-radius: 8px; cursor: pointer;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    }
+    body.light-theme .quiz-option {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      background: rgba(0, 0, 0, 0.02);
+    }
+    .quiz-option:hover {
+      border-color: var(--accent-sky); background: rgba(56, 189, 248, 0.1);
+    }
+    .quiz-option.selected {
+      border-color: var(--accent-sky); background: rgba(56, 189, 248, 0.2); color: var(--accent-sky);
+    }
+    .quiz-option.correct {
+      border-color: var(--accent-emerald); background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald);
+    }
+    .quiz-option.wrong {
+      border-color: var(--accent-rose); background: rgba(244, 63, 94, 0.2); color: var(--accent-rose);
+    }
+
+    /* Print Styles */
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .top-nav, .tabs-bar, .hero-banner, .btn-action, .hide-print { display: none !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      .print-only { display: block !important; }
+    }
+    .print-only { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Desktop Breadcrumb Navbar -->
+  <nav class="top-nav">
+    <div class="breadcrumb">
+      <a href="/?class=6">🏠 Home</a>
+      <span class="sep">❯</span>
+      <a href="/?class=6">Class 6</a>
+      <span class="sep">❯</span>
+      <a href="/?class=6&subject=c6-mathematics&book=c6-m-p1">Ganita Prakash</a>
+      <span class="sep">❯</span>
+      <span class="current">Chapter 4: Data Handling Workbook</span>
+    </div>
+
+    <div class="nav-actions">
+      <!-- Theme Switcher -->
+      <button class="btn-action" onclick="toggleTheme()" id="themeBtn" title="Switch Theme">
+        🌙 Mode
+      </button>
+
+      <!-- Print Button -->
+      <button class="btn-action" onclick="window.print()" style="color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.4);">
+        🖨️ Print PDF
+      </button>
+
+      <!-- Return Button -->
+      <a href="/?class=6&subject=c6-mathematics&book=c6-m-p1" class="btn-action">
+        ← Back to Chapters
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Header -->
+    <div class="hero-banner">
+      <div class="hero-badge">NCERT Class 6 Mathematics • Ganita Prakash</div>
+      <h1 class="hero-title">Chapter 4: Data Handling and Presentation</h1>
+      <h2 class="hero-sub">अध्याय 4: आँकड़ों का प्रबंधन एवं प्रस्तुतीकरण (Interactive Workbook)</h2>
+      <p class="hero-desc">
+        NEP 2020 Real-world data collection, frequency distribution, tally marks, scaled pictographs, vertical and horizontal bar graphs, and critical thinking on aesthetic infographics.
+        <br>
+        <span style="color: var(--accent-sky); font-size: 0.85rem;">द्विभाषी संस्करण (Hindi & English Bilingual Mastery Studio)</span>
+      </p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-bar">
+      <button class="tab-btn active" onclick="switchTab('CONCEPTS', this)">🌟 Concept Mind Map</button>
+      <button class="tab-btn" onclick="switchTab('WHILE_READING', this)">📖 While-Reading Questions (पढ़ते-पढ़ते प्रश्नोत्तरी)</button>
+      <button class="tab-btn" onclick="switchTab('TALLY_LAB', this)">✏️ Interactive Tally Lab</button>
+      <button class="tab-btn" onclick="switchTab('PICTO_STUDIO', this)">🖼️ Pictograph Studio</button>
+      <button class="tab-btn" onclick="switchTab('BAR_STUDIO', this)">📊 Bar Graph Studio</button>
+      <button class="tab-btn" onclick="switchTab('EXERCISES', this)">📖 NCERT Exercises (4.1–4.5)</button>
+      <button class="tab-btn" onclick="switchTab('QUIZ', this)">🎯 20-Q Competency Test</button>
+      <button class="tab-btn" onclick="switchTab('PRINTABLE', this)">🖨️ Printable Worksheet</button>
+    </div>
+
+    <!-- TAB 1: CONCEPTS -->
+    <div id="tab-CONCEPTS" class="tab-content">
+      <div class="card">
+        <h3 style="color: var(--accent-sky); margin-bottom: 12px; font-size: 1.25rem;">
+          5 Pillar Concept Mastery Framework (अध्याय की 5 मुख्य अवधारणाएँ)
+        </h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 16px;">
+          <!-- Pillar 1 -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 18px;">
+            <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent-sky); font-size: 0.72rem; font-weight: 800; padding: 2px 8px; borderRadius: 4px;">4.1 Data Concept</span>
+            <h4 style="margin: 8px 0; color: #fff;">1. What is Data? (आँकड़े क्या हैं?)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+              Collection of facts, numbers, measurements, or observations that convey information.
+              <br><strong>हिन्दी:</strong> जानकारी प्रदान करने वाले तथ्यों, संख्याओं या मापों का संग्रह।
+            </p>
+            <ul style="font-size: 0.82rem; color: #e2e8f0; padding-left: 18px; line-height: 1.5;">
+              <li>Used to test hypotheses, compare options, and make wise decisions.</li>
+              <li>General knowledge facts (e.g. Independence Year) do not require data collection.</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 18px;">
+            <span style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); font-size: 0.72rem; font-weight: 800; padding: 2px 8px; borderRadius: 4px;">4.1 Tally Marks</span>
+            <h4 style="margin: 8px 0; color: #fff;">2. Tally Marks & Frequency (मिलान चिह्न)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+              Frequency is the count of occurrences. Tally marks bundle counts in groups of 5: 卌.
+              <br><strong>हिन्दी:</strong> बारंबारता घटनाओं की गिनती है। 5-5 के समूह बनाकर गणना सुगम होती है।
+            </p>
+            <ul style="font-size: 0.82rem; color: #e2e8f0; padding-left: 18px; line-height: 1.5;">
+              <li>Vertical strokes for 1–4: |, ||, |||, ||||.</li>
+              <li>Diagonal strike across 4 strokes makes 5: 卌.</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 18px;">
+            <span style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold); font-size: 0.72rem; font-weight: 800; padding: 2px 8px; borderRadius: 4px;">4.2 Pictograph</span>
+            <h4 style="margin: 8px 0; color: #fff;">3. Pictographs & Scaling (चित्रालेख एवं पैमाना)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+              Represents data using pictures/symbols. Each symbol stands for a fixed number of units (Scale).
+              <br><strong>हिन्दी:</strong> चित्रों द्वारा प्रदर्शन। पैमाना (Scale) बताता है कि एक प्रतीक कितनी इकाइयों के बराबर है।
+            </p>
+            <ul style="font-size: 0.82rem; color: #e2e8f0; padding-left: 18px; line-height: 1.5;">
+              <li>Quick visual understanding at a glance.</li>
+              <li>Limitation: Fractional counts (e.g. 27 students) cannot be drawn accurately.</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 18px;">
+            <span style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); font-size: 0.72rem; font-weight: 800; padding: 2px 8px; borderRadius: 4px;">4.3 & 4.4 Bar Graph</span>
+            <h4 style="margin: 8px 0; color: #fff;">4. Bar Graphs (दंड आलेख)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+              Rectangular bars of uniform width drawn with equal gaps. Length/height depicts frequency.
+              <br><strong>हिन्दी:</strong> समान चौड़ाई एवं समान अंतराल वाले आयताकार दंड। ऊँचाई बारंबारता दर्शाती है।
+            </p>
+            <ul style="font-size: 0.82rem; color: #e2e8f0; padding-left: 18px; line-height: 1.5;">
+              <li>Axes: One axis for categories, other for numeric scale starting at 0.</li>
+              <li>Overcomes the fractional limitations of pictographs.</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 18px;">
+            <span style="background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); font-size: 0.72rem; font-weight: 800; padding: 2px 8px; borderRadius: 4px;">4.5 Aesthetics</span>
+            <h4 style="margin: 8px 0; color: #fff;">5. Aesthetic Integrity & Infographics (सूचना आलेख)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+              Visuals must convey truth. Misleading shapes (like mountain triangles with wider bases) exaggerate data.
+              <br><strong>हिन्दी:</strong> आलेख सुंदर होने के साथ यथार्थवादी होना चाहिए; भ्रामक चित्रों से बचना चाहिए।
+            </p>
+            <ul style="font-size: 0.82rem; color: #e2e8f0; padding-left: 18px; line-height: 1.5;">
+              <li>Vertical bars for Heights (rising from the ground).</li>
+              <li>Horizontal bars for River Lengths (flowing parallel to ground).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 1.5: WHILE-READING TOPIC QUESTIONS -->
+    <div id="tab-WHILE_READING" class="tab-content" style="display: none;">
+      <div class="card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(56, 189, 248, 0.08) 100%); border-color: rgba(16, 185, 129, 0.3);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+          <div>
+            <span style="background: var(--accent-emerald); color: #060c18; font-weight: 900; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;">
+              16 Topics • Pages 74–106
+            </span>
+            <h3 style="color: #fff; margin: 6px 0 4px; font-size: 1.3rem;">While-Reading Topic Questions (पढ़ते-पढ़ते प्रश्नोत्तरी)</h3>
+            <p style="color: var(--text-muted); font-size: 0.86rem; margin: 0; max-width: 680px;">
+              Pause and test your understanding topic-by-topic as you read Ganita Prakash Pages 74 to 106. Instant feedback, hints, and line-by-line textbook references!
+              <br><strong style="color: var(--accent-sky);">हिन्दी:</strong> पुस्तक पढ़ते-पढ़ते प्रत्येक विषय के बाद इन प्रश्नों को हल करें।
+            </p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 10px 16px; text-align: right; min-width: 170px;">
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Reading Progress</div>
+            <div style="font-size: 1.25rem; font-weight: 900; color: var(--accent-emerald);" id="checkpointProgressText">0 / 32 Solved</div>
+            <div style="width: 100%; height: 5px; background: rgba(255, 255, 255, 0.1); border-radius: 999px; margin-top: 6px; overflow: hidden;">
+              <div id="checkpointProgressBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #10b981, #38bdf8); transition: width 0.3s;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Topic Filter Bar -->
+      <div id="checkpointFilterBar" style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 12px; margin-bottom: 20px;"></div>
+
+      <!-- Checkpoint Cards Container -->
+      <div id="checkpointsList"></div>
+    </div>
+
+    <!-- TAB 2: TALLY LAB -->
+    <div id="tab-TALLY_LAB" class="tab-content" style="display: none;">
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="color: #fff; margin: 0 0 4px; font-size: 1.25rem;">Live Tally Marks Simulator (श्री नीलेश मिठाई वितरण लैब)</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Click "+" to add votes. Every 5th vote automatically bundles into 卌!</p>
+          </div>
+          <button class="btn-action" onclick="resetTallies()" style="color: var(--accent-rose); border-color: rgba(244, 63, 94, 0.4);">
+            ↺ Reset Tallies
+          </button>
+        </div>
+
+        <table class="data-table" id="tallyTable">
+          <thead>
+            <tr>
+              <th>Sweet Item (मिठाई)</th>
+              <th>Live Tally Marks (卌 बंडल)</th>
+              <th style="width: 140px;">Frequency (संख्या)</th>
+              <th style="width: 120px; text-align: center;">Controls</th>
+            </tr>
+          </thead>
+          <tbody id="tallyBody">
+            <!-- Rendered by JS -->
+          </tbody>
+          <tfoot>
+            <tr style="background: rgba(56, 189, 248, 0.08); font-weight: 800;">
+              <td style="color: var(--accent-sky);">Total Students Surveyed</td>
+              <td id="totalTallyMarks"></td>
+              <td id="totalTallyCount" style="color: var(--accent-sky); font-size: 1.1rem;"></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-sky); padding: 12px; border-radius: 4px; font-size: 0.85rem; color: #bae6fd; margin-top: 16px;">
+          💡 <strong>NCERT Question (Page 77):</strong> Is this table sufficient to hand out sweets to the right student?
+          <br>
+          <strong>Answer:</strong> No! It only tells how many sweets to buy, not who ordered what. A nominal list with individual names is required!
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: PICTOGRAPH STUDIO -->
+    <div id="tab-PICTO_STUDIO" class="tab-content" style="display: none;">
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="color: #fff; margin: 0 0 4px; font-size: 1.25rem;">Interactive Pictograph Scaler (चित्रालेख प्रयोगशाला)</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Magan Bhai Kite Sales (Jamnagar) — Adjust scale to observe symbol division.</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Scale (1 🪁 =):</span>
+            <button class="btn-action" onclick="setPictoScale(50)">50</button>
+            <button class="btn-action" onclick="setPictoScale(100)" style="border-color: var(--accent-sky); color: var(--accent-sky);">100</button>
+            <button class="btn-action" onclick="setPictoScale(200)">200</button>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 180px;">Shopkeeper (दुकानदार)</th>
+              <th style="width: 120px;">Kites Sold</th>
+              <th>Pictograph Display (<span id="pictoScaleLabel">1 🪁 = 100 kites</span>)</th>
+            </tr>
+          </thead>
+          <tbody id="pictoBody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+
+        <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid var(--accent-gold); padding: 12px; border-radius: 4px; font-size: 0.85rem; color: #fef08a; margin-top: 16px;">
+          🧠 <strong>Exercise 4.2 Reflection:</strong> Poonam Ben bought 700 kites (7 symbols), and Rani bought 300 kites (3 symbols). Did Poonam Ben purchase more than double Rani's amount?
+          <br>
+          <strong>Yes!</strong> 700 > 2 × 300 (600).
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: BAR GRAPH STUDIO -->
+    <div id="tab-BAR_STUDIO" class="tab-content" style="display: none;">
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="color: #fff; margin: 0 0 4px; font-size: 1.25rem;">Delhi Crossing Vehicular Traffic Bar Graph (दिल्ली चौराहा आलेख)</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Scale: 1 unit length = 100 vehicles. Total traffic = 4,450 vehicles.</p>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-action" onclick="setBarOrientation('vertical')">⬆️ Column (Vertical)</button>
+            <button class="btn-action" onclick="setBarOrientation('horizontal')">➡️ Bar (Horizontal)</button>
+          </div>
+        </div>
+
+        <!-- Bar Container -->
+        <div id="barGraphContainer" style="background: rgba(6, 12, 24, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 20px;">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--accent-emerald); padding: 12px; border-radius: 4px; font-size: 0.85rem; color: #a7f3d0; margin-top: 16px;">
+          📊 <strong>NCERT Question (Page 88):</strong> Why was the traffic heaviest between 7–8 AM (1200 vehicles)?
+          <br>
+          <strong>Answer:</strong> It is the peak morning rush hour when school buses, office commuters, and commercial deliveries all hit the roads simultaneously!
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: EXERCISES -->
+    <div id="tab-EXERCISES" class="tab-content" style="display: none;">
+      <div class="card">
+        <h3 style="color: #fff; margin-bottom: 16px; font-size: 1.25rem;">NCERT Chapter Exercises 4.1 to 4.5 Step-by-Step</h3>
+
+        <!-- Exercise 1 -->
+        <div class="ex-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: var(--accent-sky); font-size: 0.75rem; font-weight: 800;">Section 4.1 • Page 75</span>
+            <span style="color: var(--accent-gold); font-size: 0.75rem; font-weight: 700;">Figure it Out Q4</span>
+          </div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 6px;">Pari’s Data Collection Identification: Put Tick (✓) or Cross (✗)</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">
+            (a) Most popular TV show among classmates? &nbsp; <strong>[ ✓ ]</strong> (Requires collecting survey data)
+            <br>
+            (b) When did India get independence? &nbsp; <strong>[ ✗ ]</strong> (Fixed historical fact: 15 Aug 1947, no survey needed)
+            <br>
+            (c) How much water is getting wasted in her locality? &nbsp; <strong>[ ✓ ]</strong> (Requires measuring and collecting data)
+            <br>
+            (d) What is the capital of India? &nbsp; <strong>[ ✗ ]</strong> (Established fact: New Delhi)
+          </p>
+          <button class="btn-action" onclick="toggleSolutionBox('sol-1')" style="color: var(--accent-emerald);">👁️ Toggle Solution Details</button>
+          <div id="sol-1" class="solution-box">
+            Data is collected to discover unknown patterns or frequencies. Facts established in history or geography do not require data collection.
+          </div>
+        </div>
+
+        <!-- Exercise 2 -->
+        <div class="ex-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: var(--accent-sky); font-size: 0.75rem; font-weight: 800;">Section 4.1 • Page 77</span>
+            <span style="color: var(--accent-gold); font-size: 0.75rem; font-weight: 700;">Shoe Sizes Analysis</span>
+          </div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 6px;">Sushri Sandhya’s Class Shoe Sizes (27 Students)</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">
+            Ascending order: 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7
+            <br>
+            • Largest size: <strong>7</strong> &nbsp;|&nbsp; Smallest size: <strong>3</strong>
+            <br>
+            • Students wearing size 5: <strong>10 students</strong>
+            <br>
+            • Students wearing size larger than 4 (sizes 5, 6, 7): 10 + 4 + 1 = <strong>15 students</strong>
+          </p>
+          <button class="btn-action" onclick="toggleSolutionBox('sol-2')" style="color: var(--accent-emerald);">👁️ Toggle Solution Details</button>
+          <div id="sol-2" class="solution-box">
+            Arranging raw data in ascending order groups identical numbers together, making frequency counting, minimum, and maximum immediately visible without scanning back and forth!
+          </div>
+        </div>
+
+        <!-- Exercise 3 -->
+        <div class="ex-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: var(--accent-sky); font-size: 0.75rem; font-weight: 800;">Section 4.4 • Page 95</span>
+            <span style="color: var(--accent-gold); font-size: 0.75rem; font-weight: 700;">Jasprit Bumrah Wickets</span>
+          </div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 6px;">Faiz’s Jasprit Bumrah Cricket Wickets Table (30 Matches)</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">
+            Mayank says: "Add 0 + 1 + 2 + ... + 7 = 28 to find total wickets." Is he right?
+            <br>
+            <strong>No!</strong> Adding wicket numbers directly ignores the number of matches.
+            <br>
+            <strong>Correct Total:</strong> (0×2) + (1×4) + (2×6) + (3×8) + (4×3) + (5×5) + (6×1) + (7×1) = 0 + 4 + 12 + 24 + 12 + 25 + 6 + 7 = <strong>90 Wickets!</strong>
+          </p>
+          <button class="btn-action" onclick="toggleSolutionBox('sol-3')" style="color: var(--accent-emerald);">👁️ Toggle Solution Details</button>
+          <div id="sol-3" class="solution-box">
+            Total of a frequency distribution is given by the sum of products: Σ (Wickets × Frequency). Mayank committed the common mistake of summing the category labels instead of the weighted frequencies.
+          </div>
+        </div>
+
+        <!-- Exercise 4 -->
+        <div class="ex-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="color: var(--accent-sky); font-size: 0.75rem; font-weight: 800;">Section 4.5 • Page 103</span>
+            <span style="color: var(--accent-gold); font-size: 0.75rem; font-weight: 700;">Figure it Out Q1 & Q2</span>
+          </div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 6px;">Direction of Bars: Vertical vs Horizontal</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">
+            • <strong>Student Heights:</strong> Vertical bars (Column graph) — because height rises upward from the floor.
+            <br>
+            • <strong>River Lengths:</strong> Horizontal bars — because rivers flow across the surface of the ground horizontally.
+          </p>
+          <button class="btn-action" onclick="toggleSolutionBox('sol-4')" style="color: var(--accent-emerald);">👁️ Toggle Solution Details</button>
+          <div id="sol-4" class="solution-box">
+            Aesthetic integrity requires matching the physical nature of the measured entity with the geometric orientation of the graph!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 6: QUIZ -->
+    <div id="tab-QUIZ" class="tab-content" style="display: none;">
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="color: #fff; margin: 0 0 4px; font-size: 1.25rem;">20-Question NEP 2020 Competency Assessment</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Select your answers and click "Submit Assessment" for instant grading & confetti!</p>
+          </div>
+          <div id="quizScoreDisplay" style="display: none; background: rgba(16, 185, 129, 0.2); border: 1px solid var(--accent-emerald); padding: 6px 14px; border-radius: 8px; font-weight: 900; color: var(--accent-emerald);">
+            Score: <span id="quizScoreVal">0</span> / 20
+          </div>
+        </div>
+
+        <div id="quizContainer">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <button class="btn-action" onclick="gradeQuiz()" style="background: linear-gradient(135deg, #10b981, #059669); color: #fff; padding: 10px 24px; font-size: 0.95rem; border: none; display: inline-flex;">
+            ✓ Submit Assessment & Calculate Score
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: PRINTABLE -->
+    <div id="tab-PRINTABLE" class="tab-content" style="display: none;">
+      <div class="card" style="background: #fff; color: #0f172a; padding: 28px;">
+        <div style="text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 14px; margin-bottom: 18px;">
+          <h2 style="font-size: 1.5rem; font-weight: 900; margin: 0 0 4px; color: #0f172a;">NCERT CLASS 6 MATHEMATICS • GANITA PRAKASH</h2>
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: #0284c7; margin: 0 0 6px;">Chapter 4: Data Handling and Presentation — Student Practice Worksheet</h3>
+          <p style="font-size: 0.82rem; color: #475569; margin: 0;">Name: ______________________ | Roll No: ________ | Date: ________ | Max Marks: 25</p>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <h4 style="border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 8px; color: #0f172a;">1. Tally Mark Exercises (5 Marks)</h4>
+          <p style="font-size: 0.88rem; line-height: 1.8;">
+            (a) Write the tally marks for: 8 = ______________ &nbsp;&nbsp;|&nbsp;&nbsp; 14 = ______________ &nbsp;&nbsp;|&nbsp;&nbsp; 19 = ______________
+            <br>
+            (b) What number does this tally bundle represent? 卌 卌 卌 || = ______________
+          </p>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <h4 style="border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 8px; color: #0f172a;">2. Pictograph Interpretation (10 Marks)</h4>
+          <p style="font-size: 0.88rem; line-height: 1.8;">
+            In a school library pictograph, 1 📖 represents 5 books.
+            <br>
+            (a) If 6 full book symbols are drawn on Monday, how many books were borrowed? ______________
+            <br>
+            (b) On Thursday, 3 full symbols and 1 half symbol were drawn. How many books were borrowed? ______________
+            <br>
+            (c) Why is it difficult to represent 23 books accurately using this scale? _________________________________________
+          </p>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <h4 style="border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 8px; color: #0f172a;">3. Bar Graph Drawing (10 Marks)</h4>
+          <p style="font-size: 0.88rem; line-height: 1.8;">
+            The marks obtained by Arsh in 4 subjects out of 100 are: Maths (90), Science (80), English (70), Hindi (60).
+            <br>
+            Take scale <strong>1 unit length = 10 marks</strong> and draw a neat vertical column graph in the box below:
+          </p>
+          <div style="height: 150px; border: 1px dashed #94a3b8; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.85rem;">
+            [Space for Student Column Graph Drawing]
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <button class="btn-action" onclick="window.print()" style="background: #0284c7; color: #fff; padding: 10px 24px; border: none; font-size: 0.9rem;">
+            🖨️ Print Student Worksheet (A4 Formatted)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let tallyData = [
+      { nameEn: 'Jalebi (जलेबी)', count: 6, color: '#f59e0b' },
+      { nameEn: 'Gulab Jamun (गुलाब जामुन)', count: 9, color: '#ec4899' },
+      { nameEn: 'Gujiya (गुजिया)', count: 13, color: '#10b981' },
+      { nameEn: 'Barfi (बर्फी)', count: 3, color: '#38bdf8' },
+      { nameEn: 'Rasgulla (रसगुल्ला)', count: 7, color: '#a855f7' }
+    ];
+
+    let pictoScale = 100;
+    const pictoKiteData = [
+      { name: 'Chaman (चमन)', value: 250 },
+      { name: 'Rani (रानी)', value: 300 },
+      { name: 'Rukhsana (रुखसाना)', value: 100 },
+      { name: 'Jasmeet (जसमीत)', value: 450 },
+      { name: 'Jetha Lal (जेठालाल)', value: 250 },
+      { name: 'Poonam Ben (पूनम बेन)', value: 700 }
+    ];
+
+    let barOrientation = 'vertical';
+    const trafficData = [
+      { label: '6-7 AM', value: 150, color: '#38bdf8' },
+      { label: '7-8 AM (Peak)', value: 1200, color: '#f43f5e' },
+      { label: '8-9 AM', value: 1000, color: '#f59e0b' },
+      { label: '9-10 AM', value: 800, color: '#10b981' },
+      { label: '10-11 AM', value: 700, color: '#8b5cf6' },
+      { label: '11-12 Noon', value: 600, color: '#06b6d4' }
+    ];
+
+    const quizQuestions = [
+      {
+        q: "1. Any collection of facts, numbers, measures, or observations collected to convey information is called:",
+        options: ["Fraction (भिन्न)", "Equation (समीकरण)", "Data (आँकड़े)", "Geometry (ज्यामिति)"],
+        ans: 2
+      },
+      {
+        q: "2. Which tally mark representation correctly stands for the number 9?",
+        options: ["|||| |||| |", "卌 ||||", "卌 卌", "卌 |||"],
+        ans: 1
+      },
+      {
+        q: "3. In a pictograph where 1 🚗 = 20 cars, how many car symbols represent 140 cars?",
+        options: ["28 symbols", "6 symbols", "14 symbols", "7 symbols"],
+        ans: 3
+      },
+      {
+        q: "4. What is the fundamental requirement for all bars in a standard bar graph?",
+        options: ["Uniform width and equal spacing between bars", "Bars must touch each other", "Bars must have variable widths", "Width represents frequency"],
+        ans: 0
+      },
+      {
+        q: "5. If 1 unit length on a bar graph represents 50 students, a bar of length 7 units represents:",
+        options: ["250 students", "300 students", "350 students", "57 students"],
+        ans: 2
+      },
+      {
+        q: "6. At Delhi crossing, why did traffic drop from 1200 vehicles (7–8 AM) to 600 vehicles (11–12 Noon)?",
+        options: ["Road was completely closed", "Peak morning rush hour ends as people reach offices/schools", "Traffic signals broke down", "Police stopped vehicles"],
+        ans: 1
+      },
+      {
+        q: "7. Why is a horizontal bar graph aesthetically recommended for river lengths?",
+        options: ["Printers only print horizontal bars", "Rivers rise upward into the sky", "It is mandatory by law", "Rivers flow horizontally across the landscape"],
+        ans: 3
+      },
+      {
+        q: "8. Total wickets taken by Bumrah in 30 matches (with 3 wkts in 8 matches, 5 wkts in 5 matches, etc.) was:",
+        options: ["90 wickets", "28 wickets", "49 wickets", "60 wickets"],
+        ans: 0
+      },
+      {
+        q: "9. Why is using triangles for mountain heights in an infographic potentially misleading?",
+        options: ["Triangles are not geometric shapes", giving a disproportionately huge visual area", "Taller triangles have wider bases, "Mountains are always rectangles", "Triangles cannot be colored"],
+        ans: 2
+      },
+      {
+        q: "10. In an English newspaper article, which letter is observed with the highest frequency?",
+        options: ["Letter 'x'", "Letter 'e'", "Letter 'z'", "Letter 'q'"],
+        ans: 1
+      },
+      {
+        q: "11. If 1 👧 = 4 girls, Class 2 has 4 full symbols and 1 half symbol. How many girls are in Class 2?",
+        options: ["9 girls", "16 girls", "20 girls", "18 girls (16 + 2)"],
+        ans: 3
+      },
+      {
+        q: "12. In the Mudhol Hounds survey, why was 6 the most sensible scale for 18, 36, 12, 48, 18, 24 dogs?",
+        options: ["All counts are exact multiples of 6, avoiding fractional symbols", "Because dogs have 6 legs", "Because there are 6 villages", "Because 6 is an odd number"],
+        ans: 0
+      },
+      {
+        q: "13. In Imran’s monthly budget (₹3400 food, ₹800 education), is education cost less than 1/4th of food?",
+        options: ["No (800 > 850)", "Yes (800 < 850)", "Exactly equal", "Cannot be determined"],
+        ans: 1
+      },
+      {
+        q: "14. What is the tallest mountain on Earth?",
+        options: ["Aconcagua (6962 m)", Asia)", "Mount Everest (8848 m, "Denali (6194 m)", "Kilimanjaro (5895 m)"],
+        ans: 2
+      },
+      {
+        q: "15. The sum of tally bundles 卌 卌 || + 卌 |||| + ||| equals:",
+        options: ["20", "22", "26", "24"],
+        ans: 3
+      },
+      {
+        q: "16. In Class 6 favorite games survey, which sport was most popular with frequency 8?",
+        options: ["Hockey (हॉकी)", "Kabaddi (कबड्डी)", "Cricket (क्रिकेट)", "Satoliya (सतोलिया)"],
+        ans: 0
+      },
+      {
+        q: "17. A collection of raw shoe sizes is arranged in ascending order. This primarily helps in:",
+        options: [maximum, "Quickly finding minimum, and frequency without omissions", "Making numbers larger", "Changing shoe size measurements", "Adding them all together"],
+        ans: 1
+      },
+      {
+        q: "18. How much did India's tiger population increase between 2006 (1400) and 2022 (3700)?",
+        options: ["3700 tigers", "1300 tigers", "2300 tigers", "1400 tigers"],
+        ans: 2
+      },
+      {
+        q: "19. Which question does NOT require data collection?",
+        options: ["Water wastage in locality", "Most popular food in class", "Number of trees on school road", "When did India get independence?"],
+        ans: 3
+      },
+      {
+        q: "20. In free time survey of 120 students, which activity was most preferred other than playing (45)?",
+        options: ["Reading story books (30 students)", "Watching TV (20)", "Painting (15)", "Music (10)"],
+        ans: 0
+      }
+    ];
+
+    let userQuizAnswers = {};
+
+    function switchTab(tabId, el) {
+      document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(tb => tb.classList.remove('active'));
+      document.getElementById('tab-' + tabId).style.display = 'block';
+      if (el) el.classList.add('active');
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      document.getElementById('themeBtn').innerText = isLight ? '☀️ Mode' : '🌙 Mode';
+      localStorage.setItem('nextsem_dark_mode', (!isLight).toString());
+    }
+
+    // Tally Lab Functions
+    function renderTallyTable() {
+      const tbody = document.getElementById('tallyBody');
+      tbody.innerHTML = '';
+      let total = 0;
+
+      tallyData.forEach((item, idx) => {
+        total += item.count;
+        const bundles = Math.floor(item.count / 5);
+        const rem = item.count % 5;
+
+        let tallyHtml = '';
+        for (let i = 0; i < bundles; i++) {
+          tallyHtml += `<span class="tally-bundle">卌</span>`;
+        }
+        if (rem > 0) {
+          tallyHtml += `<span class="tally-rem">${'|'.repeat(rem)}</span>`;
+        }
+        if (item.count === 0) tallyHtml = '<span style="color:var(--text-muted);">- (0)</span>';
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="font-weight:700;">
+            <span style="color:${item.color}; margin-right:6px;">●</span>${item.nameEn}
+          </td>
+          <td>${tallyHtml}</td>
+          <td style="font-weight:800; color:${item.color}; font-size:1.1rem;">${item.count}</td>
+          <td style="text-align:center;">
+            <button onclick="changeTally(${idx}, -1)" class="btn-action" style="padding:2px 8px; display:inline-flex;">-</button>
+            <button onclick="changeTally(${idx}, 1)" class="btn-action" style="padding:2px 8px; display:inline-flex; border-color:var(--accent-emerald); color:var(--accent-emerald);">+</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Total Tally Bundles
+      const totBundles = Math.floor(total / 5);
+      const totRem = total % 5;
+      let totHtml = '';
+      for (let i = 0; i < totBundles; i++) totHtml += `<span class="tally-bundle">卌</span>`;
+      if (totRem > 0) totHtml += `<span class="tally-rem">${'|'.repeat(totRem)}</span>`;
+      document.getElementById('totalTallyMarks').innerHTML = totHtml;
+      document.getElementById('totalTallyCount').innerText = `${total} Students`;
+    }
+
+    function changeTally(idx, delta) {
+      if (tallyData[idx].count + delta >= 0) {
+        tallyData[idx].count += delta;
+        renderTallyTable();
+      }
+    }
+
+    function resetTallies() {
+      tallyData.forEach(item => item.count = 0);
+      renderTallyTable();
+    }
+
+    // Pictograph Functions
+    function setPictoScale(scale) {
+      pictoScale = scale;
+      document.getElementById('pictoScaleLabel').innerText = `1 🪁 = ${scale} kites`;
+      renderPictoTable();
+    }
+
+    function renderPictoTable() {
+      const tbody = document.getElementById('pictoBody');
+      tbody.innerHTML = '';
+
+      pictoKiteData.forEach(item => {
+        const full = Math.floor(item.value / pictoScale);
+        const rem = item.value % pictoScale;
+        const hasHalf = (rem >= pictoScale * 0.4 && rem <= pictoScale * 0.6);
+
+        let icons = '';
+        for (let i = 0; i < full; i++) {
+          icons += `<span style="font-size:1.3rem; margin-right:4px;" title="1 symbol = ${pictoScale}">🪁</span>`;
+        }
+        if (hasHalf) {
+          icons += `<span style="font-size:1.3rem; opacity:0.6;" title="Half symbol = ${Math.round(pictoScale/2)}">🪁½</span>`;
+        }
+        if (rem > 0 && !hasHalf) {
+          icons += `<span style="font-size:0.75rem; color:var(--accent-rose); margin-left:6px;">(+${rem} kites)</span>`;
+        }
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="font-weight:700;">${item.name}</td>
+          <td style="font-weight:800; color:var(--accent-gold);">${item.value}</td>
+          <td>${icons} <span style="font-size:0.75rem; color:var(--text-muted); margin-left:8px;">(${full} ${hasHalf ? '+ ½' : ''} symbols)</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Bar Graph Functions
+    function setBarOrientation(orient) {
+      barOrientation = orient;
+      renderBarGraph();
+    }
+
+    function renderBarGraph() {
+      const container = document.getElementById('barGraphContainer');
+      const maxVal = Math.max(...trafficData.map(d => d.value));
+
+      if (barOrientation === 'vertical') {
+        let barsHtml = '';
+        let labelsHtml = '';
+
+        trafficData.forEach(d => {
+          const heightPct = Math.max(8, Math.round((d.value / maxVal) * 100));
+          barsHtml += `
+            <div style="flex:1; max-width:80px; display:flex; flex-direction:column; align-items:center; height:100%; justify-content:flex-end;">
+              <span style="font-size:0.75rem; font-weight:800; color:${d.color}; margin-bottom:4px;">${d.value}</span>
+              <div style="width:100%; height:${heightPct}%; background:linear-gradient(180deg, ${d.color}, rgba(0,0,0,0.5)); border:1.5px solid ${d.color}; border-bottom:none; border-top-left-radius:6px; border-top-right-radius:6px; box-shadow:0 4px 12px ${d.color}40;"></div>
+            </div>
+          `;
+          labelsHtml += `
+            <div style="flex:1; max-width:80px; text-align:center; font-size:0.72rem; font-weight:700; color:#e2e8f0; line-height:1.2;">
+              ${d.label}
+            </div>
+          `;
+        });
+
+        container.innerHTML = `
+          <div style="font-size:0.75rem; color:var(--accent-sky); font-weight:700; margin-bottom:10px;">▲ Y-Axis: Number of Vehicles (Max: 1,200)</div>
+          <div style="display:flex; align-items:flex-end; justify-content:space-around; height:260px; border-bottom:2px solid rgba(255,255,255,0.3); border-left:2px solid rgba(255,255,255,0.3); padding:0 10px; gap:10px;">
+            ${barsHtml}
+          </div>
+          <div style="display:flex; justify-content:space-around; padding:10px 10px 0; gap:10px;">
+            ${labelsHtml}
+          </div>
+          <div style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:10px;">► X-Axis: Time Intervals (Uniform Width & Equal Gaps)</div>
+        `;
+      } else {
+        let horizontalHtml = '';
+        trafficData.forEach(d => {
+          const widthPct = Math.max(8, Math.round((d.value / maxVal) * 100));
+          horizontalHtml += `
+            <div style="margin-bottom:12px;">
+              <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:700; margin-bottom:4px;">
+                <span>${d.label}</span>
+                <span style="color:${d.color};">${d.value} vehicles</span>
+              </div>
+              <div style="height:22px; background:rgba(255,255,255,0.06); border-radius:6px; overflow:hidden;">
+                <div style="height:100%; width:${widthPct}%; background:linear-gradient(90deg, ${d.color}, ${d.color}90); border-radius:6px;"></div>
+              </div>
+            </div>
+          `;
+        });
+        container.innerHTML = horizontalHtml;
+      }
+    }
+
+    // Quiz Functions
+    function renderQuiz() {
+      const qContainer = document.getElementById('quizContainer');
+      qContainer.innerHTML = '';
+
+      quizQuestions.forEach((qObj, idx) => {
+        let optionsHtml = '';
+        qObj.options.forEach((opt, oIdx) => {
+          optionsHtml += `
+            <div class="quiz-option" id="q_${idx}_opt_${oIdx}" onclick="selectQuizOption(${idx}, ${oIdx})">
+              <span style="width:20px; height:20px; border-radius:50%; border:1px solid currentColor; display:inline-flex; align-items:center; justify-content:center; font-size:0.72rem; flex-shrink:0;">
+                ${String.fromCharCode(65 + oIdx)}
+              </span>
+              <span>${opt}</span>
+            </div>
+          `;
+        });
+
+        const qCard = document.createElement('div');
+        qCard.className = 'ex-box';
+        qCard.style.marginTop = '14px';
+        qCard.innerHTML = `
+          <div style="font-size:0.95rem; font-weight:700; color:#fff; margin-bottom:10px;">${qObj.q}</div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:8px;">
+            ${optionsHtml}
+          </div>
+        `;
+        qContainer.appendChild(qCard);
+      });
+    }
+
+    function selectQuizOption(qIdx, oIdx) {
+      userQuizAnswers[qIdx] = oIdx;
+      for (let i = 0; i < 4; i++) {
+        const el = document.getElementById(`q_${qIdx}_opt_${i}`);
+        if (el) el.classList.remove('selected');
+      }
+      const selectedEl = document.getElementById(`q_${qIdx}_opt_${oIdx}`);
+      if (selectedEl) selectedEl.classList.add('selected');
+    }
+
+    function gradeQuiz() {
+      let score = 0;
+      quizQuestions.forEach((qObj, idx) => {
+        const userChoice = userQuizAnswers[idx];
+        for (let i = 0; i < qObj.options.length; i++) {
+          const el = document.getElementById(`q_${idx}_opt_${i}`);
+          if (!el) continue;
+          el.classList.remove('correct', 'wrong');
+          if (i === qObj.ans) {
+            el.classList.add('correct');
+          } else if (i === userChoice && userChoice !== qObj.ans) {
+            el.classList.add('wrong');
+          }
+        }
+        if (userChoice === qObj.ans) score++;
+      });
+
+      document.getElementById('quizScoreVal').innerText = score;
+      document.getElementById('quizScoreDisplay').style.display = 'block';
+
+      if (score >= 14 && typeof confetti === 'function') {
+        confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 } });
+      }
+    }
+
+    function toggleSolutionBox(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+      }
+    }
+
+    // While-Reading Checkpoints Data
+    const checkpointTopics = [
+      {
+        id: "chk-1",
+        section: "Section 4.1",
+        pages: "Pages 74–76",
+        title: "What is Data? (आँकड़े क्या हैं?)",
+        note: "While reading Pages 74–76: Navya wonders how to find the class's most popular sport from an unorganized list of 31 classmates.",
+        noteHi: "पृष्ठ 74–76 पढ़ते समय: नव्या 31 सहपाठियों की अव्यवस्थित सूची से सबसे लोकप्रिय खेल का पता लगाने पर विचार करती है।",
+        questions: [
+          {
+            id: "chk-1-q1",
+            type: "MCQ",
+            qEn: "Why could Navya NOT immediately see the most popular game just by looking at her raw list of 31 classmates?",
+            qHi: "31 सहपाठियों की कच्ची सूची देखकर ही नव्या तुरंत सबसे लोकप्रिय खेल क्यों नहीं बता पाई?",
+            ref: "Page 75: 'We can’t yet see the most popular game. How can we get it from this list?'",
+            options: [
+              "Cricket is always the most popular sport",
+              "Some students chose two sports",
+              "Names and sports were scattered without grouping or frequency counts",
+              "She forgot to write student names"
+            ],
+            ans: 2,
+            hint: "Raw data is unorganized. Without tallying, individual frequencies cannot be compared at a glance.",
+            exp: "In an unorganized list, each response is scattered. Grouping identical choices and tallying them creates a frequency table."
+          },
+          {
+            id: "chk-1-q2",
+            type: "TRUE_FALSE",
+            qEn: "True or False: Does Pari need to conduct a survey to answer 'When did India get independence?'",
+            qHi: "सत्य या असत्य: क्या 'भारत को स्वतंत्रता कब मिली?' का उत्तर देने के लिए परी को सर्वेक्षण करना पड़ेगा?",
+            ref: "Page 76: Figure it Out Q4(b) - Identifying questions needing data collection",
+            options: [
+              "True (She must ask all classmates their opinion)",
+              "False (It is an established historical fact: 15 August 1947)"
+            ],
+            ans: 1,
+            hint: "Historical dates do not change depending on people’s opinions.",
+            exp: "Fixed historical facts are already documented. Data collection is only required when facts or preferences vary and are unknown."
+          }
+        ]
+      },
+      {
+        id: "chk-2",
+        section: "Section 4.1",
+        pages: "Pages 76–77",
+        title: "Tally Marks & The Nominal Roll (मिलान चिह्न और नाम सूची)",
+        note: "While reading Pages 76–77: Shri Nilesh groups sweet preferences in bundles of 5 (卌). A frequency table tells how many sweets to order, but not which student chose which sweet.",
+        noteHi: "पृष्ठ 76–77 पढ़ते समय: श्री नीलेश मिठाइयों को 5-5 के बंडलों (卌) में गिनते हैं। बारंबारता कुल संख्या बताती है, व्यक्तिगत नाम नहीं।",
+        questions: [
+          {
+            id: "chk-2-q1",
+            type: "PAUSE_AND_SOLVE",
+            qEn: "Pause & Count: Gujiya has 卌 卌 ||| and Rasgulla has 卌 ||. How many total sweets of these two types are needed?",
+            qHi: "रुकें और गिनें: गुजिया के लिए 卌 卌 ||| और रसगुल्ला के लिए 卌 || दर्ज है। दोनों प्रकार की कुल कितनी मिठाइयाँ चाहिए?",
+            ref: "Page 76: Shri Nilesh sweet preferences blackboard",
+            options: [
+              "18 sweets",
+              "20 sweets (13 Gujiyas + 7 Rasgullas)",
+              "22 sweets",
+              "15 sweets"
+            ],
+            ans: 1,
+            hint: "Each bundle 卌 = 5. Gujiya = 5+5+3 = 13. Rasgulla = 5+2 = 7.",
+            exp: "Gujiya = (2 × 5) + 3 = 13. Rasgulla = (1 × 5) + 2 = 7. Total = 13 + 7 = 20 sweets."
+          },
+          {
+            id: "chk-2-q2",
+            type: "SPOT_THE_TRAP",
+            qEn: "Spot the Trap: Can Shri Nilesh use ONLY his sweet tally table to hand out the correct sweet to each individual child by name?",
+            qHi: "सावधान: क्या श्री नीलेश केवल इस मिलान चिह्न तालिका से प्रत्येक बच्चे को नाम से सही मिठाई दे सकते हैं?",
+            ref: "Page 77: 'What information does this table give? What information does it not give?'",
+            options: [
+              "No, because tally marks only work for fruits",
+              "Yes, because the total count matches the class strength",
+              "Yes, alphabetical order solves it",
+              "No, because frequency tables lose the nominal link between names and choices"
+            ],
+            ans: 3,
+            hint: "The tally table counts how many, but doesn't record who picked what.",
+            exp: "A frequency table aggregates counts into totals. The individual identity of who selected which item is lost."
+          }
+        ]
+      },
+      {
+        id: "chk-3",
+        section: "Section 4.1",
+        pages: "Pages 77–78",
+        title: "Sandhya Shoe Sizes (संध्या के जूते के माप)",
+        note: "While reading Pages 77–78: Sandhya organizes messy shoe measurements by arranging numbers in ascending order (5, 5, 6, 6, 6...).",
+        noteHi: "पृष्ठ 77–78 पढ़ते समय: संध्या जूते के मापों को आरोही क्रम में व्यवस्थित करती है।",
+        questions: [
+          {
+            id: "chk-3-q1",
+            type: "MCQ",
+            qEn: "What is the primary benefit of sorting numerical data in ascending order before tallying?",
+            qHi: "मिलान चिह्न लगाने से पहले संख्यात्मक आँकड़ों को आरोही क्रम में व्यवस्थित करने का मुख्य लाभ क्या है?",
+            ref: "Page 77: Sandhya’s list of shoe sizes in ascending order",
+            options: [
+              "It automatically calculates the mean",
+              "It increases the shoe sizes of students",
+              "Identical numbers group together, making counting easy without missing any values",
+              "It eliminates need for counting"
+            ],
+            ans: 2,
+            hint: "When identical numbers are adjacent, you can count them sequentially without scanning back and forth.",
+            exp: "Sorting groups identical items contiguously, ensuring zero omission and effortless frequency counting."
+          }
+        ]
+      },
+      {
+        id: "chk-4",
+        section: "Section 4.1",
+        pages: "Pages 78–79",
+        title: "Roadside Trees & Letter Frequencies (वृक्ष एवं अक्षर बारंबारता)",
+        note: "While reading Pages 78–79: Students count roadside trees and analyze letter frequencies in an English newspaper article (x < c < r < i < e).",
+        noteHi: "पृष्ठ 78–79 पढ़ते समय: विद्यार्थी सड़क किनारे पेड़ों और अंग्रेज़ी समाचार पत्र के अक्षरों की बारंबारता का विश्लेषण करते हैं।",
+        questions: [
+          {
+            id: "chk-4-q1",
+            type: "MCQ",
+            qEn: "In an English newspaper article, which letter is almost always observed with the highest frequency?",
+            qHi: "एक अंग्रेज़ी समाचार पत्र के लेख में प्रायः किस अक्षर की बारंबारता सबसे अधिक होती है?",
+            ref: "Page 79: Figure it Out Q2 - Letter frequencies in a paragraph",
+            options: [
+              "Letter 'x'",
+              "Letter 'e'",
+              "Letter 'q'",
+              "Letter 'z'"
+            ],
+            ans: 1,
+            hint: "It is the most common vowel in the English language (order: x < c < r < i < e).",
+            exp: "The letter 'e' is statistically the most frequently occurring letter in the English language."
+          }
+        ]
+      },
+      {
+        id: "chk-5",
+        section: "Section 4.2",
+        pages: "Pages 79–81",
+        title: "Pictographs & Daily Routines (चित्रालेख और दैनिक दिनचर्या)",
+        note: "While reading Pages 79–81: Nand Kishor records his 24-hour routine where 1 🕒 symbol represents 1 hour. He spends 9 hours sleeping and 6 hours in school.",
+        noteHi: "पृष्ठ 79–81 पढ़ते समय: नंद किशोर 24 घंटे की दिनचर्या चित्रालेख में दर्शाता है जहाँ 1 🕒 = 1 घंटा।",
+        questions: [
+          {
+            id: "chk-5-q1",
+            type: "PAUSE_AND_SOLVE",
+            qEn: "Nand Kishor spends 9 hours sleeping, 6 hours in school, and 3 hours with friends. What fraction of the full 24-hour day does he spend sleeping?",
+            qHi: "नंद किशोर 9 घंटे सोता है, 6 घंटे विद्यालय में और 3 घंटे दोस्तों के साथ। 24 घंटे में से वह कितना भाग सोने में बिताता है?",
+            ref: "Page 81: Nand Kishor’s daily routine pictograph",
+            options: [
+              "1/4 of the day",
+              "9/20 of the day",
+              "1/2 of the day",
+              "9/24 = 3/8 of the day"
+            ],
+            ans: 3,
+            hint: "Divide sleeping hours (9) by total day hours (24) and simplify.",
+            exp: "9 ÷ 24 simplifies to 3/8 (37.5% of the day)."
+          }
+        ]
+      },
+      {
+        id: "chk-6",
+        section: "Section 4.2",
+        pages: "Pages 81–83",
+        title: "Drawing Pictographs & Scaling Limits (चित्रालेख बनाना व पैमाना)",
+        note: "While reading Pages 81–83: Picking a scale that is too large (like 1 symbol = 10) causes severe problems when numbers like 27 or 33 must be depicted using fractions.",
+        noteHi: "पृष्ठ 81–83 पढ़ते समय: बहुत बड़ा पैमाना चुनने से 27 या 33 जैसी विषम संख्याओं को दर्शाना कठिन हो जाता है।",
+        questions: [
+          {
+            id: "chk-6-q1",
+            type: "SPOT_THE_TRAP",
+            qEn: "Why is scale 1 👧 = 10 girls inconvenient when a class has 27 girls?",
+            qHi: "यदि किसी कक्षा में 27 छात्राएँ हैं, तो 1 👧 = 10 छात्राओं का पैमाना असुविधाजनक क्यों है?",
+            ref: "Page 82: 'Drawing 7/10th of a human figure is nearly impossible to represent accurately.'",
+            options: [
+              "Drawing 7/10th of a human symbol accurately by hand is extremely difficult",
+              "10 is an odd number",
+              "Pictographs can only use scale = 1",
+              "27 cannot be drawn on paper"
+            ],
+            ans: 0,
+            hint: "Try sketching exactly 0.7 of a person! Fractional drawings lead to guesswork.",
+            exp: "Complex fractions like 7/10 cannot be cleanly drawn by hand without visual confusion. Scale 1 symbol = 5 or 2 would be much more practical."
+          }
+        ]
+      },
+      {
+        id: "chk-7",
+        section: "Section 4.2",
+        pages: "Pages 83–85",
+        title: "Kite Sales & Library Books (पतंग बिक्री और पुस्तकालय)",
+        note: "While reading Pages 83–85: Magan Bhai sells kites in Jamnagar (1 🪁 = 100 kites). Poonam Ben bought 700 kites, more than twice Rani's 300 kites.",
+        noteHi: "पृष्ठ 83–85 पढ़ते समय: जामनगर में मगन भाई की पतंग बिक्री (1 🪁 = 100 पतंगें)। पूनम बेन ने 700 पतंगें खरीदीं।",
+        questions: [
+          {
+            id: "chk-7-q1",
+            type: "MCQ",
+            qEn: "If Rani bought 300 kites and Poonam Ben bought 700 kites, how many MORE kites did Poonam Ben buy than TWICE Rani's purchase?",
+            qHi: "यदि रानी ने 300 पतंगें और पूनम बेन ने 700 पतंगें खरीदीं, तो पूनम बेन ने रानी के दोगुने से कितनी अधिक पतंगें खरीदीं?",
+            ref: "Page 85: Figure it Out Q2 - Magan Bhai Kite Sales",
+            options: [
+              "50 more kites",
+              "200 more kites",
+              "100 more kites (700 - 600 = 100)",
+              "400 more kites"
+            ],
+            ans: 2,
+            hint: "Twice Rani's kites = 2 × 300 = 600. Then subtract from 700.",
+            exp: "Twice Rani = 600 kites. Poonam Ben = 700 kites. 700 - 600 = 100 more kites."
+          }
+        ]
+      },
+      {
+        id: "chk-8",
+        section: "Section 4.3",
+        pages: "Pages 85–87",
+        title: "Bar Graph Rules: Equal Width & Spacing (दंड आलेख के मानक नियम)",
+        note: "While reading Pages 85–87: A bar graph must feature bars of EQUAL width, separated by EQUAL gaps. Only the length/height represents frequency.",
+        noteHi: "पृष्ठ 85–87 पढ़ते समय: दंड आलेख में सभी दंडों की चौड़ाई समान और उनके बीच की दूरी समान होनी चाहिए।",
+        questions: [
+          {
+            id: "chk-8-q1",
+            type: "MCQ",
+            qEn: "In a scientifically drawn bar graph, which dimension is strictly proportional to the numerical data?",
+            qHi: "मानक दंड आलेख में कौन सा आयाम संख्यात्मक मान के सीधे समानुपाती होता है?",
+            ref: "Page 86: Lakhanpal absence bar graph rules",
+            options: [
+              "Width of the bar",
+              "Height (or length) of the bar only",
+              "Space between consecutive bars",
+              "Area of the border"
+            ],
+            ans: 1,
+            hint: "Widths must stay constant so the eye judges only length.",
+            exp: "All bar widths and gap widths are identical; only the bar height/length mirrors the value."
+          }
+        ]
+      },
+      {
+        id: "chk-9",
+        section: "Section 4.3",
+        pages: "Pages 87–88",
+        title: "Delhi Crossing Traffic Graph (दिल्ली चौराहा यातायात)",
+        note: "While reading Pages 87–88: Traffic police officer monitors vehicles per hour. Peak rush hour is 7–8 AM with 1200 vehicles. Total morning traffic is 4450 vehicles.",
+        noteHi: "पृष्ठ 87–88 पढ़ते समय: सुबह 7-8 बजे चरम ट्रैफिक (1200 वाहन)। कुल वाहन = 4450।",
+        questions: [
+          {
+            id: "chk-9-q1",
+            type: "PAUSE_AND_SOLVE",
+            qEn: "What percentage of the total morning traffic (4450 vehicles) passed during the single peak hour 7–8 AM (1200 vehicles)?",
+            qHi: "सुबह के कुल ट्रैफिक (4450 वाहन) का कितना प्रतिशत अकेले व्यस्ततम घंटे 7-8 बजे (1200 वाहन) में निकला?",
+            ref: "Page 87: Delhi crossing bar chart",
+            options: [
+              "About 50%",
+              "About 15%",
+              "About 40%",
+              "About 27% (1200 ÷ 4450 × 100)"
+            ],
+            ans: 3,
+            hint: "(1200 / 4450) × 100 ≈ 26.96%.",
+            exp: "1200 / 4450 ≈ 0.2696 = ~27% of all morning vehicular traffic."
+          }
+        ]
+      },
+      {
+        id: "chk-10",
+        section: "Section 4.3",
+        pages: "Pages 88–89",
+        title: "India's 50-Year Population Growth (भारत की जनसंख्या वृद्धि)",
+        note: "While reading Pages 88–89: India grew from 36 crore (1951) to 102 crore (2001). Scale: 1 unit length = 10 crore people.",
+        noteHi: "पृष्ठ 88–89 पढ़ते समय: भारत की जनसंख्या 1951 में 36 करोड़ से 2001 में 102 करोड़ हो गई। पैमाना: 1 इकाई = 10 करोड़।",
+        questions: [
+          {
+            id: "chk-10-q1",
+            type: "MCQ",
+            qEn: "How much did India's population increase between 1951 (36 crore) and 2001 (102 crore)?",
+            qHi: "1951 (36 करोड़) और 2001 (102 करोड़) के बीच भारत की जनसंख्या में कितनी वृद्धि हुई?",
+            ref: "Page 89: Indian population bar graph",
+            options: [
+              "66 crore (102 - 36)",
+              "56 crore",
+              "76 crore",
+              "138 crore"
+            ],
+            ans: 0,
+            hint: "102 - 36 = 66 crore.",
+            exp: "Increase = 102 - 36 = 66 crore people over 50 years."
+          }
+        ]
+      },
+      {
+        id: "chk-11",
+        section: "Section 4.4",
+        pages: "Pages 89–93",
+        title: "Drawing Bar Graphs & Imran's Budget (दंड आलेख खींचना व बजट)",
+        note: "While reading Pages 89–93: Imran's family earns ₹10,000 monthly (Food ₹3400, House Rent ₹3000, Misc ₹1200, Education ₹800, Transport ₹600, Electricity ₹400). Scale: 1 unit = ₹200.",
+        noteHi: "पृष्ठ 89–93 पढ़ते समय: इमरान के परिवार का मासिक व्यय ₹10,000 (भोजन ₹3400, किराया ₹3000)।",
+        questions: [
+          {
+            id: "chk-11-q1",
+            type: "PAUSE_AND_SOLVE",
+            qEn: "At scale 1 unit length = ₹200, how many units tall will the bar for Food (₹3400) be?",
+            qHi: "पैमाना 1 इकाई = ₹200 पर, भोजन (₹3400) का दंड कितना लंबा होगा?",
+            ref: "Page 90: Imran’s family expenditure table",
+            options: [
+              "34 units",
+              "15 units",
+              "17 units (3400 ÷ 200)",
+              "20 units"
+            ],
+            ans: 2,
+            hint: "Divide ₹3400 by scale value ₹200.",
+            exp: "3400 ÷ 200 = 17 unit lengths on graph paper."
+          }
+        ]
+      },
+      {
+        id: "chk-12",
+        section: "Section 4.4",
+        pages: "Pages 93–94",
+        title: "Railway Ticket Scale Correction (रेलवे टिकट पैमाना सुधार)",
+        note: "While reading Pages 93–94: Bhopal railway counter sold 80 tickets total (Indore 16). When scale is 1 unit = 4 tickets, Indore must be exactly 4 units tall.",
+        noteHi: "पृष्ठ 93–94 पढ़ते समय: भोपाल स्टेशन से इंदौर के लिए 16 टिकट बिके। पैमाना 1 इकाई = 4 टिकट।",
+        questions: [
+          {
+            id: "chk-12-q1",
+            type: "SPOT_THE_TRAP",
+            qEn: "A student drew Indore (16 tickets) as 8 units tall on scale 1 unit = 4 tickets. What was their error?",
+            qHi: "एक छात्र ने 1 इकाई = 4 टिकट के पैमाने पर इंदौर (16 टिकट) को 8 इकाई लंबा खींच दिया। उसकी क्या गलती थी?",
+            ref: "Page 93: Figure it Out Q2 - Correcting railway ticket bar graph",
+            options: [
+              "They forgot to draw the axis",
+              "They divided by 2 instead of 4; the correct bar height is 4 units (16 ÷ 4)",
+              "Indore has no railway station",
+              "They should have drawn 16 units"
+            ],
+            ans: 1,
+            hint: "16 ÷ 4 = 4 units, not 8 units.",
+            exp: "16 ÷ 4 = 4 units tall. Drawing 8 units corresponds to scale 1 unit = 2 tickets."
+          }
+        ]
+      },
+      {
+        id: "chk-13",
+        section: "Section 4.4",
+        pages: "Pages 94–96",
+        title: "Bumrah Wickets Table Trap (बुमराह के विकेटों की सारणी)",
+        note: "While reading Pages 94–96: Bumrah's wickets table. Mayank mistakenly added the match counts (28) instead of the weighted wickets sum: (1×5) + (2×4) + (3×4) + (4×3) + (5×3) + (6×2) = 90 wickets!",
+        noteHi: "पृष्ठ 94–96 पढ़ते समय: जसप्रीत बुमराह के विकेट। मयंक ने मैचों की संख्या (28) जोड़ ली, जबकि कुल विकेट = 90 हैं!",
+        questions: [
+          {
+            id: "chk-13-q1",
+            type: "SPOT_THE_TRAP",
+            qEn: "Why was Mayank's answer of '28 total wickets' completely wrong?",
+            qHi: "मयंक का उत्तर 'कुल 28 विकेट' पूरी तरह गलत क्यों था?",
+            ref: "Page 94: Bumrah’s 30 ODI bowling performance table",
+            options: [
+              "Mayank counted backwards",
+              "Bumrah plays hockey",
+              "He subtracted 2 matches",
+              "28 is the number of matches where he took wickets, NOT the number of wickets! Total wickets = 90"
+            ],
+            ans: 3,
+            hint: "If he took 6 wickets in 2 matches, that alone is 12 wickets!",
+            exp: "Each row must multiply wickets by matches: (1×5) + (2×4) + (3×4) + (4×3) + (5×3) + (6×2) = 5+8+12+12+15+12 = 64 + more = 90 total wickets."
+          }
+        ]
+      },
+      {
+        id: "chk-14",
+        section: "Section 4.5",
+        pages: "Pages 96–100",
+        title: "Mudhol Hounds & Project Tiger (मुधोल हाउंड्स एवं प्रोजेक्ट टाइगर)",
+        note: "While reading Pages 96–100: Karnataka hound counts (18, 36, 12, 48, 18, 24) have HCF = 6. Project Tiger increased tigers from 1400 (2006) to 3700 (2022).",
+        noteHi: "पृष्ठ 96–100 पढ़ते समय: कर्नाटक के मुधोल हाउंड्स श्वान (HCF = 6)। प्रोजेक्ट टाइगर में 2300 बाघों की वृद्धि।",
+        questions: [
+          {
+            id: "chk-14-q1",
+            type: "MCQ",
+            qEn: "For village dog counts 18, 36, 12, 48, 18, 24, why is scale 1 symbol = 6 dogs the most mathematically elegant choice?",
+            qHi: "ग्राम कुत्तों की संख्या 18, 36, 12, 48, 18, 24 के लिए 1 प्रतीक = 6 कुत्ते चुनना सबसे उपयुक्त क्यों है?",
+            ref: "Page 98: Mudhol Hounds pictograph",
+            options: [
+              "6 is the Highest Common Factor (HCF) of all six numbers, giving exact whole symbols for every village",
+              "6 is an even number",
+              "There are 6 villages",
+              "Dogs have 6 legs"
+            ],
+            ans: 0,
+            hint: "Check divisibility: 18÷6=3, 36÷6=6, 12÷6=2, 48÷6=8, 24÷6=4.",
+            exp: "Since 6 is the HCF, every village is represented by integer counts of whole symbols without awkward fractions."
+          }
+        ]
+      },
+      {
+        id: "chk-15",
+        section: "Section 4.5",
+        pages: "Pages 100–103",
+        title: "Orientation: Heights vs River Lengths (दंडों की दिशा: ऊँचाई बनाम नदी की लंबाई)",
+        note: "While reading Pages 100–103: Mountain heights naturally rise vertically from the ground, so vertical bars are intuitive. Rivers flow along the surface, so horizontal bars feel natural.",
+        noteHi: "पृष्ठ 100–103 पढ़ते समय: पर्वत जमीन से ऊपर उठते हैं (ऊर्ध्वाधर दंड)। नदियाँ समतल बहती हैं (क्षैतिज दंड)।",
+        questions: [
+          {
+            id: "chk-15-q1",
+            type: "MCQ",
+            qEn: "Why is a horizontal bar graph visually better suited for showing river lengths than mountain heights?",
+            qHi: "पर्वतों की ऊँचाई की तुलना में नदियों की लंबाई दर्शाने के लिए क्षैतिज दंड आलेख अधिक स्वाभाविक क्यों लगता है?",
+            ref: "Page 101: Aesthetics of Data Presentation - River lengths vs Mountain heights",
+            options: [
+              "Rivers cannot be measured vertically",
+              "Horizontal bars can hold more water",
+              "Rivers flow horizontally across the landscape, matching the horizontal orientation of the bars",
+              "Horizontal bars take less ink"
+            ],
+            ans: 2,
+            hint: "Good data visualizations mirror the natural physical orientation of real-world phenomena.",
+            exp: "Infographic aesthetics improve when visual orientation mirrors physical reality: horizontal for flowing rivers, vertical for rising mountain peaks."
+          }
+        ]
+      },
+      {
+        id: "chk-16",
+        section: "Section 4.5",
+        pages: "Pages 103–106",
+        title: "Triangular Misleading Graphs (भ्रामक त्रिभुजाकार आलेख)",
+        note: "While reading Pages 103–106: Using triangles instead of equal-width rectangles distorts reality. If triangle height doubles, its base also widens, making area quadruple!",
+        noteHi: "पृष्ठ 103–106 पढ़ते समय: समान चौड़ाई के स्थान पर त्रिभुज बनाने से ऊँचाई के साथ आधार भी चौड़ा होता है, जिससे दृश्य क्षेत्रफल 4 गुना बढ़कर भ्रामक दिखता है।",
+        questions: [
+          {
+            id: "chk-16-q1",
+            type: "SPOT_THE_TRAP",
+            qEn: "In the mountain peaks infographic, why is using triangular mountains instead of equal-width bars misleading to the reader?",
+            qHi: "पर्वत शिखरों के आलेख में समान चौड़ाई के आयतों के स्थान पर त्रिभुज बनाना पाठक के लिए भ्रामक क्यों है?",
+            ref: "Page 104: Misleading Infographics - Mountain peaks area distortion",
+            options: [
+              "Mountains do not look like triangles",
+              "As triangle height increases, base width also expands, causing visual area to explode disproportionately",
+              "Everest is shorter than Elbrus",
+              "Triangles cannot be measured with a ruler"
+            ],
+            ans: 1,
+            hint: "Area = 1/2 × base × height. If both base and height double, area quadruples!",
+            exp: "Standard bar graphs keep width constant so the eye judges only height. Triangles grow in two dimensions (base × height), greatly exaggerating differences."
+          }
+        ]
+      }
+    ];
+
+    let userCheckpointAnswers = {};
+    let revealedChkHints = {};
+    let revealedChkExps = {};
+
+    function renderCheckpointFilter() {
+      const container = document.getElementById('checkpointFilterBar');
+      if (!container) return;
+      container.innerHTML = `
+        <button class="btn-action" style="background:var(--accent-emerald); color:#060c18; border-color:var(--accent-emerald); border-radius:20px; white-space:nowrap;" onclick="filterCheckpoints('all', this)">
+          All 16 Topics (Pages 74–106)
+        </button>
+      `;
+      checkpointTopics.forEach((chk, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'btn-action';
+        btn.style.borderRadius = '20px';
+        btn.style.whiteSpace = 'nowrap';
+        btn.innerText = `#${idx + 1} ${chk.pages}`;
+        btn.onclick = () => filterCheckpoints(chk.id, btn);
+        container.appendChild(btn);
+      });
+    }
+
+    function filterCheckpoints(topicId, btnEl) {
+      document.querySelectorAll('#checkpointFilterBar button').forEach(b => {
+        b.style.background = 'rgba(255, 255, 255, 0.08)';
+        b.style.color = 'var(--text-main)';
+        b.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      });
+      if (btnEl) {
+        btnEl.style.background = 'var(--accent-sky)';
+        btnEl.style.color = '#060c18';
+        btnEl.style.borderColor = 'var(--accent-sky)';
+      }
+      renderCheckpoints(topicId);
+    }
+
+    function renderCheckpoints(topicFilter = 'all') {
+      const container = document.getElementById('checkpointsList');
+      if (!container) return;
+      container.innerHTML = '';
+
+      const list = topicFilter === 'all' ? checkpointTopics : checkpointTopics.filter(t => t.id === topicFilter);
+
+      list.forEach((chk, chkIdx) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.style.borderColor = 'var(--border-card)';
+
+        let questionsHtml = '';
+        chk.questions.forEach((q, qIdx) => {
+          const userChoice = userCheckpointAnswers[q.id];
+          const isAnswered = userChoice !== undefined;
+          const isCorrect = isAnswered && userChoice === q.ans;
+          const isHintOpen = !!revealedChkHints[q.id];
+          const isExpOpen = !!revealedChkExps[q.id];
+
+          let optButtons = '';
+          q.options.forEach((optText, oIdx) => {
+            let optClass = 'btn-action';
+            let optStyle = 'width: 100%; text-align: left; padding: 10px 14px; margin-bottom: 8px; justify-content: flex-start;';
+            if (isAnswered) {
+              if (oIdx === userChoice) {
+                if (isCorrect) {
+                  optStyle += 'background: rgba(16, 185, 129, 0.25); border-color: var(--accent-emerald); color: var(--accent-emerald); font-weight: 800;';
+                } else {
+                  optStyle += 'background: rgba(244, 63, 94, 0.25); border-color: var(--accent-rose); color: #fca5a5; font-weight: 800;';
+                }
+              } else if (oIdx === q.ans && isExpOpen) {
+                optStyle += 'background: rgba(16, 185, 129, 0.15); border-color: var(--accent-emerald); color: #34d399;';
+              }
+            }
+
+            optButtons += `
+              <button class="${optClass}" style="${optStyle}" onclick="selectCheckpointOpt('${q.id}', ${oIdx}, ${q.ans})">
+                <span style="display:inline-flex; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,0.1); align-items:center; justify-content:center; margin-right:8px; font-size:0.75rem;">
+                  ${String.fromCharCode(65 + oIdx)}
+                </span>
+                <span>${optText}</span>
+              </button>
+            `;
+          });
+
+          questionsHtml += `
+            <div class="ex-box" style="margin-top: 16px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
+                <span style="background: rgba(56, 189, 248, 0.15); color: var(--accent-sky); font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 4px;">
+                  ${q.type}
+                </span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Question ${qIdx + 1}</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--accent-sky); background: rgba(56, 189, 248, 0.08); padding: 4px 10px; border-radius: 6px; margin-bottom: 8px;">
+                <strong>📍 Reference:</strong> ${q.ref}
+              </div>
+              <div style="font-size: 0.98rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                ${q.qEn}
+              </div>
+              <div style="font-size: 0.9rem; color: var(--accent-sky); margin-bottom: 12px; font-weight: 600;">
+                ${q.qHi}
+              </div>
+
+              <!-- Options -->
+              <div style="margin-bottom: 10px;">${optButtons}</div>
+
+              <!-- Instant Feedback Banner -->
+              ${isAnswered ? `
+                <div style="padding: 8px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; background: ${isCorrect ? 'rgba(16, 185, 129, 0.2)' : 'rgba(244, 63, 94, 0.2)'}; color: ${isCorrect ? '#34d399' : '#fca5a5'};">
+                  <span>${isCorrect ? '🎉 Shabash! Correct Answer! (सही उत्तर)' : '❌ Incorrect. Check hint below! (गलत उत्तर, संकेत देखें)'}</span>
+                  <button onclick="resetChkQuestion('${q.id}')" style="background:none; border:none; color:inherit; text-decoration:underline; cursor:pointer; font-size:0.75rem;">Reset</button>
+                </div>
+              ` : ''}
+
+              <!-- Actions: Hint & Explanation -->
+              <div style="display: flex; gap: 8px;">
+                <button class="btn-action" style="font-size: 0.75rem; padding: 4px 10px;" onclick="toggleChkHint('${q.id}')">
+                  💡 ${isHintOpen ? 'Hide Hint' : 'Show Hint'}
+                </button>
+                <button class="btn-action" style="font-size: 0.75rem; padding: 4px 10px; color: var(--accent-sky);" onclick="toggleChkExp('${q.id}')">
+                  📝 ${isExpOpen ? 'Hide Explanation' : 'Detailed Explanation'}
+                </button>
+              </div>
+
+              <!-- Hint Box -->
+              ${isHintOpen ? `
+                <div style="margin-top: 10px; background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--accent-gold); padding: 8px 12px; border-radius: 4px; font-size: 0.82rem; color: #fef3c7;">
+                  <strong>💡 Hint:</strong> ${q.hint}
+                </div>
+              ` : ''}
+
+              <!-- Explanation Box -->
+              ${isExpOpen ? `
+                <div style="margin-top: 10px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid var(--accent-emerald); padding: 8px 12px; border-radius: 4px; font-size: 0.82rem; color: #a7f3d0;">
+                  <strong>📝 Explanation:</strong> ${q.exp}
+                </div>
+              ` : ''}
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="background: var(--accent-emerald); color: #060c18; font-weight: 900; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px;">
+                ${chk.section} • ${chk.pages}
+              </span>
+              <h4 style="color: #fff; margin: 0; font-size: 1.15rem;">${chk.title}</h4>
+            </div>
+          </div>
+
+          <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--accent-sky); padding: 10px 14px; border-radius: 6px; font-size: 0.85rem; margin-bottom: 16px;">
+            <div style="font-weight: 700; color: var(--accent-sky); margin-bottom: 2px;">📖 While reading ${chk.pages} in Ganita Prakash:</div>
+            <div style="color: #e2e8f0;">${chk.note}</div>
+            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;">${chk.noteHi}</div>
+          </div>
+
+          <div>${questionsHtml}</div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function selectCheckpointOpt(qId, optIdx, correctIdx) {
+      const isFirstCorrect = userCheckpointAnswers[qId] === undefined && optIdx === correctIdx;
+      userCheckpointAnswers[qId] = optIdx;
+      if (isFirstCorrect && typeof confetti === 'function') {
+        confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+      }
+      updateCheckpointProgress();
+      renderCheckpoints();
+    }
+
+    function toggleChkHint(qId) {
+      revealedChkHints[qId] = !revealedChkHints[qId];
+      renderCheckpoints();
+    }
+
+    function toggleChkExp(qId) {
+      revealedChkExps[qId] = !revealedChkExps[qId];
+      renderCheckpoints();
+    }
+
+    function resetChkQuestion(qId) {
+      delete userCheckpointAnswers[qId];
+      updateCheckpointProgress();
+      renderCheckpoints();
+    }
+
+    function updateCheckpointProgress() {
+      const answeredCount = Object.keys(userCheckpointAnswers).length;
+      const pct = Math.round((answeredCount / 32) * 100);
+      const textEl = document.getElementById('checkpointProgressText');
+      const barEl = document.getElementById('checkpointProgressBar');
+      if (textEl) textEl.innerText = `${answeredCount} / 32 Solved (${pct}%)`;
+      if (barEl) barEl.style.width = `${pct}%`;
+    }
+
+    // Init
+    window.addEventListener('DOMContentLoaded', () => {
+      renderTallyTable();
+      renderPictoTable();
+      renderBarGraph();
+      renderQuiz();
+      renderCheckpointFilter();
+      renderCheckpoints();
+    });
+  </script>
+</body>
+</html>

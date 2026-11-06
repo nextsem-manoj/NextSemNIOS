@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NCERT Class 9 Science Ch 8: Journey Inside the Atom — Advanced Pagewise Challenge & Notes</title>
+  <meta name="description" content="Advanced, Olympiad-level pagewise study notes, rigorous numerical & conceptual fill-in-the-blanks (no hints), and 5-pair match-the-following challenge exercises for NCERT Class 9 Science Chapter 8 (Journey Inside the Atom / परमाणु की आंतरिक यात्रा).">
+  <link rel="icon" type="image/png" href="/image-20.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.88);
+      --border-card: rgba(255, 255, 255, 0.08);
+
+      --brand-emerald: #10b981;
+      --brand-emerald-hover: #059669;
+      --brand-cyan: #06b6d4;
+      --brand-amber: #f59e0b;
+      --brand-purple: #a855f7;
+      --brand-rose: #f43f5e;
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.92);
+      --border-card: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.65;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(244, 63, 94, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 90px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Navbar with Breadcrumb Navigation */
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-emerald);
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-emerald);
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-emerald);
+      color: var(--brand-emerald);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Banner */
+    .hero-wrapper {
+      max-width: 1100px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #f43f5e, #a855f7, #06b6d4, #10b981);
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-rose {
+      background: rgba(244, 63, 94, 0.18);
+      border: 1px solid rgba(244, 63, 94, 0.5);
+      color: #fb7185;
+    }
+
+    .tag-badge-purple {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: var(--brand-purple);
+    }
+
+    .hero-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #f43f5e 0%, #a855f7 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 850px;
+      font-weight: 500;
+    }
+
+    /* Page Navigation Ribbon */
+    .page-nav-ribbon {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+      padding: 10px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .ribbon-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .ribbon-btn:hover {
+      background: var(--brand-rose);
+      color: #ffffff;
+      border-color: var(--brand-rose);
+    }
+
+    /* Page Card Container */
+    .page-section {
+      max-width: 1100px;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+    }
+
+    .study-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      position: relative;
+    }
+
+    .page-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-card);
+      padding-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .page-num-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #fb7185;
+    }
+
+    .page-num-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.4);
+      color: #fb7185;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .page-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    /* Notes Box */
+    .notes-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--brand-emerald);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .notes-box h4 {
+      color: var(--brand-emerald);
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .notes-box ul {
+      margin-left: 20px;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .key-formula-pill {
+      display: inline-block;
+      padding: 3px 9px;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: #67e8f9;
+      border-radius: 6px;
+      font-family: ui-monospace, monospace;
+      font-weight: 700;
+      font-size: 0.84rem;
+      margin: 3px 0;
+    }
+
+    /* Fill in the blanks practice */
+    .fib-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--brand-rose);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      font-size: 0.9rem;
+      line-height: 1.85;
+    }
+
+    .fib-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .fib-title {
+      color: #fb7185;
+      font-size: 0.95rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blank-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #fb7185;
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.35);
+      border-radius: 4px;
+      padding: 0 4px;
+      margin: 0 2px;
+    }
+
+    .blank-line {
+      display: inline-block;
+      width: 80px;
+      border-bottom: 2px dashed rgba(244, 63, 94, 0.7);
+      vertical-align: middle;
+      margin: 0 4px;
+    }
+
+    /* Solution details dropdowns (No hints) */
+    details.ans-drop {
+      display: inline-block;
+      margin: 0 3px;
+      vertical-align: middle;
+    }
+
+    details.ans-drop > summary {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      user-select: none;
+      transition: all 0.15s ease;
+      list-style: none;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #67e8f9;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.ans-drop > summary:hover {
+      background: rgba(6, 182, 212, 0.22);
+    }
+
+    details.ans-drop[open] > summary {
+      background: rgba(6, 182, 212, 0.3);
+      border-color: #67e8f9;
+    }
+
+    .reveal-pill {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      animation: popIn 0.2s ease;
+      background: rgba(6, 182, 212, 0.2);
+      color: #cffafe;
+      border: 1px solid rgba(6, 182, 212, 0.4);
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(-2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Match the Following Card */
+    .match-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--brand-purple);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .match-title {
+      color: var(--brand-purple);
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .match-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .match-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .match-left {
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .match-left-letter {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: var(--brand-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .match-select {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      outline: none;
+      flex: 1.6;
+      min-width: 260px;
+      transition: all 0.2s ease;
+    }
+
+    .match-select:focus {
+      border-color: var(--brand-purple);
+      box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.25);
+    }
+
+    .match-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-check-match {
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      background: var(--brand-purple);
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-check-match:hover {
+      background: #9333ea;
+      transform: translateY(-1px);
+    }
+
+    .match-feedback {
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .match-feedback.correct {
+      color: #34d399;
+    }
+
+    .match-feedback.wrong {
+      color: #f87171;
+    }
+
+    /* Bulk Buttons */
+    .bulk-btn {
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .bulk-btn:hover {
+      border-color: var(--brand-emerald);
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Complete Breadcrumbs (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=9" class="breadcrumb-link">Class 9</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=9&subject=science" class="breadcrumb-link">Science</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=9&subject=science&chapter=8" class="breadcrumb-link">Chapter 8: Journey Inside the Atom</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">Advanced Pagewise Challenge & Notes</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="nav-btn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <a href="/chapter-8-journey-inside-the-atom-mcq.html" class="nav-btn" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: var(--brand-emerald); font-weight: 800;">
+          <span>🎯 50 MCQs Quiz</span>
+        </a>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div>
+        <div class="badge-row">
+          <span class="tag-badge tag-badge-rose">⚡ Advanced Olympiad & Board Challenge</span>
+          <span class="tag-badge tag-badge-purple">🚫 Strict Mode: No Hints Provided</span>
+          <span class="tag-badge tag-badge-rose">⚛️ NCERT Class 9 • Chapter 8</span>
+        </div>
+        <h1 class="hero-title" style="margin-top: 8px;">
+          Journey Inside the Atom <span class="hero-title-highlight">| Advanced Pagewise Challenge</span>
+        </h1>
+        <p class="hero-subtitle">
+          Comprehensive textbook breakdown with high-difficulty conceptual questions, isotopic percentage mathematics, subatomic charge-to-mass calculations, 5-pair tricky matching exercises, and detailed step solutions (No hints revealed during testing).
+        </p>
+      </div>
+
+      <!-- Quick Global Actions -->
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; border-top: 1px solid var(--border-card); padding-top: 14px;">
+        <button class="bulk-btn" onclick="toggleAllAnswers(true)">👁️ Show All Step Solutions</button>
+        <button class="bulk-btn" onclick="hideAllDetails()">🔒 Hide All Solutions (Strict Test Mode)</button>
+        <button class="bulk-btn" onclick="resetAllMatches()">🔄 Reset All Matchings</button>
+        <a href="/chapter-8-journey-inside-the-atom-mcq.html" class="bulk-btn" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: #10b981; font-weight: 800; text-decoration: none;">⚡ Launch 50 MCQ Quiz</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Navigation Ribbon -->
+  <nav class="page-nav-ribbon">
+    <span style="font-size: 0.75rem; font-weight: 800; color: #fb7185; text-transform: uppercase; white-space: nowrap; margin-right: 4px;">📖 Jump to:</span>
+    <a href="#page1" class="ribbon-btn">Pg 1: Chemical Laws & Dalton</a>
+    <a href="#page2" class="ribbon-btn">Pg 2: Charge/Mass of Subatomic Particles</a>
+    <a href="#page3" class="ribbon-btn">Pg 3: Thomson Model Failures</a>
+    <a href="#page4" class="ribbon-btn">Pg 4: Gold Foil Scattering Dynamics</a>
+    <a href="#page5" class="ribbon-btn">Pg 5: Nuclear Density & Stability Flaw</a>
+    <a href="#page6" class="ribbon-btn">Pg 6: Bohr Quantization & Neutron Nuclear Rxn</a>
+    <a href="#page7" class="ribbon-btn">Pg 7: Multi-Shell Aufbau Scheme</a>
+    <a href="#page8" class="ribbon-btn">Pg 8: Isoelectronic Ions & Valency</a>
+    <a href="#page9" class="ribbon-btn">Pg 9: Polyatomic Ions Particle Count</a>
+    <a href="#page10" class="ribbon-btn">Pg 10: Isotopic Abundance Math & Isobars</a>
+  </nav>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <section id="page1" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">1</div>
+          <span>NCERT Textbook pp. 95–96</span>
+        </div>
+        <h2 class="page-title">Quantitative Chemical Laws & Dalton's Atomic Theory</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Law of Conservation of Mass (Lavoisier, 1774):</strong> In any closed chemical reaction, $\sum \text{Mass of Reactants} = \sum \text{Mass of Products}$. E.g., $100\text{ g }\text{CaCO}_3 \xrightarrow{\Delta} 56\text{ g }\text{CaO} + 44\text{ g }\text{CO}_2$.</li>
+          <li><strong>Law of Constant Proportions (Proust, 1799):</strong> A pure chemical compound always contains its elements combined together in fixed mass proportions, regardless of source. E.g., Pure $\text{H}_2\text{O}$ has $m_{\text{H}} : m_{\text{O}} = 1 : 8$; $\text{NH}_3$ has $m_{\text{N}} : m_{\text{H}} = 14 : 3$.</li>
+          <li><strong>Dalton's Atomic Postulates (1808):</strong>
+            <br>• Matter is composed of indestructible, indivisible particles called atoms.
+            <br>• Atoms of a given element are identical in mass and chemical properties.
+            <br>• Atoms of different elements have different masses and chemical properties.
+          </li>
+          <li><strong>Postulates Disproved by Modern Physics:</strong>
+            <br>• "Atoms are indivisible" $\rightarrow$ Disproved by subatomic particles ($e^-, p, n$).
+            <br>• "Atoms of same element have identical mass" $\rightarrow$ Disproved by <strong>Isotopes</strong> (e.g. $^{35}\text{Cl}$ and $^{37}\text{Cl}$).
+            <br>• "Atoms of different elements have different masses" $\rightarrow$ Disproved by <strong>Isobars</strong> (e.g. $^{40}_{18}\text{Ar}$ and $^{40}_{20}\text{Ca}$).
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. If 100 g of Calcium Carbonate ($\text{CaCO}_3$) decomposes to yield 56 g of $\text{CaO}$ and 44 g of $\text{CO}_2$, it strictly obeys the Law of Conservation of Mass established by 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Antoine Lavoisier</span></details>
+          <br>
+          2. Pure Hydrogen Peroxide ($\text{H}_2\text{O}_2$) always contains Hydrogen and Oxygen in a definite mass ratio of 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">1 : 16 (since 2 g H combines with 32 g O)</span></details>
+          <br>
+          3. Dalton's postulate stating that "all atoms of a given element are identical in mass and properties" was disproved by the discovery of 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Isotopes</span></details>
+          <br>
+          4. When Carbon combines with Oxygen to form $\text{CO}$ and $\text{CO}_2$, 12 g of Carbon combines with 16 g and 32 g of Oxygen respectively, producing an exact integer ratio of 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>
+          illustrating the Law of Multiple Proportions.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">1 : 2</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-1">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Dalton's postulate contradicted by Isotopes</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">"Atoms of the same element have identical mass and chemical properties"</option>
+              <option value="2">"Atoms of different elements have different masses"</option>
+              <option value="3">1 : 8 mass ratio (2 g H combines with 16 g O)</option>
+              <option value="4">14 : 3 mass ratio (14 g N combines with 3 g H)</option>
+              <option value="5">"Indivisible, uncuttable, or non-fragmentable"</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Dalton's postulate contradicted by Isobars</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">"Atoms of the same element have identical mass and chemical properties"</option>
+              <option value="2">"Atoms of different elements have different masses"</option>
+              <option value="3">1 : 8 mass ratio (2 g H combines with 16 g O)</option>
+              <option value="4">14 : 3 mass ratio (14 g N combines with 3 g H)</option>
+              <option value="5">"Indivisible, uncuttable, or non-fragmentable"</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Mass ratio of H to O in Water ($\text{H}_2\text{O}$)</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">"Atoms of the same element have identical mass and chemical properties"</option>
+              <option value="2">"Atoms of different elements have different masses"</option>
+              <option value="3">1 : 8 mass ratio (2 g H combines with 16 g O)</option>
+              <option value="4">14 : 3 mass ratio (14 g N combines with 3 g H)</option>
+              <option value="5">"Indivisible, uncuttable, or non-fragmentable"</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Mass ratio of N to H in Ammonia ($\text{NH}_3$)</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">"Atoms of the same element have identical mass and chemical properties"</option>
+              <option value="2">"Atoms of different elements have different masses"</option>
+              <option value="3">1 : 8 mass ratio (2 g H combines with 16 g O)</option>
+              <option value="4">14 : 3 mass ratio (14 g N combines with 3 g H)</option>
+              <option value="5">"Indivisible, uncuttable, or non-fragmentable"</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Ancient Greek etymology of <em>Atomas</em></div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">"Atoms of the same element have identical mass and chemical properties"</option>
+              <option value="2">"Atoms of different elements have different masses"</option>
+              <option value="3">1 : 8 mass ratio (2 g H combines with 16 g O)</option>
+              <option value="4">14 : 3 mass ratio (14 g N combines with 3 g H)</option>
+              <option value="5">"Indivisible, uncuttable, or non-fragmentable"</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-1', 'match-feedback-1')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-1"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <section id="page2" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">2</div>
+          <span>NCERT Textbook pp. 97–98</span>
+        </div>
+        <h2 class="page-title">Charge-to-Mass Discoveries: Electron & Canal Rays</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Cathode Rays (Electrons):</strong> High voltage applied across low pressure gas ($10^{-2}\text{ mm Hg}$) emits invisible rays from cathode toward anode.
+            <br>• Ratio $\frac{e}{m_e} = 1.76 \times 10^{11}\text{ C/kg}$ is a <strong>universal constant</strong> (independent of cathode metal and gas).
+            <br>• Electron rest mass $m_e = 9.109 \times 10^{-31}\text{ kg} = \frac{1}{1837}\text{ u}$. Absolute charge $e = -1.602 \times 10^{-19}\text{ C}$.
+          </li>
+          <li><strong>Canal Rays (Protons):</strong> Eugen Goldstein (1886) used a perforated cathode and observed positive rays traveling in the opposite direction.
+            <br>• Unlike cathode rays, the $\frac{e}{m}$ of canal rays <strong>depends on the nature of gas</strong>.
+            <br>• Maximum $\frac{e}{m}$ is obtained with <strong>Hydrogen gas</strong> (gives lightest positive particle: the <strong>Proton</strong>).
+            <br>• Proton mass $m_p = 1.6726 \times 10^{-27}\text{ kg} \approx 1.00727\text{ u}$. Charge $= +1.602 \times 10^{-19}\text{ C}$.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. The specific charge ($e/m$ ratio) of canal rays reaches its maximum value when the gas enclosed in the discharge tube is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Hydrogen Gas (H₂)</span></details>
+          <br>
+          2. Unlike cathode rays which are universal streams of electrons, canal rays consist of positive 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>
+          formed by ionization of the residual gas.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Gaseous Cations (positive ions)</span></details>
+          <br>
+          3. The absolute rest mass of an electron is $9.109 \times 10^{-31}\text{ kg}$, which is approximately 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>
+          fraction of the mass of a single hydrogen atom.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">1/1837 (or 1/2000)</span></details>
+          <br>
+          4. When a glass rod is rubbed vigorously with silk, the glass acquires a positive charge because electrons are transferred from the 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Glass rod to the silk fabric</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-2">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Specific charge ($e/m$) of Electron</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$1.76 \times 10^{11}\text{ C/kg}$ (Universal constant for all gases)</option>
+              <option value="2">$9.58 \times 10^7\text{ C/kg}$ (Highest for Hydrogen gas)</option>
+              <option value="3">$96,485\text{ Coulombs}$ (Charge carried by 1 mole of electrons)</option>
+              <option value="4">$1.6726 \times 10^{-27}\text{ kg}$ ($\approx 1.00727\text{ u}$)</option>
+              <option value="5">$9.109 \times 10^{-31}\text{ kg}$ ($\approx 0.000548\text{ u}$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Specific charge ($e/m$) of Proton</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$1.76 \times 10^{11}\text{ C/kg}$ (Universal constant for all gases)</option>
+              <option value="2">$9.58 \times 10^7\text{ C/kg}$ (Highest for Hydrogen gas)</option>
+              <option value="3">$96,485\text{ Coulombs}$ (Charge carried by 1 mole of electrons)</option>
+              <option value="4">$1.6726 \times 10^{-27}\text{ kg}$ ($\approx 1.00727\text{ u}$)</option>
+              <option value="5">$9.109 \times 10^{-31}\text{ kg}$ ($\approx 0.000548\text{ u}$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Absolute mass of Proton in kg</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$1.76 \times 10^{11}\text{ C/kg}$ (Universal constant for all gases)</option>
+              <option value="2">$9.58 \times 10^7\text{ C/kg}$ (Highest for Hydrogen gas)</option>
+              <option value="3">$96,485\text{ Coulombs}$ (Charge carried by 1 mole of electrons)</option>
+              <option value="4">$1.6726 \times 10^{-27}\text{ kg}$ ($\approx 1.00727\text{ u}$)</option>
+              <option value="5">$9.109 \times 10^{-31}\text{ kg}$ ($\approx 0.000548\text{ u}$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Absolute mass of Electron in kg</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$1.76 \times 10^{11}\text{ C/kg}$ (Universal constant for all gases)</option>
+              <option value="2">$9.58 \times 10^7\text{ C/kg}$ (Highest for Hydrogen gas)</option>
+              <option value="3">$96,485\text{ Coulombs}$ (Charge carried by 1 mole of electrons)</option>
+              <option value="4">$1.6726 \times 10^{-27}\text{ kg}$ ($\approx 1.00727\text{ u}$)</option>
+              <option value="5">$9.109 \times 10^{-31}\text{ kg}$ ($\approx 0.000548\text{ u}$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> 1 Faraday of Electric Charge</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$1.76 \times 10^{11}\text{ C/kg}$ (Universal constant for all gases)</option>
+              <option value="2">$9.58 \times 10^7\text{ C/kg}$ (Highest for Hydrogen gas)</option>
+              <option value="3">$96,485\text{ Coulombs}$ (Charge carried by 1 mole of electrons)</option>
+              <option value="4">$1.6726 \times 10^{-27}\text{ kg}$ ($\approx 1.00727\text{ u}$)</option>
+              <option value="5">$9.109 \times 10^{-31}\text{ kg}$ ($\approx 0.000548\text{ u}$)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-2', 'match-feedback-2')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <section id="page3" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">3</div>
+          <span>NCERT Textbook pp. 98–99</span>
+        </div>
+        <h2 class="page-title">Thomson's Atomic Model & Electrostatic Neutrality</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Thomson's Model (1898):</strong> Atom visualized as a sphere of radius $\approx 10^{-10}\text{ m}$ of uniform positive charge with electrons embedded to achieve electrostatic equilibrium.</li>
+          <li><strong>Mass Distribution Hypothesis:</strong> Thomson assumed mass was <strong>uniformly distributed</strong> over the entire atomic volume.</li>
+          <li><strong>Theoretical Alpha-Particle Prediction:</strong> Because positive charge and mass were thought to be diffuse, high-energy alpha particles ($\text{KE} \approx 5.5\text{ MeV}$) were predicted to pass through with miniscule deflections ($\theta < 1^\circ$).</li>
+          <li><strong>Fatal Flaw:</strong> Could not account for the strong Coulombic repulsion that caused 1 in 12,000 alpha particles to experience back-scattering ($\theta \ge 90^\circ$ and $180^\circ$).</li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. J.J. Thomson received the 1906 Nobel Prize in Physics for his ground-breaking investigations into the 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Conduction of electricity through gases</span></details>
+          <br>
+          2. The assumed spatial diameter of an atom in Thomson's model was approximately 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>
+          meters.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">10⁻¹⁰ m (1 Ångström / 0.1 nm)</span></details>
+          <br>
+          3. Under Thomson's assumption of uniformly diffuse positive charge, incoming alpha particles were predicted to undergo deflections of less than 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">1 degree (&lt; 1°)</span></details>
+          <br>
+          4. The fatal defect of the Plum Pudding model was its inability to explain large-angle 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>
+          observed in Rutherford's experiment.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Back-scattering / deflections exceeding 90°</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-3">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Thomson's mass distribution premise</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Mass assumed homogeneously dispersed throughout atomic sphere</option>
+              <option value="2">Sum of negative electron charges precisely balances continuous positive charge</option>
+              <option value="3">Expected $\theta < 1^\circ$ because diffuse positive charge cannot exert large Coulomb force</option>
+              <option value="4">Discovery of electron via gas discharge conductivity (1906)</option>
+              <option value="5">Refuted by experimental detection of $180^\circ$ alpha particle rebounds</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Global electrical neutrality basis</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Mass assumed homogeneously dispersed throughout atomic sphere</option>
+              <option value="2">Sum of negative electron charges precisely balances continuous positive charge</option>
+              <option value="3">Expected $\theta < 1^\circ$ because diffuse positive charge cannot exert large Coulomb force</option>
+              <option value="4">Discovery of electron via gas discharge conductivity (1906)</option>
+              <option value="5">Refuted by experimental detection of $180^\circ$ alpha particle rebounds</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Predicted alpha deflection under diffuse charge</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Mass assumed homogeneously dispersed throughout atomic sphere</option>
+              <option value="2">Sum of negative electron charges precisely balances continuous positive charge</option>
+              <option value="3">Expected $\theta < 1^\circ$ because diffuse positive charge cannot exert large Coulomb force</option>
+              <option value="4">Discovery of electron via gas discharge conductivity (1906)</option>
+              <option value="5">Refuted by experimental detection of $180^\circ$ alpha particle rebounds</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> J.J. Thomson Nobel Citation</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Mass assumed homogeneously dispersed throughout atomic sphere</option>
+              <option value="2">Sum of negative electron charges precisely balances continuous positive charge</option>
+              <option value="3">Expected $\theta < 1^\circ$ because diffuse positive charge cannot exert large Coulomb force</option>
+              <option value="4">Discovery of electron via gas discharge conductivity (1906)</option>
+              <option value="5">Refuted by experimental detection of $180^\circ$ alpha particle rebounds</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Primary reason for discarding Thomson model</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Mass assumed homogeneously dispersed throughout atomic sphere</option>
+              <option value="2">Sum of negative electron charges precisely balances continuous positive charge</option>
+              <option value="3">Expected $\theta < 1^\circ$ because diffuse positive charge cannot exert large Coulomb force</option>
+              <option value="4">Discovery of electron via gas discharge conductivity (1906)</option>
+              <option value="5">Refuted by experimental detection of $180^\circ$ alpha particle rebounds</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-3', 'match-feedback-3')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-3"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 4 ==================== -->
+  <section id="page4" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">4</div>
+          <span>NCERT Textbook pp. 99–101</span>
+        </div>
+        <h2 class="page-title">Rutherford's Gold Foil Alpha Scattering Dynamics</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Alpha Particle Parameters:</strong> $\text{He}^{2+}$ nucleus ($2p + 2n$, $q = +2e$, $m = 4\text{ u} \approx 6.64 \times 10^{-27}\text{ kg}$), kinetic energy $\approx 5.5\text{ MeV}$.</li>
+          <li><strong>Gold Foil Specifications:</strong> Thickness $t \approx 100\text{ nm} \approx 1000\text{ atoms}$, Atomic number $Z = 79$ (large nuclear charge produces substantial Coulomb repulsion).</li>
+          <li><strong>Scattering Formula:</strong> Number of scattered particles $N(\theta) \propto \frac{1}{\sin^4(\theta/2)}$.
+            <br>• As scattering angle $\theta$ increases from $0^\circ$ to $180^\circ$, $N(\theta)$ drops drastically.
+          </li>
+          <li><strong>Distance of Closest Approach ($r_0$):</strong> At distance $r_0$ in head-on collision ($\theta = 180^\circ$), $\text{KE} = \text{PE} \implies \frac{1}{2}m v^2 = \frac{1}{4\pi\varepsilon_0}\frac{(2e)(Ze)}{r_0}$.
+            <br>• This established the upper bound for nuclear radius as $r_0 \approx 10^{-14}\text{ m} - 10^{-15}\text{ m}$.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. An alpha particle is a bare helium nucleus composed of 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">2 protons and 2 neutrons (Charge = +2e, Mass = 4 u)</span></details>
+          <br>
+          2. In Rutherford scattering, the number of particles $N(\theta)$ deflected at angle $\theta$ varies inversely with the fourth power of 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">sin(θ/2) [i.e., N(θ) ∝ 1 / sin⁴(θ/2)]</span></details>
+          <br>
+          3. In a direct head-on collision ($\theta = 180^\circ$), the initial kinetic energy of the alpha particle is momentarily transformed entirely into electrostatic 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Potential Energy [PE = (1/4πε₀)(2Ze² / r₀)]</span></details>
+          <br>
+          4. The circular detector screen placed around the gold foil was coated with 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>
+          to produce visible light scintillations upon particle impact.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Zinc Sulphide (ZnS)</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-4">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Gold ($Z=79$) foil selection reason</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">High malleability ($t \approx 100\text{ nm}$) & high nuclear charge ($Z=79$) for strong Coulomb repulsion</option>
+              <option value="2">Alpha particle rebounds directly back ($\theta = 180^\circ$)</option>
+              <option value="3">Alpha particle passes with virtually zero deflection ($\theta \approx 0^\circ$)</option>
+              <option value="4">$N(\theta) \propto \frac{1}{\sin^4(\theta/2)}$</option>
+              <option value="5">$r_0 = \frac{1}{4\pi\varepsilon_0}\frac{2Ze^2}{\text{KE}}$ ($\sim 10^{-14}\text{ m}$ upper bound for nucleus)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Impact parameter $b = 0$ (Head-on)</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">High malleability ($t \approx 100\text{ nm}$) & high nuclear charge ($Z=79$) for strong Coulomb repulsion</option>
+              <option value="2">Alpha particle rebounds directly back ($\theta = 180^\circ$)</option>
+              <option value="3">Alpha particle passes with virtually zero deflection ($\theta \approx 0^\circ$)</option>
+              <option value="4">$N(\theta) \propto \frac{1}{\sin^4(\theta/2)}$</option>
+              <option value="5">$r_0 = \frac{1}{4\pi\varepsilon_0}\frac{2Ze^2}{\text{KE}}$ ($\sim 10^{-14}\text{ m}$ upper bound for nucleus)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Large impact parameter ($b \gg r_0$)</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">High malleability ($t \approx 100\text{ nm}$) & high nuclear charge ($Z=79$) for strong Coulomb repulsion</option>
+              <option value="2">Alpha particle rebounds directly back ($\theta = 180^\circ$)</option>
+              <option value="3">Alpha particle passes with virtually zero deflection ($\theta \approx 0^\circ$)</option>
+              <option value="4">$N(\theta) \propto \frac{1}{\sin^4(\theta/2)}$</option>
+              <option value="5">$r_0 = \frac{1}{4\pi\varepsilon_0}\frac{2Ze^2}{\text{KE}}$ ($\sim 10^{-14}\text{ m}$ upper bound for nucleus)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Rutherford Angular Distribution Law</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">High malleability ($t \approx 100\text{ nm}$) & high nuclear charge ($Z=79$) for strong Coulomb repulsion</option>
+              <option value="2">Alpha particle rebounds directly back ($\theta = 180^\circ$)</option>
+              <option value="3">Alpha particle passes with virtually zero deflection ($\theta \approx 0^\circ$)</option>
+              <option value="4">$N(\theta) \propto \frac{1}{\sin^4(\theta/2)}$</option>
+              <option value="5">$r_0 = \frac{1}{4\pi\varepsilon_0}\frac{2Ze^2}{\text{KE}}$ ($\sim 10^{-14}\text{ m}$ upper bound for nucleus)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Distance of Closest Approach formula</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">High malleability ($t \approx 100\text{ nm}$) & high nuclear charge ($Z=79$) for strong Coulomb repulsion</option>
+              <option value="2">Alpha particle rebounds directly back ($\theta = 180^\circ$)</option>
+              <option value="3">Alpha particle passes with virtually zero deflection ($\theta \approx 0^\circ$)</option>
+              <option value="4">$N(\theta) \propto \frac{1}{\sin^4(\theta/2)}$</option>
+              <option value="5">$r_0 = \frac{1}{4\pi\varepsilon_0}\frac{2Ze^2}{\text{KE}}$ ($\sim 10^{-14}\text{ m}$ upper bound for nucleus)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-4', 'match-feedback-4')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-4"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 5 ==================== -->
+  <section id="page5" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">5</div>
+          <span>NCERT Textbook pp. 101–102</span>
+        </div>
+        <h2 class="page-title">Nuclear Density & The Electrodynamic Stability Paradox</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Spatial Dimensions Comparison:</strong>
+            <br>• Nuclear Radius $R_{\text{nuc}} \approx 10^{-15}\text{ m} = 1\text{ fm}$ (Fermi).
+            <br>• Atomic Radius $R_{\text{atom}} \approx 10^{-10}\text{ m} = 1\text{ \AA}$.
+            <br>• $\frac{R_{\text{atom}}}{R_{\text{nuc}}} = 10^5 \implies$ Nuclear volume fraction is $\left(\frac{10^{-15}}{10^{-10}}\right)^3 = \mathbf{10^{-15}}$ of the atom.
+          </li>
+          <li><strong>Nuclear Density ($\rho_{\text{nuc}}$):</strong> Inconceivably high $\rho = \frac{M}{V} \approx \mathbf{2.3 \times 10^{17}\text{ kg/m}^3}$. (1 cubic centimeter of nuclear matter weighs $\approx 230\text{ million tonnes}$).</li>
+          <li><strong>Electrodynamic Collapse Flaw (Maxwell-Larmor):</strong>
+            <br>• An orbiting electron experiences centripetal acceleration $a = \frac{v^2}{r}$.
+            <br>• According to classical electrodynamics, accelerating charges radiate electromagnetic energy continuously.
+            <br>• The electron would spiral inward and collapse into the nucleus in $\mathbf{\sim 10^{-8}\text{ seconds}}$, contradicting the physical reality of stable matter.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. The fraction of total atomic volume occupied by the nucleus is of the order of 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">10⁻¹⁵ (one quadrillionth)</span></details>
+          <br>
+          2. The mass density of nuclear matter is extraordinarily large and approximately equals 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>
+          $\text{kg/m}^3$.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">2.3 × 10¹⁷ kg/m³</span></details>
+          <br>
+          3. According to classical electrodynamics, an accelerating orbital electron must lose energy and spiral into the nucleus within 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>
+          seconds.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">10⁻⁸ seconds (10 nanoseconds)</span></details>
+          <br>
+          4. Rutherford's nuclear planetary model was fundamentally incapable of explaining the 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>
+          of atoms and the discrete line spectra emitted by elements.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Stability of the atom</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-5">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Order of Nuclear Radius</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$10^{-15}\text{ m}$ (1 Femtometer / Fermi)</option>
+              <option value="2">$10^{-10}\text{ m}$ (1 Ångström / 0.1 nm)</option>
+              <option value="3">$\sim 2.3 \times 10^{17}\text{ kg/m}^3$ (constant across all nuclei)</option>
+              <option value="4">$10^{15} : 1$ ($V_{\text{atom}} / V_{\text{nuc}}$)</option>
+              <option value="5">$\sim 10^{-8}\text{ s}$ predicted lifetime before nuclear spiral</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Order of Atomic Radius</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$10^{-15}\text{ m}$ (1 Femtometer / Fermi)</option>
+              <option value="2">$10^{-10}\text{ m}$ (1 Ångström / 0.1 nm)</option>
+              <option value="3">$\sim 2.3 \times 10^{17}\text{ kg/m}^3$ (constant across all nuclei)</option>
+              <option value="4">$10^{15} : 1$ ($V_{\text{atom}} / V_{\text{nuc}}$)</option>
+              <option value="5">$\sim 10^{-8}\text{ s}$ predicted lifetime before nuclear spiral</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Average Nuclear Density</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$10^{-15}\text{ m}$ (1 Femtometer / Fermi)</option>
+              <option value="2">$10^{-10}\text{ m}$ (1 Ångström / 0.1 nm)</option>
+              <option value="3">$\sim 2.3 \times 10^{17}\text{ kg/m}^3$ (constant across all nuclei)</option>
+              <option value="4">$10^{15} : 1$ ($V_{\text{atom}} / V_{\text{nuc}}$)</option>
+              <option value="5">$\sim 10^{-8}\text{ s}$ predicted lifetime before nuclear spiral</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Volume Ratio ($V_{\text{atom}} : V_{\text{nucleus}}$)</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$10^{-15}\text{ m}$ (1 Femtometer / Fermi)</option>
+              <option value="2">$10^{-10}\text{ m}$ (1 Ångström / 0.1 nm)</option>
+              <option value="3">$\sim 2.3 \times 10^{17}\text{ kg/m}^3$ (constant across all nuclei)</option>
+              <option value="4">$10^{15} : 1$ ($V_{\text{atom}} / V_{\text{nuc}}$)</option>
+              <option value="5">$\sim 10^{-8}\text{ s}$ predicted lifetime before nuclear spiral</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Classical Collapse Time</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$10^{-15}\text{ m}$ (1 Femtometer / Fermi)</option>
+              <option value="2">$10^{-10}\text{ m}$ (1 Ångström / 0.1 nm)</option>
+              <option value="3">$\sim 2.3 \times 10^{17}\text{ kg/m}^3$ (constant across all nuclei)</option>
+              <option value="4">$10^{15} : 1$ ($V_{\text{atom}} / V_{\text{nuc}}$)</option>
+              <option value="5">$\sim 10^{-8}\text{ s}$ predicted lifetime before nuclear spiral</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-5', 'match-feedback-5')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-5"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 6 ==================== -->
+  <section id="page6" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">6</div>
+          <span>NCERT Textbook pp. 102–103</span>
+        </div>
+        <h2 class="page-title">Bohr's Quantization & Chadwick's Neutron Nuclear Reaction</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Bohr's Revolutionary Postulates (1913):</strong>
+            <br>• Electrons revolve only in non-radiating <strong>stationary orbits</strong> where orbital angular momentum is an integral multiple of $\frac{h}{2\pi}$: <span class="key-formula-pill">L = mvr = \frac{nh}{2\pi} \quad (n = 1, 2, 3...)</span>
+            <br>• Energy radiation occurs exclusively upon quantum jumps between stationary states: <span class="key-formula-pill">\Delta E = E_2 - E_1 = h\nu = \frac{hc}{\lambda}</span>
+          </li>
+          <li><strong>Discovery of the Neutron (1932):</strong>
+            <br>• James Chadwick bombarded a Beryllium target with $\alpha$-particles: <span class="key-formula-pill">^9_4\text{Be} + ^4_2\text{He} \longrightarrow ^{12}_6\text{C} + ^1_0\text{n}</span>
+            <br>• Neutron mass $m_n = 1.6749 \times 10^{-27}\text{ kg} = 1.00866\text{ u}$ (slightly greater than proton $m_p = 1.6726 \times 10^{-27}\text{ kg}$).
+            <br>• Charge $= 0$. Present in all atomic nuclei except ordinary hydrogen ($^1_1\text{H}$ / Protium).
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. In the artificial transmutation nuclear reaction $^9_4\text{Be} + ^4_2\text{He} \longrightarrow ^{12}_6\text{C} + \text{X}$, the ejected particle $\text{X}$ is a 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Neutron (¹₀n)</span></details>
+          <br>
+          2. According to Bohr's quantization condition, the orbital angular momentum of an electron in the $n$-th stationary orbit is constrained to integer multiples of 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">h / 2π (Planck's constant divided by 2π)</span></details>
+          <br>
+          3. Comparing nucleon rest masses, a free neutron is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>
+          than a proton.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Slightly heavier / more massive (1.00866 u vs 1.00727 u)</span></details>
+          <br>
+          4. When an electron de-excites from energy level $E_2$ to $E_1$, the wavelength $\lambda$ of the emitted photon is given by 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">λ = hc / (E₂ - E₁)</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-6">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Chadwick's Neutron Reaction</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$^9_4\text{Be} + ^4_2\text{He} \longrightarrow ^{12}_6\text{C} + ^1_0\text{n}$</option>
+              <option value="2">$L = mvr = \frac{nh}{2\pi}$</option>
+              <option value="3">$\Delta E = h\nu = \frac{hc}{\lambda}$</option>
+              <option value="4">$1.6749 \times 10^{-27}\text{ kg}$ ($1.00866\text{ u}$)</option>
+              <option value="5">Contains 1 proton and 0 neutrons ($p=1, n=0$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Angular Momentum Quantization</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$^9_4\text{Be} + ^4_2\text{He} \longrightarrow ^{12}_6\text{C} + ^1_0\text{n}$</option>
+              <option value="2">$L = mvr = \frac{nh}{2\pi}$</option>
+              <option value="3">$\Delta E = h\nu = \frac{hc}{\lambda}$</option>
+              <option value="4">$1.6749 \times 10^{-27}\text{ kg}$ ($1.00866\text{ u}$)</option>
+              <option value="5">Contains 1 proton and 0 neutrons ($p=1, n=0$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Quantum Jump Photon Energy</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$^9_4\text{Be} + ^4_2\text{He} \longrightarrow ^{12}_6\text{C} + ^1_0\text{n}$</option>
+              <option value="2">$L = mvr = \frac{nh}{2\pi}$</option>
+              <option value="3">$\Delta E = h\nu = \frac{hc}{\lambda}$</option>
+              <option value="4">$1.6749 \times 10^{-27}\text{ kg}$ ($1.00866\text{ u}$)</option>
+              <option value="5">Contains 1 proton and 0 neutrons ($p=1, n=0$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Rest Mass of Neutron in kg</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$^9_4\text{Be} + ^4_2\text{He} \longrightarrow ^{12}_6\text{C} + ^1_0\text{n}$</option>
+              <option value="2">$L = mvr = \frac{nh}{2\pi}$</option>
+              <option value="3">$\Delta E = h\nu = \frac{hc}{\lambda}$</option>
+              <option value="4">$1.6749 \times 10^{-27}\text{ kg}$ ($1.00866\text{ u}$)</option>
+              <option value="5">Contains 1 proton and 0 neutrons ($p=1, n=0$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Nucleus of Protium ($^1_1\text{H}$)</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$^9_4\text{Be} + ^4_2\text{He} \longrightarrow ^{12}_6\text{C} + ^1_0\text{n}$</option>
+              <option value="2">$L = mvr = \frac{nh}{2\pi}$</option>
+              <option value="3">$\Delta E = h\nu = \frac{hc}{\lambda}$</option>
+              <option value="4">$1.6749 \times 10^{-27}\text{ kg}$ ($1.00866\text{ u}$)</option>
+              <option value="5">Contains 1 proton and 0 neutrons ($p=1, n=0$)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-6', 'match-feedback-6')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-6"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 7 ==================== -->
+  <section id="page7" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">7</div>
+          <span>NCERT Textbook pp. 103–104</span>
+        </div>
+        <h2 class="page-title">Bohr-Bury Scheme: Multi-Shell Electronic Configurations</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>$2n^2$ Rule:</strong> Maximum capacity of shell $n$: $K(n=1)=2, L(n=2)=8, M(n=3)=18, N(n=4)=32, O(n=5)=50$.</li>
+          <li><strong>Valence Shell Cap:</strong> The outermost orbit cannot contain more than <strong>8 electrons</strong> regardless of shell capacity.</li>
+          <li><strong>Penultimate Shell Cap:</strong> The shell immediately inside the outermost orbit cannot exceed <strong>18 electrons</strong>.</li>
+          <li><strong>Why Potassium ($Z=19$) is 2, 8, 8, 1 (Not 2, 8, 9):</strong> M-shell can theoretically hold 18, but once M-shell reaches 8 electrons, it acts as the outermost shell. To prevent exceeding the octet rule, the 19th electron enters the N-shell ($4s$).</li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. Although the M-shell has a theoretical capacity of 18 electrons ($2 \times 3^2$), the electronic configuration of Potassium ($Z=19$) is strictly written as 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">2, 8, 8, 1</span></details>
+          <br>
+          2. The theoretical maximum number of electrons in the 5th shell (O-shell, $n=5$) is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>
+          electrons.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">50 electrons (2 × 5² = 50)</span></details>
+          <br>
+          3. The electronic configuration of the transition element Scandium ($Z=21$) in Bohr-Bury notation is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">2, 8, 9, 2</span></details>
+          <br>
+          4. The penultimate shell (second outermost shell) in an atom cannot accommodate more than 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>
+          electrons.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">18 electrons</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-7">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Calcium ($Z=20$) Electronic Arrangement</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">2, 8, 8, 2 (K=2, L=8, M=8, N=2)</option>
+              <option value="2">2, 8, 8, 1 (K=2, L=8, M=8, N=1)</option>
+              <option value="3">2, 8, 7 (K=2, L=8, M=7)</option>
+              <option value="4">2, 8, 5 (K=2, L=8, M=5)</option>
+              <option value="5">2, 8, 4 (K=2, L=8, M=4)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Potassium ($Z=19$) Electronic Arrangement</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">2, 8, 8, 2 (K=2, L=8, M=8, N=2)</option>
+              <option value="2">2, 8, 8, 1 (K=2, L=8, M=8, N=1)</option>
+              <option value="3">2, 8, 7 (K=2, L=8, M=7)</option>
+              <option value="4">2, 8, 5 (K=2, L=8, M=5)</option>
+              <option value="5">2, 8, 4 (K=2, L=8, M=4)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Chlorine ($Z=17$) Electronic Arrangement</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">2, 8, 8, 2 (K=2, L=8, M=8, N=2)</option>
+              <option value="2">2, 8, 8, 1 (K=2, L=8, M=8, N=1)</option>
+              <option value="3">2, 8, 7 (K=2, L=8, M=7)</option>
+              <option value="4">2, 8, 5 (K=2, L=8, M=5)</option>
+              <option value="5">2, 8, 4 (K=2, L=8, M=4)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Phosphorus ($Z=15$) Electronic Arrangement</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">2, 8, 8, 2 (K=2, L=8, M=8, N=2)</option>
+              <option value="2">2, 8, 8, 1 (K=2, L=8, M=8, N=1)</option>
+              <option value="3">2, 8, 7 (K=2, L=8, M=7)</option>
+              <option value="4">2, 8, 5 (K=2, L=8, M=5)</option>
+              <option value="5">2, 8, 4 (K=2, L=8, M=4)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Silicon ($Z=14$) Electronic Arrangement</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">2, 8, 8, 2 (K=2, L=8, M=8, N=2)</option>
+              <option value="2">2, 8, 8, 1 (K=2, L=8, M=8, N=1)</option>
+              <option value="3">2, 8, 7 (K=2, L=8, M=7)</option>
+              <option value="4">2, 8, 5 (K=2, L=8, M=5)</option>
+              <option value="5">2, 8, 4 (K=2, L=8, M=4)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-7', 'match-feedback-7')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-7"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 8 ==================== -->
+  <section id="page8" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">8</div>
+          <span>NCERT Textbook pp. 104–106</span>
+        </div>
+        <h2 class="page-title">Isoelectronic Species, Valence Shells & Ionic Valencies</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Valence Electrons:</strong> Number of electrons residing in the outermost shell.</li>
+          <li><strong>Valency Formula:</strong>
+            <br>• For Metals (Valence $e^- \le 4$): $\text{Valency} = \text{Valence } e^-$ (e.g. $\text{Na}=1, \text{Mg}=2, \text{Al}=3, \text{Si}=4$).
+            <br>• For Non-Metals (Valence $e^- > 4$): $\text{Valency} = 8 - \text{Valence } e^-$ (e.g. $\text{N}: 8-5=3; \text{O}: 8-6=2; \text{F}: 8-7=1$).
+          </li>
+          <li><strong>10-Electron Isoelectronic Series (Neon Core):</strong>
+            <br>• $\text{N}^{3-} (7+3=10), \text{O}^{2-} (8+2=10), \text{F}^- (9+1=10), \text{Ne} (10), \text{Na}^+ (11-1=10), \text{Mg}^{2+} (12-2=10), \text{Al}^{3+} (13-3=10)$.
+          </li>
+          <li><strong>18-Electron Isoelectronic Series (Argon Core):</strong>
+            <br>• $\text{P}^{3-}, \text{S}^{2-}, \text{Cl}^-, \text{Ar}, \text{K}^+, \text{Ca}^{2+}$.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. In the nitride anion ($\text{N}^{3-}$), the total number of electrons is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>,
+          making it strictly isoelectronic with the noble gas Neon.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">10 electrons (7 protons + 3 gained electrons)</span></details>
+          <br>
+          2. Element $\text{X}$ with atomic number $Z=12$ ($\text{Mg}$) combines with element $\text{Y}$ with $Z=7$ ($\text{N}$). The chemical formula of the neutral binary compound formed is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">X₃Y₂ (Mg₃N₂, Magnesium Nitride)</span></details>
+          <br>
+          3. An element with atomic number $Z=16$ (Sulfur, 2, 8, 6) exhibits a primary hydride combining valency of 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>
+          as seen in Hydrogen Sulfide ($\text{H}_2\text{S}$).
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">2 (8 - 6 = 2)</span></details>
+          <br>
+          4. When Aluminium ($Z=13$) ionizes to form $\text{Al}^{3+}$, the number of electrons in its outermost shell is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">8 electrons (L-shell becomes new valence octet)</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-8">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Formula of compound between $Z=13$ and $Z=8$</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$\text{Al}_2\text{O}_3$ (Aluminium Oxide, valencies $3 : 2$)</option>
+              <option value="2">$\text{Mg}_3\text{N}_2$ (Magnesium Nitride, valencies $2 : 3$)</option>
+              <option value="3">10 electrons ($p=13, e^-=10$, isoelectronic with $\text{Ne}$)</option>
+              <option value="4">18 electrons ($p=16, e^-=18$, isoelectronic with $\text{Ar}$)</option>
+              <option value="5">Zero valency (Duplet of 2 completed in K-shell)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Formula of compound between $Z=12$ and $Z=7$</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$\text{Al}_2\text{O}_3$ (Aluminium Oxide, valencies $3 : 2$)</option>
+              <option value="2">$\text{Mg}_3\text{N}_2$ (Magnesium Nitride, valencies $2 : 3$)</option>
+              <option value="3">10 electrons ($p=13, e^-=10$, isoelectronic with $\text{Ne}$)</option>
+              <option value="4">18 electrons ($p=16, e^-=18$, isoelectronic with $\text{Ar}$)</option>
+              <option value="5">Zero valency (Duplet of 2 completed in K-shell)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Number of electrons in $\text{Al}^{3+}$ ion</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$\text{Al}_2\text{O}_3$ (Aluminium Oxide, valencies $3 : 2$)</option>
+              <option value="2">$\text{Mg}_3\text{N}_2$ (Magnesium Nitride, valencies $2 : 3$)</option>
+              <option value="3">10 electrons ($p=13, e^-=10$, isoelectronic with $\text{Ne}$)</option>
+              <option value="4">18 electrons ($p=16, e^-=18$, isoelectronic with $\text{Ar}$)</option>
+              <option value="5">Zero valency (Duplet of 2 completed in K-shell)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Number of electrons in $\text{S}^{2-}$ sulfide ion</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$\text{Al}_2\text{O}_3$ (Aluminium Oxide, valencies $3 : 2$)</option>
+              <option value="2">$\text{Mg}_3\text{N}_2$ (Magnesium Nitride, valencies $2 : 3$)</option>
+              <option value="3">10 electrons ($p=13, e^-=10$, isoelectronic with $\text{Ne}$)</option>
+              <option value="4">18 electrons ($p=16, e^-=18$, isoelectronic with $\text{Ar}$)</option>
+              <option value="5">Zero valency (Duplet of 2 completed in K-shell)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Valency of Helium ($Z=2$)</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$\text{Al}_2\text{O}_3$ (Aluminium Oxide, valencies $3 : 2$)</option>
+              <option value="2">$\text{Mg}_3\text{N}_2$ (Magnesium Nitride, valencies $2 : 3$)</option>
+              <option value="3">10 electrons ($p=13, e^-=10$, isoelectronic with $\text{Ne}$)</option>
+              <option value="4">18 electrons ($p=16, e^-=18$, isoelectronic with $\text{Ar}$)</option>
+              <option value="5">Zero valency (Duplet of 2 completed in K-shell)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-8', 'match-feedback-8')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-8"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 9 ==================== -->
+  <section id="page9" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">9</div>
+          <span>NCERT Textbook pp. 106–107</span>
+        </div>
+        <h2 class="page-title">Nuclear Composition & Subatomic Particle Balance in Polyatomic Ions</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Atomic Number ($Z$):</strong> $Z = \text{number of nuclear protons } (p) = e^- \text{ (in neutral atom)}$.</li>
+          <li><strong>Mass Number ($A$):</strong> $A = \text{Protons } (p) + \text{Neutrons } (n) \implies n = A - Z$.</li>
+          <li><strong>Ions Particle Arithmetic:</strong>
+            <br>• Cation $^{A}_{Z}\text{X}^{m+}$: $p = Z, n = A - Z, e^- = Z - m$.
+            <br>• Anion $^{A}_{Z}\text{Y}^{k-}$: $p = Z, n = A - Z, e^- = Z + k$.
+          </li>
+          <li><strong>Polyatomic Ion Calculations:</strong>
+            <br>• Carbonate ($\text{CO}_3^{2-}$): $e^- = 6 + 3(8) + 2 = \mathbf{32\text{ electrons}}$, $p = 6 + 3(8) = \mathbf{30\text{ protons}}$.
+            <br>• Sulfate ($\text{SO}_4^{2-}$): $e^- = 16 + 4(8) + 2 = \mathbf{50\text{ electrons}}$, $p = 16 + 4(8) = \mathbf{48\text{ protons}}$.
+            <br>• Ammonium ($\text{NH}_4^+$): $e^- = 7 + 4(1) - 1 = \mathbf{10\text{ electrons}}$, $p = 7 + 4(1) = \mathbf{11\text{ protons}}$.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. In the ferric ion $^{56}_{26}\text{Fe}^{3+}$, the number of neutrons is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>
+          and the number of electrons is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Neutrons = 30 (56 - 26); Electrons = 23 (26 - 3)</span></details>
+          <br>
+          2. The total number of electrons present in one single Sulfate polyatomic ion ($\text{SO}_4^{2-}$) is 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">50 electrons (16 + 4×8 + 2 = 50)</span></details>
+          <br>
+          3. If a divalent cation $\text{M}^{2+}$ possesses 18 electrons and 20 neutrons, the mass number $A$ of element $\text{M}$ is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">40 (Z = 18 + 2 = 20; A = 20 + 20 = 40, Calcium)</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-9">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Subatomic count of $^{35}_{17}\text{Cl}^-$</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$p = 17, n = 18, e^- = 18$</option>
+              <option value="2">$p = 11, n = 12, e^- = 10$</option>
+              <option value="3">32 electrons ($6 + 3(8) + 2$)</option>
+              <option value="4">10 electrons ($7 + 4(1) - 1$)</option>
+              <option value="5">50 electrons ($15 + 4(8) + 3$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Subatomic count of $^{23}_{11}\text{Na}^+$</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$p = 17, n = 18, e^- = 18$</option>
+              <option value="2">$p = 11, n = 12, e^- = 10$</option>
+              <option value="3">32 electrons ($6 + 3(8) + 2$)</option>
+              <option value="4">10 electrons ($7 + 4(1) - 1$)</option>
+              <option value="5">50 electrons ($15 + 4(8) + 3$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Total electrons in Carbonate ion ($\text{CO}_3^{2-}$)</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$p = 17, n = 18, e^- = 18$</option>
+              <option value="2">$p = 11, n = 12, e^- = 10$</option>
+              <option value="3">32 electrons ($6 + 3(8) + 2$)</option>
+              <option value="4">10 electrons ($7 + 4(1) - 1$)</option>
+              <option value="5">50 electrons ($15 + 4(8) + 3$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Total electrons in Ammonium ion ($\text{NH}_4^+$)</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$p = 17, n = 18, e^- = 18$</option>
+              <option value="2">$p = 11, n = 12, e^- = 10$</option>
+              <option value="3">32 electrons ($6 + 3(8) + 2$)</option>
+              <option value="4">10 electrons ($7 + 4(1) - 1$)</option>
+              <option value="5">50 electrons ($15 + 4(8) + 3$)</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> Total electrons in Phosphate ion ($\text{PO}_4^{3-}$)</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">$p = 17, n = 18, e^- = 18$</option>
+              <option value="2">$p = 11, n = 12, e^- = 10$</option>
+              <option value="3">32 electrons ($6 + 3(8) + 2$)</option>
+              <option value="4">10 electrons ($7 + 4(1) - 1$)</option>
+              <option value="5">50 electrons ($15 + 4(8) + 3$)</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-9', 'match-feedback-9')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-9"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 10 ==================== -->
+  <section id="page10" class="page-section">
+    <div class="study-card">
+      <div class="page-header-row">
+        <div class="page-num-badge">
+          <div class="page-num-circle">10</div>
+          <span>NCERT Textbook pp. 107–109</span>
+        </div>
+        <h2 class="page-title">Isotopic Abundance Mathematics, Isobars & Nuclear Medicine</h2>
+      </div>
+
+      <!-- Notes -->
+      <div class="notes-box">
+        <h4>📘 Core Concept Notes (मुख्य अवधारणाएँ)</h4>
+        <ul>
+          <li><strong>Isotopes:</strong> Same atomic number ($Z$), different mass number ($A$).
+            <br>• Chemical properties are identical because electronic configurations are the same.
+            <br>• Physical properties differ due to differences in nuclear mass.
+          </li>
+          <li><strong>Average Atomic Mass Mathematics:</strong>
+            <br>• Chlorine: $\bar{A} = \left(35 \times \frac{75}{100}\right) + \left(37 \times \frac{25}{100}\right) = 26.25 + 9.25 = \mathbf{35.5\text{ u}}$.
+            <br>• Boron: If average mass is $10.8\text{ u}$ with $^{10}\text{B}$ and $^{11}\text{B}$, then $\%^{10}\text{B} = \mathbf{20\%}$ and $\%^{11}\text{B} = \mathbf{80\%}$.
+          </li>
+          <li><strong>Isotopes in Medicine & Industry:</strong>
+            <br>• <strong>Cobalt-60 ($^{60}\text{Co}$):</strong> Radiotherapy treatment for localized cancer tumors.
+            <br>• <strong>Iodine-131 ($^{131}\text{I}$):</strong> Diagnostic scan and radiation therapy for goitre/thyroid disorders.
+            <br>• <strong>Sodium-24 ($^{24}\text{Na}$):</strong> Tracer for tracking cardiovascular blood flow leaks.
+            <br>• <strong>Carbon-14 ($^{14}\text{C}$):</strong> Radiocarbon dating of fossils (half-life $t_{1/2} = 5730\text{ years}$).
+            <br>• <strong>Uranium-235 ($^{235}\text{U}$):</strong> Fissile fuel in nuclear reactors.
+          </li>
+          <li><strong>Isobars:</strong> Atoms of different elements having <strong>different atomic numbers ($Z$)</strong> but the <strong>same mass number ($A$)</strong>. E.g. $^{40}_{18}\text{Ar}$ ($p=18, n=22$) and $^{40}_{20}\text{Ca}$ ($p=20, n=20$). Chemical properties are completely different!</li>
+        </ul>
+      </div>
+
+      <!-- Difficult Fill-in-the-Blanks (No hints) -->
+      <div class="fib-box">
+        <div class="fib-header">
+          <span class="fib-title">✏️ Advanced Conceptual Fill-in-the-Blanks (Strict Mode — No Hints)</span>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">4 Problems</span>
+        </div>
+        <p>
+          1. Naturally occurring Boron consists of two isotopes $^{10}\text{B}$ and $^{11}\text{B}$ with an average atomic mass of $10.8\text{ u}$. The exact percentage abundance of the lighter isotope $^{10}\text{B}$ is 
+          <span class="blank-num">(1)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">20% [10x + 11(100 - x) = 1080 ⇒ x = 20%]</span></details>
+          <br>
+          2. The radioactive isotope widely used as a medical tracer in the human vascular system to detect blood circulation blockages is 
+          <span class="blank-num">(2)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Sodium-24 (²⁴Na)</span></details>
+          <br>
+          3. Unlike isotopes which exhibit identical chemical behavior, isobars possess completely 
+          <span class="blank-num">(3)</span><span class="blank-line"></span>
+          chemical properties because their valence electronic configurations differ.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Different / distinct</span></details>
+          <br>
+          4. The radioactive isotope of carbon used in determining the age of ancient archaeological remains through beta decay is 
+          <span class="blank-num">(4)</span><span class="blank-line"></span>.
+          <details class="ans-drop"><summary>👁️ Check Solution</summary><span class="reveal-pill ans-content">Carbon-14 (¹⁴C, half-life 5730 years)</span></details>
+        </p>
+      </div>
+
+      <!-- Match the Following (5 Pairs) -->
+      <div class="match-box">
+        <div class="match-title">🧩 Advanced 5-Pair Match the Following</div>
+        <div class="match-grid" id="match-grid-10">
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">A</span> Cobalt-60 ($^{60}\text{Co}$)</div>
+            <select class="match-select" data-correct="1">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Gamma radiation oncology therapy in cancer treatment</option>
+              <option value="2">Radiotherapy diagnosis & treatment of thyroid goitre</option>
+              <option value="3">Radiocarbon dating of ancient fossilized organic remains</option>
+              <option value="4">Vascular tracer to detect blood circulation irregularities</option>
+              <option value="5">Isobaric pair with identical mass number $A = 40$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">B</span> Iodine-131 ($^{131}\text{I}$)</div>
+            <select class="match-select" data-correct="2">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Gamma radiation oncology therapy in cancer treatment</option>
+              <option value="2">Radiotherapy diagnosis & treatment of thyroid goitre</option>
+              <option value="3">Radiocarbon dating of ancient fossilized organic remains</option>
+              <option value="4">Vascular tracer to detect blood circulation irregularities</option>
+              <option value="5">Isobaric pair with identical mass number $A = 40$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">C</span> Carbon-14 ($^{14}\text{C}$)</div>
+            <select class="match-select" data-correct="3">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Gamma radiation oncology therapy in cancer treatment</option>
+              <option value="2">Radiotherapy diagnosis & treatment of thyroid goitre</option>
+              <option value="3">Radiocarbon dating of ancient fossilized organic remains</option>
+              <option value="4">Vascular tracer to detect blood circulation irregularities</option>
+              <option value="5">Isobaric pair with identical mass number $A = 40$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">D</span> Sodium-24 ($^{24}\text{Na}$)</div>
+            <select class="match-select" data-correct="4">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Gamma radiation oncology therapy in cancer treatment</option>
+              <option value="2">Radiotherapy diagnosis & treatment of thyroid goitre</option>
+              <option value="3">Radiocarbon dating of ancient fossilized organic remains</option>
+              <option value="4">Vascular tracer to detect blood circulation irregularities</option>
+              <option value="5">Isobaric pair with identical mass number $A = 40$</option>
+            </select>
+          </div>
+          <div class="match-row">
+            <div class="match-left"><span class="match-left-letter">E</span> $^{40}_{18}\text{Ar}$ and $^{40}_{20}\text{Ca}$</div>
+            <select class="match-select" data-correct="5">
+              <option value="">-- Select Accurate Scientific Match --</option>
+              <option value="1">Gamma radiation oncology therapy in cancer treatment</option>
+              <option value="2">Radiotherapy diagnosis & treatment of thyroid goitre</option>
+              <option value="3">Radiocarbon dating of ancient fossilized organic remains</option>
+              <option value="4">Vascular tracer to detect blood circulation irregularities</option>
+              <option value="5">Isobaric pair with identical mass number $A = 40$</option>
+            </select>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="btn-check-match" onclick="evaluateMatch('match-grid-10', 'match-feedback-10')">Evaluate Matches ✓</button>
+          <span class="match-feedback" id="match-feedback-10"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Theme toggle
+    let isLightMode = false;
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    themeToggleBtn.addEventListener("click", () => {
+      isLightMode = !isLightMode;
+      document.body.classList.toggle("light-theme", isLightMode);
+      themeIcon.innerText = isLightMode ? "🌙" : "☀️";
+    });
+
+    // Bulk Solution Toggles
+    function toggleAllAnswers(openState) {
+      document.querySelectorAll("details.ans-drop").forEach(d => d.open = openState);
+    }
+
+    function hideAllDetails() {
+      document.querySelectorAll("details.ans-drop").forEach(d => d.open = false);
+    }
+
+    function resetAllMatches() {
+      document.querySelectorAll(".match-select").forEach(sel => {
+        sel.value = "";
+        sel.style.borderColor = "var(--border-card)";
+        sel.style.backgroundColor = "var(--bg-card-alt)";
+      });
+      document.querySelectorAll(".match-feedback").forEach(fb => {
+        fb.innerText = "";
+        fb.className = "match-feedback";
+      });
+    }
+
+    // Match Evaluation Engine
+    function evaluateMatch(gridId, feedbackId) {
+      const grid = document.getElementById(gridId);
+      const feedback = document.getElementById(feedbackId);
+      const selects = grid.querySelectorAll(".match-select");
+
+      let correctCount = 0;
+      let totalCount = selects.length;
+      let allAnswered = true;
+
+      selects.forEach(sel => {
+        const correctVal = sel.getAttribute("data-correct");
+        const userVal = sel.value;
+
+        if (!userVal) {
+          allAnswered = false;
+          sel.style.borderColor = "var(--border-card)";
+          sel.style.backgroundColor = "var(--bg-card-alt)";
+        } else if (userVal === correctVal) {
+          correctCount++;
+          sel.style.borderColor = "#10b981";
+          sel.style.backgroundColor = "rgba(16, 185, 129, 0.15)";
+        } else {
+          sel.style.borderColor = "#ef4444";
+          sel.style.backgroundColor = "rgba(239, 68, 68, 0.15)";
+        }
+      });
+
+      if (!allAnswered) {
+        feedback.className = "match-feedback wrong";
+        feedback.innerText = `Please select all 5 matches (${correctCount}/${totalCount} currently correct).`;
+        return;
+      }
+
+      if (correctCount === totalCount) {
+        feedback.className = "match-feedback correct";
+        feedback.innerText = `🎉 Outstanding! All 5/5 advanced matches are correct!`;
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 45, spread: 65, origin: { y: 0.8 } });
+        }
+      } else {
+        feedback.className = "match-feedback wrong";
+        feedback.innerText = `⚠️ ${correctCount} of ${totalCount} correct. Analyze the red highlighted options and revise!`;
+      }
+    }
+  </script>
+</body>
+</html>

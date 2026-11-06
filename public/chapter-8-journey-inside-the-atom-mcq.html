@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NCERT Class 9 Science Chapter 8: Journey Inside the Atom — 50 MCQs Mastery Test</title>
+  <meta name="description" content="Master NCERT Class 9 Science Chapter 8 (Journey Inside the Atom / परमाणु की आंतरिक यात्रा) with 50 bilingual multiple choice questions, instant explanations, and performance tracking.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060b18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --bg-card-alt: #0a1020;
+      --bg-hud: rgba(13, 21, 39, 0.85);
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(4, 170, 109, 0.35);
+      
+      --brand-green: #04AA6D;
+      --brand-green-hover: #03945f;
+      --brand-green-glow: rgba(4, 170, 109, 0.25);
+      --brand-cyan: #06b6d4;
+      --brand-gold: #e5b842;
+      --brand-purple: #8b5cf6;
+      
+      --color-correct: #10b981;
+      --color-correct-bg: rgba(16, 185, 129, 0.15);
+      --color-correct-border: #10b981;
+      
+      --color-wrong: #ef4444;
+      --color-wrong-bg: rgba(239, 68, 68, 0.15);
+      --color-wrong-border: #ef4444;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    /* Light Mode Variables */
+    body.light-theme {
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-card-alt: #f8fafc;
+      --bg-hud: rgba(255, 255, 255, 0.9);
+      --border-card: #e2e8f0;
+      --border-glow: rgba(4, 170, 109, 0.4);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(4, 170, 109, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+      padding-bottom: 80px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Navbar with Breadcrumb (Permanent Rule Compliance) */
+    .top-navbar {
+      width: 100%;
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 10px 20px;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .nav-brand-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #04AA6D, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .breadcrumb-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--brand-green);
+      background: rgba(4, 170, 109, 0.1);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .breadcrumb-current {
+      color: var(--brand-green);
+      font-weight: 700;
+      background: rgba(4, 170, 109, 0.12);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(4, 170, 109, 0.25);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--brand-green);
+      color: var(--brand-green);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Header */
+    .hero-wrapper {
+      max-width: 1080px;
+      margin: 24px auto 16px;
+      padding: 0 16px;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #04AA6D, #06b6d4, #8b5cf6, #e5b842);
+    }
+
+    .hero-header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-badge-green {
+      background: rgba(4, 170, 109, 0.15);
+      border: 1px solid rgba(4, 170, 109, 0.4);
+      color: var(--brand-green);
+    }
+
+    .tag-badge-cyan {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: var(--brand-cyan);
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.light-theme .hero-title {
+      color: #0f172a;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, #04AA6D 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      font-weight: 500;
+    }
+
+    /* Control Toolbar */
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .lang-switcher-group {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card-alt);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-card);
+      gap: 4px;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--brand-green);
+      color: #000000;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(4, 170, 109, 0.3);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      border-color: var(--brand-green);
+      color: var(--brand-green);
+    }
+
+    .btn-primary-action {
+      background: linear-gradient(135deg, #04AA6D, #03945f);
+      color: #000000;
+      border: none;
+      box-shadow: 0 4px 12px rgba(4, 170, 109, 0.3);
+    }
+
+    .btn-primary-action:hover {
+      background: linear-gradient(135deg, #03945f, #027a4d);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Floating / Sticky HUD */
+    .sticky-hud-wrapper {
+      position: sticky;
+      top: 56px;
+      z-index: 90;
+      max-width: 1080px;
+      margin: 0 auto 20px;
+      padding: 0 16px;
+    }
+
+    .hud-card {
+      background: var(--bg-hud);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 12px 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hud-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hud-stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .stat-val-highlight {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--brand-green);
+    }
+
+    .progress-bar-container {
+      flex: 1;
+      min-width: 180px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body.light-theme .progress-bar-container {
+      background: #e2e8f0;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #04AA6D, #06b6d4);
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0%;
+    }
+
+    /* Topic Pills Scrollbar */
+    .topic-filter-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+    }
+
+    .topic-filter-btn {
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .topic-filter-btn:hover {
+      border-color: var(--brand-green);
+      color: var(--text-main);
+    }
+
+    .topic-filter-btn.active {
+      background: rgba(4, 170, 109, 0.2);
+      border-color: var(--brand-green);
+      color: var(--brand-green);
+      font-weight: 800;
+    }
+
+    /* Main Container & Question Cards */
+    .quiz-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .q-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .q-card:hover {
+      border-color: rgba(4, 170, 109, 0.3);
+    }
+
+    .q-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .q-topic-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--brand-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .q-number-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      background: var(--bg-card-alt);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-card);
+    }
+
+    .q-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .q-text-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .q-text-hi {
+      font-family: var(--font-devanagari);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #93c5fd;
+      background: rgba(59, 130, 246, 0.08);
+      border-left: 3px solid #3b82f6;
+      padding: 8px 12px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      line-height: 1.5;
+    }
+
+    body.light-theme .q-text-hi {
+      color: #1e40af;
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    /* Options Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--bg-card-alt);
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      background: var(--bg-card-hover);
+      border-color: var(--brand-green);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .opt-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-card);
+      color: var(--brand-green);
+      font-weight: 800;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .opt-btn.opt-correct {
+      background: var(--color-correct-bg) !important;
+      border-color: var(--color-correct-border) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.25) !important;
+    }
+
+    .opt-btn.opt-correct .opt-letter {
+      background: #10b981 !important;
+      color: #000000 !important;
+      border-color: #10b981 !important;
+    }
+
+    .opt-btn.opt-wrong {
+      background: var(--color-wrong-bg) !important;
+      border-color: var(--color-wrong-border) !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.25) !important;
+    }
+
+    .opt-btn.opt-wrong .opt-letter {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    .opt-btn.opt-dimmed {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .opt-status-icon {
+      font-size: 1rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    /* Explanation Box */
+    .exp-box {
+      margin-top: 10px;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      line-height: 1.55;
+      animation: fadeIn 0.3s ease-out;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .exp-box.exp-correct {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #a7f3d0;
+    }
+
+    body.light-theme .exp-box.exp-correct {
+      color: #065f46;
+    }
+
+    .exp-box.exp-wrong {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fecaca;
+    }
+
+    body.light-theme .exp-box.exp-wrong {
+      color: #991b1b;
+    }
+
+    .exp-header {
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: scale(0.92);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    .modal-close-btn {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .matrix-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    .matrix-btn {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      border: 1px solid var(--border-card);
+      background: var(--bg-card-alt);
+      color: var(--text-muted);
+      font-weight: 800;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .matrix-btn:hover {
+      border-color: var(--brand-green);
+      transform: scale(1.08);
+    }
+
+    .matrix-btn.correct {
+      background: #10b981 !important;
+      color: #000000 !important;
+      border-color: #10b981 !important;
+    }
+
+    .matrix-btn.wrong {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    /* Score Report Cards */
+    .score-hero-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: radial-gradient(circle, rgba(4, 170, 109, 0.2), rgba(0, 0, 0, 0.4));
+      border: 3px solid var(--brand-green);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px var(--brand-green-glow);
+    }
+
+    .score-circle-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--brand-green);
+      line-height: 1;
+    }
+
+    .score-circle-total {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .stats-breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .stat-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stat-box-val {
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    .stat-box-lbl {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      font-weight: 700;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 1.55rem; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .lang-switcher-group { justify-content: center; }
+      .action-group { justify-content: center; }
+      .q-card { padding: 18px 16px; }
+      .options-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar with Breadcrumb Navigation (Permanent Rule) -->
+  <header class="top-navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="nav-brand" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; flex-shrink: 0;">
+          <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+            <img src="/image-20.png" alt="Nextsem Logo" style="height: 28px; width: auto; object-fit: contain;">
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
+            <span style="font-weight: 900; font-size: 1.12rem; letter-spacing: -0.02em; color: var(--text-main, #f8fafc);">Study Guide</span>
+            <span style="color: #4f46e5; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px;">NextSem Academy</span>
+          </div>
+        </a>
+        <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=9" class="breadcrumb-link">Class 9</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=9&subject=science" class="breadcrumb-link">Science</a>
+          <span class="breadcrumb-separator">❯</span>
+          <a href="/?class=9&subject=science&chapter=8" class="breadcrumb-link">Chapter 8</a>
+          <span class="breadcrumb-separator">❯</span>
+          <span class="breadcrumb-current">50 MCQs Quiz</span>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="nav-btn" title="Toggle Dark/Light Mode">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <a href="/chapter-8-journey-inside-the-atom-notes-and-practice.html" class="nav-btn" style="background: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.4); color: #22d3ee; font-weight: 800;">
+          <span>📖 Pagewise Notes & Practice</span>
+        </a>
+        <a href="/" class="nav-btn">
+          <span>🏠 App Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="hero-wrapper">
+    <div class="hero-card">
+      <div class="hero-header-content">
+        <div class="badge-row">
+          <span class="tag-badge tag-badge-green">🔬 NCERT Grade 9 • Chapter 8</span>
+          <span class="tag-badge tag-badge-cyan">⚡ 50 Master MCQs</span>
+          <span class="tag-badge tag-badge-green">🌐 Bilingual EN + HI</span>
+        </div>
+        <h1 class="hero-title">
+          Journey Inside the Atom <span class="hero-title-highlight">| परमाणु की आंतरिक यात्रा</span>
+        </h1>
+        <p class="hero-subtitle">
+          50 Comprehensive NCERT Multiple Choice Questions covering Ancient Parmanu philosophy, Thomson model, Rutherford gold foil, Bohr shells, Neutron discovery, Symbols, Valency, and Isotopes.
+        </p>
+      </div>
+
+      <!-- Controls Toolbar -->
+      <div class="controls-bar">
+        <div class="lang-switcher-group">
+          <button class="lang-btn active" onclick="setLanguage('both')">🌐 Both (द्विभाषी)</button>
+          <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+          <button class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिन्दी</button>
+        </div>
+
+        <div class="action-group">
+          <a href="/chapter-8-journey-inside-the-atom-notes-and-practice.html" class="btn-action" style="background: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.35); color: #22d3ee; text-decoration: none; font-weight: 800;">
+            <span>📖 Pagewise Notes & Practice</span>
+          </a>
+          <button class="btn-action" onclick="openMatrixModal()">
+            <span>🎯 Question Matrix</span>
+          </button>
+          <button class="btn-action" onclick="resetQuiz()">
+            <span>🔄 Restart</span>
+          </button>
+          <button class="btn-action btn-primary-action" onclick="openScorecardModal()">
+            <span>🏆 View Scorecard</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky HUD Stats & Topic Filter -->
+  <div class="sticky-hud-wrapper">
+    <div class="hud-card">
+      <div class="hud-top-row">
+        <div class="hud-stat-pill">
+          <span>Score:</span>
+          <span id="hudScore" class="stat-val-highlight">0</span>
+          <span>/ 50</span>
+        </div>
+        <div class="hud-stat-pill">
+          <span>Answered:</span>
+          <strong id="hudAnswered" style="color: var(--text-main);">0</strong>
+          <span>/ 50</span>
+        </div>
+        <div class="progress-bar-container">
+          <div id="hudProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <div class="hud-stat-pill">
+          <span>Accuracy:</span>
+          <span id="hudAccuracy" style="font-weight: 800; color: var(--brand-cyan);">0%</span>
+        </div>
+      </div>
+
+      <!-- Topic Pills -->
+      <div class="topic-filter-row" id="topicFilterRow">
+        <button class="topic-filter-btn active" onclick="filterByTopic('all')">All 10 Topics (50)</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('1')">1. Roots of Atomic Theory</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('2')">2. Electron & Thomson</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('3')">3. Rutherford Gold Foil</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('4')">4. Bohr's Model</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('5')">5. Neutron Discovery</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('6')">6. Chemical Symbols</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('7')">7. Atomic & Mass Number</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('8')">8. Electron Distribution</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('9')">9. Valency</button>
+        <button class="topic-filter-btn" onclick="filterByTopic('10')">10. Isotopes & Isobars</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Questions Container -->
+  <main class="quiz-container" id="quizContainer"></main>
+
+  <!-- Question Matrix Modal -->
+  <div class="modal-overlay" id="matrixModal" onclick="closeMatrixModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title">🎯 Question Matrix (1 to 50)</h3>
+        <button class="modal-close-btn" onclick="closeMatrixModal()">✕</button>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">Click any number to jump directly to that question. Green = Correct, Red = Incorrect, Slate = Unanswered.</p>
+      <div class="matrix-grid" id="matrixGrid"></div>
+    </div>
+  </div>
+
+  <!-- Scorecard Modal -->
+  <div class="modal-overlay" id="scoreModal" onclick="closeScoreModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 class="modal-title">🏆 Quiz Mastery Scorecard</h3>
+        <button class="modal-close-btn" onclick="closeScoreModal()">✕</button>
+      </div>
+
+      <div class="score-hero-circle">
+        <div class="score-circle-num" id="modalScoreVal">0</div>
+        <div class="score-circle-total">OUT OF 50</div>
+      </div>
+
+      <div style="text-align: center;">
+        <h4 id="modalGradeTitle" style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">Keep Practicing! 🚀</h4>
+        <p id="modalGradeMsg" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Complete all questions to see your final performance analysis.</p>
+      </div>
+
+      <div class="stats-breakdown-grid">
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalCorrectCount" style="color: var(--color-correct);">0</div>
+          <div class="stat-box-lbl">Correct</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalWrongCount" style="color: var(--color-wrong);">0</div>
+          <div class="stat-box-lbl">Incorrect</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-val" id="modalAccuracyVal" style="color: var(--brand-cyan);">0%</div>
+          <div class="stat-box-lbl">Accuracy</div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+        <button class="btn-action" onclick="closeScoreModal()">Continue Quiz</button>
+        <button class="btn-action btn-primary-action" onclick="resetQuiz(); closeScoreModal();">Retake Test</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const QUESTIONS = [
+      // Topic 1: Roots of Atomic Theory
+      {
+        topic: 1,
+        topicName: "Topic 1: Roots of Atomic Theory",
+        qEn: "Who proposed the concept of 'Parmanu' as the smallest indivisible unit of matter in ancient Indian philosophy?",
+        qHi: "प्राचीन भारतीय दर्शन में 'परमाणु' की अवधारणा किसने प्रस्तुत की?",
+        optsEn: ["Aryabhata", "Varahamihira", "Charaka", "Acharya Kanada"],
+        optsHi: ["आर्यभट्ट", "वराहमिहिर", "चरक", "महर्षि कणाद"],
+        correct: 3,
+        exp: "Acharya Kanada documented the concept of parmanu in the Sanskrit text Vaisesika Sutras."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: Roots of Atomic Theory",
+        qEn: "What is the literal meaning of the Greek word 'Atomos'?",
+        qHi: "ग्रीक शब्द 'Atomos' का शाब्दिक अर्थ क्या है?",
+        optsEn: ["Indivisible", "Invisible", "Heavy sphere", "Fluid"],
+        optsHi: ["अविभाज्य", "अदृश्य", "भारी गोला", "तरल"],
+        correct: 0,
+        exp: "Democritus and Leucippus coined 'atomos' meaning something that cannot be cut or divided further."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: Roots of Atomic Theory",
+        qEn: "A combination of three parmanus in Acharya Kanada's philosophy is called a:",
+        qHi: "महर्षि कणाद के अनुसार तीन परमाणुओं के संयोजन को क्या कहा जाता है?",
+        optsEn: ["Dyad", "Monad", "Triad", "Tetrad"],
+        optsHi: ["द्व्यणुक", "एकल", "त्र्यणुक", "चतुष्क"],
+        correct: 2,
+        exp: "Combinations of two parmanus form dyads, and three form triads."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: Roots of Atomic Theory",
+        qEn: "Who published the first formal experimental scientific Atomic Theory in 1808?",
+        qHi: "1808 में पहला औपचारिक वैज्ञानिक परमाणु सिद्धांत किसने प्रतिपादित किया?",
+        optsEn: ["J. J. Thomson", "John Dalton", "Ernest Rutherford", "Niels Bohr"],
+        optsHi: ["जे. जे. थॉमसन", "जॉन डाल्टन", "रदरफोर्ड", "नील्स बोर"],
+        correct: 1,
+        exp: "John Dalton proposed that all matter is composed of indivisible atoms based on scientific experiments."
+      },
+      {
+        topic: 1,
+        topicName: "Topic 1: Roots of Atomic Theory",
+        qEn: "Early Greek ideas of the atom differed from modern science primarily because:",
+        qHi: "प्राचीन ग्रीक परमाणु विचार आधुनिक विज्ञान से मुख्य रूप से किस प्रकार भिन्न थे?",
+        optsEn: ["They had electron microscopes", "They believed atoms were alive", "They measured neutron mass", "They were based on philosophical reasoning rather than experiments"],
+        optsHi: ["उनके पास इलेक्ट्रॉन माइक्रोस्कोप थे", "वे मानते थे कि परमाणु जीवित हैं", "उन्होंने न्यूट्रॉन मापा था", "वे प्रयोगों के बजाय दार्शनिक तर्क पर आधारित थे"],
+        correct: 3,
+        exp: "The ancient concept of atom originated as an imaginary/philosophical idea rather than from experimental verification."
+      },
+
+      // Topic 2: Electron & Thomson Model
+      {
+        topic: 2,
+        topicName: "Topic 2: Electron & Thomson Model",
+        qEn: "In a cathode ray discharge tube, cathode rays travel from:",
+        qHi: "कैथोड किरण नलिका प्रयोग में किरणें किस दिशा में गमन करती हैं?",
+        optsEn: ["Cathode (-) to Anode (+)", "Anode (+) to Cathode (-)", "Nucleus to Shells", "Top to Bottom"],
+        optsHi: ["कैथोड (-) से एनोड (+)", "एनोड (+) से कैथोड (-)", "नाभिक से कोश", "ऊपर से नीचे"],
+        correct: 0,
+        exp: "Cathode rays are streams of negatively charged electrons traveling from cathode to anode."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Electron & Thomson Model",
+        qEn: "Who discovered the electron as the first subatomic particle in 1897?",
+        qHi: "1897 में पहले अवपरमाण्विक कण 'इलेक्ट्रॉन' की खोज किसने की?",
+        optsEn: ["James Chadwick", "Niels Bohr", "J. J. Thomson", "Eugen Goldstein"],
+        optsHi: ["जेम्स चैडविक", "नील्स बोर", "जे. जे. थॉमसन", "यूजेन गोल्डस्टीन"],
+        correct: 2,
+        exp: "J. J. Thomson received the 1906 Nobel Prize in Physics for discovering the electron."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Electron & Thomson Model",
+        qEn: "In Thomson's watermelon atomic model, the red edible pulp represents:",
+        qHi: "थॉमसन के तरबूज मॉडल में लाल गूदा क्या दर्शाता है?",
+        optsEn: ["Electrons", "Neutrons", "Empty space", "Positively charged matter"],
+        optsHi: ["इलेक्ट्रॉन", "न्यूट्रॉन", "खाली स्थान", "धनावेशित भाग"],
+        correct: 3,
+        exp: "The positive charge is uniformly distributed throughout the sphere like red pulp, with electrons embedded like seeds."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Electron & Thomson Model",
+        qEn: "The relative electrical charge assigned to an electron is:",
+        qHi: "इलेक्ट्रॉन का सापेक्ष विद्युत आवेश कितना माना जाता है?",
+        optsEn: ["+1", "-1", "0", "+2"],
+        optsHi: ["+1", "-1", "0", "+2"],
+        correct: 1,
+        exp: "Charge of an electron is -1.602 x 10^-19 C, assigned as -1 for convenience."
+      },
+      {
+        topic: 2,
+        topicName: "Topic 2: Electron & Thomson Model",
+        qEn: "The discovery of cathode rays proved that:",
+        qHi: "कैथोड किरणों की खोज ने क्या सिद्ध किया?",
+        optsEn: ["Atoms are divisible and contain subatomic particles", "Atoms are completely indivisible", "Atoms have no electric charge", "Dalton was completely right"],
+        optsHi: ["परमाणु विभाज्य हैं और अवपरमाण्विक कणों से बने हैं", "परमाणु पूरी तरह अविभाज्य हैं", "परमाणु पर कोई आवेश नहीं होता", "डाल्टन पूर्णतः सही थे"],
+        correct: 0,
+        exp: "Subatomic electrons emitted from atoms proved Dalton's indivisible atom idea wrong."
+      },
+
+      // Topic 3: Rutherford Gold Foil
+      {
+        topic: 3,
+        topicName: "Topic 3: Rutherford's Gold Foil Experiment",
+        qEn: "What are alpha (α) particles used in the gold foil experiment?",
+        qHi: "स्वर्ण पन्नी प्रयोग में प्रयुक्त अल्फा (α) कण क्या होते हैं?",
+        optsEn: ["Uncharged energy rays", "Fast moving electrons", "Doubly charged helium nuclei (He2+)", "High energy neutrons"],
+        optsHi: ["अनावेशित किरणें", "तीव्रगामी इलेक्ट्रॉन", "द्वि-आवेशित हीलियम नाभिक (He2+)", "उच्च ऊर्जा न्यूट्रॉन"],
+        correct: 2,
+        exp: "Alpha particles are helium nuclei containing 2 protons and 2 neutrons with +2 charge."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Rutherford's Gold Foil Experiment",
+        qEn: "What observation in the gold foil experiment proved that most of the atom is empty space?",
+        qHi: "रदरफोर्ड के प्रयोग में किस प्रेक्षण से सिद्ध हुआ कि परमाणु का अधिकांश भाग खोखला है?",
+        optsEn: ["All particles were absorbed", "Most alpha particles passed straight through without deflection", "Alpha particles turned into protons", "Some particles bounced backward"],
+        optsHi: ["सभी कण अवशोषित हो गए", "अधिकांश अल्फा कण बिना किसी विक्षेपण के सीधे निकल गए", "कण प्रोटॉन में बदल गए", "कुछ कण पीछे उछल गए"],
+        correct: 1,
+        exp: "Because majority of alpha particles passed straight without deflection, most of the atomic volume is empty space."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Rutherford's Gold Foil Experiment",
+        qEn: "Approximately how many times smaller is the nucleus compared to the atom?",
+        qHi: "नाभिक का आकार परमाणु के कुल आकार से लगभग कितना गुना छोटा है?",
+        optsEn: ["10 times", "1,000 times", "10^12 times", "10^5 (1 lakh) times"],
+        optsHi: ["10 गुना", "1,000 गुना", "10^12 गुना", "10^5 (1 लाख) गुना"],
+        correct: 3,
+        exp: "Atom diameter is ~10^-10 m while nucleus diameter is ~10^-15 m (10^5 times smaller)."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Rutherford's Gold Foil Experiment",
+        qEn: "Why is Rutherford's model called the 'Planetary Model'?",
+        qHi: "रदरफोर्ड के मॉडल को 'ग्रहीय मॉडल' क्यों कहा जाता है?",
+        optsEn: ["Electrons orbit the central positive nucleus like planets orbit the Sun", "Atom is the size of Earth", "It is made of gas", "None of these"],
+        optsHi: ["इलेक्ट्रॉन सूर्य के चारों ओर ग्रहों की तरह नाभिक की परिक्रमा करते हैं", "परमाणु पृथ्वी जितना बड़ा है", "यह गैस का बना है", "कोई नहीं"],
+        correct: 0,
+        exp: "Electrons revolving in circular orbits around the central nucleus resemble the solar system."
+      },
+      {
+        topic: 3,
+        topicName: "Topic 3: Rutherford's Gold Foil Experiment",
+        qEn: "What was the major limitation of Rutherford's nuclear model?",
+        qHi: "रदरफोर्ड के परमाणु मॉडल की मुख्य कमी क्या थी?",
+        optsEn: ["Could not explain presence of protons", "Could not detect gold foil", "Accelerating electrons should radiate energy and collapse into the nucleus", "None of these"],
+        optsHi: ["प्रोटॉन की उपस्थिति नहीं बता सका", "पन्नी को पहचान नहीं सका", "त्वरित इलेक्ट्रॉन को ऊर्जा खोकर नाभिक में गिर जाना चाहिए", "कोई नहीं"],
+        correct: 2,
+        exp: "Electromagnetic theory stated orbiting accelerating electrons must lose energy and spiral into the nucleus."
+      },
+
+      // Topic 4: Bohr's Model
+      {
+        topic: 4,
+        topicName: "Topic 4: Bohr's Model of the Atom",
+        qEn: "According to Niels Bohr, electrons do not fall into the nucleus because:",
+        qHi: "नील्स बोर के अनुसार इलेक्ट्रॉन नाभिक में क्यों नहीं गिरते?",
+        optsEn: ["They are stationary", "Nucleus repels them", "They have zero mass", "They revolve in discrete stationary energy shells without losing energy"],
+        optsHi: ["वे गति नहीं करते", "नाभिक उन्हें प्रतिकर्षित करता है", "उनका द्रव्यमान शून्य है", "वे विविक्त स्थायी ऊर्जा कोशों में बिना ऊर्जा खोए चक्कर लगाते हैं"],
+        correct: 3,
+        exp: "In stationary energy levels, the electron's energy remains constant, ensuring stability."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Bohr's Model of the Atom",
+        qEn: "Which energy shell is closest to the nucleus and has the lowest energy?",
+        qHi: "कौन-सा कोश नाभिक के सबसे निकट है और उसकी ऊर्जा सबसे कम है?",
+        optsEn: ["K-shell (n=1)", "L-shell (n=2)", "M-shell (n=3)", "N-shell (n=4)"],
+        optsHi: ["K-कोश (n=1)", "L-कोश (n=2)", "M-कोश (n=3)", "N-कोश (n=4)"],
+        correct: 0,
+        exp: "The K-shell (n=1) is closest to the nucleus and has minimum energy."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Bohr's Model of the Atom",
+        qEn: "When an electron jumps from the K-shell (n=1) to the L-shell (n=2), it must:",
+        qHi: "जब इलेक्ट्रॉन K-कोश (n=1) से L-कोश (n=2) में जाता है, तो यह:",
+        optsEn: ["Emit energy", "Absorb a fixed amount of energy", "Lose its charge", "Collapse into nucleus"],
+        optsHi: ["ऊर्जा उत्सर्जित करता है", "निश्चित मात्रा में ऊर्जा अवशोषित करता है", "आवेश खो देता है", "नाभिक में गिर जाता है"],
+        correct: 1,
+        exp: "Jumping to a higher energy shell requires absorbing energy equal to the energy difference."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Bohr's Model of the Atom",
+        qEn: "The shell letter notation K, L, M, N... was adopted from:",
+        qHi: "कोशों के लिए K, L, M, N... नामकरण कहाँ से अपनाया गया?",
+        optsEn: ["Dalton's codebook", "Greek alphabet list", "Charles Barkla's X-ray emission experiments", "Danish dictionary"],
+        optsHi: ["डाल्टन की पुस्तक से", "ग्रीक वर्णमाला से", "चार्ल्स बार्कला के एक्स-रे स्पेक्ट्रम प्रयोगों से", "डेनिश शब्दकोश से"],
+        correct: 2,
+        exp: "Physicist Charles Barkla designated characteristic X-ray series starting with letter K."
+      },
+      {
+        topic: 4,
+        topicName: "Topic 4: Bohr's Model of the Atom",
+        qEn: "Niels Bohr was awarded the Nobel Prize in Physics in 1922 for:",
+        qHi: "नील्स बोर को किस खोज के लिए 1922 का भौतिकी नोबेल पुरस्कार दिया गया?",
+        optsEn: ["Discovering neutron", "Splitting uranium", "Discovering cathode rays", "His investigation of the structure of atoms and their radiation"],
+        optsHi: ["न्यूट्रॉन की खोज", "यूरेनियम विखंडन", "कैथोड किरणें", "परमाणु संरचना और उनके विकिरण की जांच"],
+        correct: 3,
+        exp: "Bohr received the 1922 Nobel Prize for explaining atomic structure and stationary orbits."
+      },
+
+      // Topic 5: Neutron Discovery
+      {
+        topic: 5,
+        topicName: "Topic 5: Discovery of the Neutron",
+        qEn: "Who discovered the neutral subatomic particle 'neutron' in 1932?",
+        qHi: "1932 में अनावेशित कण 'न्यूट्रॉन' की खोज किसने की?",
+        optsEn: ["James Chadwick", "J. J. Thomson", "Ernest Rutherford", "John Dalton"],
+        optsHi: ["जेम्स चैडविक", "जे. जे. थॉमसन", "रदरफोर्ड", "जॉन डाल्टन"],
+        correct: 0,
+        exp: "James Chadwick discovered the neutron and earned the 1935 Nobel Prize in Physics."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Discovery of the Neutron",
+        qEn: "Which atom has NO neutrons in its nucleus?",
+        qHi: "किस परमाणु के नाभिक में एक भी न्यूट्रॉन नहीं होता?",
+        optsEn: ["Helium (4He)", "Lithium (7Li)", "Ordinary Hydrogen / Protium (1H)", "Carbon (12C)"],
+        optsHi: ["हीलियम (4He)", "लिथियम (7Li)", "साधारण हाइड्रोजन / प्रोटियम (1H)", "कार्बन (12C)"],
+        correct: 2,
+        exp: "Protium (1H) contains 1 proton and 1 electron with 0 neutrons."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Discovery of the Neutron",
+        qEn: "What is the relative electrical charge of a neutron?",
+        qHi: "न्यूट्रॉन का सापेक्ष विद्युत आवेश कितना होता है?",
+        optsEn: ["+1", "0 (Neutral)", "-1", "+2"],
+        optsHi: ["+1", "0 (उदासीन)", "-1", "+2"],
+        correct: 1,
+        exp: "Neutrons carry zero electrical charge."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Discovery of the Neutron",
+        qEn: "The mass of an atom is almost entirely determined by:",
+        qHi: "परमाणु का द्रव्यमान लगभग पूर्णतः किन कणों पर निर्भर करता है?",
+        optsEn: ["Electrons only", "Empty space", "Outer shell", "Nucleons (Protons and Neutrons)"],
+        optsHi: ["केवल इलेक्ट्रॉन", "रिक्त स्थान", "बाहरी कोश", "न्यूक्लियॉन (प्रोटॉन और न्यूट्रॉन)"],
+        correct: 3,
+        exp: "Electrons have negligible mass; protons and neutrons in the nucleus account for nearly all atomic mass."
+      },
+      {
+        topic: 5,
+        topicName: "Topic 5: Discovery of the Neutron",
+        qEn: "Neutrons help hold the nucleus together by:",
+        qHi: "न्यूट्रॉन नाभिक को एक साथ बांधे रखने में कैसे सहायता करते हैं?",
+        optsEn: ["Providing strong nuclear force and spacing protons apart", "Repelling protons", "Absorbing electrons", "Rotating fast"],
+        optsHi: ["प्रबल नाभिकीय बल प्रदान करके और प्रोटॉनों के बीच दूरी बढ़ाकर", "प्रोटॉनों को प्रतिकर्षित करके", "इलेक्ट्रॉन अवशोषित करके", "तेज घूमकर"],
+        correct: 0,
+        exp: "Neutrons reduce electrostatic repulsion and strengthen binding nuclear forces."
+      },
+
+      // Topic 6: Chemical Symbols
+      {
+        topic: 6,
+        topicName: "Topic 6: Chemical Symbols",
+        qEn: "The chemical symbol for Sodium (Na) is derived from its Latin name:",
+        qHi: "सोडियम (Na) का रासायनिक प्रतीक किस लैटिन नाम से लिया गया है?",
+        optsEn: ["Kalium", "Natrium", "Ferrum", "Argentum"],
+        optsHi: ["कैलियम (Kalium)", "नैट्रियम (Natrium)", "फेरम (Ferrum)", "अर्जेंटम (Argentum)"],
+        correct: 1,
+        exp: "Sodium is symbolized as Na from Latin Natrium."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Chemical Symbols",
+        qEn: "The chemical symbol for Potassium is:",
+        qHi: "पोटैशियम का रासायनिक प्रतीक क्या है?",
+        optsEn: ["P", "Po", "Pt", "K (Kalium)"],
+        optsHi: ["P", "Po", "Pt", "K (कैलियम)"],
+        correct: 3,
+        exp: "Potassium gets symbol K from Latin Kalium."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Chemical Symbols",
+        qEn: "Which of the following follows IUPAC symbol capitalization rules correctly?",
+        qHi: "IUPAC के नियमानुसार कौन-सा प्रतीक सही लिखा है?",
+        optsEn: ["Al", "AL", "al", "aL"],
+        optsHi: ["Al", "AL", "al", "aL"],
+        correct: 0,
+        exp: "First letter must be uppercase, second lowercase: Al (Aluminium)."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Chemical Symbols",
+        qEn: "The symbol 'Au' (from Aurum) stands for:",
+        qHi: "प्रतीक 'Au' (Aurum) किस तत्व को दर्शाता है?",
+        optsEn: ["Silver", "Aluminium", "Gold (Aurum)", "Argon"],
+        optsHi: ["चाँदी", "एल्युमिनियम", "सोना (Aurum)", "आर्गन"],
+        correct: 2,
+        exp: "Gold is symbolized as Au from Latin Aurum."
+      },
+      {
+        topic: 6,
+        topicName: "Topic 6: Chemical Symbols",
+        qEn: "The symbol 'W' (from German Wolfram) represents:",
+        qHi: "प्रतीक 'W' (जर्मन शब्द वोल्फ्राम) किस तत्व का है?",
+        optsEn: ["Water", "Tungsten (Wolfram)", "Titanium", "Zinc"],
+        optsHi: ["जल", "टंगस्टन (Wolfram)", "टाइटेनियम", "जिंक"],
+        correct: 1,
+        exp: "Tungsten is symbolized as W from German Wolfram."
+      },
+
+      // Topic 7: Atomic & Mass Number
+      {
+        topic: 7,
+        topicName: "Topic 7: Atomic & Mass Number",
+        qEn: "An atom has atomic number 17 and mass number 35. Number of neutrons is:",
+        qHi: "एक परमाणु का परमाणु क्रमांक 17 और द्रव्यमान संख्या 35 है। न्यूट्रॉनों की संख्या होगी:",
+        optsEn: ["17", "35", "52", "18 (35 - 17)"],
+        optsHi: ["17", "35", "52", "18 (35 - 17)"],
+        correct: 3,
+        exp: "Neutrons = Mass Number (A) - Atomic Number (Z) = 35 - 17 = 18."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Atomic & Mass Number",
+        qEn: "The chemical identity of an element is determined solely by its:",
+        qHi: "किसी तत्व की रासायनिक पहचान किसके द्वारा निर्धारित होती है?",
+        optsEn: ["Atomic number Z (number of protons)", "Number of neutrons", "Valency", "Physical state"],
+        optsHi: ["परमाणु क्रमांक Z (प्रोटॉनों की संख्या)", "न्यूट्रॉनों की संख्या", "संयोजकता", "भौतिक अवस्था"],
+        correct: 0,
+        exp: "Every element has a distinct atomic number Z equal to its nuclear protons."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Atomic & Mass Number",
+        qEn: "In the notation 14_6 C, the number of protons and neutrons are:",
+        qHi: "संकेतन 14_6 C में प्रोटॉन और न्यूट्रॉन की संख्या है:",
+        optsEn: ["6 protons, 6 neutrons", "8 protons, 6 neutrons", "6 protons, 8 neutrons", "14 protons, 0 neutrons"],
+        optsHi: ["6 प्रोटॉन, 6 न्यूट्रॉन", "8 प्रोटॉन, 6 न्यूट्रॉन", "6 प्रोटॉन, 8 न्यूट्रॉन", "14 प्रोटॉन, 0 न्यूट्रॉन"],
+        correct: 2,
+        exp: "Protons = 6 (Z), Neutrons = 14 - 6 = 8."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Atomic & Mass Number",
+        qEn: "Protons and neutrons together in the nucleus are called:",
+        qHi: "नाभिक में उपस्थित प्रोटॉन और न्यूट्रॉन को संयुक्त रूप से क्या कहते हैं?",
+        optsEn: ["Positrons", "Nucleons", "Isotopes", "Valence electrons"],
+        optsHi: ["पॉजिट्रॉन", "न्यूक्लियॉन", "समस्थानिक", "संयोजी इलेक्ट्रॉन"],
+        correct: 1,
+        exp: "The constituents of the nucleus (p+ + n0) are called nucleons."
+      },
+      {
+        topic: 7,
+        topicName: "Topic 7: Atomic & Mass Number",
+        qEn: "An atom 70_X has 31 electrons. How many neutrons are in its nucleus?",
+        qHi: "एक परमाणु 70_X में 31 इलेक्ट्रॉन हैं। इसके नाभिक में न्यूट्रॉनों की संख्या कितनी है?",
+        optsEn: ["39 (70 - 31)", "31", "70", "101"],
+        optsHi: ["39 (70 - 31)", "31", "70", "101"],
+        correct: 0,
+        exp: "In a neutral atom, protons = electrons = 31. Neutrons = A - Z = 70 - 31 = 39."
+      },
+
+      // Topic 8: Electron Distribution
+      {
+        topic: 8,
+        topicName: "Topic 8: Electron Distribution",
+        qEn: "What is the maximum electron capacity of the L-shell (n=2)?",
+        qHi: "L-कोश (n=2) में अधिकतम कितने इलेक्ट्रॉन रह सकते हैं?",
+        optsEn: ["2", "18", "8 (2 x 2^2)", "32"],
+        optsHi: ["2", "18", "8 (2 x 2^2)", "32"],
+        correct: 2,
+        exp: "Formula 2n^2 for n=2 gives 2 x 4 = 8 electrons."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Electron Distribution",
+        qEn: "What is the electronic configuration of Sodium (Z=11)?",
+        qHi: "सोडियम (Z=11) का इलेक्ट्रॉनिक विन्यास क्या है?",
+        optsEn: ["2, 9", "1, 8, 2", "2, 2, 7", "2, 8, 1"],
+        optsHi: ["2, 9", "1, 8, 2", "2, 2, 7", "2, 8, 1"],
+        correct: 3,
+        exp: "11 electrons fill as K=2, L=8, M=1."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Electron Distribution",
+        qEn: "What is the maximum number of electrons allowed in the outermost valence shell?",
+        qHi: "किसी परमाणु के सबसे बाहरी कोश में अधिकतम कितने इलेक्ट्रॉन हो सकते हैं?",
+        optsEn: ["2", "8", "18", "32"],
+        optsHi: ["2", "8", "18", "32"],
+        correct: 1,
+        exp: "The Bohr-Bury octet rule states outermost shell can hold at most 8 electrons."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Electron Distribution",
+        qEn: "Electronic configuration 2, 8, 7 belongs to:",
+        qHi: "इलेक्ट्रॉनिक विन्यास 2, 8, 7 किस तत्व का है?",
+        optsEn: ["Chlorine (Z=17)", "Fluorine (Z=9)", "Argon (Z=18)", "Sulfur (Z=16)"],
+        optsHi: ["क्लोरीन (Z=17)", "फ्लोरीन (Z=9)", "आर्गन (Z=18)", "सल्फर (Z=16)"],
+        correct: 0,
+        exp: "Total electrons = 2 + 8 + 7 = 17 (Chlorine)."
+      },
+      {
+        topic: 8,
+        topicName: "Topic 8: Electron Distribution",
+        qEn: "The electron configuration of Magnesium (Z=12) is:",
+        qHi: "मैग्नीशियम (Z=12) का इलेक्ट्रॉनिक विन्यास है:",
+        optsEn: ["2, 10", "8, 4", "2, 8, 2", "2, 6, 4"],
+        optsHi: ["2, 10", "8, 4", "2, 8, 2", "2, 6, 4"],
+        correct: 2,
+        exp: "12 electrons distribute as 2 in K, 8 in L, and 2 in M."
+      },
+
+      // Topic 9: Valency
+      {
+        topic: 9,
+        topicName: "Topic 9: Valency",
+        qEn: "The combining capacity of an atom to achieve an octet is called its:",
+        qHi: "अष्टक पूरा करने के लिए परमाणु की संयोजन क्षमता कहलाती है:",
+        optsEn: ["Atomic mass", "Isotopy", "Nucleon number", "Valency"],
+        optsHi: ["परमाणु द्रव्यमान", "समस्थानिकता", "न्यूक्लियॉन", "संयोजकता"],
+        correct: 3,
+        exp: "Valency is the number of electrons lost, gained, or shared to complete the octet."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Valency",
+        qEn: "What is the valency of Oxygen (Z=8, configuration 2, 6)?",
+        qHi: "ऑक्सीजन (Z=8, विन्यास 2, 6) की संयोजकता कितनी होती है?",
+        optsEn: ["2 (8 - 6)", "6", "8", "4"],
+        optsHi: ["2 (8 - 6)", "6", "8", "4"],
+        correct: 0,
+        exp: "Oxygen has 6 valence electrons; it gains 2 electrons to form an octet (Valency = 8 - 6 = 2)."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Valency",
+        qEn: "Why is Argon (Z=18, configuration 2, 8, 8) chemically inert with valency 0?",
+        qHi: "आर्गन (Z=18, विन्यास 2, 8, 8) शून्य संयोजकता के साथ अक्रिय क्यों है?",
+        optsEn: ["It has no protons", "It is radioactive", "Its outermost shell already has a complete octet of 8 electrons", "None"],
+        optsHi: ["प्रोटॉन नहीं हैं", "रेडियोधर्मी है", "इसका बाहरी अष्टक पूर्ण (8 इलेक्ट्रॉन) है", "कोई नहीं"],
+        correct: 2,
+        exp: "Atoms with complete octet in valence shell are chemically stable and unreactive."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Valency",
+        qEn: "The valency of Aluminium (Z=13, configuration 2, 8, 3) is:",
+        qHi: "एल्युमिनियम (Z=13, विन्यास 2, 8, 3) की संयोजकता है:",
+        optsEn: ["1", "3", "2", "5"],
+        optsHi: ["1", "3", "2", "5"],
+        correct: 1,
+        exp: "Aluminium loses its 3 valence electrons to achieve stable octet, so valency is 3."
+      },
+      {
+        topic: 9,
+        topicName: "Topic 9: Valency",
+        qEn: "Carbon (Z=6, configuration 2, 4) completes its octet primarily by:",
+        qHi: "कार्बन (2, 4) अपना अष्टक मुख्य रूप से कैसे पूर्ण करता है?",
+        optsEn: ["Losing 4 electrons", "Gaining 4 electrons", "Radioactive decay", "Sharing 4 electrons (tetravalent)"],
+        optsHi: ["4 इलेक्ट्रॉन त्यागकर", "4 इलेक्ट्रॉन ग्रहण करके", "रेडियोधर्मी क्षय", "4 इलेक्ट्रॉनों का साझा करके (चतुःसंयोजी)"],
+        correct: 3,
+        exp: "Carbon shares 4 valence electrons with other atoms to complete its octet."
+      },
+
+      // Topic 10: Isotopes & Isobars
+      {
+        topic: 10,
+        topicName: "Topic 10: Isotopes & Isobars",
+        qEn: "Atoms of the same element having same atomic number (Z) but different mass numbers (A) are called:",
+        qHi: "समान परमाणु क्रमांक (Z) परंतु भिन्न द्रव्यमान संख्या (A) वाले परमाणुओं को कहते हैं:",
+        optsEn: ["Isotopes", "Isobars", "Isomers", "Allotropes"],
+        optsHi: ["समस्थानिक", "समभारिक", "समावयवी", "अपररूप"],
+        correct: 0,
+        exp: "Isotopes are atoms of the same element with identical protons but different neutrons."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Isotopes & Isobars",
+        qEn: "Which radioactive isotope is used as fuel in nuclear power reactors?",
+        qHi: "परमाणु भट्टी में ईंधन के रूप में किस समस्थानिक का उपयोग किया जाता है?",
+        optsEn: ["Cobalt-60", "Iodine-131", "Uranium-235", "Carbon-14"],
+        optsHi: ["कोबाल्ट-60", "आयोडीन-131", "यूरेनियम-235", "कार्बन-14"],
+        correct: 2,
+        exp: "Uranium-235 (235_92 U) is fissionable fuel for nuclear electricity generation."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Isotopes & Isobars",
+        qEn: "Radioactive Cobalt-60 is used in the medical treatment of:",
+        qHi: "रेडियोधर्मी कोबाल्ट-60 का उपयोग किसके उपचार में होता है?",
+        optsEn: ["Goitre", "Cancer (radiation therapy)", "Diabetes", "Malaria"],
+        optsHi: ["घेंघा", "कैंसर (रेडिएशन थेरेपी)", "मधुमेह", "मलेरिया"],
+        correct: 1,
+        exp: "Cobalt-60 gamma radiation destroys cancerous tumor cells."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Isotopes & Isobars",
+        qEn: "40_18 Ar and 40_20 Ca are examples of:",
+        qHi: "40_18 Ar और 40_20 Ca किसके उदाहरण हैं?",
+        optsEn: ["Isotopes", "Isomers", "Allotropes", "Isobars"],
+        optsHi: ["समस्थानिक", "समावयवी", "अपररूप", "समभारिक"],
+        correct: 3,
+        exp: "Isobars are atoms of different elements (different Z) with the same mass number (A=40)."
+      },
+      {
+        topic: 10,
+        topicName: "Topic 10: Isotopes & Isobars",
+        qEn: "The weighted average atomic mass of Chlorine is 35.5 u because:",
+        qHi: "क्लोरीन का औसत परमाणु द्रव्यमान 35.5 u क्यों है?",
+        optsEn: ["It is the weighted average of natural isotopes 35Cl (75%) and 37Cl (25%)", "It has fractional protons", "It is an isobar", "None"],
+        optsHi: ["यह 35Cl (75%) और 37Cl (25%) समस्थानिकों का भारित औसत है", "इसमें भिन्नात्मक प्रोटॉन हैं", "यह समभारिक है", "कोई नहीं"],
+        correct: 0,
+        exp: "Average mass = (35 x 75/100) + (37 x 25/100) = 26.25 + 9.25 = 35.5 u."
+      }
+    ];
+
+    let currentLang = "both"; // 'both', 'en', 'hi'
+    let selectedAnswers = {};
+    let currentTopic = "all";
+    let isLightMode = false;
+
+    // DOM Elements
+    const quizContainer = document.getElementById("quizContainer");
+    const hudScore = document.getElementById("hudScore");
+    const hudAnswered = document.getElementById("hudAnswered");
+    const hudProgressBar = document.getElementById("hudProgressBar");
+    const hudAccuracy = document.getElementById("hudAccuracy");
+    const topicFilterRow = document.getElementById("topicFilterRow");
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Theme Toggle
+    themeToggleBtn.addEventListener("click", () => {
+      isLightMode = !isLightMode;
+      document.body.classList.toggle("light-theme", isLightMode);
+      themeIcon.innerText = isLightMode ? "🌙" : "☀️";
+    });
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll(".lang-btn").forEach((btn, idx) => {
+        const langs = ['both', 'en', 'hi'];
+        btn.classList.toggle("active", langs[idx] === lang);
+      });
+      renderQuiz();
+    }
+
+    function filterByTopic(topicId) {
+      currentTopic = topicId;
+      document.querySelectorAll(".topic-filter-btn").forEach(btn => {
+        btn.classList.remove("active");
+      });
+      event.target.classList.add("active");
+      renderQuiz();
+    }
+
+    function handleSelectOption(qIdx, optIdx) {
+      if (selectedAnswers[qIdx] !== undefined) return; // already answered
+      selectedAnswers[qIdx] = optIdx;
+      updateStats();
+      renderQuiz();
+
+      if (optIdx === QUESTIONS[qIdx].correct) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 35, spread: 55, origin: { y: 0.8 } });
+        }
+      }
+    }
+
+    function updateStats() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      hudScore.innerText = score;
+      hudAnswered.innerText = totalAnswered;
+      const pct = (totalAnswered / QUESTIONS.length) * 100;
+      hudProgressBar.style.width = `${pct}%`;
+
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+      hudAccuracy.innerText = `${accuracy}%`;
+
+      if (totalAnswered === QUESTIONS.length && score >= 40) {
+        if (typeof confetti === 'function') {
+          confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 } });
+        }
+      }
+    }
+
+    function resetQuiz() {
+      if (confirm("Restart quiz and reset your score?")) {
+        selectedAnswers = {};
+        updateStats();
+        renderQuiz();
+      }
+    }
+
+    function renderQuiz() {
+      quizContainer.innerHTML = "";
+
+      const filtered = QUESTIONS.map((q, idx) => ({ ...q, originalIndex: idx }))
+        .filter(q => currentTopic === "all" || q.topic.toString() === currentTopic);
+
+      if (filtered.length === 0) {
+        quizContainer.innerHTML = `<div style="text-align: center; padding: 40px; color: var(--text-muted);">No questions found for this topic.</div>`;
+        return;
+      }
+
+      filtered.forEach((q) => {
+        const isAnswered = selectedAnswers[q.originalIndex] !== undefined;
+        const userAnswer = selectedAnswers[q.originalIndex];
+
+        const card = document.createElement("div");
+        card.className = "q-card";
+        card.id = `q-card-${q.originalIndex}`;
+
+        // Header
+        const headerHtml = `
+          <div class="q-header">
+            <span class="q-topic-tag">⚛️ ${q.topicName}</span>
+            <span class="q-number-pill">Question ${q.originalIndex + 1} of 50</span>
+          </div>
+        `;
+
+        // Body Text
+        let bodyHtml = '<div class="q-body">';
+        if (currentLang === "both") {
+          bodyHtml += `
+            <div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>
+            <div class="q-text-hi">🇮🇳 हिन्दी: ${q.qHi}</div>
+          `;
+        } else if (currentLang === "en") {
+          bodyHtml += `<div class="q-text-en">Q${q.originalIndex + 1}. ${q.qEn}</div>`;
+        } else {
+          bodyHtml += `<div class="q-text-hi" style="font-size: 1.05rem;">प्र${q.originalIndex + 1}. ${q.qHi}</div>`;
+        }
+        bodyHtml += '</div>';
+
+        // Options
+        let optionsHtml = '<div class="options-grid">';
+        q.optsEn.forEach((optEn, oIdx) => {
+          const optHi = q.optsHi[oIdx];
+          let optText = currentLang === "both" ? `${optEn} (${optHi})` : (currentLang === "en" ? optEn : optHi);
+
+          let optClass = "opt-btn";
+          let statusIcon = "";
+
+          if (isAnswered) {
+            if (oIdx === q.correct) {
+              optClass += " opt-correct";
+              statusIcon = '<span class="opt-status-icon">✓</span>';
+            } else if (oIdx === userAnswer && userAnswer !== q.correct) {
+              optClass += " opt-wrong";
+              statusIcon = '<span class="opt-status-icon">✗</span>';
+            } else {
+              optClass += " opt-dimmed";
+            }
+          }
+
+          optionsHtml += `
+            <button class="${optClass}" onclick="handleSelectOption(${q.originalIndex}, ${oIdx})" ${isAnswered ? 'disabled' : ''}>
+              <div class="opt-content">
+                <span class="opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+                <span>${optText}</span>
+              </div>
+              ${statusIcon}
+            </button>
+          `;
+        });
+        optionsHtml += '</div>';
+
+        // Explanation
+        let explanationHtml = "";
+        if (isAnswered) {
+          const isCorrect = userAnswer === q.correct;
+          explanationHtml = `
+            <div class="exp-box ${isCorrect ? 'exp-correct' : 'exp-wrong'}">
+              <div class="exp-header">
+                <span>${isCorrect ? '✓ Correct Answer!' : '✗ Incorrect!'}</span>
+              </div>
+              <div><strong>Concept & Explanation:</strong> ${q.exp}</div>
+            </div>
+          `;
+        }
+
+        card.innerHTML = headerHtml + bodyHtml + optionsHtml + explanationHtml;
+        quizContainer.appendChild(card);
+      });
+    }
+
+    // Modal Matrix
+    function openMatrixModal() {
+      const grid = document.getElementById("matrixGrid");
+      grid.innerHTML = "";
+
+      QUESTIONS.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "matrix-btn";
+        btn.innerText = idx + 1;
+
+        if (selectedAnswers[idx] !== undefined) {
+          if (selectedAnswers[idx] === q.correct) {
+            btn.classList.add("correct");
+          } else {
+            btn.classList.add("wrong");
+          }
+        }
+
+        btn.onclick = () => {
+          closeMatrixModal();
+          // Filter to 'all' or that question's topic
+          currentTopic = "all";
+          renderQuiz();
+          setTimeout(() => {
+            const el = document.getElementById(`q-card-${idx}`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        };
+
+        grid.appendChild(btn);
+      });
+
+      document.getElementById("matrixModal").classList.add("active");
+    }
+
+    function closeMatrixModal() {
+      document.getElementById("matrixModal").classList.remove("active");
+    }
+
+    // Modal Scorecard
+    function openScorecardModal() {
+      const answeredKeys = Object.keys(selectedAnswers);
+      const totalAnswered = answeredKeys.length;
+      let score = 0;
+      answeredKeys.forEach(idx => {
+        if (selectedAnswers[idx] === QUESTIONS[idx].correct) score++;
+      });
+
+      const wrong = totalAnswered - score;
+      const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+
+      document.getElementById("modalScoreVal").innerText = score;
+      document.getElementById("modalCorrectCount").innerText = score;
+      document.getElementById("modalWrongCount").innerText = wrong;
+      document.getElementById("modalAccuracyVal").innerText = `${accuracy}%`;
+
+      const gradeTitle = document.getElementById("modalGradeTitle");
+      const gradeMsg = document.getElementById("modalGradeMsg");
+
+      if (score >= 45) {
+        gradeTitle.innerText = "Atomic Maestro! 🏆🌟";
+        gradeMsg.innerText = "Outstanding mastery of NCERT Grade 9 Chemistry!";
+      } else if (score >= 35) {
+        gradeTitle.innerText = "Excellent Performance! 🎯";
+        gradeMsg.innerText = "Strong conceptual clarity on atomic structure.";
+      } else if (score >= 25) {
+        gradeTitle.innerText = "Good Effort! 📚";
+        gradeMsg.innerText = "Revise Bohr's model, Valency, and Isotopes for 100% score.";
+      } else {
+        gradeTitle.innerText = "Keep Learning! 💡";
+        gradeMsg.innerText = "Review chapter notes and re-attempt for mastery.";
+      }
+
+      document.getElementById("scoreModal").classList.add("active");
+      if (score >= 35 && typeof confetti === 'function') {
+        confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("scoreModal").classList.remove("active");
+    }
+
+    // Initial render
+    renderQuiz();
+    updateStats();
+  </script>
+</body>
+</html>

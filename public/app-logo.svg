@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="appBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1328"/>
+      <stop offset="50%" stop-color="#080e1e"/>
+      <stop offset="100%" stop-color="#040810"/>
+    </linearGradient>
+
+    <!-- Emerald Glow Gradient -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20c997"/>
+      <stop offset="50%" stop-color="#04AA6D"/>
+      <stop offset="100%" stop-color="#038756"/>
+    </linearGradient>
+
+    <filter id="appIconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#04AA6D" flood-opacity="0.55"/>
+    </filter>
+
+    <filter id="subtleInnerGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#20c997" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base App Frame -->
+  <rect x="16" y="16" width="480" height="480" rx="110" fill="url(#appBgGrad)" stroke="#04AA6D" stroke-width="8" filter="url(#appIconGlow)"/>
+  
+  <!-- Subtle Inner Border Accent -->
+  <rect x="36" y="36" width="440" height="440" rx="90" fill="none" stroke="#20c997" stroke-width="2" stroke-opacity="0.25"/>
+
+  <!-- Geometric Emblem Card Container -->
+  <g transform="translate(0, -10)">
+    <!-- N (Vibrant Emerald Gradient) -->
+    <path d="M 120 300 V 130 L 225 300 V 130" 
+          fill="none" 
+          stroke="url(#emeraldGrad)" 
+          stroke-width="36" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#subtleInnerGlow)"/>
+
+    <!-- S (Crisp Pure White) -->
+    <path d="M 390 170 C 390 125, 285 125, 285 175 C 285 228, 390 228, 390 282 C 390 332, 285 332, 285 292" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="36" 
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom Educational Badge Banner -->
+  <g transform="translate(0, 375)">
+    <rect x="86" y="0" width="340" height="54" rx="27" fill="#0c1328" stroke="#04AA6D" stroke-width="3"/>
+    <text x="256" y="35" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" letter-spacing="3">NCERT <tspan fill="#04AA6D">•</tspan> NIOS</text>
+  </g>
+</svg>

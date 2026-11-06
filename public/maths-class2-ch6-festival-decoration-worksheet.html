@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 2 Maths Ch 6: Decoration for Festival (उत्सव की सजावट) Worksheet | StudyGuide by Nextsem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #090914;
+      --card-bg: #121324;
+      --card-border: rgba(139, 92, 246, 0.25);
+      --text: #f5f3ff;
+      --text-muted: #a78bfa;
+      --accent: #8b5cf6;
+      --accent-glow: rgba(139, 92, 246, 0.35);
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --input-bg: #1a1b32;
+      --input-border: #2e2f54;
+    }
+    body.light {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: rgba(139, 92, 246, 0.2);
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --accent: #7c3aed;
+      --accent-glow: rgba(124, 58, 237, 0.15);
+      --input-bg: #f1f5f9;
+      --input-border: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+      padding-bottom: 5rem;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .header-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(9, 9, 20, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    body.light .header-bar {
+      background: rgba(255, 255, 255, 0.85);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #4c1d95 100%);
+      border-radius: 20px;
+      padding: 24px;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::after {
+      content: '🪔';
+      position: absolute;
+      right: 15px;
+      bottom: -15px;
+      font-size: 5.5rem;
+      opacity: 0.18;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--accent);
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .hindi-text {
+      color: #c4b5fd;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+    body.light .hindi-text {
+      color: #6d28d9;
+    }
+    .pill-btn {
+      background: rgba(139, 92, 246, 0.15);
+      border: 1.5px solid var(--accent);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 0 14px var(--accent-glow);
+    }
+    .number-box {
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1rem;
+      width: 90px;
+      text-align: center;
+    }
+    .number-box:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .check-btn {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .feedback {
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: none;
+    }
+    .feedback.correct {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--success);
+    }
+    .feedback.incorrect {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--danger);
+    }
+    .column-math-box {
+      background: var(--input-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-family: monospace;
+      font-size: 1.15rem;
+      font-weight: 900;
+      display: inline-block;
+      min-width: 140px;
+      text-align: right;
+    }
+    @media print {
+      .header-bar, .check-btn, .pill-btn { display: none !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .card { border: 1px solid #000 !important; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <div class="header-bar">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <a href="/?class=2&subject=c2-maths" style="text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 0.9rem;">
+        <span>←</span> <span>Class 2 Maths</span>
+      </a>
+      <span style="opacity: 0.4;">|</span>
+      <span style="font-weight: 900; font-size: 0.9rem; color: var(--accent);">Chapter 6 Worksheet</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <button class="pill-btn" onclick="toggleLang()" id="langToggle">हिंदी / ENG</button>
+      <button class="pill-btn" onclick="toggleTheme()" id="themeToggle">🌓 Mode</button>
+      <button class="pill-btn" onclick="window.print()">🖨️ Print</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="badge">NCERT Joyful-Mathematics • NEP 2026 Edition</div>
+      <h1 style="font-size: 1.65rem; font-weight: 900; margin-bottom: 6px;">
+        Chapter 6: Decoration for Festival
+      </h1>
+      <div style="font-size: 1.05rem; font-weight: 700; color: #ede9fe; margin-bottom: 10px;">
+        अध्याय 6: उत्सव की सजावट (2-अंकों का जोड़ और घटाव / Addition &amp; Subtraction up to 99)
+      </div>
+      <p style="font-size: 0.85rem; opacity: 0.95; max-width: 650px;">
+        Help Rohan, Simran, Akash, Suwali, and Jyoti make flower garlands of 10, count diyas, jump on number lines, and master regrouping in addition and subtraction!
+      </p>
+    </div>
+
+    <!-- Activity 1: Flower Garlands of 10 (Page 50) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🌸</span> <span>Activity 1: Garlands of 10 Flowers (10-10 फूलों की मालाएँ)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Each garland has <strong>10 flowers</strong>. Count the total flowers for each friend!
+        <br><span class="hindi-text">प्रत्येक माला में 10 फूल हैं। हर बच्चे के कुल फूलों की संख्या ज्ञात करें:</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
+        <!-- Rohan -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 6px;">
+            1. Rohan: 1 garland (10) + 2 loose flowers = ?
+            <br><span class="hindi-text">रोहन: 1 दहाई (10) + 2 इकाई = ?</span>
+          </div>
+          <input type="number" id="q_rohan" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_rohan"></span>
+        </div>
+
+        <!-- Simran -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 6px;">
+            2. Simran: 3 garlands (30) + 7 loose flowers = ?
+            <br><span class="hindi-text">सिमरन: 3 दहाई (30) + 7 इकाई = ?</span>
+          </div>
+          <input type="number" id="q_simran" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_simran"></span>
+        </div>
+
+        <!-- Suwali -->
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 6px;">
+            3. Suwali: 5 garlands (50) + 3 loose flowers = ?
+            <br><span class="hindi-text">सुवाली: 5 दहाई (50) + 3 इकाई = ?</span>
+          </div>
+          <input type="number" id="q_suwali" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_suwali"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Joyful-Maths Page 50</span>
+        <button class="check-btn" onclick="checkActivity1()">Check Garlands ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 2: Tens and Ones Column Addition (Pages 51-52) -->
+    <div class="card">
+      <div class="card-title">
+        <span>➕</span> <span>Activity 2: Adding Flowers Together (दहाई और इकाई का जोड़)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Add the flowers by combining Tens (T) and Ones (O).
+        <br><span class="hindi-text">दहाई (T) और इकाई (O) को मिलाकर कुल फूल ज्ञात करें:</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <!-- Q2A: Rohan + Suwali -->
+        <div style="background: var(--input-bg); padding: 14px; border-radius: 12px; border: 1px solid var(--card-border); text-align: center;">
+          <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 8px;">
+            Rohan (12) + Suwali (53) = ?
+          </div>
+          <div class="column-math-box">
+            <div>T O</div>
+            <div>1 2</div>
+            <div style="border-bottom: 2px solid var(--accent);">+ 5 3</div>
+            <div style="margin-top: 4px;">
+              <input type="number" id="q_add_rohan_suwali" class="number-box" style="width: 75px;" placeholder="?">
+            </div>
+          </div>
+          <div style="margin-top: 6px;"><span class="feedback" id="fb_add_1"></span></div>
+        </div>
+
+        <!-- Q2B: Zoha + Javed -->
+        <div style="background: var(--input-bg); padding: 14px; border-radius: 12px; border: 1px solid var(--card-border); text-align: center;">
+          <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 8px;">
+            Zoha (20) + Javed (43) = ?
+          </div>
+          <div class="column-math-box">
+            <div>T O</div>
+            <div>2 0</div>
+            <div style="border-bottom: 2px solid var(--accent);">+ 4 3</div>
+            <div style="margin-top: 4px;">
+              <input type="number" id="q_add_zoha_javed" class="number-box" style="width: 75px;" placeholder="?">
+            </div>
+          </div>
+          <div style="margin-top: 6px;"><span class="feedback" id="fb_add_2"></span></div>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Joyful-Maths Pages 51–52</span>
+        <button class="check-btn" onclick="checkActivity2()">Check Column Math ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 3: Regrouping Blocks with Mahi & Isha (Pages 55-57) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🧱</span> <span>Activity 3: Regrouping (हंसते-खेलते हासिल वाला जोड़)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        When ones exceed 9, carry 1 ten over to the tens column! (10 इकाई मिलकर 1 दहाई बन जाती है!)
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.84rem; font-weight: 800; margin-bottom: 4px;">
+            1. 36 + 47 = ?
+            <br><span class="hindi-text">6 + 7 = 13 (3 इकाई, 1 दहाई हासिल) → 3 + 4 + 1 = 8 दहाई</span>
+          </div>
+          <input type="number" id="q_regroup_1" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_regroup_1"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.84rem; font-weight: 800; margin-bottom: 4px;">
+            2. Rahim made 43 runs in 1st match and 58 runs in 2nd match. Total runs = ?
+            <br><span class="hindi-text">रहीम ने 43 और 58 रन बनाए। कुल रन = ?</span>
+          </div>
+          <input type="number" id="q_regroup_rahim" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_regroup_rahim"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">43 + 58 = 101 Runs (Page 57)</span>
+        <button class="check-btn" onclick="checkActivity3()">Verify Regrouping ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 4: Diya Counting & Backward Subtraction (Pages 58-60) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🪔</span> <span>Activity 4: Counting Diyas &amp; Taking Away (दीयों की गिनती और घटाव)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        A potter made earthen lamps (diyas) for the festival. Calculate how many are left after selling!
+        <br><span class="hindi-text">त्योहार पर दीये बनाए और बेचे गए। बचे हुए दीयों की संख्या निकालें:</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;">
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            1. Made 75 diyas in a day, sold 35. How many left?
+            <br><span class="hindi-text">75 दीये बनाए, 35 बिक गए: 75 − 35 = ?</span>
+          </div>
+          <input type="number" id="q_diya_1" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_diya_1"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            2. Had 32 diyas in morning, 12 sold by evening. How many left?
+            <br><span class="hindi-text">सुबह 32 दीये थे, शाम तक 12 बिके: 32 − 12 = ?</span>
+          </div>
+          <input type="number" id="q_diya_2" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_diya_2"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Joyful-Maths Pages 58–59</span>
+        <button class="check-btn" onclick="checkActivity4()">Check Diyas ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 5: Opening a Garland (Borrowing / Regrouping Subtraction) (Pages 64-66) -->
+    <div class="card">
+      <div class="card-title">
+        <span>✂️</span> <span>Activity 5: Opening a Garland (माला खोलकर उधार लेना)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Jyoti has 4 garlands and 6 loose flowers (46). To give 18 flowers, she opens 1 garland into 10 loose flowers!
+        <br><span class="hindi-text">ज्योति 46 में से 18 देने के लिए 1 माला खोलती है → 3 माला और 16 खुले फूल बनते हैं!</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 4px;">
+            1. 46 − 18 = ?
+            <br><span class="hindi-text">16 − 8 = 8 फूल; 3 − 1 = 2 मालाएँ → ?</span>
+          </div>
+          <input type="number" id="q_borrow_1" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_borrow_1"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-size: 0.85rem; font-weight: 800; margin-bottom: 4px;">
+            2. Jyoti has 54 flowers and gives 28 to her mother. Flowers left = ?
+            <br><span class="hindi-text">54 − 28 = ? (14 − 8 = 6, 4 − 2 = 2)</span>
+          </div>
+          <input type="number" id="q_borrow_2" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_borrow_2"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Pages 65–66</span>
+        <button class="check-btn" onclick="checkActivity5()">Check Borrowing ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 6: Skip the Rope (Page 67) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🪢</span> <span>Activity 6: Skip the Rope Target 20 (रस्सी कूद: 20 का लक्ष्य)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Aman and Avni need to reach 20 skips. How many more skips do they need?
+        <br><span class="hindi-text">अमन और अवनि को 20 बार कूदना है। उन्हें और कितनी बार कूदना होगा?</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;">
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            Aman skipped 14 times. More skips needed: 20 − 14 = ?
+            <br><span class="hindi-text">14 + ___ = 20</span>
+          </div>
+          <input type="number" id="q_skip_aman" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_skip_aman"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            Avni skipped 12 times. More skips needed: 20 − 12 = ?
+            <br><span class="hindi-text">12 + ___ = 20</span>
+          </div>
+          <input type="number" id="q_skip_avni" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_skip_avni"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Page 67 Target 20</span>
+        <button class="check-btn" onclick="checkActivity6()">Check Skips ✓</button>
+      </div>
+    </div>
+
+    <!-- Activity 7: Daljeet's Error Detective (Page 70) -->
+    <div class="card">
+      <div class="card-title">
+        <span>🔍</span> <span>Activity 7: Daljeet's Error Detective (गलतियाँ खोजें और सुधारें)</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        Daljeet made common mistakes in his notebook! Write the CORRECT answers:
+        <br><span class="hindi-text">दलजीत ने कुछ प्रश्नों में गलतियाँ की हैं। सही उत्तर लिखें:</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;">
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            Daljeet wrote: 25 + 36 = <del style="color: var(--danger);">511</del> (Wrong!). Correct sum = ?
+            <br><span class="hindi-text">25 + 36 = ?</span>
+          </div>
+          <input type="number" id="q_error_1" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_error_1"></span>
+        </div>
+
+        <div style="background: var(--input-bg); padding: 12px; border-radius: 10px; border: 1px solid var(--card-border);">
+          <div style="font-weight: 800; font-size: 0.84rem; margin-bottom: 4px;">
+            Daljeet wrote: 35 − 17 = <del style="color: var(--danger);">22</del> (Wrong!). Correct difference = ?
+            <br><span class="hindi-text">35 − 17 = ?</span>
+          </div>
+          <input type="number" id="q_error_2" class="number-box" placeholder="?">
+          <span class="feedback" id="fb_error_2"></span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <span style="font-size: 0.8rem; color: var(--text-muted);">NCERT Joyful-Maths Page 70 Project Work</span>
+        <button class="check-btn" onclick="checkActivity7()">Correct Errors ✓</button>
+      </div>
+    </div>
+
+    <!-- Final Celebration -->
+    <div style="text-align: center; margin-top: 2rem; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 16px; border: 1px solid var(--card-border);">
+      <h3 style="font-size: 1.2rem; font-weight: 900; margin-bottom: 6px;">🎉 Congratulations on Mastering Festival Decoration!</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+        You have learned 2-digit addition, regrouping with flower garlands, diya subtraction, and fact families.
+      </p>
+      <button class="check-btn" style="padding: 10px 24px; font-size: 1rem;" onclick="checkAllAndCelebrate()">
+        Celebrate Complete Worksheet 🎊
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    function checkActivity1() {
+      const rohan = parseInt(document.getElementById('q_rohan').value, 10);
+      const simran = parseInt(document.getElementById('q_simran').value, 10);
+      const suwali = parseInt(document.getElementById('q_suwali').value, 10);
+
+      const fbR = document.getElementById('fb_rohan');
+      const fbS = document.getElementById('fb_simran');
+      const fbSu = document.getElementById('fb_suwali');
+
+      fbR.className = rohan === 12 ? 'feedback correct' : 'feedback incorrect';
+      fbR.innerText = rohan === 12 ? '✓ 12' : '✗ 10 + 2 = 12';
+
+      fbS.className = simran === 37 ? 'feedback correct' : 'feedback incorrect';
+      fbS.innerText = simran === 37 ? '✓ 37' : '✗ 30 + 7 = 37';
+
+      fbSu.className = suwali === 53 ? 'feedback correct' : 'feedback incorrect';
+      fbSu.innerText = suwali === 53 ? '✓ 53' : '✗ 50 + 3 = 53';
+
+      if (rohan === 12 && simran === 37 && suwali === 53 && typeof confetti === 'function') {
+        confetti({ particleCount: 40 });
+      }
+    }
+
+    function checkActivity2() {
+      const v1 = parseInt(document.getElementById('q_add_rohan_suwali').value, 10);
+      const v2 = parseInt(document.getElementById('q_add_zoha_javed').value, 10);
+
+      const fb1 = document.getElementById('fb_add_1');
+      const fb2 = document.getElementById('fb_add_2');
+
+      fb1.className = v1 === 65 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = v1 === 65 ? '✓ 65 flowers' : '✗ 12 + 53 = 65';
+
+      fb2.className = v2 === 63 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = v2 === 63 ? '✓ 63 flowers' : '✗ 20 + 43 = 63';
+    }
+
+    function checkActivity3() {
+      const v1 = parseInt(document.getElementById('q_regroup_1').value, 10);
+      const v2 = parseInt(document.getElementById('q_regroup_rahim').value, 10);
+
+      const fb1 = document.getElementById('fb_regroup_1');
+      const fb2 = document.getElementById('fb_regroup_rahim');
+
+      fb1.className = v1 === 83 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = v1 === 83 ? '✓ 83' : '✗ 36 + 47 = 83';
+
+      fb2.className = v2 === 101 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = v2 === 101 ? '✓ 101 runs' : '✗ 43 + 58 = 101';
+    }
+
+    function checkActivity4() {
+      const v1 = parseInt(document.getElementById('q_diya_1').value, 10);
+      const v2 = parseInt(document.getElementById('q_diya_2').value, 10);
+
+      const fb1 = document.getElementById('fb_diya_1');
+      const fb2 = document.getElementById('fb_diya_2');
+
+      fb1.className = v1 === 40 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = v1 === 40 ? '✓ 40 diyas' : '✗ 75 − 35 = 40';
+
+      fb2.className = v2 === 20 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = v2 === 20 ? '✓ 20 diyas' : '✗ 32 − 12 = 20';
+    }
+
+    function checkActivity5() {
+      const v1 = parseInt(document.getElementById('q_borrow_1').value, 10);
+      const v2 = parseInt(document.getElementById('q_borrow_2').value, 10);
+
+      const fb1 = document.getElementById('fb_borrow_1');
+      const fb2 = document.getElementById('fb_borrow_2');
+
+      fb1.className = v1 === 28 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = v1 === 28 ? '✓ 28 flowers' : '✗ 46 − 18 = 28';
+
+      fb2.className = v2 === 26 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = v2 === 26 ? '✓ 26 flowers' : '✗ 54 − 28 = 26';
+    }
+
+    function checkActivity6() {
+      const v1 = parseInt(document.getElementById('q_skip_aman').value, 10);
+      const v2 = parseInt(document.getElementById('q_skip_avni').value, 10);
+
+      const fb1 = document.getElementById('fb_skip_aman');
+      const fb2 = document.getElementById('fb_skip_avni');
+
+      fb1.className = v1 === 6 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = v1 === 6 ? '✓ 6 skips' : '✗ 20 − 14 = 6';
+
+      fb2.className = v2 === 8 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = v2 === 8 ? '✓ 8 skips' : '✗ 20 − 12 = 8';
+    }
+
+    function checkActivity7() {
+      const v1 = parseInt(document.getElementById('q_error_1').value, 10);
+      const v2 = parseInt(document.getElementById('q_error_2').value, 10);
+
+      const fb1 = document.getElementById('fb_error_1');
+      const fb2 = document.getElementById('fb_error_2');
+
+      fb1.className = v1 === 61 ? 'feedback correct' : 'feedback incorrect';
+      fb1.innerText = v1 === 61 ? '✓ Correct! 25 + 36 = 61' : '✗ 25 + 36 = 61';
+
+      fb2.className = v2 === 18 ? 'feedback correct' : 'feedback incorrect';
+      fb2.innerText = v2 === 18 ? '✓ Correct! 35 − 17 = 18' : '✗ 35 − 17 = 18';
+
+      if (v1 === 61 && v2 === 18 && typeof confetti === 'function') {
+        confetti({ particleCount: 50 });
+      }
+    }
+
+    function checkAllAndCelebrate() {
+      checkActivity1();
+      checkActivity2();
+      checkActivity3();
+      checkActivity4();
+      checkActivity5();
+      checkActivity6();
+      checkActivity7();
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+
+    let isHindi = false;
+    function toggleLang() {
+      isHindi = !isHindi;
+      const hindiEls = document.querySelectorAll('.hindi-text');
+      hindiEls.forEach(el => {
+        el.style.display = isHindi ? 'block' : 'inline';
+      });
+      document.getElementById('langToggle').innerText = isHindi ? 'English ➔' : 'हिंदी / ENG';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>उत्तर-कुंजी: कक्षा 12 इतिहास अभ्यास परीक्षा - विजयनगर साम्राज्य (प्रकरण-आधारित रिक्त स्थान)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #000000;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-weight: 500;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 5mm 8.5mm 4mm 8.5mm;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Assessment Header */
+    .test-header {
+      border: 2px solid #000000;
+      border-radius: 4px;
+      padding: 5.5px 10px;
+      background: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .school-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.8px solid #000000;
+      padding-bottom: 4px;
+      margin-bottom: 4.5px;
+    }
+
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-area h1 {
+      font-size: 14.2px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    .title-area p {
+      font-size: 9.2px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.1px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .meta-pill {
+      background: #ffffff;
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 2.5px 9px;
+      text-align: center;
+    }
+
+    .meta-pill span {
+      display: block;
+      font-size: 7.2px;
+      font-weight: 800;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .meta-pill strong {
+      font-size: 12px;
+      font-weight: 800;
+      color: #000000;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Student Info Grid */
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr 1fr 1.1fr;
+      gap: 10px;
+      font-size: 9px;
+    }
+
+    .info-field {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-weight: 800;
+      font-size: 8.5px;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    .info-val {
+      font-weight: 700;
+      font-size: 8.8px;
+      color: #000000;
+      border-bottom: 1.6px solid #000000;
+      flex: 1;
+      padding-left: 4px;
+    }
+
+    /* Instructions & Hints Banner */
+    .hint-strip {
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 4px 9px;
+      font-size: 8.5px;
+      background: #fbfbfb;
+      margin-bottom: 5px;
+      line-height: 1.35;
+    }
+
+    .hint-title {
+      font-weight: 800;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 2px;
+      font-size: 8.8px;
+    }
+
+    .hint-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 2px 10px;
+      font-weight: 600;
+    }
+
+    /* Word Bank Box */
+    .word-bank-box {
+      border: 1.5px dashed #000000;
+      border-radius: 4px;
+      padding: 5px 9px;
+      background: #fafafa;
+      margin-bottom: 7px;
+      font-size: 8.5px;
+      line-height: 1.55;
+    }
+
+    .word-bank-title {
+      font-weight: 800;
+      font-size: 8.5px;
+      margin-bottom: 3.5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .word-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.5px 6px;
+      font-weight: 700;
+    }
+
+    .w-pill {
+      background: #ffffff;
+      border: 1.2px solid #000000;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 8.4px;
+    }
+
+    /* Paragraph Topic Card */
+    .topic-card {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .topic-header {
+      background: #000000;
+      color: #ffffff;
+      padding: 3.8px 9px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topic-title {
+      font-size: 9.8px;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+    }
+
+    .topic-weight {
+      font-size: 8.6px;
+      font-weight: 800;
+      background: #ffffff;
+      color: #000000;
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Page 1 Body */
+    .p1-body {
+      padding: 8px 10px;
+      font-size: 10.6px;
+      line-height: 2.18;
+      text-align: justify;
+      color: #000000;
+      font-weight: 500;
+    }
+
+    /* Page 2 Body */
+    .p2-body {
+      padding: 6.5px 9.5px;
+      font-size: 9.8px;
+      line-height: 1.95;
+      text-align: justify;
+      color: #000000;
+      font-weight: 500;
+    }
+
+    /* Answer Highlighting */
+    .ans-box {
+      display: inline-block;
+      background: #f0f0f0;
+      border-bottom: 2.2px solid #000000;
+      padding: 0 4.5px;
+      font-weight: 800;
+      color: #000000;
+      margin: 0 1.5px;
+      line-height: 1.3;
+    }
+
+    .ans-num {
+      font-size: 8.2px;
+      font-weight: 800;
+      color: #000000;
+      border: 1.1px solid #000000;
+      background: #ffffff;
+      border-radius: 2px;
+      padding: 0 3px;
+      margin-right: 3px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Section B Table */
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5px;
+      margin-bottom: 2px;
+    }
+
+    .matrix-table th {
+      border: 1.4px solid #000000;
+      background: #000000;
+      color: #ffffff;
+      padding: 3.5px 5px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 8.4px;
+    }
+
+    .matrix-table td {
+      border: 1.2px solid #000000;
+      padding: 3.5px 5px;
+      height: 24px;
+      vertical-align: middle;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .ans-cell {
+      background: #f4f4f4;
+      font-weight: 800;
+      text-align: center;
+      color: #000000;
+    }
+
+    /* Teacher's Evaluation & Rubric Box */
+    .eval-box {
+      border: 1.8px solid #000000;
+      border-radius: 4px;
+      padding: 5.5px 9px;
+      background: #ffffff;
+      margin-top: 4px;
+    }
+
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 2.3fr 1.1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .score-matrix-row {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      margin-bottom: 4.5px;
+    }
+
+    .score-cell {
+      border: 1.4px solid #000000;
+      border-radius: 3px;
+      padding: 2.5px 5px;
+      text-align: center;
+      min-width: 66px;
+    }
+
+    .score-cell span {
+      display: block;
+      font-size: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .score-cell strong {
+      font-size: 11px;
+      font-weight: 800;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .remarks-block {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 8px;
+      font-weight: 700;
+    }
+
+    .remarks-strip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .remarks-line {
+      flex: 1;
+      font-weight: 600;
+      color: #222222;
+      font-size: 8px;
+    }
+
+    .rubric-pill-box {
+      border: 1.3px solid #000000;
+      border-radius: 3px;
+      padding: 4px 7px;
+      font-size: 7.8px;
+      background: #fbfbfb;
+      line-height: 1.4;
+    }
+
+    .rubric-pill-box strong {
+      display: block;
+      font-size: 8px;
+      margin-bottom: 2px;
+    }
+
+    /* Footer Strip */
+    .page-footer {
+      border-top: 1.8px solid #000000;
+      padding-top: 3.5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.2px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page" id="page1">
+    <div>
+      <!-- Assessment Header -->
+      <div class="test-header">
+        <div class="school-title-row">
+          <div class="badge-wrap">
+            <div class="badge-icon">वि.न.</div>
+            <div class="title-area">
+              <h1>आदर्श उत्तर-कुंजी: कक्षा 12 इतिहास अभ्यास परीक्षा - विजयनगर साम्राज्य</h1>
+              <p>विषय 7 (NCERT) &bull; प्रामाणिक मॉडल उत्तर एवं व्यापक मूल्यांकन निर्देशिका</p>
+            </div>
+          </div>
+          <div class="meta-pills">
+            <div class="meta-pill">
+              <span>दस्तावेज़ प्रकार</span>
+              <strong>उत्तर-कुंजी</strong>
+            </div>
+            <div class="meta-pill">
+              <span>पूर्णांक</span>
+              <strong>50 अंक</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-info-grid">
+          <div class="info-field">
+            <span class="info-label">मूल्यांकन विषय:</span>
+            <span class="info-val">इतिहास (कक्षा 12) - विजयनगर साम्राज्य</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">माध्यम:</span>
+            <span class="info-val">हिन्दी माध्यम (NCERT आधारित)</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">प्रारूप:</span>
+            <span class="info-val">अनुच्छेदात्मक रिक्त स्थान + मिलान</span>
+          </div>
+          <div class="info-field">
+            <span class="info-label">परीक्षक स्थिति:</span>
+            <span class="info-val">मानकीकृत अंकन योजना</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions Strip -->
+      <div class="hint-strip">
+        <div class="hint-title">
+          <span>&bull; परीक्षकों हेतु मूल्यांकन निर्देश (Scoring Guidelines for Teachers) &bull;</span>
+        </div>
+        <div class="hint-grid">
+          <div><strong>1. शब्द परिशुद्धता:</strong> कोष्ठक में दिए गए वैकल्पिक/समानार्थी ऐतिहासिक शब्दों (जैसे विजयनगर/कर्नाटक) पर पूर्ण 1 अंक दें।</div>
+          <div><strong>2. अंकन व्यवस्था:</strong> रिक्त स्थान 1 से 40 = 1 अंक प्रति रिक्त (कुल 40 अंक); भाग 'ख' मिलान = 1 अंक प्रति पद (कुल 10 अंक)।</div>
+        </div>
+      </div>
+
+      <!-- Word Bank Box for Reference -->
+      <div class="word-bank-box">
+        <div class="word-bank-title">
+          <span>&bull; संकेत शब्द-पेटी (Word Bank for Reference):</span>
+          <span>शुद्ध ऐतिहासिक शब्दावली का प्रयोग करें</span>
+        </div>
+        <div class="word-pills">
+          <span class="w-pill">हरिहर और बुक्का</span>
+          <span class="w-pill">पम्पादेवी</span>
+          <span class="w-pill">कॉलिन मैकेंजी</span>
+          <span class="w-pill">सर्वेयर जनरल</span>
+          <span class="w-pill">संगम वंश</span>
+          <span class="w-pill">तुलुव वंश</span>
+          <span class="w-pill">अमुक्तमल्यद</span>
+          <span class="w-pill">नगलपुरम्</span>
+          <span class="w-pill">राय गोपुरम्</span>
+          <span class="w-pill">राक्षसी-तांगड़ी (तालिकोटा)</span>
+          <span class="w-pill">अराविदु वंश</span>
+          <span class="w-pill">कुदिरई चेट्टी</span>
+          <span class="w-pill">पुर्तगाली</span>
+          <span class="w-pill">अमर-नायक</span>
+          <span class="w-pill">समर</span>
+          <span class="w-pill">तुंगभद्रा</span>
+          <span class="w-pill">कमलापुरम्</span>
+          <span class="w-pill">हिरिया नहर</span>
+          <span class="w-pill">अब्दुर रज्जाक</span>
+          <span class="w-pill">राजा का भवन</span>
+          <span class="w-pill">महानवमी डिब्बा</span>
+          <span class="w-pill">विजय का भवन</span>
+          <span class="w-pill">कमल महल</span>
+          <span class="w-pill">इंडो-इस्लामिक</span>
+          <span class="w-pill">विरूपाक्ष</span>
+          <span class="w-pill">हिन्दू सूरत्राणा</span>
+        </div>
+      </div>
+
+      <!-- TOPIC 1 -->
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 1 &bull; विजयनगर की स्थापना, भौगोलिक विस्तार एवं हम्पी की खोज</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p1-body">
+          विजयनगर अथवा 'विजय का शहर' एक नगर और एक साम्राज्य दोनों के लिए प्रयुक्त नाम था। परंपरा और अभिलेखीय साक्ष्यों के अनुसार इस साम्राज्य की स्थापना चौदहवीं शताब्दी में सन् 1336 ई. में 
+          <span class="ans-box"><span class="ans-num">1</span>हरिहर और बुक्का</span> 
+          नामक दो भाइयों द्वारा की गई थी। अपने चरमोत्कर्ष पर यह उत्तर में कृष्णा नदी से लेकर प्रायद्वीप के सुदूर दक्षिण तक फैला हुआ था। इस शहर का 'हम्पी' नाम यहाँ की स्थानीय मातृदेवी 
+          <span class="ans-box"><span class="ans-num">2</span>पम्पादेवी</span> 
+          के नाम से आविर्भूत हुआ था। आधुनिक काल में हम्पी के भग्नावशेष 1800 ई. में ईस्ट इंडिया कंपनी के अभियंता तथा पुराविद 
+          <span class="ans-box"><span class="ans-num">3</span>कॉलिन मैकेंजी</span> 
+          द्वारा प्रकाश में लाए गए, जिन्होंने इस स्थान का पहला सर्वेक्षण मानचित्र तैयार किया। उनके द्वारा हासिल शुरुआती जानकारियाँ विरूपाक्ष मंदिर तथा पुरोहितों की स्मृतियों पर आधारित थीं। बाद में 1815 ई. में उन्हें भारत का पहला 
+          <span class="ans-box"><span class="ans-num">4</span>सर्वेयर जनरल</span> 
+          नियुक्त किया गया था।
+        </div>
+      </div>
+
+      <!-- TOPIC 2 -->
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 2 &bull; विजयनगर साम्राज्य के प्रमुख राजवंशों का ऐतिहासिक अनुक्रम</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p1-body">
+          विजयनगर साम्राज्य में राजनीति और सत्ता के दावेदारों में शासकीय वंश तथा सैनिक कमांडर शामिल थे। साम्राज्य पर 1485 ई. तक नियंत्रण रखने वाला पहला प्रमुख राजवंश 
+          <span class="ans-box"><span class="ans-num">5</span>संगम वंश</span> 
+          कहलाता था। उन्हें सैनिक कमांडर सुलुवों ने उखाड़ फेंका जो 1503 ई. तक सत्ता में रहे। इसके पश्चात सत्ता 
+          <span class="ans-box"><span class="ans-num">6</span>तुलुव वंश</span> 
+          वंश के हाथों में आई जिससे कृष्णदेव राय संबद्ध थे। 1542 ई. तक केंद्र पर नियंत्रण चौथे शासकीय वंश 
+          <span class="ans-box"><span class="ans-num">7</span>अराविदु वंश</span> 
+          के हाथों में चला गया जो सत्रहवीं सदी के अंत तक रहा। जहाँ आधुनिक इतिहासकार विजयनगर साम्राज्य कहते हैं, वहीं समकालीन लोगों तथा शासकीय अभिलेखों में इसे 
+          <span class="ans-box"><span class="ans-num">8</span>कर्नाटक साम्राज्यमु</span> 
+          की संज्ञा दी गई थी।
+        </div>
+      </div>
+
+      <!-- TOPIC 3 -->
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 3 &bull; कृष्णदेव राय का शासन, अमुक्तमल्यद ग्रंथ एवं नगलपुरम् उपनगर</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p1-body">
+          कृष्णदेव राय के शासन की चारित्रिक विशेषता राज्य का विस्तार और सुदृढ़ीकरण था। इसी काल में 1512 ई. में तुंगभद्रा और कृष्णा नदियों के बीच का 
+          <span class="ans-box"><span class="ans-num">9</span>रायचूर दोआब</span> 
+          हासिल किया गया तथा 1514 ई. में उड़ीसा के शासकों का दमन हुआ। कृष्णदेव राय ने शासनकला और व्यापार के विषय में तेलुगु भाषा में 
+          <span class="ans-box"><span class="ans-num">10</span>अमुक्तमल्यद</span> 
+          नामक प्रसिद्ध कृति लिखी। उन्होंने अपनी माता के नाम पर विजयनगर के समीप ही 
+          <span class="ans-box"><span class="ans-num">11</span>नगलपुरम्</span> 
+          नामक उपनगर की स्थापना की। दक्षिण भारतीय मंदिरों में भव्य प्रवेश द्वारों अथवा 
+          <span class="ans-box"><span class="ans-num">12</span>राय गोपुरम्</span> 
+          को जोड़ने का श्रेय भी कृष्णदेव राय को ही जाता है।
+        </div>
+      </div>
+
+      <!-- TOPIC 4 -->
+      <div class="topic-card">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 4 &bull; राक्षसी-तांगड़ी (तालिकोटा) का युद्ध एवं विजयनगर का विध्वंस</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p1-body">
+          कृष्णदेव राय की 1529 ई. में मृत्यु के पश्चात विद्रोही नायकों ने चुनौतियाँ पेश कीं। दक्कन सल्तनतों की सामरिक महत्वाकांक्षाओं के चलते अंततः 1565 ई. में विजयनगर की सेना प्रधानमंत्री 
+          <span class="ans-box"><span class="ans-num">13</span>रामराय</span> 
+          के नेतृत्व में 
+          <span class="ans-box"><span class="ans-num">14</span>राक्षसी-तांगड़ी</span> 
+          (तालिकोटा) के युद्ध में उतरी। यहाँ विजयनगर को बीजापुर, अहमदनगर तथा 
+          <span class="ans-box"><span class="ans-num">15</span>गोलकुंडा</span> 
+          की संयुक्त सेनाओं द्वारा करारी शिकस्त मिली। विजयी सेनाओं ने शहर पर धावा बोलकर उसे लूटा और उजड़ जाने के बाद साम्राज्य का केंद्र पूर्व की ओर 
+          <span class="ans-box"><span class="ans-num">16</span>पेनुकोंडा</span> 
+          (तथा बाद में चन्द्रगिरि) में स्थानांतरित हो गया।
+        </div>
+      </div>
+
+      <!-- TOPIC 5 -->
+      <div class="topic-card" style="margin-bottom: 2px;">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 5 &bull; सैन्य शक्ति, अश्व व्यापार एवं अमर-नायक प्रशासनिक व्यवस्था</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p1-body">
+          युद्धकला में अश्वसेना के महत्व के कारण अरब तथा मध्य एशिया से घोड़ों का आयात अनिवार्य था। घोड़ों के स्थानीय व्यापारियों के समूह को 
+          <span class="ans-box"><span class="ans-num">17</span>कुदिरई चेट्टी</span> 
+          (कुदिरई चेट्टी) कहा जाता था। सन् 1498 ई. में पश्चिमी तट पर पुर्तगाली आए जिन्होंने 
+          <span class="ans-box"><span class="ans-num">18</span>बंदूकों</span> 
+          की सामरिक तकनीक से प्रभाव जमाया। विजयनगर की प्रमुख राजनीतिक खोज 
+          <span class="ans-box"><span class="ans-num">19</span>अमर-नायक</span> 
+          प्रणाली थी जो दिल्ली सल्तनत की इक्ता व्यवस्था से प्रेरित थी; 'अमर' शब्द का उद्भव संस्कृत शब्द 
+          <span class="ans-box"><span class="ans-num">20</span>समर</span> 
+          से हुआ है जिसका अर्थ लड़ाई अथवा युद्ध होता है।
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div class="page-footer">
+      <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर</span>
+      <span>आदर्श उत्तर-कुंजी &bull; पृष्ठ 1 / 2</span>
+      <span>कृपया पृष्ठ 2 पर जाएँ (प्रकरण 6 से 10 एवं मिलान समाधान) &rarr;</span>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page" id="page2">
+    <div>
+      <!-- Page 2 Header Strip -->
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.8px solid #000000; padding-bottom: 3.5px; margin-bottom: 5px;">
+        <span style="font-size: 10px; font-weight: 800;">कक्षा 12 इतिहास अभ्यास परीक्षा &bull; उत्तर-कुंजी पृष्ठ 2</span>
+        <span style="font-size: 8.8px; font-weight: 700;">मानकीकृत मॉडल हल</span>
+        <span style="font-size: 8.8px; font-weight: 800;">पृष्ठ 2 कुल अंक: 30 अंक</span>
+      </div>
+
+      <!-- TOPIC 6 -->
+      <div class="topic-card" style="margin-bottom: 6px;">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 6 &bull; भौगोलिक स्थिति, प्राकृतिक कुण्ड एवं जल-प्रबंधन संपदा</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p2-body">
+          विजयनगर की भौगोलिक स्थिति की मुख्य विशेषता 
+          <span class="ans-box"><span class="ans-num">21</span>तुंगभद्रा</span> 
+          नदी द्वारा निर्मित प्राकृतिक कुण्ड है, जो उत्तर-पूर्व दिशा में बहती है। प्रायद्वीप के शुष्क क्षेत्र में होने के कारण वर्षा जल संचयन हेतु 15वीं शताब्दी में विशाल 
+          <span class="ans-box"><span class="ans-num">22</span>कमलापुरम्</span> 
+          जलाशय बनवाया गया, जिससे राजकीय केंद्र तक जल ले जाया जाता था। सबसे प्रमुख जल संरचना 
+          <span class="ans-box"><span class="ans-num">23</span>हिरिया नहर</span> 
+          थी, जिसने धार्मिक केंद्र व शहरी केंद्र की घाटी को सिंचित किया; इसका निर्माण संभवतः 
+          <span class="ans-box"><span class="ans-num">24</span>संगम वंश</span> 
+          वंश के राजाओं ने कराया था।
+        </div>
+      </div>
+
+      <!-- TOPIC 7 -->
+      <div class="topic-card" style="margin-bottom: 6px;">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 7 &bull; अभूतपूर्व सात-स्तरीय किलेबंदी व्यवस्था एवं विदेशी यात्रियों के साक्ष्य</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p2-body">
+          पंद्रहवीं शताब्दी में फारस के शासक के दूत 
+          <span class="ans-box"><span class="ans-num">25</span>अब्दुर रज्जाक</span> 
+          ने विजयनगर की किलेबंदी देखकर दुर्गों की कुल 
+          <span class="ans-box"><span class="ans-num">26</span>सात (7)</span> 
+          पंक्तियों का उल्लेख किया। इस किलेबंदी की सबसे बड़ी विशेषता यह थी कि इसमें शहर के साथ-साथ 
+          <span class="ans-box"><span class="ans-num">27</span>खेतों तथा जंगलों (कृषि क्षेत्र)</span> 
+          को भी घेरा गया था ताकि शत्रु की घेराबंदी में भुखमरी न फैले। पत्थरों को जोड़ने में गारे का प्रयोग नहीं था, बल्कि वे 
+          <span class="ans-box"><span class="ans-num">28</span>फनाकार (Wedge-shaped)</span> 
+          (वेज-आकार) के थे जिससे वे आपस में टिके रहते थे।
+        </div>
+      </div>
+
+      <!-- TOPIC 8 -->
+      <div class="topic-card" style="margin-bottom: 6px;">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 8 &bull; राजकीय केंद्र, सभा मंडप एवं भव्य 'महानवमी डिब्बा'</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p2-body">
+          राजकीय केंद्र की सबसे विशाल संरचना को 
+          <span class="ans-box"><span class="ans-num">29</span>राजा का भवन</span> 
+          कहा जाता है, जिसके दो मुख्य मंच 'सभा मंडप' तथा 'महानवमी डिब्बा' हैं। महानवमी डिब्बा 11,000 वर्ग फीट के आधार से लगभग 
+          <span class="ans-box"><span class="ans-num">30</span>40 फीट</span> 
+          की ऊँचाई तक बना मंच है। इस पर शरद मास में 10 दिन का प्रसिद्ध उत्सव 
+          <span class="ans-box"><span class="ans-num">31</span>महानवमी (दशहरा / दुर्गा पूजा)</span> 
+          धूमधाम से मनाया जाता था। पुर्तगाली यात्री डोमिंगो पेस ने इन मंचों को संयुक्त रूप से 
+          <span class="ans-box"><span class="ans-num">32</span>विजय का भवन</span> 
+          की संज्ञा दी थी।
+        </div>
+      </div>
+
+      <!-- TOPIC 9 -->
+      <div class="topic-card" style="margin-bottom: 6px;">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 9 &bull; कमल महल (लोटस महल), हाथियों का अस्तबल एवं स्थापत्य कला</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p2-body">
+          राजकीय केंद्र के सबसे सुंदर भवनों में 
+          <span class="ans-box"><span class="ans-num">33</span>कमल महल (लोटस महल)</span> 
+          शामिल है, जिसका यह नाम 19वीं सदी के अंग्रेज यात्रियों ने दिया। कॉलिन मैकेंजी के अनुसार यह एक 
+          <span class="ans-box"><span class="ans-num">34</span>परिषदीय सदन (परामर्श सदन)</span> 
+          था जहाँ राजा सलाहकारों से मिलता था। इसकी नौ मीनारें व मेहराबें 
+          <span class="ans-box"><span class="ans-num">35</span>इंडो-इस्लामिक (हिन्द-इस्लामी)</span> 
+          (हिन्द-इस्लामी) शैली से प्रभावित हैं। इसके समीप ही 11 गुंबदों वाली संरचना स्थित है जिसे 
+          <span class="ans-box"><span class="ans-num">36</span>हाथियों का अस्तबल (गजशाला)</span> 
+          कहा जाता है।
+        </div>
+      </div>
+
+      <!-- TOPIC 10 -->
+      <div class="topic-card" style="margin-bottom: 5px;">
+        <div class="topic-header">
+          <span class="topic-title">प्रकरण 10 &bull; धार्मिक केंद्र, विरूपाक्ष व विट्ठल मन्दिर एवं 'हिन्दू सूरत्राणा' उपाधि</span>
+          <span class="topic-weight">4 अंक (4 &times; 1M)</span>
+        </div>
+        <div class="p2-body">
+          तुंगभद्रा के तट पर स्थित धार्मिक केंद्र के मुख्य संरक्षक देवता 
+          <span class="ans-box"><span class="ans-num">37</span>विरूपाक्ष</span> 
+          (शिव का रूप) थे। सभी राजकीय आदेशों पर कन्नड़ लिपि में 
+          <span class="ans-box"><span class="ans-num">38</span>'श्री विरूपाक्ष'</span> 
+          अंकित होता था। शासक स्वयं को देवों से जोड़ने हेतु 
+          <span class="ans-box"><span class="ans-num">39</span>'हिन्दू सूरत्राणा'</span> 
+          (हिन्दू सुल्तान) का विरुद धारण करते थे। दूसरा प्रमुख मंदिर विट्ठल मंदिर था, जहाँ महाराष्ट्र के आराध्य 
+          <span class="ans-box"><span class="ans-num">40</span>विट्ठल (विष्णु रूप)</span> 
+          की पूजा होती थी, जिसमें पत्थर का नक्काशीदार रथ बना है।
+        </div>
+      </div>
+
+      <!-- SECTION B: MATCHING & CHRONOLOGY MATRIX -->
+      <div class="topic-card" style="margin-bottom: 5px;">
+        <div class="topic-header" style="background: #111111;">
+          <span class="topic-title">भाग 'ख' &bull; ऐतिहासिक काल-क्रम, उपाधियाँ एवं अवधारणात्मक मिलान समाधान</span>
+          <span class="topic-weight">10 अंक (10 &times; 1M)</span>
+        </div>
+        <div style="padding: 3.5px 6.5px;">
+          <table class="matrix-table" style="margin-bottom: 0;">
+            <thead>
+              <tr>
+                <th style="width: 105px;">स्तंभ 'क' (वर्ष)</th>
+                <th>स्तंभ 'ख' (ऐतिहासिक घटना)</th>
+                <th style="width: 90px;">सही उत्तर</th>
+                <th style="width: 105px;">स्तंभ 'ग' (शब्दावली/पद)</th>
+                <th>स्तंभ 'घ' (अर्थ व संदर्भ)</th>
+                <th style="width: 90px;">सही उत्तर</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>(A) 1336 ई.</td>
+                <td>(i) कृष्णदेव राय का शासनकाल</td>
+                <td class="ans-cell">A &rarr; [ (iii) ]</td>
+                <td>(F) गजपति</td>
+                <td>(vi) घोड़ों के स्वामी (दक्कन सुल्तान)</td>
+                <td class="ans-cell">F &rarr; [ (viii) ]</td>
+              </tr>
+              <tr>
+                <td>(B) 1509&ndash;29 ई.</td>
+                <td>(ii) हम्पी यूनेस्को विश्व धरोहर घोषित</td>
+                <td class="ans-cell">B &rarr; [ (i) ]</td>
+                <td>(G) अश्वपति</td>
+                <td>(vii) लोगों के स्वामी (विजयनगर राय)</td>
+                <td class="ans-cell">G &rarr; [ (vi) ]</td>
+              </tr>
+              <tr>
+                <td>(C) 1565 ई.</td>
+                <td>(iii) विजयनगर साम्राज्य की स्थापना</td>
+                <td class="ans-cell">C &rarr; [ (iv) ]</td>
+                <td>(H) नरपति</td>
+                <td>(viii) हाथियों के स्वामी (उड़ीसा शासक)</td>
+                <td class="ans-cell">H &rarr; [ (vii) ]</td>
+              </tr>
+              <tr>
+                <td>(D) 1800 ई.</td>
+                <td>(iv) तालिकोटा (राक्षसी-तांगड़ी) युद्ध</td>
+                <td class="ans-cell">D &rarr; [ (v) ]</td>
+                <td>(I) कुदिरई चेट्टी</td>
+                <td>(ix) स्थानीय घोड़ों के व्यापारी</td>
+                <td class="ans-cell">I &rarr; [ (ix) ]</td>
+              </tr>
+              <tr>
+                <td>(E) 1986 ई.</td>
+                <td>(v) कॉलिन मैकेंजी द्वारा हंपी की खोज</td>
+                <td class="ans-cell">E &rarr; [ (ii) ]</td>
+                <td>(J) यवन</td>
+                <td>(x) यूनानियों/विदेशियों हेतु संस्कृत शब्द</td>
+                <td class="ans-cell">J &rarr; [ (x) ]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TEACHER'S EVALUATION & DIAGNOSTIC BOX -->
+      <div class="eval-box">
+        <div class="eval-grid">
+          <div>
+            <div class="score-matrix-row">
+              <span style="font-size: 8px; font-weight: 800; min-width: 85px;">अंक विवरण तालिका:</span>
+              <div class="score-cell">
+                <span>प्रकरण 1-5 (20M)</span>
+                <strong>20 / 20</strong>
+              </div>
+              <div class="score-cell">
+                <span>प्रकरण 6-10 (20M)</span>
+                <strong>20 / 20</strong>
+              </div>
+              <div class="score-cell">
+                <span>भाग ख: मिलान (10M)</span>
+                <strong>10 / 10</strong>
+              </div>
+              <div class="score-cell" style="background: #000000; color: #ffffff;">
+                <span style="color: #ffffff;">कुल अंक (50M)</span>
+                <strong>50 / 50</strong>
+              </div>
+            </div>
+            <div class="remarks-block">
+              <div class="remarks-strip">
+                <span>शिक्षण मूल्यांकन टिप्पणी:</span>
+                <span class="remarks-line">सभी 40 रिक्त स्थान एवं 10 मिलान बिंदु NCERT इतिहास (भाग-2, विषय 7) से 100% प्रामाणिक हैं।</span>
+              </div>
+              <div class="remarks-strip">
+                <span>उपचारात्मक अनुसंशा:</span>
+                <span class="remarks-line">कम अंक वाले विद्यार्थियों को कालक्रम (तालिका 1-2) तथा स्थापत्य शब्दावली का पुनः अभ्यास कराएँ।</span>
+              </div>
+            </div>
+          </div>
+          <div class="rubric-pill-box">
+            <strong>मानकीकृत ग्रेडिंग स्तर:</strong>
+            <div>[ उत्कृष्ट ] A+ (45-50) &bull; [ उत्तम ] A (40-44)</div>
+            <div>[ संतोषजनक ] B (30-39) &bull; [ उपचारात्मक ] &lt;30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2 Footer -->
+    <div class="page-footer">
+      <span>कक्षा 12 इतिहास &bull; एक साम्राज्य की राजधानी: विजयनगर</span>
+      <span>आदर्श उत्तर-कुंजी &bull; पूर्णांक: 50 अंक</span>
+      <span>पृष्ठ 2 / 2</span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="hiresCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1328"/>
+      <stop offset="100%" stop-color="#060c18"/>
+    </linearGradient>
+    <linearGradient id="hiresGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#04AA6D"/>
+    </linearGradient>
+    <filter id="hiresGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#04AA6D" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Nextsem Emblem Container -->
+  <rect x="25" y="20" width="250" height="160" rx="38" fill="url(#hiresCardGrad)" stroke="#04AA6D" stroke-width="6" filter="url(#hiresGlow)" />
+  <rect x="35" y="30" width="230" height="140" rx="28" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.3" />
+  
+  <!-- N (Emerald Green) -->
+  <path d="M 78 140 V 60 L 128 140 V 60" fill="none" stroke="url(#hiresGreenGrad)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- S (Crisp Pure White) -->
+  <path d="M 220 80 C 220 58, 170 58, 170 85 C 170 110, 220 110, 220 135 C 220 160, 170 160, 170 140" fill="none" stroke="#FFFFFF" stroke-width="17" stroke-linecap="round" />
+
+  <!-- NEXTSEM Brand Text -->
+  <text x="150" y="224" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="900" letter-spacing="3">NEXTSEM</text>
+
+  <!-- NCERT NIOS Subtitle Badge Container -->
+  <rect x="35" y="246" width="230" height="32" rx="16" fill="#04AA6D" fill-opacity="0.12" stroke="#04AA6D" stroke-width="1.5" />
+  <text x="150" y="267" text-anchor="middle" fill="#04AA6D" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="13" font-weight="800" letter-spacing="2">NCERT &amp; NIOS SOLUTIONS</text>
+</svg>

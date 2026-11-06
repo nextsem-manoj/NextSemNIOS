@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>What a Bird Thought (MCQs & Quiz) - Class 6 English Poorvi | Nextsem</title>
+  <meta name="description" content="NCERT Class 6 English (Poorvi Unit 3) Poem 'What a Bird Thought' - Comprehensive 25 Interactive MCQs from Pages 13, 14, and 15 with shuffled options, instant feedback and explanation.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐦</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0d1527;
+      --bg-card-hover: #131f38;
+      --border-card: rgba(56, 189, 248, 0.22);
+      --accent-emerald: #10b981;
+      --accent-sky: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-purple: #a855f7;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.7;
+      padding-bottom: 80px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.1) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.06) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 11, 24, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 50;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .nav-badge {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff; font-weight: 800; font-size: 11px;
+      padding: 3px 8px; border-radius: 6px; text-transform: uppercase;
+    }
+
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+      font-size: 13px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;
+    }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.15); }
+    .nav-btn.shuffle-btn {
+      background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      border-color: #a78bfa; color: #ffffff;
+    }
+
+    .container {
+      position: relative; max-width: 960px; margin: 0 auto;
+      padding: 24px 16px; z-index: 1;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(16, 185, 129, 0.1));
+      border: 1px solid var(--border-card);
+      border-radius: 20px; padding: 32px 24px; text-align: center;
+      margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-sky); font-size: 13px; font-weight: 700;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 12px;
+    }
+
+    .hero-title { font-size: 30px; font-weight: 800; margin-bottom: 8px; }
+    .hero-subtitle { color: var(--text-muted); font-size: 15px; }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted); padding: 8px 16px; border-radius: 10px; font-size: 13px;
+      font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: rgba(56, 189, 248, 0.2); border-color: var(--accent-sky);
+      color: var(--accent-sky);
+    }
+
+    /* Score HUD */
+    .score-hud {
+      background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border-card);
+      border-radius: 14px; padding: 14px 20px; display: flex;
+      justify-content: space-between; align-items: center; margin-bottom: 24px;
+      font-weight: 700; flex-wrap: wrap; gap: 12px;
+    }
+
+    /* MCQ Card */
+    .mcq-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px; padding: 22px;
+      margin-bottom: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .mcq-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;
+    }
+
+    .page-badge {
+      font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .mcq-question {
+      font-size: 16px; font-weight: 700; margin-bottom: 16px; line-height: 1.6;
+    }
+
+    .options-grid {
+      display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 12px;
+    }
+
+    .opt-btn {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px; padding: 12px 16px; text-align: left;
+      color: inherit; font-size: 14px; font-weight: 500; cursor: pointer;
+      display: flex; align-items: center; gap: 10px; transition: all 0.2s;
+    }
+
+    .opt-btn:hover:not(.disabled) {
+      background: rgba(56, 189, 248, 0.1); border-color: var(--accent-sky);
+    }
+
+    .opt-btn.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10b981 !important; color: #34d399 !important; font-weight: 700;
+    }
+
+    .opt-btn.wrong {
+      background: rgba(244, 63, 94, 0.2) !important;
+      border-color: #f43f5e !important; color: #fb7185 !important;
+    }
+
+    .exp-box {
+      display: none; margin-top: 12px; padding: 12px 16px;
+      background: rgba(0, 0, 0, 0.4); border-left: 3px solid var(--accent-sky);
+      border-radius: 0 8px 8px 0; font-size: 13px; color: var(--text-muted); line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <a href="/" class="nav-brand">
+      <span class="nav-badge">NCERT Poorvi</span>
+      <span style="font-weight: 700; font-size: 15px;">Class 6 English</span>
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn shuffle-btn" onclick="shuffleAllOptions()">🔀 Shuffle Options</button>
+      <button class="nav-btn" onclick="toggleTheme()">🌓 Theme</button>
+      <a href="/docs/class6_english_poorvi_ch3_what_a_bird_thought_mcqs_pages13_15.md" class="nav-btn" target="_blank">📄 Full Notes MD</a>
+      <a href="/?view=home" class="nav-btn">🏠 Home</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="hero-banner">
+      <div class="hero-tag">📖 Unit 3: Nurturing Nature • Poem</div>
+      <h1 class="hero-title">What a Bird Thought: 25 Master MCQs</h1>
+      <p class="hero-subtitle">Pages 13, 14 & 15 Comprehensive Question Bank with Shuffled Options & Instant Feedback</p>
+    </header>
+
+    <!-- Score Counter HUD -->
+    <div class="score-hud">
+      <div>📊 Total Questions: <span id="totalCount" style="color:var(--accent-sky);">25</span></div>
+      <div>⭐ Score: <span id="scoreVal" style="color:var(--accent-emerald);">0</span> / <span id="answeredVal">0</span></div>
+      <button class="nav-btn" onclick="resetQuiz()" style="font-size:12px; padding:4px 10px;">🔄 Reset Quiz</button>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="tab-btn active" onclick="filterCategory('all', this)">All Questions (25)</button>
+      <button class="tab-btn" onclick="filterCategory('p13', this)">Page 13: Let Us Discuss (9)</button>
+      <button class="tab-btn" onclick="filterCategory('p14', this)">Page 14: Let Us Reflect (7)</button>
+      <button class="tab-btn" onclick="filterCategory('p15', this)">Page 15: Let Us Learn (9)</button>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="questionsContainer"></div>
+  </main>
+
+  <script>
+    const originalMcqsData = [
+      // Page 13
+      { id: 1, page: 'Page 13', cat: 'p13', q: 'What is the main idea of Stanza 1 in "What a Bird Thought"?', opts: ['The bird was angry because its shell was broken', 'The bird built a nest out of twigs', 'The bird lived happily in a small, round world made of pale blue shell', 'The bird flies across the blue ocean'], ans: 2, exp: 'Stanza 1 describes: "I lived first in a little house, / And lived there very well, / I thought the world was small and round, / And made of pale, blue shell."' },
+      { id: 2, page: 'Page 13', cat: 'p13', q: 'What is the main idea of Stanza 2?', opts: ['The bird lived in a cosy straw nest nurtured by its mother', 'The bird collected leaves to eat', 'The bird flew to another country', 'The bird asked its neighbours for directions'], ans: 0, exp: 'Stanza 2 highlights: "I lived next in a little nest... I thought the world was made of straw, / And nestled by my mother."' },
+      { id: 3, page: 'Page 13', cat: 'p13', q: 'What happens in Stanza 3 when the bird flutters from its nest?', opts: ['It falls to the ground and gets hurt', 'It discovers a new straw nest', 'It gets blinded by bright sunlight', 'It steps out into the tree and thinks the world is made of leaves'], ans: 3, exp: 'Stanza 3 states: "One day, I fluttered from my nest... I said the world is made of leaves, / I have been very blind."' },
+      { id: 4, page: 'Page 13', cat: 'p13', q: 'What is the main idea of Stanza 4 (the final stanza)?', opts: ['The bird asks its mother to build a bigger nest', 'The bird flies into the vast world as an adult, realizing no one fully knows how big the world is', 'The bird decides to return to its egg shell', 'The bird builds a wooden cage'], ans: 1, exp: 'Stanza 4 concludes: "At length I flew beyond the tree... I don’t know how the world is made, / And neither do my neighbours."' },
+      { id: 5, page: 'Page 13', cat: 'p13', q: 'Which sentence from Page 13 is an INCORRECT distractor not matching any stanza?', opts: ['The bird lived in a cosy nest with its mother', 'The bird becomes blind due to leaves', 'The bird flies away as an adult', 'The bird lived happily in a small world'], ans: 1, exp: '"I have been very blind" is used metaphorically to mean unaware/ignorant of the world, not physically blinded by leaves.' },
+      { id: 6, page: 'Page 13', cat: 'p13', q: 'Complete the word from poem: "What was the shape of the bird’s first house?" (_ O _ _ _)', opts: ['B O U N D', 'S O U N D', 'P O U N D', 'R O U N D'], ans: 3, exp: '"I thought the world was small and round" (ROUND).' },
+      { id: 7, page: 'Page 13', cat: 'p13', q: 'Complete the word: "What was the bird’s second nest made of?" (_ _ R _ _)', opts: ['G R A S S', 'S C R E W', 'S T R A W', 'B R O O M'], ans: 2, exp: '"I thought the world was made of straw" (STRAW).' },
+      { id: 8, page: 'Page 13', cat: 'p13', q: 'Complete the word: "What did the bird see when it came out of its nest?" (L _ _ _ E _)', opts: ['L E A V E S', 'L A D D E R', 'L O V E R S', 'L A K E S T'], ans: 0, exp: '"I said the world is made of leaves" (LEAVES).' },
+      { id: 9, page: 'Page 13', cat: 'p13', q: 'Complete the word: "What did the bird do at the end?" (_ _ _ W)', opts: ['C R E W', 'F L E W', 'D R E W', 'B L E W'], ans: 1, exp: '"At length I flew beyond the tree" (FLEW).' },
+
+      // Page 14
+      { id: 10, page: 'Page 14', cat: 'p14', q: 'True or False: "The bird changed its house two times."', opts: ['False', 'True'], ans: 0, exp: 'False! The bird lived in: (1) Egg shell, (2) Straw nest, (3) Leafy tree, and (4) Wide open world/sky.' },
+      { id: 11, page: 'Page 14', cat: 'p14', q: 'True or False: "The neighbours tell the bird about the world."', opts: ['True', 'False'], ans: 1, exp: 'False! The poem explicitly says: "And neither do my neighbours."' },
+      { id: 12, page: 'Page 14', cat: 'p14', q: 'Read: "I thought the world was made of straw, / And nestled by my mother." Who lived with the baby bird?', opts: ['Its father', 'Its neighbours', 'Other baby chicks alone', 'Its mother'], ans: 3, exp: '"And nestled by my mother" proves its mother lived with it.' },
+      { id: 13, page: 'Page 14', cat: 'p14', q: 'Why did the bird think the world was made of straw? (Page 14 Extract)', opts: ['Its nest was made of straw', 'It lived in a straw hut', 'Its mother fed straw to it', 'There was straw all around on ground'], ans: 0, exp: 'Being inside the nest, all it could see and touch was straw.' },
+      { id: 14, page: 'Page 14', cat: 'p14', q: 'Which word in Stanza 2 tells us that the baby bird was warm and comfortable?', opts: ['Lived', 'Other', 'Nestled', 'Needed'], ans: 2, exp: '\'Nestled\' means settled comfortably, warmly, and snugly.' },
+      { id: 15, page: 'Page 14', cat: 'p14', q: 'In the lines "I said the world is made of leaves, / I have been very blind", what does "I said" mean?', opts: ['Spoke / Thought aloud', 'Flew', 'Shouted', 'Cried'], ans: 0, exp: '\'I said\' means expressed its thoughts aloud or to itself.' },
+      { id: 16, page: 'Page 14', cat: 'p14', q: 'Complete: "The bird felt it had been very blind because it could not _____ the leaves from _____ the nest."', opts: ['touch, near', 'eat, outside', 'see, inside', 'smell, below'], ans: 2, exp: 'From inside the nest, it could not see the outside leaves.' },
+
+      // Page 15
+      { id: 17, page: 'Page 15', cat: 'p15', q: 'Why did the baby bird think that its first world was small, round and blue?', opts: ['It looked at the sky through a window', 'Its mother painted the nest blue', 'It wore blue sunglasses', 'It was inside a small, round egg with a pale blue shell'], ans: 3, exp: 'The egg shell was pale blue, round and enclosed.' },
+      { id: 18, page: 'Page 15', cat: 'p15', q: 'Where did the bird go when it fluttered from its straw nest? (Page 15 Section IV)', opts: ['Straight to the ground', 'Onto the leafy tree branches', 'Into a wooden cage', 'Across the sea'], ans: 1, exp: 'It hopped onto the leafy boughs of the tree.' },
+      { id: 19, page: 'Page 15', cat: 'p15', q: 'What quality did the bird say it had when it flew away? (Page 15 Section V)', opts: ['Quite fit for grown-up labours (mature & strong for flying)', 'Scared of the wind', 'Weak and hungry', 'Sleepy'], ans: 0, exp: 'The poem says: "Quite fit for grown-up labours".' },
+      { id: 20, page: 'Page 15', cat: 'p15', q: 'Who were the bird’s "neighbours" in Stanza 4?', opts: ['Humans in apartments', 'Fishes in the lake', 'Other birds and creatures in the trees and sky', 'Farmers'], ans: 2, exp: 'Other birds and animals inhabiting the natural environment.' },
+      { id: 21, page: 'Page 15', cat: 'p15', q: 'Which word rhymes with "well" and "shell" from Stanza 1?', opts: ['Tall', 'Fell', 'Call', 'Will'], ans: 1, exp: 'well, shell, fell, bell all share the -ell rhyme.' },
+      { id: 22, page: 'Page 15', cat: 'p15', q: 'Which pair forms the rhyming pair in Stanza 2?', opts: ['house — nest', 'straw — egg', 'other — mother', 'lived — world'], ans: 2, exp: 'other rhymes with mother.' },
+      { id: 23, page: 'Page 15', cat: 'p15', q: 'Which pair forms the rhyming pair in Stanza 3?', opts: ['nest — tree', 'fluttered — said', 'leaves — world', 'find — blind'], ans: 3, exp: 'find rhymes with blind.' },
+      { id: 24, page: 'Page 15', cat: 'p15', q: 'Complete the rhyming stanza: "I fly high and I fly low, / But one thing I surely k _ _ _, / Whenever I wish to rest, / My little nest is the _ _ _ t."', opts: ['show, rest', 'blow, fast', 'know, best', 'grow, last'], ans: 2, exp: 'know (k-n-o-w) and best (b-e-s-t).' },
+      { id: 25, page: 'Page 15', cat: 'p15', q: 'Which describing word (adjective) is used in the poem for the egg shell?', opts: ['Pale', 'Lived', 'Fluttered', 'Flew'], ans: 0, exp: '"pale, blue shell" — \'pale\' and \'blue\' are describing words.' }
+    ];
+
+    let mcqsData = JSON.parse(JSON.stringify(originalMcqsData));
+    let score = 0;
+    let answered = 0;
+    let answeredMap = {};
+    let currentCategory = 'all';
+
+    function shuffleOptionsInternal(questionObj) {
+      const correctText = questionObj.opts[questionObj.ans];
+      const shuffledOpts = [...questionObj.opts];
+      for (let i = shuffledOpts.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledOpts[i], shuffledOpts[j]] = [shuffledOpts[j], shuffledOpts[i]];
+      }
+      questionObj.opts = shuffledOpts;
+      questionObj.ans = shuffledOpts.indexOf(correctText);
+    }
+
+    function shuffleAllOptions() {
+      mcqsData.forEach(q => shuffleOptionsInternal(q));
+      resetQuiz();
+    }
+
+    function resetQuiz() {
+      score = 0;
+      answered = 0;
+      answeredMap = {};
+      document.getElementById('scoreVal').innerText = score;
+      document.getElementById('answeredVal').innerText = answered;
+      renderMCQs(currentCategory);
+    }
+
+    function renderMCQs(category = 'all') {
+      currentCategory = category;
+      const container = document.getElementById('questionsContainer');
+      const filtered = category === 'all' ? mcqsData : mcqsData.filter(m => m.cat === category);
+      
+      container.innerHTML = filtered.map((m, idx) => `
+        <div class="mcq-card" id="card_${m.id}">
+          <div class="mcq-header">
+            <span class="page-badge">📍 ${m.page}</span>
+            <span style="font-size:12px; font-weight:700; color:var(--text-muted);">Q${idx + 1} of ${filtered.length}</span>
+          </div>
+          <div class="mcq-question">${m.q}</div>
+          <div class="options-grid">
+            ${m.opts.map((opt, optIdx) => `
+              <button class="opt-btn" id="opt_${m.id}_${optIdx}" onclick="selectAnswer(${m.id}, ${optIdx}, ${m.ans})">
+                <span style="font-weight:700; color:var(--accent-sky);">${String.fromCharCode(65 + optIdx)}.</span> ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <div class="exp-box" id="exp_${m.id}">
+            <strong style="color:var(--accent-sky);">💡 Explanation:</strong> ${m.exp}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function selectAnswer(qId, selectedIdx, correctIdx) {
+      if (answeredMap[qId] !== undefined) return;
+      answeredMap[qId] = selectedIdx;
+      answered++;
+
+      const isCorrect = (selectedIdx === correctIdx);
+      if (isCorrect) score++;
+
+      document.getElementById(`opt_${qId}_${correctIdx}`).classList.add('correct');
+      if (!isCorrect) {
+        document.getElementById(`opt_${qId}_${selectedIdx}`).classList.add('wrong');
+      }
+
+      // Disable buttons
+      const card = document.getElementById(`card_${qId}`);
+      card.querySelectorAll('.opt-btn').forEach(btn => btn.classList.add('disabled'));
+
+      // Show explanation
+      document.getElementById(`exp_${qId}`).style.display = 'block';
+
+      // Update score HUD
+      document.getElementById('scoreVal').innerText = score;
+      document.getElementById('answeredVal').innerText = answered;
+
+      if (isCorrect) {
+        confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
+      }
+
+      if (answered === mcqsData.length && score >= 20) {
+        setTimeout(() => {
+          confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+        }, 300);
+      }
+    }
+
+    function filterCategory(cat, btnEl) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+      renderMCQs(cat);
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+    }
+
+    if (localStorage.getItem('nextsem_theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    renderMCQs('all');
+  </script>
+</body>
+</html>

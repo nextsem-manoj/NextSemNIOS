@@ -1,0 +1,78 @@
+const fs = require('fs');
+const path = require('path');
+
+const artDir = 'C:\\Users\\manojkmr2403\\.gemini\\antigravity-ide\\brain\\30a65b27-3c24-43cf-96ae-d684a5fa1232';
+const pubDir = path.join(__dirname, '..', 'public');
+
+const squareSrc = path.join(artDir, 'nextsem_study_guide_logo_1788514487181.jpg');
+const bannerSrc = path.join(artDir, 'study_guide_banner_1788514506979.jpg');
+
+if (fs.existsSync(squareSrc)) {
+  fs.copyFileSync(squareSrc, path.join(pubDir, 'study-guide-by-nextsem-logo.jpg'));
+  fs.copyFileSync(squareSrc, path.join(pubDir, 'nextsem-study-guide-logo.jpg'));
+  console.log('Copied square logo');
+}
+
+if (fs.existsSync(bannerSrc)) {
+  fs.copyFileSync(bannerSrc, path.join(pubDir, 'study-guide-by-nextsem-banner.jpg'));
+  fs.copyFileSync(bannerSrc, path.join(pubDir, 'nextsem-study-guide-banner.jpg'));
+  console.log('Copied banner');
+}
+
+// Generate an ultra-clean, vector SVG logo for crisp scaling at any resolution
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1c2d" />
+      <stop offset="50%" stop-color="#051424" />
+      <stop offset="100%" stop-color="#010f1f" />
+    </linearGradient>
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="35%" stop-color="#00e676" />
+      <stop offset="100%" stop-color="#04aa6d" />
+    </linearGradient>
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle Frame -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="3" />
+
+  <!-- Subtle Inner Ambient Glow -->
+  <circle cx="256" cy="200" r="160" fill="#04aa6d" opacity="0.12" filter="url(#emeraldGlow)" />
+
+  <!-- Isometric Interconnected Ribbon 'NS' Monogram -->
+  <g transform="translate(136, 90)" filter="url(#emeraldGlow)">
+    <!-- Letter N -->
+    <path d="M 30 180 L 30 20 L 70 20 L 130 120 L 130 20 L 165 20 L 165 180 L 125 180 L 65 80 L 65 180 Z" fill="url(#neonGreen)" />
+    <!-- Letter S Interlocked Loop -->
+    <path d="M 120 40 C 180 15, 230 40, 220 85 C 210 125, 140 135, 145 160 C 150 180, 185 185, 215 165 L 225 195 C 180 220, 115 210, 110 165 C 105 115, 185 110, 180 80 C 175 60, 145 55, 115 70 Z" fill="url(#neonGreen)" opacity="0.95" />
+  </g>
+
+  <!-- Typography: Study Guide -->
+  <text x="256" y="360" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="40" font-weight="800" letter-spacing="0.5">
+    Study Guide
+  </text>
+
+  <!-- Typography: by NextSem -->
+  <g transform="translate(256, 405)">
+    <text x="0" y="0" text-anchor="middle" fill="#58de9c" font-family="'Manrope', sans-serif" font-size="22" font-style="italic" font-weight="600" letter-spacing="1">
+      by NextSem
+    </text>
+  </g>
+
+  <!-- Academic Graduation Cap Emblem -->
+  <g transform="translate(256, 445) scale(0.9)" fill="#00dce6">
+    <path d="M 0 -10 L 22 0 L 0 10 L -22 0 Z" opacity="0.9" />
+    <path d="M -15 4 L -15 14 C -15 18, 15 18, 15 14 L 15 4" stroke="#00dce6" stroke-width="2.5" fill="none" />
+    <path d="M 16 2 L 24 6 L 24 16" stroke="#00dce6" stroke-width="2" fill="none" />
+  </g>
+</svg>`;
+
+fs.writeFileSync(path.join(pubDir, 'study-guide-by-nextsem.svg'), svgContent, 'utf8');
+fs.writeFileSync(path.join(pubDir, 'logo', 'study-guide-by-nextsem.svg'), svgContent, 'utf8');
+
+console.log('Created vector SVG versions in public/ and public/logo/');

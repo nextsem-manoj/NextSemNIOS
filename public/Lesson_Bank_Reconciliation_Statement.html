@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 11 Financial Accounting Ch 5: Bank Reconciliation Statement (BRS) Master Lesson | NextSem</title>
+  <meta name="description" content="Master NCERT Class 11 Financial Accounting-I Chapter 5 Bank Reconciliation Statement (keac105.pdf) — Comprehensive Bilingual Lesson, 4-Balance Decision Matrix, Solved Illustrations, Interactive Practice & 25 MCQs.">
+  <link rel="icon" type="image/png" href="/image-20.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #121c3a;
+      --border-card: rgba(16, 185, 129, 0.22);
+      --border-accent: #10b981;
+      
+      --brand-blue: #0284c7;
+      --brand-cyan: #06b6d4;
+      --brand-emerald: #10b981;
+      --brand-gold: #f59e0b;
+      --brand-purple: #8b5cf6;
+      
+      --color-plus: #10b981;
+      --color-plus-bg: rgba(16, 185, 129, 0.12);
+      --color-minus: #ef4444;
+      --color-minus-bg: rgba(239, 68, 68, 0.12);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --font-main: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-devanagari: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --border-accent: #059669;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Breadcrumb Navigation Bar */
+    .top-breadcrumb-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #080f20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    body.light-theme .top-breadcrumb-bar {
+      background: #ffffff !important;
+      border-bottom-color: #cbd5e1 !important;
+      color: #475569 !important;
+    }
+    .top-breadcrumb-bar a {
+      color: var(--brand-emerald);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .top-breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+    .top-breadcrumb-bar .sep {
+      color: var(--text-dim);
+    }
+    .top-breadcrumb-bar .current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    /* Sticky Header */
+    .header-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 12, 24, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    body.light-theme .header-bar {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-bottom-color: #cbd5e1 !important;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+    }
+    .brand-title-wrap h1 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-ch {
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .brand-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-lang {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--brand-emerald);
+      color: var(--brand-emerald);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-theme {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    body.light-theme .btn-theme {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+
+    /* Container */
+    .main-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+      flex: 1;
+    }
+
+    /* Quick Action Header Cards */
+    .action-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+    }
+    .action-btn.primary {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+      border-color: #10b981;
+      color: #34d399;
+      box-shadow: 0 4px 18px rgba(16, 185, 129, 0.2);
+    }
+    .action-btn.secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+    }
+    body.light-theme .action-btn.secondary {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+
+    /* Quick Jump TOC */
+    .quick-nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 18px;
+      margin-bottom: 28px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+    }
+    body.light-theme .quick-nav-bar {
+      background: #ffffff;
+      border-color: #cbd5e1;
+    }
+    .quick-nav-title {
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: var(--brand-emerald);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 6px;
+    }
+    .quick-nav-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    body.light-theme .quick-nav-chip {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    .quick-nav-chip:hover {
+      background: var(--brand-emerald);
+      color: #ffffff;
+      border-color: var(--brand-emerald);
+      transform: translateY(-2px);
+    }
+
+    /* Concept & Lesson Cards */
+    .section-block {
+      margin-bottom: 36px;
+      scroll-margin-top: 80px;
+    }
+    .card-concept {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    body.light-theme .card-concept {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-concept h2 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--brand-emerald);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-concept h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--brand-cyan);
+      margin: 20px 0 10px;
+    }
+    .card-concept p {
+      font-size: 0.94rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+    .hi-text {
+      color: #38bdf8;
+      font-family: var(--font-devanagari);
+      font-weight: 500;
+      font-size: 0.92rem;
+      display: block;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    body.light-theme .hi-text {
+      color: #0369a1;
+    }
+
+    /* Grid for features / differences */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .diff-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    body.light-theme .diff-card {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+    .diff-card h4 {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    body.light-theme .diff-card h4 {
+      color: #0284c7;
+    }
+    .diff-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .tag-plus { background: var(--color-plus-bg); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .tag-minus { background: var(--color-minus-bg); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+
+    /* Tables */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 18px 0;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    body.light-theme .table-wrapper {
+      border-color: #cbd5e1;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .data-table th, .data-table td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .data-table th {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--brand-emerald);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      letter-spacing: 0.05em;
+    }
+    body.light-theme .data-table th {
+      background: #f1f5f9;
+      color: #059669;
+    }
+    .data-table td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    body.light-theme .data-table td {
+      border-bottom-color: #e2e8f0;
+    }
+    .data-table .amount {
+      font-family: var(--font-mono);
+      font-weight: 800;
+      text-align: right;
+    }
+
+    /* Accordion / Solved Case */
+    .qa-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    body.light-theme .qa-box {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+    .qa-header {
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 0.94rem;
+    }
+    .qa-header:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .qa-body {
+      padding: 18px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(0, 0, 0, 0.15);
+      display: none;
+    }
+    body.light-theme .qa-body {
+      background: #ffffff;
+      border-top-color: #e2e8f0;
+    }
+    .qa-box.open .qa-body {
+      display: block;
+    }
+
+    /* MCQs */
+    .mcq-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+    body.light-theme .mcq-card {
+      background: #ffffff;
+      border-color: #cbd5e1;
+    }
+    .mcq-q {
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+    .mcq-options {
+      display: grid;
+      gap: 8px;
+    }
+    .mcq-opt {
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    body.light-theme .mcq-opt {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    .mcq-opt:hover {
+      border-color: var(--brand-emerald);
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .mcq-opt.correct {
+      background: rgba(16, 185, 129, 0.25) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+      font-weight: 800;
+    }
+    .mcq-opt.wrong {
+      background: rgba(239, 68, 68, 0.25) !important;
+      border-color: #ef4444 !important;
+      color: #f87171 !important;
+      font-weight: 800;
+    }
+    .mcq-feedback {
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      display: none;
+    }
+
+    /* Floating Back to Top Button */
+    .back-to-top-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: rgba(12, 19, 40, 0.95);
+      border: 1.5px solid var(--border-accent);
+      color: #34d399;
+      border-radius: 9999px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(16, 185, 129, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: all 0.3s ease;
+      font-weight: 800;
+      font-size: 0.84rem;
+    }
+    .back-to-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    body.light-theme .back-to-top-btn {
+      background: #ffffff;
+      color: #059669;
+      border-color: #059669;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Complete Desktop Top Navbar Breadcrumb Navigation -->
+  <nav class="top-breadcrumb-bar" aria-label="Breadcrumb">
+    <a href="/">🏠 Home</a>
+    <span class="sep">❯</span>
+    <a href="/?class=11">Class 11</a>
+    <span class="sep">❯</span>
+    <a href="/?class=11&subject=Accountancy">Financial Accounting-I (लेखांकन-I)</a>
+    <span class="sep">❯</span>
+    <a href="/?class=11&subject=Accountancy&chapter=5">Chapter 5: Bank Reconciliation Statement</a>
+    <span class="sep">❯</span>
+    <span class="current">Master Lesson (Bilingual / द्विभाषी)</span>
+  </nav>
+
+  <!-- Sticky Header Bar -->
+  <header class="header-bar">
+    <div class="brand-section">
+      <img src="/image-20.png" alt="NextSem Logo" class="brand-logo">
+      <div class="brand-title-wrap">
+        <h1>
+          <span>Bank Reconciliation Statement (BRS)</span>
+          <span class="badge-ch">Chapter 5</span>
+        </h1>
+        <div class="brand-sub">NCERT Class 11 Financial Accounting-I (`keac105.pdf`) • Comprehensive Bilingual Master Lesson</div>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <button class="btn-lang" id="langToggleBtn" onclick="toggleBilingualMode()">
+        <span>🌐 द्विभाषी (Bilingual)</span>
+      </button>
+      <button class="btn-theme" id="themeToggleBtn" onclick="toggleTheme()">
+        <span id="themeIcon">🌙</span>
+        <span id="themeLabel">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+
+    <!-- Action Links -->
+    <div class="action-links">
+      <a href="/pdf/Class 11/11th Financial Accounting-I/keac105.pdf" target="_blank" class="action-btn primary">
+        <span>📄 Open Official NCERT PDF (keac105.pdf)</span>
+      </a>
+      <a href="/financial-accounting-ch5-bank-reconciliation-statement-studio.html" class="action-btn secondary">
+        <span>🏦 Launch Interactive BRS Studio &amp; Solver</span>
+      </a>
+      <a href="/navyug-class11-accountancy-exam-solutions.html" class="action-btn secondary">
+        <span>📑 Navyug Mid-Term Exam (80 Marks Solved)</span>
+      </a>
+      <a href="/?class=11&subject=Accountancy" class="action-btn secondary">
+        <span>📚 All Class 11 Accountancy Chapters</span>
+      </a>
+    </div>
+
+    <!-- Quick Jump Navigation -->
+    <nav class="quick-nav-bar" aria-label="Lesson Sections">
+      <span class="quick-nav-title">⚡ Quick Jump:</span>
+      <a href="#sec-intro" class="quick-nav-chip">💡 1. Dual Perspective</a>
+      <a href="#sec-meaning" class="quick-nav-chip">🎯 2. Meaning &amp; Need</a>
+      <a href="#sec-timing" class="quick-nav-chip">⏳ 3. Timing Differences (7 Causes)</a>
+      <a href="#sec-errors" class="quick-nav-chip">⚠️ 4. Differences by Errors</a>
+      <a href="#sec-matrix" class="quick-nav-chip">📊 5. 4-Balance Matrix</a>
+      <a href="#sec-acb" class="quick-nav-chip">✏️ 6. Amended Cash Book</a>
+      <a href="#sec-illustrations" class="quick-nav-chip">📝 7. Solved Illustrations</a>
+      <a href="#sec-practice" class="quick-nav-chip">🔢 8. Practice Problems</a>
+      <a href="#sec-mcqs" class="quick-nav-chip">🎯 9. 25 Bilingual MCQs</a>
+    </nav>
+
+    <!-- SECTION 1: DUAL PERSPECTIVE -->
+    <section id="sec-intro" class="section-block">
+      <div class="card-concept">
+        <h2>💡 1. The Dual Perspective of Bank Transactions (दोहरा दृष्टिकोण)</h2>
+        <p>
+          Every business firm maintaining a bank account keeps an internal record in its <strong>Cash Book (Bank Column)</strong>. Simultaneously, the commercial bank maintains a running account of that customer in the <strong>Bank Pass Book (or Bank Statement)</strong>.
+        </p>
+        <span class="hi-text">प्रत्येक व्यावसायिक फर्म बैंक लेन-देन का लेखा अपनी <strong>रोकड़ बही के बैंक कॉलम</strong> में करती है। दूसरी ओर, बैंक अपने खाताधारक का रिकॉर्ड <strong>बैंक पासबुक (या बैंक विवरण)</strong> में रखता है।</span>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Transaction / स्थिति</th>
+                <th>Cash Book (Bank Column) [व्यापारी]</th>
+                <th>Bank Pass Book [बैंक की पुस्तक]</th>
+                <th>Accounting Logic / लेखांकन कारण</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Money Deposited (धन जमा करना)</strong></td>
+                <td><strong style="color: #34d399;">Debit (Dr.)</strong></td>
+                <td><strong style="color: #38bdf8;">Credit (Cr.)</strong></td>
+                <td>Firm's bank asset increases (Dr.); Bank's liability to customer increases (Cr.).</td>
+              </tr>
+              <tr>
+                <td><strong>Money Withdrawn (धन निकालना)</strong></td>
+                <td><strong style="color: #f87171;">Credit (Cr.)</strong></td>
+                <td><strong style="color: #f59e0b;">Debit (Dr.)</strong></td>
+                <td>Firm's bank asset decreases (Cr.); Bank's liability to customer decreases (Dr.).</td>
+              </tr>
+              <tr>
+                <td><strong>Positive / Favourable Balance (अनुकूल)</strong></td>
+                <td><strong>Debit Balance (Dr.)</strong></td>
+                <td><strong>Credit Balance (Cr.)</strong></td>
+                <td>Customer has surplus funds sitting in the bank account.</td>
+              </tr>
+              <tr>
+                <td><strong>Bank Overdraft / Unfavourable (प्रतिकूल)</strong></td>
+                <td><strong>Credit Balance (Cr.)</strong></td>
+                <td><strong>Debit Balance (Dr.)</strong></td>
+                <td>Customer owes money to the bank under an overdraft facility.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MEANING & NEED -->
+    <section id="sec-meaning" class="section-block">
+      <div class="card-concept">
+        <h2>🎯 2. Meaning &amp; Need of Bank Reconciliation Statement (अर्थ एवं आवश्यकता)</h2>
+        <p>
+          <strong>Bank Reconciliation Statement (BRS)</strong> is a statement prepared periodically (monthly, quarterly, or on 31st March) by an account holder to reconcile and explain the causes of difference between the bank balance shown in the <strong>Cash Book</strong> and the balance shown in the <strong>Pass Book</strong> as on a specific date.
+        </p>
+        <span class="hi-text">बैंक समाधान विवरण एक ऐसा विवरण-पत्र है जो खाताधारक द्वारा एक निश्चित तिथि पर रोकड़ बही के बैंक कॉलम और बैंक पासबुक के शेष के बीच के अंतर को स्पष्ट करने तथा उनका मिलान करने के लिए बनाया जाता है।</span>
+
+        <h3>📌 Salient Features of BRS (मुख्य विशेषताएँ)</h3>
+        <ul style="padding-left: 20px; font-size: 0.92rem; line-height: 1.8;">
+          <li><strong>Statement, Not an Account:</strong> It is a memorandum statement and does NOT form part of the double-entry ledger.</li>
+          <li><strong>Prepared by the Customer:</strong> The business firm compiles it, NEVER the bank.</li>
+          <li><strong>As on a Particular Date:</strong> Valid strictly for a specific cut-off date (e.g., <em>"As on 31st March, 2026"</em>).</li>
+          <li><strong>Ensures Accuracy:</strong> Detects uncredited cheques, delayed payments, bank charges, and clerical errors.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 7 TIMING DIFFERENCES -->
+    <section id="sec-timing" class="section-block">
+      <div class="card-concept">
+        <h2>⏳ 3. Timing Differences (समय अंतराल संबंधी 7 प्रमुख कारण)</h2>
+        <p>
+          Timing differences arise because of the unavoidable time lag between recording a transaction in the Cash Book and its clearing/posting by the banking system.
+        </p>
+        <span class="hi-text">समय अंतराल के कारण उत्पन्न अंतर तब आते हैं जब फर्म और बैंक द्वारा एक ही लेन-देन को अलग-अलग तारीखों पर दर्ज किया जाता है।</span>
+
+        <div class="diff-grid">
+          <div class="diff-card">
+            <span class="tag tag-plus">Cash Book Dr. Start: ADD (+)</span>
+            <h4>1. Cheques Issued but Not Yet Presented for Payment</h4>
+            <p>Firm credits Cash Book immediately. Creditor has not yet encashed it at bank. Pass Book balance remains <strong>HIGHER</strong>.</p>
+            <span class="hi-text">निर्गमित चेक जो अभी भुगतान हेतु प्रस्तुत नहीं हुए: रोकड़ बही कम हो चुकी है, पासबुक अभी अधिक है। (ADD)</span>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">Cash Book Dr. Start: DEDUCT (–)</span>
+            <h4>2. Cheques Deposited but Not Yet Collected / Credited</h4>
+            <p>Firm debits Cash Book on deposit. Clearing house takes 2-3 days to credit funds. Pass Book balance is <strong>LOWER</strong>.</p>
+            <span class="hi-text">जमा किए गए चेक जिनका संग्रहण नहीं हुआ: रोकड़ बही बढ़ चुकी है, पासबुक अभी कम है। (DEDUCT)</span>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">Cash Book Dr. Start: DEDUCT (–)</span>
+            <h4>3. Direct Debits &amp; Bank Charges</h4>
+            <p>Bank debits service fees, SMS alerts, or overdraft interest directly. Pass Book balance is <strong>LOWER</strong>.</p>
+            <span class="hi-text">बैंक प्रभार या अधिविकर्ष ब्याज: बैंक ने सीधे काट लिया, पासबुक कम हो गई। (DEDUCT)</span>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-plus">Cash Book Dr. Start: ADD (+)</span>
+            <h4>4. Direct Deposits by Customers into Bank</h4>
+            <p>Customer transfers funds via NEFT/UPI directly into bank account. Pass Book balance is <strong>HIGHER</strong>.</p>
+            <span class="hi-text">ग्राहकों द्वारा सीधे बैंक खाते में जमा: बैंक में पैसा बढ़ गया, रोकड़ बही में पता चलने तक पासबुक अधिक रहेगी। (ADD)</span>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-plus">Cash Book Dr. Start: ADD (+)</span>
+            <h4>5. Interest &amp; Dividends Collected by Bank</h4>
+            <p>Bank collects investment dividends and credits account under authority. Pass Book balance is <strong>HIGHER</strong>.</p>
+            <span class="hi-text">बैंक द्वारा सीधे लाभांश या ब्याज वसूलना: पासबुक में जमा हो गया, पासबुक अधिक रहेगी। (ADD)</span>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">Cash Book Dr. Start: DEDUCT (–)</span>
+            <h4>6. Standing Order Direct Payments by Bank</h4>
+            <p>Bank automatically pays insurance premium, EMI, or rent as instructed. Pass Book balance is <strong>LOWER</strong>.</p>
+            <span class="hi-text">स्थायी आदेश पर बैंक द्वारा भुगतान (बीमा प्रीमियम/किराया): पासबुक कम हो गई। (DEDUCT)</span>
+          </div>
+
+          <div class="diff-card">
+            <span class="tag tag-minus">Cash Book Dr. Start: DEDUCT (–)</span>
+            <h4>7. Dishonour of Cheques Deposited / Bills Discounted</h4>
+            <p>Deposited cheque bounces; bank immediately debits customer's account. Pass Book balance is <strong>LOWER</strong>.</p>
+            <span class="hi-text">जमा किया गया चेक अनादरित होना: बैंक ने राशि वापस काट ली, पासबुक कम हो गई। (DEDUCT)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DIFFERENCES CAUSED BY ERRORS -->
+    <section id="sec-errors" class="section-block">
+      <div class="card-concept">
+        <h2>⚠️ 4. Differences Caused by Errors (त्रुटियों के कारण अंतर)</h2>
+        <div class="diff-grid">
+          <div class="diff-card">
+            <h4>(A) Errors by the Firm in Cash Book (व्यापारी द्वारा त्रुटियाँ)</h4>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li><strong>Omission:</strong> Cheque received or issued completely omitted.</li>
+              <li><strong>Wrong Amount:</strong> Cheque of ₹5,400 entered as ₹4,500.</li>
+              <li><strong>Wrong Column:</strong> Cheque recorded in cash column instead of bank column.</li>
+              <li><strong>Side Reversal:</strong> Cheque issued recorded on debit (receipt) side.</li>
+              <li><strong>Casting Errors:</strong> Undercasting or overcasting of total columns.</li>
+            </ul>
+          </div>
+          <div class="diff-card">
+            <h4>(B) Errors by the Bank in Pass Book (बैंक द्वारा त्रुटियाँ)</h4>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li><strong>Wrong Credit:</strong> Bank credits our account for deposit made by another firm with a similar name.</li>
+              <li><strong>Wrong Debit:</strong> Bank debits our account for a cheque drawn by someone else.</li>
+              <li><strong>Duplication:</strong> A debit or credit entry posted twice by the bank.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: 4-BALANCE MATRIX -->
+    <section id="sec-matrix" class="section-block">
+      <div class="card-concept">
+        <h2>📊 5. Master 4-Starting-Point Decision Matrix (चार शुरुआती बिंदुओं का मास्टर नियम)</h2>
+        <p>
+          In the modern <strong>Plus (+) and Minus (–)</strong> method, the operational rule for transactions is uniform. If starting with an Overdraft, simply place the starting figure in the <strong>Minus Column</strong>!
+        </p>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Transaction / Event</th>
+                <th>Starting: Cash Book Favourable (Dr.)</th>
+                <th>Starting: Cash Book Overdraft (Cr.)</th>
+                <th>Starting: Pass Book Favourable (Cr.)</th>
+                <th>Starting: Pass Book Overdraft (Dr.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cheques issued not presented</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Cheques deposited not credited</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Direct deposit by customer</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Bank charges / interest debited</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Interest / dividend collected by bank</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Standing instruction payments</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Dishonoured cheque debited by bank</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Wrong Credit given by bank</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Wrong Debit given by bank</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #f87171;">DEDUCT (–)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+                <td><strong style="color: #34d399;">ADD (+)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: AMENDED CASH BOOK -->
+    <section id="sec-acb" class="section-block">
+      <div class="card-concept">
+        <h2>✏️ 6. Preparation of Amended (Adjusted) Cash Book (संशोधित रोकड़ बही)</h2>
+        <p>
+          At financial year-end, standard accounting standards require that the Cash Book be adjusted for authentic omissions and firm errors before preparing the final BRS.
+        </p>
+
+        <div class="diff-grid">
+          <div class="diff-card" style="border-color: #10b981;">
+            <h4 style="color: #34d399;">✔ ENTER IN AMENDED CASH BOOK (रोकड़ बही में समायोजन)</h4>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li>Bank charges &amp; interest debited by bank</li>
+              <li>Dividends &amp; interest collected by bank</li>
+              <li>Direct deposits made by customers</li>
+              <li>Standing instruction payments made by bank</li>
+              <li>Dishonoured cheques and bills</li>
+              <li>All clerical errors made by the firm in the Cash Book</li>
+            </ul>
+          </div>
+          <div class="diff-card" style="border-color: #ef4444;">
+            <h4 style="color: #f87171;">✖ ENTER ONLY IN BRS (केवल BRS में दर्ज होगा)</h4>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.7;">
+              <li><strong>Cheques issued but not yet presented</strong> (Bank time delay)</li>
+              <li><strong>Cheques deposited but not yet cleared</strong> (Bank time delay)</li>
+              <li><strong>Any errors committed by the Bank</strong> in the Pass Book</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SOLVED ILLUSTRATIONS -->
+    <section id="sec-illustrations" class="section-block">
+      <div class="card-concept">
+        <h2>📝 7. Step-by-Step Solved Illustrations (विस्तृत हल सहित उदाहरण)</h2>
+
+        <!-- Ill 1 -->
+        <div class="qa-box open">
+          <div class="qa-header" onclick="toggleQA(this)">
+            <span>📘 Illustration 1: Favourable Cash Book Balance (NCERT Master Case)</span>
+            <span style="color: var(--brand-emerald);">Answer: ₹51,950 (Cr.) ▾</span>
+          </div>
+          <div class="qa-body">
+            <p><strong>Problem:</strong> Prepare BRS of M/s Goyal Brothers as on 31st March 2026:</p>
+            <ol style="padding-left: 20px; font-size: 0.9rem; margin-bottom: 12px;">
+              <li>Bank balance as per Cash Book: ₹45,000 (Dr.).</li>
+              <li>Cheques issued ₹12,000, out of which ₹4,000 presented in April.</li>
+              <li>Cheques deposited ₹8,500, out of which ₹3,000 credited in April.</li>
+              <li>Bank charges debited ₹250 not entered in Cash Book.</li>
+              <li>Customer directly deposited ₹5,000 in bank.</li>
+              <li>Dividend collected by bank ₹1,200 appearing only in Pass Book.</li>
+            </ol>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Particulars</th><th class="amount">Plus (₹)</th><th class="amount">Minus (₹)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Balance as per Cash Book (Dr. / Favourable)</td><td class="amount">45,000</td><td class="amount">-</td></tr>
+                  <tr><td>Add: Cheques issued but not presented (₹4,000)</td><td class="amount">4,000</td><td class="amount">-</td></tr>
+                  <tr><td>Add: Direct deposit by customer</td><td class="amount">5,000</td><td class="amount">-</td></tr>
+                  <tr><td>Add: Dividend on shares collected by bank</td><td class="amount">1,200</td><td class="amount">-</td></tr>
+                  <tr><td>Deduct: Cheques deposited but not credited</td><td class="amount">-</td><td class="amount">3,000</td></tr>
+                  <tr><td>Deduct: Bank charges debited by bank</td><td class="amount">-</td><td class="amount">250</td></tr>
+                  <tr style="background: rgba(16, 185, 129, 0.15); font-weight: 800;">
+                    <td>Balance as per Pass Book (Credit / Favourable)</td>
+                    <td class="amount">-</td>
+                    <td class="amount" style="color: #34d399;">51,950</td>
+                  </tr>
+                  <tr style="font-weight: 900;"><td>Total</td><td class="amount">55,200</td><td class="amount">55,200</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ill 2 -->
+        <div class="qa-box">
+          <div class="qa-header" onclick="toggleQA(this)">
+            <span>📘 Illustration 2: Overdraft as per Cash Book (Cr. Balance)</span>
+            <span style="color: var(--brand-gold);">Answer: ₹16,000 (Dr. OD) ▾</span>
+          </div>
+          <div class="qa-body">
+            <p><strong>Problem:</strong> Cash Book shows Bank Overdraft of ₹18,000 as on 31st Dec 2025.</p>
+            <ul style="padding-left: 20px; font-size: 0.9rem; margin-bottom: 12px;">
+              <li>Cheques issued ₹15,000; cheques of ₹6,000 not cashed in Dec.</li>
+              <li>Cheques paid in ₹10,000; cheques of ₹4,000 not cleared in Dec.</li>
+              <li>Bank charges &amp; OD interest: ₹1,500 debited in Pass Book only.</li>
+              <li>Direct deposit by debtor: ₹3,500.</li>
+              <li>Insurance premium paid by bank: ₹2,000.</li>
+            </ul>
+            <div class="table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Particulars</th><th class="amount">Plus (₹)</th><th class="amount">Minus (₹)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Overdraft as per Cash Book (Credit balance)</td><td class="amount">-</td><td class="amount">18,000</td></tr>
+                  <tr><td>Add: Cheques issued not presented</td><td class="amount">6,000</td><td class="amount">-</td></tr>
+                  <tr><td>Add: Direct deposit by debtor</td><td class="amount">3,500</td><td class="amount">-</td></tr>
+                  <tr><td>Deduct: Cheques deposited not cleared</td><td class="amount">-</td><td class="amount">4,000</td></tr>
+                  <tr><td>Deduct: Bank charges and OD interest</td><td class="amount">-</td><td class="amount">1,500</td></tr>
+                  <tr><td>Deduct: Insurance premium paid by bank</td><td class="amount">-</td><td class="amount">2,000</td></tr>
+                  <tr style="background: rgba(245, 158, 11, 0.15); font-weight: 800;">
+                    <td>Overdraft as per Pass Book (Debit balance)</td>
+                    <td class="amount" style="color: #fbbf24;">16,000</td>
+                    <td class="amount">-</td>
+                  </tr>
+                  <tr style="font-weight: 900;"><td>Total</td><td class="amount">25,500</td><td class="amount">25,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 8: 10 PRACTICE PROBLEMS -->
+    <section id="sec-practice" class="section-block">
+      <div class="card-concept">
+        <h2>🔢 8. Ten Practice Problems with Hints &amp; Solutions (10 अभ्यास प्रश्न)</h2>
+
+        <!-- Q1 -->
+        <div class="qa-box">
+          <div class="qa-header" onclick="toggleQA(this)">
+            <span>Q1. Unpresented &amp; Uncollected Cheques (Cash Book Dr. ₹15,000)</span>
+            <span style="color: var(--brand-emerald);">Click for Hint &amp; Sol ▾</span>
+          </div>
+          <div class="qa-body">
+            <p><strong>Problem:</strong> Cash Book debit balance ₹15,000. Cheques issued ₹4,500, presented ₹2,800. Cheques deposited ₹6,000, credited ₹3,500.</p>
+            <p style="color: #38bdf8;"><strong>💡 Hint:</strong> Unpresented = ₹4,500 - ₹2,800 = ₹1,700 (+). Uncollected = ₹6,000 - ₹3,500 = ₹2,500 (–).</p>
+            <p><strong>Calculation:</strong> ₹15,000 + ₹1,700 - ₹2,500 = <strong style="color: #34d399;">₹14,200 (Pass Book Cr. Balance)</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="qa-box">
+          <div class="qa-header" onclick="toggleQA(this)">
+            <span>Q2. Bank Charges &amp; Direct Dividends (Cash Book Dr. ₹28,000)</span>
+            <span style="color: var(--brand-emerald);">Click for Hint &amp; Sol ▾</span>
+          </div>
+          <div class="qa-body">
+            <p><strong>Problem:</strong> Cash Book balance ₹28,000. Locker rent debited by bank ₹350. Dividend credited by bank ₹1,400.</p>
+            <p style="color: #38bdf8;"><strong>💡 Hint:</strong> Add dividend ₹1,400; Deduct locker rent ₹350.</p>
+            <p><strong>Calculation:</strong> ₹28,000 + ₹1,400 - ₹350 = <strong style="color: #34d399;">₹29,050 (Pass Book Cr. Balance)</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="qa-box">
+          <div class="qa-header" onclick="toggleQA(this)">
+            <span>Q3. Overdraft with Dishonoured Cheque (Cash Book OD ₹8,000)</span>
+            <span style="color: var(--brand-gold);">Click for Hint &amp; Sol ▾</span>
+          </div>
+          <div class="qa-body">
+            <p><strong>Problem:</strong> Cash Book OD ₹8,000. Cheque of ₹2,200 returned dishonoured with noting charges ₹30.</p>
+            <p style="color: #38bdf8;"><strong>💡 Hint:</strong> Bank debits total ₹2,230, which increases the overdraft.</p>
+            <p><strong>Calculation:</strong> Overdraft Minus column = ₹8,000 + ₹2,230 = <strong style="color: #fbbf24;">₹10,230 (Pass Book OD / Dr.)</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="qa-box">
+          <div class="qa-header" onclick="toggleQA(this)">
+            <span>Q4. Wrong Credit Given by Bank (Cash Book Dr. ₹35,000)</span>
+            <span style="color: var(--brand-emerald);">Click for Hint &amp; Sol ▾</span>
+          </div>
+          <div class="qa-body">
+            <p><strong>Problem:</strong> Cash Book balance ₹35,000. Bank mistakenly credited ₹4,000 belonging to Sharma Bros.</p>
+            <p style="color: #38bdf8;"><strong>💡 Hint:</strong> Wrong credit increased Pass Book balance by ₹4,000.</p>
+            <p><strong>Calculation:</strong> ₹35,000 + ₹4,000 = <strong style="color: #34d399;">₹39,000 (Pass Book Cr. Balance)</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="qa-box">
+          <div class="qa-header" onclick="toggleQA(this)">
+            <span>Q5. Cash Book Columns Undercast and Overcast</span>
+            <span style="color: var(--brand-emerald);">Click for Hint &amp; Sol ▾</span>
+          </div>
+          <div class="qa-body">
+            <p><strong>Problem:</strong> Cash Book balance ₹22,000. Payment side overcast by ₹1,500; Receipts side undercast by ₹500.</p>
+            <p style="color: #38bdf8;"><strong>💡 Hint:</strong> Both errors caused Cash Book balance to appear artificially low! ADD both!</p>
+            <p><strong>Calculation:</strong> ₹22,000 + ₹1,500 + ₹500 = <strong style="color: #34d399;">₹24,000 (Pass Book Cr. Balance)</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: 25 MCQS -->
+    <section id="sec-mcqs" class="section-block">
+      <div class="card-concept">
+        <h2>🎯 9. 25 Bilingual High-Yield Multiple Choice Questions (वस्तुनिष्ठ प्रश्न)</h2>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">Click any option to test your understanding instantly with immediate explanations &amp; score feedback!</p>
+
+        <!-- MCQ 1 -->
+        <div class="mcq-card" data-correct="2">
+          <div class="mcq-q">1. A Bank Reconciliation Statement is prepared by: (बैंक समाधान विवरण किसके द्वारा तैयार किया जाता है?)</div>
+          <div class="mcq-options">
+            <div class="mcq-opt" onclick="checkMCQ(this, 0)"> (a) The Commercial Bank (बैंक द्वारा)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 1)"> (b) The Creditors (लेनदारों द्वारा)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 2)"> (c) The Account Holder / Business Firm (खाताधारक / व्यावसायिक फर्म द्वारा)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 3)"> (d) The Reserve Bank of India (आरबीआई द्वारा)</div>
+          </div>
+          <div class="mcq-feedback"></div>
+        </div>
+
+        <!-- MCQ 2 -->
+        <div class="mcq-card" data-correct="1">
+          <div class="mcq-q">2. Debit balance in the Cash Book (Bank Column) indicates: (रोकड़ बही के बैंक कॉलम में डेबिट शेष दर्शाता है:)</div>
+          <div class="mcq-options">
+            <div class="mcq-opt" onclick="checkMCQ(this, 0)"> (a) Overdraft balance (अधिविकर्ष शेष)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 1)"> (b) Favourable balance (अनुकूल शेष / बैंक में जमा धन)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 2)"> (c) Zero balance (शून्य शेष)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 3)"> (d) Amount owed to bank (बैंक का ऋण)</div>
+          </div>
+          <div class="mcq-feedback"></div>
+        </div>
+
+        <!-- MCQ 3 -->
+        <div class="mcq-card" data-correct="1">
+          <div class="mcq-q">3. Credit balance in the Bank Pass Book indicates: (बैंक पासबुक में क्रेडिट शेष दर्शाता है:)</div>
+          <div class="mcq-options">
+            <div class="mcq-opt" onclick="checkMCQ(this, 0)"> (a) Bank Overdraft (बैंक अधिविकर्ष)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 1)"> (b) Favourable balance (अनुकूल शेष)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 2)"> (c) Insolvent customer (दिवालिया ग्राहक)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 3)"> (d) Error by bank (बैंक की भूल)</div>
+          </div>
+          <div class="mcq-feedback"></div>
+        </div>
+
+        <!-- MCQ 4 -->
+        <div class="mcq-card" data-correct="0">
+          <div class="mcq-q">4. When starting with Cash Book balance (Favourable), cheques issued but not yet presented for payment are: (अनुकूल रोकड़ बही शेष से शुरू करते समय, निर्गमित चेक जो प्रस्तुत नहीं हुए:)</div>
+          <div class="mcq-options">
+            <div class="mcq-opt" onclick="checkMCQ(this, 0)"> (a) Added (+) (जोड़े जाएंगे)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 1)"> (b) Deducted (–) (घटाए जाएंगे)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 2)"> (c) Ignored (अनदेखा किए जाएंगे)</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 3)"> (d) Multiplied (गुणा किए जाएंगे)</div>
+          </div>
+          <div class="mcq-feedback"></div>
+        </div>
+
+        <!-- MCQ 5 -->
+        <div class="mcq-card" data-correct="2">
+          <div class="mcq-q">5. Which of the following is NEVER entered in an Amended (Adjusted) Cash Book? (संशोधित रोकड़ बही में इनमें से क्या कभी दर्ज नहीं होता?)</div>
+          <div class="mcq-options">
+            <div class="mcq-opt" onclick="checkMCQ(this, 0)"> (a) Bank charges debited by bank</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 1)"> (b) Direct deposits made by debtors</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 2)"> (c) Cheques issued but not yet presented for payment</div>
+            <div class="mcq-opt" onclick="checkMCQ(this, 3)"> (d) Dishonoured cheques</div>
+          </div>
+          <div class="mcq-feedback"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" onclick="scrollToTop()">
+    <span>▲ Top</span>
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <p>NCERT Class 11 Financial Accounting-I • Chapter 5 Bank Reconciliation Statement (BRS)</p>
+    <p style="margin-top: 4px; color: var(--text-dim);">StudyGuide by Nextsem Academy • Free Interactive Curriculum</p>
+  </footer>
+
+  <script>
+    // Theme Toggle Functionality with localStorage
+    function initTheme() {
+      const savedTheme = localStorage.getItem('nextsem_theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        document.getElementById('themeIcon').textContent = '☀️';
+        document.getElementById('themeLabel').textContent = 'Light';
+      } else {
+        document.body.classList.remove('light-theme');
+        document.getElementById('themeIcon').textContent = '🌙';
+        document.getElementById('themeLabel').textContent = 'Dark';
+      }
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('nextsem_theme', isLight ? 'light' : 'dark');
+      document.getElementById('themeIcon').textContent = isLight ? '☀️' : '🌙';
+      document.getElementById('themeLabel').textContent = isLight ? 'Light' : 'Dark';
+    }
+
+    // Bilingual Toggle Functionality
+    let bilingualMode = true;
+    function toggleBilingualMode() {
+      bilingualMode = !bilingualMode;
+      const hiTexts = document.querySelectorAll('.hi-text');
+      hiTexts.forEach(el => {
+        el.style.display = bilingualMode ? 'block' : 'none';
+      });
+      document.getElementById('langToggleBtn').innerHTML = bilingualMode ? '<span>🌐 द्विभाषी (Bilingual)</span>' : '<span>🌐 English Only</span>';
+    }
+
+    // QA Accordion Toggle
+    function toggleQA(headerEl) {
+      const parent = headerEl.parentElement;
+      parent.classList.toggle('open');
+    }
+
+    // Interactive MCQ Checker
+    function checkMCQ(optEl, selectedIndex) {
+      const card = optEl.closest('.mcq-card');
+      const correctIndex = parseInt(card.getAttribute('data-correct'), 10);
+      const options = card.querySelectorAll('.mcq-opt');
+      const feedback = card.querySelector('.mcq-feedback');
+
+      options.forEach(opt => opt.classList.remove('correct', 'wrong'));
+
+      if (selectedIndex === correctIndex) {
+        optEl.classList.add('correct');
+        feedback.style.display = 'block';
+        feedback.style.background = 'rgba(16, 185, 129, 0.15)';
+        feedback.style.border = '1px solid #10b981';
+        feedback.style.color = '#34d399';
+        feedback.innerHTML = '<strong>✔ Correct Answer!</strong> Excellent grasp of BRS concepts.';
+        confetti({ particleCount: 30, spread: 60, origin: { y: 0.8 } });
+      } else {
+        optEl.classList.add('wrong');
+        options[correctIndex].classList.add('correct');
+        feedback.style.display = 'block';
+        feedback.style.background = 'rgba(239, 68, 68, 0.15)';
+        feedback.style.border = '1px solid #ef4444';
+        feedback.style.color = '#f87171';
+        feedback.innerHTML = '<strong>✖ Incorrect!</strong> Review the correct highlighted green option above.';
+      }
+    }
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Initialize Theme on Load
+    initTheme();
+  </script>
+</body>
+</html>

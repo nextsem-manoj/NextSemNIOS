@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "name": "🌐 Nextsem.online (Bootcamp Platform)",
+      "path": "C:/Users/manojkmr2403/Documents/nextsem.online"
+    },
+    {
+      "name": "📚 NCERT Solutions (Textbooks & Solutions)",
+      "path": "C:/Users/manojkmr2403/Documents/ncert.nextsem.online"
+    },
+    {
+      "name": "💻 CS-Guide (Courses & Study Hub)",
+      "path": "C:/Users/manojkmr2403/Documents/ignou.nextsem.online"
+    }
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": {
+      "**/.git": false
+    },
+    "workbench.editor.closeEmptyGroups": false
+  }
+}

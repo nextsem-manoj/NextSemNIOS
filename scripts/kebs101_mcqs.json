@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "page": 3,
+    "topic": "History of Trade & Indigenous Banking",
+    "topicCategory": "Ancient Trade & Hundis",
+    "q": "In ancient and medieval India, which credit instrument was widely used by merchant communities for carrying out transactions involving transfer of money from one person or place to another without physical movement of cash?",
+    "options": [
+      "(A) Hundi and Chitti",
+      "(B) Modern Crossed Cheque",
+      "(C) Bill of Lading",
+      "(D) Reserve Bank Promissory Note"
+    ],
+    "correct": 0,
+    "exp": "According to NCERT Chapter 1 (Page 3-4), Hundi and Chitti were indigenous credit instruments used in ancient India. The word 'Hundi' is derived from the Sanskrit word meaning 'to collect'. It was a contract warranting payment of money, capable of being negotiated by endorsement.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 3 & 4"
+  },
+  {
+    "id": 2,
+    "page": 4,
+    "topic": "Types of Hundis (Jokhmi Hundi)",
+    "topicCategory": "Ancient Trade & Hundis",
+    "q": "Which specific type of ancient Hundi was drawn against dispatched goods, where if the goods were lost in transit due to shipwreck or perils of the sea, the drawer or holder bore the loss, functioning as an early form of marine insurance?",
+    "options": [
+      "(A) Dhani-jog Hundi",
+      "(B) Sah-jog Hundi",
+      "(C) Jokhmi Hundi",
+      "(D) Firman-jog Hundi"
+    ],
+    "correct": 2,
+    "exp": "NCERT Table 1.1 (Page 5) classifies 'Jokhmi Hundi' as a Muddati Hundi drawn against dispatched goods. If goods were lost in transit, the drawer/holder absorbed the financial loss, effectively acting as an indigenous marine insurance contract.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 5 (Table 1.1)"
+  },
+  {
+    "id": 3,
+    "page": 5,
+    "topic": "Merchant Guilds & Municipal Leadership",
+    "topicCategory": "Ancient Trade & Hundis",
+    "q": "In ancient and medieval Indian trading cities, the supreme head of the merchant guilds (Mahajans) who exercised substantial influence over civic, commercial, and municipal administration was known as:",
+    "options": [
+      "(A) Nagarseth",
+      "(B) Jagat Seth",
+      "(C) Kotwal",
+      "(D) Subahdar"
+    ],
+    "correct": 0,
+    "exp": "NCERT Chapter 1 (Page 5) notes that in western India and major trading towns, the merchant corporations were led by an influential community chief designated as 'Nagarseth' who dealt directly with state kings and tax collectors.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 5"
+  },
+  {
+    "id": 4,
+    "page": 6,
+    "topic": "Major Ancient Trade Centres (Peshawar)",
+    "topicCategory": "Ancient Trade & Hundis",
+    "q": "Which ancient Indian trade centre was an important exporting hub for wool and importing hub for war horses, and played a major role in commercial transactions connecting India, China, and Rome in the 1st century A.D.?",
+    "options": [
+      "(A) Taxila",
+      "(B) Peshawar",
+      "(C) Indraprastha",
+      "(D) Mathura"
+    ],
+    "correct": 1,
+    "exp": "According to NCERT Chapter 1 (Page 6), Peshawar was an important commercial centre for the export of fine wool and the import of horses. It had a massive share in transactions between India, China, and Rome in the 1st century A.D.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 6"
+  },
+  {
+    "id": 5,
+    "page": 7,
+    "topic": "De-industrialisation under British Rule",
+    "topicCategory": "Trade History & Colonial Impact",
+    "q": "What fundamental structural change occurred in the Indian economy with the political consolidation of the British East India Company?",
+    "options": [
+      "(A) India transformed from an importer of primary materials into an exporter of machinery",
+      "(B) India was transformed from an exporter of processed manufactured goods into an exporter of raw materials and buyer of British factory goods",
+      "(C) India became a self-sufficient socialist agrarian collective",
+      "(D) India established exclusive trading monopolies across East Asia"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 7 explains that the British used Indian revenues to purchase raw materials and spices, shifting India from an exporter of processed manufactured goods into an exporter of raw materials and an open consumer market for British manufactured goods.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 7"
+  },
+  {
+    "id": 6,
+    "page": 8,
+    "topic": "Modern Industrial Initiatives (Make in India)",
+    "topicCategory": "Trade History & Colonial Impact",
+    "q": "Which prominent national campaign launched by the Government of India in September 2014 was specifically designed to encourage domestic and global companies to manufacture goods in India and transform the nation into a global manufacturing hub?",
+    "options": [
+      "(A) Startup India",
+      "(B) Make in India",
+      "(C) Digital India",
+      "(D) Standup India"
+    ],
+    "correct": 1,
+    "exp": "NCERT Chapter 1 (Page 8) highlights 'Make in India', launched in September 2014, as a major flagship initiative designed to encourage investment, foster innovation, build best-in-class manufacturing infrastructure, and make India a global manufacturing powerhouse.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 8"
+  },
+  {
+    "id": 7,
+    "page": 9,
+    "topic": "Concept of Economic Activities",
+    "topicCategory": "Nature & Purpose of Business",
+    "q": "Human activities are divided into economic and non-economic activities. An activity is classified as an 'Economic Activity' when it is undertaken:",
+    "options": [
+      "(A) Purely out of religious devotion, affection, or family sympathy",
+      "(B) With the primary objective of earning money or a livelihood",
+      "(C) Without any expectation of financial or material reward",
+      "(D) Exclusively during national festivals and public holidays"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 9 defines economic activities as those by which we can earn our livelihood (e.g., a worker in a factory, a doctor in a clinic, a manager in an enterprise). Non-economic activities are motivated by love, sympathy, patriotism, etc.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 9"
+  },
+  {
+    "id": 8,
+    "page": 10,
+    "topic": "Characteristics of Business: Regularity in Dealings",
+    "topicCategory": "Nature & Purpose of Business",
+    "q": "Kunal sold his personal used motorbike to his neighbour at a profit of ₹8,000 to purchase a new sports bike. Why is this transaction NOT considered a 'Business'?",
+    "options": [
+      "(A) Because no profit was earned",
+      "(B) Because it involved transfer of a second-hand good",
+      "(C) Because business involves regularity in dealings; an isolated single transaction does not constitute business",
+      "(D) Because motorbikes cannot legally be traded by individuals"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 10 emphasizes 'Regularity in Dealings': Business involves dealings in goods or services on a recurring, regular basis. A single isolated transaction of sale or purchase (e.g., selling one's personal vehicle or furniture) is not a business.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 10"
+  },
+  {
+    "id": 9,
+    "page": 11,
+    "topic": "Uncertainty of Return & Element of Risk",
+    "topicCategory": "Nature & Purpose of Business",
+    "q": "Which essential feature of business refers to the inability to predict or guarantee the exact amount of profit that an enterprise will make during a future period?",
+    "options": [
+      "(A) Regularity of exchange",
+      "(B) Profit motive",
+      "(C) Uncertainty of return",
+      "(D) Legal continuity"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 11 states that 'Uncertainty of return' refers to the lack of certainty regarding how much profit the business will make. There is always the possibility of losses being incurred despite the best managerial efforts.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 11"
+  },
+  {
+    "id": 10,
+    "page": 12,
+    "topic": "Comparison: Transfer of Interest",
+    "topicCategory": "Business, Profession & Employment",
+    "q": "In which of the following economic activities is the 'Transfer of Interest' possible with some procedural formalities?",
+    "options": [
+      "(A) Business",
+      "(B) Profession",
+      "(C) Employment",
+      "(D) Both Profession and Employment"
+    ],
+    "correct": 0,
+    "exp": "NCERT Table 1.1 (Page 12) points out that in a business, transfer of interest is possible with some formalities (e.g., transferring company shares or selling ownership). In a profession or employment, transfer of personal qualification or employment contract is not possible.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 12 (Table 1.1)"
+  },
+  {
+    "id": 11,
+    "page": 12,
+    "topic": "Professional Regulatory Code of Conduct",
+    "topicCategory": "Business, Profession & Employment",
+    "q": "Which of the following characteristics strictly applies to a 'Profession' but NOT necessarily to an ordinary trading business?",
+    "options": [
+      "(A) Freedom to operate without any formal educational qualifications",
+      "(B) Mandatory adherence to an ethical code of conduct laid down by a professional body",
+      "(C) Complete absence of financial investment",
+      "(D) Unlimited transferability of ownership rights"
+    ],
+    "correct": 1,
+    "exp": "NCERT Table 1.1 (Page 12) states that professionals (such as doctors, lawyers, and chartered accountants) must strictly follow a prescribed ethical code of conduct established by their statutory regulatory bodies.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 12"
+  },
+  {
+    "id": 12,
+    "page": 13,
+    "topic": "Primary Industry: Genetic Industry",
+    "topicCategory": "Industry & Classification",
+    "q": "Industries engaged in the breeding and reproduction of plants and animals for further multiplication and sale (e.g., cattle breeding farms, nurseries, and poultry farms) are classified as:",
+    "options": [
+      "(A) Extractive Industries",
+      "(B) Genetic Industries",
+      "(C) Manufacturing Industries",
+      "(D) Assembling Industries"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 13 explicitly defines 'Genetic Industries' as those engaged in breeding plants and animals for their use in further reproduction. Examples include nurseries, cattle farms, poultry farms, and fish hatcheries.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 13"
+  },
+  {
+    "id": 13,
+    "page": 13,
+    "topic": "Primary Industry: Extractive Industry",
+    "topicCategory": "Industry & Classification",
+    "q": "Which classification of industry is concerned with drawing out or collecting useful raw materials directly from natural reservoirs like the earth, sea, or air?",
+    "options": [
+      "(A) Extractive Industry",
+      "(B) Synthetical Industry",
+      "(C) Assembling Industry",
+      "(D) Processing Industry"
+    ],
+    "correct": 0,
+    "exp": "NCERT Page 13 notes that 'Extractive Industries' extract or draw products from natural sources like soil, air, or water (e.g., farming, mining, hunting, and fishing operations).",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 13"
+  },
+  {
+    "id": 14,
+    "page": 14,
+    "topic": "Manufacturing Industry: Analytical Industry",
+    "topicCategory": "Industry & Classification",
+    "q": "An oil refinery plant that separates and breaks down crude petroleum into different distinct products such as gasoline (petrol), diesel, kerosene, and lubricating oil is an example of an:",
+    "options": [
+      "(A) Analytical Industry",
+      "(B) Synthetical Industry",
+      "(C) Assembling Industry",
+      "(D) Construction Industry"
+    ],
+    "correct": 0,
+    "exp": "NCERT Page 14 defines an 'Analytical Industry' as one which separates and analyzes different basic elements from the same raw material, as in the case of an oil refinery.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 14"
+  },
+  {
+    "id": 15,
+    "page": 14,
+    "topic": "Manufacturing Industry: Assembling Industry",
+    "topicCategory": "Industry & Classification",
+    "q": "An industrial plant that brings together different manufactured component parts to produce a new finished product, such as a television set, automobile, or computer, is termed an:",
+    "options": [
+      "(A) Processing Industry",
+      "(B) Assembling Industry",
+      "(C) Synthetical Industry",
+      "(D) Extractive Industry"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 14 defines an 'Assembling Industry' as one that assembles various finished component parts to produce a new finished product (e.g., cars, TVs, computers). Synthetical industries combine ingredients like chemicals to make cement.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 14"
+  },
+  {
+    "id": 16,
+    "page": 15,
+    "topic": "Components of Commerce",
+    "topicCategory": "Commerce & Auxiliaries to Trade",
+    "q": "Commerce comprises all those activities that facilitate the exchange of goods and services. What are the two broad components into which Commerce is divided?",
+    "options": [
+      "(A) Wholesale and Retail",
+      "(B) Industry and Agriculture",
+      "(C) Trade and Auxiliaries to Trade",
+      "(D) Import and Export"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 15 states that Commerce includes two broad types of activities: (1) Trade (actual buying and selling) and (2) Auxiliaries to Trade (support activities assisting the trade process).",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 15"
+  },
+  {
+    "id": 17,
+    "page": 16,
+    "topic": "Hindrance of Place (Transport)",
+    "topicCategory": "Commerce & Auxiliaries to Trade",
+    "q": "Goods are manufactured in specific geographic centres (e.g., tea in Assam, cotton textiles in Gujarat), but demanded across the entire country. Which auxiliary to trade overcomes this 'Hindrance of Place'?",
+    "options": [
+      "(A) Warehousing",
+      "(B) Transport and Communication",
+      "(C) Insurance",
+      "(D) Banking"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 16 explains that 'Transport' moves goods from the place of production to the point of consumption, thereby removing the hindrance of place.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 16"
+  },
+  {
+    "id": 18,
+    "page": 16,
+    "topic": "Hindrance of Time (Warehousing)",
+    "topicCategory": "Commerce & Auxiliaries to Trade",
+    "q": "Agricultural commodities like wheat, paddy, and sugar are produced seasonally but consumed round the year. Which auxiliary to trade overcomes this 'Hindrance of Time'?",
+    "options": [
+      "(A) Advertising",
+      "(B) Warehousing",
+      "(C) Insurance",
+      "(D) Transport"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 16-17 states that 'Warehousing' provides storage facilities, preserving goods securely until demand arises and thereby overcoming the hindrance of time.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 16-17"
+  },
+  {
+    "id": 19,
+    "page": 17,
+    "topic": "Hindrance of Risk (Insurance)",
+    "topicCategory": "Commerce & Auxiliaries to Trade",
+    "q": "Business entities face constant exposure to financial loss from fire, theft, floods, or transit accidents. Which auxiliary to trade removes the 'Hindrance of Risk' by compensating for covered losses?",
+    "options": [
+      "(A) Insurance",
+      "(B) Advertising",
+      "(C) Banking",
+      "(D) Factoring"
+    ],
+    "correct": 0,
+    "exp": "NCERT Page 17 explains that 'Insurance' provides protection against risks of loss or damage to goods during storage or transit upon payment of a nominal premium, removing the hindrance of risk.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 17"
+  },
+  {
+    "id": 20,
+    "page": 18,
+    "topic": "Role of Profit in Business",
+    "topicCategory": "Business Objectives & Profit Role",
+    "q": "Profit is an indispensable objective of every business enterprise because:",
+    "options": [
+      "(A) It is the legitimate reward for bearing business risks",
+      "(B) It serves as a vital internal source of funds for growth and expansion",
+      "(C) It provides an objective index of managerial efficiency and builds market reputation",
+      "(D) All of the above"
+    ],
+    "correct": 3,
+    "exp": "NCERT Page 18 lists multiple justifications for profit: livelihood for the entrepreneur, reward for risk-taking, source of internal finance for expansion, and an index of performance and prestige.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 18"
+  },
+  {
+    "id": 21,
+    "page": 19,
+    "topic": "Innovation as a Business Objective",
+    "topicCategory": "Business Objectives & Profit Role",
+    "q": "Introducing a newly patented lightweight solar battery for smartphones or implementing automated inventory tracking in a warehouse are practical examples of which major business objective?",
+    "options": [
+      "(A) Market standing",
+      "(B) Innovation",
+      "(C) Worker performance",
+      "(D) Public procurement"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 19 highlights 'Innovation' as an essential business objective: developing new products or introducing novel methods in production, marketing, and distribution to maintain competitive advantage.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 19"
+  },
+  {
+    "id": 22,
+    "page": 20,
+    "topic": "Speculative Risk vs Pure Risk",
+    "topicCategory": "Business Risks & Causes",
+    "q": "Which of the following is an example of a 'Speculative Risk' in business?",
+    "options": [
+      "(A) Loss caused by a fire in the factory warehouse",
+      "(B) Theft of raw materials by miscreants",
+      "(C) Fluctuation in market demand due to changes in consumer tastes and fashion",
+      "(D) Plant shutdown due to an accidental boiler explosion"
+    ],
+    "correct": 2,
+    "exp": "NCERT Page 20 explains that 'Speculative risks' involve both the possibility of gain as well as loss (e.g., changes in prices, fashion, or competition). Pure risks (fire, theft, strike) involve only the possibility of loss or no loss.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 20"
+  },
+  {
+    "id": 23,
+    "page": 21,
+    "topic": "Causes of Business Risk: Human Causes",
+    "topicCategory": "Business Risks & Causes",
+    "q": "Financial losses resulting from employee dishonesty, fraud, pilferage, carelessness, or sudden labor strikes are classified under which category of business risk causes?",
+    "options": [
+      "(A) Natural Causes",
+      "(B) Human Causes",
+      "(C) Economic Causes",
+      "(D) Physical Causes"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 21 categorizes business risks into Natural, Human, Economic, and Other causes. 'Human causes' arise from human behavior, such as employee dishonesty, carelessness, riots, or strikes.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 21"
+  },
+  {
+    "id": 24,
+    "page": 22,
+    "topic": "Starting a Business: Selection of Line",
+    "topicCategory": "Starting a Business Enterprise",
+    "q": "What is the very first and most fundamental decision an entrepreneur must make before initiating any steps to launch a new business enterprise?",
+    "options": [
+      "(A) Selection of the line of business",
+      "(B) Designing the office visiting cards",
+      "(C) Arranging bank loans for working capital",
+      "(D) Choosing the colour scheme of the factory wall"
+    ],
+    "correct": 0,
+    "exp": "NCERT Page 22 states that the first decision is the 'Selection of line of business': deciding the nature and type of goods and services to produce or trade based on market demand, technical know-how, and profit prospects.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 22"
+  },
+  {
+    "id": 25,
+    "page": 23,
+    "topic": "Plant Layout & Physical Facilities",
+    "topicCategory": "Starting a Business Enterprise",
+    "q": "The physical design and systematic spatial arrangement of machinery, equipment, work stations, and material handling facilities within a manufacturing factory is referred to as:",
+    "options": [
+      "(A) Line of business",
+      "(B) Plant layout",
+      "(C) Tax planning",
+      "(D) Form of ownership"
+    ],
+    "correct": 1,
+    "exp": "NCERT Page 23 defines 'Plant layout' as the drawing or physical arrangement showing the layout of machines, equipment, and workstations to ensure the smoothest flow of materials and maximum operational efficiency.",
+    "ncertRef": "NCERT Class 11 Business Studies, Chapter 1, Page 23"
+  }
+]

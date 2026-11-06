@@ -1,0 +1,712 @@
+{
+  "blanksData": [
+    {
+      "id": 1,
+      "page": "Page 11",
+      "prefix": "In southern Mesopotamia, the south is a ",
+      "slot": "desert",
+      "suffix": " – and this is where the first cities and writing emerged.",
+      "options": [
+        "desert",
+        "fertile rainforest",
+        "mountain ridge",
+        "swampy delta"
+      ],
+      "correct": "desert",
+      "explanation": "NCERT Page 11: \"The south is a desert – and this is where the first cities and writing emerged.\"",
+      "prefixHi": "दक्षिणी मेसोपोटामिया में, दक्षिण का भाग एक ",
+      "slotHi": "रेगिस्तान",
+      "suffixHi": " है - और यहीं पर पहले शहर और लेखन कला का उदय हुआ।",
+      "optionsHi": [
+        "रेगिस्तान",
+        "सदाबहार वर्षावन",
+        "पहाड़ी कटक",
+        "दलदली डेल्टा"
+      ],
+      "correctHi": "रेगिस्तान",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"दक्षिण एक रेगिस्तान है - और यहीं पर सबसे पहले शहरों और लेखन का उदय हुआ था।\""
+    },
+    {
+      "id": 2,
+      "page": "Page 11",
+      "prefix": "The rivers Euphrates and Tigris, which rise in the ",
+      "slot": "northern mountains",
+      "suffix": ", carry loads of silt (fine mud).",
+      "options": [
+        "northern mountains",
+        "southern plains",
+        "western deserts",
+        "eastern coastlines"
+      ],
+      "correct": "northern mountains",
+      "explanation": "NCERT Page 11: \"...the rivers Euphrates and Tigris, which rise in the northern mountains, carry loads of silt (fine mud).\"",
+      "prefixHi": "फरात और दजला नदियां, जो ",
+      "slotHi": "उत्तरी पहाड़ों",
+      "suffixHi": " से निकलती हैं, भारी मात्रा में उपजाऊ गाद (महीन मिट्टी) लाती हैं।",
+      "optionsHi": [
+        "उत्तरी पहाड़ों",
+        "दक्षिणी मैदानों",
+        "पश्चिमी मरुस्थल",
+        "पूर्वी तटरेखा"
+      ],
+      "correctHi": "उत्तरी पहाड़ों",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"...फरात और दजला नदियां, जो उत्तरी पहाड़ों से निकलती हैं, गाद (बारीक मिट्टी) ले जाती हैं।\""
+    },
+    {
+      "id": 3,
+      "page": "Page 11",
+      "prefix": "When the rivers flood or when their water is let out on to the fields, ",
+      "slot": "fertile silt",
+      "suffix": " is deposited.",
+      "options": [
+        "fertile silt",
+        "coarse gravel",
+        "volcanic ash",
+        "dry red clay"
+      ],
+      "correct": "fertile silt",
+      "explanation": "NCERT Page 11: \"When they flood or when their water is let out on to the fields, fertile silt is deposited.\"",
+      "prefixHi": "जब नदियों में बाढ़ आती है या खेतों में पानी छोड़ा जाता है, तो ",
+      "slotHi": "उपजाऊ गाद",
+      "suffixHi": " जमीन पर जमा हो जाती है।",
+      "optionsHi": [
+        "उपजाऊ गाद",
+        "मोटे कंकड़",
+        "ज्वालामुखी राख",
+        "सूखी लाल मिट्टी"
+      ],
+      "correctHi": "उपजाऊ गाद",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"जब वे बाढ़ लाते हैं या जब उनका पानी खेतों में छोड़ा जाता है, तो उपजाऊ गाद जमा हो जाती है।\""
+    },
+    {
+      "id": 4,
+      "page": "Page 11",
+      "prefix": "After the Euphrates has entered the desert, its water flows out into small channels that functioned as ",
+      "slot": "irrigation canals",
+      "suffix": ".",
+      "options": [
+        "irrigation canals",
+        "trade harbors",
+        "defensive moats",
+        "deep drainage wells"
+      ],
+      "correct": "irrigation canals",
+      "explanation": "NCERT Page 11: \"These channels flood their banks and, in the past, functioned as irrigation canals: water could be let into the fields...\"",
+      "prefixHi": "फरात के रेगिस्तान में प्रवेश करने के बाद, इसका पानी छोटी धाराओं में बहता है जो अतीत में ",
+      "slotHi": "सिंचाई नहरों",
+      "suffixHi": " के रूप में कार्य करती थीं।",
+      "optionsHi": [
+        "सिंचाई नहरों",
+        "व्यापारिक बंदरगाहों",
+        "सुरक्षात्मक खाइयों",
+        "गहरे कुओं"
+      ],
+      "correctHi": "सिंचाई नहरों",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"ये धाराएं अपने किनारों को तोड़ती थीं और अतीत में सिंचाई नहरों के रूप में कार्य करती थीं।\""
+    },
+    {
+      "id": 5,
+      "page": "Page 11",
+      "prefix": "Water could be let into the fields of wheat, barley, ",
+      "slot": "peas or lentils",
+      "suffix": " when necessary.",
+      "options": [
+        "peas or lentils",
+        "rice or cotton",
+        "sugarcane or maize",
+        "tea or coffee"
+      ],
+      "correct": "peas or lentils",
+      "explanation": "NCERT Page 11: \"...water could be let into the fields of wheat, barley, peas or lentils when necessary.\"",
+      "prefixHi": "आवश्यकता पड़ने पर गेहूं, जौ, ",
+      "slotHi": "मटर या मसूर",
+      "suffixHi": " के खेतों में पानी छोड़ा जा सकता था।",
+      "optionsHi": [
+        "मटर या मसूर",
+        "चावल या कपास",
+        "गन्ना या मक्का",
+        "चाय या कॉफी"
+      ],
+      "correctHi": "मटर या मसूर",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"...गेहूं, जौ, मटर या मसूर के खेतों में आवश्यकता पड़ने पर पानी छोड़ा जा सकता था।\""
+    },
+    {
+      "id": 6,
+      "page": "Page 11",
+      "prefix": "Of all ancient systems, that of the ",
+      "slot": "Roman Empire",
+      "suffix": " included, it was the agriculture of southern Mesopotamia that was the most productive.",
+      "options": [
+        "Roman Empire",
+        "Mauryan Empire",
+        "Han Dynasty",
+        "Persian Empire"
+      ],
+      "correct": "Roman Empire",
+      "explanation": "NCERT Page 11: \"Of all ancient systems, that of the Roman Empire (Theme 3) included, it was the agriculture of southern Mesopotamia that was the most productive...\"",
+      "prefixHi": "सभी प्राचीन प्रणालियों में, जिसमें ",
+      "slotHi": "रोमन साम्राज्य",
+      "suffixHi": " भी शामिल था, दक्षिणी मेसोपोटामिया की कृषि सबसे अधिक उत्पादक थी।",
+      "optionsHi": [
+        "रोमन साम्राज्य",
+        "मौर्य साम्राज्य",
+        "हान राजवंश",
+        "फारसी साम्राज्य"
+      ],
+      "correctHi": "रोमन साम्राज्य",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"सभी प्राचीन प्रणालियों में, रोमन साम्राज्य सहित, दक्षिणी मेसोपोटामिया की कृषि सर्वाधिक उत्पादक थी।\""
+    },
+    {
+      "id": 7,
+      "page": "Page 11",
+      "prefix": "Southern Mesopotamian agriculture was exceptionally productive even though the region did not have ",
+      "slot": "sufficient rainfall",
+      "suffix": " to grow crops.",
+      "options": [
+        "sufficient rainfall",
+        "domesticated oxen",
+        "metal tools",
+        "sunlight"
+      ],
+      "correct": "sufficient rainfall",
+      "explanation": "NCERT Page 11: \"...even though the region did not have sufficient rainfall to grow crops.\"",
+      "prefixHi": "दक्षिणी मेसोपोटामिया की कृषि असाधारण रूप से उत्पादक थी, भले ही इस क्षेत्र में ",
+      "slotHi": "पर्याप्त वर्षा",
+      "suffixHi": " का अभाव था।",
+      "optionsHi": [
+        "पर्याप्त वर्षा",
+        "पालतू बैल",
+        "धातु के औजार",
+        "धूप"
+      ],
+      "correctHi": "पर्याप्त वर्षा",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"...भले ही इस क्षेत्र में फसलें उगाने के लिए पर्याप्त वर्षा नहीं होती थी।\""
+    },
+    {
+      "id": 8,
+      "page": "Page 11",
+      "prefix": "Sheep and goats that grazed on the ",
+      "slot": "steppe",
+      "suffix": ", the north-eastern plains and mountain slopes produced meat, milk and wool in abundance.",
+      "options": [
+        "steppe",
+        "deep desert dunes",
+        "dense jungles",
+        "marsh reeds"
+      ],
+      "correct": "steppe",
+      "explanation": "NCERT Page 11: \"...sheep and goats that grazed on the steppe, the north-eastern plains and the mountain slopes produced meat, milk and wool in abundance.\"",
+      "prefixHi": "भेड़-बकरियां जो ",
+      "slotHi": "स्टेपी",
+      "suffixHi": ", उत्तर-पूर्वी मैदानों और पहाड़ी ढलानों पर चरती थीं, प्रचुर मात्रा में मांस, दूध और ऊन प्रदान करती थीं।",
+      "optionsHi": [
+        "स्टेपी",
+        "रेगिस्तानी टीलों",
+        "घने जंगलों",
+        "नदी के दलदल"
+      ],
+      "correctHi": "स्टेपी",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"मेसोपोटामिया की भेड़-बकरियां जो स्टेपी, उत्तर-पूर्वी मैदानों और पहाड़ों की ढलानों पर चरती थीं...\""
+    },
+    {
+      "id": 9,
+      "page": "Page 11",
+      "prefix": "Along with fish in the rivers, ",
+      "slot": "date-palms",
+      "suffix": " gave fruit in summer.",
+      "options": [
+        "date-palms",
+        "olive groves",
+        "fig trees",
+        "grape vines"
+      ],
+      "correct": "date-palms",
+      "explanation": "NCERT Page 11: \"Further, fish was available in rivers and date-palms gave fruit in summer.\"",
+      "prefixHi": "नदियों में मिलने वाली मछलियों के अलावा, गर्मियों में ",
+      "slotHi": "खजूर के पेड़",
+      "suffixHi": " प्रचुर मात्रा में फल देते थे।",
+      "optionsHi": [
+        "खजूर के पेड़",
+        "जैतून के बाग",
+        "अंजीर के पेड़",
+        "अंगूर की बेलें"
+      ],
+      "correctHi": "खजूर के पेड़",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"इसके अलावा, नदियों में मछली उपलब्ध थी और खजूर के पेड़ गर्मियों में फल देते थे।\""
+    },
+    {
+      "id": 10,
+      "page": "Page 11",
+      "prefix": "Historians caution: Let us not make the mistake of thinking that cities grew simply because of ",
+      "slot": "rural prosperity",
+      "suffix": ".",
+      "options": [
+        "rural prosperity",
+        "military conquest",
+        "royal decrees",
+        "foreign immigration"
+      ],
+      "correct": "rural prosperity",
+      "explanation": "NCERT Page 11: \"Let us not, however, make the mistake of thinking that cities grew simply because of rural prosperity.\"",
+      "prefixHi": "इतिहासकार सचेत करते हैं: हमें यह सोचने की गलती नहीं करनी चाहिए कि शहर केवल ",
+      "slotHi": "ग्रामीण समृद्धि",
+      "suffixHi": " के कारण विकसित हुए।",
+      "optionsHi": [
+        "ग्रामीण समृद्धि",
+        "सैन्य विजय",
+        "शाही फरमान",
+        "विदेशी प्रवास"
+      ],
+      "correctHi": "ग्रामीण समृद्धि",
+      "explanationHi": "एनसीईआरटी पृष्ठ 11: \"लेकिन हमें यह सोचने की गलती नहीं करनी चाहिए कि शहर केवल ग्रामीण समृद्धि के कारण बढ़े।\""
+    },
+    {
+      "id": 11,
+      "page": "Page 12",
+      "prefix": "Cities and towns are not just places with large populations; an urban economy becomes viable when it develops in spheres other than ",
+      "slot": "food production",
+      "suffix": ".",
+      "options": [
+        "food production",
+        "warfare",
+        "religious worship",
+        "nomadic herding"
+      ],
+      "correct": "food production",
+      "explanation": "NCERT Page 12: \"It is when an economy develops in spheres other than food production that it becomes an advantage for people to cluster in towns.\"",
+      "prefixHi": "शहर और कस्बे केवल बड़ी आबादी वाले स्थान नहीं हैं; एक शहरी अर्थव्यवस्था तब व्यवहार्य बनती है जब वह ",
+      "slotHi": "खाद्य उत्पादन",
+      "suffixHi": " के अलावा अन्य क्षेत्रों में विकसित होती है।",
+      "optionsHi": [
+        "खाद्य उत्पादन",
+        "युद्ध और विजय",
+        "धार्मिक अनुष्ठान",
+        "खानाबदोश चरवाहे"
+      ],
+      "correctHi": "खाद्य उत्पादन",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"यह तब होता है जब एक अर्थव्यवस्था खाद्य उत्पादन के अलावा अन्य क्षेत्रों में विकसित होती है...\""
+    },
+    {
+      "id": 12,
+      "page": "Page 12",
+      "prefix": "Urban economies comprise besides food production, trade, manufactures and ",
+      "slot": "services",
+      "suffix": ".",
+      "options": [
+        "services",
+        "forest foraging",
+        "shifting cultivation",
+        "hunting"
+      ],
+      "correct": "services",
+      "explanation": "NCERT Page 12: \"Urban economies comprise besides food production, trade, manufactures and services.\"",
+      "prefixHi": "खाद्य उत्पादन के अलावा, शहरी अर्थव्यवस्थाओं में व्यापार, विनिर्माण और ",
+      "slotHi": "सेवाएं",
+      "suffixHi": " शामिल हैं।",
+      "optionsHi": [
+        "सेवाएं",
+        "वन संचयन",
+        "झूम खेती",
+        "शिकार"
+      ],
+      "correctHi": "सेवाएं",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"शहरी अर्थव्यवस्थाओं में खाद्य उत्पादन के अलावा व्यापार, विनिर्माण और सेवाएं शामिल हैं।\""
+    },
+    {
+      "id": 13,
+      "page": "Page 12",
+      "prefix": "City people cease to be ",
+      "slot": "self-sufficient",
+      "suffix": " and depend on the products or services of other people.",
+      "options": [
+        "self-sufficient",
+        "tax-paying",
+        "civilized",
+        "independent"
+      ],
+      "correct": "self-sufficient",
+      "explanation": "NCERT Page 12: \"City people, thus, cease to be self-sufficient and depend on the products or services of other (city or village) people.\"",
+      "prefixHi": "शहर के लोग ",
+      "slotHi": "आत्मनिर्भर",
+      "suffixHi": " नहीं रह जाते और अन्य लोगों के उत्पादों या सेवाओं पर निर्भर रहते हैं।",
+      "optionsHi": [
+        "आत्मनिर्भर",
+        "करदाता",
+        "सभ्य",
+        "स्वतंत्र"
+      ],
+      "correctHi": "आत्मनिर्भर",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"शहर के लोग इस प्रकार आत्मनिर्भर नहीं रह जाते और दूसरों के उत्पादों या सेवाओं पर निर्भर होते हैं।\""
+    },
+    {
+      "id": 14,
+      "page": "Page 12",
+      "prefix": "\"The ",
+      "slot": "division of labour",
+      "suffix": " is a mark of urban life.\"",
+      "options": [
+        "division of labour",
+        "abundance of grain",
+        "absence of rulers",
+        "use of barter"
+      ],
+      "correct": "division of labour",
+      "explanation": "NCERT Page 12: \"The division of labour is a mark of urban life.\"",
+      "prefixHi": "\"",
+      "slotHi": "श्रम विभाजन",
+      "suffixHi": " शहरी जीवन का एक प्रमुख लक्षण है।\"",
+      "optionsHi": [
+        "श्रम विभाजन",
+        "अनाज की प्रचुरता",
+        "शासकों का अभाव",
+        "वस्तु विनिमय"
+      ],
+      "correctHi": "श्रम विभाजन",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"श्रम का विभाजन शहरी जीवन की पहचान है।\""
+    },
+    {
+      "id": 15,
+      "page": "Page 12",
+      "prefix": "A stone seal carver requires bronze tools and coloured stones; his specialisation is ",
+      "slot": "fine carving",
+      "suffix": ", not trading or toolmaking.",
+      "options": [
+        "fine carving",
+        "metal prospecting",
+        "pottery throwing",
+        "canal digging"
+      ],
+      "correct": "fine carving",
+      "explanation": "NCERT Page 12: \"...his ‘specialisation’ is fine carving, not trading.\"",
+      "prefixHi": "पत्थर की मुहर तराशने वाले को कांस्य औजारों और रंगीन पत्थरों की आवश्यकता होती है; उसकी विशेषज्ञता ",
+      "slotHi": "महीन नक्काशी",
+      "suffixHi": " है, न कि व्यापार करना या औजार बनाना।",
+      "optionsHi": [
+        "महीन नक्काशी",
+        "धातु खोजना",
+        "मिट्टी के बर्तन बनाना",
+        "नहर खोदना"
+      ],
+      "correctHi": "महीन नक्काशी",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"...उसकी ‘विशेषज्ञता’ महीन नक्काशी में है, व्यापार में नहीं।\""
+    },
+    {
+      "id": 16,
+      "page": "Page 12",
+      "prefix": "A bronze tool maker needs regular supplies of ",
+      "slot": "charcoal",
+      "suffix": " for fuel to smelt his metals.",
+      "options": [
+        "charcoal",
+        "mineral oil",
+        "peat moss",
+        "dried straw"
+      ],
+      "correct": "charcoal",
+      "explanation": "NCERT Page 12: \"Besides, he needs regular supplies of charcoal for fuel.\"",
+      "prefixHi": "कांस्य औजार बनाने वाले को धातु गलाने के लिए ईंधन के रूप में ",
+      "slotHi": "लकड़ी के कोयले",
+      "suffixHi": " की नियमित आपूर्ति चाहिए।",
+      "optionsHi": [
+        "लकड़ी के कोयले",
+        "खनिज तेल",
+        "सूखे पुआल",
+        "पीट"
+      ],
+      "correctHi": "लकड़ी के कोयले",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"इसके अलावा, उसे ईंधन के लिए लकड़ी के कोयले की नियमित आपूर्ति की आवश्यकता होती है।\""
+    },
+    {
+      "id": 17,
+      "page": "Page 12",
+      "prefix": "Because urban activities require coordination and deliveries, urban economies often require the keeping of ",
+      "slot": "written records",
+      "suffix": ".",
+      "options": [
+        "written records",
+        "oral ballads",
+        "secret passwords",
+        "tallies on sticks"
+      ],
+      "correct": "written records",
+      "explanation": "NCERT Page 12: \"...some people give commands that others obey, and urban economies often require the keeping of written records.\"",
+      "prefixHi": "चूंकि शहरी गतिविधियों में व्यापक समन्वय और वितरण की आवश्यकता होती है, इसलिए शहरी अर्थव्यवस्थाओं को अक्सर ",
+      "slotHi": "लिखित रिकॉर्ड",
+      "suffixHi": " रखने की आवश्यकता होती है।",
+      "optionsHi": [
+        "लिखित रिकॉर्ड",
+        "मौखिक गीत",
+        "गुप्त कोड",
+        "लाठी पर निशान"
+      ],
+      "correctHi": "लिखित रिकॉर्ड",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"...शहरी अर्थव्यवस्थाओं में अक्सर लिखित रिकॉर्ड रखने की आवश्यकता होती है।\""
+    },
+    {
+      "id": 18,
+      "page": "Page 12",
+      "prefix": "The famous \"Warka Head\" was sculpted in ",
+      "slot": "white marble",
+      "suffix": " at Uruk before 3000 BCE.",
+      "options": [
+        "white marble",
+        "red terracotta",
+        "black basalt",
+        "grey slate"
+      ],
+      "correct": "white marble",
+      "explanation": "NCERT Page 12 Box: \"This woman’s head was sculpted in white marble at Uruk before 3000 BCE.\"",
+      "prefixHi": "विश्व प्रसिद्ध \"वारका शीर्ष\" (Warka Head) 3000 ईसा पूर्व से पहले उरुक में ",
+      "slotHi": "सफेद संगमरमर",
+      "suffixHi": " से तराशा गया था।",
+      "optionsHi": [
+        "सफेद संगमरमर",
+        "लाल टेराकोटा",
+        "काला बेसाल्ट",
+        "ग्रे स्लेट"
+      ],
+      "correctHi": "सफेद संगमरमर",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12 बॉक्स: \"यह स्त्री का सिर 3000 ईसा पूर्व से पहले उरुक में सफेद संगमरमर से तराशा गया था।\""
+    },
+    {
+      "id": 19,
+      "page": "Page 12",
+      "prefix": "The eyes and eyebrows of the Warka Head took inlays of lapis lazuli (blue), shell (white) and ",
+      "slot": "bitumen",
+      "suffix": " (black).",
+      "options": [
+        "bitumen",
+        "obsidian",
+        "ebony",
+        "lead"
+      ],
+      "correct": "bitumen",
+      "explanation": "NCERT Page 12 Box: \"The eyes and eyebrows would probably have taken lapis lazuli (blue) and shell (white) and bitumen (black) inlays, respectively.\"",
+      "prefixHi": "वारका शीर्ष की आंखों और भौंहों में लापिस लाजुली (नीला), शंख (सफेद) और ",
+      "slotHi": "डामर / बिटुमेन",
+      "suffixHi": " (काला) की जड़ाई की गई थी।",
+      "optionsHi": [
+        "डामर / बिटुमेन",
+        "ओब्सीडियन",
+        "आबनूस",
+        "सीसा"
+      ],
+      "correctHi": "डामर / बिटुमेन",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12 बॉक्स: \"आंखों और भौंहों में क्रमशः लापिस लाजुली (नीला), शंख (सफेद) और बिटुमेन (काला) जड़े गए होंगे।\""
+    },
+    {
+      "id": 20,
+      "page": "Page 12",
+      "prefix": "Bronze, used in early Mesopotamian cities (c. 3000 BCE), is an alloy of ",
+      "slot": "copper and tin",
+      "suffix": ".",
+      "options": [
+        "copper and tin",
+        "iron and carbon",
+        "copper and zinc",
+        "tin and lead"
+      ],
+      "correct": "copper and tin",
+      "explanation": "NCERT Page 12: \"Bronze is an alloy of copper and tin. Using bronze meant procuring these metals, often from great distances.\"",
+      "prefixHi": "प्रारंभिक मेसोपोटामियाई शहरों (लगभग 3000 ईसा पूर्व) में प्रयुक्त कांस्य ",
+      "slotHi": "तांबे और टिन",
+      "suffixHi": " का एक मिश्र धातु है।",
+      "optionsHi": [
+        "तांबे और टिन",
+        "लोहे और कार्बन",
+        "तांबे और जस्ते",
+        "टिन और सीसे"
+      ],
+      "correctHi": "तांबे और टिन",
+      "explanationHi": "एनसीईआरटी पृष्ठ 12: \"कांस्य तांबे और टिन का एक मिश्र धातु है। कांस्य के उपयोग का अर्थ था इन धातुओं को दूर से प्राप्त करना।\""
+    }
+  ],
+  "specialists": [
+    {
+      "role": "⛰️ White Marble Quarrier",
+      "origin": "Distant Northern / Eastern Mountains",
+      "desc": "Mined massive blocks of pure white marble from high rocky ranges outside alluvial Mesopotamia, since the southern floodplains completely lacked stone.",
+      "detail": "Southern Mesopotamia was an alluvial flood plain of silt and clay. Finding hard white marble required expeditions to the Zagros or Taurus mountains, organizing miners and cutting stone blocks."
+    },
+    {
+      "role": "⛵ River Boatmen & Merchants",
+      "origin": "Euphrates & Tigris River Channels",
+      "desc": "Transported heavy stone blocks, ores, and logs over waterways. Water transport was the cheapest and most viable mode of moving bulk cargo in Mesopotamia.",
+      "detail": "NCERT notes on Page 13 that transporting grain or heavy stone by pack animals required too much feed. River boats powered by current and wind were essential to deliver raw marble to Uruk."
+    },
+    {
+      "role": "⛏️ Copper & Tin Prospectors",
+      "origin": "Anatolia (Turkey) & Iranian Plateau",
+      "desc": "Sourced native copper and cassiterite (tin) ores from remote mountainous regions hundreds of kilometers away to produce bronze.",
+      "detail": "Mesopotamia had no native metals. Sourcing copper and tin meant sending state-organized trade caravans to negotiate exchanges for Mesopotamian grain, textiles, and dates."
+    },
+    {
+      "role": "🔥 Smelter & Bronze Toolmaker",
+      "origin": "Urban Artisan Quarter of Uruk",
+      "desc": "Combined copper and tin in exact proportions to smelt bronze alloys, casting durable chisels, gouges, and fine drills for stone carving.",
+      "detail": "The toolmaker required continuous supplies of charcoal for furnace heat. Without hardened bronze chisels, sculpting delicate details in crystalline marble would be impossible."
+    },
+    {
+      "role": "💎 Lapis Lazuli Merchant",
+      "origin": "Badakhshan (Afghanistan)",
+      "desc": "Traversed the overland trade routes across the Iranian plateau to bring celestial deep-blue lapis lazuli stones for the eye inlays.",
+      "detail": "Lapis lazuli was prized by kings and priests for temple sculptures and royal seals. Its presence in Uruk demonstrates an intercontinental trade network spanning thousands of kilometers."
+    },
+    {
+      "role": "🐚 Persian Gulf Shell Harvester",
+      "origin": "Persian Gulf Coast",
+      "desc": "Dived and harvested lustrous white marine shells from the Gulf to form the bright whites of the woman’s sculpted eyes.",
+      "detail": "Shell cutting required precision bronze saws and files. The white shell created a striking contrast against the dark bitumen and blue lapis lazuli."
+    },
+    {
+      "role": "🛢️ Bitumen Seepage Collector",
+      "origin": "Hit on the Middle Euphrates",
+      "desc": "Gathered natural mineral pitch/asphalt seepages used as an indestructible adhesive and black pigment for eyebrows and eyeliner.",
+      "detail": "Bitumen was a ubiquitous Mesopotamian adhesive used for waterproofing boats, laying brick mortar, and securing precious inlays in statues."
+    },
+    {
+      "role": "🎨 Master Sculptor & Inlayer",
+      "origin": "Palace / Eanna Temple at Uruk",
+      "desc": "Sensitively carved the delicate modeling of the woman’s mouth, chin, and cheeks, cutting the top groove and inlaying the eyes.",
+      "detail": "The sculptor synthesized all these materials into a unified world-famous masterpiece. He depended on the temple/palace hierarchy for subsistence, tools, and materials."
+    }
+  ],
+  "mcqData": [
+    {
+      "q": "1. In which geographical zone of ancient Mesopotamia did the first cities and the earliest writing emerge?",
+      "options": [
+        "The northern steppe",
+        "The southern desert with alluvial river channels",
+        "The eastern Zagros mountain slopes",
+        "The western Mediterranean coastline"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 11 explicitly states: \"The south is a desert – and this is where the first cities and writing emerged.\""
+    },
+    {
+      "q": "2. How was high agricultural productivity achieved in southern Mesopotamia despite the lack of sufficient rainfall?",
+      "options": [
+        "By digging deep rainwater harvesting stepwells",
+        "By the annual floods of Euphrates and Tigris depositing fertile silt and natural channels acting as irrigation canals",
+        "By relying completely on moisture carried by Mediterranean storms",
+        "By purchasing wheat and barley from the Roman Empire"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 11 notes that the Euphrates split into small channels that flooded and functioned as irrigation canals, depositing fertile silt."
+    },
+    {
+      "q": "3. What crops were primarily cultivated in the irrigated fields of southern Mesopotamia?",
+      "options": [
+        "Wheat, barley, peas, and lentils",
+        "Rice, maize, and sugarcane",
+        "Cotton, jute, and indigo",
+        "Millet, sorghum, and groundnuts"
+      ],
+      "correct": 0,
+      "exp": "NCERT Page 11: \"water could be let into the fields of wheat, barley, peas or lentils when necessary.\""
+    },
+    {
+      "q": "4. According to NCERT, why is high agricultural productivity in villages alone NOT sufficient to explain the growth of cities?",
+      "options": [
+        "Because farmers refused to sell surplus to towns",
+        "Because an urban economy only becomes viable when society develops non-food spheres like trade, crafts, and coordinated services",
+        "Because cities had smaller populations than villages",
+        "Because rivers dried up every summer"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 11-12: \"Let us not make the mistake of thinking that cities grew simply because of rural prosperity... It is when an economy develops in spheres other than food production that it becomes an advantage for people to cluster in towns.\""
+    },
+    {
+      "q": "5. Which principle is described on Page 12 as a fundamental \"mark of urban life\"?",
+      "options": [
+        "Complete self-sufficiency of households",
+        "The division of labour",
+        "The eradication of social hierarchy",
+        "The universal adoption of nomadic pastoralism"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 12: \"The division of labour is a mark of urban life.\""
+    },
+    {
+      "q": "6. Why does a stone seal carver depend on multiple other individuals in an urban economy?",
+      "options": [
+        "He makes his own bronze tools and mines his own stones",
+        "He requires bronze tools he cannot make, and colored stones he does not know where to get, while toolmakers need charcoal",
+        "He is self-sufficient and only sells to foreign travelers",
+        "He is also the high priest of the temple"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 12 gives this exact example to illustrate the intricate web of specialization and mutual interdependence."
+    },
+    {
+      "q": "7. What was a primary driving reason why ancient urban economies required the keeping of written records?",
+      "options": [
+        "To write fiction and poetry for entertainment",
+        "To coordinate deliveries, store food supplies, and track complex transactions across different times and people",
+        "Because oral speech was banned in Mesopotamian temples",
+        "To teach foreign languages to visiting merchants"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 12 highlights that organized trade, deliveries from villages, and command structures required written administrative records."
+    },
+    {
+      "q": "8. In which city and approximate timeframe was the world-famous \"Warka Head\" sculpted?",
+      "options": [
+        "Babylon, c. 600 BCE",
+        "Uruk, before 3000 BCE",
+        "Mari, c. 1800 BCE",
+        "Nineveh, c. 700 BCE"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 12 Box: \"This woman’s head was sculpted in white marble at Uruk before 3000 BCE.\""
+    },
+    {
+      "q": "9. What materials were used for the inlays of the eyes and eyebrows of the Warka Head?",
+      "options": [
+        "Gold, silver, and ivory",
+        "Lapis lazuli (blue), shell (white), and bitumen (black)",
+        "Ruby, emerald, and bronze",
+        "Terracotta, gypsum, and charcoal"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 12 Box: \"The eyes and eyebrows would probably have taken lapis lazuli (blue) and shell (white) and bitumen (black) inlays, respectively.\""
+    },
+    {
+      "q": "10. Bronze, which defined the era of earliest Mesopotamian cities (c. 3000 BCE), is an alloy of:",
+      "options": [
+        "Iron and Carbon",
+        "Copper and Tin",
+        "Copper and Zinc (Brass)",
+        "Lead and Silver"
+      ],
+      "correct": 1,
+      "exp": "NCERT Page 12: \"Bronze is an alloy of copper and tin. Using bronze meant procuring these metals, often from great distances.\""
+    }
+  ],
+  "arData": [
+    {
+      "a": "Assertion (A): Southern Mesopotamia had the most productive agriculture of the ancient world despite a lack of rainfall.",
+      "r": "Reason (R): Euphrates and Tigris floodwaters carried fertile silt, and natural small channels acted as irrigation canals to water fields of wheat and barley.",
+      "correct": "A",
+      "exp": "Both A and R are true, and R correctly explains the biological mechanism that turned an arid desert into the most productive farming zone."
+    },
+    {
+      "a": "Assertion (A): High agricultural productivity in villages was alone sufficient to automatically give birth to urban civilization.",
+      "r": "Reason (R): Cities are merely villages that grew extraordinarily dense due to large population clusters.",
+      "correct": "D",
+      "exp": "Both Assertion and Reason are false. NCERT explicitly warns against this mistake: cities require non-food economic spheres (manufactures, trade, services) and social organization."
+    },
+    {
+      "a": "Assertion (A): The division of labour is a definitive mark of urban life.",
+      "r": "Reason (R): City craftspeople cease to be self-sufficient and must continuously interact with and rely on toolmakers, fuel suppliers, and traders.",
+      "correct": "A",
+      "exp": "Both A and R are true, and R directly provides the textbook definition and rationale for division of labour."
+    },
+    {
+      "a": "Assertion (A): The creation of the Warka Head in Uruk was conclusive evidence of complex long-distance trade and social coordination.",
+      "r": "Reason (R): The alluvial southern plain lacked indigenous marble, metals for bronze tools, and lapis lazuli, requiring organized expeditions to distant regions.",
+      "correct": "A",
+      "exp": "Both A and R are true, and R explains why an artifact made of marble, bronze, shell, bitumen, and lapis lazuli required state-level social organization."
+    }
+  ]
+}

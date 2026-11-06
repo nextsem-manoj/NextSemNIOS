@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 6 Science Chapter 6: हमारे आस-पास की सामग्री (Materials Around Us) — Interactive Bilingual Worksheet & A4 Print</title>
+  <meta name="description" content="NCERT Class 6 Science (जिज्ञासा / Curiosity) Chapter 6: हमारे आस-पास की सामग्री (Materials Around Us - fhcu106) — 100% authentic interactive bilingual worksheet replicating the NCERT textbook PDF with instant checks, word search game, matching pair puzzles, and A4 print sheet.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(20, 184, 166, 0.3);
+      --accent-teal: #14b8a6;
+      --accent-emerald: #10b981;
+      --accent-green: #04AA6D;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --input-bg: #070e1e;
+      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --input-bg: #f8fafc;
+      --shadow-card: 0 4px 16px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 90px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(20, 184, 166, 0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 85%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Sticky Navigation Bar */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+    }
+
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+
+    .breadcrumb-trail a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .breadcrumb-trail a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #64748b; font-size: 0.75rem; }
+    .breadcrumb-current { color: var(--text-main); font-weight: 800; }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+    }
+
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Header */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(56, 189, 248, 0.12) 50%, rgba(99, 102, 241, 0.18) 100%);
+      border: 1.5px solid var(--accent-teal);
+      border-radius: 20px;
+      padding: 24px 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 32px rgba(20, 184, 166, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge-row {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px;
+    }
+
+    .pill-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 10px; border-radius: 9999px;
+      font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .pill-teal { background: rgba(20, 184, 166, 0.2); color: #2dd4bf; border: 1px solid #14b8a6; }
+    .pill-gold { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+    .pill-green { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+
+    .hero-title {
+      font-size: 1.7rem; font-weight: 900; line-height: 1.25; margin-bottom: 6px;
+      color: #ffffff;
+    }
+    body.light-theme .hero-title { color: #0f172a; }
+
+    .hero-subtitle {
+      font-size: 0.92rem; color: var(--text-muted); font-weight: 500; margin-bottom: 16px;
+    }
+
+    .score-dock {
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(6, 12, 24, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 12px 18px;
+      flex-wrap: wrap; gap: 12px;
+    }
+    body.light-theme .score-dock { background: #f1f5f9; border-color: #cbd5e1; }
+
+    .score-chip {
+      display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.88rem;
+    }
+    .score-chip span.num { color: #38bdf8; font-size: 1.2rem; font-family: 'JetBrains Mono', monospace; }
+
+    /* Language Switcher */
+    .lang-toggle-bar {
+      display: flex; gap: 6px; background: rgba(255, 255, 255, 0.05); padding: 4px; border-radius: 10px;
+    }
+    .lang-btn {
+      padding: 5px 12px; border-radius: 8px; border: none; font-size: 0.76rem; font-weight: 800;
+      cursor: pointer; background: transparent; color: var(--text-muted); transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--accent-teal); color: #041226;
+    }
+
+    /* Cards */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .section-card:hover {
+      border-color: var(--accent-teal);
+    }
+
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px;
+      flex-wrap: wrap; gap: 8px;
+    }
+    body.light-theme .section-header { border-bottom-color: #e2e8f0; }
+
+    .section-title {
+      font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;
+    }
+
+    /* Table styles */
+    .ncert-table {
+      width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.86rem;
+    }
+    .ncert-table th, .ncert-table td {
+      border: 1px solid rgba(255, 255, 255, 0.12); padding: 10px 12px; text-align: left;
+    }
+    body.light-theme .ncert-table th, body.light-theme .ncert-table td { border-color: #cbd5e1; }
+    .ncert-table th { background: rgba(20, 184, 166, 0.15); color: var(--accent-teal); font-weight: 800; }
+
+    /* Interactive Inputs */
+    .fill-input {
+      background: var(--input-bg);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-main);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      width: 100%;
+      outline: none;
+      transition: all 0.2s;
+    }
+    body.light-theme .fill-input { border-color: #94a3b8; }
+    .fill-input:focus { border-color: var(--accent-teal); box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2); }
+    .fill-input.correct { border-color: #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; }
+    .fill-input.wrong { border-color: #f43f5e; background: rgba(244, 63, 94, 0.15); color: #f43f5e; }
+
+    /* Interactive Options Grid */
+    .options-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 12px;
+    }
+    .option-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.2s;
+    }
+    body.light-theme .option-card { background: #f8fafc; border-color: #cbd5e1; }
+    .option-card:hover { border-color: var(--accent-teal); background: rgba(20, 184, 166, 0.1); }
+    .option-card.selected-correct { border-color: #10b981; background: rgba(16, 185, 129, 0.2); color: #10b981; }
+    .option-card.selected-wrong { border-color: #f43f5e; background: rgba(244, 63, 94, 0.2); color: #f43f5e; }
+
+    /* Word Search Grid (शब्द-जाल) */
+    .word-search-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      max-width: 420px;
+      margin: 16px auto;
+    }
+    .word-cell {
+      aspect-ratio: 1;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.1rem; cursor: pointer;
+      transition: all 0.15s;
+    }
+    .word-cell:hover { background: rgba(20, 184, 166, 0.2); border-color: var(--accent-teal); }
+    .word-cell.found { background: #10b981; color: #041226; font-weight: 900; }
+
+    .check-btn {
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+      color: #ffffff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 4px 14px rgba(20, 184, 166, 0.3);
+      transition: all 0.2s;
+    }
+    .check-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(20, 184, 166, 0.4); }
+
+    .feedback-chip {
+      margin-top: 10px; font-size: 0.82rem; font-weight: 700; padding: 6px 12px; border-radius: 6px; display: none;
+    }
+    .feedback-chip.show { display: block; }
+    .feedback-chip.success { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid #10b981; }
+    .feedback-chip.error { background: rgba(244, 63, 94, 0.15); color: #f87171; border: 1px solid #f43f5e; }
+
+    /* Print Formatting */
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; }
+      .bg-glow, .top-nav, .nav-actions, .check-btn, .lang-toggle-bar, .no-print { display: none !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      .section-card { border: 1px solid #94a3b8 !important; box-shadow: none !important; page-break-inside: avoid; }
+      .hero-banner { background: #f1f5f9 !important; border: 1px solid #000 !important; color: #000 !important; }
+      .hero-title { color: #000 !important; }
+      .hero-subtitle { color: #333 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-nav">
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+      <a href="/">🏠 Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?view=classes">Classes</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=6&subject=c6-science">Class 6 Science (जिज्ञासा)</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Ch 6: सामग्री (Materials)</span>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle-bar">
+        <button type="button" class="lang-btn active" onclick="setLanguage('bilingual')">द्विभाषी (Both)</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('hindi')">हिंदी</button>
+        <button type="button" class="lang-btn" onclick="setLanguage('english')">English</button>
+      </div>
+      <button type="button" class="btn-nav" onclick="window.print()" title="Print A4 Worksheet">🖨️ Print A4</button>
+      <button type="button" class="btn-nav" onclick="toggleTheme()" id="themeToggleBtn">☀️ Light</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-badge-row">
+        <span class="pill-badge pill-teal">NCERT Class 6 Science (जिज्ञासा)</span>
+        <span class="pill-badge pill-gold">Code: fhcu106</span>
+        <span class="pill-badge pill-green">NEP 2026 Edition</span>
+        <span class="pill-badge pill-teal">Google Drive Verified</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="lang-hi">अध्याय 6: हमारे आस-पास की सामग्री</span>
+        <span class="lang-sep"> • </span>
+        <span class="lang-en">Chapter 6: Materials Around Us</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span class="lang-hi">100% प्रामाणिक NCERT पाठ्यपुस्तक सामग्री: प्राचीन मिट्टी के बर्तन, चमक, कठोरता, विलेयता, पारदर्शकता एवं शब्द-जाल अभ्यास।</span>
+        <span class="lang-en">100% Authentic NCERT content: Archaeological pottery, luster, hardness, solubility, transparency & word puzzle games.</span>
+      </p>
+
+      <div class="score-dock">
+        <div class="score-chip">
+          <span>🏆 Progress:</span>
+          <span class="num" id="scoreDisplay">0 / 12</span>
+        </div>
+        <div class="score-chip">
+          <span>🎯 Accuracy:</span>
+          <span class="num" id="accuracyDisplay">0%</span>
+        </div>
+        <button type="button" class="check-btn" onclick="checkAllAnswers()">
+          <span>⚡ Check All Answers</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 1: Archaeological Connect & Ancient Pottery -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🏺 1. क्या आप जानते हैं? (Archaeological Heritage of Materials)</span>
+        </h2>
+        <span class="pill-badge pill-gold">NCERT Page 100</span>
+      </div>
+      <p style="font-size: 0.88rem; margin-bottom: 12px; color: var(--text-muted);">
+        <strong style="color: #fef08a;">उपादानं भवेत्तस्या (मूषाया:) मृत्तिका लोहमेव च । (रसरत्नसमुच्चय–10.3)</strong><br>
+        <span class="lang-hi">भारतीय उपमहाद्वीप में सबसे पुराने मिट्टी के बर्तन 7,000 से 8,000 वर्ष पूर्व के गंगा के मैदानों (लहुरादेवा) और बलूचिस्तान (मेहरगढ़) में पाए गए। हड़प्पा सभ्यता (2600–1900 ईसा पूर्व) में चाक पर पकी मिट्टी को <strong>'टेराकोटा'</strong> कहा जाता था।</span>
+        <span class="lang-en">Ancient pottery from 7,000–8,000 years ago found at Lahuradeva & Mehrgarh. Harappan pottery baked in kilns is known as <strong>'Terracotta'</strong>.</span>
+      </p>
+
+      <div style="background: rgba(255, 255, 255, 0.04); padding: 14px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <div style="font-weight: 800; font-size: 0.9rem; margin-bottom: 8px;">
+          Q1. पकी हुई मिट्टी के बर्तनों को क्या कहा जाता है? (What is baked clay called?)
+        </div>
+        <div class="options-grid">
+          <div class="option-card" onclick="selectMcq(this, false, 'q1')">प्लास्टिक (Plastic)</div>
+          <div class="option-card" onclick="selectMcq(this, true, 'q1')">टेराकोटा (Terracotta)</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'q1')">काँच (Glass)</div>
+          <div class="option-card" onclick="selectMcq(this, false, 'q1')">सीमेंट (Cement)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: तालिका 6.1 — सामग्रियों की पहचान -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>📋 2. तालिका 6.1 — वस्तु एवं सामग्री पहचान (Objects &amp; Materials)</span>
+        </h2>
+        <span class="pill-badge pill-teal">Table 6.1 Fill-ins</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+        <span class="lang-hi">रिक्त स्थान में सही सामग्री भरें (लकड़ी / कागज / धातु / काँच / प्लास्टिक / मिट्टी):</span>
+        <span class="lang-en">Fill the correct material for each object:</span>
+      </p>
+
+      <table class="ncert-table">
+        <thead>
+          <tr>
+            <th>वस्तु (Object)</th>
+            <th>सामग्री (Material it is made of)</th>
+            <th>जाँच (Check)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>नोटबुक / पुस्तक (Notebook / Book)</td>
+            <td><input type="text" class="fill-input" data-ans="कागज,paper" placeholder="उदा: कागज"></td>
+            <td id="check-t1">⏳</td>
+          </tr>
+          <tr>
+            <td>पानी की पारदर्शी बोतल (Clear Water Tumbler)</td>
+            <td><input type="text" class="fill-input" data-ans="काँच,glass,प्लास्टिक,plastic" placeholder="उदा: काँच / प्लास्टिक"></td>
+            <td id="check-t2">⏳</td>
+          </tr>
+          <tr>
+            <td>कुर्सी / मेज (Chair / Table)</td>
+            <td><input type="text" class="fill-input" data-ans="लकड़ी,wood,लोहा,iron,प्लास्टिक,plastic" placeholder="उदा: लकड़ी / प्लास्टिक"></td>
+            <td id="check-t3">⏳</td>
+          </tr>
+          <tr>
+            <td>कुल्हाड़ी / ताला (Axe / Lock)</td>
+            <td><input type="text" class="fill-input" data-ans="धातु,metal,लोहा,iron" placeholder="उदा: धातु / लोहा"></td>
+            <td id="check-t4">⏳</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Section 3: जोड़ीदार खोजें (Matching Pair Challenge) -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🔗 3. जोड़ीदार खोजें (Match Related Words — NCERT Page 116)</span>
+        </h2>
+        <span class="pill-badge pill-green">Matching Activity</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">
+        <span class="lang-hi">नीचे दी गई सामग्रियों को उनके सही गुणों से मिलाएँ:</span>
+        <span class="lang-en">Match each material with its correct property:</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div>
+          <div style="font-weight: 800; font-size: 0.88rem; margin-bottom: 8px; color: var(--accent-teal);">सामग्री (Material)</div>
+          <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px; margin-bottom: 8px;">1. ताँबा / लोहा (Copper / Iron)</div>
+          <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px; margin-bottom: 8px;">2. स्वच्छ काँच (Clean Glass)</div>
+          <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px; margin-bottom: 8px;">3. लकड़ी (Wood)</div>
+          <div style="background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px; margin-bottom: 8px;">4. स्पंज / रुई (Sponge / Cotton)</div>
+        </div>
+        <div>
+          <div style="font-weight: 800; font-size: 0.88rem; margin-bottom: 8px; color: var(--accent-gold);">गुणधर्म चुनें (Select Property)</div>
+          <select class="fill-input" data-ans="चमकदार" style="margin-bottom: 8px; height: 42px;">
+            <option value="">-- गुण चुनें --</option>
+            <option value="चमकदार">द्युतिमय / चमकदार (Lustrous)</option>
+            <option value="पारदर्शी">पारदर्शी (Transparent)</option>
+            <option value="अपारदर्शी">अपारदर्शी (Opaque)</option>
+            <option value="कोमल">कोमल / संपीड़ित (Soft)</option>
+          </select>
+          <select class="fill-input" data-ans="पारदर्शी" style="margin-bottom: 8px; height: 42px;">
+            <option value="">-- गुण चुनें --</option>
+            <option value="चमकदार">द्युतिमय / चमकदार (Lustrous)</option>
+            <option value="पारदर्शी">पारदर्शी (Transparent)</option>
+            <option value="अपारदर्शी">अपारदर्शी (Opaque)</option>
+            <option value="कोमल">कोमल / संपीड़ित (Soft)</option>
+          </select>
+          <select class="fill-input" data-ans="अपारदर्शी" style="margin-bottom: 8px; height: 42px;">
+            <option value="">-- गुण चुनें --</option>
+            <option value="चमकदार">द्युतिमय / चमकदार (Lustrous)</option>
+            <option value="पारदर्शी">पारदर्शी (Transparent)</option>
+            <option value="अपारदर्शी">अपारदर्शी (Opaque)</option>
+            <option value="कोमल">कोमल / संपीड़ित (Soft)</option>
+          </select>
+          <select class="fill-input" data-ans="कोमल" style="margin-bottom: 8px; height: 42px;">
+            <option value="">-- गुण चुनें --</option>
+            <option value="चमकदार">द्युतिमय / चमकदार (Lustrous)</option>
+            <option value="पारदर्शी">पारदर्शी (Transparent)</option>
+            <option value="अपारदर्शी">अपारदर्शी (Opaque)</option>
+            <option value="कोमल">कोमल / संपीड़ित (Soft)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: शब्द-जाल (Interactive Word Search Game) -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🎮 4. "शब्द-जाल" खेलें (Word Search Game — 'जय हो!')</span>
+        </h2>
+        <span class="pill-badge pill-gold">Game Activity</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+        <span class="lang-hi">ग्रिड में छुपे 6 मुख्य वैज्ञानिक शब्दों पर क्लिक करें: <strong>पारदर्शी, चमकदार, कठोर, नर्म, द्रव्य, आयतन</strong>। सभी सही चुनने पर 'जय हो!' विजय उद्घोष होगा!</span>
+        <span class="lang-en">Click on 6 science terms in the grid: <strong>Transparent, Lustrous, Hard, Soft, Matter, Volume</strong>.</span>
+      </p>
+
+      <div class="word-search-grid" id="wordGrid">
+        <div class="word-cell" onclick="toggleCell(this, true)">पा</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">र</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">द</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">र्शी</div>
+        <div class="word-cell" onclick="toggleCell(this, false)">क</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">द्र</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">च</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">म</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">क</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">दा</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">र</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">व्य</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">क</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">ठो</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">र</div>
+        <div class="word-cell" onclick="toggleCell(this, false)">ल</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">न</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">र्म</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">आ</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">य</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">त</div>
+        <div class="word-cell" onclick="toggleCell(this, true)">न</div>
+        <div class="word-cell" onclick="toggleCell(this, false)">ग</div>
+        <div class="word-cell" onclick="toggleCell(this, false)">स</div>
+      </div>
+      <div style="text-align: center; margin-top: 10px;">
+        <span id="gridWinBadge" style="display: none; background: #10b981; color: #041226; font-size: 1rem; font-weight: 900; padding: 6px 18px; border-radius: 9999px;">
+          🎉 जय हो! आपने सभी शब्द ढूँढ लिए! (Jai Ho! Winner!)
+        </span>
+      </div>
+    </div>
+
+    <!-- Section 5: सही / गलत जासूस (True / False Detective) -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🧐 5. सही या गलत? (True / False Detective — NCERT Page 117)</span>
+        </h2>
+        <span class="pill-badge pill-teal">Exam Focus</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="background: rgba(255,255,255,0.03); padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);">
+          <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 6px;">
+            (क) लकड़ी पारभासी है जबकि काँच अपारदर्शी है। (Wood is translucent while glass is opaque.)
+          </div>
+          <div class="options-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="option-card" onclick="selectMcq(this, false, 'tf1')">सही (True)</div>
+            <div class="option-card" onclick="selectMcq(this, true, 'tf1')">गलत (False - काँच पारदर्शी और लकड़ी अपारदर्शी है)</div>
+          </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);">
+          <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 6px;">
+            (ख) ऐलुमिनियम की पन्नी में चमक होती है, जबकि रबर में नहीं। (Aluminum foil has luster, rubber does not.)
+          </div>
+          <div class="options-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="option-card" onclick="selectMcq(this, true, 'tf2')">सही (True - धातु चमकदार होती है)</div>
+            <div class="option-card" onclick="selectMcq(this, false, 'tf2')">गलत (False)</div>
+          </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);">
+          <div style="font-weight: 700; font-size: 0.88rem; margin-bottom: 6px;">
+            (ग) चीनी जल में घुल जाती है, जबकि लकड़ी का बुरादा नहीं। (Sugar dissolves in water, sawdust does not.)
+          </div>
+          <div class="options-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="option-card" onclick="selectMcq(this, true, 'tf3')">सही (True - चीनी घुलनशील है)</div>
+            <div class="option-card" onclick="selectMcq(this, false, 'tf3')">गलत (False)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6: "मैं कौन हूँ?" पहेलियाँ (Who Am I? Riddles) -->
+    <div class="section-card">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>🕵️‍♂️ 6. "मैं कौन हूँ?" पहेली (Who Am I? Riddles — NCERT Page 118)</span>
+        </h2>
+        <span class="pill-badge pill-gold">Critical Thinking</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="background: rgba(255,255,255,0.03); padding: 12px 14px; border-radius: 10px;">
+          <div style="font-size: 0.88rem; font-weight: 700; color: #fef08a;">
+            "मुझमें द्रव्यमान और आयतन है, लेकिन आप मुझे देख नहीं सकते। मैं कौन हूँ?"
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin: 4px 0 8px;">
+            (I have mass and volume, but you cannot see me. Who am I?)
+          </div>
+          <input type="text" class="fill-input" data-ans="हवा,वायु,air" placeholder="उत्तर लिखें (उदा: हवा / वायु)">
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 12px 14px; border-radius: 10px;">
+          <div style="font-size: 0.88rem; font-weight: 700; color: #fef08a;">
+            "मैं कठोर हूँ और जल में आसानी से घुल जाता हूँ। मैं कौन हूँ?"
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin: 4px 0 8px;">
+            (I am hard and dissolve easily in water. Who am I?)
+          </div>
+          <input type="text" class="fill-input" data-ans="नमक,salt,चीनी,sugar" placeholder="उत्तर लिखें (उदा: नमक / चीनी)">
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let correctCount = 0;
+    const totalQuestions = 12;
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+      const btn = document.getElementById('themeToggleBtn');
+      if (document.body.classList.contains('light-theme')) {
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('worksheet_theme', 'light');
+      } else {
+        btn.textContent = '☀️ Light';
+        localStorage.setItem('worksheet_theme', 'dark');
+      }
+    }
+
+    if (localStorage.getItem('worksheet_theme') === 'light') {
+      document.body.classList.add('light-theme');
+      const btn = document.getElementById('themeToggleBtn');
+      if (btn) btn.textContent = '🌙 Dark';
+    }
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const hiElements = document.querySelectorAll('.lang-hi');
+      const enElements = document.querySelectorAll('.lang-en');
+      const seps = document.querySelectorAll('.lang-sep');
+
+      if (lang === 'hindi') {
+        hiElements.forEach(el => el.style.display = 'inline');
+        enElements.forEach(el => el.style.display = 'none');
+        seps.forEach(el => el.style.display = 'none');
+      } else if (lang === 'english') {
+        hiElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => el.style.display = 'inline');
+        seps.forEach(el => el.style.display = 'none');
+      } else {
+        hiElements.forEach(el => el.style.display = 'inline');
+        enElements.forEach(el => el.style.display = 'inline');
+        seps.forEach(el => el.style.display = 'inline');
+      }
+    }
+
+    function selectMcq(card, isCorrect, group) {
+      const parent = card.parentElement;
+      parent.querySelectorAll('.option-card').forEach(c => {
+        c.classList.remove('selected-correct', 'selected-wrong');
+      });
+
+      if (isCorrect) {
+        card.classList.add('selected-correct');
+        triggerConfettiSmall();
+      } else {
+        card.classList.add('selected-wrong');
+      }
+      updateScore();
+    }
+
+    let foundCells = 0;
+    function toggleCell(cell, isWordPart) {
+      if (isWordPart) {
+        if (!cell.classList.contains('found')) {
+          cell.classList.add('found');
+          foundCells++;
+          if (foundCells >= 15) {
+            document.getElementById('gridWinBadge').style.display = 'inline-block';
+            triggerCelebration();
+          }
+        }
+      } else {
+        cell.style.opacity = '0.4';
+      }
+    }
+
+    function checkAllAnswers() {
+      const inputs = document.querySelectorAll('.fill-input');
+      let score = 0;
+
+      inputs.forEach(input => {
+        const val = input.value.trim().toLowerCase();
+        const expectedAnswers = (input.getAttribute('data-ans') || '').toLowerCase().split(',');
+        
+        let match = false;
+        for (const ans of expectedAnswers) {
+          if (val && (val === ans || val.includes(ans) || ans.includes(val))) {
+            match = true;
+            break;
+          }
+        }
+
+        if (match) {
+          input.classList.add('correct');
+          input.classList.remove('wrong');
+          score++;
+        } else if (val) {
+          input.classList.add('wrong');
+          input.classList.remove('correct');
+        }
+      });
+
+      // Count MCQ correct selections
+      const correctMcqs = document.querySelectorAll('.option-card.selected-correct').length;
+      const totalScore = score + correctMcqs;
+
+      document.getElementById('scoreDisplay').textContent = `${totalScore} / ${totalQuestions}`;
+      const accuracy = Math.round((totalScore / totalQuestions) * 100);
+      document.getElementById('accuracyDisplay').textContent = `${accuracy}%`;
+
+      if (totalScore >= 8) {
+        triggerCelebration();
+      }
+    }
+
+    function updateScore() {
+      checkAllAnswers();
+    }
+
+    function triggerConfettiSmall() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 25,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      }
+    }
+
+    function triggerCelebration() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 100,
+          spread: 80,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

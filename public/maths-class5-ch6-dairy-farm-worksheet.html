@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Class 5 Maths Chapter 6: The Dairy Farm & Multiples — Interactive Bilingual Worksheet & A4 Print</title>
+  <meta name="description" content="NCERT Class 5 Mathematics Chapter 6: The Dairy Farm & Multiples (गणित मेला: दुग्धशाला और गुणज-गुणनखंड) — 100% authentic interactive bilingual worksheet replicating the NCERT textbook PDF with instant checks, mental math tricks, shape puzzles, and A4 print sheet.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥛</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-body: #060c18;
+      --bg-card: #0c1328;
+      --bg-card-hover: #111a36;
+      --border-card: rgba(20, 184, 166, 0.3);
+      --accent-teal: #14b8a6;
+      --accent-emerald: #10b981;
+      --accent-green: #04AA6D;
+      --accent-gold: #f59e0b;
+      --accent-sky: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --input-bg: #070e1e;
+      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    body.light-theme {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-card: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --input-bg: #f8fafc;
+      --shadow-card: 0 4px 16px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 90px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .bg-glow {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: radial-gradient(circle at 50% 10%, rgba(20, 184, 166, 0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 65%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 15% 85%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Top Sticky Navigation Bar */
+    .top-nav {
+      position: sticky; top: 0;
+      background: rgba(6, 12, 24, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100;
+    }
+
+    body.light-theme .top-nav {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .breadcrumb-trail {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+      overflow-x: auto; white-space: nowrap;
+    }
+
+    .breadcrumb-trail a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .breadcrumb-trail a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #64748b; font-size: 0.75rem; }
+    .breadcrumb-current { color: var(--text-main); font-weight: 800; }
+
+    .nav-actions {
+      display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+    }
+
+    .action-pill-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      padding: 6px 14px; border-radius: 9999px;
+      font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .action-pill-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+    .action-pill-btn.primary {
+      background: linear-gradient(135deg, #14b8a6, #0d9488);
+      color: #ffffff;
+      border-color: #14b8a6;
+      box-shadow: 0 4px 12px rgba(20, 184, 166, 0.35);
+    }
+
+    body.light-theme .action-pill-btn {
+      background: #e2e8f0; border-color: #cbd5e1; color: #0f172a;
+    }
+    body.light-theme .action-pill-btn.primary {
+      background: linear-gradient(135deg, #0d9488, #14b8a6);
+      color: #ffffff;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #071927 0%, #0d273a 50%, #071c26 100%);
+      border: 1.5px solid rgba(20, 184, 166, 0.35);
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    body.light-theme .hero-banner {
+      background: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
+      border-color: #99f6e4;
+      box-shadow: 0 8px 24px rgba(20, 184, 166, 0.12);
+    }
+
+    .hero-content h1 {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    body.light-theme .hero-content h1 { color: #0f172a; }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      max-width: 640px;
+      line-height: 1.5;
+    }
+    body.light-theme .hero-subtitle { color: #475569; }
+
+    .score-badge-card {
+      background: rgba(12, 19, 40, 0.85);
+      border: 1.5px solid rgba(245, 158, 11, 0.4);
+      border-radius: 16px;
+      padding: 14px 20px;
+      text-align: center;
+      min-width: 170px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    body.light-theme .score-badge-card {
+      background: #ffffff;
+      border-color: #f59e0b;
+    }
+
+    .score-number {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #f59e0b;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .score-label {
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Worksheet Controls Bar */
+    .controls-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 14px;
+      padding: 12px 18px;
+      margin-bottom: 24px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 3px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    body.light-theme .lang-switcher {
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+    }
+
+    .lang-btn {
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: #14b8a6;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+    }
+
+    /* Sections & Cards */
+    .section-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-card);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s ease;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    body.light-theme .section-header {
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-main);
+    }
+
+    .section-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: rgba(20, 184, 166, 0.15);
+      border: 1px solid #14b8a6;
+      color: #14b8a6;
+    }
+
+    .bilingual-text {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .bilingual-text .hi {
+      display: block;
+      font-size: 0.88rem;
+      color: #38bdf8;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+    body.light-theme .bilingual-text .hi {
+      color: #0284c7;
+    }
+
+    /* Question Box */
+    .q-box {
+      background: var(--bg-card-hover);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+    body.light-theme .q-box {
+      background: #f8fafc;
+      border-color: #e2e8f0;
+    }
+    .q-box.correct {
+      border-color: #10b981 !important;
+      background: rgba(16, 185, 129, 0.08);
+    }
+    .q-box.wrong {
+      border-color: #f43f5e !important;
+      background: rgba(244, 63, 94, 0.08);
+    }
+
+    .q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .q-num {
+      background: #14b8a6;
+      color: #041c14;
+      font-weight: 900;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .q-prompt {
+      flex: 1;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* Inputs & Form Rows */
+    .interactive-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .num-input {
+      background: var(--input-bg);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      width: 140px;
+      font-family: 'JetBrains Mono', monospace;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    body.light-theme .num-input {
+      border-color: #cbd5e1;
+    }
+    .num-input:focus {
+      border-color: #14b8a6;
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25);
+    }
+
+    .check-btn {
+      background: #14b8a6;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .check-btn:hover {
+      background: #0d9488;
+      transform: translateY(-1px);
+    }
+
+    .hint-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-muted);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .hint-btn:hover {
+      border-color: #f59e0b;
+      color: #f59e0b;
+    }
+
+    .feedback-msg {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .feedback-msg.correct { color: #10b981; }
+    .feedback-msg.wrong { color: #f43f5e; }
+
+    .explanation-box {
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 3px solid #f59e0b;
+      font-size: 0.86rem;
+      color: var(--text-main);
+      display: none;
+    }
+
+    /* Grid Visualization */
+    .array-grid-container {
+      display: inline-grid;
+      grid-template-columns: repeat(6, 44px);
+      gap: 6px;
+      padding: 14px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      border: 1px solid rgba(20, 184, 166, 0.2);
+      margin: 10px 0;
+    }
+    body.light-theme .array-grid-container {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .grid-packet {
+      width: 44px;
+      height: 38px;
+      background: linear-gradient(135deg, #fef08a 0%, #facc15 100%);
+      border: 1px solid #eab308;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 900;
+      color: #713f12;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+    .grid-packet:hover {
+      transform: scale(1.1);
+    }
+
+    /* Shape Riddle Deck */
+    .shape-card {
+      background: rgba(99, 102, 241, 0.1);
+      border: 1.5px solid rgba(99, 102, 241, 0.3);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    body.light-theme .shape-card {
+      background: #eef2ff;
+      border-color: #c7d2fe;
+    }
+
+    /* Cash Memo Table */
+    .cash-memo-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 0.9rem;
+    }
+    .cash-memo-table th {
+      background: #0f2744;
+      color: #ffffff;
+      padding: 10px 12px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-weight: 800;
+    }
+    body.light-theme .cash-memo-table th {
+      background: #0284c7;
+    }
+    .cash-memo-table td {
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+    }
+    body.light-theme .cash-memo-table td {
+      border-color: #cbd5e1;
+    }
+
+    /* Number line leaps (Cat & Mouse) */
+    .leap-line {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      padding: 14px 4px;
+      margin: 10px 0;
+    }
+    .leap-step {
+      width: 32px;
+      height: 38px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .leap-step.mouse-step {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+    .leap-step.cat-step {
+      background: rgba(244, 63, 94, 0.2);
+      border-color: #f43f5e;
+      color: #f43f5e;
+    }
+    .leap-step.both-step {
+      background: linear-gradient(135deg, #f43f5e, #38bdf8);
+      color: #ffffff;
+      font-weight: 900;
+      box-shadow: 0 0 10px rgba(244, 63, 94, 0.6);
+    }
+
+    /* Printable A4 Layout */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0;
+      }
+      .top-nav, .controls-strip, .check-btn, .hint-btn, .bg-glow, .hide-print {
+        display: none !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 10px !important;
+      }
+      .section-card {
+        border: 1px solid #333 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 16px !important;
+        padding: 14px !important;
+        background: #ffffff !important;
+      }
+      .q-box {
+        background: #ffffff !important;
+        border: 1px solid #666 !important;
+        page-break-inside: avoid;
+      }
+      .print-header {
+        display: block !important;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 16px;
+      }
+      .num-input {
+        border: 1px solid #000 !important;
+        background: #fff !important;
+        color: #000 !important;
+      }
+    }
+
+    .print-header { display: none; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <nav class="top-nav">
+    <div class="breadcrumb-trail">
+      <a href="/" title="Home">🏠 Home</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?view=classes" title="All Classes">Classes</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=5" title="Class 5 Hub">Class 5</a>
+      <span class="breadcrumb-sep">❯</span>
+      <a href="/?class=5&subject=c5-maths" title="Class 5 Mathematics">Mathematics</a>
+      <span class="breadcrumb-sep">❯</span>
+      <span class="breadcrumb-current">Chapter 6: The Dairy Farm & Multiples</span>
+    </div>
+
+    <div class="nav-actions">
+      <button class="action-pill-btn" onclick="toggleTheme()" title="Toggle Dark / Light Theme" id="themeBtn">
+        🌙 Dark
+      </button>
+      <button class="action-pill-btn primary" onclick="window.print()" title="Print A4 Worksheet">
+        🖨️ Print Sheet
+      </button>
+      <a href="/?class=5&subject=c5-maths" class="action-pill-btn" title="Back to Subject">
+        ← Exit
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Print-only Student Info Banner -->
+    <div class="print-header">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <h2 style="font-size: 1.3rem; font-weight: 900;">StudyGuide by Nextsem • NCERT Class 5 Mathematics</h2>
+        <span style="font-size: 0.85rem; font-weight: 700;">Max Marks: 30 • Time: 45 Min</span>
+      </div>
+      <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Chapter 6: The Dairy Farm & Multiples (दुग्धशाला और गुणज-गुणनखंड)</h3>
+      <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600;">
+        <span>Student Name: ___________________________</span>
+        <span>Roll No: ________</span>
+        <span>Class & Sec: 5th _____</span>
+        <span>Date: ___________</span>
+      </div>
+    </div>
+
+    <!-- Interactive Hero Banner -->
+    <header class="hero-banner">
+      <div class="hero-content">
+        <h1>
+          <span>🥛 Chapter 6: The Dairy Farm & Multiples</span>
+        </h1>
+        <p class="hero-subtitle">
+          NEP 2024–25 <em>Maths Mela</em> & NCERT authentic bilingual practice. Master dairy milk yields, butter packet arrays, doubling/halving mental math, mystery numbers, shape puzzles, and factor trees!
+        </p>
+      </div>
+
+      <div class="score-badge-card hide-print">
+        <div class="score-number" id="liveScore">0 / 30</div>
+        <div class="score-label">Worksheet Score</div>
+        <div style="font-size: 0.72rem; color: #10b981; font-weight: 800; margin-top: 4px;" id="badgeRank">
+          🌱 Rookie Learner
+        </div>
+      </div>
+    </header>
+
+    <!-- Controls Strip -->
+    <div class="controls-strip hide-print">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted);">LANGUAGE / भाषा:</span>
+        <div class="lang-switcher">
+          <button class="lang-btn active" onclick="setLanguage('bilingual')" id="btnBi">🌐 Dual / द्विभाषी</button>
+          <button class="lang-btn" onclick="setLanguage('en')" id="btnEn">🇬🇧 English</button>
+          <button class="lang-btn" onclick="setLanguage('hi')" id="btnHi">🇮🇳 हिंदी</button>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button class="action-pill-btn" onclick="resetWorksheet()">
+          🔄 Reset All
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 1: THE DAIRY FARM - MILK PRODUCTION & CAN DISTRIBUTION -->
+    <!-- ========================================================================= -->
+    <section class="section-card" id="sec1">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🐄 1. Dairy Milk Yield & Capacity Calculation</span>
+        </div>
+        <span class="section-pill">Page 70–71 • 6 Marks</span>
+      </div>
+
+      <p class="bilingual-text">
+        <span class="en">At the Shanti Milk Cooperative, a dairy cow produces <strong>12 liters</strong> of milk each day, while a Murrah buffalo produces <strong>16 liters</strong> per day. The cooperative collects milk from <strong>15 cows</strong> and <strong>10 buffaloes</strong>.</span>
+        <span class="hi">शांति दुग्ध सहकारी समिति में एक गाय प्रतिदिन <strong>12 लीटर</strong> और एक मुर्रा भैंस <strong>16 लीटर</strong> दूध देती है। डेयरी में <strong>15 गायें</strong> और <strong>10 भैंसें</strong> हैं।</span>
+      </p>
+
+      <!-- Q1.1 -->
+      <div class="q-box" id="qbox-1">
+        <div class="q-header">
+          <span class="q-num">Q1.1</span>
+          <div class="q-prompt">
+            <span class="en">How many total liters of milk do all 15 cows produce in 1 single day?</span>
+            <span class="hi">सभी 15 गायें मिलकर 1 दिन में कुल कितने लीटर दूध देंगी?</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-1" placeholder="Enter Liters" />
+          <button class="check-btn" onclick="checkQ(1, '180', '15 cows × 12 liters/day = 180 Liters (15 × 12 = 180 लीटर)')">Check Answer</button>
+          <button class="hint-btn" onclick="toggleHint(1)">💡 Hint</button>
+        </div>
+        <div class="feedback-msg" id="fb-1"></div>
+        <div class="explanation-box" id="exp-1">
+          <strong>Formula / हल:</strong> Multiply number of cows by daily yield per cow = $15 \times 12 = 180\text{ Liters}$.
+        </div>
+      </div>
+
+      <!-- Q1.2 -->
+      <div class="q-box" id="qbox-2">
+        <div class="q-header">
+          <span class="q-num">Q1.2</span>
+          <div class="q-prompt">
+            <span class="en">How many liters of milk will the 10 buffaloes produce in one full week (7 days)?</span>
+            <span class="hi">10 भैंसें एक पूरे सप्ताह (7 दिनों) में कुल कितने लीटर दूध देंगी?</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-2" placeholder="Enter Liters" />
+          <button class="check-btn" onclick="checkQ(2, '1120', '10 buffaloes × 16 L × 7 days = 160 × 7 = 1,120 Liters (10 × 16 × 7 = 1,120 लीटर)')">Check Answer</button>
+          <button class="hint-btn" onclick="toggleHint(2)">💡 Hint</button>
+        </div>
+        <div class="feedback-msg" id="fb-2"></div>
+        <div class="explanation-box" id="exp-2">
+          <strong>Formula / हल:</strong> 1 day buffalo milk = $10 \times 16 = 160\text{ L}$. In 7 days = $160 \times 7 = 1,120\text{ Liters}$.
+        </div>
+      </div>
+
+      <!-- Q1.3 -->
+      <div class="q-box" id="qbox-3">
+        <div class="q-header">
+          <span class="q-num">Q1.3</span>
+          <div class="q-prompt">
+            <span class="en">The dairy manager has 50-liter storage cans. How many full 50-liter cans are needed to pack 450 liters of milk?</span>
+            <span class="hi">डेयरी प्रबंधक के पास 50-लीटर वाले डिब्बे हैं। 450 लीटर दूध भरने के लिए ऐसे कितने पूरे डिब्बों की आवश्यकता होगी?</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-3" placeholder="Enter Cans" />
+          <button class="check-btn" onclick="checkQ(3, '9', '450 ÷ 50 = 9 Cans (450 को 50 से भाग देने पर 9 डिब्बे आते हैं)')">Check Answer</button>
+          <button class="hint-btn" onclick="toggleHint(3)">💡 Hint</button>
+        </div>
+        <div class="feedback-msg" id="fb-3"></div>
+        <div class="explanation-box" id="exp-3">
+          <strong>Formula / हल:</strong> Total cans = $450 \div 50 = 9\text{ cans}$ (since $9 \times 50 = 450$).
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: PACKAGING BUTTER - ARRAYS & DOUBLING/HALVING MENTAL MATH -->
+    <!-- ========================================================================= -->
+    <section class="section-card" id="sec2">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🧈 2. Packaging Butter & Doubling-Halving Trick</span>
+        </div>
+        <span class="section-pill">Page 72–74 • 6 Marks</span>
+      </div>
+
+      <p class="bilingual-text">
+        <span class="en">Butter packets are packed in trays of <strong>4 rows and 6 columns</strong>. The dairy supervisor uses smart mental math tricks like <em>Doubling and Halving</em> to multiply large orders rapidly without pencil and paper!</span>
+        <span class="hi">मक्खन की टिकियों को <strong>4 पंक्तियों और 6 स्तंभों (कॉलम)</strong> की ट्रे में रखा जाता है। डेयरी सुपरवाइजर बिना कॉपी-पेन के तेज़ी से हिसाब लगाने के लिए <em>दुगना-आधा (Doubling & Halving)</em> तकनीक का प्रयोग करता है।</span>
+      </p>
+
+      <div style="text-align: center; margin-bottom: 14px;">
+        <span style="font-size: 0.78rem; font-weight: 800; color: #f59e0b; text-transform: uppercase;">Visual Butter Tray (4 Rows × 6 Columns = 24 Packets):</span>
+        <div style="display: flex; justify-content: center;">
+          <div class="array-grid-container">
+            <div class="grid-packet">🧈 1</div><div class="grid-packet">🧈 2</div><div class="grid-packet">🧈 3</div><div class="grid-packet">🧈 4</div><div class="grid-packet">🧈 5</div><div class="grid-packet">🧈 6</div>
+            <div class="grid-packet">🧈 7</div><div class="grid-packet">🧈 8</div><div class="grid-packet">🧈 9</div><div class="grid-packet">🧈 10</div><div class="grid-packet">🧈 11</div><div class="grid-packet">🧈 12</div>
+            <div class="grid-packet">🧈 13</div><div class="grid-packet">🧈 14</div><div class="grid-packet">🧈 15</div><div class="grid-packet">🧈 16</div><div class="grid-packet">🧈 17</div><div class="grid-packet">🧈 18</div>
+            <div class="grid-packet">🧈 19</div><div class="grid-packet">🧈 20</div><div class="grid-packet">🧈 21</div><div class="grid-packet">🧈 22</div><div class="grid-packet">🧈 23</div><div class="grid-packet">🧈 24</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2.1 -->
+      <div class="q-box" id="qbox-4">
+        <div class="q-header">
+          <span class="q-num">Q2.1</span>
+          <div class="q-prompt">
+            <span class="en">If 1 tray holds 24 butter packets, how many packets are there in 15 trays? (Hint: Use Doubling & Halving: $24 \times 15 = 12 \times 30$).</span>
+            <span class="hi">यदि 1 ट्रे में 24 मक्खन के पैकेट आते हैं, तो 15 ट्रे में कुल कितने पैकेट होंगे? (संकेत: आधा और दुगुना करें: $24 \times 15 = 12 \times 30$)।</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-4" placeholder="Enter Packets" />
+          <button class="check-btn" onclick="checkQ(4, '360', 'Half of 24 is 12, Double of 15 is 30. 12 × 30 = 360 Packets (360 पैकेट)')">Check Answer</button>
+          <button class="hint-btn" onclick="toggleHint(4)">💡 Hint</button>
+        </div>
+        <div class="feedback-msg" id="fb-4"></div>
+        <div class="explanation-box" id="exp-4">
+          <strong>Doubling-Halving Trick:</strong> $24 \times 15 \rightarrow (24 \div 2) \times (15 \times 2) = 12 \times 30 = 360$.
+        </div>
+      </div>
+
+      <!-- Q2.2 -->
+      <div class="q-box" id="qbox-5">
+        <div class="q-header">
+          <span class="q-num">Q2.2</span>
+          <div class="q-prompt">
+            <span class="en">Solve using Nearest Tens Trick: A shopkeeper buys 19 boxes of cheese slices at ₹8 per box. What is the total cost? (Hint: $(20 - 1) \times 8$).</span>
+            <span class="hi">निकटतम दहाई विधि से हल करें: एक दुकानदार ₹8 प्रति डिब्बे की दर से 19 डिब्बे चीज़ खरीदता है। कुल मूल्य क्या होगा? (संकेत: $(20 - 1) \times 8$)।</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-5" placeholder="₹ Total Amount" />
+          <button class="check-btn" onclick="checkQ(5, '152', '20 × 8 = 160; 160 - 8 = ₹152 (152 रुपये)')">Check Answer</button>
+          <button class="hint-btn" onclick="toggleHint(5)">💡 Hint</button>
+        </div>
+        <div class="feedback-msg" id="fb-5"></div>
+        <div class="explanation-box" id="exp-5">
+          <strong>Nearest Tens Trick:</strong> $19 \times 8 = (20 \times 8) - (1 \times 8) = 160 - 8 = 152$.
+        </div>
+      </div>
+
+      <!-- Q2.3 -->
+      <div class="q-box" id="qbox-6">
+        <div class="q-header">
+          <span class="q-num">Q2.3</span>
+          <div class="q-prompt">
+            <span class="en">Calculate mentally: $16 \times 25$. (Halve 16 and double 25 until you reach 100!).</span>
+            <span class="hi">मौखिक गणना कीजिए: $16 \times 25$ (16 को आधा और 25 को दुगना करते हुए 100 तक पहुँचें!)।</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-6" placeholder="Enter Product" />
+          <button class="check-btn" onclick="checkQ(6, '400', '16 × 25 = 8 × 50 = 4 × 100 = 400!')">Check Answer</button>
+          <button class="hint-btn" onclick="toggleHint(6)">💡 Hint</button>
+        </div>
+        <div class="feedback-msg" id="fb-6"></div>
+        <div class="explanation-box" id="exp-6">
+          <strong>Steps:</strong> $16 \times 25 \rightarrow 8 \times 50 \rightarrow 4 \times 100 = 400$.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: MULTIPLYING BY 10, 100 AND 1,000 -->
+    <!-- ========================================================================= -->
+    <section class="section-card" id="sec3">
+      <div class="section-header">
+        <div class="section-title">
+          <span>⚡ 3. Powers of 10: Multiplications by 10, 100 & 1,000</span>
+        </div>
+        <span class="section-pill">Page 75 • 4 Marks</span>
+      </div>
+
+      <p class="bilingual-text">
+        <span class="en">When multiplying whole numbers by 10, 100, or 1,000, simply annex one, two, or three zeros to the right!</span>
+        <span class="hi">किसी पूर्ण संख्या को 10, 100 या 1000 से गुणा करने पर संख्या के दाईं ओर क्रमशः एक, दो या तीन शून्य जुड़ जाते हैं!</span>
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+        <!-- Q3.1 -->
+        <div class="q-box" id="qbox-7">
+          <div class="q-header">
+            <span class="q-num">Q3.1</span>
+            <div class="q-prompt">
+              <span>$48 \times 100 =$ ?</span>
+            </div>
+          </div>
+          <div class="interactive-row">
+            <input type="number" class="num-input" id="ans-7" placeholder="Answer" />
+            <button class="check-btn" onclick="checkQ(7, '4800', '48 × 100 = 4,800')">Check</button>
+          </div>
+          <div class="feedback-msg" id="fb-7"></div>
+        </div>
+
+        <!-- Q3.2 -->
+        <div class="q-box" id="qbox-8">
+          <div class="q-header">
+            <span class="q-num">Q3.2</span>
+            <div class="q-prompt">
+              <span>$125 \times 1,000 =$ ?</span>
+            </div>
+          </div>
+          <div class="interactive-row">
+            <input type="number" class="num-input" id="ans-8" placeholder="Answer" />
+            <button class="check-btn" onclick="checkQ(8, '125000', '125 × 1,000 = 1,25,000')">Check</button>
+          </div>
+          <div class="feedback-msg" id="fb-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 4: MYSTERY NUMBER & SHAPE PUZZLES -->
+    <!-- ========================================================================= -->
+    <section class="section-card" id="sec4">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🧩 4. "Which Number Am I?" & Shape Puzzles</span>
+        </div>
+        <span class="section-pill">Page 76–77 • 6 Marks</span>
+      </div>
+
+      <!-- Q4.1 Mystery Number -->
+      <div class="q-box" id="qbox-9">
+        <div class="q-header">
+          <span class="q-num">Q4.1</span>
+          <div class="q-prompt">
+            <span class="en"><strong>Riddle 1:</strong> "I am a 2-digit number less than 50. I am an ODD number. I am a multiple of 7. The sum of my two digits is 8. Which number am I?"</span>
+            <span class="hi"><strong>पहेली 1:</strong> "मैं 50 से छोटी दो अंकों की संख्या हूँ। मैं एक विषम (Odd) संख्या हूँ। मैं 7 का गुणज (Multiple) हूँ। मेरे दोनों अंकों का योग 8 है। बताओ मैं कौन हूँ?"</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-9" placeholder="Mystery Number" />
+          <button class="check-btn" onclick="checkQ(9, '35', 'Multiples of 7 under 50: 7, 14, 21, 28, 35, 42, 49. Odd numbers: 7, 21, 35, 49. Sum of digits: 3 + 5 = 8! Number is 35.')">Check Answer</button>
+          <button class="hint-btn" onclick="toggleHint(9)">💡 Hint</button>
+        </div>
+        <div class="feedback-msg" id="fb-9"></div>
+        <div class="explanation-box" id="exp-9">
+          <strong>Steps:</strong> Multiples of 7 are $7, 14, 21, 28, 35, 42, 49$. The odd ones with digit sum 8 are: $35 \rightarrow 3 + 5 = 8$!
+        </div>
+      </div>
+
+      <!-- Q4.2 Shape Equation -->
+      <div class="shape-card">
+        <div style="font-weight: 800; margin-bottom: 8px; color: #818cf8;">
+          Shape Values Challenge (आकृतियों का मान ज्ञात करें):
+        </div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 1.05rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; margin-bottom: 12px;">
+          <span>🟢 × 🟦 = 24</span>
+          <span>🟢 × 🔺 = 18</span>
+          <span>🟦 × 🔺 = 12</span>
+        </div>
+        <p class="bilingual-text">
+          <span class="en">Each shape represents a positive whole number from 1 to 10. Find the values:</span>
+          <span class="hi">प्रत्येक आकृति 1 से 10 तक की एक पूर्ण संख्या को दर्शाती है। मान ज्ञात कीजिए:</span>
+        </p>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
+          <!-- Q4.2 Circle -->
+          <div class="q-box" id="qbox-10" style="flex: 1 1 180px; margin-bottom: 0;">
+            <div class="q-prompt" style="font-size: 0.9rem;">Value of 🟢 (Circle):</div>
+            <div class="interactive-row">
+              <input type="number" class="num-input" style="width: 80px;" id="ans-10" placeholder="🟢" />
+              <button class="check-btn" onclick="checkQ(10, '6', '🟢 = 6 (Since 6 × 4 = 24 and 6 × 3 = 18)')">Check</button>
+            </div>
+            <div class="feedback-msg" id="fb-10"></div>
+          </div>
+
+          <!-- Q4.3 Square -->
+          <div class="q-box" id="qbox-11" style="flex: 1 1 180px; margin-bottom: 0;">
+            <div class="q-prompt" style="font-size: 0.9rem;">Value of 🟦 (Square):</div>
+            <div class="interactive-row">
+              <input type="number" class="num-input" style="width: 80px;" id="ans-11" placeholder="🟦" />
+              <button class="check-btn" onclick="checkQ(11, '4', '🟦 = 4 (Since 6 × 4 = 24 and 4 × 3 = 12)')">Check</button>
+            </div>
+            <div class="feedback-msg" id="fb-11"></div>
+          </div>
+
+          <!-- Q4.4 Triangle -->
+          <div class="q-box" id="qbox-12" style="flex: 1 1 180px; margin-bottom: 0;">
+            <div class="q-prompt" style="font-size: 0.9rem;">Value of 🔺 (Triangle):</div>
+            <div class="interactive-row">
+              <input type="number" class="num-input" style="width: 80px;" id="ans-12" placeholder="🔺" />
+              <button class="check-btn" onclick="checkQ(12, '3', '🔺 = 3 (Since 6 × 3 = 18 and 4 × 3 = 12)')">Check</button>
+            </div>
+            <div class="feedback-msg" id="fb-12"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 5: COOPERATIVE MILK BOOTH BILLING & RATES -->
+    <!-- ========================================================================= -->
+    <section class="section-card" id="sec5">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🧾 5. Milk Booth Cash Memo & Bill Calculation</span>
+        </div>
+        <span class="section-pill">Page 78 • 4 Marks</span>
+      </div>
+
+      <p class="bilingual-text">
+        <span class="en">Ramesh went to the local dairy booth and bought items for his family. Calculate the subtotal for each item and the final cash bill:</span>
+        <span class="hi">रमेश डेयरी बूथ पर गया और अपने परिवार के लिए सामान खरीदा। प्रत्येक वस्तु का कुल मूल्य और अंतिम बिल ज्ञात कीजिए:</span>
+      </p>
+
+      <table class="cash-memo-table">
+        <thead>
+          <tr>
+            <th>Item (सामग्री)</th>
+            <th>Quantity (मात्रा)</th>
+            <th>Rate (दर)</th>
+            <th>Amount (रुपये)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Full Cream Milk (दूध)</strong></td>
+            <td>4 Liters</td>
+            <td>₹54 / Liter</td>
+            <td>
+              <input type="number" class="num-input" style="width: 100px;" id="ans-13" placeholder="₹ Amount" />
+              <button class="check-btn" style="padding: 4px 10px; font-size: 0.75rem;" onclick="checkQ(13, '216', '4 × ₹54 = ₹216')">✓</button>
+              <span id="fb-13" style="font-size: 0.78rem; font-weight: 800;"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Pure Cow Desi Ghee (देसी घी)</strong></td>
+            <td>2 Kilograms</td>
+            <td>₹650 / Kg</td>
+            <td>
+              <input type="number" class="num-input" style="width: 100px;" id="ans-14" placeholder="₹ Amount" />
+              <button class="check-btn" style="padding: 4px 10px; font-size: 0.75rem;" onclick="checkQ(14, '1300', '2 × ₹650 = ₹1,300')">✓</button>
+              <span id="fb-14" style="font-size: 0.78rem; font-weight: 800;"></span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Fresh Paneer (पनीर)</strong></td>
+            <td>0.5 Kg (500 grams)</td>
+            <td>₹360 / Kg</td>
+            <td>
+              <input type="number" class="num-input" style="width: 100px;" id="ans-15" placeholder="₹ Amount" />
+              <button class="check-btn" style="padding: 4px 10px; font-size: 0.75rem;" onclick="checkQ(15, '180', 'Half of ₹360 = ₹180')">✓</button>
+              <span id="fb-15" style="font-size: 0.78rem; font-weight: 800;"></span>
+            </td>
+          </tr>
+          <tr style="background: rgba(20, 184, 166, 0.1); font-weight: 900;">
+            <td colspan="3" style="text-align: right; font-size: 1rem;">GRAND TOTAL (कुल योग):</td>
+            <td>
+              <input type="number" class="num-input" style="width: 120px;" id="ans-16" placeholder="₹ Grand Total" />
+              <button class="check-btn" style="padding: 6px 12px; font-size: 0.8rem;" onclick="checkQ(16, '1696', '₹216 + ₹1300 + ₹180 = ₹1,696')">Verify Total</button>
+              <div id="fb-16" style="margin-top: 4px;"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 6: THE CAT & MOUSE GAME & COMMON MULTIPLES -->
+    <!-- ========================================================================= -->
+    <section class="section-card" id="sec6">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🐱🐭 6. The Cat and Mouse Jump Game (Common Multiples)</span>
+        </div>
+        <span class="section-pill">NCERT Classic Extension • 4 Marks</span>
+      </div>
+
+      <p class="bilingual-text">
+        <span class="en">A hungry cat starts at step <strong>3</strong> and jumps <strong>3 steps</strong> at a time ($3, 6, 9, 12...$). A smart mouse starts at step <strong>14</strong> and jumps <strong>2 steps</strong> at a time ($14, 16, 18...$). The safe mouse hole is at step <strong>28</strong>!</span>
+        <span class="hi">एक भूखी बिल्ली <strong>3</strong> पर है और हर बार <strong>3 कदम</strong> कूदती है ($3, 6, 9...$)। चूहा <strong>14</strong> पर है और हर बार <strong>2 कदम</strong> कूदता है। चूहे का सुरक्षित बिल कदम संख्या <strong>28</strong> पर है!</span>
+      </p>
+
+      <!-- Stepping stones visual strip -->
+      <div style="margin: 12px 0;">
+        <div style="font-size: 0.78rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px;">Number Track (Steps 1 to 28):</div>
+        <div class="leap-line">
+          <div class="leap-step">1</div><div class="leap-step">2</div>
+          <div class="leap-step cat-step" title="Cat: 3">3🐱</div>
+          <div class="leap-step">4</div><div class="leap-step">5</div>
+          <div class="leap-step cat-step" title="Cat: 6">6🐱</div>
+          <div class="leap-step">7</div><div class="leap-step">8</div>
+          <div class="leap-step cat-step" title="Cat: 9">9🐱</div>
+          <div class="leap-step">10</div><div class="leap-step">11</div>
+          <div class="leap-step cat-step" title="Cat: 12">12🐱</div>
+          <div class="leap-step">13</div>
+          <div class="leap-step mouse-step" title="Mouse: 14">14🐭</div>
+          <div class="leap-step cat-step" title="Cat: 15">15🐱</div>
+          <div class="leap-step mouse-step" title="Mouse: 16">16🐭</div>
+          <div class="leap-step">17</div>
+          <div class="leap-step both-step" title="Both Cat & Mouse: 18!">18⚠️</div>
+          <div class="leap-step">19</div>
+          <div class="leap-step mouse-step" title="Mouse: 20">20🐭</div>
+          <div class="leap-step cat-step" title="Cat: 21">21🐱</div>
+          <div class="leap-step mouse-step" title="Mouse: 22">22🐭</div>
+          <div class="leap-step">23</div>
+          <div class="leap-step both-step" title="Both Cat & Mouse: 24!">24⚠️</div>
+          <div class="leap-step">25</div>
+          <div class="leap-step mouse-step" title="Mouse: 26">26🐭</div>
+          <div class="leap-step cat-step" title="Cat: 27">27🐱</div>
+          <div class="leap-step mouse-step" style="border: 2px solid #00e676;" title="Safe Hole: 28">28🕳️</div>
+        </div>
+      </div>
+
+      <!-- Q6.1 -->
+      <div class="q-box" id="qbox-17">
+        <div class="q-header">
+          <span class="q-num">Q6.1</span>
+          <div class="q-prompt">
+            <span class="en">What is the FIRST common step on which BOTH the cat and mouse land?</span>
+            <span class="hi">वह पहला उभयनिष्ठ (Common) कदम कौन सा है जिस पर बिल्ली और चूहा दोनों कदम रखते हैं?</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-17" placeholder="Step Number" />
+          <button class="check-btn" onclick="checkQ(17, '18', 'Both land on step 18 (Mouse: 14->16->18; Cat: 3->6->9->12->15->18)')">Check Answer</button>
+        </div>
+        <div class="feedback-msg" id="fb-17"></div>
+      </div>
+
+      <!-- Q6.2 Factor Tree -->
+      <div class="q-box" id="qbox-18">
+        <div class="q-header">
+          <span class="q-num">Q6.2</span>
+          <div class="q-prompt">
+            <span class="en">In a factor tree of <strong>24</strong>, if the top branches are $4 \times 6$, what are the two prime factors branching out of <strong>4</strong>? Enter the prime factor:</span>
+            <span class="hi">संख्या <strong>24</strong> के गुणनखंड वृक्ष (Factor Tree) में यदि शाखाएँ $4 \times 6$ हैं, तो <strong>4</strong> की दो शाखाओं में कौन सा अभाज्य अंक आएगा?</span>
+          </div>
+        </div>
+        <div class="interactive-row">
+          <input type="number" class="num-input" id="ans-18" placeholder="Factor" />
+          <button class="check-btn" onclick="checkQ(18, '2', '4 branches into 2 × 2! (4 = 2 × 2)')">Check Answer</button>
+        </div>
+        <div class="feedback-msg" id="fb-18"></div>
+      </div>
+    </section>
+
+    <!-- Completion / Confetti Card -->
+    <div id="completionBanner" style="display: none; background: linear-gradient(135deg, #064e3b 0%, #065f46 100%); border: 2px solid #10b981; border-radius: 18px; padding: 24px; text-align: center; color: #ffffff; margin-top: 24px; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
+      <h2 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 8px;">🎉 Outstanding! You Completed Chapter 6 Worksheet!</h2>
+      <p style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 16px;">
+        You've demonstrated exceptional mastery in multiplication strategies, dairy yields, doubling-halving mental math, and factor trees!
+      </p>
+      <button class="action-pill-btn primary" onclick="window.print()" style="font-size: 0.9rem; padding: 10px 20px;">
+        🖨️ Print Your Solved A4 Certificate Sheet
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    // State management
+    const state = {
+      score: 0,
+      maxScore: 30,
+      solved: {},
+      isDark: true
+    };
+
+    // Load theme
+    function initTheme() {
+      const savedDark = localStorage.getItem('nextsem_dark_mode') !== 'false';
+      state.isDark = savedDark;
+      applyTheme(savedDark);
+    }
+
+    function toggleTheme() {
+      state.isDark = !state.isDark;
+      localStorage.setItem('nextsem_dark_mode', String(state.isDark));
+      localStorage.setItem('theme', state.isDark ? 'dark' : 'light');
+      applyTheme(state.isDark);
+    }
+
+    function applyTheme(isDark) {
+      const themeBtn = document.getElementById('themeBtn');
+      if (isDark) {
+        document.body.classList.remove('light-theme');
+        if (themeBtn) themeBtn.innerHTML = '🌙 Dark';
+      } else {
+        document.body.classList.add('light-theme');
+        if (themeBtn) themeBtn.innerHTML = '☀️ Light';
+      }
+    }
+
+    // Language Toggle
+    function setLanguage(mode) {
+      document.getElementById('btnBi').classList.toggle('active', mode === 'bilingual');
+      document.getElementById('btnEn').classList.toggle('active', mode === 'en');
+      document.getElementById('btnHi').classList.toggle('active', mode === 'hi');
+
+      const ens = document.querySelectorAll('.en');
+      const his = document.querySelectorAll('.hi');
+
+      if (mode === 'en') {
+        ens.forEach(el => el.style.display = 'inline');
+        his.forEach(el => el.style.display = 'none');
+      } else if (mode === 'hi') {
+        ens.forEach(el => el.style.display = 'none');
+        his.forEach(el => el.style.display = 'inline');
+      } else {
+        ens.forEach(el => el.style.display = 'inline');
+        his.forEach(el => el.style.display = 'block');
+      }
+    }
+
+    // Check Question Handler
+    function checkQ(qNum, correctVal, explanation) {
+      const input = document.getElementById('ans-' + qNum);
+      const fb = document.getElementById('fb-' + qNum);
+      const qbox = document.getElementById('qbox-' + qNum);
+      if (!input || !fb) return;
+
+      const userVal = input.value.trim().replace(/,/g, '');
+      const expected = String(correctVal).trim().replace(/,/g, '');
+
+      if (userVal === expected) {
+        fb.innerHTML = '✅ Correct! ' + explanation;
+        fb.className = 'feedback-msg correct';
+        if (qbox) {
+          qbox.classList.remove('wrong');
+          qbox.classList.add('correct');
+        }
+
+        if (!state.solved[qNum]) {
+          state.solved[qNum] = true;
+          // Weighted scoring
+          let pts = 2;
+          if (qNum <= 6) pts = 2;
+          else if (qNum <= 8) pts = 1;
+          else pts = 1.5;
+          state.score = Math.min(state.maxScore, Math.round(state.score + pts));
+          updateScoreDisplay();
+          triggerMiniConfetti();
+        }
+      } else {
+        fb.innerHTML = '❌ Not quite. Double-check your calculation!';
+        fb.className = 'feedback-msg wrong';
+        if (qbox) {
+          qbox.classList.remove('correct');
+          qbox.classList.add('wrong');
+        }
+      }
+    }
+
+    function toggleHint(qNum) {
+      const exp = document.getElementById('exp-' + qNum);
+      if (exp) {
+        exp.style.display = exp.style.display === 'block' ? 'none' : 'block';
+      }
+    }
+
+    function updateScoreDisplay() {
+      const el = document.getElementById('liveScore');
+      const rank = document.getElementById('badgeRank');
+      if (el) el.innerText = `${state.score} / ${state.maxScore}`;
+
+      if (rank) {
+        if (state.score >= 26) {
+          rank.innerText = '🏆 Dairy Math Master!';
+          rank.style.color = '#f59e0b';
+        } else if (state.score >= 16) {
+          rank.innerText = '⭐ Junior Multiplier';
+          rank.style.color = '#14b8a6';
+        } else {
+          rank.innerText = '🌱 Math Explorer';
+        }
+      }
+
+      if (state.score >= state.maxScore) {
+        const banner = document.getElementById('completionBanner');
+        if (banner) banner.style.display = 'block';
+        confetti({
+          particleCount: 120,
+          spread: 80,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    function triggerMiniConfetti() {
+      confetti({
+        particleCount: 25,
+        spread: 45,
+        origin: { y: 0.7 }
+      });
+    }
+
+    function resetWorksheet() {
+      state.score = 0;
+      state.solved = {};
+      document.querySelectorAll('.num-input').forEach(i => i.value = '');
+      document.querySelectorAll('.feedback-msg').forEach(f => f.innerHTML = '');
+      document.querySelectorAll('.explanation-box').forEach(e => e.style.display = 'none');
+      document.querySelectorAll('.q-box').forEach(q => q.classList.remove('correct', 'wrong'));
+      updateScoreDisplay();
+      const banner = document.getElementById('completionBanner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    // Init
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 7 Science Curiosity Ch 7: Heat Transfer in Nature — 20 High-Yield Exam MCQs (Bilingual)</title>
+  <meta name="description" content="20 Comprehensive Bilingual MCQs for NCERT Class 7 Science Curiosity Chapter 7: Heat Transfer in Nature (प्रकृति में ऊष्मा का स्थानांतरण). Conduction, Convection, Radiation, Land & Sea Breeze, Infiltration & Ice Stupas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #060c18;
+      --card-bg: #0c1328;
+      --card-border: rgba(16, 185, 129, 0.25);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-emerald: #10b981;
+      --accent-cyan: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-orange: #f97316;
+      --accent-red: #ef4444;
+      --header-surface: rgba(6, 12, 24, 0.95);
+      --font-body: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: rgba(16, 185, 129, 0.3);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-emerald: #059669;
+      --accent-cyan: #0284c7;
+      --accent-gold: #d97706;
+      --accent-orange: #ea580c;
+      --accent-red: #dc2626;
+      --header-surface: rgba(255, 255, 255, 0.95);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
+
+    /* Top Breadcrumb Bar */
+    .top-breadcrumb-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb-trail a {
+      color: var(--accent-emerald);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .breadcrumb-trail a:hover {
+      text-decoration: underline;
+      color: var(--accent-cyan);
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    .breadcrumb-current {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill-btn {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .pill-btn:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--accent-emerald);
+      transform: translateY(-1px);
+    }
+
+    .pill-btn.active {
+      background: var(--accent-emerald);
+      color: #ffffff;
+      border-color: var(--accent-emerald);
+    }
+
+    /* Container */
+    .main-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(12, 19, 40, 0.95) 0%, rgba(6, 78, 59, 0.85) 100%);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 36px rgba(16, 185, 129, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid var(--accent-emerald);
+      color: var(--accent-emerald);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .hero-subtitle {
+      font-size: 0.96rem;
+      color: #cbd5e1;
+      max-width: 760px;
+      margin-bottom: 18px;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .stat-chip {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #e2e8f0;
+    }
+
+    /* Scoreboard Deck */
+    .scoreboard-deck {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .score-box {
+      text-align: center;
+      padding: 10px 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .score-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .score-val {
+      font-family: var(--font-mono);
+      font-size: 1.45rem;
+      font-weight: 900;
+    }
+
+    .score-correct { color: var(--accent-emerald); }
+    .score-wrong { color: var(--accent-red); }
+    .score-pending { color: var(--accent-cyan); }
+    .score-pct { color: var(--accent-gold); }
+
+    /* Control Toolbar */
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 12px 16px;
+      border-radius: 14px;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: var(--accent-emerald);
+      color: var(--accent-emerald);
+    }
+
+    /* MCQ Question Card */
+    .mcq-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 22px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+      position: relative;
+    }
+
+    .mcq-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .mcq-qnum {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      font-family: var(--font-mono);
+    }
+
+    .mcq-topic-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .mcq-text-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+
+    .mcq-text-hi {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    /* Options Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .opt-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-main);
+      position: relative;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateX(4px);
+    }
+
+    .opt-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .opt-content {
+      flex: 1;
+    }
+
+    .opt-en {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .opt-hi {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Option States */
+    .opt-btn.correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: var(--accent-emerald) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.3);
+    }
+
+    .opt-btn.correct .opt-badge {
+      background: var(--accent-emerald);
+      color: #ffffff;
+    }
+
+    .opt-btn.wrong {
+      background: rgba(239, 68, 68, 0.15) !important;
+      border-color: var(--accent-red) !important;
+    }
+
+    .opt-btn.wrong .opt-badge {
+      background: var(--accent-red);
+      color: #ffffff;
+    }
+
+    /* Explanation Drawer */
+    .solution-drawer {
+      display: none;
+      margin-top: 14px;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--accent-emerald);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .solution-drawer.open {
+      display: block;
+    }
+
+    .sol-heading {
+      font-weight: 800;
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+
+    .sol-text-en {
+      color: var(--text-main);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .sol-text-hi {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .takeaway-pill {
+      margin-top: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px dashed var(--accent-gold);
+      padding: 6px 12px;
+      border-radius: 8px;
+      color: var(--accent-gold);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* Footer Bottom Actions */
+    .bottom-floating-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--header-surface);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--card-border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .hero-title { font-size: 1.35rem; }
+      .top-breadcrumb-bar { font-size: 0.78rem; }
+      .options-grid { gap: 8px; }
+      .opt-btn { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- Top Breadcrumb Bar -->
+  <header class="top-breadcrumb-bar">
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+      <a href="/?view=classes">🏠 Home</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=7">Grade 7</a>
+      <span class="breadcrumb-separator">❯</span>
+      <a href="/?class=7&subject=c7-science&book=curiosity">Science (Curiosity)</a>
+      <span class="breadcrumb-separator">❯</span>
+      <span class="breadcrumb-current">Chapter 7: Heat Transfer in Nature (MCQs)</span>
+    </nav>
+    <div class="top-actions">
+      <button class="pill-btn" onclick="toggleLanguage('en')" id="lang-en-btn">English</button>
+      <button class="pill-btn" onclick="toggleLanguage('hi')" id="lang-hi-btn">हिंदी</button>
+      <button class="pill-btn active" onclick="toggleLanguage('bi')" id="lang-bi-btn">Bilingual</button>
+      <button class="pill-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle Light/Dark Theme">🌙 Theme</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-container">
+
+    <!-- Hero Header -->
+    <section class="hero-card">
+      <div class="hero-badge">NCERT Curiosity • Grade 7 Science</div>
+      <h1 class="hero-title">Chapter 7: Heat Transfer in Nature</h1>
+      <p class="hero-subtitle">
+        अध्याय 7: प्रकृति में ऊष्मा का स्थानांतरण — 20 High-Yield Exam Multiple Choice Questions covering Conduction, Convection, Radiation, Land & Sea Breezes, Infiltration, Aquifers & Ice Stupas.
+      </p>
+      <div class="hero-stats">
+        <span class="stat-chip">📖 20 Exam Questions</span>
+        <span class="stat-chip">⚡ Instant Solutions &amp; Key Takeaways</span>
+        <span class="stat-chip">🌐 Bilingual (English + हिन्दी)</span>
+        <span class="stat-chip">🏆 NEP 2026–27 Rationalized</span>
+      </div>
+    </section>
+
+    <!-- Scoreboard Deck -->
+    <div class="scoreboard-deck">
+      <div class="score-box">
+        <div class="score-label">Total Questions</div>
+        <div class="score-val" id="total-q">20</div>
+      </div>
+      <div class="score-box">
+        <div class="score-label">Correct</div>
+        <div class="score-val score-correct" id="score-correct">0</div>
+      </div>
+      <div class="score-box">
+        <div class="score-label">Incorrect</div>
+        <div class="score-val score-wrong" id="score-wrong">0</div>
+      </div>
+      <div class="score-box">
+        <div class="score-label">Unattempted</div>
+        <div class="score-val score-pending" id="score-pending">20</div>
+      </div>
+      <div class="score-box">
+        <div class="score-label">Accuracy</div>
+        <div class="score-val score-pct" id="score-pct">0%</div>
+      </div>
+    </div>
+
+    <!-- Controls Filter Bar -->
+    <div class="controls-bar">
+      <div class="filter-group">
+        <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-right: 6px;">Filter Topic:</span>
+        <button class="filter-btn active" onclick="filterCategory('ALL')">All (20)</button>
+        <button class="filter-btn" onclick="filterCategory('CONDUCTION')">Conduction</button>
+        <button class="filter-btn" onclick="filterCategory('CONVECTION')">Convection &amp; Breeze</button>
+        <button class="filter-btn" onclick="filterCategory('RADIATION')">Radiation</button>
+        <button class="filter-btn" onclick="filterCategory('WATER_CYCLE')">Water Cycle &amp; Seepage</button>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button class="pill-btn" onclick="shuffleAllOptions()" title="Randomly shuffle all question choices">🔀 Reshuffle Options</button>
+        <button class="pill-btn" onclick="resetQuiz()">🔄 Retake Quiz</button>
+      </div>
+    </div>
+
+    <!-- Questions Container -->
+    <div id="questions-list"></div>
+
+  </main>
+
+  <!-- Bottom Floating Bar -->
+  <div class="bottom-floating-bar">
+    <a href="/?class=7&subject=c7-science&book=curiosity" class="pill-btn">
+      ⬅ Back to Curiosity Chapters
+    </a>
+    <div style="display: flex; gap: 8px;">
+      <button class="pill-btn" onclick="window.print()">🖨️ Print Worksheet</button>
+      <a href="https://ncert.nic.in/textbook/pdf/gecu107.pdf" target="_blank" rel="noopener noreferrer" class="pill-btn active">
+        📖 Open Official NCERT PDF (gecu107) ↗
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // 20 High-Yield MCQs from NCERT Class 7 Science Chapter 7
+    // Perfectly reshuffled: 5 A's, 5 B's, 5 C's, and 5 D's
+    const mcqData = [
+      {
+        id: 1,
+        category: 'CONDUCTION',
+        qNum: 'Q1 • Food & Metals',
+        textEn: 'Why are cooking utensils (such as the pan used to make thukpa) generally made of metals?',
+        textHi: 'खाना पकाने के बर्तन (जैसे थुकपा पकाने की कड़ाही) प्रायः धातुओं के क्यों बनाए जाते हैं?',
+        options: [
+          { en: 'Metals are good conductors of heat and transfer heat quickly', hi: 'धातुएँ ऊष्मा की सुचालक होती हैं और ऊष्मा को तेजी से पहुँचाती हैं' },
+          { en: 'Metals are poor conductors and prevent food from burning', hi: 'धातुएँ कुचालक होती हैं और भोजन को जलने से बचाती हैं' },
+          { en: 'Metals radiate heat without absorbing any warmth', hi: 'धातुएँ बिना ऊष्मा अवशोषित किए केवल विकिरण करती हैं' },
+          { en: 'Metals transfer heat solely through convection currents', hi: 'धातुएँ केवल संवहन धाराओं द्वारा ऊष्मा स्थानांतरित करती हैं' }
+        ],
+        correct: 0, // A
+        solEn: 'Metals like aluminium, iron, and copper are good conductors of heat, which allows heat from the stove flame to pass quickly and evenly to the food.',
+        solHi: 'एल्युमिनियम, लोहा और तांबे जैसी धातुएँ ऊष्मा की सुचालक होती हैं, जो चूल्हे की ज्वाला से ऊष्मा को भोजन तक तेजी से पहुँचाती हैं।',
+        takeaway: 'Good Conductors (सुचालक): Materials that allow heat to pass through them easily.'
+      },
+      {
+        id: 2,
+        category: 'CONDUCTION',
+        qNum: 'Q2 • Activity 7.1 Observation',
+        textEn: 'In Activity 7.1 with a metal strip and candle, why does Pin I (closest to the flame) fall first before Pins II, III, and IV?',
+        textHi: 'मोमबत्ती और धातु की पट्टी वाले प्रयोग (क्रियाकलाप 7.1) में, लौ के सबसे पास वाली पिन I अन्य पिनों (II, III, IV) से पहले क्यों गिरती है?',
+        options: [
+          { en: 'Pins II, III, and IV are glued with permanent adhesive', hi: 'पिन II, III और IV स्थायी गोंद से चिपकी होती हैं' },
+          { en: 'Convection currents directly lift Pin I away from the strip', hi: 'संवहन धाराएं पिन I को सीधे पट्टी से अलग कर देती हैं' },
+          { en: 'Heat travels progressively along the metal strip from the hot end to the colder end, melting the wax at Pin I first', hi: 'ऊष्मा धातु की पट्टी में गर्म सिरे से ठंडे सिरे की ओर बढ़ती है, जिससे पिन I का मोम सबसे पहले पिघलता है' },
+          { en: 'Pin I is pulled by greater gravitational force', hi: 'पिन I पर अधिक गुरुत्वाकर्षण बल लगता है' }
+        ],
+        correct: 2, // C
+        solEn: 'Heat transfer in solids takes place along the material from the hotter end to the colder end. As heat reaches each pin, the wax holding it melts sequentially.',
+        solHi: 'ठोस पदार्थों में ऊष्मा गर्म सिरे से ठंडे सिरे की ओर क्रमिक रूप से यात्रा करती है। जैसे-जैसे ऊष्मा पहुँचती है, मोम पिघलकर पिनों को गिरा देता है।',
+        takeaway: 'Conduction Direction (चालन की दिशा): Always from hotter part to colder part.'
+      },
+      {
+        id: 3,
+        category: 'CONDUCTION',
+        qNum: 'Q3 • Conduction Definition',
+        textEn: 'What happens to the individual particles of a solid substance during heat transfer by conduction?',
+        textHi: 'चालन (Conduction) द्वारा ऊष्मा स्थानांतरण के दौरान किसी ठोस पदार्थ के कणों की क्या स्थिति होती है?',
+        options: [
+          { en: 'Particles move rapidly from the hot end to the cold end carrying heat', hi: 'कण ऊष्मा लेकर तेजी से गर्म सिरे से ठंडे सिरे की ओर जाते हैं' },
+          { en: 'Particles convert directly into gas vapor', hi: 'कण सीधे वाष्प में बदल जाते हैं' },
+          { en: 'Particles expand and float in air currents', hi: 'कण फैलकर हवा की धाराओं में तैरने लगते हैं' },
+          { en: 'Particles vibrate and transfer heat to adjacent particles without leaving their fixed positions', hi: 'कण अपने स्थान को छोड़े बिना अपने पड़ोसी कणों को ऊष्मा स्थानांतरित करते हैं' }
+        ],
+        correct: 3, // D
+        solEn: 'In conduction, each heated particle passes thermal energy to its neighbor through vibrations. The particles themselves do NOT move away from their positions.',
+        solHi: 'चालन में कण अपने स्थान से हटे बिना केवल कंपनों द्वारा अपने निकटवर्ती पड़ोसी कणों को ऊष्मा सौंपते हैं।',
+        takeaway: 'Conduction Key Feature: Heat flows without physical displacement of particles.'
+      },
+      {
+        id: 4,
+        category: 'CONDUCTION',
+        qNum: 'Q4 • Insulators & Crockery',
+        textEn: 'Why do we prefer drinking hot tea or coffee from clay or porcelain cups rather than metal cups?',
+        textHi: 'हम गर्म चाय या कॉफी पीने के लिए धातु के कपों की तुलना में मिट्टी या चीनी मिट्टी के कपों को प्राथमिकता क्यों देते हैं?',
+        options: [
+          { en: 'Clay cups conduct heat faster than iron and steel', hi: 'मिट्टी के कप लोहे और स्टील से भी तेजी से ऊष्मा का चालन करते हैं' },
+          { en: 'Clay and porcelain are poor conductors (insulators), keeping the tea hot longer and preventing our lips/hands from burning', hi: 'मिट्टी और चीनी मिट्टी ऊष्मा के कुचालक हैं, जिससे चाय देर तक गर्म रहती है और हाथ/होंठ नहीं जलते' },
+          { en: 'Clay and porcelain are good conductors that cool the beverage instantly', hi: 'मिट्टी और चीनी मिट्टी सुचालक हैं जो पेय को तुरंत ठंडा करते हैं' },
+          { en: 'Metal cups absorb all tea flavor through chemical reaction', hi: 'धातु के कप रासायनिक क्रिया द्वारा चाय का सारा स्वाद सोख लेते हैं' }
+        ],
+        correct: 1, // B
+        solEn: 'Clay, porcelain, glass, and wood are poor conductors (insulators) of heat. They reduce the rate of heat loss from hot liquids and prevent the outer cup surface from becoming dangerously hot.',
+        solHi: 'मिट्टी और पोर्सिलेन ऊष्मा के कुचालक होते हैं। वे ऊष्मा को बाहर जाने से रोकते हैं, जिससे पेय गर्म रहता है और कप छूने में अत्यधिक गर्म नहीं लगता।',
+        takeaway: 'Insulators (कुचालक): Materials that do not allow heat to pass through easily.'
+      },
+      {
+        id: 5,
+        category: 'CONDUCTION',
+        qNum: 'Q5 • Winter Clothing Science',
+        textEn: 'Why do two thin blankets keep us warmer than one thick blanket of identical total thickness?',
+        textHi: 'सर्दियों में समान मोटाई के एक मोटे कंबल की तुलना में दो पतले कंबल हमें अधिक गर्म क्यों रखते हैं?',
+        options: [
+          { en: 'A layer of air is trapped between the two blankets, and air is a poor conductor of heat', hi: 'दोनों कंबलों के बीच वायु की एक परत फंस जाती है, और वायु ऊष्मा की कुचालक होती है' },
+          { en: 'Two blankets conduct cold air directly to the bed', hi: 'दो कंबल ठंडी हवा का सीधे बिस्तर पर चालन करते हैं' },
+          { en: 'Two blankets generate additional friction electricity', hi: 'दो कंबल अतिरिक्त घर्षण विद्युत उत्पन्न करते हैं' },
+          { en: 'Thin blankets absorb more moonlight at night', hi: 'पतले कंबल रात में अधिक चाँदनी अवशोषित करते हैं' }
+        ],
+        correct: 0, // A
+        solEn: 'Air is a very poor conductor of heat. The layer of air trapped between two thin blankets acts as an effective thermal insulator, preventing our body heat from escaping.',
+        solHi: 'हवा ऊष्मा की बहुत खराब चालक (कुचालक) है। दो कंबलों के बीच फंसी हवा की परत शरीर की गर्मी को बाहर जाने से रोकती है।',
+        takeaway: 'Trapped Air (फंसी हुई वायु): One of the best natural insulators in blankets & woollens.'
+      },
+      {
+        id: 6,
+        category: 'CONDUCTION',
+        qNum: 'Q6 • Himalayan Vernacular Architecture',
+        textEn: 'In the Mori block of Uttarkashi (Uttarakhand), houses are built with double wooden walls filled with mud and cow dung because:',
+        textHi: 'उत्तरकाशी (उत्तराखंड) के मोरी ब्लॉक में घरों की दीवारें लकड़ी की दोहरी परतों और बीच में मिट्टी व गोबर भरकर क्यों बनाई जाती हैं?',
+        options: [
+          { en: 'Mud increases radiation of heat from the roof', hi: 'मिट्टी छत से ऊष्मा के विकिरण को बढ़ा देती है' },
+          { en: 'Wood and mud conduct outside cold inside very fast', hi: 'लकड़ी और मिट्टी बाहर की ठंड को अंदर तेजी से पहुँचाती हैं' },
+          { en: 'Wood, mud, and cow dung are poor conductors of heat, preventing indoor heat loss during harsh winters', hi: 'लकड़ी, मिट्टी और गोबर ऊष्मा के कुचालक हैं, जो भीषण सर्दियों में घर की गर्मी को बाहर जाने से रोकते हैं' },
+          { en: 'They make the houses heavy enough to stop earth rotation', hi: 'वे घरों को इतना भारी बनाते हैं कि पृथ्वी की गति रुक सके' }
+        ],
+        correct: 2, // C
+        solEn: 'Uttarkashi experiences heavy snowfall. As wood and mud are poor conductors of heat, they trap warmth generated inside and prevent winter heat loss.',
+        solHi: 'लकड़ी और मिट्टी ऊष्मा के कुचालक होते हैं। वे भीतर की गर्मी को बाहर नहीं निकलने देते, जिससे कमरे कड़ाके की ठंड में भी गर्म बने रहते हैं।',
+        takeaway: 'Traditional Architecture: Uses natural poor conductors (wood & mud) for thermal insulation.'
+      },
+      {
+        id: 7,
+        category: 'CONDUCTION',
+        qNum: 'Q7 • Modern Construction Materials',
+        textEn: 'Why are hollow bricks used to construct the outer walls of modern houses in hot and cold regions?',
+        textHi: 'गर्म और ठंडे क्षेत्रों में आधुनिक घरों की बाहरी दीवारों के निर्माण में खोखली ईंटों (Hollow Bricks) का उपयोग क्यों किया जाता है?',
+        options: [
+          { en: 'The hollow cavities allow rainwater to flow freely through the walls', hi: 'खोखले हिस्से बारिश के पानी को दीवारों से बहने देते हैं' },
+          { en: 'Hollow bricks absorb solar ultraviolet radiation permanently', hi: 'खोखली ईंटें सौर पराबैंगनी किरणों को हमेशा के लिए सोख लेती हैं' },
+          { en: 'Hollow bricks conduct heat 10 times faster than solid concrete', hi: 'खोखली ईंटें ठोस कंक्रीट से 10 गुना तेजी से ऊष्मा का चालन करती हैं' },
+          { en: 'Air trapped inside the hollow cavities acts as a poor conductor of heat, keeping houses cool in summer and warm in winter', hi: 'खोखले हिस्सों में फंसी वायु ऊष्मा की कुचालक होती है, जो गर्मियों में घर को ठंडा और सर्दियों में गर्म रखती है' }
+        ],
+        correct: 3, // D
+        solEn: 'The air trapped inside hollow bricks serves as a thermal barrier because air is a poor conductor of heat. It minimizes unwanted heat entry in summer and heat loss in winter.',
+        solHi: 'खोखली ईंटों के अंदर मौजूद हवा ऊष्मा की कुचालक होती है। यह गर्मियों में बाहर की गर्मी को अंदर और सर्दियों में अंदर की गर्मी को बाहर जाने से रोकती है।',
+        takeaway: 'Hollow Brick Efficiency: Air cavity thermal insulation.'
+      },
+      {
+        id: 8,
+        category: 'CONVECTION',
+        qNum: 'Q8 • Activity 7.2 Hot Air Physics',
+        textEn: 'In Activity 7.2, when a burning candle is placed under an inverted paper cup suspended from a stick, what happens and why?',
+        textHi: 'क्रियाकलाप 7.2 में, जब डंडी पर लटके उल्टे कागज़ के कप के नीचे जलती मोमबत्ती रखी जाती है, तो क्या होता है और क्यों?',
+        options: [
+          { en: 'The cup sinks downward because hot air becomes dense and heavy', hi: 'कप नीचे झुक जाता है क्योंकि गर्म हवा सघन और भारी हो जाती है' },
+          { en: 'The cup rises up because air inside warms, expands, becomes lighter, and rises', hi: 'कप ऊपर उठता है क्योंकि अंदर की हवा गर्म होकर फैलती है, हल्की होती है और ऊपर उठती है' },
+          { en: 'The stick catches fire immediately due to radiation', hi: 'डंडी विकिरण के कारण तुरंत आग पकड़ लेती है' },
+          { en: 'Both cups stay perfectly still with zero movement', hi: 'दोनों कप बिना किसी हलचल के बिल्कुल स्थिर रहते हैं' }
+        ],
+        correct: 1, // B
+        solEn: 'On heating, air particles gain kinetic energy, expand, and become less dense (lighter). The rising warm air exerts an upward push on the paper cup.',
+        solHi: 'गर्म होने पर हवा के कण फैलते हैं और उनका घनत्व कम हो जाता है (हल्की हो जाती है)। यह ऊपर उठती गर्म हवा कप को ऊपर धकेल देती है।',
+        takeaway: 'Hot Air Rises: Expansion on heating makes warm air lighter than surrounding cold air.'
+      },
+      {
+        id: 9,
+        category: 'CONVECTION',
+        qNum: 'Q9 • Activity 7.3 Liquid Convection',
+        textEn: 'In Activity 7.3, when water with a potassium permanganate crystal is heated from below, why does a colored streak rise in the middle and descend along the sides?',
+        textHi: 'क्रियाकलाप 7.3 में, जब पोटैशियम परमैंगनेट वाले पानी को नीचे से गर्म किया जाता है, तो रंगीन धार बीच से ऊपर उठकर किनारों से नीचे क्यों आती है?',
+        options: [
+          { en: 'Water at the bottom warms, expands, becomes lighter and rises; cooler, denser water at the sides sinks to take its place', hi: 'तली का पानी गर्म होकर फैलता है, हल्का होकर ऊपर उठता है; किनारों का ठंडा भारी पानी उसका स्थान लेने नीचे आता है' },
+          { en: 'Water undergoes conduction without any fluid motion', hi: 'पानी में बिना किसी गति के केवल चालन होता है' },
+          { en: 'Potassium permanganate crystals are magnetic and attracted to the candle', hi: 'पोटैशियम परमैंगनेट के कण चुंबकीय होते हैं और मोमबत्ती की ओर खिंचते हैं' },
+          { en: 'The beaker melts and pushes the liquid sideways', hi: 'बीकर पिघलकर तरल को किनारों पर धकेलता है' }
+        ],
+        correct: 0, // A
+        solEn: 'This cyclic circulation of warm rising fluid and cool sinking fluid forms convection currents. The entire liquid volume gets heated through the actual movement of particles.',
+        solHi: 'यह संवहन धारा (Convection Current) कहलाती है। गर्म हल्का पानी ऊपर जाता है और ठंडा भारी पानी नीचे आता है, जिससे पूरे द्रव में ऊष्मा फैलती है।',
+        takeaway: 'Convection Currents (संवहन धाराएँ): Cyclic movement of fluid particles.'
+      },
+      {
+        id: 10,
+        category: 'CONVECTION',
+        qNum: 'Q10 • Convection Medium',
+        textEn: 'In which states of matter does heat transfer primarily occur through convection?',
+        textHi: 'पदार्थ की किन अवस्थाओं में ऊष्मा का स्थानांतरण मुख्य रूप से संवहन (Convection) द्वारा होता है?',
+        options: [
+          { en: 'Solids only (ठोस पदार्थों में केवल)', hi: 'केवल ठोस पदार्थों में' },
+          { en: 'Vacuum of outer space where no particles exist', hi: 'अंतरिक्ष के निर्वात में जहाँ कोई कण नहीं होता' },
+          { en: 'Liquids and Gases (fluids) where particles can move freely', hi: 'द्रवों और गैसों (तरलों) में जहाँ कण स्वतंत्र रूप से गति कर सकते हैं' },
+          { en: 'Dense solid metals like iron and lead', hi: 'लोहे और सीसे जैसी घनी ठोस धातुओं में' }
+        ],
+        correct: 2, // C
+        solEn: 'Convection requires the physical movement of particles from hotter regions to cooler regions. Since particles in liquids and gases can flow, convection occurs in fluids.',
+        solHi: 'संवहन में कण स्वयं ऊष्मा लेकर गति करते हैं। चूँकि केवल द्रवों और गैसों के कण ही बह सकते हैं, इसलिए संवहन तरलों में होता है।',
+        takeaway: 'Convection Medium: Only occurs in liquids and gases (Fluids).'
+      },
+      {
+        id: 11,
+        category: 'CONVECTION',
+        qNum: 'Q11 • Activity 7.4 Soil vs Water',
+        textEn: 'According to Activity 7.4 measuring the temperature of soil and water placed under sunlight for 20 minutes, what is inferred?',
+        textHi: 'क्रियाकलाप 7.4 में 20 मिनट तक धूप में रखी मिट्टी और पानी के तापमान की तुलना करने पर क्या निष्कर्ष निकलता है?',
+        options: [
+          { en: 'Water heats up faster than soil, and water cools down faster too', hi: 'पानी मिट्टी से तेज गर्म होता है और तेज ही ठंडा होता है' },
+          { en: 'Both soil and water heat up and cool down at the exact same rate', hi: 'मिट्टी और पानी दोनों बिल्कुल समान दर से गर्म और ठंडे होते हैं' },
+          { en: 'Soil never absorbs any solar thermal energy', hi: 'मिट्टी कभी सौर तापीय ऊर्जा अवशोषित नहीं करती' },
+          { en: 'Soil heats up faster than water, and soil also cools down faster than water', hi: 'मिट्टी पानी की तुलना में तेजी से गर्म होती है और तेजी से ही ठंडी भी होती है' }
+        ],
+        correct: 3, // D
+        solEn: 'Soil has lower heat capacity than water. It heats up significantly faster when exposed to the Sun and also loses heat faster once brought indoors.',
+        solHi: 'मिट्टी की विशिष्ट ऊष्मा पानी से कम होती है, इसलिए मिट्टी धूप में जल्दी गर्म होती है और छाँव में जल्दी ठंडी होती है।',
+        takeaway: 'Differential Heating: Land/soil heats and cools much faster than water bodies.'
+      },
+      {
+        id: 12,
+        category: 'CONVECTION',
+        qNum: 'Q12 • Sea Breeze Mechanism',
+        textEn: 'During the daytime in coastal areas, a cool breeze blows from the sea towards the land (Sea Breeze). What causes this?',
+        textHi: 'तटीय क्षेत्रों में दिन के समय समुद्र से भूमि की ओर ठंडी हवा (समुद्र समीर / Sea Breeze) चलने का क्या कारण है?',
+        options: [
+          { en: 'Land heats up faster than sea water; warm air over land rises, and cooler air from the sea moves in to take its place', hi: 'भूमि समुद्र के पानी से तेज गर्म होती है; भूमि के ऊपर की गर्म हवा ऊपर उठती है और समुद्र की ठंडी हवा उसका स्थान लेने आती है' },
+          { en: 'Sea water heats up faster than land, causing cold air from land to rush to the sea', hi: 'समुद्र का पानी भूमि से तेज गर्म होता है, जिससे भूमि की ठंडी हवा समुद्र की ओर जाती है' },
+          { en: 'Ocean tides physically blow atmospheric air toward buildings', hi: 'समुद्री ज्वार-भाटा हवा को मकानों की ओर धकेलता है' },
+          { en: 'The Moon pulls air particles towards beaches during daytime', hi: 'दिन में चंद्रमा हवा के कणों को समुद्र तट की ओर खींचता है' }
+        ],
+        correct: 0, // A
+        solEn: 'During the day, land heats faster than water. Warm air over land expands and rises, creating a low-pressure area. Cooler, dense air from the sea blows toward the land (Sea Breeze). That is why coastal windows face the sea.',
+        solHi: 'दिन में भूमि तेजी से गर्म होकर गर्म हवा को ऊपर उठाती है। समुद्र के ऊपर की ठंडी और भारी हवा भूमि की ओर चलती है, जिसे समुद्र समीर कहते हैं।',
+        takeaway: 'Sea Breeze (समुद्र समीर): Daytime wind blowing from Sea ➔ Land.'
+      },
+      {
+        id: 13,
+        category: 'CONVECTION',
+        qNum: 'Q13 • Land Breeze Mechanism',
+        textEn: 'At night in coastal areas, wind direction reverses and blows from the land toward the sea (Land Breeze). Why does this occur?',
+        textHi: 'तटीय क्षेत्रों में रात के समय हवा की दिशा उलट जाती है और भूमि से समुद्र की ओर हवा (थल समीर / Land Breeze) बहती है। ऐसा क्यों होता है?',
+        options: [
+          { en: 'The sea freezes instantly at night, pushing air ashore', hi: 'रात में समुद्र तुरंत जम जाता है और हवा को तट की ओर धकेलता है' },
+          { en: 'Land cools down faster than sea water; warmer air above the sea rises, drawing cooler air from the land towards the sea', hi: 'भूमि समुद्र के जल से तेजी से ठंडी होती है; समुद्र के ऊपर की गर्म हवा ऊपर उठती है और थल की ठंडी हवा समुद्र की ओर चलती है' },
+          { en: 'Land retains all heat while sea water cools to freezing temperatures', hi: 'भूमि सारी गर्मी रोके रखती है जबकि समुद्र का पानी जमने लगता है' },
+          { en: 'Solar radiation reverses its direction at midnight', hi: 'मध्यरात्रि में सौर विकिरण अपनी दिशा बदल लेता है' }
+        ],
+        correct: 1, // B
+        solEn: 'At night, without sunlight, land loses heat faster than water. The sea water remains relatively warmer, so air above the sea rises. Cooler air from the land moves toward the sea, creating a Land Breeze.',
+        solHi: 'रात में थल समुद्र की तुलना में जल्दी ठंडा हो जाता है। समुद्र के ऊपर की हवा अपेक्षाकृत गर्म होकर ऊपर उठती है, और थल से ठंडी हवा समुद्र की ओर बहने लगती है।',
+        takeaway: 'Land Breeze (थल समीर): Nighttime wind blowing from Land ➔ Sea.'
+      },
+      {
+        id: 14,
+        category: 'RADIATION',
+        qNum: 'Q14 • Heat From the Sun',
+        textEn: 'How does heat from the Sun reach the Earth across millions of kilometers of empty space (vacuum)?',
+        textHi: 'सूर्य की ऊष्मा करोड़ों किलोमीटर के निर्वात (शून्य अंतरिक्ष) को पार करके पृथ्वी तक किस विधि द्वारा पहुँचती है?',
+        options: [
+          { en: 'By Conduction through solid space particles', hi: 'अंतरिक्ष के ठोस कणों द्वारा चालन द्वारा' },
+          { en: 'By sound waves traveling across gravitational fields', hi: 'गुरुत्वाकर्षण क्षेत्र में यात्रा करने वाली ध्वनि तरंगों द्वारा' },
+          { en: 'By Radiation, which does not require any material medium to travel', hi: 'विकिरण (Radiation) द्वारा, जिसके संचरण के लिए किसी भौतिक माध्यम की आवश्यकता नहीं होती' },
+          { en: 'By Convection currents of cosmic liquid', hi: 'अंतरिक्ष के तरल की संवहन धाराओं द्वारा' }
+        ],
+        correct: 2, // C
+        solEn: 'Radiation is the transfer of heat by electromagnetic waves. Unlike conduction and convection, radiation requires NO material medium and can travel across a complete vacuum.',
+        solHi: 'विकिरण ऊष्मा स्थानांतरण की वह विधि है जिसे किसी माध्यम की आवश्यकता नहीं होती। सूर्य की ऊष्मा अंतरिक्ष के निर्वात को पार कर विकिरण द्वारा ही हम तक पहुँचती है।',
+        takeaway: 'Radiation (विकिरण): Needs no medium; travels through vacuum at the speed of light.'
+      },
+      {
+        id: 15,
+        category: 'RADIATION',
+        qNum: 'Q15 • Clothes & Solar Absorption',
+        textEn: 'Why is it more comfortable to wear white or light-coloured clothes in summer and dark-coloured clothes in winter?',
+        textHi: 'गर्मियों में सफेद या हल्के रंग के कपड़े और सर्दियों में गहरे रंग के कपड़े पहनना अधिक आरामदायक क्यों होता है?',
+        options: [
+          { en: 'Light clothes absorb all heat, while dark clothes conduct cold', hi: 'हल्के कपड़े सारी ऊष्मा सोखते हैं और गहरे कपड़े ठंड का चालन करते हैं' },
+          { en: 'Dark clothes prevent air from entering our lungs', hi: 'गहरे कपड़े हवा को हमारे फेफड़ों में जाने से रोकते हैं' },
+          { en: 'White clothes emit harmful ultraviolet rays to surroundings', hi: 'सफेद कपड़े आसपास हानिकारक पराबैंगनी किरणें छोड़ते हैं' },
+          { en: 'Light-coloured clothes reflect most radiant heat falling on them, whereas dark surfaces absorb more heat', hi: 'हल्के रंग के कपड़े आपतित ऊष्मा के अधिकांश भाग को परावर्तित कर देते हैं, जबकि गहरे रंग की सतहें अधिक ऊष्मा अवशोषित करती हैं' }
+        ],
+        correct: 3, // D
+        solEn: 'Light surfaces reflect radiant heat, keeping us cooler in hot summers. Dark surfaces absorb radiant heat efficiently, keeping us warm during cold winters.',
+        solHi: 'हल्के रंग के कपड़े ऊष्मा को परावर्तित करते हैं, जिससे शरीर ठंडा रहता है। गहरे रंग के कपड़े ऊष्मा को अधिक सोखते हैं, जिससे शरीर को गर्माहट मिलती है।',
+        takeaway: 'Radiation Absorption: Dark colors absorb heat; light colors reflect heat.'
+      },
+      {
+        id: 16,
+        category: 'CONDUCTION',
+        qNum: 'Q16 • Simultaneous Processes & Bukhari',
+        textEn: 'When heating water in a pan on a stove (or in a traditional Himalayan Bukhari heater), which processes occur simultaneously?',
+        textHi: 'चूल्हे पर कड़ाही में पानी गर्म करते समय (या पारंपरिक हिमालयी बुखारी हीटर में), कौन-कौन सी प्रक्रियाएँ एक साथ होती हैं?',
+        options: [
+          { en: 'Conduction (flame to pan), Convection (water heated by circulating currents), and Radiation (warmth felt around the hot pan and stove)', hi: 'चालन (लौ से बर्तन तक), संवहन (पानी में संवहन धाराएँ), और विकिरण (बर्तन और चूल्हे के चारों ओर महसूस होने वाली गर्माहट)' },
+          { en: 'Only conduction from flame to water', hi: 'ज्वाला से पानी में केवल चालन' },
+          { en: 'Only radiation without any movement in water', hi: 'पानी में बिना किसी गति के केवल विकिरण' },
+          { en: 'Only infiltration of steam into metal pores', hi: 'धातु के छिद्रों में भाप का केवल अंतःस्रवण' }
+        ],
+        correct: 0, // A
+        solEn: 'Real-world heating often involves all 3 modes: Heat travels from flame to metallic pan by Conduction; inside water by Convection currents; and ambient warmth radiates outwards by Radiation.',
+        solHi: 'दैनिक जीवन में तीनों प्रक्रियाएँ साथ होती हैं: लौ से बर्तन में चालन, पानी के भीतर संवहन धाराएँ, और चूल्हे के आसपास महसूस होने वाली आंच विकिरण के कारण होती है।',
+        takeaway: 'Three Modes Together: Conduction (solids), Convection (fluids), Radiation (waves).'
+      },
+      {
+        id: 17,
+        category: 'WATER_CYCLE',
+        qNum: 'Q17 • Know a Scientist (Varahamihira)',
+        textEn: 'Which famous 6th-century CE Indian astronomer and mathematician gave methods for predicting seasonal rainfall based on clouds and planetary patterns in his work "Brihatsamhita"?',
+        textHi: 'छठी शताब्दी ईस्वी के किस प्रसिद्ध भारतीय खगोलविद और गणितज्ञ ने अपने ग्रंथ "बृहत्संहिता" में बादलों और तारों के आधार पर मौसमी वर्षा के पूर्वानुमान की विधियाँ दी थीं?',
+        options: [
+          { en: 'Aryabhata of Pataliputra', hi: 'पाटलिपुत्र के आर्यभट्ट' },
+          { en: 'Varahamihira of Ujjaini', hi: 'उज्जयिनी के वराहमिहिर' },
+          { en: 'Bhaskaracharya of Bijapur', hi: 'बीजापुर के भास्कराचार्य' },
+          { en: 'Charaka of Taxila', hi: 'तक्षशिला के चरक' }
+        ],
+        correct: 1, // B
+        solEn: 'Varahamihira lived in 6th-century Ujjaini. In his renowned treatise Brihatsamhita, he recorded scientific observations for seasonal rainfall predictions based on cloud forms, wind currents, and lunar phases.',
+        solHi: 'उज्जयिनी के महान खगोलशास्त्री व गणितज्ञ वराहमिहिर (6ठी शताब्दी) ने "बृहत्संहिता" में बादलों के निर्माण, हवा के रुख और नक्षत्रों के आधार पर वर्षा की भविष्यवाणी के नियम दिए थे।',
+        takeaway: 'Varahamihira (वराहमिहिर): 6th Century Indian Polymath & Author of Brihatsamhita.'
+      },
+      {
+        id: 18,
+        category: 'WATER_CYCLE',
+        qNum: 'Q18 • Activity 7.5 Water Seepage Rate',
+        textEn: 'In Activity 7.5 comparing seepage of water through clay, sand, and gravel, which material allows water to seep through fastest and why?',
+        textHi: 'क्रियाकलाप 7.5 में चिकनी मिट्टी (Clay), रेत (Sand) और बजरी (Gravel) से पानी के रिसाव की तुलना करने पर, किसमें से पानी सबसे तेज रिसता है और क्यों?',
+        options: [
+          { en: 'Clay, because clay particles are huge and widely spaced', hi: 'चिकनी मिट्टी से, क्योंकि उसके कण बहुत बड़े और दूर-दूर होते हैं' },
+          { en: 'Sand and clay allow identical instantaneous water flow', hi: 'रेत और चिकनी मिट्टी दोनों से बिल्कुल समान गति से पानी बहता है' },
+          { en: 'Gravel, because the spaces between gravel particles are wider, open, and interconnected', hi: 'बजरी से, क्योंकि बजरी के कणों के बीच के रिक्त स्थान अधिक चौड़े, खुले और परस्पर जुड़े होते हैं' },
+          { en: 'Water cannot seep through gravel under any circumstance', hi: 'किसी भी परिस्थिति में बजरी से पानी का रिसाव नहीं हो सकता' }
+        ],
+        correct: 2, // C
+        solEn: 'Gravel particles have large, interconnected voids that offer minimal resistance to water movement. Seepage is fastest in gravel, slower in sand, and slowest in dense clay.',
+        solHi: 'बजरी के कणों के बीच छिद्र बड़े और आपस में जुड़े होते हैं, इसलिए बजरी में रिसाव सबसे तेज, रेत में मध्यम और चिकनी मिट्टी में सबसे धीमा होता है।',
+        takeaway: 'Seepage Order: Gravel (Fastest) > Sand (Medium) > Clay (Slowest).'
+      },
+      {
+        id: 19,
+        category: 'WATER_CYCLE',
+        qNum: 'Q19 • Infiltration & Aquifers',
+        textEn: 'What is the process of surface water seeping into soil and rocks called, and what are the underground water-storing layers called?',
+        textHi: 'भूमि की सतह के जल के मिट्टी और चट्टानों में रिसने की प्रक्रिया को क्या कहते हैं, और भूजल संचित करने वाली भूमिगत परतों को क्या कहा जाता है?',
+        options: [
+          { en: 'Evaporation and Glaciers', hi: 'वाष्पीकरण और हिमनद' },
+          { en: 'Condensation and Ice Stupas', hi: 'संघनन और आइस स्तूप' },
+          { en: 'Precipitation and Thermometers', hi: 'वर्षण और थर्मामीटर' },
+          { en: 'Infiltration and Aquifers', hi: 'अंतःस्रवण (Infiltration) और जलभृत (Aquifers)' }
+        ],
+        correct: 3, // D
+        solEn: 'The process of water seeping beneath the ground through soil pores and rock fractures is called INFILTRATION. The underground geological layers storing this groundwater are called AQUIFERS.',
+        solHi: 'धरती की सतह के पानी का नीचे रिसना अंतःस्रवण (Infiltration) कहलाता है। भूजल को अपने रंध्रों में संचित करने वाली भूमिगत चट्टानी परतों को जलभृत (Aquifers) कहते हैं।',
+        takeaway: 'Infiltration (अंतःस्रवण): Seepage process. Aquifer (जलभृत): Underground water reservoir.'
+      },
+      {
+        id: 20,
+        category: 'CONVECTION',
+        qNum: 'Q20 • Smoke Detectors & Ice Stupas',
+        textEn: 'Where is the most suitable location to install a smoke detector in a room (Exercise Q1-iii), and why?',
+        textHi: 'किसी कमरे में धुआँ संसूचक (Smoke Detector) लगाने के लिए सबसे उपयुक्त स्थान कौन सा है (अभ्यास प्रश्न 1-iii) और क्यों?',
+        options: [
+          { en: 'Near the floor, because cold air sinks with smoke', hi: 'फर्श के पास, क्योंकि ठंडी हवा धुएँ के साथ नीचे बैठती है' },
+          { en: 'On the ceiling, because hot smoke rises up due to convection', hi: 'छत पर (On the ceiling), क्योंकि गर्म धुआँ संवहन के कारण ऊपर उठता है' },
+          { en: 'Inside a sealed drawer away from all airflow', hi: 'हवा से दूर किसी बंद दराज के अंदर' },
+          { en: 'Underneath a bed or rug', hi: 'बिस्तर या कालीन के नीचे' }
+        ],
+        correct: 1, // B
+        solEn: 'Smoke is a mixture of hot gases and tiny ash particles produced during burning. Because it is warmer and lighter than surrounding room air, it rises rapidly toward the ceiling due to convection.',
+        solHi: 'धुआँ गर्म गैसों का मिश्रण होता है जो कमरे की सामान्य हवा से हल्का होकर संवहन धाराओं द्वारा सीधा छत की ओर उठता है। इसलिए धुआँ संसूचक हमेशा छत पर लगाया जाता है।',
+        takeaway: 'Convection Application: Smoke detectors belong on ceilings where rising hot smoke accumulates first.'
+      }
+    ];
+
+    // State Variables
+    let userAnswers = {};
+    let currentFilter = 'ALL';
+    let currentLang = 'bi';
+
+    // Render Questions
+    function renderQuestions() {
+      const container = document.getElementById('questions-list');
+      container.innerHTML = '';
+
+      const filtered = mcqData.filter(q => currentFilter === 'ALL' || q.category === currentFilter);
+
+      filtered.forEach((q) => {
+        const card = document.createElement('article');
+        card.className = 'mcq-card';
+        card.id = `card-${q.id}`;
+
+        const isAnswered = userAnswers[q.id] !== undefined;
+        const selectedOpt = userAnswers[q.id];
+
+        let optionsHtml = '';
+        q.options.forEach((opt, idx) => {
+          let btnClass = 'opt-btn';
+          if (isAnswered) {
+            if (idx === q.correct) btnClass += ' correct';
+            else if (idx === selectedOpt) btnClass += ' wrong';
+          }
+
+          const optLetter = String.fromCharCode(65 + idx);
+          optionsHtml += `
+            <button class="${btnClass}" onclick="handleSelectOption(${q.id}, ${idx})" ${isAnswered ? 'disabled' : ''}>
+              <span class="opt-badge">${optLetter}</span>
+              <div class="opt-content">
+                <div class="opt-en" style="${currentLang === 'hi' ? 'display:none;' : ''}">${opt.en}</div>
+                <div class="opt-hi" style="${currentLang === 'en' ? 'display:none;' : ''}">${opt.hi}</div>
+              </div>
+            </button>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="mcq-header">
+            <span class="mcq-qnum">${q.qNum}</span>
+            <span class="mcq-topic-tag">${q.category}</span>
+          </div>
+          <div class="mcq-text-en" style="${currentLang === 'hi' ? 'display:none;' : ''}">${q.textEn}</div>
+          <div class="mcq-text-hi" style="${currentLang === 'en' ? 'display:none;' : ''}">${q.textHi}</div>
+          <div class="options-grid">${optionsHtml}</div>
+          <div class="solution-drawer ${isAnswered ? 'open' : ''}" id="sol-${q.id}">
+            <div class="sol-heading">💡 Explanation &amp; Solution (स्पष्टीकरण)</div>
+            <div class="sol-text-en" style="${currentLang === 'hi' ? 'display:none;' : ''}">${q.solEn}</div>
+            <div class="sol-text-hi" style="${currentLang === 'en' ? 'display:none;' : ''}">${q.solHi}</div>
+            <div class="takeaway-pill">🎯 Key Takeaway: ${q.takeaway}</div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+
+      updateScoreboard();
+    }
+
+    // Select Option
+    function handleSelectOption(qId, selectedIdx) {
+      if (userAnswers[qId] !== undefined) return;
+      userAnswers[qId] = selectedIdx;
+
+      const q = mcqData.find(item => item.id === qId);
+      if (selectedIdx === q.correct) {
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 35,
+            spread: 55,
+            origin: { y: 0.7 }
+          });
+        }
+      }
+
+      renderQuestions();
+    }
+
+    // Dynamic Fisher-Yates Reshuffle Function
+    function shuffleAllOptions() {
+      mcqData.forEach(q => {
+        const correctOptObj = q.options[q.correct];
+        for (let i = q.options.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+        }
+        q.correct = q.options.indexOf(correctOptObj);
+      });
+      userAnswers = {};
+      renderQuestions();
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 30,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      }
+    }
+
+    // Update Scoreboard
+    function updateScoreboard() {
+      const total = mcqData.length;
+      let correct = 0;
+      let wrong = 0;
+
+      mcqData.forEach(q => {
+        if (userAnswers[q.id] !== undefined) {
+          if (userAnswers[q.id] === q.correct) correct++;
+          else wrong++;
+        }
+      });
+
+      const answered = correct + wrong;
+      const pending = total - answered;
+      const pct = answered > 0 ? Math.round((correct / answered) * 100) : 0;
+
+      document.getElementById('total-q').innerText = total;
+      document.getElementById('score-correct').innerText = correct;
+      document.getElementById('score-wrong').innerText = wrong;
+      document.getElementById('score-pending').innerText = pending;
+      document.getElementById('score-pct').innerText = `${pct}%`;
+    }
+
+    // Filter Category
+    function filterCategory(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.innerText.includes(cat) || (cat === 'ALL' && btn.innerText.includes('All')));
+      });
+      renderQuestions();
+    }
+
+    // Toggle Language
+    function toggleLanguage(lang) {
+      currentLang = lang;
+      document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-hi-btn').classList.toggle('active', lang === 'hi');
+      document.getElementById('lang-bi-btn').classList.toggle('active', lang === 'bi');
+      renderQuestions();
+    }
+
+    // Toggle Theme
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem('nextsem_theme_preference', next);
+      document.getElementById('theme-btn').innerText = next === 'dark' ? '🌙 Dark' : '☀️ Light';
+    }
+
+    // Reset Quiz
+    function resetQuiz() {
+      if (confirm('Do you want to reset your answers and retake this 20-MCQ test?')) {
+        userAnswers = {};
+        renderQuestions();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Initialize on Load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('nextsem_theme_preference') || 'dark';
+      document.body.setAttribute('data-theme', savedTheme);
+      document.getElementById('theme-btn').innerText = savedTheme === 'dark' ? '🌙 Dark' : '☀️ Light';
+      renderQuestions();
+    });
+  </script>
+</body>
+</html>
